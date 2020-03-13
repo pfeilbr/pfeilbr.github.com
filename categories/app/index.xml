@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>app on Brian Pfeil</title>
+    <link>https://brianpfeil.com/categories/app/</link>
+    <description>Recent content in app on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Jun 2013 02:43:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/categories/app/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Minotes</title>
+      <link>https://brianpfeil.com/post/minotes/</link>
+      <pubDate>Fri, 21 Jun 2013 02:43:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/minotes/</guid>
+      <description>There are many choices for notes apps out in the App Store. So many that it&amp;rsquo;d be a couple days effort just to look into and evaluate them all. Everything from the built-in simple Notes app to the feature packed Evernote. A notes app is one of those utility apps that gets a lot of mileage like mail and weather. Something with high usage you want the most efficient and streamlined app.</description>
+    </item>
+    
+  </channel>
+</rss>

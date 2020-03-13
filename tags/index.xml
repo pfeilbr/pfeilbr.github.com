@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/</link>
+    <description>Recent content in Tags on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 02 Dec 2015 13:54:15 +0000</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>atom</title>
+      <link>https://brianpfeil.com/tags/atom/</link>
+      <pubDate>Wed, 02 Dec 2015 13:54:15 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/atom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://brianpfeil.com/tags/golang/</link>
+      <pubDate>Wed, 02 Dec 2015 13:54:15 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ios</title>
+      <link>https://brianpfeil.com/tags/ios/</link>
+      <pubDate>Fri, 27 Mar 2015 16:36:59 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/ios/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://brianpfeil.com/tags/javascript/</link>
+      <pubDate>Fri, 27 Mar 2015 16:36:59 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>react</title>
+      <link>https://brianpfeil.com/tags/react/</link>
+      <pubDate>Fri, 27 Mar 2015 16:36:59 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>react native</title>
+      <link>https://brianpfeil.com/tags/react-native/</link>
+      <pubDate>Fri, 27 Mar 2015 16:36:59 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/react-native/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>concurrency</title>
+      <link>https://brianpfeil.com/tags/concurrency/</link>
+      <pubDate>Thu, 26 Mar 2015 01:36:21 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/concurrency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aws</title>
+      <link>https://brianpfeil.com/tags/aws/</link>
+      <pubDate>Wed, 25 Mar 2015 21:25:09 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://brianpfeil.com/tags/docker/</link>
+      <pubDate>Wed, 25 Mar 2015 21:25:09 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>elastic beanstalk</title>
+      <link>https://brianpfeil.com/tags/elastic-beanstalk/</link>
+      <pubDate>Wed, 25 Mar 2015 21:25:09 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/elastic-beanstalk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>elastic search</title>
+      <link>https://brianpfeil.com/tags/elastic-search/</link>
+      <pubDate>Wed, 25 Mar 2015 21:25:09 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/elastic-search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nodejs</title>
+      <link>https://brianpfeil.com/tags/nodejs/</link>
+      <pubDate>Wed, 25 Mar 2015 19:06:15 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/nodejs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>desktop</title>
+      <link>https://brianpfeil.com/tags/desktop/</link>
+      <pubDate>Sun, 15 Feb 2015 11:22:57 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/desktop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nw.js</title>
+      <link>https://brianpfeil.com/tags/nw.js/</link>
+      <pubDate>Sun, 15 Feb 2015 11:22:57 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/nw.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>heroku</title>
+      <link>https://brianpfeil.com/tags/heroku/</link>
+      <pubDate>Sat, 05 Jul 2014 16:01:23 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/heroku/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>app</title>
+      <link>https://brianpfeil.com/tags/app/</link>
+      <pubDate>Fri, 21 Jun 2013 02:43:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/app/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>https://brianpfeil.com/tags/web/</link>
+      <pubDate>Sun, 16 Sep 2012 02:43:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ruby</title>
+      <link>https://brianpfeil.com/tags/ruby/</link>
+      <pubDate>Fri, 11 May 2012 01:34:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>appengine</title>
+      <link>https://brianpfeil.com/tags/appengine/</link>
+      <pubDate>Sun, 20 Nov 2011 11:48:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/appengine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dropbox</title>
+      <link>https://brianpfeil.com/tags/dropbox/</link>
+      <pubDate>Sun, 20 Nov 2011 11:48:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/dropbox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>productivity</title>
+      <link>https://brianpfeil.com/tags/productivity/</link>
+      <pubDate>Sun, 20 Nov 2011 11:48:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/productivity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fonts</title>
+      <link>https://brianpfeil.com/tags/fonts/</link>
+      <pubDate>Tue, 27 Sep 2011 19:31:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/fonts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>https://brianpfeil.com/tags/html/</link>
+      <pubDate>Tue, 27 Sep 2011 19:31:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>metro</title>
+      <link>https://brianpfeil.com/tags/metro/</link>
+      <pubDate>Wed, 21 Sep 2011 23:12:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/metro/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>win8</title>
+      <link>https://brianpfeil.com/tags/win8/</link>
+      <pubDate>Wed, 21 Sep 2011 23:12:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/win8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windows</title>
+      <link>https://brianpfeil.com/tags/windows/</link>
+      <pubDate>Wed, 21 Sep 2011 23:12:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jquery</title>
+      <link>https://brianpfeil.com/tags/jquery/</link>
+      <pubDate>Sun, 11 Sep 2011 00:58:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/jquery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mobile</title>
+      <link>https://brianpfeil.com/tags/mobile/</link>
+      <pubDate>Sun, 11 Sep 2011 00:58:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/mobile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>salesforce</title>
+      <link>https://brianpfeil.com/tags/salesforce/</link>
+      <pubDate>Sun, 11 Sep 2011 00:58:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/salesforce/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mac</title>
+      <link>https://brianpfeil.com/tags/mac/</link>
+      <pubDate>Fri, 05 Aug 2011 00:58:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/mac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>network</title>
+      <link>https://brianpfeil.com/tags/network/</link>
+      <pubDate>Fri, 05 Aug 2011 00:58:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/network/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

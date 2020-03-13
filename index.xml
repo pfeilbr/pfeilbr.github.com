@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Brian Pfeil</title>
+    <link>https://brianpfeil.com/</link>
+    <description>Recent content on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Mar 2015 15:01:49 +0000</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Atom Golang Setup</title>
+      <link>https://brianpfeil.com/post/atom-golang-support/</link>
+      <pubDate>Wed, 02 Dec 2015 13:54:15 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/atom-golang-support/</guid>
+      <description>I&amp;rsquo;ve recently switched to Atom from Sublime Text for web development. The transition was relatively painless since many of the keyboard shortcuts and capabilities are the same in. I really enjoy usig Atom and want to have that same experience with programming in Go. This documents my Go setup in Atom.
+Install and Configuration Steps   Install go-plus
+  Set the go-plus GOPATH setting
+ Ideally the Atom application process should have GOPATH in its ENV and you shouldn&amp;rsquo;t have to set this.</description>
+    </item>
+    
+    <item>
+      <title>React Native - Initial Thoughts</title>
+      <link>https://brianpfeil.com/post/react-native-initial-thoughts/</link>
+      <pubDate>Fri, 27 Mar 2015 16:36:59 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/react-native-initial-thoughts/</guid>
+      <description>React Native was released as open source yesterday. There&amp;rsquo;s been quite a bit of build up and excitement since the React.js Conf 2015 video. The video showed a real app being built with a web development style workflow (your favorite editor with livereload). I&amp;rsquo;ve built some apps using React.js and really appreciate the simplicity and development workflow. Having the same for native app development definitely is exciting. I&amp;rsquo;ve gottent to spend a few hours with it and it looks like it&amp;rsquo;s living up to the hype.</description>
+    </item>
+    
+    <item>
+      <title>format testing</title>
+      <link>https://brianpfeil.com/format-testing/</link>
+      <pubDate>Fri, 27 Mar 2015 15:01:49 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/format-testing/</guid>
+      <description>Test var a = &amp;#34;Hello&amp;#34;; Lorem
+NSObject o = [[NSObject alloc] init]; </description>
+    </item>
+    
+    <item>
+      <title>Concurrent Downloader in Go</title>
+      <link>https://brianpfeil.com/post/concurrent-downloader-in-go/</link>
+      <pubDate>Thu, 26 Mar 2015 01:36:21 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/concurrent-downloader-in-go/</guid>
+      <description>Go has been getting a lot of traction among the coding elite due to it&amp;rsquo;s simplicity, speed, and most touted, it&amp;rsquo;s ability to enable concurrent solutions.
+Go is a very small language. If you have experience with a few languages, you can learn in a few days and fit and keep it all in your head. With most other languages, I&amp;rsquo;m accustomed to looking up documentation or examples on stackoverflow while I code.</description>
+    </item>
+    
+    <item>
+      <title>Running Elasticsearch on AWS Elastic Beanstalk</title>
+      <link>https://brianpfeil.com/post/running-elasticsearch-on-elastic-beanstalk/</link>
+      <pubDate>Wed, 25 Mar 2015 21:25:09 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/running-elasticsearch-on-elastic-beanstalk/</guid>
+      <description>TL;DR code on github @ pfeilbr/Elastic-Beanstalk-Dockerrun.aws.json-Example
+ This article will show you the steps to run elasticsearch on AWS Elastic Beanstalk. This example uses the elasticsearch docker image as an example. Once running you can visit http://&amp;lt;beanstalk domain&amp;gt;/?pretty an you will see the root elastic search JSON response.
+Initial Deployment   Modify Dockerrun.aws.json for your needs.
+ Dockerrun.aws.json reference
+   Commit changes to repo
+$ git commit -a -m &amp;quot;changes&amp;quot; ``</description>
+    </item>
+    
+    <item>
+      <title>Dockerized Node.js App on Elastic Beanstalk Example</title>
+      <link>https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/</link>
+      <pubDate>Wed, 25 Mar 2015 19:06:15 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/</guid>
+      <description>Example of developing and deploying a dockerized Node.js app to Elastic Beanstalk
+ source on Github at pfeilbr/Elastic-Beanstalk-Docker-Node.js-Example
+ Local Development Workflow   Edit code. e.g. index.js
+  Build image
+$ docker build --tag=&amp;quot;pfeilbr/eb-docker-node-example&amp;quot; . ``
+  Run
+$ docker run -p 80:80 -it -rm -name eb-docker-node-example pfeilbr/eb-docker-node-example ``
+  Get docker host ip (optional. only if using boot2docker)
+$ boot2docker ip ``
+  Open browser to http://&amp;lt;boot2docker ip&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>Cross-platform Desktop Apps with NW.js</title>
+      <link>https://brianpfeil.com/post/cross-platform-desktop-apps-with-nw-js/</link>
+      <pubDate>Sun, 15 Feb 2015 11:22:57 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/cross-platform-desktop-apps-with-nw-js/</guid>
+      <description>Post is based on the pfeilbr/nwjs-playground project.
+ NW.js Playground Project to learn and experiment with NW.js.
+NW.js enables the creation of cross platform desktop applications. Your UI is built with standard html, js, and css technologies. Access to the underlying desktop OS capabilites are provided by giving you access to node.js. You can use the Node.js core modules plus any of the 3rd party NPM modules;
+Installing NW.js Download and unpack nwjs app for your platform from http://nwjs.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://brianpfeil.com/about/</link>
+      <pubDate>Wed, 14 Jan 2015 21:37:08 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/about/</guid>
+      <description>Hi, I&amp;rsquo;m Brian Pfeil. I&amp;rsquo;m a developer passionate about technology, and building things. This is my personal blog where I sometimes write about those and other interests.
+I currently work at a Pharmaceutical company as a solutions architect.
+I can be found elsewhere at github, stackoverflow, and twitter.</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://brianpfeil.com/projects/</link>
+      <pubDate>Mon, 04 Aug 2014 18:55:46 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/projects/</guid>
+      <description>Minotes Minotes - minimalist notes - is designed from the ground up to provide fast and clean note taking. Rather than packing features into a crowded interface, Minotes provides a minimal streamlined interface for your notes.
+ clean — The interface of Minotes is intentionally simple. It provides just what you need, without any distractions fast — Minotes is optimized from the ground up to be fast and fluid, whether you are on the fanciest new iPhone or a more vintage model.</description>
+    </item>
+    
+    <item>
+      <title>Heroku Connect</title>
+      <link>https://brianpfeil.com/post/heroku-connect/</link>
+      <pubDate>Sat, 05 Jul 2014 16:01:23 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/heroku-connect/</guid>
+      <description>Heroku Connect was announced at Dreamforce &amp;lsquo;13 shortly after salesforce aquired cloudconnect. Cloudconnect is the original product created by Adam Gross, formerly of Dropbox that became Heroku Connect.
+There&amp;rsquo;s a rich developer ecosystem around web apps built with popular web frameworks such as Rails, Django, Express, Symfony, etc. All of these frameworks assume a relational database as a backend, which because of it&amp;rsquo;s age, usage, and rich set of existing toolsets, makes it easy to get started with.</description>
+    </item>
+    
+    <item>
+      <title>Minotes</title>
+      <link>https://brianpfeil.com/post/minotes/</link>
+      <pubDate>Fri, 21 Jun 2013 02:43:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/minotes/</guid>
+      <description>There are many choices for notes apps out in the App Store. So many that it&amp;rsquo;d be a couple days effort just to look into and evaluate them all. Everything from the built-in simple Notes app to the feature packed Evernote. A notes app is one of those utility apps that gets a lot of mileage like mail and weather. Something with high usage you want the most efficient and streamlined app.</description>
+    </item>
+    
+    <item>
+      <title>Hosting Static Sites on Heroku</title>
+      <link>https://brianpfeil.com/post/hosting-static-sites-on-heroku/</link>
+      <pubDate>Sun, 16 Sep 2012 02:43:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/hosting-static-sites-on-heroku/</guid>
+      <description>I was recently creating a web site for a family member, and was looking around for the best place to host it. It&amp;rsquo;s a simple personal site that only contains static content. There are many options out there from the freebie wordpress options to rackspace and the like. None of the &amp;ldquo;web publishing platform&amp;rdquo; type sites were a fit because I wanted full control over the layout, and look and feel of the site.</description>
+    </item>
+    
+    <item>
+      <title>RubyMotion</title>
+      <link>https://brianpfeil.com/post/rubymotion/</link>
+      <pubDate>Fri, 11 May 2012 01:34:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/rubymotion/</guid>
+      <description>RubyMotion is a toolchain that lets you develop iOS using Ruby. I&amp;rsquo;m a big fan of Ruby and have been using it on and off since 2001. It&amp;rsquo;s been a huge timesaver in many cases allowing me to quickly script solutions. When I heard it was coming to iOS I had to check it out.
+The toolchain and the way you use the various components matches the rails development process. Open your favorite text editor and a terminal, and you&amp;rsquo;re ready to go.</description>
+    </item>
+    
+    <item>
+      <title>Emailing Todos to Dropbox</title>
+      <link>https://brianpfeil.com/post/emailing-todos-to-dropbox/</link>
+      <pubDate>Sun, 20 Nov 2011 11:48:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/emailing-todos-to-dropbox/</guid>
+      <description>Between work and home,I&amp;rsquo;ve always got more things to do than I can keep straight my head. Like most people, I keep a to-do list so I don&amp;rsquo;t have to worry about forgetting it. My to-do list is a simple bulleted text (Markdown) file that I keep in Dropbox so I can access it from anywhere.
+This setup works fairly well, but they&amp;rsquo;re times when I think of something I need to do, but I don&amp;rsquo;t get it into this list because of the time it takes to add it.</description>
+    </item>
+    
+    <item>
+      <title>Best Fit Web Font Sizing</title>
+      <link>https://brianpfeil.com/post/best-fit-web-font-sizing/</link>
+      <pubDate>Tue, 27 Sep 2011 19:31:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/best-fit-web-font-sizing/</guid>
+      <description>I&amp;rsquo;ve been working on a web app that targets both smartphones and tablets. The large variation in screen sizes has sent me down the path of using a dynamic proportional layout that adapts to fit the available space. For example, I&amp;rsquo;ve allocated 20% of the available vertical space to the header section that displays a title. The jQuery UI.Layout Plug-in has worked great for laying out the content areas, but I ran into a wall when it came to sizing my text proportionately.</description>
+    </item>
+    
+    <item>
+      <title>Metro UI: Initial Thoughts</title>
+      <link>https://brianpfeil.com/post/metro-ui-initial-thoughts/</link>
+      <pubDate>Wed, 21 Sep 2011 23:12:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/metro-ui-initial-thoughts/</guid>
+      <description>I&amp;rsquo;ve been digesting all the new information around Windows 8 and Metro over the past week. I&amp;rsquo;ve watched the BUILD Conference Channel 9 Videos, read the articles and docs on the Windows Dev Center and the Building Windows 8 blog. The best resource for your time on learning what Metro is all about from a design perspective is 8 traits of great Metro style apps.
+The Metro Style interface is a totally new and original approach to UI.</description>
+    </item>
+    
+    <item>
+      <title>Salesforce and jQuery Mobile</title>
+      <link>https://brianpfeil.com/post/salesforce-and-jquery-mobile/</link>
+      <pubDate>Sun, 11 Sep 2011 00:58:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/salesforce-and-jquery-mobile/</guid>
+      <description>I wanted to do a project to learn salesforce, but not a trivial hello world style example. I had recently played around with jQuery Mobile, but didn&amp;rsquo;t do anything significant with it. I decided to put together a basic mobile CRM app. Here&amp;rsquo;s what the finished app looks like.
+Salesforce provides a full-featured environment for free to anyone. It takes no time to sign-up for this Developer Edition, and you get access to everything.</description>
+    </item>
+    
+    <item>
+      <title>Automatic Network Location</title>
+      <link>https://brianpfeil.com/post/automatic-network-location/</link>
+      <pubDate>Fri, 05 Aug 2011 00:58:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/automatic-network-location/</guid>
+      <description>I bounce back and forth between work and home with a MacBook Pro. At work, I&amp;rsquo;m behind a firewall, and have to go through a web proxy to get to public internet sites. I have 2 network locations setup, home and work. When I get to work I manually set my location to work, and when I get home, I manually set it to home again.
+I got tired of remembering to do this so I looked around, and found scselect.</description>
+    </item>
+    
+    <item>
+      <title>Software</title>
+      <link>https://brianpfeil.com/software/</link>
+      <pubDate>Wed, 12 Jan 2000 05:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/software/</guid>
+      <description>Software I use day-to-day
+  </description>
+    </item>
+    
+  </channel>
+</rss>

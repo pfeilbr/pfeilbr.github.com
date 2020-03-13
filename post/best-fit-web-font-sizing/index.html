@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Brian Pfeil  | Best Fit Web Font Sizing</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.67.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.1cb140d8ba31d5b2f1114537dd04802a.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="Best Fit Web Font Sizing" />
+<meta property="og:description" content="I&rsquo;ve been working on a web app that targets both smartphones and tablets. The large variation in screen sizes has sent me down the path of using a dynamic proportional layout that adapts to fit the available space. For example, I&rsquo;ve allocated 20% of the available vertical space to the header section that displays a title. The jQuery UI.Layout Plug-in has worked great for laying out the content areas, but I ran into a wall when it came to sizing my text proportionately." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://brianpfeil.com/post/best-fit-web-font-sizing/" />
+<meta property="article:published_time" content="2011-09-27T19:31:00+00:00" />
+<meta property="article:modified_time" content="2011-09-27T19:31:00+00:00" />
+<meta itemprop="name" content="Best Fit Web Font Sizing">
+<meta itemprop="description" content="I&rsquo;ve been working on a web app that targets both smartphones and tablets. The large variation in screen sizes has sent me down the path of using a dynamic proportional layout that adapts to fit the available space. For example, I&rsquo;ve allocated 20% of the available vertical space to the header section that displays a title. The jQuery UI.Layout Plug-in has worked great for laying out the content areas, but I ran into a wall when it came to sizing my text proportionately.">
+<meta itemprop="datePublished" content="2011-09-27T19:31:00&#43;00:00" />
+<meta itemprop="dateModified" content="2011-09-27T19:31:00&#43;00:00" />
+<meta itemprop="wordCount" content="547">
+
+
+
+<meta itemprop="keywords" content="html,javascript,fonts," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Best Fit Web Font Sizing"/>
+<meta name="twitter:description" content="I&rsquo;ve been working on a web app that targets both smartphones and tablets. The large variation in screen sizes has sent me down the path of using a dynamic proportional layout that adapts to fit the available space. For example, I&rsquo;ve allocated 20% of the available vertical space to the header section that displays a title. The jQuery UI.Layout Plug-in has worked great for laying out the content areas, but I ran into a wall when it came to sizing my text proportionately."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://brianpfeil.com/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Brian Pfeil
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=https://brianpfeil.com/post/best-fit-web-font-sizing/" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=https://brianpfeil.com/post/best-fit-web-font-sizing/&amp;text=Best%20Fit%20Web%20Font%20Sizing" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://brianpfeil.com/post/best-fit-web-font-sizing/&amp;title=Best%20Fit%20Web%20Font%20Sizing" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+      <h1 class="f1 athelas mt3 mb1">Best Fit Web Font Sizing</h1>
+      
+      <p class="tracked">
+          By <strong>
+          
+              Brian Pfeil
+          
+          </strong>
+      </p>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2011-09-27T19:31:00Z">September 27, 2011</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>I&rsquo;ve been working on a web app that targets both smartphones and tablets. The
+large variation in screen sizes has sent me down the path of using a dynamic
+proportional layout that adapts to fit the available space. For example, I&rsquo;ve
+allocated 20% of the available vertical space to the header section that
+displays a title. The <a href="http://layout.jquery-dev.net/">jQuery UI.Layout Plug-in</a> has worked great for laying out the
+content areas, but I ran into a wall when it came to sizing my text
+proportionately.</p>
+<p>The basic problem is that I have a box, and I want to display some text in it
+at the largest font size without it being wrapped or clipped. The only way to
+determine the bounding rectangle a string of text with certain font
+characteristics, is to create it, add it to the DOM, and then measure it. The
+following function does just that.</p>
+<pre><code class="language-language-javascript" data-lang="language-javascript">function sizeWithText(text, cssStyles) {
+	// create temp element to hold our text
+	var e = document.createElement('span');
+	e.appendChild(document.createTextNode(text));
+
+	// apply any styles that have been passed in
+	// to our element - these can affect the text size
+	for (var prop in cssStyles) {
+		e.style[prop] = cssStyles[prop];
+	}
+
+	// hide our temp element
+	e.style['visibility'] = 'hidden';
+
+	// add to DOM in order to have it render
+	document.body.appendChild(e);
+
+	// get the bounding rectangle dimensions
+	var s = {w: e.offsetWidth, h: e.offsetHeight};
+
+	// remove from DOM
+	document.body.removeChild(e);
+
+	return s;
+}
+</code></pre><p>The <code>cssStyles</code> parameter holds the other css style attributes that you&rsquo;d like to apply to the text.  For example, you might have a <code>font-weight: bold</code> attribute that increases the size of the text, and we want to make sure we account for it.</p>
+<p>Now we can use this function to check whether text with a font size and a set of styles will fit in our box.  We set the font size to 1 and continuously increase it by 1 check whether it&rsquo;ll fit at every iteration.  As soon as it doesn&rsquo;t, we stop.</p>
+<pre><code class="language-language-javascript" data-lang="language-javascript">function bestFitTextSize(text, css, width, height) {
+	var pixel = 1;
+
+	do {
+		css['font-size'] = (pixel++) + 'px';
+		s = sizeWithText(text, css);
+	} while ( (s.w &lt; width) &amp;&amp; (s.h &lt; height) )
+
+	return pixel - 2;
+}
+</code></pre><p>This is a brute force and inefficient way to do the calculation, and there are improvements that could be made.  We could start at a reasonable font size like 6px, increment by standard font sizes, etc., but this is fine for my usage where I only do it once on app load.</p>
+<p>Here&rsquo;s a code sample that shows how the previous functions are used.</p>
+<pre><code class="language-language-javascript" data-lang="language-javascript">// box we want to fill with text
+var c = document.getElementById('content');
+
+// out text
+var text = 'Lorem ipsum dolor sit amet';
+
+// styles
+var cssStyles = {
+	'font-family': 'Impact',
+	'font-style': 'normal',
+	'font-weight': 'bolder',
+	'letter-spacing': '1px',
+	'text-shadow': '3px 3px 3px white'
+};
+
+// size the text to fit
+function applyBestFitText() {
+	// get the pixel size for the font
+	var px = bestFitTextSize(text, cssStyles, c.offsetWidth, c.offsetHeight);
+	cssStyles['font-size'] = px + 'px';
+
+	// set the text
+	c.innerHTML = text;
+
+	// apply our styles
+	for (var prop in cssStyles) {
+		c.style[prop] = cssStyles[prop];
+	}
+}
+
+// adjust if the size changes
+window.addEventListener('resize', applyBestFitText, false);
+
+// call for first time adjustment
+applyBestFitText();
+
+</code></pre><p>The complete example is available as a <a href="https://gist.github.com/1248669">gist</a></p>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/html" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">html</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/javascript" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">javascript</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/fonts" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">fonts</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://brianpfeil.com/" >
+    &copy;  Brian Pfeil 2020 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

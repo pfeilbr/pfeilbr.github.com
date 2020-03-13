@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javascript on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/javascript/</link>
+    <description>Recent content in javascript on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Mar 2015 16:36:59 +0000</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>React Native - Initial Thoughts</title>
+      <link>https://brianpfeil.com/post/react-native-initial-thoughts/</link>
+      <pubDate>Fri, 27 Mar 2015 16:36:59 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/react-native-initial-thoughts/</guid>
+      <description>React Native was released as open source yesterday. There&amp;rsquo;s been quite a bit of build up and excitement since the React.js Conf 2015 video. The video showed a real app being built with a web development style workflow (your favorite editor with livereload). I&amp;rsquo;ve built some apps using React.js and really appreciate the simplicity and development workflow. Having the same for native app development definitely is exciting. I&amp;rsquo;ve gottent to spend a few hours with it and it looks like it&amp;rsquo;s living up to the hype.</description>
+    </item>
+    
+    <item>
+      <title>Cross-platform Desktop Apps with NW.js</title>
+      <link>https://brianpfeil.com/post/cross-platform-desktop-apps-with-nw-js/</link>
+      <pubDate>Sun, 15 Feb 2015 11:22:57 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/cross-platform-desktop-apps-with-nw-js/</guid>
+      <description>Post is based on the pfeilbr/nwjs-playground project.
+ NW.js Playground Project to learn and experiment with NW.js.
+NW.js enables the creation of cross platform desktop applications. Your UI is built with standard html, js, and css technologies. Access to the underlying desktop OS capabilites are provided by giving you access to node.js. You can use the Node.js core modules plus any of the 3rd party NPM modules;
+Installing NW.js Download and unpack nwjs app for your platform from http://nwjs.</description>
+    </item>
+    
+    <item>
+      <title>Best Fit Web Font Sizing</title>
+      <link>https://brianpfeil.com/post/best-fit-web-font-sizing/</link>
+      <pubDate>Tue, 27 Sep 2011 19:31:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/best-fit-web-font-sizing/</guid>
+      <description>I&amp;rsquo;ve been working on a web app that targets both smartphones and tablets. The large variation in screen sizes has sent me down the path of using a dynamic proportional layout that adapts to fit the available space. For example, I&amp;rsquo;ve allocated 20% of the available vertical space to the header section that displays a title. The jQuery UI.Layout Plug-in has worked great for laying out the content areas, but I ran into a wall when it came to sizing my text proportionately.</description>
+    </item>
+    
+  </channel>
+</rss>

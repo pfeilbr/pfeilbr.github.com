@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>desktop on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/desktop/</link>
+    <description>Recent content in desktop on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 Feb 2015 11:22:57 +0000</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/desktop/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cross-platform Desktop Apps with NW.js</title>
+      <link>https://brianpfeil.com/post/cross-platform-desktop-apps-with-nw-js/</link>
+      <pubDate>Sun, 15 Feb 2015 11:22:57 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/cross-platform-desktop-apps-with-nw-js/</guid>
+      <description>Post is based on the pfeilbr/nwjs-playground project.
+ NW.js Playground Project to learn and experiment with NW.js.
+NW.js enables the creation of cross platform desktop applications. Your UI is built with standard html, js, and css technologies. Access to the underlying desktop OS capabilites are provided by giving you access to node.js. You can use the Node.js core modules plus any of the 3rd party NPM modules;
+Installing NW.js Download and unpack nwjs app for your platform from http://nwjs.</description>
+    </item>
+    
+  </channel>
+</rss>

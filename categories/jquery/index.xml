@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jquery on Brian Pfeil</title>
+    <link>https://brianpfeil.com/categories/jquery/</link>
+    <description>Recent content in jquery on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Sep 2011 00:58:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/categories/jquery/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Salesforce and jQuery Mobile</title>
+      <link>https://brianpfeil.com/post/salesforce-and-jquery-mobile/</link>
+      <pubDate>Sun, 11 Sep 2011 00:58:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/salesforce-and-jquery-mobile/</guid>
+      <description>I wanted to do a project to learn salesforce, but not a trivial hello world style example. I had recently played around with jQuery Mobile, but didn&amp;rsquo;t do anything significant with it. I decided to put together a basic mobile CRM app. Here&amp;rsquo;s what the finished app looks like.
+Salesforce provides a full-featured environment for free to anyone. It takes no time to sign-up for this Developer Edition, and you get access to everything.</description>
+    </item>
+    
+  </channel>
+</rss>

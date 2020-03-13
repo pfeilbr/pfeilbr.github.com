@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>react native on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/react-native/</link>
+    <description>Recent content in react native on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Mar 2015 16:36:59 +0000</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/react-native/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>React Native - Initial Thoughts</title>
+      <link>https://brianpfeil.com/post/react-native-initial-thoughts/</link>
+      <pubDate>Fri, 27 Mar 2015 16:36:59 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/react-native-initial-thoughts/</guid>
+      <description>React Native was released as open source yesterday. There&amp;rsquo;s been quite a bit of build up and excitement since the React.js Conf 2015 video. The video showed a real app being built with a web development style workflow (your favorite editor with livereload). I&amp;rsquo;ve built some apps using React.js and really appreciate the simplicity and development workflow. Having the same for native app development definitely is exciting. I&amp;rsquo;ve gottent to spend a few hours with it and it looks like it&amp;rsquo;s living up to the hype.</description>
+    </item>
+    
+  </channel>
+</rss>

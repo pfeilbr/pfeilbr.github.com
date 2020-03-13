@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dropbox on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/dropbox/</link>
+    <description>Recent content in dropbox on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 20 Nov 2011 11:48:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/dropbox/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Emailing Todos to Dropbox</title>
+      <link>https://brianpfeil.com/post/emailing-todos-to-dropbox/</link>
+      <pubDate>Sun, 20 Nov 2011 11:48:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/emailing-todos-to-dropbox/</guid>
+      <description>Between work and home,I&amp;rsquo;ve always got more things to do than I can keep straight my head. Like most people, I keep a to-do list so I don&amp;rsquo;t have to worry about forgetting it. My to-do list is a simple bulleted text (Markdown) file that I keep in Dropbox so I can access it from anywhere.
+This setup works fairly well, but they&amp;rsquo;re times when I think of something I need to do, but I don&amp;rsquo;t get it into this list because of the time it takes to add it.</description>
+    </item>
+    
+  </channel>
+</rss>

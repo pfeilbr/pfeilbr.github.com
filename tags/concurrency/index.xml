@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>concurrency on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/concurrency/</link>
+    <description>Recent content in concurrency on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 Mar 2015 01:36:21 +0000</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/concurrency/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Concurrent Downloader in Go</title>
+      <link>https://brianpfeil.com/post/concurrent-downloader-in-go/</link>
+      <pubDate>Thu, 26 Mar 2015 01:36:21 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/concurrent-downloader-in-go/</guid>
+      <description>Go has been getting a lot of traction among the coding elite due to it&amp;rsquo;s simplicity, speed, and most touted, it&amp;rsquo;s ability to enable concurrent solutions.
+Go is a very small language. If you have experience with a few languages, you can learn in a few days and fit and keep it all in your head. With most other languages, I&amp;rsquo;m accustomed to looking up documentation or examples on stackoverflow while I code.</description>
+    </item>
+    
+  </channel>
+</rss>

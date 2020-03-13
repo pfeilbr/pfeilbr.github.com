@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/atom/</loc>
+    <lastmod>2015-12-02T13:54:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/atom/</loc>
+    <lastmod>2015-12-02T13:54:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/atom-golang-support/</loc>
+    <lastmod>2015-12-02T13:54:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/</loc>
+    <lastmod>2015-12-02T13:54:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/golang/</loc>
+    <lastmod>2015-12-02T13:54:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/golang/</loc>
+    <lastmod>2015-12-02T13:54:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/</loc>
+    <lastmod>2015-12-02T13:54:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/</loc>
+    <lastmod>2015-12-02T13:54:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/ios/</loc>
+    <lastmod>2015-03-27T16:36:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/ios/</loc>
+    <lastmod>2015-03-27T16:36:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/javascript/</loc>
+    <lastmod>2015-03-27T16:36:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/javascript/</loc>
+    <lastmod>2015-03-27T16:36:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/react/</loc>
+    <lastmod>2015-03-27T16:36:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/react/</loc>
+    <lastmod>2015-03-27T16:36:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/react-native/</loc>
+    <lastmod>2015-03-27T16:36:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/react-native/</loc>
+    <lastmod>2015-03-27T16:36:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/react-native-initial-thoughts/</loc>
+    <lastmod>2015-03-27T16:36:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/</loc>
+    <lastmod>2015-03-27T15:01:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/format-testing/</loc>
+    <lastmod>2015-03-27T15:01:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/concurrency/</loc>
+    <lastmod>2015-03-26T01:36:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/concurrency/</loc>
+    <lastmod>2015-03-26T01:36:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/concurrent-downloader-in-go/</loc>
+    <lastmod>2015-03-26T01:36:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/aws/</loc>
+    <lastmod>2015-03-25T21:25:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/aws/</loc>
+    <lastmod>2015-03-25T21:25:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/docker/</loc>
+    <lastmod>2015-03-25T21:25:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/docker/</loc>
+    <lastmod>2015-03-25T21:25:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/elastic-beanstalk/</loc>
+    <lastmod>2015-03-25T21:25:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/elastic-beanstalk/</loc>
+    <lastmod>2015-03-25T21:25:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/elastic-search/</loc>
+    <lastmod>2015-03-25T21:25:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/elastic-search/</loc>
+    <lastmod>2015-03-25T21:25:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/running-elasticsearch-on-elastic-beanstalk/</loc>
+    <lastmod>2015-03-25T21:25:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/</loc>
+    <lastmod>2015-03-25T19:06:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/nodejs/</loc>
+    <lastmod>2015-03-25T19:06:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/nodejs/</loc>
+    <lastmod>2015-03-25T19:06:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/cross-platform-desktop-apps-with-nw-js/</loc>
+    <lastmod>2015-02-15T11:22:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/desktop/</loc>
+    <lastmod>2015-02-15T11:22:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/desktop/</loc>
+    <lastmod>2015-02-15T11:22:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/nw.js/</loc>
+    <lastmod>2015-02-15T11:22:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/nw.js/</loc>
+    <lastmod>2015-02-15T11:22:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/about/</loc>
+    <lastmod>2015-01-14T21:37:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/projects/</loc>
+    <lastmod>2014-08-04T18:55:46+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/heroku/</loc>
+    <lastmod>2014-07-05T16:01:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/heroku/</loc>
+    <lastmod>2014-07-05T16:01:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/heroku-connect/</loc>
+    <lastmod>2014-07-05T16:01:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/app/</loc>
+    <lastmod>2013-06-21T02:43:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/app/</loc>
+    <lastmod>2013-06-21T02:43:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/minotes/</loc>
+    <lastmod>2013-06-21T02:43:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/hosting-static-sites-on-heroku/</loc>
+    <lastmod>2012-09-16T02:43:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/web/</loc>
+    <lastmod>2012-09-16T02:43:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/web/</loc>
+    <lastmod>2012-09-16T02:43:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/ruby/</loc>
+    <lastmod>2012-05-11T01:34:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/ruby/</loc>
+    <lastmod>2012-05-11T01:34:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/rubymotion/</loc>
+    <lastmod>2012-05-11T01:34:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/appengine/</loc>
+    <lastmod>2011-11-20T11:48:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/appengine/</loc>
+    <lastmod>2011-11-20T11:48:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/dropbox/</loc>
+    <lastmod>2011-11-20T11:48:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/dropbox/</loc>
+    <lastmod>2011-11-20T11:48:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/emailing-todos-to-dropbox/</loc>
+    <lastmod>2011-11-20T11:48:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/productivity/</loc>
+    <lastmod>2011-11-20T11:48:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/productivity/</loc>
+    <lastmod>2011-11-20T11:48:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/best-fit-web-font-sizing/</loc>
+    <lastmod>2011-09-27T19:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/fonts/</loc>
+    <lastmod>2011-09-27T19:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/fonts/</loc>
+    <lastmod>2011-09-27T19:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/html/</loc>
+    <lastmod>2011-09-27T19:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/html/</loc>
+    <lastmod>2011-09-27T19:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/metro/</loc>
+    <lastmod>2011-09-21T23:12:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/metro/</loc>
+    <lastmod>2011-09-21T23:12:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/metro-ui-initial-thoughts/</loc>
+    <lastmod>2011-09-21T23:12:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/win8/</loc>
+    <lastmod>2011-09-21T23:12:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/win8/</loc>
+    <lastmod>2011-09-21T23:12:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/windows/</loc>
+    <lastmod>2011-09-21T23:12:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/windows/</loc>
+    <lastmod>2011-09-21T23:12:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/jquery/</loc>
+    <lastmod>2011-09-11T00:58:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/jquery/</loc>
+    <lastmod>2011-09-11T00:58:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/mobile/</loc>
+    <lastmod>2011-09-11T00:58:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/mobile/</loc>
+    <lastmod>2011-09-11T00:58:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/salesforce/</loc>
+    <lastmod>2011-09-11T00:58:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/salesforce/</loc>
+    <lastmod>2011-09-11T00:58:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/salesforce-and-jquery-mobile/</loc>
+    <lastmod>2011-09-11T00:58:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/automatic-network-location/</loc>
+    <lastmod>2011-08-05T00:58:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/mac/</loc>
+    <lastmod>2011-08-05T00:58:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/mac/</loc>
+    <lastmod>2011-08-05T00:58:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/network/</loc>
+    <lastmod>2011-08-05T00:58:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/network/</loc>
+    <lastmod>2011-08-05T00:58:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/software/</loc>
+    <lastmod>2000-01-12T05:00:00+00:00</lastmod>
+  </url>
+  
+</urlset>

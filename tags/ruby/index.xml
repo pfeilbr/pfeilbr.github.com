@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ruby on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/ruby/</link>
+    <description>Recent content in ruby on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 11 May 2012 01:34:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>RubyMotion</title>
+      <link>https://brianpfeil.com/post/rubymotion/</link>
+      <pubDate>Fri, 11 May 2012 01:34:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/rubymotion/</guid>
+      <description>RubyMotion is a toolchain that lets you develop iOS using Ruby. I&amp;rsquo;m a big fan of Ruby and have been using it on and off since 2001. It&amp;rsquo;s been a huge timesaver in many cases allowing me to quickly script solutions. When I heard it was coming to iOS I had to check it out.
+The toolchain and the way you use the various components matches the rails development process. Open your favorite text editor and a terminal, and you&amp;rsquo;re ready to go.</description>
+    </item>
+    
+  </channel>
+</rss>

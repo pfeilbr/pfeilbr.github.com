@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/docker/</link>
+    <description>Recent content in docker on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Mar 2015 21:25:09 +0000</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Running Elasticsearch on AWS Elastic Beanstalk</title>
+      <link>https://brianpfeil.com/post/running-elasticsearch-on-elastic-beanstalk/</link>
+      <pubDate>Wed, 25 Mar 2015 21:25:09 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/running-elasticsearch-on-elastic-beanstalk/</guid>
+      <description>TL;DR code on github @ pfeilbr/Elastic-Beanstalk-Dockerrun.aws.json-Example
+ This article will show you the steps to run elasticsearch on AWS Elastic Beanstalk. This example uses the elasticsearch docker image as an example. Once running you can visit http://&amp;lt;beanstalk domain&amp;gt;/?pretty an you will see the root elastic search JSON response.
+Initial Deployment   Modify Dockerrun.aws.json for your needs.
+ Dockerrun.aws.json reference
+   Commit changes to repo
+$ git commit -a -m &amp;quot;changes&amp;quot; ``</description>
+    </item>
+    
+    <item>
+      <title>Dockerized Node.js App on Elastic Beanstalk Example</title>
+      <link>https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/</link>
+      <pubDate>Wed, 25 Mar 2015 19:06:15 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/</guid>
+      <description>Example of developing and deploying a dockerized Node.js app to Elastic Beanstalk
+ source on Github at pfeilbr/Elastic-Beanstalk-Docker-Node.js-Example
+ Local Development Workflow   Edit code. e.g. index.js
+  Build image
+$ docker build --tag=&amp;quot;pfeilbr/eb-docker-node-example&amp;quot; . ``
+  Run
+$ docker run -p 80:80 -it -rm -name eb-docker-node-example pfeilbr/eb-docker-node-example ``
+  Get docker host ip (optional. only if using boot2docker)
+$ boot2docker ip ``
+  Open browser to http://&amp;lt;boot2docker ip&amp;gt;</description>
+    </item>
+    
+  </channel>
+</rss>
