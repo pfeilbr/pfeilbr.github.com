@@ -6,7 +6,7 @@
     <description>Recent content on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Mar 2015 15:01:49 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Jan 2015 21:37:08 +0000</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,16 +30,6 @@ Install and Configuration Steps   Install go-plus
       
       <guid>https://brianpfeil.com/post/react-native-initial-thoughts/</guid>
       <description>React Native was released as open source yesterday. There&amp;rsquo;s been quite a bit of build up and excitement since the React.js Conf 2015 video. The video showed a real app being built with a web development style workflow (your favorite editor with livereload). I&amp;rsquo;ve built some apps using React.js and really appreciate the simplicity and development workflow. Having the same for native app development definitely is exciting. I&amp;rsquo;ve gottent to spend a few hours with it and it looks like it&amp;rsquo;s living up to the hype.</description>
-    </item>
-    
-    <item>
-      <title>format testing</title>
-      <link>https://brianpfeil.com/format-testing/</link>
-      <pubDate>Fri, 27 Mar 2015 15:01:49 +0000</pubDate>
-      
-      <guid>https://brianpfeil.com/format-testing/</guid>
-      <description>Test var a = &amp;#34;Hello&amp;#34;; Lorem
-NSObject o = [[NSObject alloc] init]; </description>
     </item>
     
     <item>
@@ -72,6 +62,24 @@ $ git commit -a -m &amp;quot;changes&amp;quot; ``</description>
       <pubDate>Wed, 25 Mar 2015 19:06:15 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/</guid>
+      <description>Example of developing and deploying a dockerized Node.js app to Elastic Beanstalk
+ source on Github at pfeilbr/Elastic-Beanstalk-Docker-Node.js-Example
+ Local Development Workflow   Edit code. e.g. index.js
+  Build image
+$ docker build --tag=&amp;quot;pfeilbr/eb-docker-node-example&amp;quot; . ``
+  Run
+$ docker run -p 80:80 -it -rm -name eb-docker-node-example pfeilbr/eb-docker-node-example ``
+  Get docker host ip (optional. only if using boot2docker)
+$ boot2docker ip ``
+  Open browser to http://&amp;lt;boot2docker ip&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>Dockerized Node.js App on Elastic Beanstalk Example</title>
+      <link>https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/dockerized-nodejs-app-on-elastic-beanstalk-example/</link>
+      <pubDate>Wed, 25 Mar 2015 19:06:15 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/dockerized-nodejs-app-on-elastic-beanstalk-example/</guid>
       <description>Example of developing and deploying a dockerized Node.js app to Elastic Beanstalk
  source on Github at pfeilbr/Elastic-Beanstalk-Docker-Node.js-Example
  Local Development Workflow   Edit code. e.g. index.js
@@ -162,7 +170,7 @@ The toolchain and the way you use the various components matches the rails devel
       
       <guid>https://brianpfeil.com/post/emailing-todos-to-dropbox/</guid>
       <description>Between work and home,I&amp;rsquo;ve always got more things to do than I can keep straight my head. Like most people, I keep a to-do list so I don&amp;rsquo;t have to worry about forgetting it. My to-do list is a simple bulleted text (Markdown) file that I keep in Dropbox so I can access it from anywhere.
-This setup works fairly well, but they&amp;rsquo;re times when I think of something I need to do, but I don&amp;rsquo;t get it into this list because of the time it takes to add it.</description>
+ # TODOS * get gas * get leaf bags * send thank you cards # Completed * get propane * get burgers and hot dogs  This setup works fairly well, but they&amp;rsquo;re times when I think of something I need to do, but I don&amp;rsquo;t get it into this list because of the time it takes to add it.</description>
     </item>
     
     <item>
@@ -205,13 +213,42 @@ I got tired of remembering to do this so I looked around, and found scselect.</d
     </item>
     
     <item>
-      <title>Software</title>
-      <link>https://brianpfeil.com/software/</link>
-      <pubDate>Wed, 12 Jan 2000 05:00:00 +0000</pubDate>
+      <title></title>
+      <link>https://brianpfeil.com/ios-apps/abc-letters-and-shapes-fun/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://brianpfeil.com/software/</guid>
-      <description>Software I use day-to-day
-  </description>
+      <guid>https://brianpfeil.com/ios-apps/abc-letters-and-shapes-fun/</guid>
+      <description>ABC - Letters and Shapes Fun A Fun and easy app designed by parents for young children learning preschool skills of letters, numbers, and shapes. A colorful display of letters A-Z, numbers 1-10 and various shapes that are narrated with one easy tap! Very clear design with a “flashcard” like feel. This is a great app to help introduce and perfect basic letter, shape, and number skills.
+Features  Hear the name of the letter, number, or shape Includes letters A thru Z and numbers 0 thru 10 All the basic shapes  iPhone/iPod Touch Screenshots   iPad Screenshots </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://brianpfeil.com/ios-apps/alpha-sound/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/ios-apps/alpha-sound/</guid>
+      <description>Alpha Sound Alpha Sound is a simple ABC&amp;rsquo;s learning program for children. Children learn their letters by seeing and hearing the letter names.
+ Features  Hear the name of the letter Uppercase and lowercase letters Quickly access any letter Autoplay letters Large easy to read letters Includes numbers 0 thru 10  iPhone/iPod Touch Screenshots iPad Screenshots </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://brianpfeil.com/ios-apps/music-sound-touch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/ios-apps/music-sound-touch/</guid>
+      <description>Music Sound Touch Fun and easy interactive music app designed by parents for young children who enjoy the look and sound of musical instruments. A terrific collection of real musical instrument pictures and sounds that play with one easy tap. You&amp;rsquo;ll also hear the name of the instrument along with the sound. It will keep those little ones busy for quite a while!
+ Features  Easy to use Real Photos High Quality Sound Narration of instrument name  iPhone/iPod Touch Screenshots iPad Screenshots </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://brianpfeil.com/ios-apps/vehicle-fun-for-kids/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/ios-apps/vehicle-fun-for-kids/</guid>
+      <description>Vehicle Fun for Kids Fun and easy interactive vehicle app designed by parents for young children who enjoy the look and sound of vehicles. A terrific collection of real vehicle pictures and sounds that play with one easy tap. You&amp;rsquo;ll also hear the name of the vehicle along with the sound. It will keep those little ones busy for quite a while! They&amp;rsquo;ll get their fill of cars, trucks, and boats!</description>
     </item>
     
   </channel>

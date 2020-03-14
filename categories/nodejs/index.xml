@@ -30,6 +30,24 @@ $ boot2docker ip ``
     </item>
     
     <item>
+      <title>Dockerized Node.js App on Elastic Beanstalk Example</title>
+      <link>https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/dockerized-nodejs-app-on-elastic-beanstalk-example/</link>
+      <pubDate>Wed, 25 Mar 2015 19:06:15 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/dockerized-nodejs-app-on-elastic-beanstalk-example/</guid>
+      <description>Example of developing and deploying a dockerized Node.js app to Elastic Beanstalk
+ source on Github at pfeilbr/Elastic-Beanstalk-Docker-Node.js-Example
+ Local Development Workflow   Edit code. e.g. index.js
+  Build image
+$ docker build --tag=&amp;quot;pfeilbr/eb-docker-node-example&amp;quot; . ``
+  Run
+$ docker run -p 80:80 -it -rm -name eb-docker-node-example pfeilbr/eb-docker-node-example ``
+  Get docker host ip (optional. only if using boot2docker)
+$ boot2docker ip ``
+  Open browser to http://&amp;lt;boot2docker ip&amp;gt;</description>
+    </item>
+    
+    <item>
       <title>Cross-platform Desktop Apps with NW.js</title>
       <link>https://brianpfeil.com/post/cross-platform-desktop-apps-with-nw-js/</link>
       <pubDate>Sun, 15 Feb 2015 11:22:57 +0000</pubDate>

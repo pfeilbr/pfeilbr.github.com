@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.67.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dockerized Node.js App on Elastic Beanstalk Example &middot; Brian Pfeil</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://brianpfeil.com/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://brianpfeil.com/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://brianpfeil.com/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://brianpfeil.com/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://brianpfeil.com/"><h1>Brian Pfeil</h1></a>
+      <p class="lead">
+       ... 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://brianpfeil.com/">Home</a> </li>
+        <li><a href="/about/"> about </a></li><li><a href="https://github.com/pfeilbr/"> github </a></li><li><a href="/projects/"> projects </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2020. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Dockerized Node.js App on Elastic Beanstalk Example</h1>
+  <time datetime=2015-03-25T19:06:15Z class="post-date">Wed, Mar 25, 2015</time>
+  <p>Example of developing and deploying a <a href="(https://www.docker.com/)">dockerized</a> <a href="https://nodejs.org/">Node.js</a> app to <a href="http://aws.amazon.com/elasticbeanstalk/">Elastic Beanstalk</a></p>
+<blockquote>
+<p>source on Github at <a href="https://github.com/pfeilbr/Elastic-Beanstalk-Docker-Node.js-Example">pfeilbr/Elastic-Beanstalk-Docker-Node.js-Example</a></p>
+</blockquote>
+<h2 id="local-development-workflow">Local Development Workflow</h2>
+<ol>
+<li>
+<p>Edit code. e.g. <code>index.js</code></p>
+</li>
+<li>
+<p>Build image</p>
+<pre><code>$ docker build --tag=&quot;pfeilbr/eb-docker-node-example&quot; .
+</code></pre><p>``</p>
+</li>
+<li>
+<p>Run</p>
+<pre><code>$ docker run -p 80:80 -it -rm -name eb-docker-node-example pfeilbr/eb-docker-node-example
+</code></pre><p>``</p>
+</li>
+<li>
+<p>Get docker host ip <em>(optional.  only if using <a href="http://boot2docker.io/">boot2docker</a>)</em></p>
+<pre><code>$ boot2docker ip
+</code></pre><p>``</p>
+</li>
+<li>
+<p>Open browser to <code>http://&lt;boot2docker ip&gt;</code></p>
+</li>
+</ol>
+<h2 id="initial-deployment">Initial Deployment</h2>
+<ol>
+<li>
+<p>Init git repo</p>
+<pre><code>$ git init .
+</code></pre><p>``</p>
+</li>
+<li>
+<p>Add files to repo</p>
+<pre><code>$ git add .
+</code></pre><p>``</p>
+</li>
+<li>
+<p>Commit changes</p>
+<pre><code>$ git commit -m &quot;init&quot;
+</code></pre><p>``</p>
+</li>
+<li>
+<p>Create eb app</p>
+<pre><code>$ eb init # populate details
+</code></pre><p>``</p>
+<blockquote>
+<p>Populate all details</p>
+</blockquote>
+</li>
+<li>
+<p>Create environment for app</p>
+<pre><code>$ eb create dev-env
+</code></pre><p>``</p>
+<blockquote>
+<p><strong>IMPORTANT</strong> Must immediately update the ec2 instance with tags so it doesn&rsquo;t get terminated.  Enable termination protection on the ec2 instance.</p>
+</blockquote>
+</li>
+</ol>
+<p><strong>Output</strong></p>
+<p><img src="http://note.io/1ETb45Y" alt=""></p>
+<h2 id="deploying-updates">Deploying Updates</h2>
+<ol>
+<li>
+<p>Modify code and test via [Local Development Workflow]</p>
+</li>
+<li>
+<p>Commit changes</p>
+<pre><code>$ git commit -a -m &quot;my updates&quot;
+</code></pre><p>``</p>
+</li>
+<li>
+<p>Deploy to eb</p>
+<pre><code>$ eb deploy
+</code></pre><p>``</p>
+</li>
+</ol>
+<blockquote>
+<p>NOTE: Takes between 3-5 min to deploy changes</p>
+</blockquote>
+<p><strong>Output</strong></p>
+<p><img src="http://note.io/1FFQXuL" alt=""></p>
+<h2 id="establish-interactive-bash-shell-in-running-docker-container">Establish Interactive Bash Shell in Running Docker Container</h2>
+<ol>
+<li>
+<p>ssh into ec2 docker host server</p>
+<pre><code>$ eb ssh
+</code></pre><p>``</p>
+</li>
+<li>
+<p>Get container name</p>
+<pre><code>$ sudo docker ps # save off name of container
+</code></pre><p>``</p>
+</li>
+<li>
+<p>Connect/attach with an interactive bash session</p>
+<pre><code>$ sudo docker exec -i -t &lt;container name&gt; bash
+</code></pre><p>``</p>
+</li>
+</ol>
+<p><strong>Example Session with Output</strong></p>
+<p><img src="http://note.io/1CYSlIH" alt=""></p>
+
+</div>
+
+
+    </main>
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-610553-4', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </body>
+</html>

@@ -88,16 +88,6 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/</loc>
-    <lastmod>2015-03-27T15:01:49+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/format-testing/</loc>
-    <lastmod>2015-03-27T15:01:49+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/tags/concurrency/</loc>
     <lastmod>2015-03-26T01:36:21+00:00</lastmod>
   </url>
@@ -163,6 +153,11 @@
   </url>
   
   <url>
+    <loc>https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/dockerized-nodejs-app-on-elastic-beanstalk-example/</loc>
+    <lastmod>2015-03-25T19:06:15+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://brianpfeil.com/tags/nodejs/</loc>
     <lastmod>2015-03-25T19:06:15+00:00</lastmod>
   </url>
@@ -199,6 +194,11 @@
   
   <url>
     <loc>https://brianpfeil.com/about/</loc>
+    <lastmod>2015-01-14T21:37:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/</loc>
     <lastmod>2015-01-14T21:37:08+00:00</lastmod>
   </url>
   
@@ -423,8 +423,23 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/software/</loc>
-    <lastmod>2000-01-12T05:00:00+00:00</lastmod>
+    <loc>https://brianpfeil.com/ios-apps/abc-letters-and-shapes-fun/</loc>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/ios-apps/alpha-sound/</loc>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/ios-apps/music-sound-touch/</loc>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/ios-apps/vehicle-fun-for-kids/</loc>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/ios-apps/</loc>
   </url>
   
 </urlset>

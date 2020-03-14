@@ -18,7 +18,7 @@
       
       <guid>https://brianpfeil.com/post/emailing-todos-to-dropbox/</guid>
       <description>Between work and home,I&amp;rsquo;ve always got more things to do than I can keep straight my head. Like most people, I keep a to-do list so I don&amp;rsquo;t have to worry about forgetting it. My to-do list is a simple bulleted text (Markdown) file that I keep in Dropbox so I can access it from anywhere.
-This setup works fairly well, but they&amp;rsquo;re times when I think of something I need to do, but I don&amp;rsquo;t get it into this list because of the time it takes to add it.</description>
+ # TODOS * get gas * get leaf bags * send thank you cards # Completed * get propane * get burgers and hot dogs  This setup works fairly well, but they&amp;rsquo;re times when I think of something I need to do, but I don&amp;rsquo;t get it into this list because of the time it takes to add it.</description>
     </item>
     
   </channel>
