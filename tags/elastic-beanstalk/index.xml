@@ -22,7 +22,7 @@
 Initial Deployment   Modify Dockerrun.aws.json for your needs.
  Dockerrun.aws.json reference
    Commit changes to repo
-$ git commit -a -m &amp;quot;changes&amp;quot; ``</description>
+$ git commit -a -m &amp;#34;changes&amp;#34; ``</description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@ $ git commit -a -m &amp;quot;changes&amp;quot; ``</description>
  source on Github at pfeilbr/Elastic-Beanstalk-Docker-Node.js-Example
  Local Development Workflow   Edit code. e.g. index.js
   Build image
-$ docker build --tag=&amp;quot;pfeilbr/eb-docker-node-example&amp;quot; . ``
+$ docker build --tag=&amp;#34;pfeilbr/eb-docker-node-example&amp;#34; . ``
   Run
 $ docker run -p 80:80 -it -rm -name eb-docker-node-example pfeilbr/eb-docker-node-example ``
   Get docker host ip (optional. only if using boot2docker)
@@ -53,7 +53,7 @@ $ boot2docker ip ``
  source on Github at pfeilbr/Elastic-Beanstalk-Docker-Node.js-Example
  Local Development Workflow   Edit code. e.g. index.js
   Build image
-$ docker build --tag=&amp;quot;pfeilbr/eb-docker-node-example&amp;quot; . ``
+$ docker build --tag=&amp;#34;pfeilbr/eb-docker-node-example&amp;#34; . ``
   Run
 $ docker run -p 80:80 -it -rm -name eb-docker-node-example pfeilbr/eb-docker-node-example ``
   Get docker host ip (optional. only if using boot2docker)

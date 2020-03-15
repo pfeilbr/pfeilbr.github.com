@@ -22,7 +22,7 @@
 Initial Deployment   Modify Dockerrun.aws.json for your needs.
  Dockerrun.aws.json reference
    Commit changes to repo
-$ git commit -a -m &amp;quot;changes&amp;quot; ``</description>
+$ git commit -a -m &amp;#34;changes&amp;#34; ``</description>
     </item>
     
   </channel>
