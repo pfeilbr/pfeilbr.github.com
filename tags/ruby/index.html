@@ -302,8 +302,15 @@ The toolchain and the way you use the various components matches the rails devel
 
 
 
-
-
+<script>
+    
+    if ('serviceWorker' in navigator) {
+        
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js');
+        });
+    }
+</script>
 
     
   </body>

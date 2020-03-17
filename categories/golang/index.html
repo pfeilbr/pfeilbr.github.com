@@ -352,8 +352,15 @@ Go is a very small language. If you have experience with a few languages, you ca
 
 
 
-
-
+<script>
+    
+    if ('serviceWorker' in navigator) {
+        
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js');
+        });
+    }
+</script>
 
     
   </body>

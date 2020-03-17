@@ -558,8 +558,15 @@ I got tired of remembering to do this so I looked around, and found scselect.
 
 
 
-
-
+<script>
+    
+    if ('serviceWorker' in navigator) {
+        
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js');
+        });
+    }
+</script>
 
     
   </body>

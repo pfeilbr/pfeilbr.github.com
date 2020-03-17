@@ -780,8 +780,15 @@ There&rsquo;s a rich developer ecosystem around web apps built with popular web 
 
 
 
-
-
+<script>
+    
+    if ('serviceWorker' in navigator) {
+        
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js');
+        });
+    }
+</script>
 
     
   </body>

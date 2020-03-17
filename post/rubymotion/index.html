@@ -461,8 +461,15 @@ they can&rsquo;t do anything about it (remember flash).</p>
 
 
 
-
-
+<script>
+    
+    if ('serviceWorker' in navigator) {
+        
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js');
+        });
+    }
+</script>
 
     
   </body>

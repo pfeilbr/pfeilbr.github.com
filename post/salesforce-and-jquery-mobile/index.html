@@ -497,8 +497,15 @@ replace. Here&rsquo;s an example of a template used to generate a list page.</p>
 
 
 
-
-
+<script>
+    
+    if ('serviceWorker' in navigator) {
+        
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js');
+        });
+    }
+</script>
 
     
   </body>

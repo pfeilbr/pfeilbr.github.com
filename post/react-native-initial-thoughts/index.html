@@ -475,8 +475,15 @@ CalendarManager.addEventWithName(&#39;Birthday Party&#39;, &#39;4 Privet Drive, 
 
 
 
-
-
+<script>
+    
+    if ('serviceWorker' in navigator) {
+        
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js');
+        });
+    }
+</script>
 
     
   </body>

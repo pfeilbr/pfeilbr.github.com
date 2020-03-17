@@ -426,8 +426,15 @@ Installing NW.js Download and unpack nwjs app for your platform from http://nwjs
 
 
 
-
-
+<script>
+    
+    if ('serviceWorker' in navigator) {
+        
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js');
+        });
+    }
+</script>
 
     
   </body>
