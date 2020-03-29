@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://brianpfeil.com/tags/aws/</loc>
+    <lastmod>2020-03-29T09:40:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-services/</loc>
+    <lastmod>2020-03-29T09:40:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/</loc>
+    <lastmod>2020-03-29T09:40:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/notes/</loc>
+    <lastmod>2020-03-29T09:40:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/notes/</loc>
+    <lastmod>2020-03-29T09:40:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/</loc>
+    <lastmod>2020-03-29T09:40:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/</loc>
+    <lastmod>2020-03-29T09:40:13-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://brianpfeil.com/tags/atom/</loc>
     <lastmod>2015-12-02T13:54:15+00:00</lastmod>
   </url>
@@ -29,16 +64,6 @@
   
   <url>
     <loc>https://brianpfeil.com/categories/golang/</loc>
-    <lastmod>2015-12-02T13:54:15+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/post/</loc>
-    <lastmod>2015-12-02T13:54:15+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/</loc>
     <lastmod>2015-12-02T13:54:15+00:00</lastmod>
   </url>
   
@@ -100,11 +125,6 @@
   <url>
     <loc>https://brianpfeil.com/post/concurrent-downloader-in-go/</loc>
     <lastmod>2015-03-26T01:36:21+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/aws/</loc>
-    <lastmod>2015-03-25T21:25:09+00:00</lastmod>
   </url>
   
   <url>
@@ -194,11 +214,6 @@
   
   <url>
     <loc>https://brianpfeil.com/about/</loc>
-    <lastmod>2015-01-14T21:37:08+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/</loc>
     <lastmod>2015-01-14T21:37:08+00:00</lastmod>
   </url>
   
