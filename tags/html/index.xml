@@ -6,10 +6,19 @@
     <description>Recent content in html on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Sep 2011 19:31:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2015 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/html/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Html Video Embed</title>
+      <link>https://brianpfeil.com/post/html-video-embed/</link>
+      <pubDate>Tue, 12 May 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/html-video-embed/</guid>
+      <description>learning Html Video Embed</description>
+    </item>
     
     <item>
       <title>Best Fit Web Font Sizing</title>
@@ -17,7 +26,7 @@
       <pubDate>Tue, 27 Sep 2011 19:31:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/best-fit-web-font-sizing/</guid>
-      <description>I&amp;rsquo;ve been working on a web app that targets both smartphones and tablets. The large variation in screen sizes has sent me down the path of using a dynamic proportional layout that adapts to fit the available space. For example, I&amp;rsquo;ve allocated 20% of the available vertical space to the header section that displays a title. The jQuery UI.Layout Plug-in has worked great for laying out the content areas, but I ran into a wall when it came to sizing my text proportionately.</description>
+      <description>dynamically size web font based on available space</description>
     </item>
     
   </channel>

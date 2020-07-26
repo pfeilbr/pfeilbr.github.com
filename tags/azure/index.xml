@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>azure on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/azure/</link>
+    <description>Recent content in azure on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 Feb 2020 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Azure Pipelines</title>
+      <link>https://brianpfeil.com/post/azure-pipelines/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-pipelines/</guid>
+      <description>learning Azure Pipelines</description>
+    </item>
+    
+    <item>
+      <title>Azure Kubernetes Service Aks</title>
+      <link>https://brianpfeil.com/post/azure-kubernetes-service-aks/</link>
+      <pubDate>Sat, 18 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-kubernetes-service-aks/</guid>
+      <description>learning Azure Kubernetes Service Aks</description>
+    </item>
+    
+    <item>
+      <title>Azure Nodejs Arm Resources</title>
+      <link>https://brianpfeil.com/post/azure-nodejs-arm-resources/</link>
+      <pubDate>Wed, 15 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-nodejs-arm-resources/</guid>
+      <description>learning Azure Nodejs Arm Resources</description>
+    </item>
+    
+    <item>
+      <title>Azure CLI</title>
+      <link>https://brianpfeil.com/post/azure-cli/</link>
+      <pubDate>Tue, 14 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-cli/</guid>
+      <description>learning Azure CLI</description>
+    </item>
+    
+    <item>
+      <title>Azure Js Cognitive Services</title>
+      <link>https://brianpfeil.com/post/azure-js-cognitive-services/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-js-cognitive-services/</guid>
+      <description>learning Azure Js Cognitive Services</description>
+    </item>
+    
+    <item>
+      <title>Azure Nodejs Arm Storage</title>
+      <link>https://brianpfeil.com/post/azure-nodejs-arm-storage/</link>
+      <pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-nodejs-arm-storage/</guid>
+      <description>learning Azure Nodejs Arm Storage</description>
+    </item>
+    
+    <item>
+      <title>Azure SDK For Node Authentication</title>
+      <link>https://brianpfeil.com/post/azure-sdk-for-node-authentication/</link>
+      <pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-sdk-for-node-authentication/</guid>
+      <description>learning Azure SDK For Node Authentication</description>
+    </item>
+    
+    <item>
+      <title>Azure Serverless Framework</title>
+      <link>https://brianpfeil.com/post/azure-serverless-framework/</link>
+      <pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-serverless-framework/</guid>
+      <description>learning Azure Serverless Framework</description>
+    </item>
+    
+    <item>
+      <title>Azure Cosmos Js SDK</title>
+      <link>https://brianpfeil.com/post/azure-cosmos-js-sdk/</link>
+      <pubDate>Wed, 08 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-cosmos-js-sdk/</guid>
+      <description>learning Azure Cosmos Js SDK</description>
+    </item>
+    
+  </channel>
+</rss>

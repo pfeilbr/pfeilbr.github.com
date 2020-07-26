@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on Brian Pfeil</title>
+    <link>https://brianpfeil.com/categories/Java/</link>
+    <description>Recent content in Java on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 19 Mar 2020 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/categories/Java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Serverless Lambda Java</title>
+      <link>https://brianpfeil.com/post/serverless-lambda-java/</link>
+      <pubDate>Sun, 27 Oct 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/serverless-lambda-java/</guid>
+      <description>learning Serverless Lambda Java</description>
+    </item>
+    
+    <item>
+      <title>Intellij Maven App</title>
+      <link>https://brianpfeil.com/post/intellij-maven-app/</link>
+      <pubDate>Wed, 14 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/intellij-maven-app/</guid>
+      <description>learning Intellij Maven App</description>
+    </item>
+    
+    <item>
+      <title>Minecraft Spigot Plugin</title>
+      <link>https://brianpfeil.com/post/minecraft-spigot-plugin/</link>
+      <pubDate>Sun, 29 Oct 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/minecraft-spigot-plugin/</guid>
+      <description>learning Minecraft Spigot Plugin</description>
+    </item>
+    
+    <item>
+      <title>Taco</title>
+      <link>https://brianpfeil.com/post/taco/</link>
+      <pubDate>Fri, 20 May 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/taco/</guid>
+      <description>learn Taco</description>
+    </item>
+    
+    <item>
+      <title>Gradle</title>
+      <link>https://brianpfeil.com/post/gradle/</link>
+      <pubDate>Wed, 26 Aug 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/gradle/</guid>
+      <description>learning Gradle</description>
+    </item>
+    
+  </channel>
+</rss>

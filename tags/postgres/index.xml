@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>postgres on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/postgres/</link>
+    <description>Recent content in postgres on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Jan 2015 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/postgres/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Go Postgres</title>
+      <link>https://brianpfeil.com/post/go-postgres/</link>
+      <pubDate>Sun, 11 Jan 2015 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/go-postgres/</guid>
+      <description>learning Go Postgres</description>
+    </item>
+    
+  </channel>
+</rss>

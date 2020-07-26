@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>kinesis on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/kinesis/</link>
+    <description>Recent content in kinesis on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Jul 2017 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/kinesis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS Kinesis</title>
+      <link>https://brianpfeil.com/post/aws-kinesis/</link>
+      <pubDate>Tue, 18 Jul 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-kinesis/</guid>
+      <description>learning AWS Kinesis</description>
+    </item>
+    
+  </channel>
+</rss>

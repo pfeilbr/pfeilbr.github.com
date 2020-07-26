@@ -17,8 +17,7 @@
       <pubDate>Fri, 05 Aug 2011 00:58:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/automatic-network-location/</guid>
-      <description>I bounce back and forth between work and home with a MacBook Pro. At work, I&amp;rsquo;m behind a firewall, and have to go through a web proxy to get to public internet sites. I have 2 network locations setup, home and work. When I get to work I manually set my location to work, and when I get home, I manually set it to home again.
-I got tired of remembering to do this so I looked around, and found scselect.</description>
+      <description>simplify networking regardless of location</description>
     </item>
     
   </channel>

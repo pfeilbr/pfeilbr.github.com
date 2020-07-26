@@ -6,10 +6,55 @@
     <description>Recent content in react on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Mar 2015 16:36:59 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Mar 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/react/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>React Async</title>
+      <link>https://brianpfeil.com/post/react-async/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/react-async/</guid>
+      <description>learning React Async</description>
+    </item>
+    
+    <item>
+      <title>React Bootstrap</title>
+      <link>https://brianpfeil.com/post/react-bootstrap/</link>
+      <pubDate>Sun, 29 Dec 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/react-bootstrap/</guid>
+      <description>learning React Bootstrap</description>
+    </item>
+    
+    <item>
+      <title>React Hooks</title>
+      <link>https://brianpfeil.com/post/react-hooks/</link>
+      <pubDate>Mon, 11 Feb 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/react-hooks/</guid>
+      <description>learning React Hooks</description>
+    </item>
+    
+    <item>
+      <title>React Router 4</title>
+      <link>https://brianpfeil.com/post/react-router-4/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/react-router-4/</guid>
+      <description>learning React Router 4</description>
+    </item>
+    
+    <item>
+      <title>React Redux</title>
+      <link>https://brianpfeil.com/post/react-redux/</link>
+      <pubDate>Wed, 04 May 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/react-redux/</guid>
+      <description>learning React Redux</description>
+    </item>
     
     <item>
       <title>React Native - Initial Thoughts</title>
@@ -17,7 +62,7 @@
       <pubDate>Fri, 27 Mar 2015 16:36:59 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/react-native-initial-thoughts/</guid>
-      <description>React Native was released as open source yesterday. There&amp;rsquo;s been quite a bit of build up and excitement since the React.js Conf 2015 video. The video showed a real app being built with a web development style workflow (your favorite editor with livereload). I&amp;rsquo;ve built some apps using React.js and really appreciate the simplicity and development workflow. Having the same for native app development definitely is exciting. I&amp;rsquo;ve gottent to spend a few hours with it and it looks like it&amp;rsquo;s living up to the hype.</description>
+      <description>leverage React for building iOS and Android apps</description>
     </item>
     
   </channel>

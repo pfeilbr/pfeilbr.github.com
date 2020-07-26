@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jupyter Notebook on Brian Pfeil</title>
+    <link>https://brianpfeil.com/categories/Jupyter-Notebook/</link>
+    <description>Recent content in Jupyter Notebook on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 31 Jan 2018 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/categories/Jupyter-Notebook/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Imagenet</title>
+      <link>https://brianpfeil.com/post/imagenet/</link>
+      <pubDate>Wed, 31 Jan 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/imagenet/</guid>
+      <description>learning Imagenet</description>
+    </item>
+    
+    <item>
+      <title>OpenCV Python</title>
+      <link>https://brianpfeil.com/post/opencv-python/</link>
+      <pubDate>Wed, 31 Jan 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/opencv-python/</guid>
+      <description>learning OpenCV Python</description>
+    </item>
+    
+    <item>
+      <title>Deep And Machine Learning</title>
+      <link>https://brianpfeil.com/post/deep-and-machine-learning/</link>
+      <pubDate>Sun, 24 Sep 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/deep-and-machine-learning/</guid>
+      <description>learning Deep And Machine Learning</description>
+    </item>
+    
+  </channel>
+</rss>

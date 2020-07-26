@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>codepipeline on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/codepipeline/</link>
+    <description>Recent content in codepipeline on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Dec 2018 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/codepipeline/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS Codepipeline</title>
+      <link>https://brianpfeil.com/post/aws-codepipeline/</link>
+      <pubDate>Thu, 20 Dec 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-codepipeline/</guid>
+      <description>learning AWS Codepipeline</description>
+    </item>
+    
+  </channel>
+</rss>

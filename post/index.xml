@@ -6,10 +6,1306 @@
     <description>Recent content in Posts on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Dec 2015 13:54:15 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Lumigo CLI</title>
+      <link>https://brianpfeil.com/post/lumigo-cli/</link>
+      <pubDate>Fri, 17 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/lumigo-cli/</guid>
+      <description>learning Lumigo CLI</description>
+    </item>
+    
+    <item>
+      <title>AWS Interactive Video Service</title>
+      <link>https://brianpfeil.com/post/aws-interactive-video-service/</link>
+      <pubDate>Thu, 16 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-interactive-video-service/</guid>
+      <description>learning AWS Interactive Video Service</description>
+    </item>
+    
+    <item>
+      <title>Bref PHP Lambda</title>
+      <link>https://brianpfeil.com/post/bref-php-lambda/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/bref-php-lambda/</guid>
+      <description>learning Bref PHP Lambda</description>
+    </item>
+    
+    <item>
+      <title>Heroku Node Worker</title>
+      <link>https://brianpfeil.com/post/heroku-node-worker/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/heroku-node-worker/</guid>
+      <description>learning Heroku Node Worker</description>
+    </item>
+    
+    <item>
+      <title>Strapi</title>
+      <link>https://brianpfeil.com/post/strapi/</link>
+      <pubDate>Fri, 10 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/strapi/</guid>
+      <description>learn Strapi</description>
+    </item>
+    
+    <item>
+      <title>PHP Lambda Layer</title>
+      <link>https://brianpfeil.com/post/php-lambda-layer/</link>
+      <pubDate>Thu, 02 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/php-lambda-layer/</guid>
+      <description>learning PHP Lambda Layer</description>
+    </item>
+    
+    <item>
+      <title>Serverless Golang</title>
+      <link>https://brianpfeil.com/post/serverless-golang/</link>
+      <pubDate>Wed, 17 Jun 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/serverless-golang/</guid>
+      <description>learning Serverless Golang</description>
+    </item>
+    
+    <item>
+      <title>AWS Eventbridge</title>
+      <link>https://brianpfeil.com/post/aws-eventbridge/</link>
+      <pubDate>Tue, 19 May 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-eventbridge/</guid>
+      <description>learning AWS Eventbridge</description>
+    </item>
+    
+    <item>
+      <title>Goreleaser</title>
+      <link>https://brianpfeil.com/post/goreleaser/</link>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/goreleaser/</guid>
+      <description>learning Goreleaser</description>
+    </item>
+    
+    <item>
+      <title>HTTP Live Streaming HLS</title>
+      <link>https://brianpfeil.com/post/http-live-streaming-hls/</link>
+      <pubDate>Mon, 23 Mar 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/http-live-streaming-hls/</guid>
+      <description>learning HTTP Live Streaming HLS</description>
+    </item>
+    
+    <item>
+      <title>React Async</title>
+      <link>https://brianpfeil.com/post/react-async/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/react-async/</guid>
+      <description>learning React Async</description>
+    </item>
+    
+    <item>
+      <title>Azure Pipelines</title>
+      <link>https://brianpfeil.com/post/azure-pipelines/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-pipelines/</guid>
+      <description>learning Azure Pipelines</description>
+    </item>
+    
+    <item>
+      <title>Flask</title>
+      <link>https://brianpfeil.com/post/flask/</link>
+      <pubDate>Sat, 15 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/flask/</guid>
+      <description>learning Flask</description>
+    </item>
+    
+    <item>
+      <title>Bash Script Date And Time</title>
+      <link>https://brianpfeil.com/post/bash-script-date-and-time/</link>
+      <pubDate>Mon, 10 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/bash-script-date-and-time/</guid>
+      <description>learning Bash Script Date And Time</description>
+    </item>
+    
+    <item>
+      <title>Multipass</title>
+      <link>https://brianpfeil.com/post/multipass/</link>
+      <pubDate>Sun, 09 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/multipass/</guid>
+      <description>learning Multipass</description>
+    </item>
+    
+    <item>
+      <title>Python Async Await</title>
+      <link>https://brianpfeil.com/post/python-async-await/</link>
+      <pubDate>Wed, 05 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/python-async-await/</guid>
+      <description>learning Python Async Await</description>
+    </item>
+    
+    <item>
+      <title>Tailwindcss</title>
+      <link>https://brianpfeil.com/post/tailwindcss/</link>
+      <pubDate>Thu, 16 Jan 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/tailwindcss/</guid>
+      <description>learn Tailwindcss</description>
+    </item>
+    
+    <item>
+      <title>Go Modules</title>
+      <link>https://brianpfeil.com/post/go-modules/</link>
+      <pubDate>Wed, 15 Jan 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/go-modules/</guid>
+      <description>learning Go Modules</description>
+    </item>
+    
+    <item>
+      <title>Go Sdl2</title>
+      <link>https://brianpfeil.com/post/go-sdl2/</link>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/go-sdl2/</guid>
+      <description>learning Go Sdl2</description>
+    </item>
+    
+    <item>
+      <title>Make</title>
+      <link>https://brianpfeil.com/post/make/</link>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/make/</guid>
+      <description>learning Make</description>
+    </item>
+    
+    <item>
+      <title>Googletest</title>
+      <link>https://brianpfeil.com/post/googletest/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/googletest/</guid>
+      <description>learning Googletest</description>
+    </item>
+    
+    <item>
+      <title>React Bootstrap</title>
+      <link>https://brianpfeil.com/post/react-bootstrap/</link>
+      <pubDate>Sun, 29 Dec 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/react-bootstrap/</guid>
+      <description>learning React Bootstrap</description>
+    </item>
+    
+    <item>
+      <title>Glib</title>
+      <link>https://brianpfeil.com/post/glib/</link>
+      <pubDate>Mon, 11 Nov 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/glib/</guid>
+      <description>learning Glib</description>
+    </item>
+    
+    <item>
+      <title>Terraform</title>
+      <link>https://brianpfeil.com/post/terraform/</link>
+      <pubDate>Tue, 05 Nov 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/terraform/</guid>
+      <description>learn Terraform</description>
+    </item>
+    
+    <item>
+      <title>Serverless Lambda Java</title>
+      <link>https://brianpfeil.com/post/serverless-lambda-java/</link>
+      <pubDate>Sun, 27 Oct 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/serverless-lambda-java/</guid>
+      <description>learning Serverless Lambda Java</description>
+    </item>
+    
+    <item>
+      <title>Wordpress</title>
+      <link>https://brianpfeil.com/post/wordpress/</link>
+      <pubDate>Tue, 22 Oct 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/wordpress/</guid>
+      <description>learn Wordpress</description>
+    </item>
+    
+    <item>
+      <title>AWS Control Tower</title>
+      <link>https://brianpfeil.com/post/aws-control-tower/</link>
+      <pubDate>Thu, 17 Oct 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-control-tower/</guid>
+      <description>learning AWS Control Tower</description>
+    </item>
+    
+    <item>
+      <title>AWS Serverless Application Repository</title>
+      <link>https://brianpfeil.com/post/aws-serverless-application-repository/</link>
+      <pubDate>Mon, 14 Oct 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-serverless-application-repository/</guid>
+      <description>learning AWS Serverless Application Repository</description>
+    </item>
+    
+    <item>
+      <title>Stackery</title>
+      <link>https://brianpfeil.com/post/stackery/</link>
+      <pubDate>Wed, 09 Oct 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/stackery/</guid>
+      <description>learn Stackery</description>
+    </item>
+    
+    <item>
+      <title>AWS Cognito Developer Authenticated Identities</title>
+      <link>https://brianpfeil.com/post/aws-cognito-developer-authenticated-identities/</link>
+      <pubDate>Thu, 26 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cognito-developer-authenticated-identities/</guid>
+      <description>learning AWS Cognito Developer Authenticated Identities</description>
+    </item>
+    
+    <item>
+      <title>Gitlab</title>
+      <link>https://brianpfeil.com/post/gitlab/</link>
+      <pubDate>Wed, 18 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/gitlab/</guid>
+      <description>learning Gitlab</description>
+    </item>
+    
+    <item>
+      <title>Serverless Lambda Layers</title>
+      <link>https://brianpfeil.com/post/serverless-lambda-layers/</link>
+      <pubDate>Wed, 18 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/serverless-lambda-layers/</guid>
+      <description>learning Serverless Lambda Layers</description>
+    </item>
+    
+    <item>
+      <title>AWS Service Catalog</title>
+      <link>https://brianpfeil.com/post/aws-service-catalog/</link>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-service-catalog/</guid>
+      <description>learning AWS Service Catalog</description>
+    </item>
+    
+    <item>
+      <title>Serverless Plugin CloudFront Lambda Edge</title>
+      <link>https://brianpfeil.com/post/serverless-plugin-cloudfront-lambda-edge/</link>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/serverless-plugin-cloudfront-lambda-edge/</guid>
+      <description>learning Serverless Plugin CloudFront Lambda Edge</description>
+    </item>
+    
+    <item>
+      <title>AWS Amplify Console</title>
+      <link>https://brianpfeil.com/post/aws-amplify-console/</link>
+      <pubDate>Mon, 09 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-amplify-console/</guid>
+      <description>learning AWS Amplify Console</description>
+    </item>
+    
+    <item>
+      <title>AWS Polly</title>
+      <link>https://brianpfeil.com/post/aws-polly/</link>
+      <pubDate>Fri, 06 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-polly/</guid>
+      <description>learning AWS Polly</description>
+    </item>
+    
+    <item>
+      <title>AWS Delivlib</title>
+      <link>https://brianpfeil.com/post/aws-delivlib/</link>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-delivlib/</guid>
+      <description>learning AWS Delivlib</description>
+    </item>
+    
+    <item>
+      <title>Drawio</title>
+      <link>https://brianpfeil.com/post/drawio/</link>
+      <pubDate>Mon, 26 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/drawio/</guid>
+      <description>learning Drawio</description>
+    </item>
+    
+    <item>
+      <title>Zipkin</title>
+      <link>https://brianpfeil.com/post/zipkin/</link>
+      <pubDate>Wed, 21 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/zipkin/</guid>
+      <description>learn Zipkin</description>
+    </item>
+    
+    <item>
+      <title>Serverless Framework Full Lifecycle With Dashboard</title>
+      <link>https://brianpfeil.com/post/serverless-framework-full-lifecycle-with-dashboard/</link>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/serverless-framework-full-lifecycle-with-dashboard/</guid>
+      <description>learning Serverless Framework Full Lifecycle With Dashboard</description>
+    </item>
+    
+    <item>
+      <title>AWS SAM Local</title>
+      <link>https://brianpfeil.com/post/aws-sam-local/</link>
+      <pubDate>Fri, 16 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-sam-local/</guid>
+      <description>learning AWS SAM Local</description>
+    </item>
+    
+    <item>
+      <title>AWS CloudFormation</title>
+      <link>https://brianpfeil.com/post/aws-cloudformation/</link>
+      <pubDate>Wed, 14 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cloudformation/</guid>
+      <description>learning AWS CloudFormation</description>
+    </item>
+    
+    <item>
+      <title>Intellij Maven App</title>
+      <link>https://brianpfeil.com/post/intellij-maven-app/</link>
+      <pubDate>Wed, 14 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/intellij-maven-app/</guid>
+      <description>learning Intellij Maven App</description>
+    </item>
+    
+    <item>
+      <title>AWS Xray</title>
+      <link>https://brianpfeil.com/post/aws-xray/</link>
+      <pubDate>Tue, 13 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-xray/</guid>
+      <description>learning AWS Xray</description>
+    </item>
+    
+    <item>
+      <title>Pipenv</title>
+      <link>https://brianpfeil.com/post/pipenv/</link>
+      <pubDate>Wed, 07 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/pipenv/</guid>
+      <description>learning Pipenv</description>
+    </item>
+    
+    <item>
+      <title>Python Packaging</title>
+      <link>https://brianpfeil.com/post/python-packaging/</link>
+      <pubDate>Wed, 07 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/python-packaging/</guid>
+      <description>learning Python Packaging</description>
+    </item>
+    
+    <item>
+      <title>Python Tox Testing</title>
+      <link>https://brianpfeil.com/post/python-tox-testing/</link>
+      <pubDate>Tue, 06 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/python-tox-testing/</guid>
+      <description>learning Python Tox Testing</description>
+    </item>
+    
+    <item>
+      <title>Neo4j</title>
+      <link>https://brianpfeil.com/post/neo4j/</link>
+      <pubDate>Mon, 05 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/neo4j/</guid>
+      <description>learning Neo4j</description>
+    </item>
+    
+    <item>
+      <title>AWS Transcribe</title>
+      <link>https://brianpfeil.com/post/aws-transcribe/</link>
+      <pubDate>Tue, 30 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-transcribe/</guid>
+      <description>learning AWS Transcribe</description>
+    </item>
+    
+    <item>
+      <title>Chrome AWS Lambda</title>
+      <link>https://brianpfeil.com/post/chrome-aws-lambda/</link>
+      <pubDate>Wed, 24 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/chrome-aws-lambda/</guid>
+      <description>learning Chrome AWS Lambda</description>
+    </item>
+    
+    <item>
+      <title>YouTube API</title>
+      <link>https://brianpfeil.com/post/youtube-api/</link>
+      <pubDate>Mon, 22 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/youtube-api/</guid>
+      <description>learn YouTube API</description>
+    </item>
+    
+    <item>
+      <title>AWS CDK</title>
+      <link>https://brianpfeil.com/post/aws-cdk/</link>
+      <pubDate>Thu, 11 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cdk/</guid>
+      <description>learning AWS CDK</description>
+    </item>
+    
+    <item>
+      <title>AWS Fargate</title>
+      <link>https://brianpfeil.com/post/aws-fargate/</link>
+      <pubDate>Wed, 10 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-fargate/</guid>
+      <description>learning AWS Fargate</description>
+    </item>
+    
+    <item>
+      <title>AWS Glue</title>
+      <link>https://brianpfeil.com/post/aws-glue/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-glue/</guid>
+      <description>learning AWS Glue</description>
+    </item>
+    
+    <item>
+      <title>AWS Rekognition</title>
+      <link>https://brianpfeil.com/post/aws-rekognition/</link>
+      <pubDate>Mon, 08 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-rekognition/</guid>
+      <description>learning AWS Rekognition</description>
+    </item>
+    
+    <item>
+      <title>AWS Codebuild Local</title>
+      <link>https://brianpfeil.com/post/aws-codebuild-local/</link>
+      <pubDate>Wed, 03 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-codebuild-local/</guid>
+      <description>learning AWS Codebuild Local</description>
+    </item>
+    
+    <item>
+      <title>Golang Debug In Docker With Delve</title>
+      <link>https://brianpfeil.com/post/golang-debug-in-docker-with-delve/</link>
+      <pubDate>Mon, 24 Jun 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/golang-debug-in-docker-with-delve/</guid>
+      <description>learning Golang Debug In Docker With Delve</description>
+    </item>
+    
+    <item>
+      <title>Cognito Federated To Salesforce And S3 Presigned Url</title>
+      <link>https://brianpfeil.com/post/cognito-federated-to-salesforce-and-s3-presigned-url/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/cognito-federated-to-salesforce-and-s3-presigned-url/</guid>
+      <description>learning Cognito Federated To Salesforce And S3 Presigned Url</description>
+    </item>
+    
+    <item>
+      <title>Azure Kubernetes Service Aks</title>
+      <link>https://brianpfeil.com/post/azure-kubernetes-service-aks/</link>
+      <pubDate>Sat, 18 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-kubernetes-service-aks/</guid>
+      <description>learning Azure Kubernetes Service Aks</description>
+    </item>
+    
+    <item>
+      <title>Azure Nodejs Arm Resources</title>
+      <link>https://brianpfeil.com/post/azure-nodejs-arm-resources/</link>
+      <pubDate>Wed, 15 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-nodejs-arm-resources/</guid>
+      <description>learning Azure Nodejs Arm Resources</description>
+    </item>
+    
+    <item>
+      <title>Azure CLI</title>
+      <link>https://brianpfeil.com/post/azure-cli/</link>
+      <pubDate>Tue, 14 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-cli/</guid>
+      <description>learning Azure CLI</description>
+    </item>
+    
+    <item>
+      <title>Azure Js Cognitive Services</title>
+      <link>https://brianpfeil.com/post/azure-js-cognitive-services/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-js-cognitive-services/</guid>
+      <description>learning Azure Js Cognitive Services</description>
+    </item>
+    
+    <item>
+      <title>Azure Nodejs Arm Storage</title>
+      <link>https://brianpfeil.com/post/azure-nodejs-arm-storage/</link>
+      <pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-nodejs-arm-storage/</guid>
+      <description>learning Azure Nodejs Arm Storage</description>
+    </item>
+    
+    <item>
+      <title>Azure SDK For Node Authentication</title>
+      <link>https://brianpfeil.com/post/azure-sdk-for-node-authentication/</link>
+      <pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-sdk-for-node-authentication/</guid>
+      <description>learning Azure SDK For Node Authentication</description>
+    </item>
+    
+    <item>
+      <title>Azure Serverless Framework</title>
+      <link>https://brianpfeil.com/post/azure-serverless-framework/</link>
+      <pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-serverless-framework/</guid>
+      <description>learning Azure Serverless Framework</description>
+    </item>
+    
+    <item>
+      <title>Python 2.X Websocket Client</title>
+      <link>https://brianpfeil.com/post/python-2.x-websocket-client/</link>
+      <pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/python-2.x-websocket-client/</guid>
+      <description>learning Python 2.X Websocket Client</description>
+    </item>
+    
+    <item>
+      <title>Azure Cosmos Js SDK</title>
+      <link>https://brianpfeil.com/post/azure-cosmos-js-sdk/</link>
+      <pubDate>Wed, 08 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-cosmos-js-sdk/</guid>
+      <description>learning Azure Cosmos Js SDK</description>
+    </item>
+    
+    <item>
+      <title>Gatsbyjs</title>
+      <link>https://brianpfeil.com/post/gatsbyjs/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/gatsbyjs/</guid>
+      <description>learning Gatsbyjs</description>
+    </item>
+    
+    <item>
+      <title>Apollo Client Local State</title>
+      <link>https://brianpfeil.com/post/apollo-client-local-state/</link>
+      <pubDate>Wed, 27 Feb 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/apollo-client-local-state/</guid>
+      <description>learning Apollo Client Local State</description>
+    </item>
+    
+    <item>
+      <title>Jest Testing Framework</title>
+      <link>https://brianpfeil.com/post/jest-testing-framework/</link>
+      <pubDate>Sat, 23 Feb 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/jest-testing-framework/</guid>
+      <description>learning Jest Testing Framework</description>
+    </item>
+    
+    <item>
+      <title>Glitch Local Development</title>
+      <link>https://brianpfeil.com/post/glitch-local-development/</link>
+      <pubDate>Wed, 20 Feb 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/glitch-local-development/</guid>
+      <description>learning Glitch Local Development</description>
+    </item>
+    
+    <item>
+      <title>React Hooks</title>
+      <link>https://brianpfeil.com/post/react-hooks/</link>
+      <pubDate>Mon, 11 Feb 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/react-hooks/</guid>
+      <description>learning React Hooks</description>
+    </item>
+    
+    <item>
+      <title>Pivotal Cloud Foundry</title>
+      <link>https://brianpfeil.com/post/pivotal-cloud-foundry/</link>
+      <pubDate>Thu, 31 Jan 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/pivotal-cloud-foundry/</guid>
+      <description>learning Pivotal Cloud Foundry</description>
+    </item>
+    
+    <item>
+      <title>Fswatch</title>
+      <link>https://brianpfeil.com/post/fswatch/</link>
+      <pubDate>Tue, 29 Jan 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/fswatch/</guid>
+      <description>learning Fswatch</description>
+    </item>
+    
+    <item>
+      <title>Storybook Ui Development Environment</title>
+      <link>https://brianpfeil.com/post/storybook-ui-development-environment/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/storybook-ui-development-environment/</guid>
+      <description>learn Storybook Ui Development Environment</description>
+    </item>
+    
+    <item>
+      <title>Jupyter Kernel Gateway</title>
+      <link>https://brianpfeil.com/post/jupyter-kernel-gateway/</link>
+      <pubDate>Sat, 19 Jan 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/jupyter-kernel-gateway/</guid>
+      <description>learning Jupyter Kernel Gateway</description>
+    </item>
+    
+    <item>
+      <title>AWS API Gateway Websockets Serverless</title>
+      <link>https://brianpfeil.com/post/aws-api-gateway-websockets-serverless/</link>
+      <pubDate>Tue, 08 Jan 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-api-gateway-websockets-serverless/</guid>
+      <description>learning AWS API Gateway Websockets Serverless</description>
+    </item>
+    
+    <item>
+      <title>Rust</title>
+      <link>https://brianpfeil.com/post/rust/</link>
+      <pubDate>Fri, 21 Dec 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/rust/</guid>
+      <description>learning Rust</description>
+    </item>
+    
+    <item>
+      <title>AWS Codepipeline</title>
+      <link>https://brianpfeil.com/post/aws-codepipeline/</link>
+      <pubDate>Thu, 20 Dec 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-codepipeline/</guid>
+      <description>learning AWS Codepipeline</description>
+    </item>
+    
+    <item>
+      <title>Jfrog Artifactory</title>
+      <link>https://brianpfeil.com/post/jfrog-artifactory/</link>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/jfrog-artifactory/</guid>
+      <description>learning Jfrog Artifactory</description>
+    </item>
+    
+    <item>
+      <title>Twit Twitter API Client</title>
+      <link>https://brianpfeil.com/post/twit-twitter-api-client/</link>
+      <pubDate>Mon, 19 Nov 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/twit-twitter-api-client/</guid>
+      <description>learn Twit Twitter API Client</description>
+    </item>
+    
+    <item>
+      <title>AWS Amplify Js App</title>
+      <link>https://brianpfeil.com/post/aws-amplify-js-app/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-amplify-js-app/</guid>
+      <description>learning AWS Amplify Js App</description>
+    </item>
+    
+    <item>
+      <title>AWS Ecr</title>
+      <link>https://brianpfeil.com/post/aws-ecr/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-ecr/</guid>
+      <description>learning AWS Ecr</description>
+    </item>
+    
+    <item>
+      <title>Dynogels</title>
+      <link>https://brianpfeil.com/post/dynogels/</link>
+      <pubDate>Mon, 22 Oct 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/dynogels/</guid>
+      <description>learning Dynogels</description>
+    </item>
+    
+    <item>
+      <title>Node Jenkins API</title>
+      <link>https://brianpfeil.com/post/node-jenkins-api/</link>
+      <pubDate>Thu, 18 Oct 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/node-jenkins-api/</guid>
+      <description>learning Node Jenkins API</description>
+    </item>
+    
+    <item>
+      <title>Autotools</title>
+      <link>https://brianpfeil.com/post/autotools/</link>
+      <pubDate>Wed, 10 Oct 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/autotools/</guid>
+      <description>learning Autotools</description>
+    </item>
+    
+    <item>
+      <title>Vcpkg</title>
+      <link>https://brianpfeil.com/post/vcpkg/</link>
+      <pubDate>Thu, 27 Sep 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/vcpkg/</guid>
+      <description>learn Vcpkg</description>
+    </item>
+    
+    <item>
+      <title>AWS SDK Cpp</title>
+      <link>https://brianpfeil.com/post/aws-sdk-cpp/</link>
+      <pubDate>Tue, 25 Sep 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-sdk-cpp/</guid>
+      <description>learning AWS SDK Cpp</description>
+    </item>
+    
+    <item>
+      <title>Google Test Cpp Test Framework</title>
+      <link>https://brianpfeil.com/post/google-test-cpp-test-framework/</link>
+      <pubDate>Tue, 25 Sep 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/google-test-cpp-test-framework/</guid>
+      <description>learning Google Test Cpp Test Framework</description>
+    </item>
+    
+    <item>
+      <title>Modern Cpp</title>
+      <link>https://brianpfeil.com/post/modern-cpp/</link>
+      <pubDate>Mon, 24 Sep 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/modern-cpp/</guid>
+      <description>learning Modern Cpp</description>
+    </item>
+    
+    <item>
+      <title>V8 Javascript Engine</title>
+      <link>https://brianpfeil.com/post/v8-javascript-engine/</link>
+      <pubDate>Fri, 21 Sep 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/v8-javascript-engine/</guid>
+      <description>learn V8 Javascript Engine</description>
+    </item>
+    
+    <item>
+      <title>Cmake</title>
+      <link>https://brianpfeil.com/post/cmake/</link>
+      <pubDate>Thu, 20 Sep 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/cmake/</guid>
+      <description>learning Cmake</description>
+    </item>
+    
+    <item>
+      <title>Lerna</title>
+      <link>https://brianpfeil.com/post/lerna/</link>
+      <pubDate>Sun, 02 Sep 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/lerna/</guid>
+      <description>learning Lerna</description>
+    </item>
+    
+    <item>
+      <title>Vuejs Webpack</title>
+      <link>https://brianpfeil.com/post/vuejs-webpack/</link>
+      <pubDate>Sat, 01 Sep 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/vuejs-webpack/</guid>
+      <description>learn Vuejs Webpack</description>
+    </item>
+    
+    <item>
+      <title>Webassembly</title>
+      <link>https://brianpfeil.com/post/webassembly/</link>
+      <pubDate>Wed, 22 Aug 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/webassembly/</guid>
+      <description>learn Webassembly</description>
+    </item>
+    
+    <item>
+      <title>Lua C API</title>
+      <link>https://brianpfeil.com/post/lua-c-api/</link>
+      <pubDate>Tue, 24 Jul 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/lua-c-api/</guid>
+      <description>learning Lua C API</description>
+    </item>
+    
+    <item>
+      <title>AWS Appsync</title>
+      <link>https://brianpfeil.com/post/aws-appsync/</link>
+      <pubDate>Sat, 09 Jun 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-appsync/</guid>
+      <description>learning AWS Appsync</description>
+    </item>
+    
+    <item>
+      <title>Json Schema</title>
+      <link>https://brianpfeil.com/post/json-schema/</link>
+      <pubDate>Wed, 06 Jun 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/json-schema/</guid>
+      <description>learning Json Schema</description>
+    </item>
+    
+    <item>
+      <title>Jenkins Pipeline Github</title>
+      <link>https://brianpfeil.com/post/jenkins-pipeline-github/</link>
+      <pubDate>Wed, 30 May 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/jenkins-pipeline-github/</guid>
+      <description>learning Jenkins Pipeline Github</description>
+    </item>
+    
+    <item>
+      <title>Alexa Skills</title>
+      <link>https://brianpfeil.com/post/alexa-skills/</link>
+      <pubDate>Thu, 17 May 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/alexa-skills/</guid>
+      <description>learning Alexa Skills</description>
+    </item>
+    
+    <item>
+      <title>Graphql</title>
+      <link>https://brianpfeil.com/post/graphql/</link>
+      <pubDate>Mon, 30 Apr 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/graphql/</guid>
+      <description>learning Graphql</description>
+    </item>
+    
+    <item>
+      <title>AWS Iot</title>
+      <link>https://brianpfeil.com/post/aws-iot/</link>
+      <pubDate>Sat, 10 Feb 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-iot/</guid>
+      <description>learning AWS Iot</description>
+    </item>
+    
+    <item>
+      <title>AWS Iam</title>
+      <link>https://brianpfeil.com/post/aws-iam/</link>
+      <pubDate>Thu, 08 Feb 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-iam/</guid>
+      <description>learning AWS Iam</description>
+    </item>
+    
+    <item>
+      <title>AWS Emr</title>
+      <link>https://brianpfeil.com/post/aws-emr/</link>
+      <pubDate>Sat, 03 Feb 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-emr/</guid>
+      <description>learning AWS Emr</description>
+    </item>
+    
+    <item>
+      <title>Golang Dep</title>
+      <link>https://brianpfeil.com/post/golang-dep/</link>
+      <pubDate>Sat, 03 Feb 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/golang-dep/</guid>
+      <description>learning Golang Dep</description>
+    </item>
+    
+    <item>
+      <title>Imagenet</title>
+      <link>https://brianpfeil.com/post/imagenet/</link>
+      <pubDate>Wed, 31 Jan 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/imagenet/</guid>
+      <description>learning Imagenet</description>
+    </item>
+    
+    <item>
+      <title>OpenCV Python</title>
+      <link>https://brianpfeil.com/post/opencv-python/</link>
+      <pubDate>Wed, 31 Jan 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/opencv-python/</guid>
+      <description>learning OpenCV Python</description>
+    </item>
+    
+    <item>
+      <title>AWS Ecs</title>
+      <link>https://brianpfeil.com/post/aws-ecs/</link>
+      <pubDate>Sat, 11 Nov 2017 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-ecs/</guid>
+      <description>learning AWS Ecs</description>
+    </item>
+    
+    <item>
+      <title>Serverless Python</title>
+      <link>https://brianpfeil.com/post/serverless-python/</link>
+      <pubDate>Fri, 10 Nov 2017 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/serverless-python/</guid>
+      <description>learning Serverless Python</description>
+    </item>
+    
+    <item>
+      <title>Boto</title>
+      <link>https://brianpfeil.com/post/boto/</link>
+      <pubDate>Mon, 30 Oct 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/boto/</guid>
+      <description>learning Boto</description>
+    </item>
+    
+    <item>
+      <title>Minecraft Spigot Plugin</title>
+      <link>https://brianpfeil.com/post/minecraft-spigot-plugin/</link>
+      <pubDate>Sun, 29 Oct 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/minecraft-spigot-plugin/</guid>
+      <description>learning Minecraft Spigot Plugin</description>
+    </item>
+    
+    <item>
+      <title>Pusher</title>
+      <link>https://brianpfeil.com/post/pusher/</link>
+      <pubDate>Sat, 21 Oct 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/pusher/</guid>
+      <description>learning Pusher</description>
+    </item>
+    
+    <item>
+      <title>Deep And Machine Learning</title>
+      <link>https://brianpfeil.com/post/deep-and-machine-learning/</link>
+      <pubDate>Sun, 24 Sep 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/deep-and-machine-learning/</guid>
+      <description>learning Deep And Machine Learning</description>
+    </item>
+    
+    <item>
+      <title>Jupyter</title>
+      <link>https://brianpfeil.com/post/jupyter/</link>
+      <pubDate>Sat, 09 Sep 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/jupyter/</guid>
+      <description>learning Jupyter</description>
+    </item>
+    
+    <item>
+      <title>AWS Kms</title>
+      <link>https://brianpfeil.com/post/aws-kms/</link>
+      <pubDate>Thu, 31 Aug 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-kms/</guid>
+      <description>learning AWS Kms</description>
+    </item>
+    
+    <item>
+      <title>Scribbletune</title>
+      <link>https://brianpfeil.com/post/scribbletune/</link>
+      <pubDate>Sat, 26 Aug 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/scribbletune/</guid>
+      <description>learning Scribbletune</description>
+    </item>
+    
+    <item>
+      <title>Puppeteer</title>
+      <link>https://brianpfeil.com/post/puppeteer/</link>
+      <pubDate>Tue, 22 Aug 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/puppeteer/</guid>
+      <description>learning Puppeteer</description>
+    </item>
+    
+    <item>
+      <title>AWS CloudFront</title>
+      <link>https://brianpfeil.com/post/aws-cloudfront/</link>
+      <pubDate>Thu, 17 Aug 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cloudfront/</guid>
+      <description>learning AWS CloudFront</description>
+    </item>
+    
+    <item>
+      <title>S3 Website</title>
+      <link>https://brianpfeil.com/post/s3-website/</link>
+      <pubDate>Thu, 17 Aug 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/s3-website/</guid>
+      <description>learning S3 Website</description>
+    </item>
+    
+    <item>
+      <title>React Router 4</title>
+      <link>https://brianpfeil.com/post/react-router-4/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/react-router-4/</guid>
+      <description>learning React Router 4</description>
+    </item>
+    
+    <item>
+      <title>AWS Kinesis</title>
+      <link>https://brianpfeil.com/post/aws-kinesis/</link>
+      <pubDate>Tue, 18 Jul 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-kinesis/</guid>
+      <description>learning AWS Kinesis</description>
+    </item>
+    
+    <item>
+      <title>Serverless Typescript Webpack</title>
+      <link>https://brianpfeil.com/post/serverless-typescript-webpack/</link>
+      <pubDate>Tue, 11 Jul 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/serverless-typescript-webpack/</guid>
+      <description>learning Serverless Typescript Webpack</description>
+    </item>
+    
+    <item>
+      <title>AWS Cloudwatch</title>
+      <link>https://brianpfeil.com/post/aws-cloudwatch/</link>
+      <pubDate>Sun, 21 May 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cloudwatch/</guid>
+      <description>learning AWS Cloudwatch</description>
+    </item>
+    
+    <item>
+      <title>AWS Cognito</title>
+      <link>https://brianpfeil.com/post/aws-cognito/</link>
+      <pubDate>Sun, 21 May 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cognito/</guid>
+      <description>learning AWS Cognito</description>
+    </item>
+    
+    <item>
+      <title>Confluence API</title>
+      <link>https://brianpfeil.com/post/confluence-api/</link>
+      <pubDate>Tue, 04 Apr 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/confluence-api/</guid>
+      <description>learning Confluence API</description>
+    </item>
+    
+    <item>
+      <title>Ethereum</title>
+      <link>https://brianpfeil.com/post/ethereum/</link>
+      <pubDate>Tue, 17 Jan 2017 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/ethereum/</guid>
+      <description>learning Ethereum</description>
+    </item>
+    
+    <item>
+      <title>Lua</title>
+      <link>https://brianpfeil.com/post/lua/</link>
+      <pubDate>Tue, 10 Jan 2017 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/lua/</guid>
+      <description>learning Lua</description>
+    </item>
+    
+    <item>
+      <title>Node Google Cloud</title>
+      <link>https://brianpfeil.com/post/node-google-cloud/</link>
+      <pubDate>Fri, 09 Dec 2016 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/node-google-cloud/</guid>
+      <description>learning Node Google Cloud</description>
+    </item>
+    
+    <item>
+      <title>Apex Lambda</title>
+      <link>https://brianpfeil.com/post/apex-lambda/</link>
+      <pubDate>Tue, 06 Dec 2016 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/apex-lambda/</guid>
+      <description>learning Apex Lambda</description>
+    </item>
+    
+    <item>
+      <title>Heroku Container</title>
+      <link>https://brianpfeil.com/post/heroku-container/</link>
+      <pubDate>Fri, 04 Nov 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/heroku-container/</guid>
+      <description>learning Heroku Container</description>
+    </item>
+    
+    <item>
+      <title>Nextjs</title>
+      <link>https://brianpfeil.com/post/nextjs/</link>
+      <pubDate>Tue, 01 Nov 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/nextjs/</guid>
+      <description>learning Nextjs</description>
+    </item>
+    
+    <item>
+      <title>Keystonejs</title>
+      <link>https://brianpfeil.com/post/keystonejs/</link>
+      <pubDate>Thu, 20 Oct 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/keystonejs/</guid>
+      <description>learning Keystonejs</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>https://brianpfeil.com/post/kubernetes/</link>
+      <pubDate>Tue, 18 Oct 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/kubernetes/</guid>
+      <description>learning Kubernetes</description>
+    </item>
+    
+    <item>
+      <title>Phaser</title>
+      <link>https://brianpfeil.com/post/phaser/</link>
+      <pubDate>Tue, 02 Aug 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/phaser/</guid>
+      <description>learning Phaser</description>
+    </item>
+    
+    <item>
+      <title>Emscripten</title>
+      <link>https://brianpfeil.com/post/emscripten/</link>
+      <pubDate>Thu, 02 Jun 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/emscripten/</guid>
+      <description>learning Emscripten</description>
+    </item>
+    
+    <item>
+      <title>Gitbook</title>
+      <link>https://brianpfeil.com/post/gitbook/</link>
+      <pubDate>Fri, 20 May 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/gitbook/</guid>
+      <description>learning Gitbook</description>
+    </item>
+    
+    <item>
+      <title>Taco</title>
+      <link>https://brianpfeil.com/post/taco/</link>
+      <pubDate>Fri, 20 May 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/taco/</guid>
+      <description>learn Taco</description>
+    </item>
+    
+    <item>
+      <title>Typescript Node</title>
+      <link>https://brianpfeil.com/post/typescript-node/</link>
+      <pubDate>Wed, 18 May 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/typescript-node/</guid>
+      <description>learn Typescript Node</description>
+    </item>
+    
+    <item>
+      <title>Angular CLI App</title>
+      <link>https://brianpfeil.com/post/angular-cli-app/</link>
+      <pubDate>Mon, 09 May 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/angular-cli-app/</guid>
+      <description>learning Angular CLI App</description>
+    </item>
+    
+    <item>
+      <title>React Redux</title>
+      <link>https://brianpfeil.com/post/react-redux/</link>
+      <pubDate>Wed, 04 May 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/react-redux/</guid>
+      <description>learning React Redux</description>
+    </item>
+    
+    <item>
+      <title>Typings</title>
+      <link>https://brianpfeil.com/post/typings/</link>
+      <pubDate>Mon, 02 May 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/typings/</guid>
+      <description>learn Typings</description>
+    </item>
+    
+    <item>
+      <title>Nexe</title>
+      <link>https://brianpfeil.com/post/nexe/</link>
+      <pubDate>Tue, 05 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/nexe/</guid>
+      <description>learning Nexe</description>
+    </item>
+    
+    <item>
+      <title>Node Odata</title>
+      <link>https://brianpfeil.com/post/node-odata/</link>
+      <pubDate>Fri, 18 Mar 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/node-odata/</guid>
+      <description>learning Node Odata</description>
+    </item>
+    
+    <item>
+      <title>Angular2</title>
+      <link>https://brianpfeil.com/post/angular2/</link>
+      <pubDate>Wed, 13 Jan 2016 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/angular2/</guid>
+      <description>learning Angular2</description>
+    </item>
     
     <item>
       <title>Atom Golang Setup</title>
@@ -17,10 +1313,160 @@
       <pubDate>Wed, 02 Dec 2015 13:54:15 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/atom-golang-support/</guid>
-      <description>I&amp;rsquo;ve recently switched to Atom from Sublime Text for web development. The transition was relatively painless since many of the keyboard shortcuts and capabilities are the same in. I really enjoy usig Atom and want to have that same experience with programming in Go. This documents my Go setup in Atom.
-Install and Configuration Steps   Install go-plus
-  Set the go-plus GOPATH setting
- Ideally the Atom application process should have GOPATH in its ENV and you shouldn&amp;rsquo;t have to set this.</description>
+      <description>Atom and Golang, a perfect match</description>
+    </item>
+    
+    <item>
+      <title>Beefy</title>
+      <link>https://brianpfeil.com/post/beefy/</link>
+      <pubDate>Fri, 16 Oct 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/beefy/</guid>
+      <description>learning Beefy</description>
+    </item>
+    
+    <item>
+      <title>Cordova</title>
+      <link>https://brianpfeil.com/post/cordova/</link>
+      <pubDate>Thu, 15 Oct 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/cordova/</guid>
+      <description>learning Cordova</description>
+    </item>
+    
+    <item>
+      <title>Flexbox</title>
+      <link>https://brianpfeil.com/post/flexbox/</link>
+      <pubDate>Thu, 15 Oct 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/flexbox/</guid>
+      <description>learning Flexbox</description>
+    </item>
+    
+    <item>
+      <title>Node Coveralls</title>
+      <link>https://brianpfeil.com/post/node-coveralls/</link>
+      <pubDate>Tue, 29 Sep 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/node-coveralls/</guid>
+      <description>learning Node Coveralls</description>
+    </item>
+    
+    <item>
+      <title>Heroku Deploy</title>
+      <link>https://brianpfeil.com/post/heroku-deploy/</link>
+      <pubDate>Wed, 23 Sep 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/heroku-deploy/</guid>
+      <description>learning Heroku Deploy</description>
+    </item>
+    
+    <item>
+      <title>Heroku Docker</title>
+      <link>https://brianpfeil.com/post/heroku-docker/</link>
+      <pubDate>Wed, 23 Sep 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/heroku-docker/</guid>
+      <description>learning Heroku Docker</description>
+    </item>
+    
+    <item>
+      <title>Mocha</title>
+      <link>https://brianpfeil.com/post/mocha/</link>
+      <pubDate>Tue, 22 Sep 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/mocha/</guid>
+      <description>learning Mocha</description>
+    </item>
+    
+    <item>
+      <title>Osx Audio</title>
+      <link>https://brianpfeil.com/post/osx-audio/</link>
+      <pubDate>Tue, 15 Sep 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/osx-audio/</guid>
+      <description>learning Osx Audio</description>
+    </item>
+    
+    <item>
+      <title>Metaforce</title>
+      <link>https://brianpfeil.com/post/metaforce/</link>
+      <pubDate>Wed, 09 Sep 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/metaforce/</guid>
+      <description>learning Metaforce</description>
+    </item>
+    
+    <item>
+      <title>Gradle</title>
+      <link>https://brianpfeil.com/post/gradle/</link>
+      <pubDate>Wed, 26 Aug 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/gradle/</guid>
+      <description>learning Gradle</description>
+    </item>
+    
+    <item>
+      <title>Docker Hub Automated Build</title>
+      <link>https://brianpfeil.com/post/docker-hub-automated-build/</link>
+      <pubDate>Thu, 20 Aug 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/docker-hub-automated-build/</guid>
+      <description>learning Docker Hub Automated Build</description>
+    </item>
+    
+    <item>
+      <title>Webdriverio</title>
+      <link>https://brianpfeil.com/post/webdriverio/</link>
+      <pubDate>Thu, 20 Aug 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/webdriverio/</guid>
+      <description>learn Webdriverio</description>
+    </item>
+    
+    <item>
+      <title>Spark</title>
+      <link>https://brianpfeil.com/post/spark/</link>
+      <pubDate>Fri, 05 Jun 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/spark/</guid>
+      <description>learn Spark</description>
+    </item>
+    
+    <item>
+      <title>V8</title>
+      <link>https://brianpfeil.com/post/v8/</link>
+      <pubDate>Tue, 19 May 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/v8/</guid>
+      <description>learn V8</description>
+    </item>
+    
+    <item>
+      <title>Html Video Embed</title>
+      <link>https://brianpfeil.com/post/html-video-embed/</link>
+      <pubDate>Tue, 12 May 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/html-video-embed/</guid>
+      <description>learning Html Video Embed</description>
+    </item>
+    
+    <item>
+      <title>Webpack</title>
+      <link>https://brianpfeil.com/post/webpack/</link>
+      <pubDate>Fri, 03 Apr 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/webpack/</guid>
+      <description>learn Webpack</description>
+    </item>
+    
+    <item>
+      <title>Es6</title>
+      <link>https://brianpfeil.com/post/es6/</link>
+      <pubDate>Mon, 30 Mar 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/es6/</guid>
+      <description>learning Es6</description>
     </item>
     
     <item>
@@ -29,7 +1475,7 @@ Install and Configuration Steps   Install go-plus
       <pubDate>Fri, 27 Mar 2015 16:36:59 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/react-native-initial-thoughts/</guid>
-      <description>React Native was released as open source yesterday. There&amp;rsquo;s been quite a bit of build up and excitement since the React.js Conf 2015 video. The video showed a real app being built with a web development style workflow (your favorite editor with livereload). I&amp;rsquo;ve built some apps using React.js and really appreciate the simplicity and development workflow. Having the same for native app development definitely is exciting. I&amp;rsquo;ve gottent to spend a few hours with it and it looks like it&amp;rsquo;s living up to the hype.</description>
+      <description>leverage React for building iOS and Android apps</description>
     </item>
     
     <item>
@@ -38,8 +1484,7 @@ Install and Configuration Steps   Install go-plus
       <pubDate>Thu, 26 Mar 2015 01:36:21 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/concurrent-downloader-in-go/</guid>
-      <description>Go has been getting a lot of traction among the coding elite due to it&amp;rsquo;s simplicity, speed, and most touted, it&amp;rsquo;s ability to enable concurrent solutions.
-Go is a very small language. If you have experience with a few languages, you can learn in a few days and fit and keep it all in your head. With most other languages, I&amp;rsquo;m accustomed to looking up documentation or examples on stackoverflow while I code.</description>
+      <description>example of Go&amp;rsquo;s first class concurrency support</description>
     </item>
     
     <item>
@@ -48,30 +1493,7 @@ Go is a very small language. If you have experience with a few languages, you ca
       <pubDate>Wed, 25 Mar 2015 21:25:09 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/running-elasticsearch-on-elastic-beanstalk/</guid>
-      <description>TL;DR code on github @ pfeilbr/Elastic-Beanstalk-Dockerrun.aws.json-Example
- This article will show you the steps to run elasticsearch on AWS Elastic Beanstalk. This example uses the elasticsearch docker image as an example. Once running you can visit http://&amp;lt;beanstalk domain&amp;gt;/?pretty an you will see the root elastic search JSON response.
-Initial Deployment   Modify Dockerrun.aws.json for your needs.
- Dockerrun.aws.json reference
-   Commit changes to repo
-$ git commit -a -m &amp;#34;changes&amp;#34; ``</description>
-    </item>
-    
-    <item>
-      <title>Dockerized Node.js App on Elastic Beanstalk Example</title>
-      <link>https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/</link>
-      <pubDate>Wed, 25 Mar 2015 19:06:15 +0000</pubDate>
-      
-      <guid>https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/</guid>
-      <description>Example of developing and deploying a dockerized Node.js app to Elastic Beanstalk
- source on Github at pfeilbr/Elastic-Beanstalk-Docker-Node.js-Example
- Local Development Workflow   Edit code. e.g. index.js
-  Build image
-$ docker build --tag=&amp;#34;pfeilbr/eb-docker-node-example&amp;#34; . ``
-  Run
-$ docker run -p 80:80 -it -rm -name eb-docker-node-example pfeilbr/eb-docker-node-example ``
-  Get docker host ip (optional. only if using boot2docker)
-$ boot2docker ip ``
-  Open browser to http://&amp;lt;boot2docker ip&amp;gt;</description>
+      <description>eliminate the need to manage a server by running Elasticsearch on the AWS Elastic Beanstalk PaaS</description>
     </item>
     
     <item>
@@ -80,16 +1502,7 @@ $ boot2docker ip ``
       <pubDate>Wed, 25 Mar 2015 19:06:15 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/dockerized-nodejs-app-on-elastic-beanstalk-example/</guid>
-      <description>Example of developing and deploying a dockerized Node.js app to Elastic Beanstalk
- source on Github at pfeilbr/Elastic-Beanstalk-Docker-Node.js-Example
- Local Development Workflow   Edit code. e.g. index.js
-  Build image
-$ docker build --tag=&amp;#34;pfeilbr/eb-docker-node-example&amp;#34; . ``
-  Run
-$ docker run -p 80:80 -it -rm -name eb-docker-node-example pfeilbr/eb-docker-node-example ``
-  Get docker host ip (optional. only if using boot2docker)
-$ boot2docker ip ``
-  Open browser to http://&amp;lt;boot2docker ip&amp;gt;</description>
+      <description>better your developer workflow with Docker + NodeJS</description>
     </item>
     
     <item>
@@ -98,10 +1511,70 @@ $ boot2docker ip ``
       <pubDate>Sun, 15 Feb 2015 11:22:57 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/cross-platform-desktop-apps-with-nw-js/</guid>
-      <description>Post is based on the pfeilbr/nwjs-playground project.
- NW.js Playground Project to learn and experiment with NW.js.
-NW.js enables the creation of cross platform desktop applications. Your UI is built with standard html, js, and css technologies. Access to the underlying desktop OS capabilites are provided by giving you access to node.js. You can use the Node.js core modules plus any of the 3rd party NPM modules;
-Installing NW.js Download and unpack nwjs app for your platform from http://nwjs.</description>
+      <description>use the power and ease of NodeJS to create cross-platform desktop apps</description>
+    </item>
+    
+    <item>
+      <title>Karma</title>
+      <link>https://brianpfeil.com/post/karma/</link>
+      <pubDate>Sun, 15 Feb 2015 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/karma/</guid>
+      <description>learning Karma</description>
+    </item>
+    
+    <item>
+      <title>Nwjs</title>
+      <link>https://brianpfeil.com/post/nwjs/</link>
+      <pubDate>Sun, 15 Feb 2015 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/nwjs/</guid>
+      <description>learning Nwjs</description>
+    </item>
+    
+    <item>
+      <title>Sauce Labs</title>
+      <link>https://brianpfeil.com/post/sauce-labs/</link>
+      <pubDate>Wed, 04 Feb 2015 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/sauce-labs/</guid>
+      <description>learning Sauce Labs</description>
+    </item>
+    
+    <item>
+      <title>Go Postgres</title>
+      <link>https://brianpfeil.com/post/go-postgres/</link>
+      <pubDate>Sun, 11 Jan 2015 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/go-postgres/</guid>
+      <description>learning Go Postgres</description>
+    </item>
+    
+    <item>
+      <title>Nodemailer</title>
+      <link>https://brianpfeil.com/post/nodemailer/</link>
+      <pubDate>Sat, 06 Dec 2014 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/nodemailer/</guid>
+      <description>learning Nodemailer</description>
+    </item>
+    
+    <item>
+      <title>Kendo Ui</title>
+      <link>https://brianpfeil.com/post/kendo-ui/</link>
+      <pubDate>Sat, 02 Aug 2014 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/kendo-ui/</guid>
+      <description>learning Kendo Ui</description>
+    </item>
+    
+    <item>
+      <title>Ios Swift</title>
+      <link>https://brianpfeil.com/post/ios-swift/</link>
+      <pubDate>Sun, 13 Jul 2014 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/ios-swift/</guid>
+      <description>learning Ios Swift</description>
     </item>
     
     <item>
@@ -110,8 +1583,43 @@ Installing NW.js Download and unpack nwjs app for your platform from http://nwjs
       <pubDate>Sat, 05 Jul 2014 16:01:23 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/heroku-connect/</guid>
-      <description>Heroku Connect was announced at Dreamforce &amp;lsquo;13 shortly after salesforce aquired cloudconnect. Cloudconnect is the original product created by Adam Gross, formerly of Dropbox that became Heroku Connect.
-There&amp;rsquo;s a rich developer ecosystem around web apps built with popular web frameworks such as Rails, Django, Express, Symfony, etc. All of these frameworks assume a relational database as a backend, which because of it&amp;rsquo;s age, usage, and rich set of existing toolsets, makes it easy to get started with.</description>
+      <description>leverage SQL along with all the industry standard SQL tools to access to your salesforce data</description>
+    </item>
+    
+    <item>
+      <title>Kue</title>
+      <link>https://brianpfeil.com/post/kue/</link>
+      <pubDate>Fri, 13 Jun 2014 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/kue/</guid>
+      <description>learning Kue</description>
+    </item>
+    
+    <item>
+      <title>Jsforce</title>
+      <link>https://brianpfeil.com/post/jsforce/</link>
+      <pubDate>Thu, 12 Jun 2014 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/jsforce/</guid>
+      <description>learning Jsforce</description>
+    </item>
+    
+    <item>
+      <title>Mac Swift</title>
+      <link>https://brianpfeil.com/post/mac-swift/</link>
+      <pubDate>Thu, 05 Jun 2014 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/mac-swift/</guid>
+      <description>learning Mac Swift</description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>https://brianpfeil.com/post/go/</link>
+      <pubDate>Tue, 31 Dec 2013 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/go/</guid>
+      <description>learning Go</description>
     </item>
     
     <item>
@@ -120,7 +1628,7 @@ There&amp;rsquo;s a rich developer ecosystem around web apps built with popular 
       <pubDate>Fri, 21 Jun 2013 02:43:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/minotes/</guid>
-      <description>There are many choices for notes apps out in the App Store. So many that it&amp;rsquo;d be a couple days effort just to look into and evaluate them all. Everything from the built-in simple Notes app to the feature packed Evernote. A notes app is one of those utility apps that gets a lot of mileage like mail and weather. Something with high usage you want the most efficient and streamlined app.</description>
+      <description>a clean, simple, minimal iOS notes app</description>
     </item>
     
     <item>
@@ -129,7 +1637,7 @@ There&amp;rsquo;s a rich developer ecosystem around web apps built with popular 
       <pubDate>Sun, 16 Sep 2012 02:43:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/hosting-static-sites-on-heroku/</guid>
-      <description>I was recently creating a web site for a family member, and was looking around for the best place to host it. It&amp;rsquo;s a simple personal site that only contains static content. There are many options out there from the freebie wordpress options to rackspace and the like. None of the &amp;ldquo;web publishing platform&amp;rdquo; type sites were a fit because I wanted full control over the layout, and look and feel of the site.</description>
+      <description>easy git push deployment of static sites on Heroku</description>
     </item>
     
     <item>
@@ -138,8 +1646,7 @@ There&amp;rsquo;s a rich developer ecosystem around web apps built with popular 
       <pubDate>Fri, 11 May 2012 01:34:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/rubymotion/</guid>
-      <description>RubyMotion is a toolchain that lets you develop iOS using Ruby. I&amp;rsquo;m a big fan of Ruby and have been using it on and off since 2001. It&amp;rsquo;s been a huge timesaver in many cases allowing me to quickly script solutions. When I heard it was coming to iOS I had to check it out.
-The toolchain and the way you use the various components matches the rails development process. Open your favorite text editor and a terminal, and you&amp;rsquo;re ready to go.</description>
+      <description>leverage your Ruby skills to build native iOS apps</description>
     </item>
     
     <item>
@@ -148,8 +1655,7 @@ The toolchain and the way you use the various components matches the rails devel
       <pubDate>Sun, 20 Nov 2011 11:48:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/emailing-todos-to-dropbox/</guid>
-      <description>Between work and home,I&amp;rsquo;ve always got more things to do than I can keep straight my head. Like most people, I keep a to-do list so I don&amp;rsquo;t have to worry about forgetting it. My to-do list is a simple bulleted text (Markdown) file that I keep in Dropbox so I can access it from anywhere.
- # TODOS * get gas * get leaf bags * send thank you cards # Completed * get propane * get burgers and hot dogs  This setup works fairly well, but they&amp;rsquo;re times when I think of something I need to do, but I don&amp;rsquo;t get it into this list because of the time it takes to add it.</description>
+      <description>allow universal access to your TODOs by storing them in dropbox via email</description>
     </item>
     
     <item>
@@ -158,7 +1664,7 @@ The toolchain and the way you use the various components matches the rails devel
       <pubDate>Tue, 27 Sep 2011 19:31:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/best-fit-web-font-sizing/</guid>
-      <description>I&amp;rsquo;ve been working on a web app that targets both smartphones and tablets. The large variation in screen sizes has sent me down the path of using a dynamic proportional layout that adapts to fit the available space. For example, I&amp;rsquo;ve allocated 20% of the available vertical space to the header section that displays a title. The jQuery UI.Layout Plug-in has worked great for laying out the content areas, but I ran into a wall when it came to sizing my text proportionately.</description>
+      <description>dynamically size web font based on available space</description>
     </item>
     
     <item>
@@ -167,8 +1673,7 @@ The toolchain and the way you use the various components matches the rails devel
       <pubDate>Wed, 21 Sep 2011 23:12:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/metro-ui-initial-thoughts/</guid>
-      <description>I&amp;rsquo;ve been digesting all the new information around Windows 8 and Metro over the past week. I&amp;rsquo;ve watched the BUILD Conference Channel 9 Videos, read the articles and docs on the Windows Dev Center and the Building Windows 8 blog. The best resource for your time on learning what Metro is all about from a design perspective is 8 traits of great Metro style apps.
-The Metro Style interface is a totally new and original approach to UI.</description>
+      <description>slick new UI overhaul for Windows</description>
     </item>
     
     <item>
@@ -177,8 +1682,7 @@ The Metro Style interface is a totally new and original approach to UI.</descrip
       <pubDate>Sun, 11 Sep 2011 00:58:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/salesforce-and-jquery-mobile/</guid>
-      <description>I wanted to do a project to learn salesforce, but not a trivial hello world style example. I had recently played around with jQuery Mobile, but didn&amp;rsquo;t do anything significant with it. I decided to put together a basic mobile CRM app. Here&amp;rsquo;s what the finished app looks like.
-Salesforce provides a full-featured environment for free to anyone. It takes no time to sign-up for this Developer Edition, and you get access to everything.</description>
+      <description>create custom mobile UIs on top of salesforce data with jQuery Mobile</description>
     </item>
     
     <item>
@@ -187,8 +1691,7 @@ Salesforce provides a full-featured environment for free to anyone. It takes no 
       <pubDate>Fri, 05 Aug 2011 00:58:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/automatic-network-location/</guid>
-      <description>I bounce back and forth between work and home with a MacBook Pro. At work, I&amp;rsquo;m behind a firewall, and have to go through a web proxy to get to public internet sites. I have 2 network locations setup, home and work. When I get to work I manually set my location to work, and when I get home, I manually set it to home again.
-I got tired of remembering to do this so I looked around, and found scselect.</description>
+      <description>simplify networking regardless of location</description>
     </item>
     
   </channel>

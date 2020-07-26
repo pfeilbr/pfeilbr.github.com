@@ -6,10 +6,568 @@
     <description>Recent content in javascript on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Mar 2015 16:36:59 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Mar 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>React Async</title>
+      <link>https://brianpfeil.com/post/react-async/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/react-async/</guid>
+      <description>learning React Async</description>
+    </item>
+    
+    <item>
+      <title>React Bootstrap</title>
+      <link>https://brianpfeil.com/post/react-bootstrap/</link>
+      <pubDate>Sun, 29 Dec 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/react-bootstrap/</guid>
+      <description>learning React Bootstrap</description>
+    </item>
+    
+    <item>
+      <title>AWS Serverless Application Repository</title>
+      <link>https://brianpfeil.com/post/aws-serverless-application-repository/</link>
+      <pubDate>Mon, 14 Oct 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-serverless-application-repository/</guid>
+      <description>learning AWS Serverless Application Repository</description>
+    </item>
+    
+    <item>
+      <title>Stackery</title>
+      <link>https://brianpfeil.com/post/stackery/</link>
+      <pubDate>Wed, 09 Oct 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/stackery/</guid>
+      <description>learn Stackery</description>
+    </item>
+    
+    <item>
+      <title>Serverless Lambda Layers</title>
+      <link>https://brianpfeil.com/post/serverless-lambda-layers/</link>
+      <pubDate>Wed, 18 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/serverless-lambda-layers/</guid>
+      <description>learning Serverless Lambda Layers</description>
+    </item>
+    
+    <item>
+      <title>Zipkin</title>
+      <link>https://brianpfeil.com/post/zipkin/</link>
+      <pubDate>Wed, 21 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/zipkin/</guid>
+      <description>learn Zipkin</description>
+    </item>
+    
+    <item>
+      <title>Serverless Framework Full Lifecycle With Dashboard</title>
+      <link>https://brianpfeil.com/post/serverless-framework-full-lifecycle-with-dashboard/</link>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/serverless-framework-full-lifecycle-with-dashboard/</guid>
+      <description>learning Serverless Framework Full Lifecycle With Dashboard</description>
+    </item>
+    
+    <item>
+      <title>AWS Xray</title>
+      <link>https://brianpfeil.com/post/aws-xray/</link>
+      <pubDate>Tue, 13 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-xray/</guid>
+      <description>learning AWS Xray</description>
+    </item>
+    
+    <item>
+      <title>AWS Transcribe</title>
+      <link>https://brianpfeil.com/post/aws-transcribe/</link>
+      <pubDate>Tue, 30 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-transcribe/</guid>
+      <description>learning AWS Transcribe</description>
+    </item>
+    
+    <item>
+      <title>Chrome AWS Lambda</title>
+      <link>https://brianpfeil.com/post/chrome-aws-lambda/</link>
+      <pubDate>Wed, 24 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/chrome-aws-lambda/</guid>
+      <description>learning Chrome AWS Lambda</description>
+    </item>
+    
+    <item>
+      <title>YouTube API</title>
+      <link>https://brianpfeil.com/post/youtube-api/</link>
+      <pubDate>Mon, 22 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/youtube-api/</guid>
+      <description>learn YouTube API</description>
+    </item>
+    
+    <item>
+      <title>AWS Glue</title>
+      <link>https://brianpfeil.com/post/aws-glue/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-glue/</guid>
+      <description>learning AWS Glue</description>
+    </item>
+    
+    <item>
+      <title>AWS Rekognition</title>
+      <link>https://brianpfeil.com/post/aws-rekognition/</link>
+      <pubDate>Mon, 08 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-rekognition/</guid>
+      <description>learning AWS Rekognition</description>
+    </item>
+    
+    <item>
+      <title>Azure Nodejs Arm Resources</title>
+      <link>https://brianpfeil.com/post/azure-nodejs-arm-resources/</link>
+      <pubDate>Wed, 15 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-nodejs-arm-resources/</guid>
+      <description>learning Azure Nodejs Arm Resources</description>
+    </item>
+    
+    <item>
+      <title>Azure Js Cognitive Services</title>
+      <link>https://brianpfeil.com/post/azure-js-cognitive-services/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-js-cognitive-services/</guid>
+      <description>learning Azure Js Cognitive Services</description>
+    </item>
+    
+    <item>
+      <title>Azure Nodejs Arm Storage</title>
+      <link>https://brianpfeil.com/post/azure-nodejs-arm-storage/</link>
+      <pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-nodejs-arm-storage/</guid>
+      <description>learning Azure Nodejs Arm Storage</description>
+    </item>
+    
+    <item>
+      <title>Azure SDK For Node Authentication</title>
+      <link>https://brianpfeil.com/post/azure-sdk-for-node-authentication/</link>
+      <pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-sdk-for-node-authentication/</guid>
+      <description>learning Azure SDK For Node Authentication</description>
+    </item>
+    
+    <item>
+      <title>Azure Serverless Framework</title>
+      <link>https://brianpfeil.com/post/azure-serverless-framework/</link>
+      <pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-serverless-framework/</guid>
+      <description>learning Azure Serverless Framework</description>
+    </item>
+    
+    <item>
+      <title>Python 2.X Websocket Client</title>
+      <link>https://brianpfeil.com/post/python-2.x-websocket-client/</link>
+      <pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/python-2.x-websocket-client/</guid>
+      <description>learning Python 2.X Websocket Client</description>
+    </item>
+    
+    <item>
+      <title>Azure Cosmos Js SDK</title>
+      <link>https://brianpfeil.com/post/azure-cosmos-js-sdk/</link>
+      <pubDate>Wed, 08 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-cosmos-js-sdk/</guid>
+      <description>learning Azure Cosmos Js SDK</description>
+    </item>
+    
+    <item>
+      <title>Apollo Client Local State</title>
+      <link>https://brianpfeil.com/post/apollo-client-local-state/</link>
+      <pubDate>Wed, 27 Feb 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/apollo-client-local-state/</guid>
+      <description>learning Apollo Client Local State</description>
+    </item>
+    
+    <item>
+      <title>Glitch Local Development</title>
+      <link>https://brianpfeil.com/post/glitch-local-development/</link>
+      <pubDate>Wed, 20 Feb 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/glitch-local-development/</guid>
+      <description>learning Glitch Local Development</description>
+    </item>
+    
+    <item>
+      <title>Pivotal Cloud Foundry</title>
+      <link>https://brianpfeil.com/post/pivotal-cloud-foundry/</link>
+      <pubDate>Thu, 31 Jan 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/pivotal-cloud-foundry/</guid>
+      <description>learning Pivotal Cloud Foundry</description>
+    </item>
+    
+    <item>
+      <title>Storybook Ui Development Environment</title>
+      <link>https://brianpfeil.com/post/storybook-ui-development-environment/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/storybook-ui-development-environment/</guid>
+      <description>learn Storybook Ui Development Environment</description>
+    </item>
+    
+    <item>
+      <title>Jupyter Kernel Gateway</title>
+      <link>https://brianpfeil.com/post/jupyter-kernel-gateway/</link>
+      <pubDate>Sat, 19 Jan 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/jupyter-kernel-gateway/</guid>
+      <description>learning Jupyter Kernel Gateway</description>
+    </item>
+    
+    <item>
+      <title>AWS API Gateway Websockets Serverless</title>
+      <link>https://brianpfeil.com/post/aws-api-gateway-websockets-serverless/</link>
+      <pubDate>Tue, 08 Jan 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-api-gateway-websockets-serverless/</guid>
+      <description>learning AWS API Gateway Websockets Serverless</description>
+    </item>
+    
+    <item>
+      <title>AWS Codepipeline</title>
+      <link>https://brianpfeil.com/post/aws-codepipeline/</link>
+      <pubDate>Thu, 20 Dec 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-codepipeline/</guid>
+      <description>learning AWS Codepipeline</description>
+    </item>
+    
+    <item>
+      <title>Twit Twitter API Client</title>
+      <link>https://brianpfeil.com/post/twit-twitter-api-client/</link>
+      <pubDate>Mon, 19 Nov 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/twit-twitter-api-client/</guid>
+      <description>learn Twit Twitter API Client</description>
+    </item>
+    
+    <item>
+      <title>AWS Amplify Js App</title>
+      <link>https://brianpfeil.com/post/aws-amplify-js-app/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-amplify-js-app/</guid>
+      <description>learning AWS Amplify Js App</description>
+    </item>
+    
+    <item>
+      <title>Dynogels</title>
+      <link>https://brianpfeil.com/post/dynogels/</link>
+      <pubDate>Mon, 22 Oct 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/dynogels/</guid>
+      <description>learning Dynogels</description>
+    </item>
+    
+    <item>
+      <title>Node Jenkins API</title>
+      <link>https://brianpfeil.com/post/node-jenkins-api/</link>
+      <pubDate>Thu, 18 Oct 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/node-jenkins-api/</guid>
+      <description>learning Node Jenkins API</description>
+    </item>
+    
+    <item>
+      <title>Lerna</title>
+      <link>https://brianpfeil.com/post/lerna/</link>
+      <pubDate>Sun, 02 Sep 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/lerna/</guid>
+      <description>learning Lerna</description>
+    </item>
+    
+    <item>
+      <title>Vuejs Webpack</title>
+      <link>https://brianpfeil.com/post/vuejs-webpack/</link>
+      <pubDate>Sat, 01 Sep 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/vuejs-webpack/</guid>
+      <description>learn Vuejs Webpack</description>
+    </item>
+    
+    <item>
+      <title>Webassembly</title>
+      <link>https://brianpfeil.com/post/webassembly/</link>
+      <pubDate>Wed, 22 Aug 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/webassembly/</guid>
+      <description>learn Webassembly</description>
+    </item>
+    
+    <item>
+      <title>Alexa Skills</title>
+      <link>https://brianpfeil.com/post/alexa-skills/</link>
+      <pubDate>Thu, 17 May 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/alexa-skills/</guid>
+      <description>learning Alexa Skills</description>
+    </item>
+    
+    <item>
+      <title>AWS Iot</title>
+      <link>https://brianpfeil.com/post/aws-iot/</link>
+      <pubDate>Sat, 10 Feb 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-iot/</guid>
+      <description>learning AWS Iot</description>
+    </item>
+    
+    <item>
+      <title>AWS Ecs</title>
+      <link>https://brianpfeil.com/post/aws-ecs/</link>
+      <pubDate>Sat, 11 Nov 2017 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-ecs/</guid>
+      <description>learning AWS Ecs</description>
+    </item>
+    
+    <item>
+      <title>Pusher</title>
+      <link>https://brianpfeil.com/post/pusher/</link>
+      <pubDate>Sat, 21 Oct 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/pusher/</guid>
+      <description>learning Pusher</description>
+    </item>
+    
+    <item>
+      <title>AWS Kms</title>
+      <link>https://brianpfeil.com/post/aws-kms/</link>
+      <pubDate>Thu, 31 Aug 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-kms/</guid>
+      <description>learning AWS Kms</description>
+    </item>
+    
+    <item>
+      <title>Scribbletune</title>
+      <link>https://brianpfeil.com/post/scribbletune/</link>
+      <pubDate>Sat, 26 Aug 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/scribbletune/</guid>
+      <description>learning Scribbletune</description>
+    </item>
+    
+    <item>
+      <title>React Router 4</title>
+      <link>https://brianpfeil.com/post/react-router-4/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/react-router-4/</guid>
+      <description>learning React Router 4</description>
+    </item>
+    
+    <item>
+      <title>AWS Cognito</title>
+      <link>https://brianpfeil.com/post/aws-cognito/</link>
+      <pubDate>Sun, 21 May 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cognito/</guid>
+      <description>learning AWS Cognito</description>
+    </item>
+    
+    <item>
+      <title>Confluence API</title>
+      <link>https://brianpfeil.com/post/confluence-api/</link>
+      <pubDate>Tue, 04 Apr 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/confluence-api/</guid>
+      <description>learning Confluence API</description>
+    </item>
+    
+    <item>
+      <title>Node Google Cloud</title>
+      <link>https://brianpfeil.com/post/node-google-cloud/</link>
+      <pubDate>Fri, 09 Dec 2016 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/node-google-cloud/</guid>
+      <description>learning Node Google Cloud</description>
+    </item>
+    
+    <item>
+      <title>Apex Lambda</title>
+      <link>https://brianpfeil.com/post/apex-lambda/</link>
+      <pubDate>Tue, 06 Dec 2016 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/apex-lambda/</guid>
+      <description>learning Apex Lambda</description>
+    </item>
+    
+    <item>
+      <title>Heroku Container</title>
+      <link>https://brianpfeil.com/post/heroku-container/</link>
+      <pubDate>Fri, 04 Nov 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/heroku-container/</guid>
+      <description>learning Heroku Container</description>
+    </item>
+    
+    <item>
+      <title>Nextjs</title>
+      <link>https://brianpfeil.com/post/nextjs/</link>
+      <pubDate>Tue, 01 Nov 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/nextjs/</guid>
+      <description>learning Nextjs</description>
+    </item>
+    
+    <item>
+      <title>Keystonejs</title>
+      <link>https://brianpfeil.com/post/keystonejs/</link>
+      <pubDate>Thu, 20 Oct 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/keystonejs/</guid>
+      <description>learning Keystonejs</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>https://brianpfeil.com/post/kubernetes/</link>
+      <pubDate>Tue, 18 Oct 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/kubernetes/</guid>
+      <description>learning Kubernetes</description>
+    </item>
+    
+    <item>
+      <title>Phaser</title>
+      <link>https://brianpfeil.com/post/phaser/</link>
+      <pubDate>Tue, 02 Aug 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/phaser/</guid>
+      <description>learning Phaser</description>
+    </item>
+    
+    <item>
+      <title>React Redux</title>
+      <link>https://brianpfeil.com/post/react-redux/</link>
+      <pubDate>Wed, 04 May 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/react-redux/</guid>
+      <description>learning React Redux</description>
+    </item>
+    
+    <item>
+      <title>Nexe</title>
+      <link>https://brianpfeil.com/post/nexe/</link>
+      <pubDate>Tue, 05 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/nexe/</guid>
+      <description>learning Nexe</description>
+    </item>
+    
+    <item>
+      <title>Node Odata</title>
+      <link>https://brianpfeil.com/post/node-odata/</link>
+      <pubDate>Fri, 18 Mar 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/node-odata/</guid>
+      <description>learning Node Odata</description>
+    </item>
+    
+    <item>
+      <title>Beefy</title>
+      <link>https://brianpfeil.com/post/beefy/</link>
+      <pubDate>Fri, 16 Oct 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/beefy/</guid>
+      <description>learning Beefy</description>
+    </item>
+    
+    <item>
+      <title>Cordova</title>
+      <link>https://brianpfeil.com/post/cordova/</link>
+      <pubDate>Thu, 15 Oct 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/cordova/</guid>
+      <description>learning Cordova</description>
+    </item>
+    
+    <item>
+      <title>Node Coveralls</title>
+      <link>https://brianpfeil.com/post/node-coveralls/</link>
+      <pubDate>Tue, 29 Sep 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/node-coveralls/</guid>
+      <description>learning Node Coveralls</description>
+    </item>
+    
+    <item>
+      <title>Heroku Deploy</title>
+      <link>https://brianpfeil.com/post/heroku-deploy/</link>
+      <pubDate>Wed, 23 Sep 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/heroku-deploy/</guid>
+      <description>learning Heroku Deploy</description>
+    </item>
+    
+    <item>
+      <title>Heroku Docker</title>
+      <link>https://brianpfeil.com/post/heroku-docker/</link>
+      <pubDate>Wed, 23 Sep 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/heroku-docker/</guid>
+      <description>learning Heroku Docker</description>
+    </item>
+    
+    <item>
+      <title>Mocha</title>
+      <link>https://brianpfeil.com/post/mocha/</link>
+      <pubDate>Tue, 22 Sep 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/mocha/</guid>
+      <description>learning Mocha</description>
+    </item>
+    
+    <item>
+      <title>Webdriverio</title>
+      <link>https://brianpfeil.com/post/webdriverio/</link>
+      <pubDate>Thu, 20 Aug 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/webdriverio/</guid>
+      <description>learn Webdriverio</description>
+    </item>
+    
+    <item>
+      <title>Webpack</title>
+      <link>https://brianpfeil.com/post/webpack/</link>
+      <pubDate>Fri, 03 Apr 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/webpack/</guid>
+      <description>learn Webpack</description>
+    </item>
+    
+    <item>
+      <title>Es6</title>
+      <link>https://brianpfeil.com/post/es6/</link>
+      <pubDate>Mon, 30 Mar 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/es6/</guid>
+      <description>learning Es6</description>
+    </item>
     
     <item>
       <title>React Native - Initial Thoughts</title>
@@ -17,7 +575,7 @@
       <pubDate>Fri, 27 Mar 2015 16:36:59 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/react-native-initial-thoughts/</guid>
-      <description>React Native was released as open source yesterday. There&amp;rsquo;s been quite a bit of build up and excitement since the React.js Conf 2015 video. The video showed a real app being built with a web development style workflow (your favorite editor with livereload). I&amp;rsquo;ve built some apps using React.js and really appreciate the simplicity and development workflow. Having the same for native app development definitely is exciting. I&amp;rsquo;ve gottent to spend a few hours with it and it looks like it&amp;rsquo;s living up to the hype.</description>
+      <description>leverage React for building iOS and Android apps</description>
     </item>
     
     <item>
@@ -26,10 +584,61 @@
       <pubDate>Sun, 15 Feb 2015 11:22:57 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/cross-platform-desktop-apps-with-nw-js/</guid>
-      <description>Post is based on the pfeilbr/nwjs-playground project.
- NW.js Playground Project to learn and experiment with NW.js.
-NW.js enables the creation of cross platform desktop applications. Your UI is built with standard html, js, and css technologies. Access to the underlying desktop OS capabilites are provided by giving you access to node.js. You can use the Node.js core modules plus any of the 3rd party NPM modules;
-Installing NW.js Download and unpack nwjs app for your platform from http://nwjs.</description>
+      <description>use the power and ease of NodeJS to create cross-platform desktop apps</description>
+    </item>
+    
+    <item>
+      <title>Karma</title>
+      <link>https://brianpfeil.com/post/karma/</link>
+      <pubDate>Sun, 15 Feb 2015 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/karma/</guid>
+      <description>learning Karma</description>
+    </item>
+    
+    <item>
+      <title>Nwjs</title>
+      <link>https://brianpfeil.com/post/nwjs/</link>
+      <pubDate>Sun, 15 Feb 2015 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/nwjs/</guid>
+      <description>learning Nwjs</description>
+    </item>
+    
+    <item>
+      <title>Sauce Labs</title>
+      <link>https://brianpfeil.com/post/sauce-labs/</link>
+      <pubDate>Wed, 04 Feb 2015 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/sauce-labs/</guid>
+      <description>learning Sauce Labs</description>
+    </item>
+    
+    <item>
+      <title>Nodemailer</title>
+      <link>https://brianpfeil.com/post/nodemailer/</link>
+      <pubDate>Sat, 06 Dec 2014 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/nodemailer/</guid>
+      <description>learning Nodemailer</description>
+    </item>
+    
+    <item>
+      <title>Kue</title>
+      <link>https://brianpfeil.com/post/kue/</link>
+      <pubDate>Fri, 13 Jun 2014 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/kue/</guid>
+      <description>learning Kue</description>
+    </item>
+    
+    <item>
+      <title>Jsforce</title>
+      <link>https://brianpfeil.com/post/jsforce/</link>
+      <pubDate>Thu, 12 Jun 2014 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/jsforce/</guid>
+      <description>learning Jsforce</description>
     </item>
     
     <item>
@@ -38,7 +647,7 @@ Installing NW.js Download and unpack nwjs app for your platform from http://nwjs
       <pubDate>Tue, 27 Sep 2011 19:31:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/best-fit-web-font-sizing/</guid>
-      <description>I&amp;rsquo;ve been working on a web app that targets both smartphones and tablets. The large variation in screen sizes has sent me down the path of using a dynamic proportional layout that adapts to fit the available space. For example, I&amp;rsquo;ve allocated 20% of the available vertical space to the header section that displays a title. The jQuery UI.Layout Plug-in has worked great for laying out the content areas, but I ran into a wall when it came to sizing my text proportionately.</description>
+      <description>dynamically size web font based on available space</description>
     </item>
     
   </channel>

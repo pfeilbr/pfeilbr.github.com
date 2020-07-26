@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CSS on Brian Pfeil</title>
+    <link>https://brianpfeil.com/categories/CSS/</link>
+    <description>Recent content in CSS on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 Feb 2020 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/categories/CSS/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Azure Pipelines</title>
+      <link>https://brianpfeil.com/post/azure-pipelines/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-pipelines/</guid>
+      <description>learning Azure Pipelines</description>
+    </item>
+    
+    <item>
+      <title>Tailwindcss</title>
+      <link>https://brianpfeil.com/post/tailwindcss/</link>
+      <pubDate>Thu, 16 Jan 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/tailwindcss/</guid>
+      <description>learn Tailwindcss</description>
+    </item>
+    
+    <item>
+      <title>Serverless Plugin CloudFront Lambda Edge</title>
+      <link>https://brianpfeil.com/post/serverless-plugin-cloudfront-lambda-edge/</link>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/serverless-plugin-cloudfront-lambda-edge/</guid>
+      <description>learning Serverless Plugin CloudFront Lambda Edge</description>
+    </item>
+    
+    <item>
+      <title>AWS Amplify Console</title>
+      <link>https://brianpfeil.com/post/aws-amplify-console/</link>
+      <pubDate>Mon, 09 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-amplify-console/</guid>
+      <description>learning AWS Amplify Console</description>
+    </item>
+    
+    <item>
+      <title>Gatsbyjs</title>
+      <link>https://brianpfeil.com/post/gatsbyjs/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/gatsbyjs/</guid>
+      <description>learning Gatsbyjs</description>
+    </item>
+    
+  </channel>
+</rss>

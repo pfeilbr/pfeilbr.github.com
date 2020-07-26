@@ -17,8 +17,7 @@
       <pubDate>Fri, 11 May 2012 01:34:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/rubymotion/</guid>
-      <description>RubyMotion is a toolchain that lets you develop iOS using Ruby. I&amp;rsquo;m a big fan of Ruby and have been using it on and off since 2001. It&amp;rsquo;s been a huge timesaver in many cases allowing me to quickly script solutions. When I heard it was coming to iOS I had to check it out.
-The toolchain and the way you use the various components matches the rails development process. Open your favorite text editor and a terminal, and you&amp;rsquo;re ready to go.</description>
+      <description>leverage your Ruby skills to build native iOS apps</description>
     </item>
     
   </channel>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>glue on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/glue/</link>
+    <description>Recent content in glue on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 Jul 2019 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/glue/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS Glue</title>
+      <link>https://brianpfeil.com/post/aws-glue/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-glue/</guid>
+      <description>learning AWS Glue</description>
+    </item>
+    
+  </channel>
+</rss>

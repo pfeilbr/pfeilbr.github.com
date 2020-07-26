@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TypeScript on Brian Pfeil</title>
+    <link>https://brianpfeil.com/categories/TypeScript/</link>
+    <description>Recent content in TypeScript on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Sep 2019 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/categories/TypeScript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS Delivlib</title>
+      <link>https://brianpfeil.com/post/aws-delivlib/</link>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-delivlib/</guid>
+      <description>learning AWS Delivlib</description>
+    </item>
+    
+    <item>
+      <title>AWS CDK</title>
+      <link>https://brianpfeil.com/post/aws-cdk/</link>
+      <pubDate>Thu, 11 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cdk/</guid>
+      <description>learning AWS CDK</description>
+    </item>
+    
+    <item>
+      <title>Jest Testing Framework</title>
+      <link>https://brianpfeil.com/post/jest-testing-framework/</link>
+      <pubDate>Sat, 23 Feb 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/jest-testing-framework/</guid>
+      <description>learning Jest Testing Framework</description>
+    </item>
+    
+    <item>
+      <title>React Hooks</title>
+      <link>https://brianpfeil.com/post/react-hooks/</link>
+      <pubDate>Mon, 11 Feb 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/react-hooks/</guid>
+      <description>learning React Hooks</description>
+    </item>
+    
+    <item>
+      <title>Json Schema</title>
+      <link>https://brianpfeil.com/post/json-schema/</link>
+      <pubDate>Wed, 06 Jun 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/json-schema/</guid>
+      <description>learning Json Schema</description>
+    </item>
+    
+    <item>
+      <title>Graphql</title>
+      <link>https://brianpfeil.com/post/graphql/</link>
+      <pubDate>Mon, 30 Apr 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/graphql/</guid>
+      <description>learning Graphql</description>
+    </item>
+    
+    <item>
+      <title>AWS Iam</title>
+      <link>https://brianpfeil.com/post/aws-iam/</link>
+      <pubDate>Thu, 08 Feb 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-iam/</guid>
+      <description>learning AWS Iam</description>
+    </item>
+    
+    <item>
+      <title>Serverless Typescript Webpack</title>
+      <link>https://brianpfeil.com/post/serverless-typescript-webpack/</link>
+      <pubDate>Tue, 11 Jul 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/serverless-typescript-webpack/</guid>
+      <description>learning Serverless Typescript Webpack</description>
+    </item>
+    
+    <item>
+      <title>AWS Cloudwatch</title>
+      <link>https://brianpfeil.com/post/aws-cloudwatch/</link>
+      <pubDate>Sun, 21 May 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cloudwatch/</guid>
+      <description>learning AWS Cloudwatch</description>
+    </item>
+    
+    <item>
+      <title>Typescript Node</title>
+      <link>https://brianpfeil.com/post/typescript-node/</link>
+      <pubDate>Wed, 18 May 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/typescript-node/</guid>
+      <description>learn Typescript Node</description>
+    </item>
+    
+    <item>
+      <title>Angular CLI App</title>
+      <link>https://brianpfeil.com/post/angular-cli-app/</link>
+      <pubDate>Mon, 09 May 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/angular-cli-app/</guid>
+      <description>learning Angular CLI App</description>
+    </item>
+    
+    <item>
+      <title>Typings</title>
+      <link>https://brianpfeil.com/post/typings/</link>
+      <pubDate>Mon, 02 May 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/typings/</guid>
+      <description>learn Typings</description>
+    </item>
+    
+    <item>
+      <title>Angular2</title>
+      <link>https://brianpfeil.com/post/angular2/</link>
+      <pubDate>Wed, 13 Jan 2016 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/angular2/</guid>
+      <description>learning Angular2</description>
+    </item>
+    
+  </channel>
+</rss>

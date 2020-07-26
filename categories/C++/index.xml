@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43; on Brian Pfeil</title>
+    <link>https://brianpfeil.com/categories/C&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43; on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Jan 2020 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/categories/C++/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Googletest</title>
+      <link>https://brianpfeil.com/post/googletest/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/googletest/</guid>
+      <description>learning Googletest</description>
+    </item>
+    
+    <item>
+      <title>AWS SDK Cpp</title>
+      <link>https://brianpfeil.com/post/aws-sdk-cpp/</link>
+      <pubDate>Tue, 25 Sep 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-sdk-cpp/</guid>
+      <description>learning AWS SDK Cpp</description>
+    </item>
+    
+    <item>
+      <title>Google Test Cpp Test Framework</title>
+      <link>https://brianpfeil.com/post/google-test-cpp-test-framework/</link>
+      <pubDate>Tue, 25 Sep 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/google-test-cpp-test-framework/</guid>
+      <description>learning Google Test Cpp Test Framework</description>
+    </item>
+    
+    <item>
+      <title>Modern Cpp</title>
+      <link>https://brianpfeil.com/post/modern-cpp/</link>
+      <pubDate>Mon, 24 Sep 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/modern-cpp/</guid>
+      <description>learning Modern Cpp</description>
+    </item>
+    
+    <item>
+      <title>Lua C API</title>
+      <link>https://brianpfeil.com/post/lua-c-api/</link>
+      <pubDate>Tue, 24 Jul 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/lua-c-api/</guid>
+      <description>learning Lua C API</description>
+    </item>
+    
+    <item>
+      <title>V8</title>
+      <link>https://brianpfeil.com/post/v8/</link>
+      <pubDate>Tue, 19 May 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/v8/</guid>
+      <description>learn V8</description>
+    </item>
+    
+  </channel>
+</rss>

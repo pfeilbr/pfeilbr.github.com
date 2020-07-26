@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>serverless on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/serverless/</link>
+    <description>Recent content in serverless on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Jun 2020 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/serverless/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Serverless Golang</title>
+      <link>https://brianpfeil.com/post/serverless-golang/</link>
+      <pubDate>Wed, 17 Jun 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/serverless-golang/</guid>
+      <description>learning Serverless Golang</description>
+    </item>
+    
+    <item>
+      <title>Serverless Lambda Java</title>
+      <link>https://brianpfeil.com/post/serverless-lambda-java/</link>
+      <pubDate>Sun, 27 Oct 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/serverless-lambda-java/</guid>
+      <description>learning Serverless Lambda Java</description>
+    </item>
+    
+    <item>
+      <title>AWS Serverless Application Repository</title>
+      <link>https://brianpfeil.com/post/aws-serverless-application-repository/</link>
+      <pubDate>Mon, 14 Oct 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-serverless-application-repository/</guid>
+      <description>learning AWS Serverless Application Repository</description>
+    </item>
+    
+    <item>
+      <title>Serverless Lambda Layers</title>
+      <link>https://brianpfeil.com/post/serverless-lambda-layers/</link>
+      <pubDate>Wed, 18 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/serverless-lambda-layers/</guid>
+      <description>learning Serverless Lambda Layers</description>
+    </item>
+    
+    <item>
+      <title>Serverless Plugin CloudFront Lambda Edge</title>
+      <link>https://brianpfeil.com/post/serverless-plugin-cloudfront-lambda-edge/</link>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/serverless-plugin-cloudfront-lambda-edge/</guid>
+      <description>learning Serverless Plugin CloudFront Lambda Edge</description>
+    </item>
+    
+    <item>
+      <title>Serverless Framework Full Lifecycle With Dashboard</title>
+      <link>https://brianpfeil.com/post/serverless-framework-full-lifecycle-with-dashboard/</link>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/serverless-framework-full-lifecycle-with-dashboard/</guid>
+      <description>learning Serverless Framework Full Lifecycle With Dashboard</description>
+    </item>
+    
+    <item>
+      <title>Azure Serverless Framework</title>
+      <link>https://brianpfeil.com/post/azure-serverless-framework/</link>
+      <pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-serverless-framework/</guid>
+      <description>learning Azure Serverless Framework</description>
+    </item>
+    
+    <item>
+      <title>AWS API Gateway Websockets Serverless</title>
+      <link>https://brianpfeil.com/post/aws-api-gateway-websockets-serverless/</link>
+      <pubDate>Tue, 08 Jan 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-api-gateway-websockets-serverless/</guid>
+      <description>learning AWS API Gateway Websockets Serverless</description>
+    </item>
+    
+    <item>
+      <title>Serverless Python</title>
+      <link>https://brianpfeil.com/post/serverless-python/</link>
+      <pubDate>Fri, 10 Nov 2017 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/serverless-python/</guid>
+      <description>learning Serverless Python</description>
+    </item>
+    
+    <item>
+      <title>Serverless Typescript Webpack</title>
+      <link>https://brianpfeil.com/post/serverless-typescript-webpack/</link>
+      <pubDate>Tue, 11 Jul 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/serverless-typescript-webpack/</guid>
+      <description>learning Serverless Typescript Webpack</description>
+    </item>
+    
+  </channel>
+</rss>

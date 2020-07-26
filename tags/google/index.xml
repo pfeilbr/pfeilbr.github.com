@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>google on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/google/</link>
+    <description>Recent content in google on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 25 Sep 2018 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/google/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Google Test Cpp Test Framework</title>
+      <link>https://brianpfeil.com/post/google-test-cpp-test-framework/</link>
+      <pubDate>Tue, 25 Sep 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/google-test-cpp-test-framework/</guid>
+      <description>learning Google Test Cpp Test Framework</description>
+    </item>
+    
+    <item>
+      <title>Node Google Cloud</title>
+      <link>https://brianpfeil.com/post/node-google-cloud/</link>
+      <pubDate>Fri, 09 Dec 2016 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/node-google-cloud/</guid>
+      <description>learning Node Google Cloud</description>
+    </item>
+    
+  </channel>
+</rss>

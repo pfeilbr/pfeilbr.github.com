@@ -8,10 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Atom Golang Setup - Brian Pfeil</title>
-  <meta name="description" content="I&rsquo;ve recently switched to Atom from Sublime Text for web development. The transition was relatively painless since many of the keyboard shortcuts and capabilities are the same in. I really enjoy usig Atom and want to have that same experience with programming in Go. This documents my Go setup in Atom.
-Install and Configuration Steps   Install go-plus
-  Set the go-plus GOPATH setting
- Ideally the Atom application process should have GOPATH in its ENV and you shouldn&rsquo;t have to set this."><script type="application/ld+json">
+  <meta name="description" content="Atom and Golang, a perfect match">
+  <meta name="author" content="Brian Pfeil"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
     "@type": "WebSite",
@@ -59,7 +57,7 @@ Install and Configuration Steps   Install go-plus
     "name" : "Brian Pfeil"
   },
   "headline": "Atom Golang Setup",
-  "description" : "I\x26rsquo;ve recently switched to Atom from Sublime Text for web development. The transition was relatively painless since many of the keyboard shortcuts and capabilities are the same in. I really enjoy usig Atom and want to have that same experience with programming in Go. This documents my Go setup in Atom.\nInstall and Configuration Steps   Install go-plus\n  Set the go-plus GOPATH setting\n Ideally the Atom application process should have GOPATH in its ENV and you shouldn\x26rsquo;t have to set this.",
+  "description" : "Atom and Golang, a perfect match",
   "inLanguage" : "en",
   "wordCount":  129 ,
   "datePublished" : "2015-12-02T13:54:15",
@@ -81,17 +79,16 @@ Install and Configuration Steps   Install go-plus
 </script>
 
 <meta property="og:title" content="Atom Golang Setup" />
-<meta property="og:description" content="I&rsquo;ve recently switched to Atom from Sublime Text for web development. The transition was relatively painless since many of the keyboard shortcuts and capabilities are the same in. I really enjoy usig Atom and want to have that same experience with programming in Go. This documents my Go setup in Atom.
-Install and Configuration Steps   Install go-plus
-  Set the go-plus GOPATH setting
- Ideally the Atom application process should have GOPATH in its ENV and you shouldn&rsquo;t have to set this.">
+<meta property="og:description" content="Atom and Golang, a perfect match">
 <meta property="og:url" content="https://brianpfeil.com/post/atom-golang-support/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Brian Pfeil" />
 
   <meta name="twitter:title" content="Atom Golang Setup" />
-  <meta name="twitter:description" content="I&rsquo;ve recently switched to Atom from Sublime Text for web development. The transition was relatively painless since many of the keyboard shortcuts and capabilities are the same in. I really enjoy …">
+  <meta name="twitter:description" content="Atom and Golang, a perfect match">
   <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@pfeilbr" />
+  <meta name="twitter:creator" content="@pfeilbr" />
   <meta name="generator" content="Hugo 0.67.0" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -244,19 +241,15 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on December 2, 2015
+  <i class="fas fa-calendar fa-sm"></i>&nbsp; 2015-12-02
   
   
   
   
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Brian Pfeil
-    
+
   
   
 </span>
-
-
               
             </div>
           </div>
@@ -332,7 +325,7 @@ if (!doNotTrack) {
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fatom-golang-support%2f&amp;text=Atom%20Golang%20Setup&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fatom-golang-support%2f&amp;text=Atom%20Golang%20Setup&amp;via=pfeilbr" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -401,9 +394,13 @@ if (!doNotTrack) {
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://brianpfeil.com/post/react-native-initial-thoughts/" data-toggle="tooltip" data-placement="top" title="React Native - Initial Thoughts">&larr; Previous Post</a>
+              <a href="https://brianpfeil.com/post/beefy/" data-toggle="tooltip" data-placement="top" title="Beefy">&larr; Previous Post</a>
             </li>
           
+          
+            <li class="next">
+              <a href="https://brianpfeil.com/post/angular2/" data-toggle="tooltip" data-placement="top" title="Angular2">Next Post &rarr;</a>
+            </li>
           
         </ul>
       
@@ -425,6 +422,30 @@ if (!doNotTrack) {
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <ul class="list-inline text-center footer-links">
           
+              <li>
+                <a href="https://github.com/pfeilbr" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/pfeilbr" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/29148/pfeilbr" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
           
           <li>
             <a href="" title="RSS">
@@ -437,6 +458,10 @@ if (!doNotTrack) {
           
         </ul>
         <p class="credits copyright text-muted">
+          
+            
+              <a href="brianpfeil.com">Brian Pfeil</a>
+            
           
 
           &nbsp;&bull;&nbsp;&copy;

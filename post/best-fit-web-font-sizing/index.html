@@ -8,7 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Best Fit Web Font Sizing - Brian Pfeil</title>
-  <meta name="description" content="I&rsquo;ve been working on a web app that targets both smartphones and tablets. The large variation in screen sizes has sent me down the path of using a dynamic proportional layout that adapts to fit the available space. For example, I&rsquo;ve allocated 20% of the available vertical space to the header section that displays a title. The jQuery UI.Layout Plug-in has worked great for laying out the content areas, but I ran into a wall when it came to sizing my text proportionately."><script type="application/ld+json">
+  <meta name="description" content="dynamically size web font based on available space">
+  <meta name="author" content="Brian Pfeil"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
     "@type": "WebSite",
@@ -56,7 +57,7 @@
     "name" : "Brian Pfeil"
   },
   "headline": "Best Fit Web Font Sizing",
-  "description" : "I\x26rsquo;ve been working on a web app that targets both smartphones and tablets. The large variation in screen sizes has sent me down the path of using a dynamic proportional layout that adapts to fit the available space. For example, I\x26rsquo;ve allocated 20% of the available vertical space to the header section that displays a title. The jQuery UI.Layout Plug-in has worked great for laying out the content areas, but I ran into a wall when it came to sizing my text proportionately.",
+  "description" : "dynamically size web font based on available space",
   "inLanguage" : "en",
   "wordCount":  547 ,
   "datePublished" : "2011-09-27T19:31:00",
@@ -78,14 +79,16 @@
 </script>
 
 <meta property="og:title" content="Best Fit Web Font Sizing" />
-<meta property="og:description" content="I&rsquo;ve been working on a web app that targets both smartphones and tablets. The large variation in screen sizes has sent me down the path of using a dynamic proportional layout that adapts to fit the available space. For example, I&rsquo;ve allocated 20% of the available vertical space to the header section that displays a title. The jQuery UI.Layout Plug-in has worked great for laying out the content areas, but I ran into a wall when it came to sizing my text proportionately.">
+<meta property="og:description" content="dynamically size web font based on available space">
 <meta property="og:url" content="https://brianpfeil.com/post/best-fit-web-font-sizing/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Brian Pfeil" />
 
   <meta name="twitter:title" content="Best Fit Web Font Sizing" />
-  <meta name="twitter:description" content="I&rsquo;ve been working on a web app that targets both smartphones and tablets. The large variation in screen sizes has sent me down the path of using a dynamic proportional layout that adapts to fit …">
+  <meta name="twitter:description" content="dynamically size web font based on available space">
   <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@pfeilbr" />
+  <meta name="twitter:creator" content="@pfeilbr" />
   <meta name="generator" content="Hugo 0.67.0" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -238,19 +241,15 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on September 27, 2011
+  <i class="fas fa-calendar fa-sm"></i>&nbsp; 2011-09-27
   
   
   
   
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Brian Pfeil
-    
+
   
   
 </span>
-
-
               
             </div>
           </div>
@@ -377,7 +376,7 @@ applyBestFitText();
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fbest-fit-web-font-sizing%2f&amp;text=Best%20Fit%20Web%20Font%20Sizing&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fbest-fit-web-font-sizing%2f&amp;text=Best%20Fit%20Web%20Font%20Sizing&amp;via=pfeilbr" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -434,6 +433,8 @@ applyBestFitText();
                   <ul>
                 
                 
+                    <li><a href="/post/html-video-embed/">Html Video Embed</a></li>
+                
                     <li><a href="/post/react-native-initial-thoughts/">React Native - Initial Thoughts</a></li>
                 
                     <li><a href="/post/cross-platform-desktop-apps-with-nw-js/">Cross-platform Desktop Apps with NW.js</a></li>
@@ -476,6 +477,30 @@ applyBestFitText();
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <ul class="list-inline text-center footer-links">
           
+              <li>
+                <a href="https://github.com/pfeilbr" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/pfeilbr" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/29148/pfeilbr" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
           
           <li>
             <a href="" title="RSS">
@@ -488,6 +513,10 @@ applyBestFitText();
           
         </ul>
         <p class="credits copyright text-muted">
+          
+            
+              <a href="brianpfeil.com">Brian Pfeil</a>
+            
           
 
           &nbsp;&bull;&nbsp;&copy;

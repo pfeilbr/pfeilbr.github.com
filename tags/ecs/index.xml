@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ecs on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/ecs/</link>
+    <description>Recent content in ecs on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Nov 2017 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/ecs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS Ecs</title>
+      <link>https://brianpfeil.com/post/aws-ecs/</link>
+      <pubDate>Sat, 11 Nov 2017 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-ecs/</guid>
+      <description>learning AWS Ecs</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Emailing Todos to Dropbox - Brian Pfeil</title>
-  <meta name="description" content="Between work and home,I&rsquo;ve always got more things to do than I can keep straight my head. Like most people, I keep a to-do list so I don&rsquo;t have to worry about forgetting it. My to-do list is a simple bulleted text (Markdown) file that I keep in Dropbox so I can access it from anywhere.
- # TODOS * get gas * get leaf bags * send thank you cards # Completed * get propane * get burgers and hot dogs  This setup works fairly well, but they&rsquo;re times when I think of something I need to do, but I don&rsquo;t get it into this list because of the time it takes to add it."><script type="application/ld+json">
+  <meta name="description" content="allow universal access to your TODOs by storing them in dropbox via email">
+  <meta name="author" content="Brian Pfeil"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
     "@type": "WebSite",
@@ -57,7 +57,7 @@
     "name" : "Brian Pfeil"
   },
   "headline": "Emailing Todos to Dropbox",
-  "description" : "Between work and home,I\x26rsquo;ve always got more things to do than I can keep straight my head. Like most people, I keep a to-do list so I don\x26rsquo;t have to worry about forgetting it. My to-do list is a simple bulleted text (Markdown) file that I keep in Dropbox so I can access it from anywhere.\n # TODOS * get gas * get leaf bags * send thank you cards # Completed * get propane * get burgers and hot dogs  This setup works fairly well, but they\x26rsquo;re times when I think of something I need to do, but I don\x26rsquo;t get it into this list because of the time it takes to add it.",
+  "description" : "allow universal access to your TODOs by storing them in dropbox via email",
   "inLanguage" : "en",
   "wordCount":  631 ,
   "datePublished" : "2011-11-20T11:48:00",
@@ -79,15 +79,16 @@
 </script>
 
 <meta property="og:title" content="Emailing Todos to Dropbox" />
-<meta property="og:description" content="Between work and home,I&rsquo;ve always got more things to do than I can keep straight my head. Like most people, I keep a to-do list so I don&rsquo;t have to worry about forgetting it. My to-do list is a simple bulleted text (Markdown) file that I keep in Dropbox so I can access it from anywhere.
- # TODOS * get gas * get leaf bags * send thank you cards # Completed * get propane * get burgers and hot dogs  This setup works fairly well, but they&rsquo;re times when I think of something I need to do, but I don&rsquo;t get it into this list because of the time it takes to add it.">
+<meta property="og:description" content="allow universal access to your TODOs by storing them in dropbox via email">
 <meta property="og:url" content="https://brianpfeil.com/post/emailing-todos-to-dropbox/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Brian Pfeil" />
 
   <meta name="twitter:title" content="Emailing Todos to Dropbox" />
-  <meta name="twitter:description" content="Between work and home,I&rsquo;ve always got more things to do than I can keep straight my head. Like most people, I keep a to-do list so I don&rsquo;t have to worry about forgetting it. My to-do list …">
+  <meta name="twitter:description" content="allow universal access to your TODOs by storing them in dropbox via email">
   <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@pfeilbr" />
+  <meta name="twitter:creator" content="@pfeilbr" />
   <meta name="generator" content="Hugo 0.67.0" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -240,19 +241,15 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on November 20, 2011
+  <i class="fas fa-calendar fa-sm"></i>&nbsp; 2011-11-20
   
   
   
   
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Brian Pfeil
-    
+
   
   
 </span>
-
-
               
             </div>
           </div>
@@ -350,7 +347,7 @@ key, secret, and token in one place.</p>
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2femailing-todos-to-dropbox%2f&amp;text=Emailing%20Todos%20to%20Dropbox&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2femailing-todos-to-dropbox%2f&amp;text=Emailing%20Todos%20to%20Dropbox&amp;via=pfeilbr" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -436,6 +433,30 @@ key, secret, and token in one place.</p>
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <ul class="list-inline text-center footer-links">
           
+              <li>
+                <a href="https://github.com/pfeilbr" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/pfeilbr" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/29148/pfeilbr" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
           
           <li>
             <a href="" title="RSS">
@@ -448,6 +469,10 @@ key, secret, and token in one place.</p>
           
         </ul>
         <p class="credits copyright text-muted">
+          
+            
+              <a href="brianpfeil.com">Brian Pfeil</a>
+            
           
 
           &nbsp;&bull;&nbsp;&copy;

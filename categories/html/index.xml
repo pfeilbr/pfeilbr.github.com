@@ -6,10 +6,73 @@
     <description>Recent content in html on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Sep 2011 19:31:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/categories/html/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Heroku Node Worker</title>
+      <link>https://brianpfeil.com/post/heroku-node-worker/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/heroku-node-worker/</guid>
+      <description>learning Heroku Node Worker</description>
+    </item>
+    
+    <item>
+      <title>HTTP Live Streaming HLS</title>
+      <link>https://brianpfeil.com/post/http-live-streaming-hls/</link>
+      <pubDate>Mon, 23 Mar 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/http-live-streaming-hls/</guid>
+      <description>learning HTTP Live Streaming HLS</description>
+    </item>
+    
+    <item>
+      <title>AWS Polly</title>
+      <link>https://brianpfeil.com/post/aws-polly/</link>
+      <pubDate>Fri, 06 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-polly/</guid>
+      <description>learning AWS Polly</description>
+    </item>
+    
+    <item>
+      <title>Cognito Federated To Salesforce And S3 Presigned Url</title>
+      <link>https://brianpfeil.com/post/cognito-federated-to-salesforce-and-s3-presigned-url/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/cognito-federated-to-salesforce-and-s3-presigned-url/</guid>
+      <description>learning Cognito Federated To Salesforce And S3 Presigned Url</description>
+    </item>
+    
+    <item>
+      <title>S3 Website</title>
+      <link>https://brianpfeil.com/post/s3-website/</link>
+      <pubDate>Thu, 17 Aug 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/s3-website/</guid>
+      <description>learning S3 Website</description>
+    </item>
+    
+    <item>
+      <title>Flexbox</title>
+      <link>https://brianpfeil.com/post/flexbox/</link>
+      <pubDate>Thu, 15 Oct 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/flexbox/</guid>
+      <description>learning Flexbox</description>
+    </item>
+    
+    <item>
+      <title>Html Video Embed</title>
+      <link>https://brianpfeil.com/post/html-video-embed/</link>
+      <pubDate>Tue, 12 May 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/html-video-embed/</guid>
+      <description>learning Html Video Embed</description>
+    </item>
     
     <item>
       <title>Best Fit Web Font Sizing</title>
@@ -17,7 +80,7 @@
       <pubDate>Tue, 27 Sep 2011 19:31:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/best-fit-web-font-sizing/</guid>
-      <description>I&amp;rsquo;ve been working on a web app that targets both smartphones and tablets. The large variation in screen sizes has sent me down the path of using a dynamic proportional layout that adapts to fit the available space. For example, I&amp;rsquo;ve allocated 20% of the available vertical space to the header section that displays a title. The jQuery UI.Layout Plug-in has worked great for laying out the content areas, but I ran into a wall when it came to sizing my text proportionately.</description>
+      <description>dynamically size web font based on available space</description>
     </item>
     
   </channel>

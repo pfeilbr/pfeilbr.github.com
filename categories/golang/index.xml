@@ -17,10 +17,7 @@
       <pubDate>Wed, 02 Dec 2015 13:54:15 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/atom-golang-support/</guid>
-      <description>I&amp;rsquo;ve recently switched to Atom from Sublime Text for web development. The transition was relatively painless since many of the keyboard shortcuts and capabilities are the same in. I really enjoy usig Atom and want to have that same experience with programming in Go. This documents my Go setup in Atom.
-Install and Configuration Steps   Install go-plus
-  Set the go-plus GOPATH setting
- Ideally the Atom application process should have GOPATH in its ENV and you shouldn&amp;rsquo;t have to set this.</description>
+      <description>Atom and Golang, a perfect match</description>
     </item>
     
     <item>
@@ -29,8 +26,7 @@ Install and Configuration Steps   Install go-plus
       <pubDate>Thu, 26 Mar 2015 01:36:21 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/concurrent-downloader-in-go/</guid>
-      <description>Go has been getting a lot of traction among the coding elite due to it&amp;rsquo;s simplicity, speed, and most touted, it&amp;rsquo;s ability to enable concurrent solutions.
-Go is a very small language. If you have experience with a few languages, you can learn in a few days and fit and keep it all in your head. With most other languages, I&amp;rsquo;m accustomed to looking up documentation or examples on stackoverflow while I code.</description>
+      <description>example of Go&amp;rsquo;s first class concurrency support</description>
     </item>
     
   </channel>

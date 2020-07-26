@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>js on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/js/</link>
+    <description>Recent content in js on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 May 2019 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Azure Js Cognitive Services</title>
+      <link>https://brianpfeil.com/post/azure-js-cognitive-services/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-js-cognitive-services/</guid>
+      <description>learning Azure Js Cognitive Services</description>
+    </item>
+    
+    <item>
+      <title>Azure Cosmos Js SDK</title>
+      <link>https://brianpfeil.com/post/azure-cosmos-js-sdk/</link>
+      <pubDate>Wed, 08 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-cosmos-js-sdk/</guid>
+      <description>learning Azure Cosmos Js SDK</description>
+    </item>
+    
+    <item>
+      <title>AWS Amplify Js App</title>
+      <link>https://brianpfeil.com/post/aws-amplify-js-app/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-amplify-js-app/</guid>
+      <description>learning AWS Amplify Js App</description>
+    </item>
+    
+  </channel>
+</rss>

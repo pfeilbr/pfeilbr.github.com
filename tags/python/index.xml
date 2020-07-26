@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/python/</link>
+    <description>Recent content in python on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 05 Feb 2020 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python Async Await</title>
+      <link>https://brianpfeil.com/post/python-async-await/</link>
+      <pubDate>Wed, 05 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/python-async-await/</guid>
+      <description>learning Python Async Await</description>
+    </item>
+    
+    <item>
+      <title>Python Packaging</title>
+      <link>https://brianpfeil.com/post/python-packaging/</link>
+      <pubDate>Wed, 07 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/python-packaging/</guid>
+      <description>learning Python Packaging</description>
+    </item>
+    
+    <item>
+      <title>Python Tox Testing</title>
+      <link>https://brianpfeil.com/post/python-tox-testing/</link>
+      <pubDate>Tue, 06 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/python-tox-testing/</guid>
+      <description>learning Python Tox Testing</description>
+    </item>
+    
+    <item>
+      <title>Python 2.X Websocket Client</title>
+      <link>https://brianpfeil.com/post/python-2.x-websocket-client/</link>
+      <pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/python-2.x-websocket-client/</guid>
+      <description>learning Python 2.X Websocket Client</description>
+    </item>
+    
+    <item>
+      <title>OpenCV Python</title>
+      <link>https://brianpfeil.com/post/opencv-python/</link>
+      <pubDate>Wed, 31 Jan 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/opencv-python/</guid>
+      <description>learning OpenCV Python</description>
+    </item>
+    
+    <item>
+      <title>Serverless Python</title>
+      <link>https://brianpfeil.com/post/serverless-python/</link>
+      <pubDate>Fri, 10 Nov 2017 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/serverless-python/</guid>
+      <description>learning Serverless Python</description>
+    </item>
+    
+  </channel>
+</rss>

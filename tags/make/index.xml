@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>make on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/make/</link>
+    <description>Recent content in make on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Jan 2020 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/make/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Make</title>
+      <link>https://brianpfeil.com/post/make/</link>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/make/</guid>
+      <description>learning Make</description>
+    </item>
+    
+  </channel>
+</rss>

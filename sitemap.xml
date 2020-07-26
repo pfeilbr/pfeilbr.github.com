@@ -3,8 +3,133 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://brianpfeil.com/categories/nil/</loc>
+    <lastmod>2020-07-17T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/</loc>
+    <lastmod>2020-07-17T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/cli/</loc>
+    <lastmod>2020-07-17T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/github/</loc>
+    <lastmod>2020-07-17T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/lumigo-cli/</loc>
+    <lastmod>2020-07-17T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/playground/</loc>
+    <lastmod>2020-07-17T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/</loc>
+    <lastmod>2020-07-17T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/</loc>
+    <lastmod>2020-07-17T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://brianpfeil.com/tags/aws/</loc>
-    <lastmod>2020-03-29T09:40:13-04:00</lastmod>
+    <lastmod>2020-07-16T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-interactive-video-service/</loc>
+    <lastmod>2020-07-16T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/bref-php-lambda/</loc>
+    <lastmod>2020-07-13T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/heroku/</loc>
+    <lastmod>2020-07-13T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/heroku-node-worker/</loc>
+    <lastmod>2020-07-13T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/html/</loc>
+    <lastmod>2020-07-13T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/lambda/</loc>
+    <lastmod>2020-07-13T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/PHP/</loc>
+    <lastmod>2020-07-13T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/php/</loc>
+    <lastmod>2020-07-13T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/strapi/</loc>
+    <lastmod>2020-07-10T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/Makefile/</loc>
+    <lastmod>2020-07-02T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/php-lambda-layer/</loc>
+    <lastmod>2020-07-02T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/Go/</loc>
+    <lastmod>2020-06-17T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/serverless/</loc>
+    <lastmod>2020-06-17T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/serverless-golang/</loc>
+    <lastmod>2020-06-17T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-eventbridge/</loc>
+    <lastmod>2020-05-19T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/eventbridge/</loc>
+    <lastmod>2020-05-19T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/goreleaser/</loc>
+    <lastmod>2020-04-16T00:00:00-04:00</lastmod>
   </url>
   
   <url>
@@ -23,8 +148,1068 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/tags/</loc>
-    <lastmod>2020-03-29T09:40:13-04:00</lastmod>
+    <loc>https://brianpfeil.com/post/http-live-streaming-hls/</loc>
+    <lastmod>2020-03-23T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/Java/</loc>
+    <lastmod>2020-03-19T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/javascript/</loc>
+    <lastmod>2020-03-19T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/react/</loc>
+    <lastmod>2020-03-19T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/react-async/</loc>
+    <lastmod>2020-03-19T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/azure/</loc>
+    <lastmod>2020-02-26T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/azure-pipelines/</loc>
+    <lastmod>2020-02-26T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/C/</loc>
+    <lastmod>2020-02-26T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/CSS/</loc>
+    <lastmod>2020-02-26T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/flask/</loc>
+    <lastmod>2020-02-15T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/flask/</loc>
+    <lastmod>2020-02-15T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/Python/</loc>
+    <lastmod>2020-02-15T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/bash/</loc>
+    <lastmod>2020-02-10T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/bash-script-date-and-time/</loc>
+    <lastmod>2020-02-10T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/Shell/</loc>
+    <lastmod>2020-02-10T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/multipass/</loc>
+    <lastmod>2020-02-09T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/python/</loc>
+    <lastmod>2020-02-05T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/python-async-await/</loc>
+    <lastmod>2020-02-05T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/tailwindcss/</loc>
+    <lastmod>2020-01-16T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/go/</loc>
+    <lastmod>2020-01-15T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/go-modules/</loc>
+    <lastmod>2020-01-15T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/go-sdl2/</loc>
+    <lastmod>2020-01-13T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/make/</loc>
+    <lastmod>2020-01-13T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/make/</loc>
+    <lastmod>2020-01-13T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/C&#43;&#43;/</loc>
+    <lastmod>2020-01-02T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/googletest/</loc>
+    <lastmod>2020-01-02T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/react-bootstrap/</loc>
+    <lastmod>2019-12-29T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/glib/</loc>
+    <lastmod>2019-11-11T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/HCL/</loc>
+    <lastmod>2019-11-05T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/terraform/</loc>
+    <lastmod>2019-11-05T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/java/</loc>
+    <lastmod>2019-10-27T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/serverless-lambda-java/</loc>
+    <lastmod>2019-10-27T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/wordpress/</loc>
+    <lastmod>2019-10-22T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/wordpress/</loc>
+    <lastmod>2019-10-22T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-control-tower/</loc>
+    <lastmod>2019-10-17T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-serverless-application-repository/</loc>
+    <lastmod>2019-10-14T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/stackery/</loc>
+    <lastmod>2019-10-09T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-cognito-developer-authenticated-identities/</loc>
+    <lastmod>2019-09-26T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/cognito/</loc>
+    <lastmod>2019-09-26T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/gitlab/</loc>
+    <lastmod>2019-09-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/gitlab/</loc>
+    <lastmod>2019-09-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/serverless-lambda-layers/</loc>
+    <lastmod>2019-09-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-service-catalog/</loc>
+    <lastmod>2019-09-10T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/cloudfront/</loc>
+    <lastmod>2019-09-10T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/serverless-plugin-cloudfront-lambda-edge/</loc>
+    <lastmod>2019-09-10T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/amplify/</loc>
+    <lastmod>2019-09-09T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-amplify-console/</loc>
+    <lastmod>2019-09-09T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-polly/</loc>
+    <lastmod>2019-09-06T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/polly/</loc>
+    <lastmod>2019-09-06T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-delivlib/</loc>
+    <lastmod>2019-09-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/TypeScript/</loc>
+    <lastmod>2019-09-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/drawio/</loc>
+    <lastmod>2019-08-26T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/drawio/</loc>
+    <lastmod>2019-08-26T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/zipkin/</loc>
+    <lastmod>2019-08-21T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/serverless-framework-full-lifecycle-with-dashboard/</loc>
+    <lastmod>2019-08-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-sam-local/</loc>
+    <lastmod>2019-08-16T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/sam/</loc>
+    <lastmod>2019-08-16T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-cloudformation/</loc>
+    <lastmod>2019-08-14T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/cloudformation/</loc>
+    <lastmod>2019-08-14T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/intellij-maven-app/</loc>
+    <lastmod>2019-08-14T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-xray/</loc>
+    <lastmod>2019-08-13T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/xray/</loc>
+    <lastmod>2019-08-13T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/pipenv/</loc>
+    <lastmod>2019-08-07T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/python-packaging/</loc>
+    <lastmod>2019-08-07T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/python-tox-testing/</loc>
+    <lastmod>2019-08-06T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/neo4j/</loc>
+    <lastmod>2019-08-05T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/neo4j/</loc>
+    <lastmod>2019-08-05T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-transcribe/</loc>
+    <lastmod>2019-07-30T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/chrome/</loc>
+    <lastmod>2019-07-24T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/chrome-aws-lambda/</loc>
+    <lastmod>2019-07-24T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/youtube-api/</loc>
+    <lastmod>2019-07-22T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-cdk/</loc>
+    <lastmod>2019-07-11T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/cdk/</loc>
+    <lastmod>2019-07-11T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-fargate/</loc>
+    <lastmod>2019-07-10T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/fargate/</loc>
+    <lastmod>2019-07-10T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-glue/</loc>
+    <lastmod>2019-07-09T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/glue/</loc>
+    <lastmod>2019-07-09T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-rekognition/</loc>
+    <lastmod>2019-07-08T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-codebuild-local/</loc>
+    <lastmod>2019-07-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/codebuild/</loc>
+    <lastmod>2019-07-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/docker/</loc>
+    <lastmod>2019-06-24T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/golang-debug-in-docker-with-delve/</loc>
+    <lastmod>2019-06-24T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/cognito-federated-to-salesforce-and-s3-presigned-url/</loc>
+    <lastmod>2019-06-13T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/salesforce/</loc>
+    <lastmod>2019-06-13T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/azure-kubernetes-service-aks/</loc>
+    <lastmod>2019-05-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/kubernetes/</loc>
+    <lastmod>2019-05-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/azure-nodejs-arm-resources/</loc>
+    <lastmod>2019-05-15T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/nodejs/</loc>
+    <lastmod>2019-05-15T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/azure-cli/</loc>
+    <lastmod>2019-05-14T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/azure-js-cognitive-services/</loc>
+    <lastmod>2019-05-13T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/js/</loc>
+    <lastmod>2019-05-13T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/azure-nodejs-arm-storage/</loc>
+    <lastmod>2019-05-10T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/azure-sdk-for-node-authentication/</loc>
+    <lastmod>2019-05-10T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/azure-serverless-framework/</loc>
+    <lastmod>2019-05-10T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/python-2.x-websocket-client/</loc>
+    <lastmod>2019-05-10T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/sdk/</loc>
+    <lastmod>2019-05-10T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/azure-cosmos-js-sdk/</loc>
+    <lastmod>2019-05-08T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/gatsbyjs/</loc>
+    <lastmod>2019-03-09T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/gatsbyjs/</loc>
+    <lastmod>2019-03-09T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/apollo/</loc>
+    <lastmod>2019-02-27T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/apollo-client-local-state/</loc>
+    <lastmod>2019-02-27T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/jest/</loc>
+    <lastmod>2019-02-23T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/jest-testing-framework/</loc>
+    <lastmod>2019-02-23T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/glitch/</loc>
+    <lastmod>2019-02-20T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/glitch-local-development/</loc>
+    <lastmod>2019-02-20T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/react-hooks/</loc>
+    <lastmod>2019-02-11T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/pivotal-cloud-foundry/</loc>
+    <lastmod>2019-01-31T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/fswatch/</loc>
+    <lastmod>2019-01-29T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/storybook-ui-development-environment/</loc>
+    <lastmod>2019-01-25T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/jupyter/</loc>
+    <lastmod>2019-01-19T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/jupyter-kernel-gateway/</loc>
+    <lastmod>2019-01-19T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-api-gateway-websockets-serverless/</loc>
+    <lastmod>2019-01-08T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/Rust/</loc>
+    <lastmod>2018-12-21T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/rust/</loc>
+    <lastmod>2018-12-21T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/rust/</loc>
+    <lastmod>2018-12-21T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-codepipeline/</loc>
+    <lastmod>2018-12-20T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/codepipeline/</loc>
+    <lastmod>2018-12-20T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/jfrog-artifactory/</loc>
+    <lastmod>2018-12-05T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/twit-twitter-api-client/</loc>
+    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-amplify-js-app/</loc>
+    <lastmod>2018-11-13T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-ecr/</loc>
+    <lastmod>2018-11-13T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/docker/</loc>
+    <lastmod>2018-11-13T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/Dockerfile/</loc>
+    <lastmod>2018-11-13T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/ecr/</loc>
+    <lastmod>2018-11-13T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/dynogels/</loc>
+    <lastmod>2018-10-22T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/jenkins/</loc>
+    <lastmod>2018-10-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/node-jenkins-api/</loc>
+    <lastmod>2018-10-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/autotools/</loc>
+    <lastmod>2018-10-10T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/autotools/</loc>
+    <lastmod>2018-10-10T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/M4/</loc>
+    <lastmod>2018-10-10T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/CMake/</loc>
+    <lastmod>2018-09-27T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/vcpkg/</loc>
+    <lastmod>2018-09-27T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-sdk-cpp/</loc>
+    <lastmod>2018-09-25T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/cpp/</loc>
+    <lastmod>2018-09-25T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/google/</loc>
+    <lastmod>2018-09-25T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/google-test-cpp-test-framework/</loc>
+    <lastmod>2018-09-25T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/modern-cpp/</loc>
+    <lastmod>2018-09-24T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/v8/</loc>
+    <lastmod>2018-09-21T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/v8-javascript-engine/</loc>
+    <lastmod>2018-09-21T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/cmake/</loc>
+    <lastmod>2018-09-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/cmake/</loc>
+    <lastmod>2018-09-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/lerna/</loc>
+    <lastmod>2018-09-02T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/vuejs/</loc>
+    <lastmod>2018-09-01T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/vuejs-webpack/</loc>
+    <lastmod>2018-09-01T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/web/</loc>
+    <lastmod>2018-08-22T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/webassembly/</loc>
+    <lastmod>2018-08-22T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/webassembly/</loc>
+    <lastmod>2018-08-22T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/lua-c-api/</loc>
+    <lastmod>2018-07-24T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-appsync/</loc>
+    <lastmod>2018-06-09T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/json/</loc>
+    <lastmod>2018-06-06T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/json-schema/</loc>
+    <lastmod>2018-06-06T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/jenkins-pipeline-github/</loc>
+    <lastmod>2018-05-30T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/alexa-skills/</loc>
+    <lastmod>2018-05-17T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/graphql/</loc>
+    <lastmod>2018-04-30T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/graphql/</loc>
+    <lastmod>2018-04-30T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-iot/</loc>
+    <lastmod>2018-02-10T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/iot/</loc>
+    <lastmod>2018-02-10T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-iam/</loc>
+    <lastmod>2018-02-08T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/iam/</loc>
+    <lastmod>2018-02-08T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-emr/</loc>
+    <lastmod>2018-02-03T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/emr/</loc>
+    <lastmod>2018-02-03T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/golang-dep/</loc>
+    <lastmod>2018-02-03T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/imagenet/</loc>
+    <lastmod>2018-01-31T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/Jupyter-Notebook/</loc>
+    <lastmod>2018-01-31T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/opencv/</loc>
+    <lastmod>2018-01-31T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/opencv-python/</loc>
+    <lastmod>2018-01-31T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-ecs/</loc>
+    <lastmod>2017-11-11T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/ecs/</loc>
+    <lastmod>2017-11-11T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/serverless-python/</loc>
+    <lastmod>2017-11-10T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/boto/</loc>
+    <lastmod>2017-10-30T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/boto/</loc>
+    <lastmod>2017-10-30T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/minecraft/</loc>
+    <lastmod>2017-10-29T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/minecraft-spigot-plugin/</loc>
+    <lastmod>2017-10-29T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/pusher/</loc>
+    <lastmod>2017-10-21T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/deep-and-machine-learning/</loc>
+    <lastmod>2017-09-24T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/jupyter/</loc>
+    <lastmod>2017-09-09T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-kms/</loc>
+    <lastmod>2017-08-31T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/kms/</loc>
+    <lastmod>2017-08-31T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/scribbletune/</loc>
+    <lastmod>2017-08-26T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/puppeteer/</loc>
+    <lastmod>2017-08-22T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-cloudfront/</loc>
+    <lastmod>2017-08-17T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/s3-website/</loc>
+    <lastmod>2017-08-17T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/react-router-4/</loc>
+    <lastmod>2017-07-29T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-kinesis/</loc>
+    <lastmod>2017-07-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/kinesis/</loc>
+    <lastmod>2017-07-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/serverless-typescript-webpack/</loc>
+    <lastmod>2017-07-11T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/typescript/</loc>
+    <lastmod>2017-07-11T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-cloudwatch/</loc>
+    <lastmod>2017-05-21T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-cognito/</loc>
+    <lastmod>2017-05-21T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/confluence-api/</loc>
+    <lastmod>2017-04-04T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/ethereum/</loc>
+    <lastmod>2017-01-17T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/Lua/</loc>
+    <lastmod>2017-01-10T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/lua/</loc>
+    <lastmod>2017-01-10T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/lua/</loc>
+    <lastmod>2017-01-10T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/node-google-cloud/</loc>
+    <lastmod>2016-12-09T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/apex/</loc>
+    <lastmod>2016-12-06T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/apex-lambda/</loc>
+    <lastmod>2016-12-06T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/heroku-container/</loc>
+    <lastmod>2016-11-04T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/nextjs/</loc>
+    <lastmod>2016-11-01T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/keystonejs/</loc>
+    <lastmod>2016-10-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/kubernetes/</loc>
+    <lastmod>2016-10-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/phaser/</loc>
+    <lastmod>2016-08-02T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/emscripten/</loc>
+    <lastmod>2016-06-02T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/gitbook/</loc>
+    <lastmod>2016-05-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/taco/</loc>
+    <lastmod>2016-05-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/typescript-node/</loc>
+    <lastmod>2016-05-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/angular/</loc>
+    <lastmod>2016-05-09T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/angular-cli-app/</loc>
+    <lastmod>2016-05-09T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/react-redux/</loc>
+    <lastmod>2016-05-04T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/typings/</loc>
+    <lastmod>2016-05-02T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/nexe/</loc>
+    <lastmod>2016-04-05T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/node-odata/</loc>
+    <lastmod>2016-03-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/angular2/</loc>
+    <lastmod>2016-01-13T00:00:00-05:00</lastmod>
   </url>
   
   <url>
@@ -43,11 +1228,6 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/categories/</loc>
-    <lastmod>2015-12-02T13:54:15+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/tags/golang/</loc>
     <lastmod>2015-12-02T13:54:15+00:00</lastmod>
   </url>
@@ -58,8 +1238,118 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/post/</loc>
-    <lastmod>2015-12-02T13:54:15+00:00</lastmod>
+    <loc>https://brianpfeil.com/post/beefy/</loc>
+    <lastmod>2015-10-16T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/cordova/</loc>
+    <lastmod>2015-10-15T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/flexbox/</loc>
+    <lastmod>2015-10-15T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/node-coveralls/</loc>
+    <lastmod>2015-09-29T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/heroku-deploy/</loc>
+    <lastmod>2015-09-23T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/heroku-docker/</loc>
+    <lastmod>2015-09-23T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/mocha/</loc>
+    <lastmod>2015-09-22T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/mocha/</loc>
+    <lastmod>2015-09-22T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/osx/</loc>
+    <lastmod>2015-09-15T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/osx-audio/</loc>
+    <lastmod>2015-09-15T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/Swift/</loc>
+    <lastmod>2015-09-15T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/metaforce/</loc>
+    <lastmod>2015-09-09T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/Ruby/</loc>
+    <lastmod>2015-09-09T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/gradle/</loc>
+    <lastmod>2015-08-26T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/docker-hub-automated-build/</loc>
+    <lastmod>2015-08-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/webdriverio/</loc>
+    <lastmod>2015-08-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/spark/</loc>
+    <lastmod>2015-06-05T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/spark/</loc>
+    <lastmod>2015-06-05T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/v8/</loc>
+    <lastmod>2015-05-19T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/html/</loc>
+    <lastmod>2015-05-12T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/html-video-embed/</loc>
+    <lastmod>2015-05-12T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/webpack/</loc>
+    <lastmod>2015-04-03T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/es6/</loc>
+    <lastmod>2015-03-30T00:00:00-04:00</lastmod>
   </url>
   
   <url>
@@ -74,16 +1364,6 @@
   
   <url>
     <loc>https://brianpfeil.com/tags/javascript/</loc>
-    <lastmod>2015-03-27T16:36:59+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/javascript/</loc>
-    <lastmod>2015-03-27T16:36:59+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/react/</loc>
     <lastmod>2015-03-27T16:36:59+00:00</lastmod>
   </url>
   
@@ -128,16 +1408,6 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/tags/docker/</loc>
-    <lastmod>2015-03-25T21:25:09+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/docker/</loc>
-    <lastmod>2015-03-25T21:25:09+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/tags/elastic-beanstalk/</loc>
     <lastmod>2015-03-25T21:25:09+00:00</lastmod>
   </url>
@@ -163,17 +1433,7 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/</loc>
-    <lastmod>2015-03-25T19:06:15+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/dockerized-nodejs-app-on-elastic-beanstalk-example/</loc>
-    <lastmod>2015-03-25T19:06:15+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/nodejs/</loc>
     <lastmod>2015-03-25T19:06:15+00:00</lastmod>
   </url>
   
@@ -208,6 +1468,21 @@
   </url>
   
   <url>
+    <loc>https://brianpfeil.com/post/karma/</loc>
+    <lastmod>2015-02-15T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/nwjs/</loc>
+    <lastmod>2015-02-15T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/sauce-labs/</loc>
+    <lastmod>2015-02-04T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://brianpfeil.com/about/</loc>
     <lastmod>2015-01-14T21:37:08+00:00</lastmod>
   </url>
@@ -218,13 +1493,33 @@
   </url>
   
   <url>
+    <loc>https://brianpfeil.com/post/go-postgres/</loc>
+    <lastmod>2015-01-11T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/postgres/</loc>
+    <lastmod>2015-01-11T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/nodemailer/</loc>
+    <lastmod>2014-12-06T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://brianpfeil.com/projects/</loc>
     <lastmod>2014-08-04T18:55:46+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/tags/heroku/</loc>
-    <lastmod>2014-07-05T16:01:23+00:00</lastmod>
+    <loc>https://brianpfeil.com/post/kendo-ui/</loc>
+    <lastmod>2014-08-02T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/ios-swift/</loc>
+    <lastmod>2014-07-13T00:00:00-04:00</lastmod>
   </url>
   
   <url>
@@ -235,6 +1530,31 @@
   <url>
     <loc>https://brianpfeil.com/post/heroku-connect/</loc>
     <lastmod>2014-07-05T16:01:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/kue/</loc>
+    <lastmod>2014-06-13T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/jsforce/</loc>
+    <lastmod>2014-06-12T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/mac/</loc>
+    <lastmod>2014-06-05T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/mac-swift/</loc>
+    <lastmod>2014-06-05T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/go/</loc>
+    <lastmod>2013-12-31T00:00:00-05:00</lastmod>
   </url>
   
   <url>
@@ -258,22 +1578,12 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/tags/web/</loc>
-    <lastmod>2012-09-16T02:43:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/categories/web/</loc>
     <lastmod>2012-09-16T02:43:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://brianpfeil.com/tags/ruby/</loc>
-    <lastmod>2012-05-11T01:34:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/ruby/</loc>
     <lastmod>2012-05-11T01:34:00+00:00</lastmod>
   </url>
   
@@ -333,16 +1643,6 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/tags/html/</loc>
-    <lastmod>2011-09-27T19:31:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/html/</loc>
-    <lastmod>2011-09-27T19:31:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/tags/metro/</loc>
     <lastmod>2011-09-21T23:12:00+00:00</lastmod>
   </url>
@@ -398,11 +1698,6 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/tags/salesforce/</loc>
-    <lastmod>2011-09-11T00:58:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/categories/salesforce/</loc>
     <lastmod>2011-09-11T00:58:00+00:00</lastmod>
   </url>
@@ -414,11 +1709,6 @@
   
   <url>
     <loc>https://brianpfeil.com/post/automatic-network-location/</loc>
-    <lastmod>2011-08-05T00:58:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/mac/</loc>
     <lastmod>2011-08-05T00:58:00+00:00</lastmod>
   </url>
   

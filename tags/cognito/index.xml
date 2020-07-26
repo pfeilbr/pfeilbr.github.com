@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cognito on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/cognito/</link>
+    <description>Recent content in cognito on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 Sep 2019 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/cognito/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS Cognito Developer Authenticated Identities</title>
+      <link>https://brianpfeil.com/post/aws-cognito-developer-authenticated-identities/</link>
+      <pubDate>Thu, 26 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cognito-developer-authenticated-identities/</guid>
+      <description>learning AWS Cognito Developer Authenticated Identities</description>
+    </item>
+    
+    <item>
+      <title>Cognito Federated To Salesforce And S3 Presigned Url</title>
+      <link>https://brianpfeil.com/post/cognito-federated-to-salesforce-and-s3-presigned-url/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/cognito-federated-to-salesforce-and-s3-presigned-url/</guid>
+      <description>learning Cognito Federated To Salesforce And S3 Presigned Url</description>
+    </item>
+    
+    <item>
+      <title>AWS Cognito</title>
+      <link>https://brianpfeil.com/post/aws-cognito/</link>
+      <pubDate>Sun, 21 May 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cognito/</guid>
+      <description>learning AWS Cognito</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Brian Pfeil</title>
+    <link>https://brianpfeil.com/categories/Python/</link>
+    <description>Recent content in Python on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Feb 2020 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/categories/Python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Flask</title>
+      <link>https://brianpfeil.com/post/flask/</link>
+      <pubDate>Sat, 15 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/flask/</guid>
+      <description>learning Flask</description>
+    </item>
+    
+    <item>
+      <title>Python Async Await</title>
+      <link>https://brianpfeil.com/post/python-async-await/</link>
+      <pubDate>Wed, 05 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/python-async-await/</guid>
+      <description>learning Python Async Await</description>
+    </item>
+    
+    <item>
+      <title>Pipenv</title>
+      <link>https://brianpfeil.com/post/pipenv/</link>
+      <pubDate>Wed, 07 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/pipenv/</guid>
+      <description>learning Pipenv</description>
+    </item>
+    
+    <item>
+      <title>Python Packaging</title>
+      <link>https://brianpfeil.com/post/python-packaging/</link>
+      <pubDate>Wed, 07 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/python-packaging/</guid>
+      <description>learning Python Packaging</description>
+    </item>
+    
+    <item>
+      <title>Python Tox Testing</title>
+      <link>https://brianpfeil.com/post/python-tox-testing/</link>
+      <pubDate>Tue, 06 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/python-tox-testing/</guid>
+      <description>learning Python Tox Testing</description>
+    </item>
+    
+    <item>
+      <title>Serverless Python</title>
+      <link>https://brianpfeil.com/post/serverless-python/</link>
+      <pubDate>Fri, 10 Nov 2017 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/serverless-python/</guid>
+      <description>learning Serverless Python</description>
+    </item>
+    
+    <item>
+      <title>Boto</title>
+      <link>https://brianpfeil.com/post/boto/</link>
+      <pubDate>Mon, 30 Oct 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/boto/</guid>
+      <description>learning Boto</description>
+    </item>
+    
+    <item>
+      <title>Spark</title>
+      <link>https://brianpfeil.com/post/spark/</link>
+      <pubDate>Fri, 05 Jun 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/spark/</guid>
+      <description>learn Spark</description>
+    </item>
+    
+  </channel>
+</rss>

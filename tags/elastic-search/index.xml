@@ -17,12 +17,7 @@
       <pubDate>Wed, 25 Mar 2015 21:25:09 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/running-elasticsearch-on-elastic-beanstalk/</guid>
-      <description>TL;DR code on github @ pfeilbr/Elastic-Beanstalk-Dockerrun.aws.json-Example
- This article will show you the steps to run elasticsearch on AWS Elastic Beanstalk. This example uses the elasticsearch docker image as an example. Once running you can visit http://&amp;lt;beanstalk domain&amp;gt;/?pretty an you will see the root elastic search JSON response.
-Initial Deployment   Modify Dockerrun.aws.json for your needs.
- Dockerrun.aws.json reference
-   Commit changes to repo
-$ git commit -a -m &amp;#34;changes&amp;#34; ``</description>
+      <description>eliminate the need to manage a server by running Elasticsearch on the AWS Elastic Beanstalk PaaS</description>
     </item>
     
   </channel>

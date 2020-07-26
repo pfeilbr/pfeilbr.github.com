@@ -8,7 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>React Native - Initial Thoughts - Brian Pfeil</title>
-  <meta name="description" content="React Native was released as open source yesterday. There&rsquo;s been quite a bit of build up and excitement since the React.js Conf 2015 video. The video showed a real app being built with a web development style workflow (your favorite editor with livereload). I&rsquo;ve built some apps using React.js and really appreciate the simplicity and development workflow. Having the same for native app development definitely is exciting. I&rsquo;ve gottent to spend a few hours with it and it looks like it&rsquo;s living up to the hype."><script type="application/ld+json">
+  <meta name="description" content="leverage React for building iOS and Android apps">
+  <meta name="author" content="Brian Pfeil"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
     "@type": "WebSite",
@@ -56,7 +57,7 @@
     "name" : "Brian Pfeil"
   },
   "headline": "React Native - Initial Thoughts",
-  "description" : "React Native was released as open source yesterday. There\x26rsquo;s been quite a bit of build up and excitement since the React.js Conf 2015 video. The video showed a real app being built with a web development style workflow (your favorite editor with livereload). I\x26rsquo;ve built some apps using React.js and really appreciate the simplicity and development workflow. Having the same for native app development definitely is exciting. I\x26rsquo;ve gottent to spend a few hours with it and it looks like it\x26rsquo;s living up to the hype.",
+  "description" : "leverage React for building iOS and Android apps",
   "inLanguage" : "en",
   "wordCount":  921 ,
   "datePublished" : "2015-03-27T16:36:59",
@@ -78,14 +79,16 @@
 </script>
 
 <meta property="og:title" content="React Native - Initial Thoughts" />
-<meta property="og:description" content="React Native was released as open source yesterday. There&rsquo;s been quite a bit of build up and excitement since the React.js Conf 2015 video. The video showed a real app being built with a web development style workflow (your favorite editor with livereload). I&rsquo;ve built some apps using React.js and really appreciate the simplicity and development workflow. Having the same for native app development definitely is exciting. I&rsquo;ve gottent to spend a few hours with it and it looks like it&rsquo;s living up to the hype.">
+<meta property="og:description" content="leverage React for building iOS and Android apps">
 <meta property="og:url" content="https://brianpfeil.com/post/react-native-initial-thoughts/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Brian Pfeil" />
 
   <meta name="twitter:title" content="React Native - Initial Thoughts" />
-  <meta name="twitter:description" content="React Native was released as open source yesterday. There&rsquo;s been quite a bit of build up and excitement since the React.js Conf 2015 video. The video showed a real app being built with a web …">
+  <meta name="twitter:description" content="leverage React for building iOS and Android apps">
   <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@pfeilbr" />
+  <meta name="twitter:creator" content="@pfeilbr" />
   <meta name="generator" content="Hugo 0.67.0" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -238,19 +241,15 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on March 27, 2015
+  <i class="fas fa-calendar fa-sm"></i>&nbsp; 2015-03-27
   
   
   
   
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Brian Pfeil
-    
+
   
   
 </span>
-
-
               
             </div>
           </div>
@@ -331,7 +330,7 @@ CalendarManager.addEventWithName(&#39;Birthday Party&#39;, &#39;4 Privet Drive, 
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2freact-native-initial-thoughts%2f&amp;text=React%20Native%20-%20Initial%20Thoughts&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2freact-native-initial-thoughts%2f&amp;text=React%20Native%20-%20Initial%20Thoughts&amp;via=pfeilbr" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -388,11 +387,15 @@ CalendarManager.addEventWithName(&#39;Birthday Party&#39;, &#39;4 Privet Drive, 
                   <ul>
                 
                 
-                    <li><a href="/post/cross-platform-desktop-apps-with-nw-js/">Cross-platform Desktop Apps with NW.js</a></li>
+                    <li><a href="/post/react-async/">React Async</a></li>
                 
-                    <li><a href="/post/minotes/">Minotes</a></li>
+                    <li><a href="/post/react-bootstrap/">React Bootstrap</a></li>
                 
-                    <li><a href="/post/best-fit-web-font-sizing/">Best Fit Web Font Sizing</a></li>
+                    <li><a href="/post/react-hooks/">React Hooks</a></li>
+                
+                    <li><a href="/post/react-router-4/">React Router 4</a></li>
+                
+                    <li><a href="/post/react-redux/">React Redux</a></li>
                 
               </ul>
 
@@ -409,7 +412,7 @@ CalendarManager.addEventWithName(&#39;Birthday Party&#39;, &#39;4 Privet Drive, 
           
           
             <li class="next">
-              <a href="https://brianpfeil.com/post/atom-golang-support/" data-toggle="tooltip" data-placement="top" title="Atom Golang Setup">Next Post &rarr;</a>
+              <a href="https://brianpfeil.com/post/es6/" data-toggle="tooltip" data-placement="top" title="Es6">Next Post &rarr;</a>
             </li>
           
         </ul>
@@ -432,6 +435,30 @@ CalendarManager.addEventWithName(&#39;Birthday Party&#39;, &#39;4 Privet Drive, 
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <ul class="list-inline text-center footer-links">
           
+              <li>
+                <a href="https://github.com/pfeilbr" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/pfeilbr" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/29148/pfeilbr" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
           
           <li>
             <a href="" title="RSS">
@@ -444,6 +471,10 @@ CalendarManager.addEventWithName(&#39;Birthday Party&#39;, &#39;4 Privet Drive, 
           
         </ul>
         <p class="credits copyright text-muted">
+          
+            
+              <a href="brianpfeil.com">Brian Pfeil</a>
+            
           
 
           &nbsp;&bull;&nbsp;&copy;

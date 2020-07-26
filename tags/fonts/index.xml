@@ -17,7 +17,7 @@
       <pubDate>Tue, 27 Sep 2011 19:31:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/best-fit-web-font-sizing/</guid>
-      <description>I&amp;rsquo;ve been working on a web app that targets both smartphones and tablets. The large variation in screen sizes has sent me down the path of using a dynamic proportional layout that adapts to fit the available space. For example, I&amp;rsquo;ve allocated 20% of the available vertical space to the header section that displays a title. The jQuery UI.Layout Plug-in has worked great for laying out the content areas, but I ran into a wall when it came to sizing my text proportionately.</description>
+      <description>dynamically size web font based on available space</description>
     </item>
     
   </channel>

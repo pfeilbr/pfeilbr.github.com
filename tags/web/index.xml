@@ -6,7 +6,7 @@
     <description>Recent content in web on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Sep 2012 02:43:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Aug 2018 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/web/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,7 +17,7 @@
       <pubDate>Sun, 16 Sep 2012 02:43:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/hosting-static-sites-on-heroku/</guid>
-      <description>I was recently creating a web site for a family member, and was looking around for the best place to host it. It&amp;rsquo;s a simple personal site that only contains static content. There are many options out there from the freebie wordpress options to rackspace and the like. None of the &amp;ldquo;web publishing platform&amp;rdquo; type sites were a fit because I wanted full control over the layout, and look and feel of the site.</description>
+      <description>easy git push deployment of static sites on Heroku</description>
     </item>
     
   </channel>

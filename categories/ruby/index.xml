@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ruby on Brian Pfeil</title>
-    <link>https://brianpfeil.com/categories/ruby/</link>
-    <description>Recent content in ruby on Brian Pfeil</description>
+    <title>Ruby on Brian Pfeil</title>
+    <link>https://brianpfeil.com/categories/Ruby/</link>
+    <description>Recent content in Ruby on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 May 2012 01:34:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2015 00:00:00 -0400</lastBuildDate>
     
-	<atom:link href="https://brianpfeil.com/categories/ruby/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://brianpfeil.com/categories/Ruby/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Metaforce</title>
+      <link>https://brianpfeil.com/post/metaforce/</link>
+      <pubDate>Wed, 09 Sep 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/metaforce/</guid>
+      <description>learning Metaforce</description>
+    </item>
     
     <item>
       <title>RubyMotion</title>
@@ -17,8 +26,7 @@
       <pubDate>Fri, 11 May 2012 01:34:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/rubymotion/</guid>
-      <description>RubyMotion is a toolchain that lets you develop iOS using Ruby. I&amp;rsquo;m a big fan of Ruby and have been using it on and off since 2001. It&amp;rsquo;s been a huge timesaver in many cases allowing me to quickly script solutions. When I heard it was coming to iOS I had to check it out.
-The toolchain and the way you use the various components matches the rails development process. Open your favorite text editor and a terminal, and you&amp;rsquo;re ready to go.</description>
+      <description>leverage your Ruby skills to build native iOS apps</description>
     </item>
     
   </channel>

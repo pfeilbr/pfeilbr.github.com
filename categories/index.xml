@@ -6,10 +6,208 @@
     <description>Recent content in Categories on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Dec 2015 13:54:15 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>&lt;nil&gt;</title>
+      <link>https://brianpfeil.com/categories/nil/</link>
+      <pubDate>Fri, 17 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/nil/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>playground</title>
+      <link>https://brianpfeil.com/categories/playground/</link>
+      <pubDate>Fri, 17 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/playground/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>https://brianpfeil.com/categories/html/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PHP</title>
+      <link>https://brianpfeil.com/categories/PHP/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/PHP/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Makefile</title>
+      <link>https://brianpfeil.com/categories/Makefile/</link>
+      <pubDate>Thu, 02 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/Makefile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>https://brianpfeil.com/categories/Go/</link>
+      <pubDate>Wed, 17 Jun 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/Go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>https://brianpfeil.com/categories/Java/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/Java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://brianpfeil.com/categories/javascript/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C</title>
+      <link>https://brianpfeil.com/categories/C/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CSS</title>
+      <link>https://brianpfeil.com/categories/CSS/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/CSS/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://brianpfeil.com/categories/Python/</link>
+      <pubDate>Sat, 15 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/Python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shell</title>
+      <link>https://brianpfeil.com/categories/Shell/</link>
+      <pubDate>Mon, 10 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/Shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://brianpfeil.com/categories/C&#43;&#43;/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/C&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HCL</title>
+      <link>https://brianpfeil.com/categories/HCL/</link>
+      <pubDate>Tue, 05 Nov 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/HCL/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TypeScript</title>
+      <link>https://brianpfeil.com/categories/TypeScript/</link>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/TypeScript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rust</title>
+      <link>https://brianpfeil.com/categories/Rust/</link>
+      <pubDate>Fri, 21 Dec 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/Rust/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://brianpfeil.com/categories/docker/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dockerfile</title>
+      <link>https://brianpfeil.com/categories/Dockerfile/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/Dockerfile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>M4</title>
+      <link>https://brianpfeil.com/categories/M4/</link>
+      <pubDate>Wed, 10 Oct 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/M4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CMake</title>
+      <link>https://brianpfeil.com/categories/CMake/</link>
+      <pubDate>Thu, 27 Sep 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/CMake/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jupyter Notebook</title>
+      <link>https://brianpfeil.com/categories/Jupyter-Notebook/</link>
+      <pubDate>Wed, 31 Jan 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/Jupyter-Notebook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lua</title>
+      <link>https://brianpfeil.com/categories/Lua/</link>
+      <pubDate>Tue, 10 Jan 2017 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/Lua/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>atom</title>
@@ -30,20 +228,29 @@
     </item>
     
     <item>
+      <title>Swift</title>
+      <link>https://brianpfeil.com/categories/Swift/</link>
+      <pubDate>Tue, 15 Sep 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/Swift/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ruby</title>
+      <link>https://brianpfeil.com/categories/Ruby/</link>
+      <pubDate>Wed, 09 Sep 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/Ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>ios</title>
       <link>https://brianpfeil.com/categories/ios/</link>
       <pubDate>Fri, 27 Mar 2015 16:36:59 +0000</pubDate>
       
       <guid>https://brianpfeil.com/categories/ios/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>javascript</title>
-      <link>https://brianpfeil.com/categories/javascript/</link>
-      <pubDate>Fri, 27 Mar 2015 16:36:59 +0000</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/javascript/</guid>
       <description></description>
     </item>
     
@@ -80,15 +287,6 @@
       <pubDate>Wed, 25 Mar 2015 21:25:09 +0000</pubDate>
       
       <guid>https://brianpfeil.com/categories/aws/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>docker</title>
-      <link>https://brianpfeil.com/categories/docker/</link>
-      <pubDate>Wed, 25 Mar 2015 21:25:09 +0000</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/docker/</guid>
       <description></description>
     </item>
     
@@ -165,15 +363,6 @@
     </item>
     
     <item>
-      <title>ruby</title>
-      <link>https://brianpfeil.com/categories/ruby/</link>
-      <pubDate>Fri, 11 May 2012 01:34:00 +0000</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/ruby/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>appengine</title>
       <link>https://brianpfeil.com/categories/appengine/</link>
       <pubDate>Sun, 20 Nov 2011 11:48:00 +0000</pubDate>
@@ -206,15 +395,6 @@
       <pubDate>Tue, 27 Sep 2011 19:31:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/categories/fonts/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>html</title>
-      <link>https://brianpfeil.com/categories/html/</link>
-      <pubDate>Tue, 27 Sep 2011 19:31:00 +0000</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/html/</guid>
       <description></description>
     </item>
     

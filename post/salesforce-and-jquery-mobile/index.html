@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Salesforce and jQuery Mobile - Brian Pfeil</title>
-  <meta name="description" content="I wanted to do a project to learn salesforce, but not a trivial hello world style example. I had recently played around with jQuery Mobile, but didn&rsquo;t do anything significant with it. I decided to put together a basic mobile CRM app. Here&rsquo;s what the finished app looks like.
-Salesforce provides a full-featured environment for free to anyone. It takes no time to sign-up for this Developer Edition, and you get access to everything."><script type="application/ld+json">
+  <meta name="description" content="create custom mobile UIs on top of salesforce data with jQuery Mobile">
+  <meta name="author" content="Brian Pfeil"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
     "@type": "WebSite",
@@ -57,7 +57,7 @@ Salesforce provides a full-featured environment for free to anyone. It takes no 
     "name" : "Brian Pfeil"
   },
   "headline": "Salesforce and jQuery Mobile",
-  "description" : "I wanted to do a project to learn salesforce, but not a trivial hello world style example. I had recently played around with jQuery Mobile, but didn\x26rsquo;t do anything significant with it. I decided to put together a basic mobile CRM app. Here\x26rsquo;s what the finished app looks like.\nSalesforce provides a full-featured environment for free to anyone. It takes no time to sign-up for this Developer Edition, and you get access to everything.",
+  "description" : "create custom mobile UIs on top of salesforce data with jQuery Mobile",
   "inLanguage" : "en",
   "wordCount":  590 ,
   "datePublished" : "2011-09-11T00:58:00",
@@ -79,15 +79,16 @@ Salesforce provides a full-featured environment for free to anyone. It takes no 
 </script>
 
 <meta property="og:title" content="Salesforce and jQuery Mobile" />
-<meta property="og:description" content="I wanted to do a project to learn salesforce, but not a trivial hello world style example. I had recently played around with jQuery Mobile, but didn&rsquo;t do anything significant with it. I decided to put together a basic mobile CRM app. Here&rsquo;s what the finished app looks like.
-Salesforce provides a full-featured environment for free to anyone. It takes no time to sign-up for this Developer Edition, and you get access to everything.">
+<meta property="og:description" content="create custom mobile UIs on top of salesforce data with jQuery Mobile">
 <meta property="og:url" content="https://brianpfeil.com/post/salesforce-and-jquery-mobile/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Brian Pfeil" />
 
   <meta name="twitter:title" content="Salesforce and jQuery Mobile" />
-  <meta name="twitter:description" content="I wanted to do a project to learn salesforce, but not a trivial hello world style example. I had recently played around with jQuery Mobile, but didn&rsquo;t do anything significant with it. I decided …">
+  <meta name="twitter:description" content="create custom mobile UIs on top of salesforce data with jQuery Mobile">
   <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@pfeilbr" />
+  <meta name="twitter:creator" content="@pfeilbr" />
   <meta name="generator" content="Hugo 0.67.0" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -240,19 +241,15 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on September 11, 2011
+  <i class="fas fa-calendar fa-sm"></i>&nbsp; 2011-09-11
   
   
   
   
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Brian Pfeil
-    
+
   
   
 </span>
-
-
               
             </div>
           </div>
@@ -368,7 +365,7 @@ replace. Here&rsquo;s an example of a template used to generate a list page.</p>
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fsalesforce-and-jquery-mobile%2f&amp;text=Salesforce%20and%20jQuery%20Mobile&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fsalesforce-and-jquery-mobile%2f&amp;text=Salesforce%20and%20jQuery%20Mobile&amp;via=pfeilbr" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -417,6 +414,17 @@ replace. Here&rsquo;s an example of a template used to generate a list page.</p>
 
         
           
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/cognito-federated-to-salesforce-and-s3-presigned-url/">Cognito Federated To Salesforce And S3 Presigned Url</a></li>
+                
+              </ul>
 
           
         
@@ -454,6 +462,30 @@ replace. Here&rsquo;s an example of a template used to generate a list page.</p>
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <ul class="list-inline text-center footer-links">
           
+              <li>
+                <a href="https://github.com/pfeilbr" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/pfeilbr" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/29148/pfeilbr" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
           
           <li>
             <a href="" title="RSS">
@@ -466,6 +498,10 @@ replace. Here&rsquo;s an example of a template used to generate a list page.</p>
           
         </ul>
         <p class="credits copyright text-muted">
+          
+            
+              <a href="brianpfeil.com">Brian Pfeil</a>
+            
           
 
           &nbsp;&bull;&nbsp;&copy;

@@ -6,10 +6,46 @@
     <description>Recent content in heroku on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Jul 2014 16:01:23 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/heroku/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Heroku Node Worker</title>
+      <link>https://brianpfeil.com/post/heroku-node-worker/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/heroku-node-worker/</guid>
+      <description>learning Heroku Node Worker</description>
+    </item>
+    
+    <item>
+      <title>Heroku Container</title>
+      <link>https://brianpfeil.com/post/heroku-container/</link>
+      <pubDate>Fri, 04 Nov 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/heroku-container/</guid>
+      <description>learning Heroku Container</description>
+    </item>
+    
+    <item>
+      <title>Heroku Deploy</title>
+      <link>https://brianpfeil.com/post/heroku-deploy/</link>
+      <pubDate>Wed, 23 Sep 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/heroku-deploy/</guid>
+      <description>learning Heroku Deploy</description>
+    </item>
+    
+    <item>
+      <title>Heroku Docker</title>
+      <link>https://brianpfeil.com/post/heroku-docker/</link>
+      <pubDate>Wed, 23 Sep 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/heroku-docker/</guid>
+      <description>learning Heroku Docker</description>
+    </item>
     
     <item>
       <title>Heroku Connect</title>
@@ -17,8 +53,7 @@
       <pubDate>Sat, 05 Jul 2014 16:01:23 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/heroku-connect/</guid>
-      <description>Heroku Connect was announced at Dreamforce &amp;lsquo;13 shortly after salesforce aquired cloudconnect. Cloudconnect is the original product created by Adam Gross, formerly of Dropbox that became Heroku Connect.
-There&amp;rsquo;s a rich developer ecosystem around web apps built with popular web frameworks such as Rails, Django, Express, Symfony, etc. All of these frameworks assume a relational database as a backend, which because of it&amp;rsquo;s age, usage, and rich set of existing toolsets, makes it easy to get started with.</description>
+      <description>leverage SQL along with all the industry standard SQL tools to access to your salesforce data</description>
     </item>
     
     <item>
@@ -27,7 +62,7 @@ There&amp;rsquo;s a rich developer ecosystem around web apps built with popular 
       <pubDate>Sun, 16 Sep 2012 02:43:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/hosting-static-sites-on-heroku/</guid>
-      <description>I was recently creating a web site for a family member, and was looking around for the best place to host it. It&amp;rsquo;s a simple personal site that only contains static content. There are many options out there from the freebie wordpress options to rackspace and the like. None of the &amp;ldquo;web publishing platform&amp;rdquo; type sites were a fit because I wanted full control over the layout, and look and feel of the site.</description>
+      <description>easy git push deployment of static sites on Heroku</description>
     </item>
     
   </channel>

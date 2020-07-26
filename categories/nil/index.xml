@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>&lt;nil&gt; on Brian Pfeil</title>
+    <link>https://brianpfeil.com/categories/nil/</link>
+    <description>Recent content in &lt;nil&gt; on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 17 Jul 2020 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/categories/nil/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lumigo CLI</title>
+      <link>https://brianpfeil.com/post/lumigo-cli/</link>
+      <pubDate>Fri, 17 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/lumigo-cli/</guid>
+      <description>learning Lumigo CLI</description>
+    </item>
+    
+    <item>
+      <title>AWS Interactive Video Service</title>
+      <link>https://brianpfeil.com/post/aws-interactive-video-service/</link>
+      <pubDate>Thu, 16 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-interactive-video-service/</guid>
+      <description>learning AWS Interactive Video Service</description>
+    </item>
+    
+    <item>
+      <title>Strapi</title>
+      <link>https://brianpfeil.com/post/strapi/</link>
+      <pubDate>Fri, 10 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/strapi/</guid>
+      <description>learn Strapi</description>
+    </item>
+    
+    <item>
+      <title>AWS Eventbridge</title>
+      <link>https://brianpfeil.com/post/aws-eventbridge/</link>
+      <pubDate>Tue, 19 May 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-eventbridge/</guid>
+      <description>learning AWS Eventbridge</description>
+    </item>
+    
+    <item>
+      <title>Multipass</title>
+      <link>https://brianpfeil.com/post/multipass/</link>
+      <pubDate>Sun, 09 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/multipass/</guid>
+      <description>learning Multipass</description>
+    </item>
+    
+    <item>
+      <title>AWS Control Tower</title>
+      <link>https://brianpfeil.com/post/aws-control-tower/</link>
+      <pubDate>Thu, 17 Oct 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-control-tower/</guid>
+      <description>learning AWS Control Tower</description>
+    </item>
+    
+    <item>
+      <title>AWS Cognito Developer Authenticated Identities</title>
+      <link>https://brianpfeil.com/post/aws-cognito-developer-authenticated-identities/</link>
+      <pubDate>Thu, 26 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cognito-developer-authenticated-identities/</guid>
+      <description>learning AWS Cognito Developer Authenticated Identities</description>
+    </item>
+    
+    <item>
+      <title>Gitlab</title>
+      <link>https://brianpfeil.com/post/gitlab/</link>
+      <pubDate>Wed, 18 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/gitlab/</guid>
+      <description>learning Gitlab</description>
+    </item>
+    
+    <item>
+      <title>AWS Service Catalog</title>
+      <link>https://brianpfeil.com/post/aws-service-catalog/</link>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-service-catalog/</guid>
+      <description>learning AWS Service Catalog</description>
+    </item>
+    
+    <item>
+      <title>Drawio</title>
+      <link>https://brianpfeil.com/post/drawio/</link>
+      <pubDate>Mon, 26 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/drawio/</guid>
+      <description>learning Drawio</description>
+    </item>
+    
+    <item>
+      <title>AWS SAM Local</title>
+      <link>https://brianpfeil.com/post/aws-sam-local/</link>
+      <pubDate>Fri, 16 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-sam-local/</guid>
+      <description>learning AWS SAM Local</description>
+    </item>
+    
+    <item>
+      <title>AWS CloudFormation</title>
+      <link>https://brianpfeil.com/post/aws-cloudformation/</link>
+      <pubDate>Wed, 14 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cloudformation/</guid>
+      <description>learning AWS CloudFormation</description>
+    </item>
+    
+    <item>
+      <title>Neo4j</title>
+      <link>https://brianpfeil.com/post/neo4j/</link>
+      <pubDate>Mon, 05 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/neo4j/</guid>
+      <description>learning Neo4j</description>
+    </item>
+    
+    <item>
+      <title>AWS Fargate</title>
+      <link>https://brianpfeil.com/post/aws-fargate/</link>
+      <pubDate>Wed, 10 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-fargate/</guid>
+      <description>learning AWS Fargate</description>
+    </item>
+    
+    <item>
+      <title>AWS Codebuild Local</title>
+      <link>https://brianpfeil.com/post/aws-codebuild-local/</link>
+      <pubDate>Wed, 03 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-codebuild-local/</guid>
+      <description>learning AWS Codebuild Local</description>
+    </item>
+    
+    <item>
+      <title>Azure Kubernetes Service Aks</title>
+      <link>https://brianpfeil.com/post/azure-kubernetes-service-aks/</link>
+      <pubDate>Sat, 18 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-kubernetes-service-aks/</guid>
+      <description>learning Azure Kubernetes Service Aks</description>
+    </item>
+    
+    <item>
+      <title>Azure CLI</title>
+      <link>https://brianpfeil.com/post/azure-cli/</link>
+      <pubDate>Tue, 14 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-cli/</guid>
+      <description>learning Azure CLI</description>
+    </item>
+    
+    <item>
+      <title>Jfrog Artifactory</title>
+      <link>https://brianpfeil.com/post/jfrog-artifactory/</link>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/jfrog-artifactory/</guid>
+      <description>learning Jfrog Artifactory</description>
+    </item>
+    
+    <item>
+      <title>AWS Appsync</title>
+      <link>https://brianpfeil.com/post/aws-appsync/</link>
+      <pubDate>Sat, 09 Jun 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-appsync/</guid>
+      <description>learning AWS Appsync</description>
+    </item>
+    
+    <item>
+      <title>Jenkins Pipeline Github</title>
+      <link>https://brianpfeil.com/post/jenkins-pipeline-github/</link>
+      <pubDate>Wed, 30 May 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/jenkins-pipeline-github/</guid>
+      <description>learning Jenkins Pipeline Github</description>
+    </item>
+    
+    <item>
+      <title>AWS Emr</title>
+      <link>https://brianpfeil.com/post/aws-emr/</link>
+      <pubDate>Sat, 03 Feb 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-emr/</guid>
+      <description>learning AWS Emr</description>
+    </item>
+    
+    <item>
+      <title>Jupyter</title>
+      <link>https://brianpfeil.com/post/jupyter/</link>
+      <pubDate>Sat, 09 Sep 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/jupyter/</guid>
+      <description>learning Jupyter</description>
+    </item>
+    
+    <item>
+      <title>Puppeteer</title>
+      <link>https://brianpfeil.com/post/puppeteer/</link>
+      <pubDate>Tue, 22 Aug 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/puppeteer/</guid>
+      <description>learning Puppeteer</description>
+    </item>
+    
+    <item>
+      <title>AWS CloudFront</title>
+      <link>https://brianpfeil.com/post/aws-cloudfront/</link>
+      <pubDate>Thu, 17 Aug 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cloudfront/</guid>
+      <description>learning AWS CloudFront</description>
+    </item>
+    
+    <item>
+      <title>AWS Kinesis</title>
+      <link>https://brianpfeil.com/post/aws-kinesis/</link>
+      <pubDate>Tue, 18 Jul 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-kinesis/</guid>
+      <description>learning AWS Kinesis</description>
+    </item>
+    
+    <item>
+      <title>Ethereum</title>
+      <link>https://brianpfeil.com/post/ethereum/</link>
+      <pubDate>Tue, 17 Jan 2017 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/ethereum/</guid>
+      <description>learning Ethereum</description>
+    </item>
+    
+    <item>
+      <title>Gitbook</title>
+      <link>https://brianpfeil.com/post/gitbook/</link>
+      <pubDate>Fri, 20 May 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/gitbook/</guid>
+      <description>learning Gitbook</description>
+    </item>
+    
+    <item>
+      <title>Docker Hub Automated Build</title>
+      <link>https://brianpfeil.com/post/docker-hub-automated-build/</link>
+      <pubDate>Thu, 20 Aug 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/docker-hub-automated-build/</guid>
+      <description>learning Docker Hub Automated Build</description>
+    </item>
+    
+    <item>
+      <title>Kendo Ui</title>
+      <link>https://brianpfeil.com/post/kendo-ui/</link>
+      <pubDate>Sat, 02 Aug 2014 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/kendo-ui/</guid>
+      <description>learning Kendo Ui</description>
+    </item>
+    
+  </channel>
+</rss>

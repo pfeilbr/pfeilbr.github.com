@@ -6,10 +6,28 @@
     <description>Recent content in aws on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Mar 2020 09:40:13 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS Interactive Video Service</title>
+      <link>https://brianpfeil.com/post/aws-interactive-video-service/</link>
+      <pubDate>Thu, 16 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-interactive-video-service/</guid>
+      <description>learning AWS Interactive Video Service</description>
+    </item>
+    
+    <item>
+      <title>AWS Eventbridge</title>
+      <link>https://brianpfeil.com/post/aws-eventbridge/</link>
+      <pubDate>Tue, 19 May 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-eventbridge/</guid>
+      <description>learning AWS Eventbridge</description>
+    </item>
     
     <item>
       <title>AWS Services</title>
@@ -22,35 +40,300 @@
     </item>
     
     <item>
+      <title>AWS Control Tower</title>
+      <link>https://brianpfeil.com/post/aws-control-tower/</link>
+      <pubDate>Thu, 17 Oct 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-control-tower/</guid>
+      <description>learning AWS Control Tower</description>
+    </item>
+    
+    <item>
+      <title>AWS Serverless Application Repository</title>
+      <link>https://brianpfeil.com/post/aws-serverless-application-repository/</link>
+      <pubDate>Mon, 14 Oct 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-serverless-application-repository/</guid>
+      <description>learning AWS Serverless Application Repository</description>
+    </item>
+    
+    <item>
+      <title>AWS Cognito Developer Authenticated Identities</title>
+      <link>https://brianpfeil.com/post/aws-cognito-developer-authenticated-identities/</link>
+      <pubDate>Thu, 26 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cognito-developer-authenticated-identities/</guid>
+      <description>learning AWS Cognito Developer Authenticated Identities</description>
+    </item>
+    
+    <item>
+      <title>AWS Service Catalog</title>
+      <link>https://brianpfeil.com/post/aws-service-catalog/</link>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-service-catalog/</guid>
+      <description>learning AWS Service Catalog</description>
+    </item>
+    
+    <item>
+      <title>AWS Amplify Console</title>
+      <link>https://brianpfeil.com/post/aws-amplify-console/</link>
+      <pubDate>Mon, 09 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-amplify-console/</guid>
+      <description>learning AWS Amplify Console</description>
+    </item>
+    
+    <item>
+      <title>AWS Polly</title>
+      <link>https://brianpfeil.com/post/aws-polly/</link>
+      <pubDate>Fri, 06 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-polly/</guid>
+      <description>learning AWS Polly</description>
+    </item>
+    
+    <item>
+      <title>AWS Delivlib</title>
+      <link>https://brianpfeil.com/post/aws-delivlib/</link>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-delivlib/</guid>
+      <description>learning AWS Delivlib</description>
+    </item>
+    
+    <item>
+      <title>AWS SAM Local</title>
+      <link>https://brianpfeil.com/post/aws-sam-local/</link>
+      <pubDate>Fri, 16 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-sam-local/</guid>
+      <description>learning AWS SAM Local</description>
+    </item>
+    
+    <item>
+      <title>AWS CloudFormation</title>
+      <link>https://brianpfeil.com/post/aws-cloudformation/</link>
+      <pubDate>Wed, 14 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cloudformation/</guid>
+      <description>learning AWS CloudFormation</description>
+    </item>
+    
+    <item>
+      <title>AWS Xray</title>
+      <link>https://brianpfeil.com/post/aws-xray/</link>
+      <pubDate>Tue, 13 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-xray/</guid>
+      <description>learning AWS Xray</description>
+    </item>
+    
+    <item>
+      <title>AWS Transcribe</title>
+      <link>https://brianpfeil.com/post/aws-transcribe/</link>
+      <pubDate>Tue, 30 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-transcribe/</guid>
+      <description>learning AWS Transcribe</description>
+    </item>
+    
+    <item>
+      <title>Chrome AWS Lambda</title>
+      <link>https://brianpfeil.com/post/chrome-aws-lambda/</link>
+      <pubDate>Wed, 24 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/chrome-aws-lambda/</guid>
+      <description>learning Chrome AWS Lambda</description>
+    </item>
+    
+    <item>
+      <title>AWS CDK</title>
+      <link>https://brianpfeil.com/post/aws-cdk/</link>
+      <pubDate>Thu, 11 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cdk/</guid>
+      <description>learning AWS CDK</description>
+    </item>
+    
+    <item>
+      <title>AWS Fargate</title>
+      <link>https://brianpfeil.com/post/aws-fargate/</link>
+      <pubDate>Wed, 10 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-fargate/</guid>
+      <description>learning AWS Fargate</description>
+    </item>
+    
+    <item>
+      <title>AWS Glue</title>
+      <link>https://brianpfeil.com/post/aws-glue/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-glue/</guid>
+      <description>learning AWS Glue</description>
+    </item>
+    
+    <item>
+      <title>AWS Rekognition</title>
+      <link>https://brianpfeil.com/post/aws-rekognition/</link>
+      <pubDate>Mon, 08 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-rekognition/</guid>
+      <description>learning AWS Rekognition</description>
+    </item>
+    
+    <item>
+      <title>AWS Codebuild Local</title>
+      <link>https://brianpfeil.com/post/aws-codebuild-local/</link>
+      <pubDate>Wed, 03 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-codebuild-local/</guid>
+      <description>learning AWS Codebuild Local</description>
+    </item>
+    
+    <item>
+      <title>AWS API Gateway Websockets Serverless</title>
+      <link>https://brianpfeil.com/post/aws-api-gateway-websockets-serverless/</link>
+      <pubDate>Tue, 08 Jan 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-api-gateway-websockets-serverless/</guid>
+      <description>learning AWS API Gateway Websockets Serverless</description>
+    </item>
+    
+    <item>
+      <title>AWS Codepipeline</title>
+      <link>https://brianpfeil.com/post/aws-codepipeline/</link>
+      <pubDate>Thu, 20 Dec 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-codepipeline/</guid>
+      <description>learning AWS Codepipeline</description>
+    </item>
+    
+    <item>
+      <title>AWS Amplify Js App</title>
+      <link>https://brianpfeil.com/post/aws-amplify-js-app/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-amplify-js-app/</guid>
+      <description>learning AWS Amplify Js App</description>
+    </item>
+    
+    <item>
+      <title>AWS Ecr</title>
+      <link>https://brianpfeil.com/post/aws-ecr/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-ecr/</guid>
+      <description>learning AWS Ecr</description>
+    </item>
+    
+    <item>
+      <title>AWS SDK Cpp</title>
+      <link>https://brianpfeil.com/post/aws-sdk-cpp/</link>
+      <pubDate>Tue, 25 Sep 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-sdk-cpp/</guid>
+      <description>learning AWS SDK Cpp</description>
+    </item>
+    
+    <item>
+      <title>AWS Appsync</title>
+      <link>https://brianpfeil.com/post/aws-appsync/</link>
+      <pubDate>Sat, 09 Jun 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-appsync/</guid>
+      <description>learning AWS Appsync</description>
+    </item>
+    
+    <item>
+      <title>AWS Iot</title>
+      <link>https://brianpfeil.com/post/aws-iot/</link>
+      <pubDate>Sat, 10 Feb 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-iot/</guid>
+      <description>learning AWS Iot</description>
+    </item>
+    
+    <item>
+      <title>AWS Iam</title>
+      <link>https://brianpfeil.com/post/aws-iam/</link>
+      <pubDate>Thu, 08 Feb 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-iam/</guid>
+      <description>learning AWS Iam</description>
+    </item>
+    
+    <item>
+      <title>AWS Emr</title>
+      <link>https://brianpfeil.com/post/aws-emr/</link>
+      <pubDate>Sat, 03 Feb 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-emr/</guid>
+      <description>learning AWS Emr</description>
+    </item>
+    
+    <item>
+      <title>AWS Ecs</title>
+      <link>https://brianpfeil.com/post/aws-ecs/</link>
+      <pubDate>Sat, 11 Nov 2017 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-ecs/</guid>
+      <description>learning AWS Ecs</description>
+    </item>
+    
+    <item>
+      <title>AWS Kms</title>
+      <link>https://brianpfeil.com/post/aws-kms/</link>
+      <pubDate>Thu, 31 Aug 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-kms/</guid>
+      <description>learning AWS Kms</description>
+    </item>
+    
+    <item>
+      <title>AWS CloudFront</title>
+      <link>https://brianpfeil.com/post/aws-cloudfront/</link>
+      <pubDate>Thu, 17 Aug 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cloudfront/</guid>
+      <description>learning AWS CloudFront</description>
+    </item>
+    
+    <item>
+      <title>AWS Kinesis</title>
+      <link>https://brianpfeil.com/post/aws-kinesis/</link>
+      <pubDate>Tue, 18 Jul 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-kinesis/</guid>
+      <description>learning AWS Kinesis</description>
+    </item>
+    
+    <item>
+      <title>AWS Cloudwatch</title>
+      <link>https://brianpfeil.com/post/aws-cloudwatch/</link>
+      <pubDate>Sun, 21 May 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cloudwatch/</guid>
+      <description>learning AWS Cloudwatch</description>
+    </item>
+    
+    <item>
+      <title>AWS Cognito</title>
+      <link>https://brianpfeil.com/post/aws-cognito/</link>
+      <pubDate>Sun, 21 May 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cognito/</guid>
+      <description>learning AWS Cognito</description>
+    </item>
+    
+    <item>
       <title>Running Elasticsearch on AWS Elastic Beanstalk</title>
       <link>https://brianpfeil.com/post/running-elasticsearch-on-elastic-beanstalk/</link>
       <pubDate>Wed, 25 Mar 2015 21:25:09 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/running-elasticsearch-on-elastic-beanstalk/</guid>
-      <description>TL;DR code on github @ pfeilbr/Elastic-Beanstalk-Dockerrun.aws.json-Example
- This article will show you the steps to run elasticsearch on AWS Elastic Beanstalk. This example uses the elasticsearch docker image as an example. Once running you can visit http://&amp;lt;beanstalk domain&amp;gt;/?pretty an you will see the root elastic search JSON response.
-Initial Deployment   Modify Dockerrun.aws.json for your needs.
- Dockerrun.aws.json reference
-   Commit changes to repo
-$ git commit -a -m &amp;#34;changes&amp;#34; ``</description>
-    </item>
-    
-    <item>
-      <title>Dockerized Node.js App on Elastic Beanstalk Example</title>
-      <link>https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/</link>
-      <pubDate>Wed, 25 Mar 2015 19:06:15 +0000</pubDate>
-      
-      <guid>https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/</guid>
-      <description>Example of developing and deploying a dockerized Node.js app to Elastic Beanstalk
- source on Github at pfeilbr/Elastic-Beanstalk-Docker-Node.js-Example
- Local Development Workflow   Edit code. e.g. index.js
-  Build image
-$ docker build --tag=&amp;#34;pfeilbr/eb-docker-node-example&amp;#34; . ``
-  Run
-$ docker run -p 80:80 -it -rm -name eb-docker-node-example pfeilbr/eb-docker-node-example ``
-  Get docker host ip (optional. only if using boot2docker)
-$ boot2docker ip ``
-  Open browser to http://&amp;lt;boot2docker ip&amp;gt;</description>
+      <description>eliminate the need to manage a server by running Elasticsearch on the AWS Elastic Beanstalk PaaS</description>
     </item>
     
     <item>
@@ -59,16 +342,7 @@ $ boot2docker ip ``
       <pubDate>Wed, 25 Mar 2015 19:06:15 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/dockerized-nodejs-app-on-elastic-beanstalk-example/</guid>
-      <description>Example of developing and deploying a dockerized Node.js app to Elastic Beanstalk
- source on Github at pfeilbr/Elastic-Beanstalk-Docker-Node.js-Example
- Local Development Workflow   Edit code. e.g. index.js
-  Build image
-$ docker build --tag=&amp;#34;pfeilbr/eb-docker-node-example&amp;#34; . ``
-  Run
-$ docker run -p 80:80 -it -rm -name eb-docker-node-example pfeilbr/eb-docker-node-example ``
-  Get docker host ip (optional. only if using boot2docker)
-$ boot2docker ip ``
-  Open browser to http://&amp;lt;boot2docker ip&amp;gt;</description>
+      <description>better your developer workflow with Docker + NodeJS</description>
     </item>
     
   </channel>
