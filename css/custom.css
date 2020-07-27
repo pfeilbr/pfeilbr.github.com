@@ -95,6 +95,42 @@ h4:target {
   padding-top: 53px;
 }
 
+.post-preview .post-meta,
+.post-heading .post-meta,
+.page-meta {
+  color: #808080;
+  font-size: 18px;
+  font-style: normal;
+  margin: 0 0 10px;
+}
+
+.post-preview .post-meta a,
+.post-heading .post-meta a,
+.page-meta a {
+  color: #008aff;
+  text-decoration: none;
+}
+
 .blog-tags {
   margin-top: 50px;
+}
+
+.blog-tags a:before {
+  content: "";
+}
+
+.blog-tags a {
+  color: #008aff;
+  text-decoration: none;
+  padding: 0px 0px;
+}
+
+.blog-tags a:hover {
+  border-radius: 2px;
+  color: #008aff;
+  background-color: #fff;
+}
+
+.post-preview a:hover {
+  text-decoration: underline;
 }

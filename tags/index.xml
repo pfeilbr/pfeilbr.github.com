@@ -498,15 +498,6 @@
     </item>
     
     <item>
-      <title>web</title>
-      <link>https://brianpfeil.com/tags/web/</link>
-      <pubDate>Wed, 22 Aug 2018 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>webassembly</title>
       <link>https://brianpfeil.com/tags/webassembly/</link>
       <pubDate>Wed, 22 Aug 2018 00:00:00 -0400</pubDate>
@@ -800,6 +791,15 @@
       <pubDate>Fri, 21 Jun 2013 02:43:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/tags/app/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>https://brianpfeil.com/tags/web/</link>
+      <pubDate>Sun, 16 Sep 2012 02:43:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/web/</guid>
       <description></description>
     </item>
     

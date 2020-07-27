@@ -89,7 +89,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.67.0" />
+  <meta name="generator" content="Hugo 0.74.3" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -261,10 +261,25 @@ if (!doNotTrack) {
   
 
   
-  
-  
-  
-  
+
+  <span class="blog-tags">
+  </span>&nbsp;&bull;&nbsp;</span>
+
+<a href="https://brianpfeil.com//tags/salesforce/">salesforce</a>&nbsp;
+
+<a href="https://brianpfeil.com//tags/jquery/">jquery</a>&nbsp;
+
+<a href="https://brianpfeil.com//tags/mobile/">mobile</a>&nbsp;
+
+</span>
+
+
+
+
+
+
+
+
 </span>
             
           </div>
@@ -292,7 +307,7 @@ no time to <a href="http://www.developerforce.com/events/regular/registration.ph
 everything. If you&rsquo;re just getting started with <a href="http://salesforce.com">salesforce</a>, I <em>can&rsquo;t
 recommend enough</em> the online tutorials, workbooks, and documentation at
 <a href="http://developer.force.com">developer.force.com</a>.</p>
-<h2 id="accessing-the-app-data-">Accessing the App Data</h2>
+<h2 id="accessing-the-app-data">Accessing the App Data</h2>
 <p>Our app will contain Contact and Account data.  We&rsquo;ll use Apex Web Service methods to provide the data.  We can get all our Contacts with the following:</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">webService</span> <span class="kd">static</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Contact</span><span class="o">&gt;</span> <span class="nf">getContacts</span><span class="o">()</span> <span class="o">{</span>
 	<span class="n">ApexPages</span><span class="o">.</span><span class="na">StandardSetController</span> <span class="n">setCon</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ApexPages</span><span class="o">.</span><span class="na">StandardSetController</span><span class="o">(</span>
@@ -305,7 +320,7 @@ recommend enough</em> the online tutorials, workbooks, and documentation at
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/soap/ajax/15.0/apex.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div><p>To call the web service method from JavaScript we use this simple one-liner.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">contacts</span> <span class="o">=</span> <span class="nx">sforce</span><span class="p">.</span><span class="nx">apex</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="s2">&#34;MyWebService&#34;</span><span class="p">,</span> <span class="s2">&#34;getContacts&#34;</span><span class="p">,</span> <span class="p">{});</span>
-</code></pre></div><h2 id="building-the-ui-">Building the UI</h2>
+</code></pre></div><h2 id="building-the-ui">Building the UI</h2>
 <p>Our mobile app UI will be 100% <a href="http://jquerymobile.com/">jQuery Mobile</a>, and we can use <a href="http://force.com">force.com</a>
 <a href="http://developer.force.com/sites">Sites</a> to provide pure web content. <a href="http://developer.force.com/sites">Sites</a> by default provides configurable
 headers, footers, navigation, etc. that you can apply themes to. We don&rsquo;t want
@@ -355,7 +370,7 @@ replace. Here&rsquo;s an example of a template used to generate a list page.</p>
 </code></pre></div><p>The things wrapped in <code>${}</code> are replaced with the values.  The way we use the template is by calling the <code>$.tmpl</code> method.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">$page</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#object-list-page-template&#39;</span><span class="p">).</span><span class="nx">tmpl</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
 </code></pre></div><p>jQuery Templates are very powerful, and really help with the maintainability of your code.  Check out the <a href="http://api.jquery.com/jQuery.template/">documentation</a> to learn more.</p>
-<h2 id="conclusion-">Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 <p>This provides an overview of the core pieces of the solution and the technologies used.  If you like to dive in deeper, the complete source is available on <strong><a href="https://github.com/pfeilbr/salesforce-jquery-mobile">github</a></strong>, and the working app is available <strong><a href="http://j.mp/msales-dev">here</a></strong> (must be viewed in a <a href="http://www.webkit.org/">WebKit</a> based browser).</p>
 
 

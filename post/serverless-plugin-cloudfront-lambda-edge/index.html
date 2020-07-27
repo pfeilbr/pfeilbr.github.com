@@ -89,7 +89,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.67.0" />
+  <meta name="generator" content="Hugo 0.74.3" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -261,15 +261,32 @@ if (!doNotTrack) {
   
 
   
-  
-  
-  &nbsp;&nbsp;
-  <a href="https://github.com/pfeilbr/serverless-plugin-cloudfront-lambda-edge-playground" class="repo-link" target=" _blank"><i class="fab fa-github fa-sm"></i>
-    pfeilbr/serverless-plugin-cloudfront-lambda-edge-playground
-  </a>&nbsp;
-  
-  
-  
+
+  <span class="blog-tags">
+  </span>&nbsp;&bull;&nbsp;</span>
+
+<a href="https://brianpfeil.com//tags/serverless/">serverless</a>&nbsp;
+
+<a href="https://brianpfeil.com//tags/cloudfront/">cloudfront</a>&nbsp;
+
+<a href="https://brianpfeil.com//tags/lambda/">lambda</a>&nbsp;
+
+<a href="https://brianpfeil.com//tags/playground/">playground</a>&nbsp;
+
+</span>
+
+
+
+
+
+
+&nbsp;&nbsp;
+<a href="https://github.com/pfeilbr/serverless-plugin-cloudfront-lambda-edge-playground" class="repo-link" target=" _blank"><i class="fab fa-github fa-sm"></i>
+  pfeilbr/serverless-plugin-cloudfront-lambda-edge-playground
+</a>&nbsp;
+
+
+
 </span>
             
           </div>
@@ -312,7 +329,7 @@ open <span class="s2">&#34;http://</span><span class="k">$(</span>node scripts/g
 <span class="c1"># cloudfront url. e.g. https://d3cztrjc4xcpde.cloudfront.net</span>
 open <span class="s2">&#34;https://</span><span class="k">$(</span>node scripts/get-stack-property.js CloudFrontDistributionDomainName<span class="k">)</span><span class="s2">&#34;</span>
 </code></pre></div><h2 id="removing-auth">Removing Auth</h2>
-<p>Update CloudFront Behavior to remove &ldquo;Viewer Request&rdquo; &ldquo;Lambda Function Association&rdquo;, then invalidate cache on all &ldquo;*&quot;.</p>
+<p>Update CloudFront Behavior to remove &ldquo;Viewer Request&rdquo; &ldquo;Lambda Function Association&rdquo;, then invalidate cache on all &ldquo;*&rdquo;.</p>
 <h2 id="viewing-cloudwatch-logs-for-lambdaedge-functions">Viewing CloudWatch Logs for Lambda@Edge Functions</h2>
 <p>logging takes place in the region of the edge (PoP) location.  This will vary based on the client location.</p>
 <p>Visit CloudFront | Monitoring | Lambda@Edge Functions | YOUR FUNCTION, then click <code>[View Function Metrics]</code> button</p>

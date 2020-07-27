@@ -75,29 +75,11 @@
     </item>
     
     <item>
-      <title>Java</title>
-      <link>https://brianpfeil.com/categories/Java/</link>
-      <pubDate>Thu, 19 Mar 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/Java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>javascript</title>
       <link>https://brianpfeil.com/categories/javascript/</link>
       <pubDate>Thu, 19 Mar 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/categories/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>C</title>
-      <link>https://brianpfeil.com/categories/C/</link>
-      <pubDate>Wed, 26 Feb 2020 00:00:00 -0500</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/C/</guid>
       <description></description>
     </item>
     
@@ -138,11 +120,29 @@
     </item>
     
     <item>
+      <title>C</title>
+      <link>https://brianpfeil.com/categories/C/</link>
+      <pubDate>Mon, 11 Nov 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>HCL</title>
       <link>https://brianpfeil.com/categories/HCL/</link>
       <pubDate>Tue, 05 Nov 2019 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/categories/HCL/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>https://brianpfeil.com/categories/Java/</link>
+      <pubDate>Sun, 27 Oct 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/Java/</guid>
       <description></description>
     </item>
     
@@ -161,15 +161,6 @@
       <pubDate>Fri, 21 Dec 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/categories/Rust/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>docker</title>
-      <link>https://brianpfeil.com/categories/docker/</link>
-      <pubDate>Tue, 13 Nov 2018 00:00:00 -0500</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/docker/</guid>
       <description></description>
     </item>
     
@@ -287,6 +278,15 @@
       <pubDate>Thu, 26 Mar 2015 01:36:21 +0000</pubDate>
       
       <guid>https://brianpfeil.com/categories/concurrency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://brianpfeil.com/categories/docker/</link>
+      <pubDate>Wed, 25 Mar 2015 21:25:09 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/docker/</guid>
       <description></description>
     </item>
     
