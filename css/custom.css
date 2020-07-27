@@ -87,3 +87,10 @@ footer .footer-link {
   color: #008aff;
   text-decoration: underline;
 }
+
+h1:target,
+h2:target,
+h3:target,
+h4:target {
+  padding-top: 53px;
+}
