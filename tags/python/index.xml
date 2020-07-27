@@ -17,7 +17,7 @@
       <pubDate>Wed, 05 Feb 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/python-async-await/</guid>
-      <description>learning Python Async Await</description>
+      <description>experimenting with Python Async Await</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Wed, 07 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/python-packaging/</guid>
-      <description>learning Python Packaging</description>
+      <description>experimenting with Python Packaging</description>
     </item>
     
     <item>
@@ -35,16 +35,16 @@
       <pubDate>Tue, 06 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/python-tox-testing/</guid>
-      <description>learning Python Tox Testing</description>
+      <description>experimenting with Python Tox Testing</description>
     </item>
     
     <item>
-      <title>Python 2.X Websocket Client</title>
+      <title>Python 2.X WebSocket Client</title>
       <link>https://brianpfeil.com/post/python-2.x-websocket-client/</link>
       <pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/python-2.x-websocket-client/</guid>
-      <description>learning Python 2.X Websocket Client</description>
+      <description>experimenting with Python 2.X WebSocket Client</description>
     </item>
     
     <item>
@@ -53,7 +53,7 @@
       <pubDate>Wed, 31 Jan 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/opencv-python/</guid>
-      <description>learning OpenCV Python</description>
+      <description>experimenting with OpenCV Python</description>
     </item>
     
     <item>
@@ -62,7 +62,7 @@
       <pubDate>Fri, 10 Nov 2017 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-python/</guid>
-      <description>learning Serverless Python</description>
+      <description>experimenting with Serverless Python</description>
     </item>
     
   </channel>

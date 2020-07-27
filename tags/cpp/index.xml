@@ -12,30 +12,30 @@
     
     
     <item>
-      <title>AWS SDK Cpp</title>
+      <title>AWS SDK CPP</title>
       <link>https://brianpfeil.com/post/aws-sdk-cpp/</link>
       <pubDate>Tue, 25 Sep 2018 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-sdk-cpp/</guid>
-      <description>learning AWS SDK Cpp</description>
+      <description>experimenting with AWS SDK CPP</description>
     </item>
     
     <item>
-      <title>Google Test Cpp Test Framework</title>
+      <title>Google Test CPP Test Framework</title>
       <link>https://brianpfeil.com/post/google-test-cpp-test-framework/</link>
       <pubDate>Tue, 25 Sep 2018 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/google-test-cpp-test-framework/</guid>
-      <description>learning Google Test Cpp Test Framework</description>
+      <description>experimenting with Google Test CPP Test Framework</description>
     </item>
     
     <item>
-      <title>Modern Cpp</title>
+      <title>Modern CPP</title>
       <link>https://brianpfeil.com/post/modern-cpp/</link>
       <pubDate>Mon, 24 Sep 2018 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/modern-cpp/</guid>
-      <description>learning Modern Cpp</description>
+      <description>experimenting with Modern CPP</description>
     </item>
     
   </channel>

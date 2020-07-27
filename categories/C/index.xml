@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Glib</title>
+      <title>GLib</title>
       <link>https://brianpfeil.com/post/glib/</link>
       <pubDate>Mon, 11 Nov 2019 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/glib/</guid>
-      <description>learning Glib</description>
+      <description>experimenting with GLib</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Thu, 02 Jun 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/emscripten/</guid>
-      <description>learning Emscripten</description>
+      <description>experimenting with Emscripten</description>
     </item>
     
   </channel>

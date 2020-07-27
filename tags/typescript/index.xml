@@ -12,21 +12,21 @@
     
     
     <item>
-      <title>Serverless Typescript Webpack</title>
+      <title>Serverless TypeScript webpack</title>
       <link>https://brianpfeil.com/post/serverless-typescript-webpack/</link>
       <pubDate>Tue, 11 Jul 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-typescript-webpack/</guid>
-      <description>learning Serverless Typescript Webpack</description>
+      <description>experimenting with Serverless TypeScript webpack</description>
     </item>
     
     <item>
-      <title>Typescript Node</title>
+      <title>TypeScript Node</title>
       <link>https://brianpfeil.com/post/typescript-node/</link>
       <pubDate>Wed, 18 May 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/typescript-node/</guid>
-      <description>learning Typescript Node</description>
+      <description>learning TypeScript Node</description>
     </item>
     
   </channel>

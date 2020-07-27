@@ -17,16 +17,16 @@
       <pubDate>Wed, 15 Jan 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/go-modules/</guid>
-      <description>learning Go Modules</description>
+      <description>experimenting with Go Modules</description>
     </item>
     
     <item>
-      <title>Go Sdl2</title>
+      <title>Go SDL2</title>
       <link>https://brianpfeil.com/post/go-sdl2/</link>
       <pubDate>Mon, 13 Jan 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/go-sdl2/</guid>
-      <description>learning Go Sdl2</description>
+      <description>experimenting with Go SDL2</description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@
       <pubDate>Sun, 11 Jan 2015 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/go-postgres/</guid>
-      <description>learning Go Postgres</description>
+      <description>experimenting with Go Postgres</description>
     </item>
     
     <item>
@@ -44,7 +44,7 @@
       <pubDate>Tue, 31 Dec 2013 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/go/</guid>
-      <description>learning Go</description>
+      <description>experimenting with Go</description>
     </item>
     
   </channel>

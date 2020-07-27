@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>AWS Ecr</title>
+      <title>AWS ECR</title>
       <link>https://brianpfeil.com/post/aws-ecr/</link>
       <pubDate>Tue, 13 Nov 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-ecr/</guid>
-      <description>learning AWS Ecr</description>
+      <description>experimenting with AWS ECR</description>
     </item>
     
   </channel>

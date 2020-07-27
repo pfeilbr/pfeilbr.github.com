@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Azure Kubernetes Service Aks</title>
+      <title>Azure Kubernetes Service AKS</title>
       <link>https://brianpfeil.com/post/azure-kubernetes-service-aks/</link>
       <pubDate>Sat, 18 May 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-kubernetes-service-aks/</guid>
-      <description>learning Azure Kubernetes Service Aks</description>
+      <description>experimenting with Azure Kubernetes Service AKS</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Tue, 18 Oct 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/kubernetes/</guid>
-      <description>learning Kubernetes</description>
+      <description>experimenting with Kubernetes</description>
     </item>
     
   </channel>
