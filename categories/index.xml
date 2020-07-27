@@ -66,6 +66,15 @@
     </item>
     
     <item>
+      <title>aws</title>
+      <link>https://brianpfeil.com/categories/aws/</link>
+      <pubDate>Sun, 29 Mar 2020 09:40:13 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Java</title>
       <link>https://brianpfeil.com/categories/Java/</link>
       <pubDate>Thu, 19 Mar 2020 00:00:00 -0400</pubDate>
@@ -278,15 +287,6 @@
       <pubDate>Thu, 26 Mar 2015 01:36:21 +0000</pubDate>
       
       <guid>https://brianpfeil.com/categories/concurrency/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>aws</title>
-      <link>https://brianpfeil.com/categories/aws/</link>
-      <pubDate>Wed, 25 Mar 2015 21:25:09 +0000</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/aws/</guid>
       <description></description>
     </item>
     

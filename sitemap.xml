@@ -133,7 +133,17 @@
   </url>
   
   <url>
+    <loc>https://brianpfeil.com/categories/aws/</loc>
+    <lastmod>2020-03-29T09:40:13-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://brianpfeil.com/notes/aws-services/</loc>
+    <lastmod>2020-03-29T09:40:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-services/</loc>
     <lastmod>2020-03-29T09:40:13-04:00</lastmod>
   </url>
   
@@ -1400,11 +1410,6 @@
   <url>
     <loc>https://brianpfeil.com/post/concurrent-downloader-in-go/</loc>
     <lastmod>2015-03-26T01:36:21+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/aws/</loc>
-    <lastmod>2015-03-25T21:25:09+00:00</lastmod>
   </url>
   
   <url>
