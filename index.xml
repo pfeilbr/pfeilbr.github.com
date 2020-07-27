@@ -53,7 +53,7 @@
       <pubDate>Fri, 10 Jul 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/strapi/</guid>
-      <description>experimenting with Strapi</description>
+      <description>learning Strapi</description>
     </item>
     
     <item>
@@ -180,7 +180,7 @@
       <pubDate>Thu, 16 Jan 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/tailwindcss/</guid>
-      <description>experimenting with Tailwindcss</description>
+      <description>learning Tailwindcss</description>
     </item>
     
     <item>
@@ -243,7 +243,7 @@
       <pubDate>Tue, 05 Nov 2019 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/terraform/</guid>
-      <description>experimenting with Terraform</description>
+      <description>learning Terraform</description>
     </item>
     
     <item>
@@ -261,7 +261,7 @@
       <pubDate>Tue, 22 Oct 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/wordpress/</guid>
-      <description>experimenting with Wordpress</description>
+      <description>learning Wordpress</description>
     </item>
     
     <item>
@@ -288,7 +288,7 @@
       <pubDate>Wed, 09 Oct 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/stackery/</guid>
-      <description>experimenting with Stackery</description>
+      <description>learning Stackery</description>
     </item>
     
     <item>
@@ -378,7 +378,7 @@
       <pubDate>Wed, 21 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/zipkin/</guid>
-      <description>experimenting with Zipkin</description>
+      <description>learning Zipkin</description>
     </item>
     
     <item>
@@ -486,7 +486,7 @@
       <pubDate>Mon, 22 Jul 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/youtube-api/</guid>
-      <description>experimenting with YouTube API</description>
+      <description>learning YouTube API</description>
     </item>
     
     <item>
@@ -702,7 +702,7 @@
       <pubDate>Fri, 25 Jan 2019 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/storybook-ui-development-environment/</guid>
-      <description>experimenting with Storybook Ui Development Environment</description>
+      <description>learning Storybook Ui Development Environment</description>
     </item>
     
     <item>
@@ -756,7 +756,7 @@
       <pubDate>Mon, 19 Nov 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/twit-twitter-api-client/</guid>
-      <description>experimenting with Twit Twitter API Client</description>
+      <description>learning Twit Twitter API Client</description>
     </item>
     
     <item>
@@ -810,7 +810,7 @@
       <pubDate>Thu, 27 Sep 2018 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/vcpkg/</guid>
-      <description>experimenting with Vcpkg</description>
+      <description>learning Vcpkg</description>
     </item>
     
     <item>
@@ -846,7 +846,7 @@
       <pubDate>Fri, 21 Sep 2018 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/v8-javascript-engine/</guid>
-      <description>experimenting with V8 Javascript Engine</description>
+      <description>learning V8 Javascript Engine</description>
     </item>
     
     <item>
@@ -873,7 +873,7 @@
       <pubDate>Sat, 01 Sep 2018 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/vuejs-webpack/</guid>
-      <description>experimenting with Vuejs Webpack</description>
+      <description>learning Vuejs Webpack</description>
     </item>
     
     <item>
@@ -882,7 +882,7 @@
       <pubDate>Wed, 22 Aug 2018 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/webassembly/</guid>
-      <description>experimenting with Webassembly</description>
+      <description>learning Webassembly</description>
     </item>
     
     <item>
@@ -1260,7 +1260,7 @@
       <pubDate>Fri, 20 May 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/taco/</guid>
-      <description>experimenting with Taco</description>
+      <description>learning Taco</description>
     </item>
     
     <item>
@@ -1269,7 +1269,7 @@
       <pubDate>Wed, 18 May 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/typescript-node/</guid>
-      <description>experimenting with Typescript Node</description>
+      <description>learning Typescript Node</description>
     </item>
     
     <item>
@@ -1296,7 +1296,7 @@
       <pubDate>Mon, 02 May 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/typings/</guid>
-      <description>experimenting with Typings</description>
+      <description>learning Typings</description>
     </item>
     
     <item>
@@ -1440,7 +1440,7 @@
       <pubDate>Thu, 20 Aug 2015 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/webdriverio/</guid>
-      <description>experimenting with Webdriverio</description>
+      <description>learning Webdriverio</description>
     </item>
     
     <item>
@@ -1449,7 +1449,7 @@
       <pubDate>Fri, 05 Jun 2015 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/spark/</guid>
-      <description>experimenting with Spark</description>
+      <description>learning Spark</description>
     </item>
     
     <item>
@@ -1458,7 +1458,7 @@
       <pubDate>Tue, 19 May 2015 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/v8/</guid>
-      <description>experimenting with V8</description>
+      <description>learning V8</description>
     </item>
     
     <item>
@@ -1476,7 +1476,7 @@
       <pubDate>Fri, 03 Apr 2015 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/webpack/</guid>
-      <description>experimenting with Webpack</description>
+      <description>learning Webpack</description>
     </item>
     
     <item>

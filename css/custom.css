@@ -32,3 +32,58 @@ h6 {
 .blog-tags:before {
   content: "";
 }
+
+footer .footer-link {
+  color: #008aff;
+}
+
+#avatar {
+  /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
+  background-image: url("/images/pfeilbr-gravatar.jpeg");
+
+  /* make a square container */
+  width: 125px;
+  height: 125px;
+
+  /* fill the container, preserving aspect ratio, and cropping to fit */
+  background-size: cover;
+
+  /* center the image vertically and horizontally */
+  background-position: top center;
+
+  /* round the edges to a circle with border radius 1/2 container size */
+  border-radius: 50%;
+
+  margin: auto;
+  max-width: 100%;
+}
+
+.pager li a {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 10px 5px;
+  background: #fff;
+  border-radius: 0;
+  color: #008aff;
+}
+
+.pager li > a,
+.pager li > span {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: #fff;
+  border: 0px;
+  /* border-radius: 15px; */
+}
+
+.pager li a:hover,
+.pager li a:focus {
+  border: 0px;
+  background: #fff;
+  border-radius: 0;
+  color: #008aff;
+  text-decoration: underline;
+}
