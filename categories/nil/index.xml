@@ -17,7 +17,7 @@
       <pubDate>Fri, 17 Jul 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/lumigo-cli/</guid>
-      <description>experimenting with Lumigo CLI</description>
+      <description>learning Lumigo CLI</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Thu, 16 Jul 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-interactive-video-service/</guid>
-      <description>experimenting with AWS Interactive Video Service</description>
+      <description>learning AWS Interactive Video Service</description>
     </item>
     
     <item>
@@ -44,7 +44,7 @@
       <pubDate>Tue, 19 May 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-eventbridge/</guid>
-      <description>experimenting with AWS Eventbridge</description>
+      <description>learning AWS Eventbridge</description>
     </item>
     
     <item>
@@ -53,7 +53,7 @@
       <pubDate>Sun, 09 Feb 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/multipass/</guid>
-      <description>experimenting with Multipass</description>
+      <description>learning Multipass</description>
     </item>
     
     <item>
@@ -62,7 +62,7 @@
       <pubDate>Thu, 17 Oct 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-control-tower/</guid>
-      <description>experimenting with AWS Control Tower</description>
+      <description>learning AWS Control Tower</description>
     </item>
     
     <item>
@@ -71,7 +71,7 @@
       <pubDate>Thu, 26 Sep 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cognito-developer-authenticated-identities/</guid>
-      <description>experimenting with AWS Cognito Developer Authenticated Identities</description>
+      <description>learning AWS Cognito Developer Authenticated Identities</description>
     </item>
     
     <item>
@@ -80,7 +80,7 @@
       <pubDate>Wed, 18 Sep 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/gitlab/</guid>
-      <description>experimenting with Gitlab</description>
+      <description>learning Gitlab</description>
     </item>
     
     <item>
@@ -89,7 +89,7 @@
       <pubDate>Tue, 10 Sep 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-service-catalog/</guid>
-      <description>experimenting with AWS Service Catalog</description>
+      <description>learning AWS Service Catalog</description>
     </item>
     
     <item>
@@ -98,7 +98,7 @@
       <pubDate>Mon, 26 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/drawio/</guid>
-      <description>experimenting with Drawio</description>
+      <description>learning Drawio</description>
     </item>
     
     <item>
@@ -107,7 +107,7 @@
       <pubDate>Fri, 16 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-sam-local/</guid>
-      <description>experimenting with AWS SAM Local</description>
+      <description>learning AWS SAM Local</description>
     </item>
     
     <item>
@@ -116,7 +116,7 @@
       <pubDate>Wed, 14 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cloudformation/</guid>
-      <description>experimenting with AWS CloudFormation</description>
+      <description>learning AWS CloudFormation</description>
     </item>
     
     <item>
@@ -125,7 +125,7 @@
       <pubDate>Mon, 05 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/neo4j/</guid>
-      <description>experimenting with Neo4j</description>
+      <description>learning Neo4j</description>
     </item>
     
     <item>
@@ -134,7 +134,7 @@
       <pubDate>Wed, 10 Jul 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-fargate/</guid>
-      <description>experimenting with AWS Fargate</description>
+      <description>learning AWS Fargate</description>
     </item>
     
     <item>
@@ -143,7 +143,7 @@
       <pubDate>Wed, 03 Jul 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-codebuild-local/</guid>
-      <description>experimenting with AWS Codebuild Local</description>
+      <description>learning AWS Codebuild Local</description>
     </item>
     
     <item>
@@ -152,7 +152,7 @@
       <pubDate>Sat, 18 May 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-kubernetes-service-aks/</guid>
-      <description>experimenting with Azure Kubernetes Service Aks</description>
+      <description>learning Azure Kubernetes Service Aks</description>
     </item>
     
     <item>
@@ -161,7 +161,7 @@
       <pubDate>Tue, 14 May 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-cli/</guid>
-      <description>experimenting with Azure CLI</description>
+      <description>learning Azure CLI</description>
     </item>
     
     <item>
@@ -170,7 +170,7 @@
       <pubDate>Wed, 05 Dec 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/jfrog-artifactory/</guid>
-      <description>experimenting with Jfrog Artifactory</description>
+      <description>learning Jfrog Artifactory</description>
     </item>
     
     <item>
@@ -179,7 +179,7 @@
       <pubDate>Sat, 09 Jun 2018 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-appsync/</guid>
-      <description>experimenting with AWS Appsync</description>
+      <description>learning AWS Appsync</description>
     </item>
     
     <item>
@@ -188,7 +188,7 @@
       <pubDate>Wed, 30 May 2018 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/jenkins-pipeline-github/</guid>
-      <description>experimenting with Jenkins Pipeline Github</description>
+      <description>learning Jenkins Pipeline Github</description>
     </item>
     
     <item>
@@ -197,7 +197,7 @@
       <pubDate>Sat, 03 Feb 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-emr/</guid>
-      <description>experimenting with AWS Emr</description>
+      <description>learning AWS Emr</description>
     </item>
     
     <item>
@@ -206,7 +206,7 @@
       <pubDate>Sat, 09 Sep 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/jupyter/</guid>
-      <description>experimenting with Jupyter</description>
+      <description>learning Jupyter</description>
     </item>
     
     <item>
@@ -215,7 +215,7 @@
       <pubDate>Tue, 22 Aug 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/puppeteer/</guid>
-      <description>experimenting with Puppeteer</description>
+      <description>learning Puppeteer</description>
     </item>
     
     <item>
@@ -224,7 +224,7 @@
       <pubDate>Thu, 17 Aug 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cloudfront/</guid>
-      <description>experimenting with AWS CloudFront</description>
+      <description>learning AWS CloudFront</description>
     </item>
     
     <item>
@@ -233,7 +233,7 @@
       <pubDate>Tue, 18 Jul 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-kinesis/</guid>
-      <description>experimenting with AWS Kinesis</description>
+      <description>learning AWS Kinesis</description>
     </item>
     
     <item>
@@ -242,7 +242,7 @@
       <pubDate>Tue, 17 Jan 2017 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/ethereum/</guid>
-      <description>experimenting with Ethereum</description>
+      <description>learning Ethereum</description>
     </item>
     
     <item>
@@ -251,7 +251,7 @@
       <pubDate>Fri, 20 May 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/gitbook/</guid>
-      <description>experimenting with Gitbook</description>
+      <description>learning Gitbook</description>
     </item>
     
     <item>
@@ -260,7 +260,7 @@
       <pubDate>Thu, 20 Aug 2015 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/docker-hub-automated-build/</guid>
-      <description>experimenting with Docker Hub Automated Build</description>
+      <description>learning Docker Hub Automated Build</description>
     </item>
     
     <item>
@@ -269,7 +269,7 @@
       <pubDate>Sat, 02 Aug 2014 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/kendo-ui/</guid>
-      <description>experimenting with Kendo Ui</description>
+      <description>learning Kendo Ui</description>
     </item>
     
   </channel>

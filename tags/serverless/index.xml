@@ -17,7 +17,7 @@
       <pubDate>Wed, 17 Jun 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-golang/</guid>
-      <description>experimenting with Serverless Golang</description>
+      <description>learning Serverless Golang</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Sun, 27 Oct 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-lambda-java/</guid>
-      <description>experimenting with Serverless Lambda Java</description>
+      <description>learning Serverless Lambda Java</description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@
       <pubDate>Mon, 14 Oct 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-serverless-application-repository/</guid>
-      <description>experimenting with AWS Serverless Application Repository</description>
+      <description>learning AWS Serverless Application Repository</description>
     </item>
     
     <item>
@@ -44,7 +44,7 @@
       <pubDate>Wed, 18 Sep 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-lambda-layers/</guid>
-      <description>experimenting with Serverless Lambda Layers</description>
+      <description>learning Serverless Lambda Layers</description>
     </item>
     
     <item>
@@ -53,7 +53,7 @@
       <pubDate>Tue, 10 Sep 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-plugin-cloudfront-lambda-edge/</guid>
-      <description>experimenting with Serverless Plugin CloudFront Lambda Edge</description>
+      <description>learning Serverless Plugin CloudFront Lambda Edge</description>
     </item>
     
     <item>
@@ -62,7 +62,7 @@
       <pubDate>Tue, 20 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-framework-full-lifecycle-with-dashboard/</guid>
-      <description>experimenting with Serverless Framework Full Lifecycle With Dashboard</description>
+      <description>learning Serverless Framework Full Lifecycle With Dashboard</description>
     </item>
     
     <item>
@@ -71,7 +71,7 @@
       <pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-serverless-framework/</guid>
-      <description>experimenting with Azure Serverless Framework</description>
+      <description>learning Azure Serverless Framework</description>
     </item>
     
     <item>
@@ -80,7 +80,7 @@
       <pubDate>Tue, 08 Jan 2019 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-api-gateway-websockets-serverless/</guid>
-      <description>experimenting with AWS API Gateway Websockets Serverless</description>
+      <description>learning AWS API Gateway Websockets Serverless</description>
     </item>
     
     <item>
@@ -89,7 +89,7 @@
       <pubDate>Fri, 10 Nov 2017 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-python/</guid>
-      <description>experimenting with Serverless Python</description>
+      <description>learning Serverless Python</description>
     </item>
     
     <item>
@@ -98,7 +98,7 @@
       <pubDate>Tue, 11 Jul 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-typescript-webpack/</guid>
-      <description>experimenting with Serverless Typescript Webpack</description>
+      <description>learning Serverless Typescript Webpack</description>
     </item>
     
   </channel>

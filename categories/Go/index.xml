@@ -17,7 +17,7 @@
       <pubDate>Wed, 17 Jun 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-golang/</guid>
-      <description>experimenting with Serverless Golang</description>
+      <description>learning Serverless Golang</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Thu, 16 Apr 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/goreleaser/</guid>
-      <description>experimenting with Goreleaser</description>
+      <description>learning Goreleaser</description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@
       <pubDate>Wed, 15 Jan 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/go-modules/</guid>
-      <description>experimenting with Go Modules</description>
+      <description>learning Go Modules</description>
     </item>
     
     <item>
@@ -44,7 +44,7 @@
       <pubDate>Mon, 13 Jan 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/go-sdl2/</guid>
-      <description>experimenting with Go Sdl2</description>
+      <description>learning Go Sdl2</description>
     </item>
     
     <item>
@@ -53,7 +53,7 @@
       <pubDate>Mon, 24 Jun 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/golang-debug-in-docker-with-delve/</guid>
-      <description>experimenting with Golang Debug In Docker With Delve</description>
+      <description>learning Golang Debug In Docker With Delve</description>
     </item>
     
     <item>
@@ -62,7 +62,7 @@
       <pubDate>Sat, 03 Feb 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/golang-dep/</guid>
-      <description>experimenting with Golang Dep</description>
+      <description>learning Golang Dep</description>
     </item>
     
     <item>
@@ -71,7 +71,7 @@
       <pubDate>Sun, 11 Jan 2015 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/go-postgres/</guid>
-      <description>experimenting with Go Postgres</description>
+      <description>learning Go Postgres</description>
     </item>
     
     <item>
@@ -80,7 +80,7 @@
       <pubDate>Tue, 31 Dec 2013 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/go/</guid>
-      <description>experimenting with Go</description>
+      <description>learning Go</description>
     </item>
     
   </channel>
