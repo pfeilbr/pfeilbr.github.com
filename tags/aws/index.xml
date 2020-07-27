@@ -17,7 +17,7 @@
       <pubDate>Thu, 16 Jul 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-interactive-video-service/</guid>
-      <description>learning AWS Interactive Video Service</description>
+      <description>experimenting with AWS Interactive Video Service</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Tue, 19 May 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-eventbridge/</guid>
-      <description>learning AWS Eventbridge</description>
+      <description>experimenting with AWS Eventbridge</description>
     </item>
     
     <item>
@@ -54,7 +54,7 @@
       <pubDate>Thu, 17 Oct 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-control-tower/</guid>
-      <description>learning AWS Control Tower</description>
+      <description>experimenting with AWS Control Tower</description>
     </item>
     
     <item>
@@ -63,7 +63,7 @@
       <pubDate>Mon, 14 Oct 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-serverless-application-repository/</guid>
-      <description>learning AWS Serverless Application Repository</description>
+      <description>experimenting with AWS Serverless Application Repository</description>
     </item>
     
     <item>
@@ -72,7 +72,7 @@
       <pubDate>Thu, 26 Sep 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cognito-developer-authenticated-identities/</guid>
-      <description>learning AWS Cognito Developer Authenticated Identities</description>
+      <description>experimenting with AWS Cognito Developer Authenticated Identities</description>
     </item>
     
     <item>
@@ -81,7 +81,7 @@
       <pubDate>Tue, 10 Sep 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-service-catalog/</guid>
-      <description>learning AWS Service Catalog</description>
+      <description>experimenting with AWS Service Catalog</description>
     </item>
     
     <item>
@@ -90,7 +90,7 @@
       <pubDate>Mon, 09 Sep 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-amplify-console/</guid>
-      <description>learning AWS Amplify Console</description>
+      <description>experimenting with AWS Amplify Console</description>
     </item>
     
     <item>
@@ -99,7 +99,7 @@
       <pubDate>Fri, 06 Sep 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-polly/</guid>
-      <description>learning AWS Polly</description>
+      <description>experimenting with AWS Polly</description>
     </item>
     
     <item>
@@ -108,7 +108,7 @@
       <pubDate>Tue, 03 Sep 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-delivlib/</guid>
-      <description>learning AWS Delivlib</description>
+      <description>experimenting with AWS Delivlib</description>
     </item>
     
     <item>
@@ -117,7 +117,7 @@
       <pubDate>Fri, 16 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-sam-local/</guid>
-      <description>learning AWS SAM Local</description>
+      <description>experimenting with AWS SAM Local</description>
     </item>
     
     <item>
@@ -126,7 +126,7 @@
       <pubDate>Wed, 14 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cloudformation/</guid>
-      <description>learning AWS CloudFormation</description>
+      <description>experimenting with AWS CloudFormation</description>
     </item>
     
     <item>
@@ -135,7 +135,7 @@
       <pubDate>Tue, 13 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-xray/</guid>
-      <description>learning AWS Xray</description>
+      <description>experimenting with AWS Xray</description>
     </item>
     
     <item>
@@ -144,7 +144,7 @@
       <pubDate>Tue, 30 Jul 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-transcribe/</guid>
-      <description>learning AWS Transcribe</description>
+      <description>experimenting with AWS Transcribe</description>
     </item>
     
     <item>
@@ -153,7 +153,7 @@
       <pubDate>Wed, 24 Jul 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/chrome-aws-lambda/</guid>
-      <description>learning Chrome AWS Lambda</description>
+      <description>experimenting with Chrome AWS Lambda</description>
     </item>
     
     <item>
@@ -162,7 +162,7 @@
       <pubDate>Thu, 11 Jul 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cdk/</guid>
-      <description>learning AWS CDK</description>
+      <description>experimenting with AWS CDK</description>
     </item>
     
     <item>
@@ -171,7 +171,7 @@
       <pubDate>Wed, 10 Jul 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-fargate/</guid>
-      <description>learning AWS Fargate</description>
+      <description>experimenting with AWS Fargate</description>
     </item>
     
     <item>
@@ -180,7 +180,7 @@
       <pubDate>Tue, 09 Jul 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-glue/</guid>
-      <description>learning AWS Glue</description>
+      <description>experimenting with AWS Glue</description>
     </item>
     
     <item>
@@ -189,7 +189,7 @@
       <pubDate>Mon, 08 Jul 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-rekognition/</guid>
-      <description>learning AWS Rekognition</description>
+      <description>experimenting with AWS Rekognition</description>
     </item>
     
     <item>
@@ -198,7 +198,7 @@
       <pubDate>Wed, 03 Jul 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-codebuild-local/</guid>
-      <description>learning AWS Codebuild Local</description>
+      <description>experimenting with AWS Codebuild Local</description>
     </item>
     
     <item>
@@ -207,7 +207,7 @@
       <pubDate>Tue, 08 Jan 2019 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-api-gateway-websockets-serverless/</guid>
-      <description>learning AWS API Gateway Websockets Serverless</description>
+      <description>experimenting with AWS API Gateway Websockets Serverless</description>
     </item>
     
     <item>
@@ -216,7 +216,7 @@
       <pubDate>Thu, 20 Dec 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-codepipeline/</guid>
-      <description>learning AWS Codepipeline</description>
+      <description>experimenting with AWS Codepipeline</description>
     </item>
     
     <item>
@@ -225,7 +225,7 @@
       <pubDate>Tue, 13 Nov 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-amplify-js-app/</guid>
-      <description>learning AWS Amplify Js App</description>
+      <description>experimenting with AWS Amplify Js App</description>
     </item>
     
     <item>
@@ -234,7 +234,7 @@
       <pubDate>Tue, 13 Nov 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-ecr/</guid>
-      <description>learning AWS Ecr</description>
+      <description>experimenting with AWS Ecr</description>
     </item>
     
     <item>
@@ -243,7 +243,7 @@
       <pubDate>Tue, 25 Sep 2018 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-sdk-cpp/</guid>
-      <description>learning AWS SDK Cpp</description>
+      <description>experimenting with AWS SDK Cpp</description>
     </item>
     
     <item>
@@ -252,7 +252,7 @@
       <pubDate>Sat, 09 Jun 2018 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-appsync/</guid>
-      <description>learning AWS Appsync</description>
+      <description>experimenting with AWS Appsync</description>
     </item>
     
     <item>
@@ -261,7 +261,7 @@
       <pubDate>Sat, 10 Feb 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-iot/</guid>
-      <description>learning AWS Iot</description>
+      <description>experimenting with AWS Iot</description>
     </item>
     
     <item>
@@ -270,7 +270,7 @@
       <pubDate>Thu, 08 Feb 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-iam/</guid>
-      <description>learning AWS Iam</description>
+      <description>experimenting with AWS Iam</description>
     </item>
     
     <item>
@@ -279,7 +279,7 @@
       <pubDate>Sat, 03 Feb 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-emr/</guid>
-      <description>learning AWS Emr</description>
+      <description>experimenting with AWS Emr</description>
     </item>
     
     <item>
@@ -288,7 +288,7 @@
       <pubDate>Sat, 11 Nov 2017 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-ecs/</guid>
-      <description>learning AWS Ecs</description>
+      <description>experimenting with AWS Ecs</description>
     </item>
     
     <item>
@@ -297,7 +297,7 @@
       <pubDate>Thu, 31 Aug 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-kms/</guid>
-      <description>learning AWS Kms</description>
+      <description>experimenting with AWS Kms</description>
     </item>
     
     <item>
@@ -306,7 +306,7 @@
       <pubDate>Thu, 17 Aug 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cloudfront/</guid>
-      <description>learning AWS CloudFront</description>
+      <description>experimenting with AWS CloudFront</description>
     </item>
     
     <item>
@@ -315,7 +315,7 @@
       <pubDate>Tue, 18 Jul 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-kinesis/</guid>
-      <description>learning AWS Kinesis</description>
+      <description>experimenting with AWS Kinesis</description>
     </item>
     
     <item>
@@ -324,7 +324,7 @@
       <pubDate>Sun, 21 May 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cloudwatch/</guid>
-      <description>learning AWS Cloudwatch</description>
+      <description>experimenting with AWS Cloudwatch</description>
     </item>
     
     <item>
@@ -333,7 +333,7 @@
       <pubDate>Sun, 21 May 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cognito/</guid>
-      <description>learning AWS Cognito</description>
+      <description>experimenting with AWS Cognito</description>
     </item>
     
     <item>
