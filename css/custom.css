@@ -60,7 +60,7 @@ footer .footer-link {
 
 .pager li a {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
+  text-transform: none;
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 1px;
