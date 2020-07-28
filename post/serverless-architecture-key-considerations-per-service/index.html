@@ -59,7 +59,7 @@
   "headline": "Serverless Architecture: Key Considerations per Service",
   "description" : "Key considerations and configuration options per service for a serverless architecture",
   "inLanguage" : "en",
-  "wordCount":  624 ,
+  "wordCount":  661 ,
   "datePublished" : "2020-07-20T00:00:00",
   "dateModified" : "2020-07-20T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -293,7 +293,8 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>Key considerations and configuration options per service for a serverless architecture.</p>
+        <p>A serverless architecture is &ldquo;typically&rdquo; composed of many services.  The following
+covers the key considerations and configuration options for the <em>most common</em> AWS services leveraged for serverless architectures.</p>
 <hr>
 <!-- TOC -->
 <ul>
@@ -325,7 +326,10 @@ if (!doNotTrack) {
 <h3 id="lambdahttpsawsamazoncomlambda"><a href="https://aws.amazon.com/lambda/">Lambda</a></h3>
 <ul>
 <li>
-<p>synchronous vs asynchronous vs poll based (poll based is sync)</p>
+<p>synchronous vs asynchronous vs poll based (poll based is sync) - impacts automatic retries, stuck messages due to poison message, etc.</p>
+<ul>
+<li>see <a href="https://aws.amazon.com/blogs/architecture/understanding-the-different-ways-to-invoke-lambda-functions/">Understanding the Different Ways to Invoke Lambda Functions</a></li>
+</ul>
 </li>
 <li>
 <p>memory</p>
