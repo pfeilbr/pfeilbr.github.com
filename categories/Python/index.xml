@@ -17,7 +17,7 @@
       <pubDate>Sat, 15 Feb 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/flask/</guid>
-      <description>learn Flask</description>
+      <description></description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Wed, 05 Feb 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/python-async-await/</guid>
-      <description>learning Python Async Await</description>
+      <description></description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@
       <pubDate>Wed, 07 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/pipenv/</guid>
-      <description>learning Pipenv</description>
+      <description></description>
     </item>
     
     <item>
@@ -44,7 +44,7 @@
       <pubDate>Wed, 07 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/python-packaging/</guid>
-      <description>learning Python Packaging</description>
+      <description></description>
     </item>
     
     <item>
@@ -53,7 +53,7 @@
       <pubDate>Tue, 06 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/python-tox-testing/</guid>
-      <description>learning Python Tox Testing</description>
+      <description></description>
     </item>
     
     <item>
@@ -62,7 +62,7 @@
       <pubDate>Fri, 10 Nov 2017 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-python/</guid>
-      <description>learning Serverless Python</description>
+      <description></description>
     </item>
     
     <item>
@@ -71,7 +71,7 @@
       <pubDate>Mon, 30 Oct 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/boto/</guid>
-      <description>learn Boto</description>
+      <description></description>
     </item>
     
     <item>
@@ -80,7 +80,7 @@
       <pubDate>Fri, 05 Jun 2015 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/spark/</guid>
-      <description>learning Spark</description>
+      <description></description>
     </item>
     
   </channel>
