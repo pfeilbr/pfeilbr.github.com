@@ -59,7 +59,7 @@
   "headline": "Serverless Architecture: Key Considerations per Service",
   "description" : "Key considerations and configuration options per service for a serverless architecture",
   "inLanguage" : "en",
-  "wordCount":  661 ,
+  "wordCount":  702 ,
   "datePublished" : "2020-07-20T00:00:00",
   "dateModified" : "2020-07-20T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -262,7 +262,8 @@ if (!doNotTrack) {
   
 
   
-
+  
+  
   <span class="blog-tags">
   </span>&nbsp;&bull;&nbsp;</span>
 
@@ -273,6 +274,8 @@ if (!doNotTrack) {
 <a href="https://brianpfeil.com//tags/serverless/">serverless</a>&nbsp;
 
 </span>
+
+
 
 
 
@@ -315,6 +318,7 @@ covers the key considerations and configuration options for the <em>most common<
 <!-- /TOC -->
 <hr>
 <h3 id="relevant-patterns">Relevant Patterns</h3>
+<p>common cloud native patterns to consider in the context of serverless architectures <u>of scale</u></p>
 <ul>
 <li>event sourcing</li>
 <li>circuit breaker - trip circuit to prevent downstream systems overload</li>
@@ -330,6 +334,9 @@ covers the key considerations and configuration options for the <em>most common<
 <ul>
 <li>see <a href="https://aws.amazon.com/blogs/architecture/understanding-the-different-ways-to-invoke-lambda-functions/">Understanding the Different Ways to Invoke Lambda Functions</a></li>
 </ul>
+</li>
+<li>
+<p>if lambda is strictly a glue passthrough for API Gateway to call a backend AWS service, look to use <a href="https://lumigo.io/blog/the-why-when-and-how-of-api-gateway-service-proxies/">API Gateway Service Proxies</a> to remove lambda.  simpler/cheaper/etc.</p>
 </li>
 <li>
 <p>memory</p>
