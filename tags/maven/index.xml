@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>maven on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/maven/</link>
+    <description>Recent content in maven on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Aug 2019 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/maven/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Intellij Maven App</title>
+      <link>https://brianpfeil.com/post/intellij-maven-app/</link>
+      <pubDate>Wed, 14 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/intellij-maven-app/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

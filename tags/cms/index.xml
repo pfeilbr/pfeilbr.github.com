@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cms on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/cms/</link>
+    <description>Recent content in cms on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Jul 2020 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/cms/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Strapi</title>
+      <link>https://brianpfeil.com/post/strapi/</link>
+      <pubDate>Fri, 10 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/strapi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Confluence API</title>
+      <link>https://brianpfeil.com/post/confluence-api/</link>
+      <pubDate>Tue, 04 Apr 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/confluence-api/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

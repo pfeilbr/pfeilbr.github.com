@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>streaming on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/streaming/</link>
+    <description>Recent content in streaming on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Mar 2020 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/streaming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HTTP Live Streaming HLS</title>
+      <link>https://brianpfeil.com/post/http-live-streaming-hls/</link>
+      <pubDate>Mon, 23 Mar 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/http-live-streaming-hls/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

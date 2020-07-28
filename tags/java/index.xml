@@ -20,5 +20,23 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Intellij Maven App</title>
+      <link>https://brianpfeil.com/post/intellij-maven-app/</link>
+      <pubDate>Wed, 14 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/intellij-maven-app/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gradle</title>
+      <link>https://brianpfeil.com/post/gradle/</link>
+      <pubDate>Wed, 26 Aug 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/gradle/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>c&#43;&#43; on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/c&#43;&#43;/</link>
+    <description>Recent content in c&#43;&#43; on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Jan 2020 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Googletest</title>
+      <link>https://brianpfeil.com/post/googletest/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/googletest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GLib</title>
+      <link>https://brianpfeil.com/post/glib/</link>
+      <pubDate>Mon, 11 Nov 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/glib/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vcpkg</title>
+      <link>https://brianpfeil.com/post/vcpkg/</link>
+      <pubDate>Thu, 27 Sep 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/vcpkg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS SDK CPP</title>
+      <link>https://brianpfeil.com/post/aws-sdk-cpp/</link>
+      <pubDate>Tue, 25 Sep 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-sdk-cpp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google Test CPP Test Framework</title>
+      <link>https://brianpfeil.com/post/google-test-cpp-test-framework/</link>
+      <pubDate>Tue, 25 Sep 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/google-test-cpp-test-framework/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Modern CPP</title>
+      <link>https://brianpfeil.com/post/modern-cpp/</link>
+      <pubDate>Mon, 24 Sep 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/modern-cpp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sfml Macos</title>
+      <link>https://brianpfeil.com/post/sfml-macos/</link>
+      <pubDate>Tue, 27 Feb 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/sfml-macos/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

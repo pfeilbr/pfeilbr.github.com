@@ -58,6 +58,15 @@
     </item>
     
     <item>
+      <title>Terraform</title>
+      <link>https://brianpfeil.com/post/terraform/</link>
+      <pubDate>Tue, 05 Nov 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/terraform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>AWS Control Tower</title>
       <link>https://brianpfeil.com/post/aws-control-tower/</link>
       <pubDate>Thu, 17 Oct 2019 00:00:00 -0400</pubDate>
@@ -72,6 +81,15 @@
       <pubDate>Mon, 14 Oct 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-serverless-application-repository/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stackery</title>
+      <link>https://brianpfeil.com/post/stackery/</link>
+      <pubDate>Wed, 09 Oct 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/stackery/</guid>
       <description></description>
     </item>
     
@@ -247,6 +265,15 @@
     </item>
     
     <item>
+      <title>Dynogels</title>
+      <link>https://brianpfeil.com/post/dynogels/</link>
+      <pubDate>Mon, 22 Oct 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/dynogels/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>AWS SDK CPP</title>
       <link>https://brianpfeil.com/post/aws-sdk-cpp/</link>
       <pubDate>Tue, 25 Sep 2018 00:00:00 -0400</pubDate>
@@ -261,6 +288,15 @@
       <pubDate>Sat, 09 Jun 2018 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-appsync/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Alexa Skills</title>
+      <link>https://brianpfeil.com/post/alexa-skills/</link>
+      <pubDate>Thu, 17 May 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/alexa-skills/</guid>
       <description></description>
     </item>
     
@@ -315,6 +351,15 @@
       <pubDate>Thu, 17 Aug 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cloudfront/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>S3 Website</title>
+      <link>https://brianpfeil.com/post/s3-website/</link>
+      <pubDate>Thu, 17 Aug 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/s3-website/</guid>
       <description></description>
     </item>
     

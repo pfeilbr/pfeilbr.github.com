@@ -84,6 +84,15 @@
     </item>
     
     <item>
+      <title>cms</title>
+      <link>https://brianpfeil.com/tags/cms/</link>
+      <pubDate>Fri, 10 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/cms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>eventbridge</title>
       <link>https://brianpfeil.com/tags/eventbridge/</link>
       <pubDate>Tue, 19 May 2020 00:00:00 -0400</pubDate>
@@ -93,11 +102,47 @@
     </item>
     
     <item>
+      <title>continuous-delivery</title>
+      <link>https://brianpfeil.com/tags/continuous-delivery/</link>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/continuous-delivery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://brianpfeil.com/tags/golang/</link>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>notes</title>
       <link>https://brianpfeil.com/tags/notes/</link>
       <pubDate>Sun, 29 Mar 2020 09:40:13 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>http</title>
+      <link>https://brianpfeil.com/tags/http/</link>
+      <pubDate>Mon, 23 Mar 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/http/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>streaming</title>
+      <link>https://brianpfeil.com/tags/streaming/</link>
+      <pubDate>Mon, 23 Mar 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/streaming/</guid>
       <description></description>
     </item>
     
@@ -138,6 +183,24 @@
     </item>
     
     <item>
+      <title>linux</title>
+      <link>https://brianpfeil.com/tags/linux/</link>
+      <pubDate>Sun, 09 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtualization</title>
+      <link>https://brianpfeil.com/tags/virtualization/</link>
+      <pubDate>Sun, 09 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/virtualization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>python</title>
       <link>https://brianpfeil.com/tags/python/</link>
       <pubDate>Wed, 05 Feb 2020 00:00:00 -0500</pubDate>
@@ -147,11 +210,20 @@
     </item>
     
     <item>
-      <title>go</title>
-      <link>https://brianpfeil.com/tags/go/</link>
-      <pubDate>Wed, 15 Jan 2020 00:00:00 -0500</pubDate>
+      <title>css</title>
+      <link>https://brianpfeil.com/tags/css/</link>
+      <pubDate>Thu, 16 Jan 2020 00:00:00 -0500</pubDate>
       
-      <guid>https://brianpfeil.com/tags/go/</guid>
+      <guid>https://brianpfeil.com/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>framework</title>
+      <link>https://brianpfeil.com/tags/framework/</link>
+      <pubDate>Thu, 16 Jan 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/framework/</guid>
       <description></description>
     </item>
     
@@ -161,6 +233,42 @@
       <pubDate>Mon, 13 Jan 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/tags/make/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>c&#43;&#43;</title>
+      <link>https://brianpfeil.com/tags/c&#43;&#43;/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>testing</title>
+      <link>https://brianpfeil.com/tags/testing/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>graphics</title>
+      <link>https://brianpfeil.com/tags/graphics/</link>
+      <pubDate>Mon, 11 Nov 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/graphics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>infrastructure-as-code</title>
+      <link>https://brianpfeil.com/tags/infrastructure-as-code/</link>
+      <pubDate>Tue, 05 Nov 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/infrastructure-as-code/</guid>
       <description></description>
     </item>
     
@@ -237,11 +345,38 @@
     </item>
     
     <item>
+      <title>distributed-tracing</title>
+      <link>https://brianpfeil.com/tags/distributed-tracing/</link>
+      <pubDate>Wed, 21 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/distributed-tracing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>observability</title>
+      <link>https://brianpfeil.com/tags/observability/</link>
+      <pubDate>Wed, 21 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/observability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>sam</title>
       <link>https://brianpfeil.com/tags/sam/</link>
       <pubDate>Fri, 16 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/sam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>build-tools</title>
+      <link>https://brianpfeil.com/tags/build-tools/</link>
+      <pubDate>Wed, 14 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/build-tools/</guid>
       <description></description>
     </item>
     
@@ -255,11 +390,29 @@
     </item>
     
     <item>
+      <title>maven</title>
+      <link>https://brianpfeil.com/tags/maven/</link>
+      <pubDate>Wed, 14 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/maven/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>xray</title>
       <link>https://brianpfeil.com/tags/xray/</link>
       <pubDate>Tue, 13 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/xray/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>packaging</title>
+      <link>https://brianpfeil.com/tags/packaging/</link>
+      <pubDate>Wed, 07 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/packaging/</guid>
       <description></description>
     </item>
     
@@ -278,6 +431,24 @@
       <pubDate>Wed, 24 Jul 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/chrome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nodejs</title>
+      <link>https://brianpfeil.com/tags/nodejs/</link>
+      <pubDate>Mon, 22 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/nodejs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>youtube</title>
+      <link>https://brianpfeil.com/tags/youtube/</link>
+      <pubDate>Mon, 22 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/youtube/</guid>
       <description></description>
     </item>
     
@@ -345,20 +516,11 @@
     </item>
     
     <item>
-      <title>nodejs</title>
-      <link>https://brianpfeil.com/tags/nodejs/</link>
-      <pubDate>Wed, 15 May 2019 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/nodejs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>js</title>
-      <link>https://brianpfeil.com/tags/js/</link>
+      <title>javascript</title>
+      <link>https://brianpfeil.com/tags/javascript/</link>
       <pubDate>Mon, 13 May 2019 00:00:00 -0400</pubDate>
       
-      <guid>https://brianpfeil.com/tags/js/</guid>
+      <guid>https://brianpfeil.com/tags/javascript/</guid>
       <description></description>
     </item>
     
@@ -408,6 +570,42 @@
     </item>
     
     <item>
+      <title>paas</title>
+      <link>https://brianpfeil.com/tags/paas/</link>
+      <pubDate>Thu, 31 Jan 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/paas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tools</title>
+      <link>https://brianpfeil.com/tags/tools/</link>
+      <pubDate>Tue, 29 Jan 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ui</title>
+      <link>https://brianpfeil.com/tags/ui/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/ui/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ui-components</title>
+      <link>https://brianpfeil.com/tags/ui-components/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/ui-components/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>jupyter</title>
       <link>https://brianpfeil.com/tags/jupyter/</link>
       <pubDate>Sat, 19 Jan 2019 00:00:00 -0500</pubDate>
@@ -435,11 +633,47 @@
     </item>
     
     <item>
+      <title>devops</title>
+      <link>https://brianpfeil.com/tags/devops/</link>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>api</title>
+      <link>https://brianpfeil.com/tags/api/</link>
+      <pubDate>Mon, 19 Nov 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>twitter</title>
+      <link>https://brianpfeil.com/tags/twitter/</link>
+      <pubDate>Mon, 19 Nov 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/twitter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>ecr</title>
       <link>https://brianpfeil.com/tags/ecr/</link>
       <pubDate>Tue, 13 Nov 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/tags/ecr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dynamodb</title>
+      <link>https://brianpfeil.com/tags/dynamodb/</link>
+      <pubDate>Mon, 22 Oct 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/dynamodb/</guid>
       <description></description>
     </item>
     
@@ -462,11 +696,11 @@
     </item>
     
     <item>
-      <title>cpp</title>
-      <link>https://brianpfeil.com/tags/cpp/</link>
-      <pubDate>Tue, 25 Sep 2018 00:00:00 -0400</pubDate>
+      <title>package-manager</title>
+      <link>https://brianpfeil.com/tags/package-manager/</link>
+      <pubDate>Thu, 27 Sep 2018 00:00:00 -0400</pubDate>
       
-      <guid>https://brianpfeil.com/tags/cpp/</guid>
+      <guid>https://brianpfeil.com/tags/package-manager/</guid>
       <description></description>
     </item>
     
@@ -498,6 +732,15 @@
     </item>
     
     <item>
+      <title>npm</title>
+      <link>https://brianpfeil.com/tags/npm/</link>
+      <pubDate>Sun, 02 Sep 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/npm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>vuejs</title>
       <link>https://brianpfeil.com/tags/vuejs/</link>
       <pubDate>Sat, 01 Sep 2018 00:00:00 -0400</pubDate>
@@ -516,6 +759,24 @@
     </item>
     
     <item>
+      <title>c</title>
+      <link>https://brianpfeil.com/tags/c/</link>
+      <pubDate>Tue, 24 Jul 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lua</title>
+      <link>https://brianpfeil.com/tags/lua/</link>
+      <pubDate>Tue, 24 Jul 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/lua/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>json</title>
       <link>https://brianpfeil.com/tags/json/</link>
       <pubDate>Wed, 06 Jun 2018 00:00:00 -0400</pubDate>
@@ -525,11 +786,29 @@
     </item>
     
     <item>
+      <title>alexa</title>
+      <link>https://brianpfeil.com/tags/alexa/</link>
+      <pubDate>Thu, 17 May 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/alexa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>graphql</title>
       <link>https://brianpfeil.com/tags/graphql/</link>
       <pubDate>Mon, 30 Apr 2018 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/graphql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>macos</title>
+      <link>https://brianpfeil.com/tags/macos/</link>
+      <pubDate>Tue, 27 Feb 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/macos/</guid>
       <description></description>
     </item>
     
@@ -557,6 +836,15 @@
       <pubDate>Sat, 03 Feb 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/tags/emr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machine-learning</title>
+      <link>https://brianpfeil.com/tags/machine-learning/</link>
+      <pubDate>Wed, 31 Jan 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/machine-learning/</guid>
       <description></description>
     </item>
     
@@ -597,11 +885,56 @@
     </item>
     
     <item>
+      <title>real-time</title>
+      <link>https://brianpfeil.com/tags/real-time/</link>
+      <pubDate>Sat, 21 Oct 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/real-time/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>kms</title>
       <link>https://brianpfeil.com/tags/kms/</link>
       <pubDate>Thu, 31 Aug 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/kms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>music</title>
+      <link>https://brianpfeil.com/tags/music/</link>
+      <pubDate>Sat, 26 Aug 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>browser</title>
+      <link>https://brianpfeil.com/tags/browser/</link>
+      <pubDate>Tue, 22 Aug 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/browser/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>s3</title>
+      <link>https://brianpfeil.com/tags/s3/</link>
+      <pubDate>Thu, 17 Aug 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/s3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>static-site</title>
+      <link>https://brianpfeil.com/tags/static-site/</link>
+      <pubDate>Thu, 17 Aug 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/static-site/</guid>
       <description></description>
     </item>
     
@@ -624,11 +957,20 @@
     </item>
     
     <item>
-      <title>lua</title>
-      <link>https://brianpfeil.com/tags/lua/</link>
-      <pubDate>Tue, 10 Jan 2017 00:00:00 -0500</pubDate>
+      <title>blockchain</title>
+      <link>https://brianpfeil.com/tags/blockchain/</link>
+      <pubDate>Tue, 17 Jan 2017 00:00:00 -0500</pubDate>
       
-      <guid>https://brianpfeil.com/tags/lua/</guid>
+      <guid>https://brianpfeil.com/tags/blockchain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cryptocurrency</title>
+      <link>https://brianpfeil.com/tags/cryptocurrency/</link>
+      <pubDate>Tue, 17 Jan 2017 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/cryptocurrency/</guid>
       <description></description>
     </item>
     
@@ -642,6 +984,51 @@
     </item>
     
     <item>
+      <title>game</title>
+      <link>https://brianpfeil.com/tags/game/</link>
+      <pubDate>Tue, 02 Aug 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/game/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web-assembly</title>
+      <link>https://brianpfeil.com/tags/web-assembly/</link>
+      <pubDate>Thu, 02 Jun 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/web-assembly/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>documentation</title>
+      <link>https://brianpfeil.com/tags/documentation/</link>
+      <pubDate>Fri, 20 May 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/documentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ios</title>
+      <link>https://brianpfeil.com/tags/ios/</link>
+      <pubDate>Fri, 20 May 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/ios/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mobile</title>
+      <link>https://brianpfeil.com/tags/mobile/</link>
+      <pubDate>Fri, 20 May 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/mobile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>angular</title>
       <link>https://brianpfeil.com/tags/angular/</link>
       <pubDate>Mon, 09 May 2016 00:00:00 -0400</pubDate>
@@ -651,20 +1038,29 @@
     </item>
     
     <item>
+      <title>distribution</title>
+      <link>https://brianpfeil.com/tags/distribution/</link>
+      <pubDate>Tue, 05 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/distribution/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>odata</title>
+      <link>https://brianpfeil.com/tags/odata/</link>
+      <pubDate>Fri, 18 Mar 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/odata/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>atom</title>
       <link>https://brianpfeil.com/tags/atom/</link>
       <pubDate>Wed, 02 Dec 2015 13:54:15 +0000</pubDate>
       
       <guid>https://brianpfeil.com/tags/atom/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>golang</title>
-      <link>https://brianpfeil.com/tags/golang/</link>
-      <pubDate>Wed, 02 Dec 2015 13:54:15 +0000</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/golang/</guid>
       <description></description>
     </item>
     
@@ -687,6 +1083,42 @@
     </item>
     
     <item>
+      <title>gem</title>
+      <link>https://brianpfeil.com/tags/gem/</link>
+      <pubDate>Wed, 09 Sep 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/gem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ruby</title>
+      <link>https://brianpfeil.com/tags/ruby/</link>
+      <pubDate>Wed, 09 Sep 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>build-tool</title>
+      <link>https://brianpfeil.com/tags/build-tool/</link>
+      <pubDate>Wed, 26 Aug 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/build-tool/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>automation</title>
+      <link>https://brianpfeil.com/tags/automation/</link>
+      <pubDate>Thu, 20 Aug 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>spark</title>
       <link>https://brianpfeil.com/tags/spark/</link>
       <pubDate>Fri, 05 Jun 2015 00:00:00 -0400</pubDate>
@@ -705,20 +1137,11 @@
     </item>
     
     <item>
-      <title>ios</title>
-      <link>https://brianpfeil.com/tags/ios/</link>
-      <pubDate>Fri, 27 Mar 2015 16:36:59 +0000</pubDate>
+      <title>bundler</title>
+      <link>https://brianpfeil.com/tags/bundler/</link>
+      <pubDate>Fri, 03 Apr 2015 00:00:00 -0400</pubDate>
       
-      <guid>https://brianpfeil.com/tags/ios/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>javascript</title>
-      <link>https://brianpfeil.com/tags/javascript/</link>
-      <pubDate>Fri, 27 Mar 2015 16:36:59 +0000</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/javascript/</guid>
+      <guid>https://brianpfeil.com/tags/bundler/</guid>
       <description></description>
     </item>
     
@@ -777,11 +1200,47 @@
     </item>
     
     <item>
+      <title>cross-platform</title>
+      <link>https://brianpfeil.com/tags/cross-platform/</link>
+      <pubDate>Sun, 15 Feb 2015 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/cross-platform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>postgres</title>
       <link>https://brianpfeil.com/tags/postgres/</link>
       <pubDate>Sun, 11 Jan 2015 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/tags/postgres/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>email</title>
+      <link>https://brianpfeil.com/tags/email/</link>
+      <pubDate>Sat, 06 Dec 2014 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/email/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gmail</title>
+      <link>https://brianpfeil.com/tags/gmail/</link>
+      <pubDate>Sat, 06 Dec 2014 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/gmail/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>queue</title>
+      <link>https://brianpfeil.com/tags/queue/</link>
+      <pubDate>Fri, 13 Jun 2014 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/queue/</guid>
       <description></description>
     </item>
     
@@ -809,15 +1268,6 @@
       <pubDate>Sun, 16 Sep 2012 02:43:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/tags/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ruby</title>
-      <link>https://brianpfeil.com/tags/ruby/</link>
-      <pubDate>Fri, 11 May 2012 01:34:00 +0000</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/ruby/</guid>
       <description></description>
     </item>
     
@@ -890,15 +1340,6 @@
       <pubDate>Sun, 11 Sep 2011 00:58:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/tags/jquery/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>mobile</title>
-      <link>https://brianpfeil.com/tags/mobile/</link>
-      <pubDate>Sun, 11 Sep 2011 00:58:00 +0000</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/mobile/</guid>
       <description></description>
     </item>
     

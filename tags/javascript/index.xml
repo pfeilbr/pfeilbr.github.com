@@ -6,10 +6,109 @@
     <description>Recent content in javascript on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Mar 2015 16:36:59 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 May 2019 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Azure JS Cognitive Services</title>
+      <link>https://brianpfeil.com/post/azure-js-cognitive-services/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-js-cognitive-services/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure Cosmos JS SDK</title>
+      <link>https://brianpfeil.com/post/azure-cosmos-js-sdk/</link>
+      <pubDate>Wed, 08 May 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/azure-cosmos-js-sdk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS Amplify JS App</title>
+      <link>https://brianpfeil.com/post/aws-amplify-js-app/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-amplify-js-app/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dynogels</title>
+      <link>https://brianpfeil.com/post/dynogels/</link>
+      <pubDate>Mon, 22 Oct 2018 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/dynogels/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pusher</title>
+      <link>https://brianpfeil.com/post/pusher/</link>
+      <pubDate>Sat, 21 Oct 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/pusher/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Confluence API</title>
+      <link>https://brianpfeil.com/post/confluence-api/</link>
+      <pubDate>Tue, 04 Apr 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/confluence-api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NextJS</title>
+      <link>https://brianpfeil.com/post/nextjs/</link>
+      <pubDate>Tue, 01 Nov 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/nextjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KeystoneJS</title>
+      <link>https://brianpfeil.com/post/keystonejs/</link>
+      <pubDate>Thu, 20 Oct 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/keystonejs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Phaser</title>
+      <link>https://brianpfeil.com/post/phaser/</link>
+      <pubDate>Tue, 02 Aug 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/phaser/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webpack</title>
+      <link>https://brianpfeil.com/post/webpack/</link>
+      <pubDate>Fri, 03 Apr 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/webpack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ES6</title>
+      <link>https://brianpfeil.com/post/es6/</link>
+      <pubDate>Mon, 30 Mar 2015 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/es6/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>React Native - Initial Thoughts</title>
@@ -27,6 +126,42 @@
       
       <guid>https://brianpfeil.com/post/cross-platform-desktop-apps-with-nw-js/</guid>
       <description>use the power and ease of NodeJS to create cross-platform desktop apps</description>
+    </item>
+    
+    <item>
+      <title>Karma</title>
+      <link>https://brianpfeil.com/post/karma/</link>
+      <pubDate>Sun, 15 Feb 2015 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/karma/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kendo UI</title>
+      <link>https://brianpfeil.com/post/kendo-ui/</link>
+      <pubDate>Sat, 02 Aug 2014 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/kendo-ui/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kue</title>
+      <link>https://brianpfeil.com/post/kue/</link>
+      <pubDate>Fri, 13 Jun 2014 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/kue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JSForce</title>
+      <link>https://brianpfeil.com/post/jsforce/</link>
+      <pubDate>Thu, 12 Jun 2014 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/jsforce/</guid>
+      <description></description>
     </item>
     
     <item>

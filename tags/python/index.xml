@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Pipenv</title>
+      <link>https://brianpfeil.com/post/pipenv/</link>
+      <pubDate>Wed, 07 Aug 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/pipenv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Python Packaging</title>
       <link>https://brianpfeil.com/post/python-packaging/</link>
       <pubDate>Wed, 07 Aug 2019 00:00:00 -0400</pubDate>
@@ -48,6 +57,15 @@
     </item>
     
     <item>
+      <title>Imagenet</title>
+      <link>https://brianpfeil.com/post/imagenet/</link>
+      <pubDate>Wed, 31 Jan 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/imagenet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>OpenCV Python</title>
       <link>https://brianpfeil.com/post/opencv-python/</link>
       <pubDate>Wed, 31 Jan 2018 00:00:00 -0500</pubDate>
@@ -62,6 +80,15 @@
       <pubDate>Fri, 10 Nov 2017 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deep and Machine Learning</title>
+      <link>https://brianpfeil.com/post/deep-and-machine-learning/</link>
+      <pubDate>Sun, 24 Sep 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/deep-and-machine-learning/</guid>
       <description></description>
     </item>
     
