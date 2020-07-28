@@ -6,10 +6,19 @@
     <description>Recent content in javascript on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 May 2019 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Strapi</title>
+      <link>https://brianpfeil.com/post/strapi/</link>
+      <pubDate>Fri, 10 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/strapi/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Azure JS Cognitive Services</title>

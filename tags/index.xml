@@ -93,6 +93,15 @@
     </item>
     
     <item>
+      <title>javascript</title>
+      <link>https://brianpfeil.com/tags/javascript/</link>
+      <pubDate>Fri, 10 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>eventbridge</title>
       <link>https://brianpfeil.com/tags/eventbridge/</link>
       <pubDate>Tue, 19 May 2020 00:00:00 -0400</pubDate>
@@ -237,11 +246,11 @@
     </item>
     
     <item>
-      <title>c&#43;&#43;</title>
-      <link>https://brianpfeil.com/tags/c&#43;&#43;/</link>
+      <title>cpp</title>
+      <link>https://brianpfeil.com/tags/cpp/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 -0500</pubDate>
       
-      <guid>https://brianpfeil.com/tags/c&#43;&#43;/</guid>
+      <guid>https://brianpfeil.com/tags/cpp/</guid>
       <description></description>
     </item>
     
@@ -512,15 +521,6 @@
       <pubDate>Sat, 18 May 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>javascript</title>
-      <link>https://brianpfeil.com/tags/javascript/</link>
-      <pubDate>Mon, 13 May 2019 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/javascript/</guid>
       <description></description>
     </item>
     

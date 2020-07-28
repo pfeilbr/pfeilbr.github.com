@@ -93,7 +93,7 @@
     </item>
     
     <item>
-      <title>AWS Eventbridge</title>
+      <title>AWS EventBridge</title>
       <link>https://brianpfeil.com/post/aws-eventbridge/</link>
       <pubDate>Tue, 19 May 2020 00:00:00 -0400</pubDate>
       
@@ -958,7 +958,7 @@
     </item>
     
     <item>
-      <title>Sfml Macos</title>
+      <title>SFML MacOS</title>
       <link>https://brianpfeil.com/post/sfml-macos/</link>
       <pubDate>Tue, 27 Feb 2018 00:00:00 -0500</pubDate>
       
@@ -1593,9 +1593,9 @@
       <pubDate>Wed, 14 Jan 2015 21:37:08 +0000</pubDate>
       
       <guid>https://brianpfeil.com/about/</guid>
-      <description>Hi, I&amp;rsquo;m Brian Pfeil. I&amp;rsquo;m a developer passionate about technology, and building things. This is my personal blog where I sometimes write about those and other interests.
-I currently work at a Pharmaceutical company as a solutions architect.
-I can be found elsewhere at github, stackoverflow, and twitter.</description>
+      <description>Hi, I&amp;rsquo;m Brian Pfeil. I&amp;rsquo;m passionate about technology, and building things. This is my personal blog where I sometimes write about those and other interests.
+I currently work at a Pharmaceutical company as a Solutions Architect.
+I can be found elsewhere at twitter, github, and stackoverflow.</description>
     </item>
     
     <item>
