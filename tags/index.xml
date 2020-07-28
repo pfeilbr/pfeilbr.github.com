@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,27 @@
     <item>
       <title>architecture</title>
       <link>https://brianpfeil.com/tags/architecture/</link>
-      <pubDate>Sat, 18 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/tags/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aws</title>
+      <link>https://brianpfeil.com/tags/aws/</link>
+      <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>serverless</title>
+      <link>https://brianpfeil.com/tags/serverless/</link>
+      <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/serverless/</guid>
       <description></description>
     </item>
     
@@ -48,15 +66,6 @@
     </item>
     
     <item>
-      <title>aws</title>
-      <link>https://brianpfeil.com/tags/aws/</link>
-      <pubDate>Thu, 16 Jul 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/aws/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>heroku</title>
       <link>https://brianpfeil.com/tags/heroku/</link>
       <pubDate>Mon, 13 Jul 2020 00:00:00 -0400</pubDate>
@@ -80,15 +89,6 @@
       <pubDate>Mon, 13 Jul 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/php/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>serverless</title>
-      <link>https://brianpfeil.com/tags/serverless/</link>
-      <pubDate>Wed, 17 Jun 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/serverless/</guid>
       <description></description>
     </item>
     

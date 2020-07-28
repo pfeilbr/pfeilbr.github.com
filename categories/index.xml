@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,27 @@
     <item>
       <title>architecture</title>
       <link>https://brianpfeil.com/categories/architecture/</link>
-      <pubDate>Sat, 18 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/categories/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aws</title>
+      <link>https://brianpfeil.com/categories/aws/</link>
+      <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>serverless</title>
+      <link>https://brianpfeil.com/categories/serverless/</link>
+      <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/serverless/</guid>
       <description></description>
     </item>
     
@@ -80,15 +98,6 @@
       <pubDate>Wed, 17 Jun 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/categories/Go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>aws</title>
-      <link>https://brianpfeil.com/categories/aws/</link>
-      <pubDate>Sun, 29 Mar 2020 09:40:13 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/aws/</guid>
       <description></description>
     </item>
     

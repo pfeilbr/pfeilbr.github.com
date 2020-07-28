@@ -6,10 +6,19 @@
     <description>Recent content in aws on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Mar 2020 09:40:13 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/categories/aws/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Serverless Architecture: Key Considerations per Service</title>
+      <link>https://brianpfeil.com/post/serverless-architecture-key-considerations-per-service/</link>
+      <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/serverless-architecture-key-considerations-per-service/</guid>
+      <description>Key considerations and configuration options per service for a serverless architecture</description>
+    </item>
     
     <item>
       <title>AWS Services</title>

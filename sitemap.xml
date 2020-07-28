@@ -13,12 +13,47 @@
   </url>
   
   <url>
+    <loc>https://brianpfeil.com/tags/aws/</loc>
+    <lastmod>2020-07-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/aws/</loc>
+    <lastmod>2020-07-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://brianpfeil.com/</loc>
     <lastmod>2020-07-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://brianpfeil.com/categories/</loc>
+    <lastmod>2020-07-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/</loc>
+    <lastmod>2020-07-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/serverless/</loc>
+    <lastmod>2020-07-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/serverless/</loc>
+    <lastmod>2020-07-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/serverless-architecture-key-considerations-per-service/</loc>
+    <lastmod>2020-07-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/</loc>
     <lastmod>2020-07-28T00:00:00+00:00</lastmod>
   </url>
   
@@ -34,16 +69,6 @@
   
   <url>
     <loc>https://brianpfeil.com/post/cloud-native-software-architecture/</loc>
-    <lastmod>2020-07-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/post/</loc>
-    <lastmod>2020-07-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/</loc>
     <lastmod>2020-07-28T00:00:00+00:00</lastmod>
   </url>
   
@@ -70,11 +95,6 @@
   <url>
     <loc>https://brianpfeil.com/categories/playground/</loc>
     <lastmod>2020-07-17T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/aws/</loc>
-    <lastmod>2020-07-16T00:00:00-04:00</lastmod>
   </url>
   
   <url>
@@ -138,11 +158,6 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/tags/serverless/</loc>
-    <lastmod>2020-06-17T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/post/serverless-golang/</loc>
     <lastmod>2020-06-17T00:00:00-04:00</lastmod>
   </url>
@@ -160,11 +175,6 @@
   <url>
     <loc>https://brianpfeil.com/post/goreleaser/</loc>
     <lastmod>2020-04-16T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/aws/</loc>
-    <lastmod>2020-03-29T09:40:13-04:00</lastmod>
   </url>
   
   <url>
