@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Cloud Native Software Architecture - Brian Pfeil</title>
+  <meta name="description" content="A cheatsheet/reference for cloud native software architecture">
+  <meta name="author" content="Brian Pfeil"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Brian Pfeil",
+    
+    "url": "https:\/\/brianpfeil.com\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/brianpfeil.com\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/brianpfeil.com\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/brianpfeil.com\/post\/cloud-native-software-architecture\/",
+          "name": "Cloud native software architecture"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Brian Pfeil"
+  },
+  "headline": "Cloud Native Software Architecture",
+  "description" : "A cheatsheet\/reference for cloud native software architecture",
+  "inLanguage" : "en",
+  "wordCount":  779 ,
+  "datePublished" : "2020-07-28T00:00:00",
+  "dateModified" : "2020-07-28T00:00:00",
+  "image" : "https:\/\/brianpfeil.com\/",
+  "keywords" : [ "architecture, cloud" ],
+  "mainEntityOfPage" : "https:\/\/brianpfeil.com\/post\/cloud-native-software-architecture\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/brianpfeil.com\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/brianpfeil.com\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Cloud Native Software Architecture" />
+<meta property="og:description" content="A cheatsheet/reference for cloud native software architecture">
+<meta property="og:url" content="https://brianpfeil.com/post/cloud-native-software-architecture/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Brian Pfeil" />
+
+  <meta name="twitter:title" content="Cloud Native Software Architecture" />
+  <meta name="twitter:description" content="A cheatsheet/reference for cloud native software architecture">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@pfeilbr" />
+  <meta name="twitter:creator" content="@pfeilbr" />
+  <meta name="generator" content="Hugo 0.74.3" />
+  <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://brianpfeil.com/css/highlight.min.css" /><link rel="stylesheet" href="https://brianpfeil.com/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+<link rel="stylesheet" href="https://brianpfeil.com/css/custom.css" />
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-610553-4', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://brianpfeil.com/">Brian Pfeil</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+        
+        <li>
+          <a title="about" href="/about/">about</a>
+        </li>
+        
+        
+        
+        <li>
+          <a title="posts" href="/">posts</a>
+        </li>
+        
+        
+        
+        <li>
+          <a title="projects" href="/projects/">projects</a>
+        </li>
+        
+        
+        
+        <li>
+          <a title="tags" href="/tags/">tags</a>
+        </li>
+        
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header-section ">
+  
+  <div class="intro-header no-img">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div class="post-heading">
+            
+
+            
+            <h1>Cloud Native Software Architecture</h1>
+
+
+            
+            
+            
+            
+            <span class="post-meta">
+  
+  
+
+    July 28, 2020
+
+  
+  
+  
+  
+
+  
+
+  <span class="blog-tags">
+  </span>&nbsp;&bull;&nbsp;</span>
+
+<a href="https://brianpfeil.com//tags/architecture/">architecture</a>&nbsp;
+
+<a href="https://brianpfeil.com//tags/cloud/">cloud</a>&nbsp;
+
+</span>
+
+
+
+
+
+</span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+    
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>A cheatsheet/reference for cloud native software architecture.</p>
+<p><strong>architecture</strong></p>
+<blockquote>
+<p>how the components are assembled and organized. This will be done in a way that meets the quality attributes.</p>
+</blockquote>
+<hr>
+<!-- TOC -->
+<ul>
+<li><a href="#key-questions">Key Questions</a></li>
+<li><a href="#organization-considerations">Organization Considerations</a></li>
+<li><a href="#quality-attributes-ities-and-friends">Quality Attributes <em>(*ities and friends)</em></a></li>
+<li><a href="#patterns">Patterns</a>
+<ul>
+<li><a href="#event-sourcing">event-sourcing</a>
+<ul>
+<li><a href="#core-design-decisions">Core Design Decisions</a></li>
+<li><a href="#resources">Resources</a></li>
+</ul>
+</li>
+<li><a href="#hexagonal">Hexagonal</a>
+<ul>
+<li><a href="#resources-1">Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#topics--concepts--terms">Topics / Concepts / Terms</a>
+<ul>
+<li><a href="#database">Database</a></li>
+<li><a href="#shuffle-sharding">Shuffle Sharding</a></li>
+<li><a href="#constant-work">Constant Work</a></li>
+<li><a href="#canary">Canary</a></li>
+</ul>
+</li>
+<li><a href="#resources-2">Resources</a>
+<ul>
+<li><a href="#books-oreillycom">Books (<em>oreilly.com</em>)</a></li>
+<li><a href="#websites">Websites</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<hr>
+<h2 id="key-questions">Key Questions</h2>
+<ul>
+<li>who are the users?</li>
+<li>what devices and form factors will be used?</li>
+<li>what is the context of their usage?</li>
+<li>scale and growth?</li>
+<li>who are the main actors in the system (domain objects - e.g. orders, products, etc.)?</li>
+<li>data classifications (PII)?</li>
+<li>data types and sizes (relation records, documents, media files, etc.)?</li>
+<li>what is the time frame for delivery?</li>
+<li>is there an existing product / SaaS / open-source / etc. that provides the solution or a portion / components of it</li>
+<li>capacity estimation &amp; constraints?</li>
+<li>functional requirements?</li>
+<li>Non Functional Requirements - Latency, Consistency, Availability, High Throughput, etc.</li>
+<li>what is explicitly <strong>out of scope</strong></li>
+<li>organization and teams structure</li>
+</ul>
+<blockquote>
+<p>see <a href="https://medium.com/partha-pratim-sanyal/system-design-doordash-a-prepared-food-delivery-service-bf44093388e2">System Design: DoorDash — a prepared food delivery service</a> for good reference</p>
+</blockquote>
+<hr>
+<h2 id="organization-considerations">Organization Considerations</h2>
+<ul>
+<li>engineering (application &amp; platform)</li>
+<li>operations (application &amp; platform)</li>
+</ul>
+<hr>
+<h2 id="quality-attributes-ities-and-friends">Quality Attributes <em>(*ities and friends)</em></h2>
+<ul>
+<li>reliability - ability to continue to operate under predefined conditions</li>
+<li>availability - ratio of the available system time to the total working time</li>
+<li>scalability - ability of the system to handle load increases without decreasing performance</li>
+<li>efficiency</li>
+<li>performance</li>
+<li>security</li>
+<li>cost</li>
+<li>interoperability</li>
+<li>correctness</li>
+<li>maintainability</li>
+<li>readability</li>
+<li>extensibility</li>
+<li>testability</li>
+</ul>
+<h2 id="patterns">Patterns</h2>
+<p>modern cloud native architecture patterns <em>as of July 2020</em></p>
+<hr>
+<h3 id="event-sourcing">event-sourcing</h3>
+<blockquote>
+<p>Capture all changes to an application state as a sequence of events.</p>
+</blockquote>
+<h4 id="core-design-decisions">Core Design Decisions</h4>
+<ul>
+<li>Domain Entities and Events
+<ul>
+<li>popular method is via <a href="https://en.wikipedia.org/wiki/Event_storming">Event Storming</a></li>
+</ul>
+</li>
+<li>Event Content
+<ul>
+<li>each event stores delta state</li>
+<li>each event stores full state
+<ul>
+<li>idempotent is easy to solve for duplicate events</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Total Ordering (ordered stream of events - ledger)
+<ul>
+<li>ensure all event are processed in order.  this is needed for causal relationships.</li>
+<li>e.g. ordering matters for two messages related to the same entity</li>
+</ul>
+</li>
+</ul>
+<h4 id="resources">Resources</h4>
+<ul>
+<li><a href="https://netflixtechblog.com/scaling-event-sourcing-for-netflix-downloads-episode-1-6bc1595c5595">Scaling Event Sourcing for Netflix Downloads, Episode 1</a></li>
+<li><a href="https://netflixtechblog.com/scaling-event-sourcing-for-netflix-downloads-episode-2-ce1b54d46eec">Scaling Event Sourcing for Netflix Downloads, Episode 2</a></li>
+<li><a href="https://www.infoq.com/presentations/netflix-scale-event-sourcing">InfoQ | Scaling Event Sourcing for Netflix Downloads | Video + Presentation</a> - shows in detail how they implemented event sourcing backed by cassandra</li>
+<li><a href="https://martinfowler.com/eaaDev/EventSourcing.html">matrinfowler.com | Event Sourcing</a></li>
+<li><a href="https://microservices.io/patterns/data/event-sourcing.html">Pattern: Event sourcing</a></li>
+<li><a href="https://medium.com/serverless-transformation/eventbridge-storming-how-to-build-state-of-the-art-event-driven-serverless-architectures-e07270d4dee">EventBridge Storming — How to build state-of-the-art Event-Driven Serverless Architectures</a> - approach to defining the Events, Boundaries and Entities in your business domain</li>
+<li><a href="https://medium.com/capital-one-tech/event-storming-decomposing-the-monolith-to-kick-start-your-microservice-architecture-acb8695a6e61">Decomposing the Monolith with Event Storming</a></li>
+</ul>
+<hr>
+<h3 id="hexagonal">Hexagonal</h3>
+<p>the ports and adapters architecture.  decouples core domain logic from specific storage, database, protocol, etc.</p>
+<h4 id="resources-1">Resources</h4>
+<ul>
+<li><a href="https://blog.octo.com/en/hexagonal-architecture-three-principles-and-an-implementation-example/">Hexagonal Architecture: three principles and an implementation example</a></li>
+</ul>
+<hr>
+<h2 id="topics--concepts--terms">Topics / Concepts / Terms</h2>
+<h3 id="database">Database</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/CAP_theorem">CAP theorem</a>
+<ul>
+<li>Consistency: Every read receives the most recent write or an error</li>
+<li>Availability: Every request receives a (non-error) response, without the guarantee that it contains the most recent write</li>
+<li>Partition tolerance: The system continues to operate despite an arbitrary number of messages being dropped (or delayed) by the network between nodes</li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Serializability">Serializability</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Snapshot_isolation">Snapshot isolation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Multiversion_concurrency_control">Multiversion concurrency control</a></li>
+<li><a href="https://medium.com/@rakyll/things-i-wished-more-developers-knew-about-databases-2d0178464f78">Things I Wished More Developers Knew About Databases</a></li>
+</ul>
+<hr>
+<h3 id="shuffle-sharding">Shuffle Sharding</h3>
+<p>limits / isolates tenants in a multi-tenant system so they don&rsquo;t negatively impact other tenants.  method of assigning tenant to resources.</p>
+<p><strong>Resources</strong></p>
+<ul>
+<li><a href="https://aws.amazon.com/builders-library/workload-isolation-using-shuffle-sharding/?did=ba_card&amp;trk=ba_card">Workload isolation using shuffle-sharding</a></li>
+</ul>
+<h3 id="constant-work">Constant Work</h3>
+<ul>
+<li>overprovision resources to the point where it would operate correctly even if an availability zone were to be unavailable</li>
+<li>if AZ becomes unavailable, no new resources need to be provisioned, just a quick re-routing.  you are essentially always operating the infrastructure for failure mode (active-active)</li>
+</ul>
+<p><strong>Resources</strong></p>
+<ul>
+<li><a href="https://aws.amazon.com/builders-library/static-stability-using-availability-zones">Static stability using Availability Zones</a></li>
+</ul>
+<hr>
+<h3 id="canary">Canary</h3>
+<blockquote>
+<p>A canary release is a technique to reduce the risk from deploying a new version of software into production. A new version of software, referred to as the canary, is deployed to a small subset of users alongside the stable running version. Traffic is split between these two versions such that a portion of incoming requests are diverted to the canary. This approach can quickly uncover any problems with the new version without impacting the majority of users.</p>
+</blockquote>
+<p><strong>Resources</strong></p>
+<ul>
+<li><a href="https://netflixtechblog.com/automated-canary-analysis-at-netflix-with-kayenta-3260bc7acc69">Automated Canary Analysis at Netflix with Kayenta</a></li>
+</ul>
+<hr>
+<h2 id="resources-2">Resources</h2>
+<h3 id="books-oreillycom">Books (<em>oreilly.com</em>)</h3>
+<ul>
+<li>
+<p><a href="https://learning.oreilly.com/library/view/fundamentals-of-software/9781492043447/">Fundamentals of Software Architecture</a></p>
+</li>
+<li>
+<p><a href="https://learning.oreilly.com/library/view/clean-architecture-a/9780134494272/">Clean Architecture: A Craftsman&rsquo;s Guide to Software Structure and Design, First Edition</a></p>
+</li>
+<li>
+<p><a href="https://learning.oreilly.com/library/view/software-architecture-patterns/9781491971437">Software Architecture Patterns</a></p>
+</li>
+<li>
+<p><a href="https://learning.oreilly.com/library/view/building-evolutionary-architectures/9781491986356/">Building Evolutionary Architectures</a></p>
+</li>
+<li>
+<p><a href="https://learning.oreilly.com/library/view/clean-architecture-a/9780134494272/">Clean Architecture: A Craftsman&rsquo;s Guide to Software Structure and Design, First Edition</a></p>
+</li>
+<li>
+<p><a href="https://learning.oreilly.com/library/view/domain-driven-design-tackling/0321125215/">Domain-Driven Design: Tackling Complexity in the Heart of Software</a></p>
+</li>
+<li>
+<p><a href="https://learning.oreilly.com/library/view/microservices-patterns/9781617294549/">Microservices Patterns</a></p>
+</li>
+<li>
+<p><a href="https://learning.oreilly.com/library/view/patterns-of-enterprise/0321127420/">Patterns of Enterprise Application Architecture</a></p>
+</li>
+<li>
+<p><a href="https://learning.oreilly.com/library/view/refactoring-improving-the/9780134757681/">Refactoring: Improving the Design of Existing Code</a></p>
+</li>
+<li>
+<p><a href="https://learning.oreilly.com/library/view/design-patterns-elements/0201633612/">Design Patterns: Elements of Reusable Object-Oriented Software</a></p>
+</li>
+<li>
+<p><a href="https://learning.oreilly.com/library/view/designing-distributed-systems/9781491983638">Designing Distributed Systems</a></p>
+</li>
+<li>
+<p><a href="https://www.amazon.com/Designing-Distributed-Control-Systems-Language/dp/1118694155/">Designing Distributed Control Systems: A Pattern Language Approach (Wiley Software Patterns Series)</a></p>
+</li>
+</ul>
+<h3 id="websites">Websites</h3>
+<ul>
+<li><a href="https://martinfowler.com/">martinfowler.com</a></li>
+<li><a href="https://aws.amazon.com/architecture">AWS Architecture Center</a></li>
+<li><a href="https://aws.amazon.com/blogs/architecture">AWS Architecture Blog</a></li>
+<li><a href="https://aws.amazon.com/builders-library/?cards-body.sort-by=item.additionalFields.customSort&amp;cards-body.sort-order=asc">Amazon Builders&rsquo; Library</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/architecture/">Azure Architecture Center</a></li>
+<li><a href="https://medium.com/tag/software-architecture">medium | articles tagged with &ldquo;software architecture&rdquo;</a></li>
+<li><a href="https://c4model.com/">C4 model for visualizing software architecture</a></li>
+</ul>
+
+
+        
+
+        
+
+        <hr />
+
+        <section id="social-share">
+          <div class="list-inline footer-links text-center">
+            <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fcloud-native-software-architecture%2f&amp;text=Cloud%20Native%20Software%20Architecture&amp;via=pfeilbr"
+              target="_blank" title="Share on Twitter">Discuss on Twitter</a>
+          </div>
+        </section>
+
+
+
+
+
+
+        
+        
+
+        
+        
+      </article>
+
+      
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="https://brianpfeil.com/post/lumigo-cli/" data-toggle="tooltip" data-placement="top"
+            title="Lumigo CLI">&larr; Lumigo CLI</a>
+        </li>
+        
+        
+      </ul>
+      
+
+
+      
+      
+      
+      
+
+    </div>
+  </div>
+</div>
+
+    
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          
+          
+          
+          
+          <li>
+            <a href="https://twitter.com/pfeilbr" title="twitter">
+              <span class="footer-link">
+                twitter
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://github.com/pfeilbr" title="github">
+              <span class="footer-link">
+                github
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://stackoverflow.com/users/29148/pfeilbr" title="stack overflow">
+              <span class="footer-link">
+                stack overflow
+              </span>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="footer-link">
+                rss
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+          
+          <a href="https://brianpfeil.com">Brian Pfeil</a>
+          
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+          2020
+          
+
+          
+        </p>
+        
+        
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"
+  integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js"
+  integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://brianpfeil.com/js/main.js"></script>
+<script src="https://brianpfeil.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function () { $("pre.chroma").css("padding", "0"); }); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js"
+  integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js"
+  integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://brianpfeil.com/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+<script>
+    
+
+</script>
+    
+  </body>
+</html>
+
