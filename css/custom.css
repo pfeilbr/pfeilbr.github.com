@@ -134,3 +134,7 @@ h4:target {
 .post-preview a:hover {
   text-decoration: underline;
 }
+
+#social-share .footer-links {
+  font-size: 14px;
+}

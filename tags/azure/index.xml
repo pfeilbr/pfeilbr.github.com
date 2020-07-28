@@ -17,7 +17,7 @@
       <pubDate>Wed, 26 Feb 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-pipelines/</guid>
-      <description>experimenting with Azure Pipelines</description>
+      <description>learn Azure Pipelines</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Sat, 18 May 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-kubernetes-service-aks/</guid>
-      <description>experimenting with Azure Kubernetes Service AKS</description>
+      <description>learn Azure Kubernetes Service AKS</description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@
       <pubDate>Wed, 15 May 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-nodejs-arm-resources/</guid>
-      <description>experimenting with Azure Nodejs ARM Resources</description>
+      <description>learn Azure Nodejs ARM Resources</description>
     </item>
     
     <item>
@@ -44,7 +44,7 @@
       <pubDate>Tue, 14 May 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-cli/</guid>
-      <description>experimenting with Azure CLI</description>
+      <description>learn Azure CLI</description>
     </item>
     
     <item>
@@ -53,7 +53,7 @@
       <pubDate>Mon, 13 May 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-js-cognitive-services/</guid>
-      <description>experimenting with Azure JS Cognitive Services</description>
+      <description>learn Azure JS Cognitive Services</description>
     </item>
     
     <item>
@@ -62,7 +62,7 @@
       <pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-nodejs-arm-storage/</guid>
-      <description>experimenting with Azure Nodejs ARM Storage</description>
+      <description>learn Azure Nodejs ARM Storage</description>
     </item>
     
     <item>
@@ -71,7 +71,7 @@
       <pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-sdk-for-node-authentication/</guid>
-      <description>experimenting with Azure SDK For Node Authentication</description>
+      <description>learn Azure SDK For Node Authentication</description>
     </item>
     
     <item>
@@ -80,7 +80,7 @@
       <pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-serverless-framework/</guid>
-      <description>experimenting with Azure Serverless Framework</description>
+      <description>learn Azure Serverless Framework</description>
     </item>
     
     <item>
@@ -89,7 +89,7 @@
       <pubDate>Wed, 08 May 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-cosmos-js-sdk/</guid>
-      <description>experimenting with Azure Cosmos JS SDK</description>
+      <description>learn Azure Cosmos JS SDK</description>
     </item>
     
   </channel>
