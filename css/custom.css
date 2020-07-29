@@ -25,6 +25,11 @@ h6 {
   border: 0px;
 }
 
+.home-page-title-link {
+  text-decoration: underline;
+}
+
+/* desktop */
 @media only screen and (min-width: 768px) {
   .navbar-custom {
     padding: 0px 0;
@@ -62,8 +67,20 @@ h6 {
   .intro-header .categories-heading h1 {
     font-size: 50px;
   }
-}
 
+  footer {
+    background: white;
+    border-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 30px;
+    /* width: 750px; */
+    /* padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto; */
+  }
+}
+/* mobile */
 @media only screen and (max-width: 767px) {
   .navbar-custom {
     background: white;
@@ -92,6 +109,15 @@ h6 {
   .navbar-custom .nav .navlinks-container.show-children .navlinks-children {
     display: block;
   }
+
+  .intro-header {
+    margin: 0px 0 0px;
+  }
+}
+
+.container[role="main"] {
+  margin-bottom: 0px;
+  flex: 1 0 auto;
 }
 
 .intro-header .page-heading h1,
@@ -154,6 +180,11 @@ footer .footer-link {
 
   margin: auto;
   max-width: 100%;
+}
+
+#avatar.home-page {
+  width: 55px;
+  height: 55px;
 }
 
 .pager li a {
@@ -240,6 +271,8 @@ h4:target {
 footer {
   background: white;
   border-top: 0px;
+  padding-bottom: 30px;
+  padding-top: 30px;
   /* width: 750px; */
   /* padding-right: 15px;
   padding-left: 15px;
