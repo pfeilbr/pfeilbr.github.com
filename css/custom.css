@@ -12,13 +12,105 @@ h6 {
 .navbar-custom .nav li a {
   font-weight: 400;
 }
-
+/* 
 @media only screen and (min-width: 768px) {
   .intro-header .page-heading h1,
   .intro-header .tags-heading h1,
   .intro-header .categories-heading h1 {
     font-size: 50px;
   }
+} */
+
+@media only screen and (min-width: 768px) {
+  .navbar-custom {
+    padding: 0px 0;
+    /* -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out; */
+
+    width: 750px;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+
+    background-color: white;
+    border-color: white;
+
+    border-bottom: 1px solid #eee;
+  }
+
+  .navbar-custom .container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .intro-header {
+    margin: 0px 0 0px;
+    position: relative;
+  }
+
+  .intro-header .page-heading h1,
+  .intro-header .tags-heading h1,
+  .intro-header .categories-heading h1 {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-custom {
+    background: white;
+    border-bottom: 1px solid #eee;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    z-index: 100;
+  }
+
+  .navbar-default .navbar-collapse {
+    border-color: white;
+    background-color: white;
+  }
+
+  .navbar-default .navbar-toggle {
+    border-color: white;
+  }
+
+  .navbar-default .navbar-toggle:focus,
+  .navbar-default .navbar-toggle:hover {
+    background-color: white;
+  }
+
+  .navbar-custom .nav .navlinks-container.show-children {
+    background: white;
+  }
+  .navbar-custom .nav .navlinks-container.show-children .navlinks-children {
+    display: block;
+  }
+}
+
+.intro-header .page-heading h1,
+.intro-header .tags-heading h1,
+.intro-header .categories-heading h1 {
+  margin-top: 0;
+  font-size: 36px;
+  color: #404040;
+  font-weight: 200;
+}
+
+.post-preview .post-title {
+  font-size: 18px;
+  color: #0d7ea8;
+}
+
+.post-preview .post-entry {
+  font-size: 16px;
+}
+
+.intro-header .post-heading h1 {
+  color: #404040;
+  font-size: 32px;
+  font-weight: 400;
 }
 
 .post-heading .post-meta a {
@@ -138,4 +230,18 @@ h4:target {
 
 #social-share .footer-links {
   font-size: 14px;
+}
+
+footer {
+  background: white;
+  border-top: 0px;
+  /* width: 750px; */
+  /* padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; */
+}
+footer .footer-links {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
 }
