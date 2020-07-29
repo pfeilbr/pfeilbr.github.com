@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Serverless Architecture: Key Considerations per Service</title>
+      <title>Serverless Architecture: Key Service Considerations</title>
       <link>https://brianpfeil.com/post/serverless-architecture-key-considerations-per-service/</link>
       <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-architecture-key-considerations-per-service/</guid>
-      <description>Key considerations and configuration options per service for a serverless architecture</description>
+      <description>Key service considerations and configuration options for a serverless architecture</description>
     </item>
     
   </channel>
