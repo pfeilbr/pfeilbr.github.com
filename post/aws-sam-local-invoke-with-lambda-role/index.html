@@ -376,7 +376,7 @@ curl -X POST http://127.0.0.1:3000/job -d <span class="s1">&#39;{&#34;name&#34;:
 </code></pre></div><h3 id="conclusion">Conclusion</h3>
 <p>We&rsquo;ve seen how to run a lambda locally with the same security context as when deployed.  SAM provides a great development workflow to allow quick iterations.  The local environment provided via docker tries to be as true to the AWS environment, but you should test with the real services as early as possible.</p>
 <p>One point to note, you must have the AWS resources your lambda is interacting with provisioned.  For example, the SQS queue must exist.  SAM does not provide a locally running SQS service.</p>
-<p>The <a href="https://github.com/pfeilbr/aws-sam-golang-playground">source</a> for this example is written in Go, which has a great workflow.  Our focus wasn&rsquo;t on the code, but if you want more <strong>Go + SAM + Lambda</strong> be sure to check out the AWS <a href="https://golang.serverlessworkshops.io/">GO SERVERLESS!</a> workshop by AWS Serverless Developer Advocate <a href="https://twitter.com/rts_rob">Rob Sutter</a>.  It covers the details and workflow of using Go with SAM.</p>
+<p>The <a href="https://github.com/pfeilbr/aws-sam-golang-playground">source</a> for this example is written in Go, which has a great workflow.  Our focus wasn&rsquo;t on the code, but if you want more <strong>Go + SAM + Lambda</strong>, be sure to check out the AWS <a href="https://golang.serverlessworkshops.io/">GO SERVERLESS!</a> workshop by AWS Serverless Developer Advocate <a href="https://twitter.com/rts_rob">Rob Sutter</a>.  It covers the details and workflow of using Go with SAM.</p>
 
 
         
