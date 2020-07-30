@@ -100,6 +100,19 @@ h6 {
 }
 /* mobile */
 @media only screen and (max-width: 767px) {
+  .container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .container-fluid > .navbar-collapse,
+  .container-fluid > .navbar-header,
+  .container > .navbar-collapse,
+  .container > .navbar-header {
+    margin-right: inherit;
+    margin-left: inherit;
+  }
+
   .h1,
   .h2,
   .h3,
@@ -323,4 +336,9 @@ footer .footer-links {
 code {
   color: #404040;
   background-color: #f8f8f8;
+}
+
+.highlight > pre {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
 }
