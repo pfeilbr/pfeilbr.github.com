@@ -6,10 +6,19 @@
     <description>Recent content in lambda on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Jul 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/lambda/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS SAM Local Invoke with Lambda Role</title>
+      <link>https://brianpfeil.com/post/aws-sam-local-invoke-with-lambda-role/</link>
+      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-sam-local-invoke-with-lambda-role/</guid>
+      <description>Running lambda locally with SAM in the lambda role security context</description>
+    </item>
     
     <item>
       <title>Bref PHP Lambda</title>

@@ -31,6 +31,24 @@ h6 {
 
 /* desktop */
 @media only screen and (min-width: 768px) {
+  .h1,
+  .h2,
+  .h3,
+  h1,
+  h2,
+  h3 {
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+
+  .header-section {
+    margin-bottom: 25px;
+  }
+
+  .post-heading h1 {
+    margin-bottom: 10px;
+  }
+
   .navbar-custom {
     padding: 0px 0;
     /* -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
@@ -82,6 +100,24 @@ h6 {
 }
 /* mobile */
 @media only screen and (max-width: 767px) {
+  .h1,
+  .h2,
+  .h3,
+  h1,
+  h2,
+  h3 {
+    margin-top: 40px;
+    margin-bottom: 25px;
+  }
+
+  .header-section {
+    margin-bottom: 25px;
+  }
+
+  .post-heading h1 {
+    margin-bottom: 10px;
+  }
+
   .navbar-custom {
     background: white;
     border-bottom: 1px solid #eee;
@@ -282,4 +318,9 @@ footer {
 footer .footer-links {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
+}
+
+code {
+  color: #404040;
+  background-color: #f8f8f8;
 }

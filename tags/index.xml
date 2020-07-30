@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>aws</title>
+      <link>https://brianpfeil.com/tags/aws/</link>
+      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lambda</title>
+      <link>https://brianpfeil.com/tags/lambda/</link>
+      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/lambda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sam</title>
+      <link>https://brianpfeil.com/tags/sam/</link>
+      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/sam/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>architecture</title>
@@ -17,15 +44,6 @@
       <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/tags/architecture/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>aws</title>
-      <link>https://brianpfeil.com/tags/aws/</link>
-      <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/aws/</guid>
       <description></description>
     </item>
     
@@ -62,15 +80,6 @@
       <pubDate>Mon, 13 Jul 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/heroku/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>lambda</title>
-      <link>https://brianpfeil.com/tags/lambda/</link>
-      <pubDate>Mon, 13 Jul 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/lambda/</guid>
       <description></description>
     </item>
     
@@ -368,15 +377,6 @@
       <pubDate>Wed, 21 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/observability/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sam</title>
-      <link>https://brianpfeil.com/tags/sam/</link>
-      <pubDate>Fri, 16 Aug 2019 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/sam/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>AWS SAM Local Invoke with Lambda Role - Brian Pfeil</title>
+  <meta name="description" content="Running lambda locally with SAM in the lambda role security context">
+  <meta name="author" content="Brian Pfeil"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Brian Pfeil",
+    
+    "url": "https:\/\/brianpfeil.com\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/brianpfeil.com\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/brianpfeil.com\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/brianpfeil.com\/post\/aws-sam-local-invoke-with-lambda-role\/",
+          "name": "A w s s a m local invoke with lambda role"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Brian Pfeil"
+  },
+  "headline": "AWS SAM Local Invoke with Lambda Role",
+  "description" : "Running lambda locally with SAM in the lambda role security context",
+  "inLanguage" : "en",
+  "wordCount":  379 ,
+  "datePublished" : "2020-07-30T00:00:00",
+  "dateModified" : "2020-07-30T00:00:00",
+  "image" : "https:\/\/brianpfeil.com\/",
+  "keywords" : [ "aws, sam, lambda" ],
+  "mainEntityOfPage" : "https:\/\/brianpfeil.com\/post\/aws-sam-local-invoke-with-lambda-role\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/brianpfeil.com\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/brianpfeil.com\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="AWS SAM Local Invoke with Lambda Role" />
+<meta property="og:description" content="Running lambda locally with SAM in the lambda role security context">
+<meta property="og:url" content="https://brianpfeil.com/post/aws-sam-local-invoke-with-lambda-role/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Brian Pfeil" />
+
+  <meta name="twitter:title" content="AWS SAM Local Invoke with Lambda Role" />
+  <meta name="twitter:description" content="Running lambda locally with SAM in the lambda role security context">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@pfeilbr" />
+  <meta name="twitter:creator" content="@pfeilbr" />
+  <meta name="generator" content="Hugo 0.74.3" />
+  <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://brianpfeil.com/css/highlight.min.css" /><link rel="stylesheet" href="https://brianpfeil.com/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+<link rel="stylesheet" href="https://brianpfeil.com/css/custom.css" />
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-610553-4', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      
+      <a class="navbar-brand" href="https://brianpfeil.com/">Brian Pfeil</a>
+      
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+        
+        <li>
+          <a title="about" href="/about/">about</a>
+        </li>
+        
+        
+        
+        <li>
+          <a title="posts" href="/">posts</a>
+        </li>
+        
+        
+        
+        <li>
+          <a title="projects" href="/projects/">projects</a>
+        </li>
+        
+        
+        
+        <li>
+          <a title="tags" href="/tags/">tags</a>
+        </li>
+        
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header-section ">
+  
+  <div class="intro-header no-img">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div class="post-heading">
+            
+
+            
+            
+            <h1>AWS SAM Local Invoke with Lambda Role</h1>
+            
+
+
+
+            
+            
+            
+            
+            <span class="post-meta">
+  
+  
+
+    July 30, 2020
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+  <span class="blog-tags">
+    &nbsp;&bull;&nbsp;
+    
+    <a href="https://brianpfeil.com//tags/aws/">aws</a>
+    ,
+    
+    <a href="https://brianpfeil.com//tags/sam/">sam</a>
+    ,
+    
+    <a href="https://brianpfeil.com//tags/lambda/">lambda</a>
+    
+    
+  </span>
+  
+  
+
+
+  
+  
+</span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+    
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><a href="https://aws.amazon.com/serverless/sam/">AWS Serverless Application Model</a>(SAM) allows you to develop and test your API Gateway backed lambda functions locally via <a href="https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-cli-command-reference-sam-local-start-api.html">sam local start-api</a>.  By default your function is invoked with the default credentials you have configured for the <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html">AWS CLI</a>.  If your function accesses other AWS service, it may permission issues.  It&rsquo;s ideal to have it run under the same security context locally as it would when deployed.  In my case, my function sends a message to an SQS worker queue.  The permissions for the queue are configured to allow the lambda role to send a message to it.  The following details how to achieve this.</p>
+<h3 id="allowing-our-lambda-role-to-be-assumed">Allowing Our Lambda Role to be Assumed</h3>
+<p>In our scenario, we have a local user profile named <code>admin</code> stored in <code>~/.aws/credentials</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[admin]
+aws_access_key_id     = YOUR_ACCESS_KEY
+aws_secret_access_key = YOUR_SECRET_ACCESS_KEY
+</code></pre></div><p>This user needs to be able to assume our <code>my-lambda-role</code> role.  We define the following <strong>Role Trust</strong> policy to enable:</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;Version&#34;</span><span class="p">:</span> <span class="s2">&#34;2012-10-17&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;Statement&#34;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&#34;Effect&#34;</span><span class="p">:</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;Principal&#34;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&#34;Service&#34;</span><span class="p">:</span> <span class="s2">&#34;lambda.amazonaws.com&#34;</span>
+      <span class="p">},</span>
+      <span class="nt">&#34;Action&#34;</span><span class="p">:</span> <span class="s2">&#34;sts:AssumeRole&#34;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&#34;Effect&#34;</span><span class="p">:</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;Principal&#34;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&#34;AWS&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:iam::xxxxxxxxxxxx:user/admin&#34;</span>
+      <span class="p">},</span>
+      <span class="nt">&#34;Action&#34;</span><span class="p">:</span> <span class="s2">&#34;sts:AssumeRole&#34;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+
+</code></pre></div><h3 id="configure-assume-role-via-aws-cli">Configure Assume Role via AWS CLI</h3>
+<p>Next we need to configure the AWS CLI to assume a role.  We can do so by adding the following to <code>~/.aws/config</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># ~/.aws/config
+
+[profile my-lambda-role]
+role_arn = arn:aws:iam::xxxxxxxxxxxx:role/my-lambda-role
+source_profile = admin
+output = json
+region = us-east-1
+</code></pre></div><p>Note the <code>source_profile = admin</code> line.  This identifies the profile in <code>~/.aws/credentials</code> that will be used to assume the role.</p>
+<blockquote>
+<p>See <a href="https://aws.amazon.com/premiumsupport/knowledge-center/iam-assume-role-cli/">How do I assume an IAM role using the AWS CLI?</a> for full details on options.</p>
+</blockquote>
+<p>We can test with the following:</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">aws --profile my-lambda-role sts get-caller-identity
+</code></pre></div><p>If successful, the response will look like.</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+    <span class="nt">&#34;UserId&#34;</span><span class="p">:</span> <span class="s2">&#34;AROAXWO2SDPLLBS55Q345:botocore-session-1596129185&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;Account&#34;</span><span class="p">:</span> <span class="s2">&#34;xxxxxxxxxxxx&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;Arn&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:sts::529276214230:assumed-role/my-lambda-role/botocore-&#34;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="running-sam-local">Running SAM Local</h3>
+<p>The SQS queue URL is provided to the lambda via an environment variable.  This is defined in the SAM template</p>
+<p><code>template.yaml</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">Environment</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">Variables</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="k">QUEUE_URL</span><span class="p">:</span><span class="w"> </span>!Ref<span class="w"> </span>Queue<span class="w">
+</span></code></pre></div><p>We need <code>QUEUE_URL</code> to be available to our function running locally.  To do that we can create an environment variable .json file and pass as a parameter for sam local to use.</p>
+<p><code>env-vars.json</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+    <span class="nt">&#34;Parameters&#34;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&#34;QUEUE_URL&#34;</span><span class="p">:</span> <span class="s2">&#34;https://sqs.us-east-1.amazonaws.com/xxxxxxxxxxxx/aws-sam-golang-example-Queue-Q12J860AETTS&#34;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p>We can now start the local SAM API server and test our endpoint</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">sam <span class="nb">local</span> start-api --profile my-lambda-role --env-vars env-vars.json
+
+curl -X POST http://127.0.0.1:3000/job -d <span class="s1">&#39;{&#34;name&#34;: &#34;my job&#34;}&#39;</span>
+</code></pre></div>
+
+        
+
+        
+
+        <hr />
+
+        <section id="social-share">
+          <div class="list-inline footer-links text-center">
+            <span class="text-muted">share on</span><br />
+            <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-sam-local-invoke-with-lambda-role%2f&amp;text=AWS%20SAM%20Local%20Invoke%20with%20Lambda%20Role&amp;via=pfeilbr"
+              target="_blank" title="Share on Twitter">Twitter</a>
+            &nbsp;&bull;&nbsp;
+            <a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-sam-local-invoke-with-lambda-role%2f&amp;title=AWS%20SAM%20Local%20Invoke%20with%20Lambda%20Role" target="_blank"
+              title="Share on Reddit">
+              Reddit
+            </a>
+
+          </div>
+
+
+
+        </section>
+
+
+
+
+
+
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+      </article>
+
+      
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="https://brianpfeil.com/post/serverless-architecture-key-considerations-per-service/" data-toggle="tooltip" data-placement="top"
+            title="Serverless Architecture: Key Service Considerations">&larr; Serverless Architecture: Key Service Considerations</a>
+        </li>
+        
+        
+      </ul>
+      
+
+
+      
+      
+      
+      
+
+    </div>
+  </div>
+</div>
+
+    
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          
+          
+          
+          
+          <li>
+            <a href="https://twitter.com/pfeilbr" title="twitter">
+              <span class="footer-link">
+                twitter
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://github.com/pfeilbr" title="github">
+              <span class="footer-link">
+                github
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://stackoverflow.com/users/29148/pfeilbr" title="stack overflow">
+              <span class="footer-link">
+                stack overflow
+              </span>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="footer-link">
+                rss
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+          
+          <a href="https://brianpfeil.com">Brian Pfeil</a>
+          
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+          2020
+          
+
+          
+        </p>
+        
+        
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"
+  integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js"
+  integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://brianpfeil.com/js/main.js"></script>
+<script src="https://brianpfeil.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function () { $("pre.chroma").css("padding", "0"); }); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js"
+  integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js"
+  integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://brianpfeil.com/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+<script>
+    
+
+</script>
+    
+  </body>
+</html>
+
