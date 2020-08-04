@@ -132,7 +132,7 @@ h6 {
   }
 
   .navbar-custom {
-    background: white;
+    background: inherit;
     border-bottom: 1px solid #eee;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     z-index: 100;
@@ -141,6 +141,7 @@ h6 {
   .navbar-default .navbar-collapse {
     border-color: white;
     background-color: white;
+    /* background-color: var(--darkreader-neutral-background); */
   }
 
   .navbar-default .navbar-toggle {
@@ -149,7 +150,7 @@ h6 {
 
   .navbar-default .navbar-toggle:focus,
   .navbar-default .navbar-toggle:hover {
-    background-color: white;
+    background-color: inherit;
   }
 
   .navbar-custom .nav .navlinks-container.show-children {
