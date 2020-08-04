@@ -168,8 +168,10 @@ if (!doNotTrack) {
 
         <li>
           
-          
-          
+          <a id="dark-mode-toggle">
+            <i class="fa fa-moon hidden" id="dark-mode-enabled-icon" aria-hidden="true"></i>
+            <i class="fa fa-sun hidden" id="dark-mode-disabled-icon" aria-hidden="true"></i>
+          </a>
         </li>
       </ul>
     </div>
@@ -499,7 +501,7 @@ docker push 529276214230.dkr.ecr.us-east-1.amazonaws.com/hello-world
     
     (() => {
 
-        
+        DarkReader.setFetchMethod(window.fetch)
 
         const DARK_MODE_ENABLED_KEY = "DARK_MODE_ENABLED_KEY"
 
