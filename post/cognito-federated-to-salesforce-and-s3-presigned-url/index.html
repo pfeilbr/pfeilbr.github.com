@@ -168,10 +168,8 @@ if (!doNotTrack) {
 
         <li>
           
-          <a id="dark-mode-toggle">
-            <i class="fa fa-moon hidden" id="dark-mode-enabled-icon" aria-hidden="true"></i>
-            <i class="fa fa-sun hidden" id="dark-mode-disabled-icon" aria-hidden="true"></i>
-          </a>
+          
+          
         </li>
       </ul>
     </div>
@@ -508,6 +506,8 @@ aws s3 cp index.html s3://pfeil-static-site-01/index.html
 <script>
     
     (() => {
+
+        DarkReader.setFetchMethod(window.fetch)
 
         const DARK_MODE_ENABLED_KEY = "DARK_MODE_ENABLED_KEY"
 

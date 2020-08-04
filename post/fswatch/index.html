@@ -168,10 +168,8 @@ if (!doNotTrack) {
 
         <li>
           
-          <a id="dark-mode-toggle">
-            <i class="fa fa-moon hidden" id="dark-mode-enabled-icon" aria-hidden="true"></i>
-            <i class="fa fa-sun hidden" id="dark-mode-disabled-icon" aria-hidden="true"></i>
-          </a>
+          
+          
         </li>
       </ul>
     </div>
@@ -489,6 +487,8 @@ fswatch -0 . <span class="p">|</span> xargs -0 -n <span class="m">1</span> -I <s
 <script>
     
     (() => {
+
+        DarkReader.setFetchMethod(window.fetch)
 
         const DARK_MODE_ENABLED_KEY = "DARK_MODE_ENABLED_KEY"
 
