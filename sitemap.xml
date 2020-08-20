@@ -3,8 +3,163 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://brianpfeil.com/tags/api/</loc>
+    <lastmod>2020-08-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/api-gateway/</loc>
+    <lastmod>2020-08-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://brianpfeil.com/tags/aws/</loc>
-    <lastmod>2020-07-30T00:00:00+00:00</lastmod>
+    <lastmod>2020-08-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-api-gateway-aws-service-integration/</loc>
+    <lastmod>2020-08-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/</loc>
+    <lastmod>2020-08-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/</loc>
+    <lastmod>2020-08-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/eventbridge/</loc>
+    <lastmod>2020-08-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/Makefile/</loc>
+    <lastmod>2020-08-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/playground/</loc>
+    <lastmod>2020-08-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/</loc>
+    <lastmod>2020-08-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/</loc>
+    <lastmod>2020-08-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/nil/</loc>
+    <lastmod>2020-08-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/architecture/</loc>
+    <lastmod>2020-08-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-comprehend/</loc>
+    <lastmod>2020-08-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/build/</loc>
+    <lastmod>2020-08-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/diagram/</loc>
+    <lastmod>2020-08-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/Go/</loc>
+    <lastmod>2020-08-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/golang/</loc>
+    <lastmod>2020-08-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/graphviz/</loc>
+    <lastmod>2020-08-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/javascript/</loc>
+    <lastmod>2020-08-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/javascript/</loc>
+    <lastmod>2020-08-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/machine-learning/</loc>
+    <lastmod>2020-08-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/mage/</loc>
+    <lastmod>2020-08-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/tools/</loc>
+    <lastmod>2020-08-18T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-sam-step-functions/</loc>
+    <lastmod>2020-08-14T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/sam/</loc>
+    <lastmod>2020-08-14T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/step-functions/</loc>
+    <lastmod>2020-08-14T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-cloudfront-private-content/</loc>
+    <lastmod>2020-08-10T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/cloudfront/</loc>
+    <lastmod>2020-08-10T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-sam-golang/</loc>
+    <lastmod>2020-07-30T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/iam/</loc>
+    <lastmod>2020-07-30T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/testing/</loc>
+    <lastmod>2020-07-30T00:00:00-04:00</lastmod>
   </url>
   
   <url>
@@ -14,16 +169,6 @@
   
   <url>
     <loc>https://brianpfeil.com/post/aws-sam-local-invoke-with-lambda-role/</loc>
-    <lastmod>2020-07-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/</loc>
-    <lastmod>2020-07-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/</loc>
     <lastmod>2020-07-30T00:00:00+00:00</lastmod>
   </url>
   
@@ -38,28 +183,8 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/post/</loc>
-    <lastmod>2020-07-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/sam/</loc>
-    <lastmod>2020-07-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/categories/sam/</loc>
     <lastmod>2020-07-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/</loc>
-    <lastmod>2020-07-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/architecture/</loc>
-    <lastmod>2020-07-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -98,22 +223,12 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/categories/nil/</loc>
-    <lastmod>2020-07-17T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/tags/cli/</loc>
     <lastmod>2020-07-17T00:00:00-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://brianpfeil.com/post/lumigo-cli/</loc>
-    <lastmod>2020-07-17T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/playground/</loc>
     <lastmod>2020-07-17T00:00:00-04:00</lastmod>
   </url>
   
@@ -158,28 +273,13 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/tags/javascript/</loc>
-    <lastmod>2020-07-10T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/post/strapi/</loc>
     <lastmod>2020-07-10T00:00:00-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/categories/Makefile/</loc>
-    <lastmod>2020-07-02T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/post/php-lambda-layer/</loc>
     <lastmod>2020-07-02T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/Go/</loc>
-    <lastmod>2020-06-17T00:00:00-04:00</lastmod>
   </url>
   
   <url>
@@ -193,17 +293,7 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/tags/eventbridge/</loc>
-    <lastmod>2020-05-19T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/tags/continuous-delivery/</loc>
-    <lastmod>2020-04-16T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/golang/</loc>
     <lastmod>2020-04-16T00:00:00-04:00</lastmod>
   </url>
   
@@ -245,11 +335,6 @@
   <url>
     <loc>https://brianpfeil.com/tags/streaming/</loc>
     <lastmod>2020-03-23T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/javascript/</loc>
-    <lastmod>2020-03-19T00:00:00-04:00</lastmod>
   </url>
   
   <url>
@@ -383,11 +468,6 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/tags/testing/</loc>
-    <lastmod>2020-01-02T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/post/react-bootstrap/</loc>
     <lastmod>2019-12-29T00:00:00-05:00</lastmod>
   </url>
@@ -489,11 +569,6 @@
   
   <url>
     <loc>https://brianpfeil.com/post/aws-service-catalog/</loc>
-    <lastmod>2019-09-10T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/cloudfront/</loc>
     <lastmod>2019-09-10T00:00:00-04:00</lastmod>
   </url>
   
@@ -843,11 +918,6 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/tags/tools/</loc>
-    <lastmod>2019-01-29T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/post/storybook-ui-development-environment/</loc>
     <lastmod>2019-01-25T00:00:00-05:00</lastmod>
   </url>
@@ -910,11 +980,6 @@
   <url>
     <loc>https://brianpfeil.com/post/jfrog-artifactory/</loc>
     <lastmod>2018-12-05T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/api/</loc>
-    <lastmod>2018-11-19T00:00:00-05:00</lastmod>
   </url>
   
   <url>
@@ -1148,11 +1213,6 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/tags/iam/</loc>
-    <lastmod>2018-02-08T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/post/aws-emr/</loc>
     <lastmod>2018-02-03T00:00:00-05:00</lastmod>
   </url>
@@ -1174,11 +1234,6 @@
   
   <url>
     <loc>https://brianpfeil.com/categories/Jupyter-Notebook/</loc>
-    <lastmod>2018-01-31T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/machine-learning/</loc>
     <lastmod>2018-01-31T00:00:00-05:00</lastmod>
   </url>
   

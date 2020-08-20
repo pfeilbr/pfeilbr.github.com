@@ -6,17 +6,152 @@
     <description>Recent content in Tags on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>api</title>
+      <link>https://brianpfeil.com/tags/api/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>api-gateway</title>
+      <link>https://brianpfeil.com/tags/api-gateway/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/api-gateway/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>aws</title>
       <link>https://brianpfeil.com/tags/aws/</link>
-      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>eventbridge</title>
+      <link>https://brianpfeil.com/tags/eventbridge/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/eventbridge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>architecture</title>
+      <link>https://brianpfeil.com/tags/architecture/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>build</title>
+      <link>https://brianpfeil.com/tags/build/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/build/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>diagram</title>
+      <link>https://brianpfeil.com/tags/diagram/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/diagram/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://brianpfeil.com/tags/golang/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://brianpfeil.com/tags/javascript/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machine-learning</title>
+      <link>https://brianpfeil.com/tags/machine-learning/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tools</title>
+      <link>https://brianpfeil.com/tags/tools/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sam</title>
+      <link>https://brianpfeil.com/tags/sam/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/sam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>step-functions</title>
+      <link>https://brianpfeil.com/tags/step-functions/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/step-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cloudfront</title>
+      <link>https://brianpfeil.com/tags/cloudfront/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/cloudfront/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iam</title>
+      <link>https://brianpfeil.com/tags/iam/</link>
+      <pubDate>Thu, 30 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/iam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>testing</title>
+      <link>https://brianpfeil.com/tags/testing/</link>
+      <pubDate>Thu, 30 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/testing/</guid>
       <description></description>
     </item>
     
@@ -26,24 +161,6 @@
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/tags/lambda/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sam</title>
-      <link>https://brianpfeil.com/tags/sam/</link>
-      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/sam/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>architecture</title>
-      <link>https://brianpfeil.com/tags/architecture/</link>
-      <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/architecture/</guid>
       <description></description>
     </item>
     
@@ -102,38 +219,11 @@
     </item>
     
     <item>
-      <title>javascript</title>
-      <link>https://brianpfeil.com/tags/javascript/</link>
-      <pubDate>Fri, 10 Jul 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>eventbridge</title>
-      <link>https://brianpfeil.com/tags/eventbridge/</link>
-      <pubDate>Tue, 19 May 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/eventbridge/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>continuous-delivery</title>
       <link>https://brianpfeil.com/tags/continuous-delivery/</link>
       <pubDate>Thu, 16 Apr 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/continuous-delivery/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>golang</title>
-      <link>https://brianpfeil.com/tags/golang/</link>
-      <pubDate>Thu, 16 Apr 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/golang/</guid>
       <description></description>
     </item>
     
@@ -264,15 +354,6 @@
     </item>
     
     <item>
-      <title>testing</title>
-      <link>https://brianpfeil.com/tags/testing/</link>
-      <pubDate>Thu, 02 Jan 2020 00:00:00 -0500</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/testing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>graphics</title>
       <link>https://brianpfeil.com/tags/graphics/</link>
       <pubDate>Mon, 11 Nov 2019 00:00:00 -0500</pubDate>
@@ -323,15 +404,6 @@
       <pubDate>Wed, 18 Sep 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/gitlab/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cloudfront</title>
-      <link>https://brianpfeil.com/tags/cloudfront/</link>
-      <pubDate>Tue, 10 Sep 2019 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/cloudfront/</guid>
       <description></description>
     </item>
     
@@ -579,15 +651,6 @@
     </item>
     
     <item>
-      <title>tools</title>
-      <link>https://brianpfeil.com/tags/tools/</link>
-      <pubDate>Tue, 29 Jan 2019 00:00:00 -0500</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/tools/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>ui</title>
       <link>https://brianpfeil.com/tags/ui/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 -0500</pubDate>
@@ -638,15 +701,6 @@
       <pubDate>Wed, 05 Dec 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/tags/devops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>api</title>
-      <link>https://brianpfeil.com/tags/api/</link>
-      <pubDate>Mon, 19 Nov 2018 00:00:00 -0500</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/api/</guid>
       <description></description>
     </item>
     
@@ -822,29 +876,11 @@
     </item>
     
     <item>
-      <title>iam</title>
-      <link>https://brianpfeil.com/tags/iam/</link>
-      <pubDate>Thu, 08 Feb 2018 00:00:00 -0500</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/iam/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>emr</title>
       <link>https://brianpfeil.com/tags/emr/</link>
       <pubDate>Sat, 03 Feb 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/tags/emr/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>machine-learning</title>
-      <link>https://brianpfeil.com/tags/machine-learning/</link>
-      <pubDate>Wed, 31 Jan 2018 00:00:00 -0500</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/machine-learning/</guid>
       <description></description>
     </item>
     

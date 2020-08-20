@@ -6,10 +6,55 @@
     <description>Recent content in Categories on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Makefile</title>
+      <link>https://brianpfeil.com/categories/Makefile/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/Makefile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>playground</title>
+      <link>https://brianpfeil.com/categories/playground/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/playground/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>&lt;nil&gt;</title>
+      <link>https://brianpfeil.com/categories/nil/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/nil/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>https://brianpfeil.com/categories/Go/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/Go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://brianpfeil.com/categories/javascript/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/javascript/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>aws</title>
@@ -66,24 +111,6 @@
     </item>
     
     <item>
-      <title>&lt;nil&gt;</title>
-      <link>https://brianpfeil.com/categories/nil/</link>
-      <pubDate>Fri, 17 Jul 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/nil/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>playground</title>
-      <link>https://brianpfeil.com/categories/playground/</link>
-      <pubDate>Fri, 17 Jul 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/playground/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>html</title>
       <link>https://brianpfeil.com/categories/html/</link>
       <pubDate>Mon, 13 Jul 2020 00:00:00 -0400</pubDate>
@@ -98,33 +125,6 @@
       <pubDate>Mon, 13 Jul 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/categories/PHP/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Makefile</title>
-      <link>https://brianpfeil.com/categories/Makefile/</link>
-      <pubDate>Thu, 02 Jul 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/Makefile/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Go</title>
-      <link>https://brianpfeil.com/categories/Go/</link>
-      <pubDate>Wed, 17 Jun 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/Go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>javascript</title>
-      <link>https://brianpfeil.com/categories/javascript/</link>
-      <pubDate>Thu, 19 Mar 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/javascript/</guid>
       <description></description>
     </item>
     

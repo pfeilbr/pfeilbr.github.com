@@ -6,10 +6,28 @@
     <description>Recent content in javascript on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Mar 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 18 Aug 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS Comprehend</title>
+      <link>https://brianpfeil.com/post/aws-comprehend/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-comprehend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS CloudFront Private Content</title>
+      <link>https://brianpfeil.com/post/aws-cloudfront-private-content/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cloudfront-private-content/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>React Async</title>

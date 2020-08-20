@@ -6,10 +6,28 @@
     <description>Recent content in Go on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Jun 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 18 Aug 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/categories/Go/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mage</title>
+      <link>https://brianpfeil.com/post/mage/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/mage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS SAM Golang</title>
+      <link>https://brianpfeil.com/post/aws-sam-golang/</link>
+      <pubDate>Thu, 30 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-sam-golang/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Serverless Golang</title>

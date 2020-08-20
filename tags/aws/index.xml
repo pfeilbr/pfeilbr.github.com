@@ -6,10 +6,55 @@
     <description>Recent content in aws on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS API Gateway AWS Service Integration</title>
+      <link>https://brianpfeil.com/post/aws-api-gateway-aws-service-integration/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-api-gateway-aws-service-integration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS Comprehend</title>
+      <link>https://brianpfeil.com/post/aws-comprehend/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-comprehend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS SAM Step Functions</title>
+      <link>https://brianpfeil.com/post/aws-sam-step-functions/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-sam-step-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS CloudFront Private Content</title>
+      <link>https://brianpfeil.com/post/aws-cloudfront-private-content/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cloudfront-private-content/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS SAM Golang</title>
+      <link>https://brianpfeil.com/post/aws-sam-golang/</link>
+      <pubDate>Thu, 30 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-sam-golang/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>AWS SAM Local Invoke with Lambda Role</title>
