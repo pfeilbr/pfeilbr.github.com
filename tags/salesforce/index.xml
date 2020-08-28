@@ -6,10 +6,19 @@
     <description>Recent content in salesforce on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Jun 2019 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/salesforce/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS AppFlow Salesforce EventBridge</title>
+      <link>https://brianpfeil.com/post/aws-appflow-salesforce-eventbridge/</link>
+      <pubDate>Thu, 27 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-appflow-salesforce-eventbridge/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Cognito Federated To Salesforce and S3 Presigned URL</title>

@@ -58,7 +58,7 @@
   "headline": "AWS Service Catalog",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  243 ,
+  "wordCount":  312 ,
   "datePublished" : "2019-09-10T00:00:00",
   "dateModified" : "2019-09-10T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -327,16 +327,19 @@ if (!doNotTrack) {
 </li>
 <li>IT administrator creates products and portfolios and grants access</li>
 <li>End user accesses products and deploys them</li>
-<li>approved self-service products from Solution Factory
+<li>example use cases: approved self-service products from Solution Factory
 <ul>
-<li>e.g. Oracle RDS DB with all security, tags, etc. in place</li>
 <li>e.g. static web site. S3 + CloudFormation + WAF + ACM (certificate) + Route 53 (hosted zone, domain)</li>
+<li>e.g. Oracle RDS DB with all security, tags, etc. in place</li>
 </ul>
 </li>
-<li>** you can include/reference existing product(s) in your product cloudformation template.  This allows for modular composition and nesting.</li>
+<li>can include/reference existing product(s) in your product cloudformation template.  This <em>enables modular composition and nesting</em>.</li>
 </ul>
 <hr>
-<p><strong>Launch constraint</strong></p>
+<h2 id="example-use-case--static-website">Example Use Case | Static Website</h2>
+<p>The following is a simple example of a &ldquo;Static Website&rdquo; product for the service catalog.  It&rsquo;s an S3 bucket with website enabled for it.  This product is purposely kept simple to keep the focus on Service Catalog, but a product can be make up of anything that can be expressed via a <a href="https://aws.amazon.com/cloudformation/">CloudFormation</a> template.</p>
+<hr>
+<p><strong>Define Launch Constraint</strong></p>
 <p>the IAM role the cloudformation stack provisioning runs under</p>
 <blockquote>
 <p>Allows you to assign an IAM role that is used to provision the resources at launch, so you can restrict user permissions without impacting users&rsquo; ability to provision products from the catalog.</p>
@@ -376,6 +379,7 @@ if (!doNotTrack) {
 <li><a href="https://github.com/aws-samples/aws-service-catalog-reference-architectures">aws-samples/aws-service-catalog-reference-architectures</a></li>
 <li><a href="https://www.youtube.com/watch?v=A9kKy6WhqVA&amp;t=318s">AWS Service Catalog - Getting Started</a></li>
 <li><a href="https://www.youtube.com/watch?v=jvAAiWxYQwg">AWS re:Invent 2018: Streamlining Application Development with AWS Service Catalog (DEV328)</a></li>
+<li><a href="https://aws.amazon.com/blogs/mt/how-to-launch-secure-and-governed-aws-resources-with-aws-cloudformation-and-aws-service-catalog/">AWS CloudFormation support for AWS Service Catalog products</a></li>
 </ul>
 
 

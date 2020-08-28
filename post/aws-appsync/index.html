@@ -58,7 +58,7 @@
   "headline": "AWS Appsync",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  90 ,
+  "wordCount":  117 ,
   "datePublished" : "2018-06-09T00:00:00",
   "dateModified" : "2018-06-09T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -316,7 +316,7 @@ if (!doNotTrack) {
         <div class="alert alert-info small bg-info" role="alert">
 <span class="text-muted">code for article</span>&nbsp;<a href="https://github.com/pfeilbr/aws-appsync-playground" target="_blank"><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/aws-appsync-playground</a>
 </div>
-<p>learn and experiment with <a href="https://aws.amazon.com/appsync/">AWS AppSync</a></p>
+<p>learn and experiment with <a href="https://aws.amazon.com/appsync/">AWS AppSync</a>, the managed GraphQL service.</p>
 <h2 id="components">Components</h2>
 <ul>
 <li>GraphQL Schema</li>
@@ -331,7 +331,7 @@ if (!doNotTrack) {
 </ul>
 </li>
 </ul>
-<h2 id="resource-types">Resource Types</h2>
+<h2 id="appsync-resource-typeshttpsdocsawsamazoncomawscloudformationlatestuserguideaws_appsynchtml"><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_AppSync.html">AppSync Resource Types</a></h2>
 <ul>
 <li>API
 <ul>
@@ -346,27 +346,40 @@ if (!doNotTrack) {
 <li><a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/AppSync.html#startSchemaCreation-property">startSchemaCreation</a></li>
 </ul>
 </li>
-<li>Resolver
-<ul>
-<li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html">AWS::AppSync::Resolver</a></li>
-<li><a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/AppSync.html#createResolver-property">createResolver</a></li>
-</ul>
-</li>
 <li>DataSource
 <ul>
 <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html">AWS::AppSync::DataSource</a></li>
 <li><a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/AppSync.html#createDataSource-property">createDataSource</a></li>
 </ul>
 </li>
+<li>Resolver
+<ul>
+<li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html">AWS::AppSync::Resolver</a></li>
+<li><a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/AppSync.html#createResolver-property">createResolver</a></li>
+</ul>
+</li>
+<li>FunctionConfiguration
+<ul>
+<li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-functionconfiguration.html">AWS::AppSync::FunctionConfiguration</a></li>
+<li><a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/AppSync.html#createFunction-property">createFunction</a></li>
+</ul>
+</li>
 <li>ApiKey
 <ul>
 <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html">AWS::AppSync::ApiKey</a></li>
 <li><a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/AppSync.html#createApiKey-property">createApiKey</a></li>
+<li>ApiCache
+<ul>
+<li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html">AWS::AppSync::ApiCache</a></li>
+<li><a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/AppSync.html#createApiCache-property">createApiCache</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <h2 id="resources">Resources</h2>
 <ul>
+<li><a href="https://github.com/nabeelthedev/chat-app">nabeelthedev/chat-app</a> - example using CloudFormation for all AppSync and other resource provisioning.</li>
 <li><a href="https://github.com/sbstjn/appsync-resolvers-example">sbstjn/appsync-resolvers-example</a> - Example project for AppSync, GraphQL, and AWS Lambda resolvers using Go.</li>
 <li><a href="https://github.com/sbstjn/go-appsync-graphql-cloudformation">sbstjn/go-appsync-graphql-cloudformation</a> - AWS AppSync GraphQL API Proxy with Lambda, CloudFormation, and SAM</li>
 <li><a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/AppSync.html">AWS JavaScript SDK | AWS.AppSync</a></li>
@@ -375,6 +388,7 @@ if (!doNotTrack) {
 <li><a href="https://github.com/sid88in/serverless-appsync-plugin">serverless-appsync-plugin</a>
 <ul>
 <li><a href="https://github.com/sid88in/serverless-appsync-plugin/tree/master/example">example service</a></li>
+<li><a href="https://formidable.com/open-source/urql/">urql</a> - GraphQL client</li>
 </ul>
 </li>
 </ul>

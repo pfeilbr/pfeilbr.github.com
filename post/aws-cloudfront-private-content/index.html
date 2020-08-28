@@ -58,7 +58,7 @@
   "headline": "AWS CloudFront Private Content",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  1323 ,
+  "wordCount":  1796 ,
   "datePublished" : "2020-08-10T00:00:00",
   "dateModified" : "2020-08-10T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -343,6 +343,9 @@ if (!doNotTrack) {
 <li>update <code>DOMAIN_NAME</code> parameter in <a href="./run.sh"><code>./run.sh</code></a> with the hosted zone name</li>
 <li>provision aws resources <code>./run.sh deploy-infrastructure</code></li>
 <li>Check <a href="https://console.aws.amazon.com/acm/home">ACM in AWS Console</a> to confirm Certificate validation via DNS validation has completed.  May need to add <a href="https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html">DNS validation records to route 53 hosted zone</a>.</li>
+<li>update audience in SAML IdP with UserPool Id
+<img src="https://www.evernote.com/l/AAGYDJvggAlODYZ1Dd5r-HFdJ04NixRSO28B/image.png" alt=""></li>
+<li>update <code>client_id</code> in <a href="frontend/public/login/index.html"><code>frontend/public/login/index.html</code></a></li>
 <li>update pipeline variables
 <ul>
 <li>REGION - <em>default is us-east-1</em></li>
@@ -434,7 +437,138 @@ curl -H <span class="s2">&#34;Authorization: Bearer </span><span class="si">${</
 <span class="p">}</span>
 </code></pre></div><h3 id="cognito-logout-url">cognito logout url</h3>
 <p><a href="https://allthecloudbits.auth.us-east-1.amazoncognito.com/logout?response_type=token&amp;client_id=3al3r1fatr213ndvp2uoqcfgi9&amp;redirect_uri=https://allthecloudbits.com/login/logout.html">https://allthecloudbits.auth.us-east-1.amazoncognito.com/logout?response_type=token&amp;client_id=3al3r1fatr213ndvp2uoqcfgi9&amp;redirect_uri=https://allthecloudbits.com/login/logout.html</a></p>
-<hr>
+<h3 id="cloudfront-api-origin-backed-by-api-gateway-endpoint-with-cognito-userpool-authorizer">CloudFront <code>/api/</code> origin backed by API Gateway endpoint with Cognito UserPool Authorizer</h3>
+<p>echos incoming lambda proxy request event</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">ID_TOKEN</span><span class="o">=</span><span class="s1">&#39;eyJraWQiOiJ2V2ltUXRzdXpRUUFUWUc5UGNZcjlLK1BJa25PaEhoZEZGMHE1YlVGWVMwPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoicWVKQVBYVDV0N3BoOXBkMUR4WDdvQSIsInN1YiI6IjE0MDFiZjYwLWNhYjUtNGFjNy1iMDBhLTM1NDM2N2Q1ZjgyNiIsImNvZ25pdG86Z3JvdXBzIjpbInVzLWVhc3QtMV95S05rUUVrS2FfYXV0aDAiXSwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV95S05rUUVrS2EiLCJjb2duaXRvOnVzZXJuYW1lIjoiYXV0aDBfYXV0aDB8NWYzMjliNGY3M2VkYzEwMDNkNWY1ZDczIiwibm9uY2UiOiItbm9FRmtnT1dVMG1ob2FYWnFldWJzb2JrVzZPY3lFRmRZenQ0TFBlWUk0MHB5SGFuQS1sZzZYV3VoaW9TWllvT1AyXzhYZzZMYS1ZLTg3eTlHa3BJYzczTnJIeWs1X2V2SlRlOXEzX1Rkb0pUYnIzaFFKU05NbDl0ZjRKZHgzb3ZhYlg4RklzUmc5SkdxVThyTEt4VFZKa2NXZzJDZ3hDMjFQRXBDSkZDMUEiLCJhdWQiOiIxanR0NHZhNmo5a2duODRoMW42bjU2czVjdCIsImlkZW50aXRpZXMiOlt7InVzZXJJZCI6ImF1dGgwfDVmMzI5YjRmNzNlZGMxMDAzZDVmNWQ3MyIsInByb3ZpZGVyTmFtZSI6ImF1dGgwIiwicHJvdmlkZXJUeXBlIjoiU0FNTCIsImlzc3VlciI6InVybjpzdmMuYXV0aDAuY29tIiwicHJpbWFyeSI6InRydWUiLCJkYXRlQ3JlYXRlZCI6IjE1OTg0MDM3MjY0NjcifV0sInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNTk4NDA0MjMzLCJleHAiOjE1OTg0MDc4MzMsImlhdCI6MTU5ODQwNDIzMywiZW1haWwiOiJ1c2VyMDFAZXhhbXBsZS5jb20ifQ.I2PKtMjfWANBuu8eybZ_EegFEQ-D7cfCD2VyHnlHFzs_CoxthugBICI_ayMdyYhsd1FXqztbrzZIy9q2eDPh1IyaIH_s2cFBiRLCcZF-P1ULd8T9xsPqoZDEbxH_gg7u6YZYBVuLo53bNTCrC9p1pSxAUyzUa68BjZyTHSf3GEW06wJqE84e1lsyQX0qE_I1IGmYZOgq1rJCsYKwQqV9KmdZBMMEOhKizN4_Nm42LTY5frTzKPgUNIuyXaPWF2Uns1MdIoM9SoI1SnYZckgrAVlh_0U-wNu6BHhK4mpYBo90HelskOWiLzJvRqgotsfMeCgAhVNtbq7v1L2K-fHadg&#39;</span>
+
+curl -H <span class="s2">&#34;Authorization: Bearer </span><span class="si">${</span><span class="nv">ID_TOKEN</span><span class="si">}</span><span class="s2">&#34;</span> <span class="s2">&#34;https://allthecloudbits.com/api/&#34;</span>
+</code></pre></div><p>output</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+    <span class="nt">&#34;resource&#34;</span><span class="p">:</span> <span class="s2">&#34;/{proxy+}&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;path&#34;</span><span class="p">:</span> <span class="s2">&#34;/api/&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;httpMethod&#34;</span><span class="p">:</span> <span class="s2">&#34;GET&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;headers&#34;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&#34;Authorization&#34;</span><span class="p">:</span> <span class="s2">&#34;Bearer eyJraWQiOiJ2V2ltUXRzdXpRUUFUWUc5UGNZcjlLK1BJa25PaEhoZEZGMHE1YlVGWVMwPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoicWVKQVBYVDV0N3BoOXBkMUR4WDdvQSIsInN1YiI6IjE0MDFiZjYwLWNhYjUtNGFjNy1iMDBhLTM1NDM2N2Q1ZjgyNiIsImNvZ25pdG86Z3JvdXBzIjpbInVzLWVhc3QtMV95S05rUUVrS2FfYXV0aDAiXSwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV95S05rUUVrS2EiLCJjb2duaXRvOnVzZXJuYW1lIjoiYXV0aDBfYXV0aDB8NWYzMjliNGY3M2VkYzEwMDNkNWY1ZDczIiwibm9uY2UiOiItbm9FRmtnT1dVMG1ob2FYWnFldWJzb2JrVzZPY3lFRmRZenQ0TFBlWUk0MHB5SGFuQS1sZzZYV3VoaW9TWllvT1AyXzhYZzZMYS1ZLTg3eTlHa3BJYzczTnJIeWs1X2V2SlRlOXEzX1Rkb0pUYnIzaFFKU05NbDl0ZjRKZHgzb3ZhYlg4RklzUmc5SkdxVThyTEt4VFZKa2NXZzJDZ3hDMjFQRXBDSkZDMUEiLCJhdWQiOiIxanR0NHZhNmo5a2duODRoMW42bjU2czVjdCIsImlkZW50aXRpZXMiOlt7InVzZXJJZCI6ImF1dGgwfDVmMzI5YjRmNzNlZGMxMDAzZDVmNWQ3MyIsInByb3ZpZGVyTmFtZSI6ImF1dGgwIiwicHJvdmlkZXJUeXBlIjoiU0FNTCIsImlzc3VlciI6InVybjpzdmMuYXV0aDAuY29tIiwicHJpbWFyeSI6InRydWUiLCJkYXRlQ3JlYXRlZCI6IjE1OTg0MDM3MjY0NjcifV0sInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNTk4NDA0MjMzLCJleHAiOjE1OTg0MDc4MzMsImlhdCI6MTU5ODQwNDIzMywiZW1haWwiOiJ1c2VyMDFAZXhhbXBsZS5jb20ifQ.I2PKtMjfWANBuu8eybZ_EegFEQ-D7cfCD2VyHnlHFzs_CoxthugBICI_ayMdyYhsd1FXqztbrzZIy9q2eDPh1IyaIH_s2cFBiRLCcZF-P1ULd8T9xsPqoZDEbxH_gg7u6YZYBVuLo53bNTCrC9p1pSxAUyzUa68BjZyTHSf3GEW06wJqE84e1lsyQX0qE_I1IGmYZOgq1rJCsYKwQqV9KmdZBMMEOhKizN4_Nm42LTY5frTzKPgUNIuyXaPWF2Uns1MdIoM9SoI1SnYZckgrAVlh_0U-wNu6BHhK4mpYBo90HelskOWiLzJvRqgotsfMeCgAhVNtbq7v1L2K-fHadg&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;CloudFront-Forwarded-Proto&#34;</span><span class="p">:</span> <span class="s2">&#34;https&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;CloudFront-Is-Desktop-Viewer&#34;</span><span class="p">:</span> <span class="s2">&#34;true&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;CloudFront-Is-Mobile-Viewer&#34;</span><span class="p">:</span> <span class="s2">&#34;false&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;CloudFront-Is-SmartTV-Viewer&#34;</span><span class="p">:</span> <span class="s2">&#34;false&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;CloudFront-Is-Tablet-Viewer&#34;</span><span class="p">:</span> <span class="s2">&#34;false&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;CloudFront-Viewer-Country&#34;</span><span class="p">:</span> <span class="s2">&#34;US&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;Host&#34;</span><span class="p">:</span> <span class="s2">&#34;9t5xagyya6.execute-api.us-east-1.amazonaws.com&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;User-Agent&#34;</span><span class="p">:</span> <span class="s2">&#34;Amazon CloudFront&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;Via&#34;</span><span class="p">:</span> <span class="s2">&#34;1.1 f452d023faa737bf8fd4899df4e76a45.cloudfront.net (CloudFront), 1.1 66114286e54efb82c700272100713f2f.cloudfront.net (CloudFront)&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;X-Amz-Cf-Id&#34;</span><span class="p">:</span> <span class="s2">&#34;zOP5ckCI6uBtPDKtf-4Cmnm518dfz3TJh7gAyF0kECi2UQWPS5-poQ==&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;X-Amzn-Trace-Id&#34;</span><span class="p">:</span> <span class="s2">&#34;Root=1-5f45bf55-30c7890880da73106bac3728&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;X-Forwarded-For&#34;</span><span class="p">:</span> <span class="s2">&#34;100.11.117.63, 70.132.13.82, 52.46.46.167&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;X-Forwarded-Port&#34;</span><span class="p">:</span> <span class="s2">&#34;443&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;X-Forwarded-Proto&#34;</span><span class="p">:</span> <span class="s2">&#34;https&#34;</span>
+    <span class="p">},</span>
+    <span class="nt">&#34;multiValueHeaders&#34;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&#34;Authorization&#34;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&#34;Bearer eyJraWQiOiJ2V2ltUXRzdXpRUUFUWUc5UGNZcjlLK1BJa25PaEhoZEZGMHE1YlVGWVMwPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoicWVKQVBYVDV0N3BoOXBkMUR4WDdvQSIsInN1YiI6IjE0MDFiZjYwLWNhYjUtNGFjNy1iMDBhLTM1NDM2N2Q1ZjgyNiIsImNvZ25pdG86Z3JvdXBzIjpbInVzLWVhc3QtMV95S05rUUVrS2FfYXV0aDAiXSwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV95S05rUUVrS2EiLCJjb2duaXRvOnVzZXJuYW1lIjoiYXV0aDBfYXV0aDB8NWYzMjliNGY3M2VkYzEwMDNkNWY1ZDczIiwibm9uY2UiOiItbm9FRmtnT1dVMG1ob2FYWnFldWJzb2JrVzZPY3lFRmRZenQ0TFBlWUk0MHB5SGFuQS1sZzZYV3VoaW9TWllvT1AyXzhYZzZMYS1ZLTg3eTlHa3BJYzczTnJIeWs1X2V2SlRlOXEzX1Rkb0pUYnIzaFFKU05NbDl0ZjRKZHgzb3ZhYlg4RklzUmc5SkdxVThyTEt4VFZKa2NXZzJDZ3hDMjFQRXBDSkZDMUEiLCJhdWQiOiIxanR0NHZhNmo5a2duODRoMW42bjU2czVjdCIsImlkZW50aXRpZXMiOlt7InVzZXJJZCI6ImF1dGgwfDVmMzI5YjRmNzNlZGMxMDAzZDVmNWQ3MyIsInByb3ZpZGVyTmFtZSI6ImF1dGgwIiwicHJvdmlkZXJUeXBlIjoiU0FNTCIsImlzc3VlciI6InVybjpzdmMuYXV0aDAuY29tIiwicHJpbWFyeSI6InRydWUiLCJkYXRlQ3JlYXRlZCI6IjE1OTg0MDM3MjY0NjcifV0sInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNTk4NDA0MjMzLCJleHAiOjE1OTg0MDc4MzMsImlhdCI6MTU5ODQwNDIzMywiZW1haWwiOiJ1c2VyMDFAZXhhbXBsZS5jb20ifQ.I2PKtMjfWANBuu8eybZ_EegFEQ-D7cfCD2VyHnlHFzs_CoxthugBICI_ayMdyYhsd1FXqztbrzZIy9q2eDPh1IyaIH_s2cFBiRLCcZF-P1ULd8T9xsPqoZDEbxH_gg7u6YZYBVuLo53bNTCrC9p1pSxAUyzUa68BjZyTHSf3GEW06wJqE84e1lsyQX0qE_I1IGmYZOgq1rJCsYKwQqV9KmdZBMMEOhKizN4_Nm42LTY5frTzKPgUNIuyXaPWF2Uns1MdIoM9SoI1SnYZckgrAVlh_0U-wNu6BHhK4mpYBo90HelskOWiLzJvRqgotsfMeCgAhVNtbq7v1L2K-fHadg&#34;</span>
+        <span class="p">],</span>
+        <span class="nt">&#34;CloudFront-Forwarded-Proto&#34;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&#34;https&#34;</span>
+        <span class="p">],</span>
+        <span class="nt">&#34;CloudFront-Is-Desktop-Viewer&#34;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&#34;true&#34;</span>
+        <span class="p">],</span>
+        <span class="nt">&#34;CloudFront-Is-Mobile-Viewer&#34;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&#34;false&#34;</span>
+        <span class="p">],</span>
+        <span class="nt">&#34;CloudFront-Is-SmartTV-Viewer&#34;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&#34;false&#34;</span>
+        <span class="p">],</span>
+        <span class="nt">&#34;CloudFront-Is-Tablet-Viewer&#34;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&#34;false&#34;</span>
+        <span class="p">],</span>
+        <span class="nt">&#34;CloudFront-Viewer-Country&#34;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&#34;US&#34;</span>
+        <span class="p">],</span>
+        <span class="nt">&#34;Host&#34;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&#34;9t5xagyya6.execute-api.us-east-1.amazonaws.co* Connection #0 to host allthecloudbits.com left intactm&#34;</span>
+        <span class="p">],</span>
+        <span class="nt">&#34;User-Agent&#34;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&#34;Amazon CloudFront&#34;</span>
+        <span class="p">],</span>
+        <span class="nt">&#34;Via&#34;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&#34;1.1 f452d023faa737bf8fd4899df4e76a45.cloudfront.net (CloudFront),1.1 66114286e54efb82c700272100713f2f.cloudfront.net (CloudFront)&#34;</span>
+        <span class="p">],</span>
+        <span class="nt">&#34;X-Amz-Cf-Id&#34;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&#34;zOP5ckCI6uBtPDKtf-4Cmnm518dfz3TJh7gAyF0kECi2UQWPS5-poQ==&#34;</span>
+        <span class="p">],</span>
+        <span class="nt">&#34;X-Amzn-Trace-Id&#34;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&#34;Root=1-5f45bf55-30c7890880da73106bac3728&#34;</span>
+        <span class="p">],</span>
+        <span class="nt">&#34;X-Forwarded-For&#34;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&#34;100.11.117.63,70.132.13.82,52.46.46.167&#34;</span>
+        <span class="p">],</span>
+        <span class="nt">&#34;X-Forwarded-Port&#34;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&#34;443&#34;</span>
+        <span class="p">],</span>
+        <span class="nt">&#34;X-Forwarded-Proto&#34;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&#34;https&#34;</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="nt">&#34;queryStringParameters&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&#34;multiValueQueryStringParameters&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&#34;pathParameters&#34;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&#34;proxy&#34;</span><span class="p">:</span> <span class="s2">&#34;api&#34;</span>
+    <span class="p">},</span>
+    <span class="nt">&#34;stageVariables&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&#34;requestContext&#34;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&#34;resourceId&#34;</span><span class="p">:</span> <span class="s2">&#34;sac2jj&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;authorizer&#34;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&#34;claims&#34;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&#34;at_hash&#34;</span><span class="p">:</span> <span class="s2">&#34;qeJAPXT5t7ph9pd1DxX7oA&#34;</span><span class="p">,</span>
+                <span class="nt">&#34;sub&#34;</span><span class="p">:</span> <span class="s2">&#34;1401bf60-cab5-4ac7-b00a-354367d5f826&#34;</span><span class="p">,</span>
+                <span class="nt">&#34;cognito:groups&#34;</span><span class="p">:</span> <span class="s2">&#34;us-east-1_yKNkQEkKa_auth0&#34;</span><span class="p">,</span>
+                <span class="nt">&#34;email_verified&#34;</span><span class="p">:</span> <span class="s2">&#34;false&#34;</span><span class="p">,</span>
+                <span class="nt">&#34;iss&#34;</span><span class="p">:</span> <span class="s2">&#34;https: //cognito-idp.us-east-1.amazonaws.com/us-east-1_yKNkQEkKa&#34;</span><span class="p">,</span>
+                <span class="nt">&#34;cognito:username&#34;</span><span class="p">:</span> <span class="s2">&#34;auth0_auth0|5f329b4f73edc1003d5f5d73&#34;</span><span class="p">,</span>
+                <span class="nt">&#34;nonce&#34;</span><span class="p">:</span> <span class="s2">&#34;-noEFkgOWU0mhoaXZqeubsobkW6OcyEFdYzt4LPeYI40pyHanA-lg6XWuhioSZYoOP2_8Xg6La-Y-87y9GkpIc73NrHyk5_evJTe9q3_TdoJTbr3hQJSNMl9tf4Jdx3ovabX8FIsRg9JGqU8rLKxTVJkcWg2CgxC21PEpCJFC1A&#34;</span><span class="p">,</span>
+                <span class="nt">&#34;aud&#34;</span><span class="p">:</span> <span class="s2">&#34;1jtt4va6j9kgn84h1n6n56s5ct&#34;</span><span class="p">,</span>
+                <span class="nt">&#34;identities&#34;</span><span class="p">:</span> <span class="s2">&#34;{\&#34;dateCreated\&#34;:\&#34;1598403726467\&#34;,\&#34;userId\&#34;:\&#34;auth0|5f329b4f73edc1003d5f5d73\&#34;,\&#34;providerName\&#34;:\&#34;auth0\&#34;,\&#34;providerType\&#34;:\&#34;SAML\&#34;,\&#34;issuer\&#34;:\&#34;urn:svc.auth0.com\&#34;,\&#34;primary\&#34;:\&#34;true\&#34;}&#34;</span><span class="p">,</span>
+                <span class="nt">&#34;token_use&#34;</span><span class="p">:</span> <span class="s2">&#34;id&#34;</span><span class="p">,</span>
+                <span class="nt">&#34;auth_time&#34;</span><span class="p">:</span> <span class="s2">&#34;1598404233&#34;</span><span class="p">,</span>
+                <span class="nt">&#34;exp&#34;</span><span class="p">:</span> <span class="s2">&#34;Wed Aug 26 02:10:33 UTC 2020&#34;</span><span class="p">,</span>
+                <span class="nt">&#34;iat&#34;</span><span class="p">:</span> <span class="s2">&#34;Wed Aug 26 01:10:33 UTC 2020&#34;</span><span class="p">,</span>
+                <span class="nt">&#34;email&#34;</span><span class="p">:</span> <span class="s2">&#34;user01@example.com&#34;</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&#34;resourcePath&#34;</span><span class="p">:</span> <span class="s2">&#34;/{proxy+}&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;httpMethod&#34;</span><span class="p">:</span> <span class="s2">&#34;GET&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;extendedRequestId&#34;</span><span class="p">:</span> <span class="s2">&#34;R2rVaGENIAMFgKA=&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;requestTime&#34;</span><span class="p">:</span> <span class="s2">&#34;26/Aug/2020:01:48:05 +0000&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;path&#34;</span><span class="p">:</span> <span class="s2">&#34;/Prod/api/&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;accountId&#34;</span><span class="p">:</span> <span class="s2">&#34;529276214230&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;protocol&#34;</span><span class="p">:</span> <span class="s2">&#34;HTTP/1.1&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;stage&#34;</span><span class="p">:</span> <span class="s2">&#34;Prod&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;domainPrefix&#34;</span><span class="p">:</span> <span class="s2">&#34;9t5xagyya6&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;requestTimeEpoch&#34;</span><span class="p">:</span> <span class="mi">1598406485719</span><span class="p">,</span>
+        <span class="nt">&#34;requestId&#34;</span><span class="p">:</span> <span class="s2">&#34;257d7792-80e4-4948-ad5e-ad7c1fad14dc&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;identity&#34;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&#34;cognitoIdentityPoolId&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&#34;accountId&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&#34;cognitoIdentityId&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&#34;caller&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&#34;sourceIp&#34;</span><span class="p">:</span> <span class="s2">&#34;70.132.13.82&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;principalOrgId&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&#34;accessKey&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&#34;cognitoAuthenticationType&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&#34;cognitoAuthenticationProvider&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&#34;userArn&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&#34;userAgent&#34;</span><span class="p">:</span> <span class="s2">&#34;Amazon CloudFront&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;user&#34;</span><span class="p">:</span> <span class="kc">null</span>
+        <span class="p">},</span>
+        <span class="nt">&#34;domainName&#34;</span><span class="p">:</span> <span class="s2">&#34;9t5xagyya6.execute-api.us-east-1.amazonaws.com&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;apiId&#34;</span><span class="p">:</span> <span class="s2">&#34;9t5xagyya6&#34;</span>
+    <span class="p">},</span>
+    <span class="nt">&#34;body&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&#34;isBase64Encoded&#34;</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div><hr>
 <h3 id="auth0-saml-configuration">Auth0 SAML Configuration</h3>
 <div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
  <span class="nt">&#34;audience&#34;</span><span class="p">:</span>  <span class="s2">&#34;urn:amazon:cognito:sp:us-east-1_QUSNXWsxL&#34;</span><span class="p">,</span>
@@ -636,7 +770,6 @@ curl -H <span class="s2">&#34;Authorization: Bearer </span><span class="si">${</
 </code></pre></div><hr>
 <h2 id="todo">TODO</h2>
 <ul>
-<li>store id_token and refresh_token in local storage.  delete on logout</li>
 <li>add standard set of cw alarms for 4xx and 5xx thresholds.  make thresholds configurable via cfn params.  create cw dashboard from these.</li>
 <li>add architecture diagram to README.md</li>
 <li>remove <code>IncludeBody: true</code> from template.yaml</li>
@@ -659,6 +792,13 @@ curl -H <span class="s2">&#34;Authorization: Bearer </span><span class="si">${</
 <li><del>for  <code>/login/auth/</code> send 200 in response with html meta refresh/redirect tag to root / instead of 302. <head>&lt;meta http-equiv=&quot;refresh&rdquo; content=1;url=&quot;<?=$url?>&quot;&gt;</head></del></li>
 </ul>
 </li>
+<li><del>update to use CF <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/working-with-policies.html">cache policy</a> over using the deprecated cfn properties. Try the following managed policy by setting the <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-cachepolicyid">CachePolicyId</a> property to Name: Managed-CachingDisabled, ID: 4135ea2d-6df8-44a3-9df3-4b5a84be39ad.</del></li>
+<li><del>add cognito authorizer to api gateway <code>/api/</code> endpoint.</del>
+<ul>
+<li><del><a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-invoke-api-integrated-with-cognito-user-pool.html">Include the identity token in the Authorization header</a></del></li>
+</ul>
+</li>
+<li><del>store id_token and refresh_token in local storage.  delete on logout</del></li>
 </ul>
 <hr>
 <h2 id="resources">Resources</h2>
@@ -692,7 +832,67 @@ curl -H <span class="s2">&#34;Authorization: Bearer </span><span class="si">${</
 </ul>
 <hr>
 <h2 id="scratch">Scratch</h2>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">&lt;script&gt;document.location <span class="o">=</span> <span class="s2">&#34;/&#34;</span>&lt;/script&gt;
+
+&lt;meta http-equiv<span class="o">=</span><span class="s2">&#34;Cache-Control&#34;</span> <span class="nv">content</span><span class="o">=</span><span class="s2">&#34;no-cache, no-store, must-revalidate&#34;</span> /&gt;&lt;meta http-equiv<span class="o">=</span><span class="s2">&#34;Pragma&#34;</span> <span class="nv">content</span><span class="o">=</span><span class="s2">&#34;no-cache&#34;</span> /&gt;&lt;meta http-equiv<span class="o">=</span><span class="s2">&#34;Expires&#34;</span> <span class="nv">content</span><span class="o">=</span><span class="s2">&#34;0&#34;</span> /&gt;
+
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Expires: <span class="m">0</span>
+
+ApiGatewayApi:
+  Type: AWS::Serverless::Api
+  Properties:
+    StageName: !Sub <span class="s2">&#34;</span><span class="si">${</span><span class="nv">Stage</span><span class="si">}</span><span class="s2">&#34;</span>
+    Cors:
+      AllowMethods: <span class="s2">&#34;&#39;POST,GET,PUT,DELETE&#39;&#34;</span>
+      AllowHeaders: <span class="s2">&#34;&#39;*&#39;&#34;</span>
+      AllowOrigin: <span class="s2">&#34;&#39;*&#39;&#34;</span>    
+    Auth:
+      Authorizers:
+        CognitoUserPoolAuth:
+          UserPoolArn: !Sub <span class="s2">&#34;arn:aws:cognito-idp:</span><span class="si">${</span><span class="nv">AWS</span><span class="p">::</span><span class="nv">Region</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">AWS</span><span class="p">::</span><span class="nv">AccountId</span><span class="si">}</span><span class="s2">:userpool/</span><span class="si">${</span><span class="nv">UserPool</span><span class="si">}</span><span class="s2">&#34;</span>
+          Identity:
+            Header: Authorization
+
+<span class="nb">let</span> <span class="nv">config</span> <span class="o">=</span> null
+const <span class="nv">getConfig</span> <span class="o">=</span> async <span class="o">(</span>key<span class="o">)</span> <span class="o">=</span>&gt; <span class="o">{</span>
+
+  <span class="k">if</span> <span class="o">(</span><span class="nv">config</span> <span class="o">===</span> null<span class="o">)</span> <span class="o">{</span>
+    const <span class="nv">resp</span> <span class="o">=</span> await fetch<span class="o">(</span><span class="s1">&#39;/login/config.json&#39;</span><span class="o">)</span>
+    <span class="nv">config</span> <span class="o">=</span> await resp.json<span class="o">()</span>    
+  <span class="o">}</span>
+
+  const <span class="nv">item</span> <span class="o">=</span> config.filter<span class="o">((</span>item<span class="o">)</span> <span class="o">=</span>&gt; <span class="o">(</span>item.OutputKey <span class="o">===</span> key<span class="o">)</span>  <span class="o">)</span>
+  <span class="k">return</span> <span class="o">(</span>item.length &gt; 0<span class="o">)</span> ? item<span class="o">[</span>0<span class="o">]</span>.OutputValue : null
+<span class="o">}</span>
+
+const <span class="nv">userPoolId</span> <span class="o">=</span> await getConfig<span class="o">(</span><span class="s1">&#39;UserPoolId&#39;</span><span class="o">)</span>
+const <span class="nv">userPoolClientId</span> <span class="o">=</span> await getConfig<span class="o">(</span><span class="s1">&#39;UserPoolClientId&#39;</span><span class="o">)</span>
+
+
+const <span class="nv">queryString</span> <span class="o">=</span> window.location.search<span class="p">;</span>
+const <span class="nv">urlParams</span> <span class="o">=</span> new URLSearchParams<span class="o">(</span>queryString<span class="o">)</span><span class="p">;</span>
+
+const <span class="nv">session</span> <span class="o">=</span> new  CognitoUserSession<span class="o">(</span>
+  <span class="o">{</span>
+    IdToken: urlParams.get<span class="o">(</span><span class="s1">&#39;id_token&#39;</span><span class="o">)</span>,
+    AccessToken: urlParams.get<span class="o">(</span><span class="s1">&#39;access_token&#39;</span><span class="o">)</span>,
+    RefreshToken: urlParams.get<span class="o">(</span><span class="s1">&#39;access_token&#39;</span><span class="o">)</span>,
+  <span class="o">}</span>
+<span class="o">)</span>
+const <span class="nv">user</span> <span class="o">=</span> new CognitoUser<span class="o">({</span>
+  Username:
+  Pool:
+<span class="o">})</span>
+user.setSignInUserSession<span class="o">(</span>session<span class="o">)</span>
+
+
+const <span class="nv">userPool</span> <span class="o">=</span> new AWSCognito.CognitoIdentityServiceProvider.CognitoUserPool<span class="o">({</span>
+  UserPoolId: userPoolId,
+  ClientId: userPoolClientId
+<span class="o">})</span><span class="p">;</span>
+const <span class="nv">cognitoUser</span> <span class="o">=</span> userPool.getCurrentUser<span class="o">()</span><span class="p">;</span>
 </code></pre></div>
 
         

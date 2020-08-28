@@ -6,10 +6,19 @@
     <description>Recent content in &lt;nil&gt; on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Aug 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/categories/nil/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS AppFlow Salesforce EventBridge</title>
+      <link>https://brianpfeil.com/post/aws-appflow-salesforce-eventbridge/</link>
+      <pubDate>Thu, 27 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-appflow-salesforce-eventbridge/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Graphviz</title>
