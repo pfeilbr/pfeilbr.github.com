@@ -6,10 +6,19 @@
     <description>Recent content in framework on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jan 2020 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/framework/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Antd React</title>
+      <link>https://brianpfeil.com/post/antd-react/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/antd-react/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>TailwindCSS</title>

@@ -3,6 +3,66 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://brianpfeil.com/post/antd-react/</loc>
+    <lastmod>2020-09-01T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/</loc>
+    <lastmod>2020-09-01T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/</loc>
+    <lastmod>2020-09-01T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/design/</loc>
+    <lastmod>2020-09-01T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/framework/</loc>
+    <lastmod>2020-09-01T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/javascript/</loc>
+    <lastmod>2020-09-01T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/playground/</loc>
+    <lastmod>2020-09-01T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/</loc>
+    <lastmod>2020-09-01T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/react/</loc>
+    <lastmod>2020-09-01T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/</loc>
+    <lastmod>2020-09-01T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/ui/</loc>
+    <lastmod>2020-09-01T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/ui-components/</loc>
+    <lastmod>2020-09-01T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://brianpfeil.com/categories/nil/</loc>
     <lastmod>2020-08-27T00:00:00-04:00</lastmod>
   </url>
@@ -23,37 +83,12 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/</loc>
-    <lastmod>2020-08-27T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/</loc>
-    <lastmod>2020-08-27T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/tags/eventbridge/</loc>
     <lastmod>2020-08-27T00:00:00-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/categories/playground/</loc>
-    <lastmod>2020-08-27T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/post/</loc>
-    <lastmod>2020-08-27T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/tags/salesforce/</loc>
-    <lastmod>2020-08-27T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/</loc>
     <lastmod>2020-08-27T00:00:00-04:00</lastmod>
   </url>
   
@@ -114,11 +149,6 @@
   
   <url>
     <loc>https://brianpfeil.com/tags/javascript/</loc>
-    <lastmod>2020-08-18T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/javascript/</loc>
     <lastmod>2020-08-18T00:00:00-04:00</lastmod>
   </url>
   
@@ -353,11 +383,6 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/tags/react/</loc>
-    <lastmod>2020-03-19T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/post/react-async/</loc>
     <lastmod>2020-03-19T00:00:00-04:00</lastmod>
   </url>
@@ -434,11 +459,6 @@
   
   <url>
     <loc>https://brianpfeil.com/tags/css/</loc>
-    <lastmod>2020-01-16T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/framework/</loc>
     <lastmod>2020-01-16T00:00:00-05:00</lastmod>
   </url>
   
@@ -929,16 +949,6 @@
   
   <url>
     <loc>https://brianpfeil.com/post/storybook-ui-development-environment/</loc>
-    <lastmod>2019-01-25T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/ui/</loc>
-    <lastmod>2019-01-25T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/ui-components/</loc>
     <lastmod>2019-01-25T00:00:00-05:00</lastmod>
   </url>
   

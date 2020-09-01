@@ -6,10 +6,55 @@
     <description>Recent content in Tags on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Aug 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>design</title>
+      <link>https://brianpfeil.com/tags/design/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>framework</title>
+      <link>https://brianpfeil.com/tags/framework/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/framework/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>react</title>
+      <link>https://brianpfeil.com/tags/react/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ui</title>
+      <link>https://brianpfeil.com/tags/ui/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/ui/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ui-components</title>
+      <link>https://brianpfeil.com/tags/ui-components/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/ui-components/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>appflow</title>
@@ -273,15 +318,6 @@
     </item>
     
     <item>
-      <title>react</title>
-      <link>https://brianpfeil.com/tags/react/</link>
-      <pubDate>Thu, 19 Mar 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/react/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>azure</title>
       <link>https://brianpfeil.com/tags/azure/</link>
       <pubDate>Wed, 26 Feb 2020 00:00:00 -0500</pubDate>
@@ -341,15 +377,6 @@
       <pubDate>Thu, 16 Jan 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/tags/css/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>framework</title>
-      <link>https://brianpfeil.com/tags/framework/</link>
-      <pubDate>Thu, 16 Jan 2020 00:00:00 -0500</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/framework/</guid>
       <description></description>
     </item>
     
@@ -656,24 +683,6 @@
       <pubDate>Thu, 31 Jan 2019 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/tags/paas/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ui</title>
-      <link>https://brianpfeil.com/tags/ui/</link>
-      <pubDate>Fri, 25 Jan 2019 00:00:00 -0500</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/ui/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ui-components</title>
-      <link>https://brianpfeil.com/tags/ui-components/</link>
-      <pubDate>Fri, 25 Jan 2019 00:00:00 -0500</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/ui-components/</guid>
       <description></description>
     </item>
     
