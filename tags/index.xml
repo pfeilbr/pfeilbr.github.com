@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Sep 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>aws</title>
+      <link>https://brianpfeil.com/tags/aws/</link>
+      <pubDate>Fri, 11 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>serverless</title>
+      <link>https://brianpfeil.com/tags/serverless/</link>
+      <pubDate>Fri, 11 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/serverless/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>design</title>
@@ -62,15 +80,6 @@
       <pubDate>Thu, 27 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/appflow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>aws</title>
-      <link>https://brianpfeil.com/tags/aws/</link>
-      <pubDate>Thu, 27 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/aws/</guid>
       <description></description>
     </item>
     
@@ -224,15 +233,6 @@
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/tags/lambda/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>serverless</title>
-      <link>https://brianpfeil.com/tags/serverless/</link>
-      <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/serverless/</guid>
       <description></description>
     </item>
     

@@ -3,12 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://brianpfeil.com/post/antd-react/</loc>
-    <lastmod>2020-09-01T00:00:00-04:00</lastmod>
+    <loc>https://brianpfeil.com/tags/aws/</loc>
+    <lastmod>2020-09-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-serverless-feedback/</loc>
+    <lastmod>2020-09-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://brianpfeil.com/</loc>
+    <lastmod>2020-09-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/</loc>
+    <lastmod>2020-09-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/serverless/</loc>
+    <lastmod>2020-09-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/</loc>
+    <lastmod>2020-09-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/antd-react/</loc>
     <lastmod>2020-09-01T00:00:00-04:00</lastmod>
   </url>
   
@@ -38,17 +63,7 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/post/</loc>
-    <lastmod>2020-09-01T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/tags/react/</loc>
-    <lastmod>2020-09-01T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/</loc>
     <lastmod>2020-09-01T00:00:00-04:00</lastmod>
   </url>
   
@@ -69,11 +84,6 @@
   
   <url>
     <loc>https://brianpfeil.com/tags/appflow/</loc>
-    <lastmod>2020-08-27T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/aws/</loc>
     <lastmod>2020-08-27T00:00:00-04:00</lastmod>
   </url>
   
@@ -234,11 +244,6 @@
   
   <url>
     <loc>https://brianpfeil.com/categories/architecture/</loc>
-    <lastmod>2020-07-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/serverless/</loc>
     <lastmod>2020-07-28T00:00:00+00:00</lastmod>
   </url>
   

@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Sep 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS Serverless Feedback</title>
+      <link>https://brianpfeil.com/post/aws-serverless-feedback/</link>
+      <pubDate>Fri, 11 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-serverless-feedback/</guid>
+      <description>Feedback on serverless usage on AWS. Based on working with and observations of the teams that leverage the set of AWS &amp;ldquo;serverless&amp;rdquo; services. Feedback format is Challenge and Suggestion for a given topic, concept, service, or feature.
+Table of Contents  Serverless at AWS: General  Challenge: Skill Set / Developer Accessibility Suggestion: Skill Set / Developer Accessibility Challenge: Developer Experience (DX) Suggestion: Developer Experience (DX) Challenge: Cost Forecasting Suggestion: Cost Forecasting Challenge: Non-AWS Core Enterprise Tools Suggestion: Non-AWS Core Enterprise Tools   IAM  Challenge: Skill Set / Developer Accessibility Suggestion: Skill Set / Developer Accessibility   CloudFormation  Challenge: Deployment Time Suggestion: Deployment Time   Lambda  Challenge: Lambda or Container Decision Suggestion: FaaS or Container Decision Challenge: Cost vs.</description>
+    </item>
     
     <item>
       <title>Antd React</title>
