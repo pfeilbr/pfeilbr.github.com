@@ -6,10 +6,46 @@
     <description>Recent content in &lt;nil&gt; on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Aug 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/categories/nil/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>S3 Access Points</title>
+      <link>https://brianpfeil.com/post/s3-access-points/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/s3-access-points/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MDX Deck</title>
+      <link>https://brianpfeil.com/post/mdx-deck/</link>
+      <pubDate>Mon, 28 Sep 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/mdx-deck/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS AppFlow Veeva Vault To S3</title>
+      <link>https://brianpfeil.com/post/aws-appflow-veeva-vault-to-s3/</link>
+      <pubDate>Tue, 08 Sep 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-appflow-veeva-vault-to-s3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Product Development</title>
+      <link>https://brianpfeil.com/post/product-development/</link>
+      <pubDate>Thu, 03 Sep 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/product-development/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>AWS AppFlow Salesforce EventBridge</title>

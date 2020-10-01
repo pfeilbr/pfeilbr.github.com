@@ -6,10 +6,19 @@
     <description>Recent content in javascript on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Sep 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ant Design Pro</title>
+      <link>https://brianpfeil.com/post/ant-design-pro/</link>
+      <pubDate>Wed, 02 Sep 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/ant-design-pro/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Antd React</title>

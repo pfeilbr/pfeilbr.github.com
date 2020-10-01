@@ -6,10 +6,19 @@
     <description>Recent content in aws on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>S3 Access Points</title>
+      <link>https://brianpfeil.com/post/s3-access-points/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/s3-access-points/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>AWS Serverless Feedback</title>
@@ -18,6 +27,15 @@
       
       <guid>https://brianpfeil.com/post/aws-serverless-feedback/</guid>
       <description>Feedback on serverless usage on AWS.  Based on working with and observations of the teams that leverage the set of AWS serverless services.</description>
+    </item>
+    
+    <item>
+      <title>AWS AppFlow Veeva Vault To S3</title>
+      <link>https://brianpfeil.com/post/aws-appflow-veeva-vault-to-s3/</link>
+      <pubDate>Tue, 08 Sep 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-appflow-veeva-vault-to-s3/</guid>
+      <description></description>
     </item>
     
     <item>

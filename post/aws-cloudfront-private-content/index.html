@@ -58,7 +58,7 @@
   "headline": "AWS CloudFront Private Content",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  1796 ,
+  "wordCount":  1828 ,
   "datePublished" : "2020-08-10T00:00:00",
   "dateModified" : "2020-08-10T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -328,6 +328,9 @@ if (!doNotTrack) {
 <li><a href="https://staging.allthecloudbits.com/">https://staging.allthecloudbits.com/</a> - pre-production protected by basic auth.  login with Username: user01, Password: password01</li>
 <li><a href="https://allthecloudbits.com/">https://allthecloudbits.com/</a> - production protected by Cognito Federated SSO to Auth0 SAML.  login with Username: <a href="mailto:user01@example.com">user01@example.com</a>, Password: password01</li>
 </ul>
+<hr>
+<h2 id="architecture">Architecture</h2>
+<p><img src="private-static-content-hosting-aws-system-architecture.png" alt=""></p>
 <hr>
 <h2 id="prerequisites">Prerequisites</h2>
 <ul>
@@ -770,6 +773,7 @@ curl -H <span class="s2">&#34;Authorization: Bearer </span><span class="si">${</
 </code></pre></div><hr>
 <h2 id="todo">TODO</h2>
 <ul>
+<li>add cypress tests for production and staging (basic-auth) logins/logouts, static content verify, dynamic api verify.</li>
 <li>add standard set of cw alarms for 4xx and 5xx thresholds.  make thresholds configurable via cfn params.  create cw dashboard from these.</li>
 <li>add architecture diagram to README.md</li>
 <li>remove <code>IncludeBody: true</code> from template.yaml</li>
@@ -799,6 +803,7 @@ curl -H <span class="s2">&#34;Authorization: Bearer </span><span class="si">${</
 </ul>
 </li>
 <li><del>store id_token and refresh_token in local storage.  delete on logout</del></li>
+<li><del>fix <a href="https://staging.allthecloudbits.com/">https://staging.allthecloudbits.com/</a>.  move hard coded <code>src/lambda/basic-auth/index.js:UsersSecret</code> to SSM parameter store.  secret gets created on every deploy</del></li>
 </ul>
 <hr>
 <h2 id="resources">Resources</h2>
