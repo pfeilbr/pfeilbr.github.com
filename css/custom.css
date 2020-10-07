@@ -12,7 +12,7 @@ h6 {
 .navbar-custom .nav li a {
   font-weight: 400;
 }
-/* 
+/*
 @media only screen and (min-width: 768px) {
   .intro-header .page-heading h1,
   .intro-header .tags-heading h1,
@@ -213,7 +213,8 @@ footer .footer-link {
 
 #avatar {
   /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
-  background-image: url("/images/pfeilbr-gravatar.jpeg");
+  /* background-image: url("/images/pfeilbr-gravatar.jpeg"); */
+  background-image: url("/images/2020-10-07-profile-brian-pfeil-gravatar.jpg");
 
   /* make a square container */
   width: 125px;
