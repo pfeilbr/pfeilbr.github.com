@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Brian Pfeil</title>
+    <link>https://brianpfeil.com/tags/git/</link>
+    <description>Recent content in git on Brian Pfeil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 02 Oct 2020 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://brianpfeil.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GitHub CLI</title>
+      <link>https://brianpfeil.com/post/github-cli/</link>
+      <pubDate>Fri, 02 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/github-cli/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

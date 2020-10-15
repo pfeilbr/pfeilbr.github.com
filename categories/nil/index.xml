@@ -6,10 +6,46 @@
     <description>Recent content in &lt;nil&gt; on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/categories/nil/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PowerShell</title>
+      <link>https://brianpfeil.com/post/powershell/</link>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/powershell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS Cloud9</title>
+      <link>https://brianpfeil.com/post/aws-cloud9/</link>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cloud9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS Systems Manager Automation</title>
+      <link>https://brianpfeil.com/post/aws-systems-manager-automation/</link>
+      <pubDate>Fri, 02 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-systems-manager-automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GitHub CLI</title>
+      <link>https://brianpfeil.com/post/github-cli/</link>
+      <pubDate>Fri, 02 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/github-cli/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>S3 Access Points</title>

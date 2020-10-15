@@ -6,10 +6,19 @@
     <description>Recent content in architecture on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Aug 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Diagrams As Code</title>
+      <link>https://brianpfeil.com/post/diagrams-as-code/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/diagrams-as-code/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Graphviz</title>

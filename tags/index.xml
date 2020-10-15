@@ -6,17 +6,116 @@
     <description>Recent content in Tags on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>bash</title>
+      <link>https://brianpfeil.com/tags/bash/</link>
+      <pubDate>Tue, 13 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>https://brianpfeil.com/tags/shell/</link>
+      <pubDate>Tue, 13 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>powershell</title>
+      <link>https://brianpfeil.com/tags/powershell/</link>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/powershell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>aws</title>
       <link>https://brianpfeil.com/tags/aws/</link>
-      <pubDate>Thu, 01 Oct 2020 00:00:00 -0400</pubDate>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>boto</title>
+      <link>https://brianpfeil.com/tags/boto/</link>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/boto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cloud9</title>
+      <link>https://brianpfeil.com/tags/cloud9/</link>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/cloud9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://brianpfeil.com/tags/python/</link>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cli</title>
+      <link>https://brianpfeil.com/tags/cli/</link>
+      <pubDate>Fri, 02 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/cli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://brianpfeil.com/tags/git/</link>
+      <pubDate>Fri, 02 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://brianpfeil.com/tags/github/</link>
+      <pubDate>Fri, 02 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>architecture</title>
+      <link>https://brianpfeil.com/tags/architecture/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>diagrams</title>
+      <link>https://brianpfeil.com/tags/diagrams/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/diagrams/</guid>
       <description></description>
     </item>
     
@@ -26,6 +125,15 @@
       <pubDate>Thu, 01 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/s3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>visualize</title>
+      <link>https://brianpfeil.com/tags/visualize/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/visualize/</guid>
       <description></description>
     </item>
     
@@ -147,15 +255,6 @@
     </item>
     
     <item>
-      <title>architecture</title>
-      <link>https://brianpfeil.com/tags/architecture/</link>
-      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/architecture/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>build</title>
       <link>https://brianpfeil.com/tags/build/</link>
       <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
@@ -273,15 +372,6 @@
     </item>
     
     <item>
-      <title>cli</title>
-      <link>https://brianpfeil.com/tags/cli/</link>
-      <pubDate>Fri, 17 Jul 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/cli/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>heroku</title>
       <link>https://brianpfeil.com/tags/heroku/</link>
       <pubDate>Mon, 13 Jul 2020 00:00:00 -0400</pubDate>
@@ -354,15 +444,6 @@
     </item>
     
     <item>
-      <title>bash</title>
-      <link>https://brianpfeil.com/tags/bash/</link>
-      <pubDate>Mon, 10 Feb 2020 00:00:00 -0500</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/bash/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>linux</title>
       <link>https://brianpfeil.com/tags/linux/</link>
       <pubDate>Sun, 09 Feb 2020 00:00:00 -0500</pubDate>
@@ -377,15 +458,6 @@
       <pubDate>Sun, 09 Feb 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/tags/virtualization/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://brianpfeil.com/tags/python/</link>
-      <pubDate>Wed, 05 Feb 2020 00:00:00 -0500</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/python/</guid>
       <description></description>
     </item>
     
@@ -935,15 +1007,6 @@
       <pubDate>Sat, 11 Nov 2017 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/tags/ecs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>boto</title>
-      <link>https://brianpfeil.com/tags/boto/</link>
-      <pubDate>Mon, 30 Oct 2017 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/boto/</guid>
       <description></description>
     </item>
     

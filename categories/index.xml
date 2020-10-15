@@ -6,26 +6,44 @@
     <description>Recent content in Categories on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>playground</title>
+      <link>https://brianpfeil.com/categories/playground/</link>
+      <pubDate>Tue, 13 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/playground/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shell</title>
+      <link>https://brianpfeil.com/categories/Shell/</link>
+      <pubDate>Tue, 13 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/Shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>&lt;nil&gt;</title>
       <link>https://brianpfeil.com/categories/nil/</link>
-      <pubDate>Thu, 01 Oct 2020 00:00:00 -0400</pubDate>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/categories/nil/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>playground</title>
-      <link>https://brianpfeil.com/categories/playground/</link>
-      <pubDate>Thu, 01 Oct 2020 00:00:00 -0400</pubDate>
+      <title>Python</title>
+      <link>https://brianpfeil.com/categories/Python/</link>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 -0400</pubDate>
       
-      <guid>https://brianpfeil.com/categories/playground/</guid>
+      <guid>https://brianpfeil.com/categories/Python/</guid>
       <description></description>
     </item>
     
@@ -134,24 +152,6 @@
       <pubDate>Wed, 26 Feb 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/categories/CSS/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://brianpfeil.com/categories/Python/</link>
-      <pubDate>Sat, 15 Feb 2020 00:00:00 -0500</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/Python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Shell</title>
-      <link>https://brianpfeil.com/categories/Shell/</link>
-      <pubDate>Mon, 10 Feb 2020 00:00:00 -0500</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/Shell/</guid>
       <description></description>
     </item>
     
