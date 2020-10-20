@@ -3,32 +3,72 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://brianpfeil.com/categories/nil/</loc>
+    <lastmod>2020-10-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/appconfig/</loc>
+    <lastmod>2020-10-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/aws/</loc>
+    <lastmod>2020-10-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-appconfig/</loc>
+    <lastmod>2020-10-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/</loc>
+    <lastmod>2020-10-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/</loc>
+    <lastmod>2020-10-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/configuration/</loc>
+    <lastmod>2020-10-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/deployment/</loc>
+    <lastmod>2020-10-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/lambda/</loc>
+    <lastmod>2020-10-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/playground/</loc>
+    <lastmod>2020-10-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/</loc>
+    <lastmod>2020-10-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/</loc>
+    <lastmod>2020-10-20T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://brianpfeil.com/tags/bash/</loc>
     <lastmod>2020-10-13T00:00:00-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://brianpfeil.com/post/bash-shell-script/</loc>
-    <lastmod>2020-10-13T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/</loc>
-    <lastmod>2020-10-13T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/</loc>
-    <lastmod>2020-10-13T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/playground/</loc>
-    <lastmod>2020-10-13T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/post/</loc>
     <lastmod>2020-10-13T00:00:00-04:00</lastmod>
   </url>
   
@@ -43,16 +83,6 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/tags/</loc>
-    <lastmod>2020-10-13T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/nil/</loc>
-    <lastmod>2020-10-12T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/post/powershell/</loc>
     <lastmod>2020-10-12T00:00:00-04:00</lastmod>
   </url>
@@ -60,11 +90,6 @@
   <url>
     <loc>https://brianpfeil.com/tags/powershell/</loc>
     <lastmod>2020-10-12T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/aws/</loc>
-    <lastmod>2020-10-05T00:00:00-04:00</lastmod>
   </url>
   
   <url>
@@ -364,11 +389,6 @@
   
   <url>
     <loc>https://brianpfeil.com/post/aws-sam-local-invoke-with-lambda-role/</loc>
-    <lastmod>2020-07-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/lambda/</loc>
     <lastmod>2020-07-30T00:00:00+00:00</lastmod>
   </url>
   
