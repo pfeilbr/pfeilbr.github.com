@@ -58,7 +58,7 @@
   "headline": "AWS AppConfig",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  157 ,
+  "wordCount":  204 ,
   "datePublished" : "2020-10-20T00:00:00",
   "dateModified" : "2020-10-20T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -333,23 +333,38 @@ if (!doNotTrack) {
 <p>create, manage, and quickly deploy application configurations. AWS AppConfig supports controlled deployments to applications of any size and includes built-in validation checks and monitoring. You can use AWS AppConfig with applications hosted on EC2 instances, AWS Lambda, containers, mobile applications, or IoT devices.</p>
 </blockquote>
 <h2 id="concepts">Concepts</h2>
+<p><strong>Domain</strong></p>
 <ul>
 <li>Application (myapp)</li>
 <li>Environment (dev, test, demo, prod)</li>
-<li>Configuration Profile - actual configuration.  text, json, yaml, S3 object, SSM Document, SSM Parameter, CodePipeline</li>
-<li>Deployment</li>
+<li>Configuration Profile - versioned configuration data.  text, json, yaml, S3 object, SSM Document, SSM Parameter, CodePipeline</li>
+<li>Deployment - types: <code>AllAtOnce</code>, <code>Linear50PercentEvery30Seconds</code>, <code>Canary10Percent20Minutes</code></li>
 </ul>
+<p><strong>Functional</strong></p>
+<ul>
+<li>deploy configuration changes from a central location</li>
+<li>rules to validate your configuration. configurations that aren&rsquo;t valid can&rsquo;t be deployed.
+<ul>
+<li>validation types: JSON schema, Lambda. see <a href="https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-configuration-and-profile-validators.html">About validators</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="examples">Example(s)</h2>
 <p>get configuration via cli</p>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">aws appconfig get-configuration <span class="se">\
-</span><span class="se"></span>--application <span class="s1">&#39;app01&#39;</span> <span class="se">\
-</span><span class="se"></span>--environment <span class="s1">&#39;dev&#39;</span> <span class="se">\
-</span><span class="se"></span>--configuration <span class="s1">&#39;config-profile-01&#39;</span> <span class="se">\
-</span><span class="se"></span>--client-id <span class="s1">&#39;test&#39;</span> <span class="se">\
-</span><span class="se"></span>appconfig.json
+</span><span class="se"></span>    --application <span class="s1">&#39;app01&#39;</span> <span class="se">\
+</span><span class="se"></span>    --environment <span class="s1">&#39;dev&#39;</span> <span class="se">\
+</span><span class="se"></span>    --configuration <span class="s1">&#39;config-profile-01&#39;</span> <span class="se">\
+</span><span class="se"></span>    --client-id <span class="s1">&#39;test&#39;</span> <span class="se">\
+</span><span class="se"></span>    appconfig.json
 
+<span class="c1"># view results in specified output file `appconfig.json`</span>
 cat appconfig.json
 </code></pre></div><p>output</p>
 <p><img src="https://www.evernote.com/l/AAEqjn5qdblEL5J0kWjsMG2g4OkInAN-hOkB/image.png" alt=""></p>
+<hr>
+<h2 id="aws-console-screenshots">AWS Console Screenshots</h2>
 <p>Configuration profile source types</p>
 <p><img src="https://www.evernote.com/l/AAFPtmY9U1tLhL_v42m3BOxd-jtaQ0ZYJBsB/image.png" alt=""></p>
 <p>Example JSON configuration profile</p>
