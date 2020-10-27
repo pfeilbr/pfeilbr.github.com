@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Oct 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,36 @@
     <item>
       <title>aws</title>
       <link>https://brianpfeil.com/tags/aws/</link>
-      <pubDate>Mon, 26 Oct 2020 00:00:00 -0400</pubDate>
+      <pubDate>Tue, 27 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kendra</title>
+      <link>https://brianpfeil.com/tags/kendra/</link>
+      <pubDate>Tue, 27 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/kendra/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machine-learning</title>
+      <link>https://brianpfeil.com/tags/machine-learning/</link>
+      <pubDate>Tue, 27 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>search</title>
+      <link>https://brianpfeil.com/tags/search/</link>
+      <pubDate>Tue, 27 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/search/</guid>
       <description></description>
     </item>
     
@@ -368,15 +395,6 @@
       <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>machine-learning</title>
-      <link>https://brianpfeil.com/tags/machine-learning/</link>
-      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/machine-learning/</guid>
       <description></description>
     </item>
     
