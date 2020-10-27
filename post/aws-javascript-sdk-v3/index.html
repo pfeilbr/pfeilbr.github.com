@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>playground - Brian Pfeil</title>
+  <title>AWS JavaScript SDK V3 - Brian Pfeil</title>
   <meta name="author" content="Brian Pfeil"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -28,13 +28,61 @@
   
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/brianpfeil.com\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/brianpfeil.com\/post\/aws-javascript-sdk-v3\/",
+          "name": "A w s java script s d k v3"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Brian Pfeil"
+  },
+  "headline": "AWS JavaScript SDK V3",
+  "description" : "",
+  "inLanguage" : "en",
+  "wordCount":  217 ,
+  "datePublished" : "2020-10-26T00:00:00",
+  "dateModified" : "2020-10-26T00:00:00",
+  "image" : "https:\/\/brianpfeil.com\/",
+  "keywords" : [ "aws, sdk, javascript" ],
+  "mainEntityOfPage" : "https:\/\/brianpfeil.com\/post\/aws-javascript-sdk-v3\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/brianpfeil.com\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/brianpfeil.com\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
 
-<meta property="og:title" content="playground" />
-<meta property="og:url" content="https://brianpfeil.com/categories/playground/" />
+<meta property="og:title" content="AWS JavaScript SDK V3" />
+<meta property="og:url" content="https://brianpfeil.com/post/aws-javascript-sdk-v3/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Brian Pfeil" />
 
-  <meta name="twitter:title" content="playground" />
+  <meta name="twitter:title" content="AWS JavaScript SDK V3" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
@@ -208,23 +256,55 @@ if (!doNotTrack) {
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <div class="categories-heading">
+          <div class="post-heading">
             
 
             
             
-            <h1>playground</h1>
+            <h1>AWS JavaScript SDK V3</h1>
             
 
 
 
             
             
+            
+            
+            <span class="post-meta">
+  
+  
 
-            
+    October 26, 2020
 
-            
-            
+  
+  
+  
+  
+
+  
+  
+  
+  
+  <span class="blog-tags">
+    &nbsp;&bull;&nbsp;
+    
+    <a href="https://brianpfeil.com//tags/aws/">aws</a>
+    ,
+    
+    <a href="https://brianpfeil.com//tags/sdk/">sdk</a>
+    ,
+    
+    <a href="https://brianpfeil.com//tags/javascript/">javascript</a>
+    
+    
+  </span>
+  
+  
+
+
+  
+  
+</span>
             
           </div>
         </div>
@@ -234,551 +314,143 @@ if (!doNotTrack) {
 </header>
 
     
-  <div class="container" role="main">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <div class="alert alert-info small bg-info" role="alert">
+<span class="text-muted">code for article</span>&nbsp;<a href="https://github.com/pfeilbr/aws-javascript-sdk-v3-playground" target="_blank"><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/aws-javascript-sdk-v3-playground</a>
+</div>
+<p>learn AWS JavaScript SDK v3</p>
+<ul>
+<li><a href="index.js"><code>index.js</code></a></li>
+<li><a href="index.test.js"><code>index.test.js</code></a></li>
+</ul>
+<hr>
+<h2 id="new-features">New Features</h2>
+<h3 id="v3-commands">v3 Commands</h3>
+<blockquote>
+<p>commands for each AWS Service package to enable you to perform operations for that AWS Service. After you install an AWS Service, you can browse the available commands in your project&rsquo;s node-modules/@aws-sdk/client-PACKAGE_NAME/commands folder</p>
+</blockquote>
+<h3 id="middleware-stack">middleware stack</h3>
+<blockquote>
+<p>can use a new middleware stack to control the lifecycle of an operation call</p>
+</blockquote>
+<blockquote>
+<p>Each middleware stage in the stack calls the next middleware stage after making any changes to the request object. This also makes debugging issues in the stack much easier, because you can see exactly which middleware stages were called leading up to the error.</p>
+</blockquote>
+<p><strong>Use Cases</strong></p>
+<ul>
+<li>debugging</li>
+<li>logging</li>
+<li>request updates</li>
+<li>instrumentation</li>
+</ul>
+<p><strong>Example middleware <code>args</code></strong></p>
+<p><code>DynamoDB</code> <code>ListTablesCommand</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="p">{</span>
+      <span class="nx">middlewareStack</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">add</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">add</span><span class="p">],</span>
+        <span class="nx">addRelativeTo</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">addRelativeTo</span><span class="p">],</span>
+        <span class="nx">clone</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">clone</span><span class="p">],</span>
+        <span class="nx">use</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">use</span><span class="p">],</span>
+        <span class="nx">remove</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">remove</span><span class="p">],</span>
+        <span class="nx">removeByTag</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">removeByTag</span><span class="p">],</span>
+        <span class="nx">concat</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">concat</span><span class="p">],</span>
+        <span class="nx">applyToStack</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">cloneTo</span><span class="p">],</span>
+        <span class="nx">resolve</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">resolve</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="nx">input</span><span class="o">:</span> <span class="p">{},</span>
+      <span class="nx">request</span><span class="o">:</span> <span class="nx">HttpRequest</span> <span class="p">{</span>
+        <span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+        <span class="nx">hostname</span><span class="o">:</span> <span class="s1">&#39;dynamodb.us-east-1.amazonaws.com&#39;</span><span class="p">,</span>
+        <span class="nx">port</span><span class="o">:</span> <span class="kc">undefined</span><span class="p">,</span>
+        <span class="nx">query</span><span class="o">:</span> <span class="p">{},</span>
+        <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
+          <span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s1">&#39;application/x-amz-json-1.0&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;X-Amz-Target&#39;</span><span class="o">:</span> <span class="s1">&#39;DynamoDB_20120810.ListTables&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;user-agent&#39;</span><span class="o">:</span> <span class="s1">&#39;aws-sdk-nodejs-v3-@aws-sdk/client-dynamodb/1.0.0-rc.2 darwin/v12.16.1&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;content-length&#39;</span><span class="o">:</span> <span class="s1">&#39;2&#39;</span>
+        <span class="p">},</span>
+        <span class="nx">body</span><span class="o">:</span> <span class="s1">&#39;{}&#39;</span><span class="p">,</span>
+        <span class="nx">protocol</span><span class="o">:</span> <span class="s1">&#39;https:&#39;</span><span class="p">,</span>
+        <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;/&#39;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div><hr>
+<h2 id="running">Running</h2>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># run tests that exercise new features</span>
+npm run <span class="nb">test</span> -- --watch
+</code></pre></div><h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://github.com/aws/aws-sdk-js-v3">aws/aws-sdk-js-v3</a></li>
+<li><a href="https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html">AWS SDK for JavaScript | Developer Guide for SDK Version 3</a></li>
+<li><a href="https://aws.amazon.com/blogs/developer/modular-aws-sdk-for-javascript-release-candidate/">Modular AWS SDK for JavaScript – Release Candidate</a></li>
+</ul>
+
+
         
-        <div class="posts-list">
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/imagenet/">
-        <h2 class="post-title">Imagenet</h2>
+
         
-        
-        
-    </a>
 
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
+        <hr />
 
-    January 31, 2018
+        <section id="social-share">
+          <div class="list-inline footer-links text-center">
+            <span class="text-muted">share on</span><br />
+            <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-javascript-sdk-v3%2f&amp;text=AWS%20JavaScript%20SDK%20V3&amp;via=pfeilbr"
+              target="_blank" title="Share on Twitter">Twitter</a>
+            &nbsp;&bull;&nbsp;
+            <a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-javascript-sdk-v3%2f&amp;title=AWS%20JavaScript%20SDK%20V3" target="_blank"
+              title="Share on Reddit">
+              Reddit
+            </a>
 
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/machine-learning/">machine-learning</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/python/">python</a>
-    
-    
-  </span>
-  
-  
+          </div>
 
 
-  
-  
-</span>
-    </p>
-    
 
-    
-    
-    
+        </section>
 
 
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/opencv-python/">
-        <h2 class="post-title">OpenCV Python</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    January 31, 2018
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/opencv/">opencv</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/python/">python</a>
-    
-    
-  </span>
-  
-  
 
 
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
 
 
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/aws-ecs/">
-        <h2 class="post-title">AWS ECS</h2>
         
         
         
-    </a>
+        
 
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    November 11, 2017
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/ecs/">ecs</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/serverless-python/">
-        <h2 class="post-title">Serverless Python</h2>
         
         
-        
-    </a>
 
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    November 10, 2017
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/serverless/">serverless</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/python/">python</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/boto/">
-        <h2 class="post-title">Boto</h2>
         
         
+      </article>
+
+      
+      <ul class="pager blog-pager">
         
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    October 30, 2017
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/boto/">boto</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/minecraft-spigot-plugin/">
-        <h2 class="post-title">Minecraft Spigot Plugin</h2>
+        <li class="previous">
+          <a href="https://brianpfeil.com/post/aws-transfer-family/" data-toggle="tooltip" data-placement="top"
+            title="AWS Transfer Family">&larr; AWS Transfer Family</a>
+        </li>
         
         
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    October 29, 2017
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/minecraft/">minecraft</a>
-    
-    
-  </span>
-  
-  
+      </ul>
+      
 
 
-  
-  
-</span>
-    </p>
-    
+      
+      
+      
+      
 
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/pusher/">
-        <h2 class="post-title">Pusher</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    October 21, 2017
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/javascript/">javascript</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/real-time/">real-time</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/deep-and-machine-learning/">
-        <h2 class="post-title">Deep and Machine Learning</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    September 24, 2017
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/machine-learning/">machine-learning</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/python/">python</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/jupyter/">
-        <h2 class="post-title">Jupyter</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    September 9, 2017
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/jupyter/">jupyter</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/aws-kms/">
-        <h2 class="post-title">AWS KMS</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    August 31, 2017
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/kms/">kms</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-        </div>
-        
-          <ul class="pager main-pager">
-            
-              <li class="previous">
-                <a href="https://brianpfeil.com/categories/playground/page/13/">&larr; Newer Posts</a>
-              </li>
-            
-            
-              <li class="next">
-                <a href="https://brianpfeil.com/categories/playground/page/15/">Older Posts &rarr;</a>
-              </li>
-            
-          </ul>
-        
-      </div>
     </div>
   </div>
+</div>
 
     
 <footer>

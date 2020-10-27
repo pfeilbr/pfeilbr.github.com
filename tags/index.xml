@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Oct 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,27 @@
     <item>
       <title>aws</title>
       <link>https://brianpfeil.com/tags/aws/</link>
-      <pubDate>Fri, 23 Oct 2020 00:00:00 -0400</pubDate>
+      <pubDate>Mon, 26 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://brianpfeil.com/tags/javascript/</link>
+      <pubDate>Mon, 26 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sdk</title>
+      <link>https://brianpfeil.com/tags/sdk/</link>
+      <pubDate>Mon, 26 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/sdk/</guid>
       <description></description>
     </item>
     
@@ -350,15 +368,6 @@
       <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>javascript</title>
-      <link>https://brianpfeil.com/tags/javascript/</link>
-      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/javascript/</guid>
       <description></description>
     </item>
     
@@ -782,15 +791,6 @@
       <pubDate>Sat, 18 May 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sdk</title>
-      <link>https://brianpfeil.com/tags/sdk/</link>
-      <pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/sdk/</guid>
       <description></description>
     </item>
     
