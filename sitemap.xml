@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://brianpfeil.com/categories/nil/</loc>
-    <lastmod>2020-10-27T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/tags/aws/</loc>
     <lastmod>2020-10-27T00:00:00-04:00</lastmod>
   </url>
@@ -48,6 +43,11 @@
   </url>
   
   <url>
+    <loc>https://brianpfeil.com/categories/Python/</loc>
+    <lastmod>2020-10-27T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://brianpfeil.com/tags/search/</loc>
     <lastmod>2020-10-27T00:00:00-04:00</lastmod>
   </url>
@@ -75,6 +75,11 @@
   <url>
     <loc>https://brianpfeil.com/tags/sdk/</loc>
     <lastmod>2020-10-26T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/nil/</loc>
+    <lastmod>2020-10-23T00:00:00-04:00</lastmod>
   </url>
   
   <url>
@@ -174,11 +179,6 @@
   
   <url>
     <loc>https://brianpfeil.com/tags/cloud9/</loc>
-    <lastmod>2020-10-05T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/Python/</loc>
     <lastmod>2020-10-05T00:00:00-04:00</lastmod>
   </url>
   

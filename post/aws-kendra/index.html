@@ -58,7 +58,7 @@
   "headline": "AWS Kendra",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  238 ,
+  "wordCount":  253 ,
   "datePublished" : "2020-10-27T00:00:00",
   "dateModified" : "2020-10-27T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -372,7 +372,13 @@ who, what, when, or where questions.</p>
 <li>Enterprise</li>
 </ul>
 <p>You specify <code>Edition: DEVELOPER_EDITION | ENTERPRISE_EDITION</code> when you create an index</p>
-<h2 id="resources">Resources</h2>
+<hr>
+<h2 id="creating-example-index">Creating Example Index</h2>
+<p>see <a href="main.py"><code>main.py</code></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">sam deploy --guided
+<span class="c1"># copy outputs into `.env`</span>
+python main.py
+</code></pre></div><h2 id="resources">Resources</h2>
 <ul>
 <li><a href="https://docs.aws.amazon.com/kendra/latest/dg/what-is-kendra.html">Amazon Kendra Docs</a></li>
 <li><a href="https://docs.aws.amazon.com/kendra/latest/dg/gs-python.html">Getting started (AWS SDK for Python (Boto3)) - Amazon Kendra</a> - shows create index, create data source for index, sync data source, all while waiting for each step to complete in between</li>

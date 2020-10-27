@@ -12,20 +12,20 @@
     
     
     <item>
-      <title>&lt;nil&gt;</title>
-      <link>https://brianpfeil.com/categories/nil/</link>
-      <pubDate>Tue, 27 Oct 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/nil/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>playground</title>
       <link>https://brianpfeil.com/categories/playground/</link>
       <pubDate>Tue, 27 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/categories/playground/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://brianpfeil.com/categories/Python/</link>
+      <pubDate>Tue, 27 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/Python/</guid>
       <description></description>
     </item>
     
@@ -39,20 +39,20 @@
     </item>
     
     <item>
+      <title>&lt;nil&gt;</title>
+      <link>https://brianpfeil.com/categories/nil/</link>
+      <pubDate>Fri, 23 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/nil/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Shell</title>
       <link>https://brianpfeil.com/categories/Shell/</link>
       <pubDate>Tue, 13 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/categories/Shell/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://brianpfeil.com/categories/Python/</link>
-      <pubDate>Mon, 05 Oct 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/Python/</guid>
       <description></description>
     </item>
     
