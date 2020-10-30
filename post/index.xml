@@ -6,10 +6,28 @@
     <description>Recent content in Posts on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Oct 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS CloudWatch Logs Insights</title>
+      <link>https://brianpfeil.com/post/aws-cloudwatch-logs-insights/</link>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cloudwatch-logs-insights/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dynamic Nodejs Code Execution</title>
+      <link>https://brianpfeil.com/post/dynamic-nodejs-code-execution/</link>
+      <pubDate>Wed, 28 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/dynamic-nodejs-code-execution/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>AWS Kendra</title>
@@ -1389,7 +1407,7 @@
     </item>
     
     <item>
-      <title>AWS Cloudwatch</title>
+      <title>AWS CloudWatch</title>
       <link>https://brianpfeil.com/post/aws-cloudwatch/</link>
       <pubDate>Sun, 21 May 2017 00:00:00 -0400</pubDate>
       

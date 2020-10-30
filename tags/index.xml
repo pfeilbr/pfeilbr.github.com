@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Oct 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,27 @@
     <item>
       <title>aws</title>
       <link>https://brianpfeil.com/tags/aws/</link>
-      <pubDate>Tue, 27 Oct 2020 00:00:00 -0400</pubDate>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cloudwatch</title>
+      <link>https://brianpfeil.com/tags/cloudwatch/</link>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/cloudwatch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nodejs</title>
+      <link>https://brianpfeil.com/tags/nodejs/</link>
+      <pubDate>Wed, 28 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/nodejs/</guid>
       <description></description>
     </item>
     
@@ -737,15 +755,6 @@
       <pubDate>Wed, 24 Jul 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/chrome/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>nodejs</title>
-      <link>https://brianpfeil.com/tags/nodejs/</link>
-      <pubDate>Mon, 22 Jul 2019 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/nodejs/</guid>
       <description></description>
     </item>
     
