@@ -6,10 +6,19 @@
     <description>Recent content in Jupyter Notebook on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 31 Jan 2018 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/categories/Jupyter-Notebook/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Boto3</title>
+      <link>https://brianpfeil.com/post/boto3/</link>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/boto3/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Imagenet</title>

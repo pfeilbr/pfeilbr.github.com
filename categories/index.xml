@@ -6,15 +6,24 @@
     <description>Recent content in Categories on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Oct 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>&lt;nil&gt;</title>
+      <link>https://brianpfeil.com/categories/nil/</link>
+      <pubDate>Sun, 01 Nov 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/nil/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>playground</title>
       <link>https://brianpfeil.com/categories/playground/</link>
-      <pubDate>Fri, 30 Oct 2020 00:00:00 -0400</pubDate>
+      <pubDate>Sun, 01 Nov 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/categories/playground/</guid>
       <description></description>
@@ -48,11 +57,11 @@
     </item>
     
     <item>
-      <title>&lt;nil&gt;</title>
-      <link>https://brianpfeil.com/categories/nil/</link>
-      <pubDate>Fri, 23 Oct 2020 00:00:00 -0400</pubDate>
+      <title>Jupyter Notebook</title>
+      <link>https://brianpfeil.com/categories/Jupyter-Notebook/</link>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 -0400</pubDate>
       
-      <guid>https://brianpfeil.com/categories/nil/</guid>
+      <guid>https://brianpfeil.com/categories/Jupyter-Notebook/</guid>
       <description></description>
     </item>
     
@@ -233,15 +242,6 @@
       <pubDate>Thu, 27 Sep 2018 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/categories/CMake/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jupyter Notebook</title>
-      <link>https://brianpfeil.com/categories/Jupyter-Notebook/</link>
-      <pubDate>Wed, 31 Jan 2018 00:00:00 -0500</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/Jupyter-Notebook/</guid>
       <description></description>
     </item>
     

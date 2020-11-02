@@ -58,7 +58,7 @@
   "headline": "Boto3",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  54 ,
+  "wordCount":  356 ,
   "datePublished" : "2020-10-05T00:00:00",
   "dateModified" : "2020-10-05T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -320,14 +320,46 @@ if (!doNotTrack) {
 <span class="text-muted">code for article</span>&nbsp;<a href="https://github.com/pfeilbr/boto3-playground" target="_blank"><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/boto3-playground</a>
 </div>
 <p>learn <a href="https://github.com/boto/boto3">boto3</a>, the Amazon Web Services (AWS) SDK for Python</p>
+<h2 id="concepts">Concepts</h2>
+<p><strong>Clients</strong> provide a low-level interface to AWS whose methods map close to 1:1 with service APIs. All service operations are supported by clients. Clients are generated from a JSON service definition file.</p>
+<p><strong>Resources</strong> represent an object-oriented interface to Amazon Web Services (AWS). They provide a higher-level abstraction than the raw, low-level calls made by service clients. To use resources, you invoke the resource() method of a Session and pass in a service name:</p>
+<p><strong>Session</strong> manages state about a particular configuration. By default, a session is created for you when needed. However, it&rsquo;s possible and recommended that in some scenarios you maintain your own session. Sessions typically store the following:</p>
+<ul>
+<li>Credentials</li>
+<li>AWS Region</li>
+<li>Other configurations related to your profile</li>
+</ul>
+<p><strong>Collection</strong> provides an iterable interface to a group of resources. A collection seamlessly handles pagination for you, making it possible to easily iterate over all items from all pages of data.</p>
+<p><strong>Paginators</strong></p>
+<p>Some AWS operations return results that are incomplete and require subsequent requests in order to attain the entire result set. The process of sending subsequent requests to continue where a previous request left off is called pagination.  Paginators are a feature of boto3 that act as an abstraction over the process of iterating over an entire result set of a truncated API operation.</p>
+<hr>
+<h2 id="developing">Developing</h2>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># install virtual env and dependencies</span>
 pipenv install
+
+<span class="c1"># (optional) install additional pip package</span>
+pipenv install &lt;package&gt;
 
 <span class="c1"># activate python virtual env (optional)</span>
 pipenv shell
 
 <span class="c1"># run on change</span>
 make dev
+
+<span class="c1"># --- running via jupyter notebook ---</span>
+
+<span class="c1"># in vscode</span>
+<span class="c1"># click on `main.ipynb`.  this will automatically start jupyter notebook and connect</span>
+<span class="c1"># ctrl+enter to run cell</span>
+<span class="c1"># ctrl+space for intellisense</span>
+<span class="c1"># see [How to use Pipenv with Jupyter and VSCode](https://towardsdatascience.com/how-to-use-pipenv-with-jupyter-and-vscode-ae0e970df486)</span>
+
+<span class="c1"># manually run jupyter notebook</span>
+pipenv run jupyter notebook
+
+<span class="c1"># access via browser manually (auto opens via above command)</span>
+open http://localhost:8888/tree
+
 </code></pre></div><h2 id="notes">Notes</h2>
 <p>for vscode, install <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance">Pylance - Visual Studio Marketplace</a> extension</p>
 <h2 id="resources">Resources</h2>
@@ -335,6 +367,8 @@ make dev
 <li><a href="https://boto3.readthedocs.io/">Boto3 documentation</a></li>
 <li><a href="https://github.com/boto/boto3">boto/boto3</a></li>
 <li><a href="https://pypi.org/project/boto3-stubs/">boto3-stubs</a> - for code completion</li>
+<li><a href="https://code.visualstudio.com/docs/python/jupyter-support">Working with Jupyter Notebooks in Visual Studio Code</a></li>
+<li><a href="https://towardsdatascience.com/how-to-use-pipenv-with-jupyter-and-vscode-ae0e970df486">How to use Pipenv with Jupyter and VSCode</a></li>
 </ul>
 
 

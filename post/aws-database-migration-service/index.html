@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>aws - Brian Pfeil</title>
+  <title>AWS Database Migration Service - Brian Pfeil</title>
   <meta name="author" content="Brian Pfeil"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -28,13 +28,61 @@
   
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/brianpfeil.com\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/brianpfeil.com\/post\/aws-database-migration-service\/",
+          "name": "A w s database migration service"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Brian Pfeil"
+  },
+  "headline": "AWS Database Migration Service",
+  "description" : "",
+  "inLanguage" : "en",
+  "wordCount":  126 ,
+  "datePublished" : "2020-11-01T00:00:00",
+  "dateModified" : "2020-11-01T00:00:00",
+  "image" : "https:\/\/brianpfeil.com\/",
+  "keywords" : [ "aws" ],
+  "mainEntityOfPage" : "https:\/\/brianpfeil.com\/post\/aws-database-migration-service\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/brianpfeil.com\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/brianpfeil.com\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
 
-<meta property="og:title" content="aws" />
-<meta property="og:url" content="https://brianpfeil.com/tags/aws/" />
+<meta property="og:title" content="AWS Database Migration Service" />
+<meta property="og:url" content="https://brianpfeil.com/post/aws-database-migration-service/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Brian Pfeil" />
 
-  <meta name="twitter:title" content="aws" />
+  <meta name="twitter:title" content="AWS Database Migration Service" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
@@ -208,23 +256,49 @@ if (!doNotTrack) {
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <div class="tags-heading">
+          <div class="post-heading">
             
 
             
             
-            <h1>aws</h1>
+            <h1>AWS Database Migration Service</h1>
             
 
 
 
             
             
+            
+            
+            <span class="post-meta">
+  
+  
 
-            
+    November 1, 2020
 
-            
-            
+  
+  
+  
+  
+
+  
+  
+  
+  
+  <span class="blog-tags">
+    &nbsp;&bull;&nbsp;
+    
+    <a href="https://brianpfeil.com//tags/aws/">aws</a>
+    
+    
+  </span>
+  
+  
+
+
+  
+  
+</span>
             
           </div>
         </div>
@@ -234,557 +308,107 @@ if (!doNotTrack) {
 </header>
 
     
-  <div class="container" role="main">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <div class="alert alert-info small bg-info" role="alert">
+<span class="text-muted">code for article</span>&nbsp;<a href="https://github.com/pfeilbr/aws-database-migration-service-playground" target="_blank"><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/aws-database-migration-service-playground</a>
+</div>
+<h2 id="concepts">Concepts</h2>
+<p>AWS DMS connects to the source data store, reads the source data, and formats the data for consumption by the target data store. It then loads the data into the target data store</p>
+<p>At a high level, when using AWS DMS you do the following:</p>
+<ul>
+<li>Create a replication server.</li>
+<li>Create source and target endpoints that have connection information about your data stores.</li>
+<li>Create one or more migration tasks to migrate data between the source and target data stores.</li>
+</ul>
+<p><img src="https://docs.aws.amazon.com/dms/latest/userguide/images/datarep-intro-rep-instance1.png" alt=""></p>
+<p>A task can consist of three major phases:</p>
+<ul>
+<li>
+<p>The full load of existing data</p>
+</li>
+<li>
+<p>The application of cached changes (change data capture, CDC)</p>
+</li>
+<li>
+<p>Ongoing replication</p>
+</li>
+<li>
+<p>Pricing - Pay for ec2 replication instances and log storage</p>
+</li>
+</ul>
+<hr>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">AWS Database Migration Service</a></li>
+<li><a href="https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_SchemaConversionTool.Installing.html">AWS Schema Conversion Tool</a></li>
+</ul>
+
+
         
-        <div class="posts-list">
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/aws-delivlib/">
-        <h2 class="post-title">AWS Delivlib</h2>
+
         
-        
-        
-    </a>
 
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
+        <hr />
 
-    September 3, 2019
+        <section id="social-share">
+          <div class="list-inline footer-links text-center">
+            <span class="text-muted">share on</span><br />
+            <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-database-migration-service%2f&amp;text=AWS%20Database%20Migration%20Service&amp;via=pfeilbr"
+              target="_blank" title="Share on Twitter">Twitter</a>
+            &nbsp;&bull;&nbsp;
+            <a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-database-migration-service%2f&amp;title=AWS%20Database%20Migration%20Service" target="_blank"
+              title="Share on Reddit">
+              Reddit
+            </a>
 
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/continuous-delivery/">continuous-delivery</a>
-    
-    
-  </span>
-  
-  
+          </div>
 
 
-  
-  
-</span>
-    </p>
-    
 
-    
-    
-    
+        </section>
 
 
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/aws-sam-local/">
-        <h2 class="post-title">AWS SAM Local</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    August 16, 2019
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/sam/">sam</a>
-    
-    
-  </span>
-  
-  
 
 
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
 
 
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/aws-cloudformation/">
-        <h2 class="post-title">AWS CloudFormation</h2>
         
         
         
-    </a>
+        
 
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    August 14, 2019
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/cloudformation/">cloudformation</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/aws-xray/">
-        <h2 class="post-title">AWS XRay</h2>
         
         
-        
-    </a>
 
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    August 13, 2019
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/xray/">xray</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/aws-transcribe/">
-        <h2 class="post-title">AWS Transcribe</h2>
         
         
+      </article>
+
+      
+      <ul class="pager blog-pager">
         
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    July 30, 2019
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/chrome-aws-lambda/">
-        <h2 class="post-title">Chrome AWS Lambda</h2>
+        <li class="previous">
+          <a href="https://brianpfeil.com/post/aws-cloudwatch-logs-insights/" data-toggle="tooltip" data-placement="top"
+            title="AWS CloudWatch Logs Insights">&larr; AWS CloudWatch Logs Insights</a>
+        </li>
         
         
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    July 24, 2019
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/chrome/">chrome</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/lambda/">lambda</a>
-    
-    
-  </span>
-  
-  
+      </ul>
+      
 
 
-  
-  
-</span>
-    </p>
-    
+      
+      
+      
+      
 
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/aws-cdk/">
-        <h2 class="post-title">AWS CDK</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    July 11, 2019
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/cdk/">cdk</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/aws-fargate/">
-        <h2 class="post-title">AWS Fargate</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    July 10, 2019
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/fargate/">fargate</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/aws-glue/">
-        <h2 class="post-title">AWS Glue</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    July 9, 2019
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/glue/">glue</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/aws-rekognition/">
-        <h2 class="post-title">AWS Rekognition</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    July 8, 2019
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-        </div>
-        
-          <ul class="pager main-pager">
-            
-              <li class="previous">
-                <a href="https://brianpfeil.com/tags/aws/page/3/">&larr; Newer Posts</a>
-              </li>
-            
-            
-              <li class="next">
-                <a href="https://brianpfeil.com/tags/aws/page/5/">Older Posts &rarr;</a>
-              </li>
-            
-          </ul>
-        
-      </div>
     </div>
   </div>
+</div>
 
     
 <footer>

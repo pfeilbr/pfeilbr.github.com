@@ -3,22 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://brianpfeil.com/tags/aws/</loc>
-    <lastmod>2020-10-30T00:00:00-04:00</lastmod>
+    <loc>https://brianpfeil.com/categories/nil/</loc>
+    <lastmod>2020-11-01T00:00:00-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/post/aws-cloudwatch-logs-insights/</loc>
-    <lastmod>2020-10-30T00:00:00-04:00</lastmod>
+    <loc>https://brianpfeil.com/tags/aws/</loc>
+    <lastmod>2020-11-01T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-database-migration-service/</loc>
+    <lastmod>2020-11-01T00:00:00-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://brianpfeil.com/</loc>
-    <lastmod>2020-10-30T00:00:00-04:00</lastmod>
+    <lastmod>2020-11-01T00:00:00-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://brianpfeil.com/categories/</loc>
+    <lastmod>2020-11-01T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/playground/</loc>
+    <lastmod>2020-11-01T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/</loc>
+    <lastmod>2020-11-01T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/</loc>
+    <lastmod>2020-11-01T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-cloudwatch-logs-insights/</loc>
     <lastmod>2020-10-30T00:00:00-04:00</lastmod>
   </url>
   
@@ -28,22 +53,7 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/categories/playground/</loc>
-    <lastmod>2020-10-30T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/post/</loc>
-    <lastmod>2020-10-30T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/categories/Shell/</loc>
-    <lastmod>2020-10-30T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/</loc>
     <lastmod>2020-10-30T00:00:00-04:00</lastmod>
   </url>
   
@@ -100,11 +110,6 @@
   <url>
     <loc>https://brianpfeil.com/tags/sdk/</loc>
     <lastmod>2020-10-26T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/nil/</loc>
-    <lastmod>2020-10-23T00:00:00-04:00</lastmod>
   </url>
   
   <url>
@@ -199,6 +204,11 @@
   
   <url>
     <loc>https://brianpfeil.com/tags/cloud9/</loc>
+    <lastmod>2020-10-05T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/Jupyter-Notebook/</loc>
     <lastmod>2020-10-05T00:00:00-04:00</lastmod>
   </url>
   
@@ -1434,11 +1444,6 @@
   
   <url>
     <loc>https://brianpfeil.com/post/imagenet/</loc>
-    <lastmod>2018-01-31T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/Jupyter-Notebook/</loc>
     <lastmod>2018-01-31T00:00:00-05:00</lastmod>
   </url>
   
