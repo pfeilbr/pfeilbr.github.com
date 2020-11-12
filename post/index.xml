@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Nov 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2020 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dynamodb Export to S3 and Query with Athena</title>
+      <link>https://brianpfeil.com/post/dynamodb-export-to-s3-and-query-with-athena/</link>
+      <pubDate>Wed, 11 Nov 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/dynamodb-export-to-s3-and-query-with-athena/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>AWS Database Migration Service</title>
@@ -165,7 +174,7 @@
     </item>
     
     <item>
-      <title>AWS AppFlow Veeva Vault To S3</title>
+      <title>AWS AppFlow Veeva Vault to S3</title>
       <link>https://brianpfeil.com/post/aws-appflow-veeva-vault-to-s3/</link>
       <pubDate>Tue, 08 Sep 2020 00:00:00 -0400</pubDate>
       
@@ -660,7 +669,7 @@
     </item>
     
     <item>
-      <title>Serverless Framework Full Lifecycle With Dashboard</title>
+      <title>Serverless Framework Full Lifecycle with Dashboard</title>
       <link>https://brianpfeil.com/post/serverless-framework-full-lifecycle-with-dashboard/</link>
       <pubDate>Tue, 20 Aug 2019 00:00:00 -0400</pubDate>
       
@@ -813,7 +822,7 @@
     </item>
     
     <item>
-      <title>Golang Debug In Docker With Delve</title>
+      <title>Golang Debug In Docker with Delve</title>
       <link>https://brianpfeil.com/post/golang-debug-in-docker-with-delve/</link>
       <pubDate>Mon, 24 Jun 2019 00:00:00 -0400</pubDate>
       
@@ -822,7 +831,7 @@
     </item>
     
     <item>
-      <title>Cognito Federated To Salesforce and S3 Presigned URL</title>
+      <title>Cognito Federated to Salesforce and S3 Presigned URL</title>
       <link>https://brianpfeil.com/post/cognito-federated-to-salesforce-and-s3-presigned-url/</link>
       <pubDate>Thu, 13 Jun 2019 00:00:00 -0400</pubDate>
       

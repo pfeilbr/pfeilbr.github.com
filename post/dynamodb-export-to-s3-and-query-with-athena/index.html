@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Product Development - Brian Pfeil</title>
+  <title>Dynamodb Export to S3 and Query with Athena - Brian Pfeil</title>
   <meta name="author" content="Brian Pfeil"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -43,8 +43,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/brianpfeil.com\/post\/product-development\/",
-          "name": "Product development"
+          "@id": "https:\/\/brianpfeil.com\/post\/dynamodb-export-to-s3-and-query-with-athena\/",
+          "name": "Dynamodb export to s3 and query with athena"
         }
     }]
 }
@@ -55,15 +55,15 @@
   "author": {
     "name" : "Brian Pfeil"
   },
-  "headline": "Product Development",
+  "headline": "Dynamodb Export to S3 and Query with Athena",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  263 ,
-  "datePublished" : "2020-09-03T00:00:00",
-  "dateModified" : "2020-09-03T00:00:00",
+  "wordCount":  194 ,
+  "datePublished" : "2020-11-11T00:00:00",
+  "dateModified" : "2020-11-11T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
-  "keywords" : [ "" ],
-  "mainEntityOfPage" : "https:\/\/brianpfeil.com\/post\/product-development\/",
+  "keywords" : [ "s3, aws, dynamodb, athena" ],
+  "mainEntityOfPage" : "https:\/\/brianpfeil.com\/post\/dynamodb-export-to-s3-and-query-with-athena\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/brianpfeil.com\/",
@@ -77,12 +77,12 @@
 }
 </script>
 
-<meta property="og:title" content="Product Development" />
-<meta property="og:url" content="https://brianpfeil.com/post/product-development/" />
+<meta property="og:title" content="Dynamodb Export to S3 and Query with Athena" />
+<meta property="og:url" content="https://brianpfeil.com/post/dynamodb-export-to-s3-and-query-with-athena/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Brian Pfeil" />
 
-  <meta name="twitter:title" content="Product Development" />
+  <meta name="twitter:title" content="Dynamodb Export to S3 and Query with Athena" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
@@ -261,7 +261,7 @@ if (!doNotTrack) {
 
             
             
-            <h1>Product Development</h1>
+            <h1>Dynamodb Export to S3 and Query with Athena</h1>
             
 
 
@@ -274,13 +274,34 @@ if (!doNotTrack) {
   
   
 
-    September 3, 2020
+    November 11, 2020
 
   
   
   
   
 
+  
+  
+  
+  
+  <span class="blog-tags">
+    &nbsp;&bull;&nbsp;
+    
+    <a href="https://brianpfeil.com//tags/s3/">s3</a>
+    ,
+    
+    <a href="https://brianpfeil.com//tags/aws/">aws</a>
+    ,
+    
+    <a href="https://brianpfeil.com//tags/dynamodb/">dynamodb</a>
+    ,
+    
+    <a href="https://brianpfeil.com//tags/athena/">athena</a>
+    
+    
+  </span>
+  
   
 
 
@@ -302,44 +323,66 @@ if (!doNotTrack) {
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         <div class="alert alert-info small bg-info" role="alert">
-<span class="text-muted">code for article</span>&nbsp;<a href="https://github.com/pfeilbr/product-development-playground" target="_blank"><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/product-development-playground</a>
+<span class="text-muted">code for article</span>&nbsp;<a href="https://github.com/pfeilbr/dynamodb-export-to-s3-and-query-with-athena-playground" target="_blank"><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/dynamodb-export-to-s3-and-query-with-athena-playground</a>
 </div>
-<p>product, product development, strategy</p>
-<hr>
-<h2 id="wardley-mapping">Wardley Mapping</h2>
-<blockquote>
-<p>A Wardley Map is a representation of the landscape in which a business operates. It consists of a value chain (activities needed to fulfill user needs) graphed against evolution (how individual activities change over time under supply and demand competition). A Wardley Map represents the situational awareness and shared assumptions being made about a context and hints at what strategic options are available.</p>
-</blockquote>
-<p>Concise summary of process at <a href="https://miro.com/blog/wardley-maps-whiteboard-canvas/">Understand context and diminish risk: How to build your first Wardley Map with Miro</a></p>
-<p><strong>Key Points</strong></p>
+<p>example exporting dynamodb table to S3 and then querying via athena</p>
+<h2 id="files">Files</h2>
 <ul>
-<li>use mapping as a way to quickly validate solutions and avoid costly mistakes – to identify what to build, buy and outsource</li>
-<li>map minimizes the chance that I’ll miss something important</li>
-<li>a more evolved component can be outsourced and treated like a building block, while a less evolved component usually needs to be built from scratch or given other special consideration (money, time and energy).</li>
-<li>The real danger is in mistreating a more evolved component by building it from scratch.</li>
-<li>Outsourcing highly evolved components is a critical aspect of building cost-effective solutions.</li>
-<li>Since you have limited resources, it makes sense to save them for the components that actually need special treatment.</li>
+<li><a href="template.yaml"><code>template.yaml</code></a></li>
+<li><a href="main.sh"><code>main.sh</code></a></li>
+<li><a href="example-export"><code>example-export/</code></a> - example contents of export (copied from S3)</li>
 </ul>
-<p><strong>Map</strong></p>
-<ul>
-<li>Y-axis - value chain.  invisible (bottom) to visible (top). user at top</li>
-<li>X-axis - genesis <em>(new, uncertain, failure-prone)</em>, custom, product, commodity <em>(old, boring, reliable)</em></li>
-</ul>
-<p><strong>Example(s)</strong></p>
-<p><a href="https://miro.com/blog/wardley-maps-whiteboard-canvas/"><img src="https://www.evernote.com/l/AAHKZEoc9DBFQbWw6fF5n1TSdpFIjK-b_VgB/image.png" alt=""></a></p>
-<p><img src="https://www.evernote.com/l/AAG_M8vz3yRILIqMp5kllpNqz2Y7tVkmLlUB/image.png" alt=""></p>
-<p><strong>Video Showing the Process</strong></p>
-<p><a href="https://www.youtube.com/embed/84vV8fj4Ljg">https://www.youtube.com/embed/84vV8fj4Ljg</a></p>
+<h2 id="running">Running</h2>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">sam deploy --guided
+
+<span class="c1"># update `STACK_NAME` variable in ./main.sh</span>
+<span class="c1"># run export table to s3 script</span>
+./main.sh
+
+aws dynamodb list-exports <span class="c1"># in progress</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+    <span class="nt">&#34;ExportSummaries&#34;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&#34;ExportArn&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:dynamodb:us-east-1:529276214230:table/dynamodb-export-to-s3-and-query-with-athena-playground-v2-MyTable-1WGSJ3W2WJWPK/export/01605130432834-8a918b87&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;ExportStatus&#34;</span><span class="p">:</span> <span class="s2">&#34;IN_PROGRESS&#34;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">aws dynamodb list-exports <span class="c1"># completed</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+    <span class="nt">&#34;ExportSummaries&#34;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&#34;ExportArn&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:dynamodb:us-east-1:529276214230:table/dynamodb-export-to-s3-and-query-with-athena-playground-v2-MyTable-1WGSJ3W2WJWPK/export/01605130432834-8a918b87&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;ExportStatus&#34;</span><span class="p">:</span> <span class="s2">&#34;COMPLETED&#34;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div><p>Example export file contents (line delimited json items)</p>
+<p><code>gzcat example-export/demo_prefix/AWSDynamoDB/01605130432834-8a918b87/data/vajn3deidy4svdja3fgej2ynay.json.gz</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span><span class="nt">&#34;Item&#34;</span><span class="p">:{</span><span class="nt">&#34;pk&#34;</span><span class="p">:{</span><span class="nt">&#34;S&#34;</span><span class="p">:</span><span class="s2">&#34;pk001-1605121017583&#34;</span><span class="p">},</span><span class="nt">&#34;sk&#34;</span><span class="p">:{</span><span class="nt">&#34;S&#34;</span><span class="p">:</span><span class="s2">&#34;sk001&#34;</span><span class="p">}}}</span>
+<span class="p">{</span><span class="nt">&#34;Item&#34;</span><span class="p">:{</span><span class="nt">&#34;pk&#34;</span><span class="p">:{</span><span class="nt">&#34;S&#34;</span><span class="p">:</span><span class="s2">&#34;pk002-1605121017583&#34;</span><span class="p">},</span><span class="nt">&#34;sk&#34;</span><span class="p">:{</span><span class="nt">&#34;S&#34;</span><span class="p">:</span><span class="s2">&#34;sk002&#34;</span><span class="p">}}}</span>
+</code></pre></div><p><strong>Access Exported Data in S3 via Athena</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="c1">-- Create external table in athena pointing to exported S3 data
+</span><span class="c1"></span><span class="k">CREATE</span> <span class="k">EXTERNAL</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">ddb_exported_table</span> <span class="p">(</span>
+  <span class="n">Item</span> <span class="n">struct</span> <span class="o">&lt;</span><span class="n">pk</span><span class="p">:</span><span class="n">struct</span><span class="o">&lt;</span><span class="n">S</span><span class="p">:</span><span class="n">string</span><span class="o">&gt;</span><span class="p">,</span>
+               <span class="n">sk</span><span class="p">:</span><span class="n">struct</span><span class="o">&lt;</span><span class="n">S</span><span class="p">:</span><span class="n">string</span><span class="o">&gt;&gt;</span>
+<span class="p">)</span>
+<span class="k">ROW</span> <span class="n">FORMAT</span> <span class="n">SERDE</span> <span class="s1">&#39;org.openx.data.jsonserde.JsonSerDe&#39;</span>
+<span class="k">LOCATION</span> <span class="s1">&#39;s3://dynamodb-export-to-s3-and-query-with-exportbucket-103kukqwmab7n/demo_prefix/AWSDynamoDB/01605130432834-8a918b87/data/&#39;</span>
+<span class="n">TBLPROPERTIES</span> <span class="p">(</span> <span class="s1">&#39;has_encrypted_data&#39;</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="p">);</span>
+
+<span class="c1">-- issues SELECT query
+</span><span class="c1"></span><span class="k">SELECT</span>
+    <span class="n">Item</span><span class="p">.</span><span class="n">pk</span><span class="p">.</span><span class="n">S</span> <span class="k">as</span> <span class="n">pk</span><span class="p">,</span>
+    <span class="n">Item</span><span class="p">.</span><span class="n">sk</span><span class="p">.</span><span class="n">S</span> <span class="k">as</span> <span class="n">sk</span>
+<span class="k">FROM</span> <span class="n">ddb_exported_table</span>
+</code></pre></div><p>Screenshot from Athena Console</p>
+<p><img src="https://www.evernote.com/l/AAH1H1K1GLJAp72MXnQvHCiOBLxptt9FkrYB/image.png" alt=""></p>
 <h2 id="resources">Resources</h2>
 <ul>
-<li><a href="wardley-map-powerpoint-template.potx"><code>wardley-map-powerpoint-template.potx</code></a></li>
-<li><a href="https://wardley-maps-community.github.io/awesome-wardley-maps/">wardley-maps-community.github.io/awesome-wardley-maps˝</a></li>
-<li><a href="https://medium.com/wardleymaps">medium.com/wardleymaps</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Wardley_map">Wardley map - Wikipedia</a></li>
-<li><a href="https://hiredthought.com/2018/09/01/intro-to-wardley-mapping/">Intro to Wardley Mapping</a></li>
-<li><a href="https://miro.com/blog/wardley-maps-whiteboard-canvas/">Understand context and diminish risk: How to build your first Wardley Map with Miro</a></li>
-<li><a href="https://twitter.com/swardley">https://twitter.com/swardley</a></li>
-<li><a href="https://twitter.com/dvassallo">https://twitter.com/dvassallo</a></li>
+<li><a href="https://aws.amazon.com/blogs/aws/new-export-amazon-dynamodb-table-data-to-data-lake-amazon-s3/">New – Export Amazon DynamoDB Table Data to Your Data Lake in Amazon S3, No Code Writing Required</a></li>
+<li><a href="https://aws.amazon.com/about-aws/whats-new/2020/11/now-you-can-export-your-amazon-dynamodb-table-data-to-your-data-lake-in-amazon-s3-to-perform-analytics-at-any-scale/">Now you can export your Amazon DynamoDB table data to your data lake in Amazon S3 to perform analytics at any scale</a></li>
+<li><a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DataExport.html">Exporting DynamoDB table data to Amazon S3</a></li>
 </ul>
 
 
@@ -352,10 +395,10 @@ if (!doNotTrack) {
         <section id="social-share">
           <div class="list-inline footer-links text-center">
             <span class="text-muted">share on</span><br />
-            <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fproduct-development%2f&amp;text=Product%20Development&amp;via=pfeilbr"
+            <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fdynamodb-export-to-s3-and-query-with-athena%2f&amp;text=Dynamodb%20Export%20to%20S3%20and%20Query%20with%20Athena&amp;via=pfeilbr"
               target="_blank" title="Share on Twitter">Twitter</a>
             &nbsp;&bull;&nbsp;
-            <a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fproduct-development%2f&amp;title=Product%20Development" target="_blank"
+            <a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fdynamodb-export-to-s3-and-query-with-athena%2f&amp;title=Dynamodb%20Export%20to%20S3%20and%20Query%20with%20Athena" target="_blank"
               title="Share on Reddit">
               Reddit
             </a>
@@ -373,6 +416,11 @@ if (!doNotTrack) {
 
         
         
+        
+        
+
+        
+        
 
         
         
@@ -382,15 +430,10 @@ if (!doNotTrack) {
       <ul class="pager blog-pager">
         
         <li class="previous">
-          <a href="https://brianpfeil.com/post/ant-design-pro/" data-toggle="tooltip" data-placement="top"
-            title="Ant Design Pro">&larr; Ant Design Pro</a>
+          <a href="https://brianpfeil.com/post/aws-database-migration-service/" data-toggle="tooltip" data-placement="top"
+            title="AWS Database Migration Service">&larr; AWS Database Migration Service</a>
         </li>
         
-        
-        <li class="next">
-          <a href="https://brianpfeil.com/post/aws-appflow-veeva-vault-to-s3/" data-toggle="tooltip" data-placement="top"
-            title="AWS AppFlow Veeva Vault to S3">AWS AppFlow Veeva Vault to S3 &rarr;</a>
-        </li>
         
       </ul>
       
