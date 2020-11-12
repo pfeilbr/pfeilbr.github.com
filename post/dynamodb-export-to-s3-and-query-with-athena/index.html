@@ -58,11 +58,11 @@
   "headline": "Dynamodb Export to S3 and Query with Athena",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  194 ,
+  "wordCount":  230 ,
   "datePublished" : "2020-11-11T00:00:00",
   "dateModified" : "2020-11-11T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
-  "keywords" : [ "s3, aws, dynamodb, athena" ],
+  "keywords" : [ "dynamodb, s3, aws, athena" ],
   "mainEntityOfPage" : "https:\/\/brianpfeil.com\/post\/dynamodb-export-to-s3-and-query-with-athena\/",
   "publisher" : {
     "@type": "Organization",
@@ -288,13 +288,13 @@ if (!doNotTrack) {
   <span class="blog-tags">
     &nbsp;&bull;&nbsp;
     
+    <a href="https://brianpfeil.com//tags/dynamodb/">dynamodb</a>
+    ,
+    
     <a href="https://brianpfeil.com//tags/s3/">s3</a>
     ,
     
     <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/dynamodb/">dynamodb</a>
     ,
     
     <a href="https://brianpfeil.com//tags/athena/">athena</a>
@@ -334,6 +334,8 @@ if (!doNotTrack) {
 </ul>
 <h2 id="running">Running</h2>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">sam deploy --guided
+<span class="c1"># note: seed data is generated as part of deploy via cfn custom resource `Custom::SeedData`</span>
+<span class="c1"># which triggers a lambda which populates the dynamodb table</span>
 
 <span class="c1"># update `STACK_NAME` variable in ./main.sh</span>
 <span class="c1"># run export table to s3 script</span>
@@ -383,6 +385,7 @@ aws dynamodb list-exports <span class="c1"># in progress</span>
 <li><a href="https://aws.amazon.com/blogs/aws/new-export-amazon-dynamodb-table-data-to-data-lake-amazon-s3/">New – Export Amazon DynamoDB Table Data to Your Data Lake in Amazon S3, No Code Writing Required</a></li>
 <li><a href="https://aws.amazon.com/about-aws/whats-new/2020/11/now-you-can-export-your-amazon-dynamodb-table-data-to-your-data-lake-in-amazon-s3-to-perform-analytics-at-any-scale/">Now you can export your Amazon DynamoDB table data to your data lake in Amazon S3 to perform analytics at any scale</a></li>
 <li><a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DataExport.html">Exporting DynamoDB table data to Amazon S3</a></li>
+<li><a href="https://aws.amazon.com/blogs/infrastructure-and-automation/aws-cloudformation-custom-resource-creation-with-python-aws-lambda-and-crhelper/">AWS CloudFormation custom resource creation with Python, AWS Lambda, and crhelper</a></li>
 </ul>
 
 
