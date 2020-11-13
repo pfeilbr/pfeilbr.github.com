@@ -6,10 +6,19 @@
     <description>Recent content in Python on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Oct 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2020 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/categories/Python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Serverless Flask</title>
+      <link>https://brianpfeil.com/post/serverless-flask/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/serverless-flask/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>AWS Kendra</title>

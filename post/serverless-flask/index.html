@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>playground - Brian Pfeil</title>
+  <title>Serverless Flask - Brian Pfeil</title>
   <meta name="author" content="Brian Pfeil"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -28,13 +28,61 @@
   
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/brianpfeil.com\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/brianpfeil.com\/post\/serverless-flask\/",
+          "name": "Serverless flask"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Brian Pfeil"
+  },
+  "headline": "Serverless Flask",
+  "description" : "",
+  "inLanguage" : "en",
+  "wordCount":  111 ,
+  "datePublished" : "2020-11-13T00:00:00",
+  "dateModified" : "2020-11-13T00:00:00",
+  "image" : "https:\/\/brianpfeil.com\/",
+  "keywords" : [ "serverless, flask, aws, python, lambda, api-gateway" ],
+  "mainEntityOfPage" : "https:\/\/brianpfeil.com\/post\/serverless-flask\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/brianpfeil.com\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/brianpfeil.com\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
 
-<meta property="og:title" content="playground" />
-<meta property="og:url" content="https://brianpfeil.com/categories/playground/" />
+<meta property="og:title" content="Serverless Flask" />
+<meta property="og:url" content="https://brianpfeil.com/post/serverless-flask/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Brian Pfeil" />
 
-  <meta name="twitter:title" content="playground" />
+  <meta name="twitter:title" content="Serverless Flask" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
@@ -208,23 +256,64 @@ if (!doNotTrack) {
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <div class="categories-heading">
+          <div class="post-heading">
             
 
             
             
-            <h1>playground</h1>
+            <h1>Serverless Flask</h1>
             
 
 
 
             
             
+            
+            
+            <span class="post-meta">
+  
+  
 
-            
+    November 13, 2020
 
-            
-            
+  
+  
+  
+  
+
+  
+  
+  
+  
+  <span class="blog-tags">
+    &nbsp;&bull;&nbsp;
+    
+    <a href="https://brianpfeil.com//tags/serverless/">serverless</a>
+    ,
+    
+    <a href="https://brianpfeil.com//tags/flask/">flask</a>
+    ,
+    
+    <a href="https://brianpfeil.com//tags/aws/">aws</a>
+    ,
+    
+    <a href="https://brianpfeil.com//tags/python/">python</a>
+    ,
+    
+    <a href="https://brianpfeil.com//tags/lambda/">lambda</a>
+    ,
+    
+    <a href="https://brianpfeil.com//tags/api-gateway/">api-gateway</a>
+    
+    
+  </span>
+  
+  
+
+
+  
+  
+</span>
             
           </div>
         </div>
@@ -234,557 +323,104 @@ if (!doNotTrack) {
 </header>
 
     
-  <div class="container" role="main">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <div class="alert alert-info small bg-info" role="alert">
+<span class="text-muted">code for article</span>&nbsp;<a href="https://github.com/pfeilbr/serverless-flask-playground" target="_blank"><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/serverless-flask-playground</a>
+</div>
+<p>Example of running python <a href="https://flask.palletsprojects.com/">Flask</a> app on Lambda + API Gateway via <a href="https://www.serverless.com/">serverless framework</a>.  Based on <a href="https://www.serverless.com/blog/flask-python-rest-api-serverless-lambda-dynamodb">Build a Python REST API with Serverless, Lambda, and DynamoDB</a>.</p>
+<h2 id="architecture">Architecture</h2>
+<p><img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/guides/serverless-flask/serverless-flask-architecture.png" alt=""></p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li><a href="https://www.serverless.com/">serverless framework</a></li>
+<li><a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a></li>
+<li>Python 3.8</li>
+<li><a href="https://github.com/pypa/pipenv">pipenv</a></li>
+</ul>
+<h2 id="running">Running</h2>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># ensure python venv loaded in shell</span>
+pipenv shell
+
+<span class="c1"># install npm deps for serverless</span>
+npm install
+
+<span class="c1"># run flash app locally.  server reloads on file change.  still need to refresh page in browser</span>
+npm run dev
+
+<span class="c1"># deploy. (docker must be running to build python packages for linux target / lambda)</span>
+npm run deploy
+</code></pre></div><h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://www.serverless.com/flask">The Official Guide to Serverless Flask</a></li>
+<li><a href="https://www.serverless.com/blog/flask-python-rest-api-serverless-lambda-dynamodb">Build a Python REST API with Serverless, Lambda, and DynamoDB</a></li>
+</ul>
+
+
         
-        <div class="posts-list">
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/react-redux/">
-        <h2 class="post-title">React Redux</h2>
+
         
-        
-        
-    </a>
 
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
+        <hr />
 
-    May 4, 2016
+        <section id="social-share">
+          <div class="list-inline footer-links text-center">
+            <span class="text-muted">share on</span><br />
+            <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fserverless-flask%2f&amp;text=Serverless%20Flask&amp;via=pfeilbr"
+              target="_blank" title="Share on Twitter">Twitter</a>
+            &nbsp;&bull;&nbsp;
+            <a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fserverless-flask%2f&amp;title=Serverless%20Flask" target="_blank"
+              title="Share on Reddit">
+              Reddit
+            </a>
 
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/react/">react</a>
-    
-    
-  </span>
-  
-  
+          </div>
 
 
-  
-  
-</span>
-    </p>
-    
 
-    
-    
-    
+        </section>
 
 
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/typings/">
-        <h2 class="post-title">Typings</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    May 2, 2016
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/typescript/">typescript</a>
-    
-    
-  </span>
-  
-  
 
 
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
 
 
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/nexe/">
-        <h2 class="post-title">Nexe</h2>
         
         
         
-    </a>
+        
 
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    April 5, 2016
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/nodejs/">nodejs</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/distribution/">distribution</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/packaging/">packaging</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/tools/">tools</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/node-odata/">
-        <h2 class="post-title">Node OData</h2>
         
         
-        
-    </a>
 
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    March 18, 2016
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/nodejs/">nodejs</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/odata/">odata</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/angular2/">
-        <h2 class="post-title">Angular2</h2>
         
         
+      </article>
+
+      
+      <ul class="pager blog-pager">
         
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    January 13, 2016
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/angular/">angular</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/framework/">framework</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/beefy/">
-        <h2 class="post-title">Beefy</h2>
+        <li class="previous">
+          <a href="https://brianpfeil.com/post/dynamodb-export-to-s3-and-query-with-athena/" data-toggle="tooltip" data-placement="top"
+            title="Dynamodb Export to S3 and Query with Athena">&larr; Dynamodb Export to S3 and Query with Athena</a>
+        </li>
         
         
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    October 16, 2015
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/nodejs/">nodejs</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/tools/">tools</a>
-    
-    
-  </span>
-  
-  
+      </ul>
+      
 
 
-  
-  
-</span>
-    </p>
-    
+      
+      
+      
+      
 
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/cordova/">
-        <h2 class="post-title">Cordova</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    October 15, 2015
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/mobile/">mobile</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/ios/">ios</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/framework/">framework</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/flexbox/">
-        <h2 class="post-title">Flexbox</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    October 15, 2015
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/css/">css</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/node-coveralls/">
-        <h2 class="post-title">Node Coveralls</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    September 29, 2015
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/testing/">testing</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/nodejs/">nodejs</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/heroku-deploy/">
-        <h2 class="post-title">Heroku Deploy</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    September 23, 2015
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/heroku/">heroku</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-        </div>
-        
-          <ul class="pager main-pager">
-            
-              <li class="previous">
-                <a href="https://brianpfeil.com/categories/playground/page/17/">&larr; Newer Posts</a>
-              </li>
-            
-            
-              <li class="next">
-                <a href="https://brianpfeil.com/categories/playground/page/19/">Older Posts &rarr;</a>
-              </li>
-            
-          </ul>
-        
-      </div>
     </div>
   </div>
+</div>
 
     
 <footer>
