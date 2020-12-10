@@ -6,10 +6,46 @@
     <description>Recent content in Tags on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Nov 2020 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 10 Dec 2020 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>architecture</title>
+      <link>https://brianpfeil.com/tags/architecture/</link>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>diagrams</title>
+      <link>https://brianpfeil.com/tags/diagrams/</link>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/diagrams/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>visualize</title>
+      <link>https://brianpfeil.com/tags/visualize/</link>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/visualize/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://brianpfeil.com/tags/python/</link>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/python/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>api-gateway</title>
@@ -44,15 +80,6 @@
       <pubDate>Fri, 13 Nov 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/tags/lambda/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://brianpfeil.com/tags/python/</link>
-      <pubDate>Fri, 13 Nov 2020 00:00:00 -0500</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/python/</guid>
       <description></description>
     </item>
     
@@ -287,33 +314,6 @@
       <pubDate>Fri, 02 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/github/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>architecture</title>
-      <link>https://brianpfeil.com/tags/architecture/</link>
-      <pubDate>Thu, 01 Oct 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/architecture/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>diagrams</title>
-      <link>https://brianpfeil.com/tags/diagrams/</link>
-      <pubDate>Thu, 01 Oct 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/diagrams/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>visualize</title>
-      <link>https://brianpfeil.com/tags/visualize/</link>
-      <pubDate>Thu, 01 Oct 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/visualize/</guid>
       <description></description>
     </item>
     
