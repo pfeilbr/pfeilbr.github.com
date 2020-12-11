@@ -3,17 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://brianpfeil.com/categories/nil/</loc>
-    <lastmod>2020-12-10T00:00:00-05:00</lastmod>
+    <loc>https://brianpfeil.com/tags/architecture/</loc>
+    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/tags/architecture/</loc>
-    <lastmod>2020-12-10T00:00:00-05:00</lastmod>
+    <loc>https://brianpfeil.com/post/architecture-notes-and-resources/</loc>
+    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://brianpfeil.com/</loc>
+    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/</loc>
+    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/</loc>
+    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/nil/</loc>
     <lastmod>2020-12-10T00:00:00-05:00</lastmod>
   </url>
   
@@ -34,16 +49,6 @@
   
   <url>
     <loc>https://brianpfeil.com/categories/playground/</loc>
-    <lastmod>2020-12-10T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/post/</loc>
-    <lastmod>2020-12-10T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/</loc>
     <lastmod>2020-12-10T00:00:00-05:00</lastmod>
   </url>
   
