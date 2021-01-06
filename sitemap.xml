@@ -3,6 +3,56 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://brianpfeil.com/tags/aws/</loc>
+    <lastmod>2021-01-06T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-data-wrangler/</loc>
+    <lastmod>2021-01-06T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/</loc>
+    <lastmod>2021-01-06T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/</loc>
+    <lastmod>2021-01-06T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/data/</loc>
+    <lastmod>2021-01-06T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/playground/</loc>
+    <lastmod>2021-01-06T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/</loc>
+    <lastmod>2021-01-06T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/Python/</loc>
+    <lastmod>2021-01-06T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/python/</loc>
+    <lastmod>2021-01-06T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/</loc>
+    <lastmod>2021-01-06T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://brianpfeil.com/tags/architecture/</loc>
     <lastmod>2020-12-11T00:00:00+00:00</lastmod>
   </url>
@@ -13,27 +63,7 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/</loc>
-    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/post/</loc>
-    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/</loc>
-    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/categories/nil/</loc>
-    <lastmod>2020-12-10T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/</loc>
     <lastmod>2020-12-10T00:00:00-05:00</lastmod>
   </url>
   
@@ -48,18 +78,8 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/categories/playground/</loc>
-    <lastmod>2020-12-10T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/tags/visualize/</loc>
     <lastmod>2020-12-10T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/Python/</loc>
-    <lastmod>2020-11-20T00:00:00-05:00</lastmod>
   </url>
   
   <url>
@@ -68,17 +88,7 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/tags/python/</loc>
-    <lastmod>2020-11-20T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/tags/api-gateway/</loc>
-    <lastmod>2020-11-13T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/aws/</loc>
     <lastmod>2020-11-13T00:00:00-05:00</lastmod>
   </url>
   
