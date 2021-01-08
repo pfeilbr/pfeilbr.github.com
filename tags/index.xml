@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Jan 2021 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 08 Jan 2021 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,36 @@
     <item>
       <title>aws</title>
       <link>https://brianpfeil.com/tags/aws/</link>
-      <pubDate>Wed, 06 Jan 2021 00:00:00 -0500</pubDate>
+      <pubDate>Fri, 08 Jan 2021 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lambda</title>
+      <link>https://brianpfeil.com/tags/lambda/</link>
+      <pubDate>Fri, 08 Jan 2021 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/lambda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sam</title>
+      <link>https://brianpfeil.com/tags/sam/</link>
+      <pubDate>Fri, 08 Jan 2021 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/sam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cli</title>
+      <link>https://brianpfeil.com/tags/cli/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/cli/</guid>
       <description></description>
     </item>
     
@@ -80,15 +107,6 @@
       <pubDate>Fri, 13 Nov 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/tags/flask/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>lambda</title>
-      <link>https://brianpfeil.com/tags/lambda/</link>
-      <pubDate>Fri, 13 Nov 2020 00:00:00 -0500</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/lambda/</guid>
       <description></description>
     </item>
     
@@ -300,15 +318,6 @@
     </item>
     
     <item>
-      <title>cli</title>
-      <link>https://brianpfeil.com/tags/cli/</link>
-      <pubDate>Fri, 02 Oct 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/cli/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>git</title>
       <link>https://brianpfeil.com/tags/git/</link>
       <pubDate>Fri, 02 Oct 2020 00:00:00 -0400</pubDate>
@@ -458,15 +467,6 @@
       <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/tools/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sam</title>
-      <link>https://brianpfeil.com/tags/sam/</link>
-      <pubDate>Fri, 14 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/sam/</guid>
       <description></description>
     </item>
     

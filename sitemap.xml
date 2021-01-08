@@ -4,21 +4,66 @@
   
   <url>
     <loc>https://brianpfeil.com/tags/aws/</loc>
-    <lastmod>2021-01-06T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/post/aws-data-wrangler/</loc>
-    <lastmod>2021-01-06T00:00:00-05:00</lastmod>
+    <lastmod>2021-01-08T00:00:00-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://brianpfeil.com/</loc>
-    <lastmod>2021-01-06T00:00:00-05:00</lastmod>
+    <lastmod>2021-01-08T00:00:00-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://brianpfeil.com/categories/</loc>
+    <lastmod>2021-01-08T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/lambda/</loc>
+    <lastmod>2021-01-08T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/playground/</loc>
+    <lastmod>2021-01-08T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/</loc>
+    <lastmod>2021-01-08T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/Python/</loc>
+    <lastmod>2021-01-08T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/sam/</loc>
+    <lastmod>2021-01-08T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/sam-lambda-layers/</loc>
+    <lastmod>2021-01-08T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/</loc>
+    <lastmod>2021-01-08T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/cli/</loc>
+    <lastmod>2021-01-07T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/click-cli/</loc>
+    <lastmod>2021-01-07T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-data-wrangler/</loc>
     <lastmod>2021-01-06T00:00:00-05:00</lastmod>
   </url>
   
@@ -28,27 +73,7 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/categories/playground/</loc>
-    <lastmod>2021-01-06T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/post/</loc>
-    <lastmod>2021-01-06T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/Python/</loc>
-    <lastmod>2021-01-06T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/tags/python/</loc>
-    <lastmod>2021-01-06T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/</loc>
     <lastmod>2021-01-06T00:00:00-05:00</lastmod>
   </url>
   
@@ -94,11 +119,6 @@
   
   <url>
     <loc>https://brianpfeil.com/tags/flask/</loc>
-    <lastmod>2020-11-13T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/lambda/</loc>
     <lastmod>2020-11-13T00:00:00-05:00</lastmod>
   </url>
   
@@ -303,11 +323,6 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/tags/cli/</loc>
-    <lastmod>2020-10-02T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/tags/git/</loc>
     <lastmod>2020-10-02T00:00:00-04:00</lastmod>
   </url>
@@ -474,11 +489,6 @@
   
   <url>
     <loc>https://brianpfeil.com/post/aws-sam-step-functions/</loc>
-    <lastmod>2020-08-14T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/sam/</loc>
     <lastmod>2020-08-14T00:00:00-04:00</lastmod>
   </url>
   

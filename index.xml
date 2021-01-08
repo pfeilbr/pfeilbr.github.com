@@ -6,10 +6,28 @@
     <description>Recent content on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Jan 2021 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 08 Jan 2021 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SAM Lambda Layers</title>
+      <link>https://brianpfeil.com/post/sam-lambda-layers/</link>
+      <pubDate>Fri, 08 Jan 2021 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/sam-lambda-layers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Click CLI</title>
+      <link>https://brianpfeil.com/post/click-cli/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/click-cli/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>AWS Data Wrangler</title>

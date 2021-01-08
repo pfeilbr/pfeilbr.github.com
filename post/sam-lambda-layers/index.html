@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Python - Brian Pfeil</title>
+  <title>SAM Lambda Layers - Brian Pfeil</title>
   <meta name="author" content="Brian Pfeil"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -28,13 +28,61 @@
   
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/brianpfeil.com\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/brianpfeil.com\/post\/sam-lambda-layers\/",
+          "name": "S a m lambda layers"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Brian Pfeil"
+  },
+  "headline": "SAM Lambda Layers",
+  "description" : "",
+  "inLanguage" : "en",
+  "wordCount":  52 ,
+  "datePublished" : "2021-01-08T00:00:00",
+  "dateModified" : "2021-01-08T00:00:00",
+  "image" : "https:\/\/brianpfeil.com\/",
+  "keywords" : [ "sam, lambda, aws" ],
+  "mainEntityOfPage" : "https:\/\/brianpfeil.com\/post\/sam-lambda-layers\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/brianpfeil.com\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/brianpfeil.com\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
 
-<meta property="og:title" content="Python" />
-<meta property="og:url" content="https://brianpfeil.com/categories/Python/" />
+<meta property="og:title" content="SAM Lambda Layers" />
+<meta property="og:url" content="https://brianpfeil.com/post/sam-lambda-layers/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Brian Pfeil" />
 
-  <meta name="twitter:title" content="Python" />
+  <meta name="twitter:title" content="SAM Lambda Layers" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
@@ -208,23 +256,55 @@ if (!doNotTrack) {
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <div class="categories-heading">
+          <div class="post-heading">
             
 
             
             
-            <h1>Python</h1>
+            <h1>SAM Lambda Layers</h1>
             
 
 
 
             
             
+            
+            
+            <span class="post-meta">
+  
+  
 
-            
+    January 8, 2021
 
-            
-            
+  
+  
+  
+  
+
+  
+  
+  
+  
+  <span class="blog-tags">
+    &nbsp;&bull;&nbsp;
+    
+    <a href="https://brianpfeil.com//tags/sam/">sam</a>
+    ,
+    
+    <a href="https://brianpfeil.com//tags/lambda/">lambda</a>
+    ,
+    
+    <a href="https://brianpfeil.com//tags/aws/">aws</a>
+    
+    
+  </span>
+  
+  
+
+
+  
+  
+</span>
             
           </div>
         </div>
@@ -234,279 +314,94 @@ if (!doNotTrack) {
 </header>
 
     
-  <div class="container" role="main">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <div class="alert alert-info small bg-info" role="alert">
+<span class="text-muted">code for article</span>&nbsp;<a href="https://github.com/pfeilbr/sam-lambda-layers-playground" target="_blank"><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/sam-lambda-layers-playground</a>
+</div>
+<p>learn <a href="https://aws.amazon.com/blogs/compute/working-with-aws-lambda-and-lambda-layers-in-aws-sam/">SAM lambda layers</a></p>
+<h2 id="running-example">Running Example</h2>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">cd</span> lambda-layer-python
+
+sam build
+
+<span class="c1"># run lambda with layer locally</span>
+<span class="c1"># `--force-image-build` to clear out layer cache</span>
+sam <span class="nb">local</span> invoke --force-image-build
+
+<span class="c1"># start local api endpoint</span>
+sam <span class="nb">local</span> start-api --force-image-build
+curl http://127.0.0.1:3000/
+</code></pre></div><h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://aws.amazon.com/blogs/compute/working-with-aws-lambda-and-lambda-layers-in-aws-sam/">Working with AWS Lambda and Lambda Layers in AWS SAM</a></li>
+</ul>
+
+
         
-        <div class="posts-list">
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/python-packaging/">
-        <h2 class="post-title">Python Packaging</h2>
+
         
-        
-        
-    </a>
 
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
+        <hr />
 
-    August 7, 2019
+        <section id="social-share">
+          <div class="list-inline footer-links text-center">
+            <span class="text-muted">share on</span><br />
+            <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fsam-lambda-layers%2f&amp;text=SAM%20Lambda%20Layers&amp;via=pfeilbr"
+              target="_blank" title="Share on Twitter">Twitter</a>
+            &nbsp;&bull;&nbsp;
+            <a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fsam-lambda-layers%2f&amp;title=SAM%20Lambda%20Layers" target="_blank"
+              title="Share on Reddit">
+              Reddit
+            </a>
 
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/python/">python</a>
-    
-    
-  </span>
-  
-  
+          </div>
 
 
-  
-  
-</span>
-    </p>
-    
 
-    
-    
-    
+        </section>
 
 
-    
 
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/python-tox-testing/">
-        <h2 class="post-title">Python Tox Testing</h2>
+
+
+
         
         
         
-    </a>
+        
 
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    August 6, 2019
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/python/">python</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/serverless-python/">
-        <h2 class="post-title">Serverless Python</h2>
         
         
-        
-    </a>
 
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    November 10, 2017
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/serverless/">serverless</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/python/">python</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/boto/">
-        <h2 class="post-title">Boto</h2>
         
         
+      </article>
+
+      
+      <ul class="pager blog-pager">
         
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    October 30, 2017
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/boto/">boto</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/spark/">
-        <h2 class="post-title">Spark</h2>
+        <li class="previous">
+          <a href="https://brianpfeil.com/post/click-cli/" data-toggle="tooltip" data-placement="top"
+            title="Click CLI">&larr; Click CLI</a>
+        </li>
         
         
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    June 5, 2015
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/spark/">spark</a>
-    
-    
-  </span>
-  
-  
+      </ul>
+      
 
 
-  
-  
-</span>
-    </p>
-    
+      
+      
+      
+      
 
-    
-    
-    
-
-
-    
-
-</article>
-          
-        </div>
-        
-          <ul class="pager main-pager">
-            
-              <li class="previous">
-                <a href="https://brianpfeil.com/categories/Python/page/1/">&larr; Newer Posts</a>
-              </li>
-            
-            
-          </ul>
-        
-      </div>
     </div>
   </div>
+</div>
 
     
 <footer>
