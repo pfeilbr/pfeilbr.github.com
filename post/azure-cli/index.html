@@ -58,7 +58,7 @@
   "headline": "Azure CLI",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  288 ,
+  "wordCount":  370 ,
   "datePublished" : "2019-05-14T00:00:00",
   "dateModified" : "2019-05-14T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -369,6 +369,26 @@ az role assignment list --assignee <span class="s1">&#39;dev01@brianpfeilgmail.o
 
 <span class="c1"># list role assignments for user (object id)</span>
 az role assignment list --assignee <span class="s1">&#39;38d35c72-5a26-464c-bbb3-c4487a1d4779&#39;</span>
+
+<span class="c1"># list role assignments for service principal</span>
+az role assignment list --assignee <span class="s2">&#34;http://service-principal-01&#34;</span>
+
+<span class="c1"># reset service principal password.  if you forgot or lost it, this is the only way to get it.</span>
+az ad sp credential reset --name <span class="s2">&#34;http://service-principal-01&#34;</span>
+
+<span class="c1"># output</span>
+<span class="c1"># {</span>
+<span class="c1">#   &#34;appId&#34;: &#34;00133c8e-a08e-490e-ae7c-872ea2debf1e&#34;,</span>
+<span class="c1">#   &#34;name&#34;: &#34;http://service-principal-01&#34;,</span>
+<span class="c1">#   &#34;password&#34;: &#34;09tGSBcRsl_Gml7DI7VkRniFu_r_xxxxxx&#34;,</span>
+<span class="c1">#   &#34;tenant&#34;: &#34;b0579be4-503f-48ca-9bd2-ca22100857dd&#34;</span>
+<span class="c1"># }</span>
+
+<span class="c1"># login with service principal</span>
+az login --service-principal --username <span class="s2">&#34;http://service-principal-01&#34;</span> --password <span class="s2">&#34;09tGSBcRsl_Gml7DI7VkRniFu_r_xxxxxx&#34;</span> --tenant <span class="s2">&#34;b0579be4-503f-48ca-9bd2-ca22100857dd&#34;</span>
+
+<span class="c1"># show service principal details</span>
+az ad sp show --id <span class="s2">&#34;http://service-principal-01&#34;</span>
 
 <span class="c1"># create resource group</span>
 az group create --name <span class="s2">&#34;group01&#34;</span> --location eastus

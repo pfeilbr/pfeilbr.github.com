@@ -58,7 +58,7 @@
   "headline": "SAM Lambda Layers",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  52 ,
+  "wordCount":  66 ,
   "datePublished" : "2021-01-08T00:00:00",
   "dateModified" : "2021-01-08T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -335,6 +335,12 @@ sam <span class="nb">local</span> invoke --force-image-build
 <span class="c1"># start local api endpoint</span>
 sam <span class="nb">local</span> start-api --force-image-build
 curl http://127.0.0.1:3000/
+
+<span class="c1"># deploy</span>
+sam deploy --guided
+
+<span class="c1"># run lambda behind api gateway endpoint</span>
+curl https://hl6u5bubr4.execute-api.us-east-1.amazonaws.com/Prod/
 </code></pre></div><h2 id="resources">Resources</h2>
 <ul>
 <li><a href="https://aws.amazon.com/blogs/compute/working-with-aws-lambda-and-lambda-layers-in-aws-sam/">Working with AWS Lambda and Lambda Layers in AWS SAM</a></li>
@@ -389,6 +395,11 @@ curl http://127.0.0.1:3000/
             title="Click CLI">&larr; Click CLI</a>
         </li>
         
+        
+        <li class="next">
+          <a href="https://brianpfeil.com/post/azure-functions/" data-toggle="tooltip" data-placement="top"
+            title="Azure Functions">Azure Functions &rarr;</a>
+        </li>
         
       </ul>
       
