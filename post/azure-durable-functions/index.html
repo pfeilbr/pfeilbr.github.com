@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Azure Durable Functions - Brian Pfeil</title>
+  <meta name="author" content="Brian Pfeil"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Brian Pfeil",
+    
+    "url": "https:\/\/brianpfeil.com\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/brianpfeil.com\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/brianpfeil.com\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/brianpfeil.com\/post\/azure-durable-functions\/",
+          "name": "Azure durable functions"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Brian Pfeil"
+  },
+  "headline": "Azure Durable Functions",
+  "description" : "",
+  "inLanguage" : "en",
+  "wordCount":  513 ,
+  "datePublished" : "2021-02-05T00:00:00",
+  "dateModified" : "2021-02-05T00:00:00",
+  "image" : "https:\/\/brianpfeil.com\/",
+  "keywords" : [ "azure" ],
+  "mainEntityOfPage" : "https:\/\/brianpfeil.com\/post\/azure-durable-functions\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/brianpfeil.com\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/brianpfeil.com\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Azure Durable Functions" />
+<meta property="og:url" content="https://brianpfeil.com/post/azure-durable-functions/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Brian Pfeil" />
+
+  <meta name="twitter:title" content="Azure Durable Functions" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@pfeilbr" />
+  <meta name="twitter:creator" content="@pfeilbr" />
+  <meta name="generator" content="Hugo 0.74.3" />
+  <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://brianpfeil.com/css/highlight.min.css" /><link rel="stylesheet" href="https://brianpfeil.com/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+<link rel="stylesheet" href="https://brianpfeil.com/css/custom.css" />
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-610553-4', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+
+
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      
+      <a class="navbar-brand" href="https://brianpfeil.com/">Brian Pfeil</a>
+      
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+
+      <ul class="nav navbar-nav navbar-right">
+        
+        
+        <li>
+          <a title="about" href="/about/">about</a>
+        </li>
+        
+
+        
+        
+        <li>
+          <a title="posts" href="/">posts</a>
+        </li>
+        
+
+        
+        
+        <li>
+          <a title="projects" href="/projects/">projects</a>
+        </li>
+        
+
+        
+        
+        <li>
+          <a title="tags" href="/tags/">tags</a>
+        </li>
+        
+
+        
+
+        
+
+        
+
+        <li>
+          
+          <a id="dark-mode-toggle">
+            <i class="fa fa-moon hidden" id="dark-mode-enabled-icon" aria-hidden="true"></i>
+            <i class="fa fa-sun hidden" id="dark-mode-disabled-icon" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header-section ">
+  
+  <div class="intro-header no-img">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div class="post-heading">
+            
+
+            
+            
+            <h1>Azure Durable Functions</h1>
+            
+
+
+
+            
+            
+            
+            
+            <span class="post-meta">
+  
+  
+
+    February 5, 2021
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+  <span class="blog-tags">
+    &nbsp;&bull;&nbsp;
+    
+    <a href="https://brianpfeil.com//tags/azure/">azure</a>
+    
+    
+  </span>
+  
+  
+
+
+  
+  
+</span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+    
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <div class="alert alert-info small bg-info" role="alert">
+<span class="text-muted">code for article</span>&nbsp;<a href="https://github.com/pfeilbr/azure-durable-functions-playground" target="_blank"><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/azure-durable-functions-playground</a>
+</div>
+<p>learn Azure <a href="https://docs.microsoft.com/en-us/azure/azure-functions/durable/">Durable Functions</a></p>
+<h2 id="running">Running</h2>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">LOCATION</span><span class="o">=</span>eastus
+<span class="nv">BASE_NAME</span><span class="o">=</span>durable-fns-playground-01
+<span class="nv">RESOURCE_GROUP</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">BASE_NAME</span><span class="si">}</span><span class="s2">&#34;</span>
+<span class="nv">STORAGE_ACCOUNT</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$BASE_NAME</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/-//g&#39;</span><span class="k">)</span>
+<span class="nv">FUNCTION_APP</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$BASE_NAME</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/-//g&#39;</span><span class="k">)</span>
+
+<span class="c1"># create resource group</span>
+az group create <span class="se">\
+</span><span class="se"></span>    --name <span class="s2">&#34;</span><span class="si">${</span><span class="nv">RESOURCE_GROUP</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span><span class="se"></span>    --location <span class="s2">&#34;</span><span class="si">${</span><span class="nv">LOCATION</span><span class="si">}</span><span class="s2">&#34;</span>
+
+<span class="c1"># create storage account</span>
+az storage account create <span class="se">\
+</span><span class="se"></span>    --name <span class="s2">&#34;</span><span class="si">${</span><span class="nv">STORAGE_ACCOUNT</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span><span class="se"></span>    --location <span class="s2">&#34;</span><span class="si">${</span><span class="nv">LOCATION</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span><span class="se"></span>    --resource-group <span class="s2">&#34;</span><span class="si">${</span><span class="nv">RESOURCE_GROUP</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span><span class="se"></span>    --sku <span class="s2">&#34;Standard_LRS&#34;</span>
+
+<span class="c1"># create function app in azure</span>
+az functionapp create <span class="se">\
+</span><span class="se"></span>    --resource-group <span class="s2">&#34;</span><span class="si">${</span><span class="nv">RESOURCE_GROUP</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span><span class="se"></span>    --consumption-plan-location <span class="s2">&#34;</span><span class="si">${</span><span class="nv">LOCATION</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span><span class="se"></span>    --runtime <span class="s2">&#34;node&#34;</span> <span class="se">\
+</span><span class="se"></span>    --runtime-version <span class="m">12</span> <span class="se">\
+</span><span class="se"></span>    --functions-version <span class="m">3</span> <span class="se">\
+</span><span class="se"></span>    --name <span class="s2">&#34;</span><span class="si">${</span><span class="nv">FUNCTION_APP</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span><span class="se"></span>    --storage-account <span class="s2">&#34;</span><span class="si">${</span><span class="nv">STORAGE_ACCOUNT</span><span class="si">}</span><span class="s2">&#34;</span>
+
+<span class="c1"># create functions</span>
+<span class="c1"># DurableFunctionsHTTPstarter is HTTP endpoint that invokes DurableFunctionsOrchestrator</span>
+<span class="c1"># which then calls DurableFunctionsActivity multiple time with different parameters</span>
+
+func new -t <span class="s2">&#34;Durable Functions HTTP starter&#34;</span> -l javascript -n DurableFunctionsHTTPstarter
+func new -t <span class="s2">&#34;Durable Functions orchestrator&#34;</span> -l javascript -n DurableFunctionsOrchestrator
+func new -t <span class="s2">&#34;Durable Functions activity&#34;</span> -l javascript -n DurableFunctionsActivity
+
+<span class="c1"># deploy</span>
+func azure functionapp publish <span class="s2">&#34;</span><span class="si">${</span><span class="nv">FUNCTION_APP</span><span class="si">}</span><span class="s2">&#34;</span>
+
+<span class="c1"># get function all base URL</span>
+<span class="nv">FUNCTION_APP_URL</span><span class="o">=</span><span class="s2">&#34;https://</span><span class="k">$(</span>az functionapp show -g <span class="si">${</span><span class="nv">RESOURCE_GROUP</span><span class="si">}</span> -n <span class="si">${</span><span class="nv">FUNCTION_APP</span><span class="si">}</span> --query defaultHostName -o tsv<span class="k">)</span><span class="s2">/api&#34;</span>
+
+<span class="c1"># pull down app settings for running locally</span>
+func azure functionapp fetch-app-settings <span class="s2">&#34;</span><span class="si">${</span><span class="nv">FUNCTION_APP</span><span class="si">}</span><span class="s2">&#34;</span>
+
+<span class="c1"># run locally</span>
+func start
+
+<span class="c1"># trigger durable function</span>
+curl <span class="s1">&#39;http://localhost:7071/api/orchestrators/DurableFunctionsOrchestrator&#39;</span>
+
+<span class="c1"># async execution - output</span>
+#
+<span class="c1"># {</span>
+<span class="c1">#   &#34;id&#34;: &#34;20f2ddc1e34543379efc49a09962dfc5&#34;,</span>
+<span class="c1">#   &#34;statusQueryGetUri&#34;: &#34;http://localhost:7071/runtime/webhooks/durabletask/instances/20f2ddc1e34543379efc49a09962dfc5?taskHub=DurableFunctionsHub&amp;connection=Storage&amp;code=CODE&#34;,</span>
+<span class="c1">#   &#34;sendEventPostUri&#34;: &#34;http://localhost:7071/runtime/webhooks/durabletask/instances/20f2ddc1e34543379efc49a09962dfc5/raiseEvent/{eventName}?taskHub=DurableFunctionsHub&amp;connection=Storage&amp;code=CODE&#34;,</span>
+<span class="c1">#   &#34;terminatePostUri&#34;: &#34;http://localhost:7071/runtime/webhooks/durabletask/instances/20f2ddc1e34543379efc49a09962dfc5/terminate?reason={text}&amp;taskHub=DurableFunctionsHub&amp;connection=Storage&amp;code=CODE&#34;,</span>
+<span class="c1">#   &#34;rewindPostUri&#34;: &#34;http://localhost:7071/runtime/webhooks/durabletask/instances/20f2ddc1e34543379efc49a09962dfc5/rewind?reason={text}&amp;taskHub=DurableFunctionsHub&amp;connection=Storage&amp;code=CODE&#34;,</span>
+<span class="c1">#   &#34;purgeHistoryDeleteUri&#34;: &#34;http://localhost:7071/runtime/webhooks/durabletask/instances/20f2ddc1e34543379efc49a09962dfc5?taskHub=DurableFunctionsHub&amp;connection=Storage&amp;code=CODE&#34;</span>
+<span class="c1"># }</span>
+
+<span class="c1"># fetch `statusQueryGetUri`</span>
+curl <span class="s1">&#39;http://localhost:7071/runtime/webhooks/durabletask/instances/20f2ddc1e34543379efc49a09962dfc5?taskHub=DurableFunctionsHub&amp;connection=Storage&amp;code=CODE&#39;</span>
+
+<span class="c1"># {</span>
+<span class="c1">#     &#34;name&#34;: &#34;DurableFunctionsOrchestrator&#34;,</span>
+<span class="c1">#     &#34;instanceId&#34;: &#34;20f2ddc1e34543379efc49a09962dfc5&#34;,</span>
+<span class="c1">#     &#34;runtimeStatus&#34;: &#34;Completed&#34;,</span>
+<span class="c1">#     &#34;input&#34;: null,</span>
+<span class="c1">#     &#34;customStatus&#34;: null,</span>
+<span class="c1">#     &#34;output&#34;: [</span>
+<span class="c1">#         &#34;Hello Tokyo!&#34;,</span>
+<span class="c1">#         &#34;Hello Seattle!&#34;,</span>
+<span class="c1">#         &#34;Hello London!&#34;</span>
+<span class="c1">#     ],</span>
+<span class="c1">#     &#34;createdTime&#34;: &#34;2021-02-04T21:33:29Z&#34;,</span>
+<span class="c1">#     &#34;lastUpdatedTime&#34;: &#34;2021-02-04T21:33:30Z&#34;</span>
+<span class="c1"># }</span>
+
+<span class="c1"># ---</span>
+
+<span class="c1"># start in own terminal</span>
+<span class="c1"># Show interactive streaming logs for an Azure-hosted Function App</span>
+func azure functionapp logstream <span class="s2">&#34;</span><span class="si">${</span><span class="nv">FUNCTION_APP</span><span class="si">}</span><span class="s2">&#34;</span>
+
+<span class="c1"># trigger durable function</span>
+curl <span class="s2">&#34;</span><span class="si">${</span><span class="nv">FUNCTION_APP_URL</span><span class="si">}</span><span class="s2">/orchestrators/DurableFunctionsOrchestrator?code=CODE&#34;</span>
+
+<span class="c1"># async execution - output</span>
+#
+<span class="c1"># {</span>
+<span class="c1">#   &#34;id&#34;: &#34;7501819801f942ebaed9289e87420cbd&#34;,</span>
+<span class="c1">#   &#34;statusQueryGetUri&#34;: &#34;https://durablefnsplayground01.azurewebsites.net/runtime/webhooks/durabletask/instances/7501819801f942ebaed9289e87420cbd?taskHub=DurableFunctionsHub&amp;connection=Storage&amp;code=CODE&#34;,</span>
+<span class="c1">#   &#34;sendEventPostUri&#34;: &#34;https://durablefnsplayground01.azurewebsites.net/runtime/webhooks/durabletask/instances/7501819801f942ebaed9289e87420cbd/raiseEvent/{eventName}?taskHub=DurableFunctionsHub&amp;connection=Storage&amp;code=CODE&#34;,</span>
+<span class="c1">#   &#34;terminatePostUri&#34;: &#34;https://durablefnsplayground01.azurewebsites.net/runtime/webhooks/durabletask/instances/7501819801f942ebaed9289e87420cbd/terminate?reason={text}&amp;taskHub=DurableFunctionsHub&amp;connection=Storage&amp;code=CODE&#34;,</span>
+<span class="c1">#   &#34;rewindPostUri&#34;: &#34;https://durablefnsplayground01.azurewebsites.net/runtime/webhooks/durabletask/instances/7501819801f942ebaed9289e87420cbd/rewind?reason={text}&amp;taskHub=DurableFunctionsHub&amp;connection=Storage&amp;code=CODE&#34;,</span>
+<span class="c1">#   &#34;purgeHistoryDeleteUri&#34;: &#34;https://durablefnsplayground01.azurewebsites.net/runtime/webhooks/durabletask/instances/7501819801f942ebaed9289e87420cbd?taskHub=DurableFunctionsHub&amp;connection=Storage&amp;code=CODE&#34;</span>
+<span class="c1"># }</span>
+
+<span class="c1"># fetch `statusQueryGetUri`</span>
+curl <span class="s2">&#34;https://durablefnsplayground01.azurewebsites.net/runtime/webhooks/durabletask/instances/7501819801f942ebaed9289e87420cbd?taskHub=DurableFunctionsHub&amp;connection=Storage&amp;code=CODE&#34;</span>
+<span class="c1"># {</span>
+<span class="c1">#     &#34;name&#34;: &#34;DurableFunctionsOrchestrator&#34;,</span>
+<span class="c1">#     &#34;instanceId&#34;: &#34;7501819801f942ebaed9289e87420cbd&#34;,</span>
+<span class="c1">#     &#34;runtimeStatus&#34;: &#34;Completed&#34;,</span>
+<span class="c1">#     &#34;input&#34;: null,</span>
+<span class="c1">#     &#34;customStatus&#34;: null,</span>
+<span class="c1">#     &#34;output&#34;: [</span>
+<span class="c1">#         &#34;Hello Tokyo!&#34;,</span>
+<span class="c1">#         &#34;Hello Seattle!&#34;,</span>
+<span class="c1">#         &#34;Hello London!&#34;</span>
+<span class="c1">#     ],</span>
+<span class="c1">#     &#34;createdTime&#34;: &#34;2021-02-04T20:55:25Z&#34;,</span>
+<span class="c1">#     &#34;lastUpdatedTime&#34;: &#34;2021-02-04T20:55:26Z&#34;</span>
+<span class="c1"># }</span>
+
+<span class="c1"># query function logs</span>
+<span class="nb">read</span> -r -d <span class="s1">&#39;&#39;</span> QUERY <span class="s">&lt;&lt; EOM
+</span><span class="s">traces
+</span><span class="s">| project timestamp, message
+</span><span class="s">| where timestamp &gt; ago(24h)
+</span><span class="s">| limit 10
+</span><span class="s">EOM</span>
+
+az monitor app-insights query <span class="se">\
+</span><span class="se"></span>    --app <span class="s1">&#39;cd03d419-0bba-410e-ac3f-d7e934c027f1&#39;</span> <span class="se">\
+</span><span class="se"></span>    --analytics-query <span class="s2">&#34;</span><span class="si">${</span><span class="nv">QUERY</span><span class="si">}</span><span class="s2">&#34;</span>
+
+
+<span class="c1"># output</span>
+#
+<span class="c1"># {</span>
+<span class="c1">#   &#34;tables&#34;: [</span>
+<span class="c1">#     {</span>
+<span class="c1">#       &#34;columns&#34;: [</span>
+<span class="c1">#         {</span>
+<span class="c1">#           &#34;name&#34;: &#34;timestamp&#34;,</span>
+<span class="c1">#           &#34;type&#34;: &#34;datetime&#34;</span>
+<span class="c1">#         },</span>
+<span class="c1">#         {</span>
+<span class="c1">#           &#34;name&#34;: &#34;message&#34;,</span>
+<span class="c1">#           &#34;type&#34;: &#34;string&#34;</span>
+<span class="c1">#         }</span>
+<span class="c1">#       ],</span>
+<span class="c1">#       &#34;name&#34;: &#34;PrimaryResult&#34;,</span>
+<span class="c1">#       &#34;rows&#34;: [</span>
+<span class="c1">#         [</span>
+<span class="c1">#           &#34;2021-02-04T20:56:04.3256227Z&#34;,</span>
+<span class="c1">#           &#34;Host Status: {\r\n  \&#34;id\&#34;: \&#34;durablefnsplayground01\&#34;,\r\n  \&#34;state\&#34;: \&#34;Running\&#34;,\r\n  \&#34;version\&#34;: \&#34;3.0.15193.0\&#34;,\r\n  \&#34;versionDetails\&#34;: \&#34;3.0.15193 Commit hash: 75da1ebed23b08b39c8c3c20b3ea687813c0acdf\&#34;,\r\n  \&#34;platformVersion\&#34;: \&#34;91.0.7.116\&#34;,\r\n  \&#34;instanceId\&#34;: \&#34;00d386aeb51a3d5098651c58f61ffb53a9b1a656ea9e9b0dd570b9834cdc3d4f\&#34;,\r\n  \&#34;computerName\&#34;: \&#34;DW0-HR0-3-17\&#34;,\r\n  \&#34;processUptime\&#34;: 145740,\r\n  \&#34;extensionBundle\&#34;: {\r\n    \&#34;id\&#34;: \&#34;Microsoft.Azure.Functions.ExtensionBundle\&#34;,\r\n    \&#34;version\&#34;: \&#34;1.5.0\&#34;\r\n  }\r\n}&#34;</span>
+<span class="c1">#         ],</span>
+<span class="c1">#         [</span>
+<span class="c1">#           &#34;2021-02-04T20:56:05.4099623Z&#34;,</span>
+<span class="c1">#           &#34;Host Status: {\r\n  \&#34;id\&#34;: \&#34;durablefnsplayground01\&#34;,\r\n  \&#34;state\&#34;: \&#34;Running\&#34;,\r\n  \&#34;version\&#34;: \&#34;3.0.15193.0\&#34;,\r\n  \&#34;versionDetails\&#34;: \&#34;3.0.15193 Commit hash: 75da1ebed23b08b39c8c3c20b3ea687813c0acdf\&#34;,\r\n  \&#34;platformVersion\&#34;: \&#34;91.0.7.116\&#34;,\r\n  \&#34;instanceId\&#34;: \&#34;00d386aeb51a3d5098651c58f61ffb53a9b1a656ea9e9b0dd570b9834cdc3d4f\&#34;,\r\n  \&#34;computerName\&#34;: \&#34;DW0-HR0-3-17\&#34;,\r\n  \&#34;processUptime\&#34;: 146826,\r\n  \&#34;extensionBundle\&#34;: {\r\n    \&#34;id\&#34;: \&#34;Microsoft.Azure.Functions.ExtensionBundle\&#34;,\r\n    \&#34;version\&#34;: \&#34;1.5.0\&#34;\r\n  }\r\n}&#34;</span>
+<span class="c1">#         ],</span>
+<span class="c1">#         ...</span>
+
+</code></pre></div><h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/azure-functions/durable/">Azure Durable Functions documentation</a></li>
+</ul>
+
+
+        
+
+        
+
+        <hr />
+
+        <section id="social-share">
+          <div class="list-inline footer-links text-center">
+            <span class="text-muted">share on</span><br />
+            <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fazure-durable-functions%2f&amp;text=Azure%20Durable%20Functions&amp;via=pfeilbr"
+              target="_blank" title="Share on Twitter">Twitter</a>
+            &nbsp;&bull;&nbsp;
+            <a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fazure-durable-functions%2f&amp;title=Azure%20Durable%20Functions" target="_blank"
+              title="Share on Reddit">
+              Reddit
+            </a>
+
+          </div>
+
+
+
+        </section>
+
+
+
+
+
+
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+      </article>
+
+      
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="https://brianpfeil.com/post/azure-arm/" data-toggle="tooltip" data-placement="top"
+            title="Azure ARM">&larr; Azure ARM</a>
+        </li>
+        
+        
+        <li class="next">
+          <a href="https://brianpfeil.com/post/aws-glue-pyspark-fetch-databases-and-tables-metadata/" data-toggle="tooltip" data-placement="top"
+            title="AWS Glue Pyspark Fetch Databases and Tables Metadata">AWS Glue Pyspark Fetch Databases and Tables Metadata &rarr;</a>
+        </li>
+        
+      </ul>
+      
+
+
+      
+      
+      
+      
+
+    </div>
+  </div>
+</div>
+
+    
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          
+          
+          
+          
+          <li>
+            <a href="https://twitter.com/pfeilbr" title="twitter">
+              <span class="footer-link">
+                twitter
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://github.com/pfeilbr" title="github">
+              <span class="footer-link">
+                github
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://stackoverflow.com/users/29148/pfeilbr" title="stack overflow">
+              <span class="footer-link">
+                stack overflow
+              </span>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="footer-link">
+                rss
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+          
+          <a href="https://brianpfeil.com">Brian Pfeil</a>
+          
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+          2021
+          
+
+          
+        </p>
+        
+        
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"
+  integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js"
+  integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://brianpfeil.com/js/main.js"></script>
+<script src="https://brianpfeil.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function () { $("pre.chroma").css("padding", "0"); }); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js"
+  integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js"
+  integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://brianpfeil.com/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+<script src="https://unpkg.com/darkreader@4.9.16/darkreader.js" crossorigin="anonymous"></script>
+
+<script>
+    
+    (() => {
+
+        DarkReader.setFetchMethod(window.fetch)
+
+        const DARK_MODE_ENABLED_KEY = "DARK_MODE_ENABLED_KEY"
+
+        const enabledIcon = document.getElementById("dark-mode-enabled-icon")
+        const disabledIcon = document.getElementById("dark-mode-disabled-icon")
+
+         
+        if (enabledIcon === null || disabledIcon === null) {
+            return
+        }
+
+        const toggleClassName = "hidden"
+
+        const enable = () => {
+
+            if (window.localStorage) {
+                DarkReader.enable({
+                    brightness: 100,
+                    contrast: 90,
+                    sepia: 10
+                });
+                window.localStorage.setItem(DARK_MODE_ENABLED_KEY, "true")
+
+                enabledIcon.classList.add(toggleClassName)
+                disabledIcon.classList.remove(toggleClassName)
+            }
+        }
+
+        const disable = () => {
+            if (window.localStorage) {
+                DarkReader.disable()
+                if (window.localStorage.getItem(DARK_MODE_ENABLED_KEY)) {
+                    window.localStorage.removeItem(DARK_MODE_ENABLED_KEY)
+                }
+
+                enabledIcon.classList.remove(toggleClassName)
+                disabledIcon.classList.add(toggleClassName)
+
+            }
+        }
+
+        const isEnabled = () => {
+            return window.localStorage && (window.localStorage.getItem(DARK_MODE_ENABLED_KEY) != null)
+        }
+
+        const toggle = () => {
+            if (isEnabled()) {
+                disable()
+            } else {
+                enable()
+            }
+        }
+
+
+        if (isEnabled()) {
+            enable()
+        } else {
+            disable()
+        }
+
+        const e = document.getElementById('dark-mode-toggle')
+        e.addEventListener('click', toggle)
+        
+        
+        
+        
+        
+        
+
+        
+        
+
+    })()
+
+</script>
+
+<script>
+     
+    
+
+</script>
+    
+  </body>
+</html>
+

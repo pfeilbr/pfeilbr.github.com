@@ -6,10 +6,19 @@
     <description>Recent content in glue on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Jul 2019 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 19 Feb 2021 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/glue/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS Glue Pyspark Fetch Databases and Tables Metadata</title>
+      <link>https://brianpfeil.com/post/aws-glue-pyspark-fetch-databases-and-tables-metadata/</link>
+      <pubDate>Fri, 19 Feb 2021 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-glue-pyspark-fetch-databases-and-tables-metadata/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>AWS Glue</title>

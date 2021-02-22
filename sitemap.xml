@@ -3,8 +3,83 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://brianpfeil.com/tags/aws/</loc>
+    <lastmod>2021-02-19T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-glue-pyspark-fetch-databases-and-tables-metadata/</loc>
+    <lastmod>2021-02-19T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/</loc>
+    <lastmod>2021-02-19T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/</loc>
+    <lastmod>2021-02-19T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/glue/</loc>
+    <lastmod>2021-02-19T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/playground/</loc>
+    <lastmod>2021-02-19T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/</loc>
+    <lastmod>2021-02-19T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/Python/</loc>
+    <lastmod>2021-02-19T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/python/</loc>
+    <lastmod>2021-02-19T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/spark/</loc>
+    <lastmod>2021-02-19T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/</loc>
+    <lastmod>2021-02-19T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://brianpfeil.com/tags/azure/</loc>
-    <lastmod>2021-01-25T00:00:00-05:00</lastmod>
+    <lastmod>2021-02-05T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/azure-durable-functions/</loc>
+    <lastmod>2021-02-05T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/javascript/</loc>
+    <lastmod>2021-02-05T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/nil/</loc>
+    <lastmod>2021-01-29T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/azure-arm/</loc>
+    <lastmod>2021-01-29T00:00:00-05:00</lastmod>
   </url>
   
   <url>
@@ -18,52 +93,12 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/</loc>
-    <lastmod>2021-01-25T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/</loc>
-    <lastmod>2021-01-25T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/javascript/</loc>
-    <lastmod>2021-01-25T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/playground/</loc>
-    <lastmod>2021-01-25T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/post/</loc>
-    <lastmod>2021-01-25T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/tags/serverless/</loc>
     <lastmod>2021-01-25T00:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/tags/</loc>
-    <lastmod>2021-01-25T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/aws/</loc>
-    <lastmod>2021-01-08T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/tags/lambda/</loc>
-    <lastmod>2021-01-08T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/Python/</loc>
     <lastmod>2021-01-08T00:00:00-05:00</lastmod>
   </url>
   
@@ -98,11 +133,6 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/tags/python/</loc>
-    <lastmod>2021-01-06T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/tags/architecture/</loc>
     <lastmod>2020-12-11T00:00:00+00:00</lastmod>
   </url>
@@ -110,11 +140,6 @@
   <url>
     <loc>https://brianpfeil.com/post/architecture-notes-and-resources/</loc>
     <lastmod>2020-12-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/nil/</loc>
-    <lastmod>2020-12-10T00:00:00-05:00</lastmod>
   </url>
   
   <url>
@@ -1063,11 +1088,6 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/tags/glue/</loc>
-    <lastmod>2019-07-09T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/post/aws-rekognition/</loc>
     <lastmod>2019-07-08T00:00:00-04:00</lastmod>
   </url>
@@ -1929,11 +1949,6 @@
   
   <url>
     <loc>https://brianpfeil.com/post/spark/</loc>
-    <lastmod>2015-06-05T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/spark/</loc>
     <lastmod>2015-06-05T00:00:00-04:00</lastmod>
   </url>
   

@@ -58,7 +58,7 @@
   "headline": "Azure CLI",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  370 ,
+  "wordCount":  496 ,
   "datePublished" : "2019-05-14T00:00:00",
   "dateModified" : "2019-05-14T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -326,6 +326,9 @@ az -v
 <span class="c1"># help</span>
 az -h
 
+<span class="c1"># find examples</span>
+az find <span class="s2">&#34;az functionapp list&#34;</span>
+
 <span class="c1"># interactive login</span>
 az login
 
@@ -336,6 +339,8 @@ az <span class="nb">logout</span>
 
 az account show
 az account show <span class="p">|</span> jq <span class="s1">&#39;.tenantId&#39;</span>
+
+<span class="nv">TENANT_ID</span><span class="o">=</span><span class="k">$(</span>az account show --query tenantId --output tsv<span class="k">)</span>
 
 az account list
 az account get-access-token
@@ -360,6 +365,9 @@ az ad sp create-for-rbac
 
 <span class="c1"># list service principals</span>
 az ad sp list
+
+<span class="c1"># list service principals with subset of properties</span>
+az ad sp list --query <span class="s2">&#34;[].{id:appId, tenant:appOwnerTenantId, name:displayName}&#34;</span>
 
 <span class="c1"># list role assignments for service principal</span>
 az role assignment list --assignee <span class="s1">&#39;http://azure-cli-2019-05-09-16-09-40&#39;</span>
@@ -387,8 +395,28 @@ az ad sp credential reset --name <span class="s2">&#34;http://service-principal-
 <span class="c1"># login with service principal</span>
 az login --service-principal --username <span class="s2">&#34;http://service-principal-01&#34;</span> --password <span class="s2">&#34;09tGSBcRsl_Gml7DI7VkRniFu_r_xxxxxx&#34;</span> --tenant <span class="s2">&#34;b0579be4-503f-48ca-9bd2-ca22100857dd&#34;</span>
 
+<span class="c1"># get access token (bearer)</span>
+<span class="c1"># NOTE: must be logged in with `service-principal-01` above for this example</span>
+<span class="c1"># or may need to add client id to authorize application.  see following screenshot</span>
+<span class="c1"># &lt;https://www.evernote.com/l/AAFJLMG88QhDgqehvtS8P-qkVuCcmFFUhCMB/image.png&gt;</span>
+<span class="nv">ACCESS_TOKEN</span><span class="o">=</span><span class="k">$(</span>az account get-access-token --resource <span class="s1">&#39;https://brianpfeilmyfn01.azurewebsites.net&#39;</span><span class="k">)</span>
+
+
+<span class="c1"># call endpoint protected by azure ad.  e.g. functions function endpoint</span>
+curl --header <span class="s2">&#34;Authorization: Bearer </span><span class="si">${</span><span class="nv">ACCESS_TOKEN</span><span class="si">}</span><span class="s2">&#34;</span> https://brianpfeilmyfn01.azurewebsites.net/api/HttpExample
+
 <span class="c1"># show service principal details</span>
 az ad sp show --id <span class="s2">&#34;http://service-principal-01&#34;</span>
+
+<span class="c1"># get access token (Bearer) that can be used as `Authorization` header</span>
+<span class="c1"># current user</span>
+az account get-access-token
+
+<span class="c1"># for specific resource</span>
+az account get-access-token --resource <span class="s1">&#39;https://vault.azure.net&#39;</span>
+
+<span class="c1"># list app registrations</span>
+az ad app list --query <span class="s1">&#39;[].{displayName: displayName}&#39;</span> --output table
 
 <span class="c1"># create resource group</span>
 az group create --name <span class="s2">&#34;group01&#34;</span> --location eastus
