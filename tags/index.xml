@@ -120,24 +120,6 @@
     </item>
     
     <item>
-      <title>diagrams</title>
-      <link>https://brianpfeil.com/tags/diagrams/</link>
-      <pubDate>Thu, 10 Dec 2020 00:00:00 -0500</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/diagrams/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>visualize</title>
-      <link>https://brianpfeil.com/tags/visualize/</link>
-      <pubDate>Thu, 10 Dec 2020 00:00:00 -0500</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/visualize/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>api-gateway</title>
       <link>https://brianpfeil.com/tags/api-gateway/</link>
       <pubDate>Fri, 13 Nov 2020 00:00:00 -0500</pubDate>
@@ -368,6 +350,24 @@
       <pubDate>Fri, 02 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>diagrams</title>
+      <link>https://brianpfeil.com/tags/diagrams/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/diagrams/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>visualize</title>
+      <link>https://brianpfeil.com/tags/visualize/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/visualize/</guid>
       <description></description>
     </item>
     

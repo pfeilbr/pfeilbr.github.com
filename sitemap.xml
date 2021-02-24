@@ -143,21 +143,6 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/tags/diagrams/</loc>
-    <lastmod>2020-12-10T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/post/mermaid-diagram/</loc>
-    <lastmod>2020-12-10T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/visualize/</loc>
-    <lastmod>2020-12-10T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/post/python/</loc>
     <lastmod>2020-11-20T00:00:00-05:00</lastmod>
   </url>
@@ -378,12 +363,22 @@
   </url>
   
   <url>
+    <loc>https://brianpfeil.com/tags/diagrams/</loc>
+    <lastmod>2020-10-01T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://brianpfeil.com/post/diagrams-as-code/</loc>
     <lastmod>2020-10-01T00:00:00-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://brianpfeil.com/post/s3-access-points/</loc>
+    <lastmod>2020-10-01T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/visualize/</loc>
     <lastmod>2020-10-01T00:00:00-04:00</lastmod>
   </url>
   
