@@ -1677,15 +1677,6 @@
     </item>
     
     <item>
-      <title>Gradle</title>
-      <link>https://brianpfeil.com/post/gradle/</link>
-      <pubDate>Wed, 26 Aug 2015 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/post/gradle/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Docker Hub Automated Build</title>
       <link>https://brianpfeil.com/post/docker-hub-automated-build/</link>
       <pubDate>Thu, 20 Aug 2015 00:00:00 -0400</pubDate>
