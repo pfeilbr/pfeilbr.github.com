@@ -1254,24 +1254,6 @@
     </item>
     
     <item>
-      <title>ios</title>
-      <link>https://brianpfeil.com/tags/ios/</link>
-      <pubDate>Fri, 20 May 2016 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/ios/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>mobile</title>
-      <link>https://brianpfeil.com/tags/mobile/</link>
-      <pubDate>Fri, 20 May 2016 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/mobile/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>angular</title>
       <link>https://brianpfeil.com/tags/angular/</link>
       <pubDate>Mon, 09 May 2016 00:00:00 -0400</pubDate>
@@ -1367,6 +1349,15 @@
       <pubDate>Fri, 03 Apr 2015 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/bundler/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ios</title>
+      <link>https://brianpfeil.com/tags/ios/</link>
+      <pubDate>Fri, 27 Mar 2015 16:36:59 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/ios/</guid>
       <description></description>
     </item>
     
@@ -1565,6 +1556,15 @@
       <pubDate>Sun, 11 Sep 2011 00:58:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/tags/jquery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mobile</title>
+      <link>https://brianpfeil.com/tags/mobile/</link>
+      <pubDate>Sun, 11 Sep 2011 00:58:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/mobile/</guid>
       <description></description>
     </item>
     
