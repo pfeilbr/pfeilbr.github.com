@@ -183,15 +183,6 @@
     </item>
     
     <item>
-      <title>AWS CloudFront Private Content</title>
-      <link>https://brianpfeil.com/post/aws-cloudfront-private-content/</link>
-      <pubDate>Mon, 10 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/post/aws-cloudfront-private-content/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>AWS SAM Golang</title>
       <link>https://brianpfeil.com/post/aws-sam-golang/</link>
       <pubDate>Thu, 30 Jul 2020 00:00:00 -0400</pubDate>

@@ -533,16 +533,6 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/post/aws-cloudfront-private-content/</loc>
-    <lastmod>2020-08-10T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/cloudfront/</loc>
-    <lastmod>2020-08-10T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/post/aws-sam-golang/</loc>
     <lastmod>2020-07-30T00:00:00-04:00</lastmod>
   </url>
@@ -894,6 +884,11 @@
   
   <url>
     <loc>https://brianpfeil.com/post/aws-service-catalog/</loc>
+    <lastmod>2019-09-10T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/cloudfront/</loc>
     <lastmod>2019-09-10T00:00:00-04:00</lastmod>
   </url>
   
