@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Feb 2021 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 21 Mar 2021 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,27 @@
     <item>
       <title>aws</title>
       <link>https://brianpfeil.com/tags/aws/</link>
-      <pubDate>Fri, 19 Feb 2021 00:00:00 -0500</pubDate>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>copilot</title>
+      <link>https://brianpfeil.com/tags/copilot/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/copilot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ecs</title>
+      <link>https://brianpfeil.com/tags/ecs/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/ecs/</guid>
       <description></description>
     </item>
     
@@ -1115,15 +1133,6 @@
       <pubDate>Wed, 31 Jan 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/tags/opencv/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ecs</title>
-      <link>https://brianpfeil.com/tags/ecs/</link>
-      <pubDate>Sat, 11 Nov 2017 00:00:00 -0500</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/ecs/</guid>
       <description></description>
     </item>
     

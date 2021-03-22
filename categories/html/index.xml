@@ -6,10 +6,19 @@
     <description>Recent content in html on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Jul 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 21 Mar 2021 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/categories/html/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS Copilot</title>
+      <link>https://brianpfeil.com/post/aws-copilot/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-copilot/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Heroku Node Worker</title>

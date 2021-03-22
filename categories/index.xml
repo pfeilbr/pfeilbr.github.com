@@ -6,15 +6,24 @@
     <description>Recent content in Categories on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Feb 2021 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 21 Mar 2021 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>html</title>
+      <link>https://brianpfeil.com/categories/html/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>playground</title>
       <link>https://brianpfeil.com/categories/playground/</link>
-      <pubDate>Fri, 19 Feb 2021 00:00:00 -0500</pubDate>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/categories/playground/</guid>
       <description></description>
@@ -134,15 +143,6 @@
       <pubDate>Sat, 18 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/categories/cloud/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>html</title>
-      <link>https://brianpfeil.com/categories/html/</link>
-      <pubDate>Mon, 13 Jul 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/html/</guid>
       <description></description>
     </item>
     

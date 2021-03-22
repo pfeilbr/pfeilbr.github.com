@@ -4,7 +4,52 @@
   
   <url>
     <loc>https://brianpfeil.com/tags/aws/</loc>
-    <lastmod>2021-02-19T00:00:00-05:00</lastmod>
+    <lastmod>2021-03-21T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-copilot/</loc>
+    <lastmod>2021-03-21T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/</loc>
+    <lastmod>2021-03-21T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/</loc>
+    <lastmod>2021-03-21T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/copilot/</loc>
+    <lastmod>2021-03-21T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/ecs/</loc>
+    <lastmod>2021-03-21T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/html/</loc>
+    <lastmod>2021-03-21T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/playground/</loc>
+    <lastmod>2021-03-21T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/</loc>
+    <lastmod>2021-03-21T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/</loc>
+    <lastmod>2021-03-21T00:00:00-04:00</lastmod>
   </url>
   
   <url>
@@ -13,27 +58,7 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/</loc>
-    <lastmod>2021-02-19T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/</loc>
-    <lastmod>2021-02-19T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/tags/glue/</loc>
-    <lastmod>2021-02-19T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/playground/</loc>
-    <lastmod>2021-02-19T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/post/</loc>
     <lastmod>2021-02-19T00:00:00-05:00</lastmod>
   </url>
   
@@ -49,11 +74,6 @@
   
   <url>
     <loc>https://brianpfeil.com/tags/spark/</loc>
-    <lastmod>2021-02-19T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/</loc>
     <lastmod>2021-02-19T00:00:00-05:00</lastmod>
   </url>
   
@@ -614,11 +634,6 @@
   
   <url>
     <loc>https://brianpfeil.com/post/heroku-node-worker/</loc>
-    <lastmod>2020-07-13T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/html/</loc>
     <lastmod>2020-07-13T00:00:00-04:00</lastmod>
   </url>
   
@@ -1509,11 +1524,6 @@
   
   <url>
     <loc>https://brianpfeil.com/post/aws-ecs/</loc>
-    <lastmod>2017-11-11T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/ecs/</loc>
     <lastmod>2017-11-11T00:00:00-05:00</lastmod>
   </url>
   

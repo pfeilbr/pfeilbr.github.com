@@ -6,10 +6,19 @@
     <description>Recent content on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Feb 2021 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 21 Mar 2021 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS Copilot</title>
+      <link>https://brianpfeil.com/post/aws-copilot/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-copilot/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>AWS Glue Pyspark Fetch Databases and Tables Metadata</title>
@@ -1864,7 +1873,7 @@ I can be found elsewhere at twitter, github, and stackoverflow.</description>
       <pubDate>Wed, 14 Jan 2015 21:37:08 +0000</pubDate>
       
       <guid>https://brianpfeil.com/resume-full/</guid>
-      <description>Cloud Architect  AWS Azure  Veeva  Architect for US sales implementation Administrator Developer Configurator SSO and identity  salesforce.com  Architect Administrator Developer  App Central  adobe air, flex, actionscript desktop app portal / app launcher for sales employees  Siebel  developer and technical lead songo - custom  MyComms  custom salesforce.com communications application administration UI custom (angular SPA) UI (mobile/responsive)  MyCall / Proscape  sales electronic detailing embedded signature capture  Custom Desktop CRM Application (Insight) developer and technical lead</description>
+      <description>Cloud Architect  AWS Azure  Cloud Solutions Architect Veeva  Architect for US sales implementation Administrator Developer Configurator SSO and identity  salesforce.com  Architect Administrator Developer  App Central  adobe air, flex, actionscript desktop app portal / app launcher for sales employees  Siebel  developer and technical lead songo - custom  MyComms  custom salesforce.com communications application administration UI custom (angular SPA) UI (mobile/responsive)  MyCall / Proscape  sales electronic detailing embedded signature capture  Custom Desktop CRM Application (Insight) developer and technical lead</description>
     </item>
     
     <item>
