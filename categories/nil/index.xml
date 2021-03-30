@@ -6,10 +6,28 @@
     <description>Recent content in &lt;nil&gt; on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Jan 2021 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 30 Mar 2021 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/categories/nil/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS SES</title>
+      <link>https://brianpfeil.com/post/aws-ses/</link>
+      <pubDate>Tue, 30 Mar 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-ses/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Amazon Managed Workflows For Apache Airflow</title>
+      <link>https://brianpfeil.com/post/amazon-managed-workflows-for-apache-airflow/</link>
+      <pubDate>Sat, 13 Mar 2021 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/amazon-managed-workflows-for-apache-airflow/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Azure ARM</title>

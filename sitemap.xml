@@ -3,22 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://brianpfeil.com/tags/aws/</loc>
-    <lastmod>2021-03-21T00:00:00-04:00</lastmod>
+    <loc>https://brianpfeil.com/categories/nil/</loc>
+    <lastmod>2021-03-30T00:00:00-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/post/aws-copilot/</loc>
-    <lastmod>2021-03-21T00:00:00-04:00</lastmod>
+    <loc>https://brianpfeil.com/tags/aws/</loc>
+    <lastmod>2021-03-30T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-ses/</loc>
+    <lastmod>2021-03-30T00:00:00-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://brianpfeil.com/</loc>
-    <lastmod>2021-03-21T00:00:00-04:00</lastmod>
+    <lastmod>2021-03-30T00:00:00-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://brianpfeil.com/categories/</loc>
+    <lastmod>2021-03-30T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/email/</loc>
+    <lastmod>2021-03-30T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/playground/</loc>
+    <lastmod>2021-03-30T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/</loc>
+    <lastmod>2021-03-30T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/ses/</loc>
+    <lastmod>2021-03-30T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/</loc>
+    <lastmod>2021-03-30T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/aws-copilot/</loc>
     <lastmod>2021-03-21T00:00:00-04:00</lastmod>
   </url>
   
@@ -38,18 +73,8 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/categories/playground/</loc>
-    <lastmod>2021-03-21T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/post/</loc>
-    <lastmod>2021-03-21T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/</loc>
-    <lastmod>2021-03-21T00:00:00-04:00</lastmod>
+    <loc>https://brianpfeil.com/post/amazon-managed-workflows-for-apache-airflow/</loc>
+    <lastmod>2021-03-13T00:00:00-05:00</lastmod>
   </url>
   
   <url>
@@ -90,11 +115,6 @@
   <url>
     <loc>https://brianpfeil.com/categories/javascript/</loc>
     <lastmod>2021-02-05T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/nil/</loc>
-    <lastmod>2021-01-29T00:00:00-05:00</lastmod>
   </url>
   
   <url>
@@ -2060,11 +2080,6 @@
   <url>
     <loc>https://brianpfeil.com/tags/postgres/</loc>
     <lastmod>2015-01-11T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/email/</loc>
-    <lastmod>2014-12-06T00:00:00-05:00</lastmod>
   </url>
   
   <url>

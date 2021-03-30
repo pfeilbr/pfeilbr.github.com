@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>playground - Brian Pfeil</title>
+  <title>AWS SES - Brian Pfeil</title>
   <meta name="author" content="Brian Pfeil"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -28,13 +28,61 @@
   
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/brianpfeil.com\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/brianpfeil.com\/post\/aws-ses\/",
+          "name": "A w s s e s"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Brian Pfeil"
+  },
+  "headline": "AWS SES",
+  "description" : "",
+  "inLanguage" : "en",
+  "wordCount":  590 ,
+  "datePublished" : "2021-03-30T00:00:00",
+  "dateModified" : "2021-03-30T00:00:00",
+  "image" : "https:\/\/brianpfeil.com\/",
+  "keywords" : [ "aws, ses, email" ],
+  "mainEntityOfPage" : "https:\/\/brianpfeil.com\/post\/aws-ses\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/brianpfeil.com\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/brianpfeil.com\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
 
-<meta property="og:title" content="playground" />
-<meta property="og:url" content="https://brianpfeil.com/categories/playground/" />
+<meta property="og:title" content="AWS SES" />
+<meta property="og:url" content="https://brianpfeil.com/post/aws-ses/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Brian Pfeil" />
 
-  <meta name="twitter:title" content="playground" />
+  <meta name="twitter:title" content="AWS SES" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
@@ -208,23 +256,55 @@ if (!doNotTrack) {
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <div class="categories-heading">
+          <div class="post-heading">
             
 
             
             
-            <h1>playground</h1>
+            <h1>AWS SES</h1>
             
 
 
 
             
             
+            
+            
+            <span class="post-meta">
+  
+  
 
-            
+    March 30, 2021
 
-            
-            
+  
+  
+  
+  
+
+  
+  
+  
+  
+  <span class="blog-tags">
+    &nbsp;&bull;&nbsp;
+    
+    <a href="https://brianpfeil.com//tags/aws/">aws</a>
+    ,
+    
+    <a href="https://brianpfeil.com//tags/ses/">ses</a>
+    ,
+    
+    <a href="https://brianpfeil.com//tags/email/">email</a>
+    
+    
+  </span>
+  
+  
+
+
+  
+  
+</span>
             
           </div>
         </div>
@@ -234,596 +314,169 @@ if (!doNotTrack) {
 </header>
 
     
-  <div class="container" role="main">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <div class="alert alert-info small bg-info" role="alert">
+<span class="text-muted">code for article</span>&nbsp;<a href="https://github.com/pfeilbr/aws-ses-playground" target="_blank"><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/aws-ses-playground</a>
+</div>
+<p>learn <a href="https://aws.amazon.com/ses/">Simple Email Service (Amazon SES)</a></p>
+<hr>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>send or receive emails</li>
+<li>verify domain (DNS txt) and/or email addresses (confirmation email) - verify that you own the email address or domain that you plan to send from</li>
+<li>understand <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/quotas.html">Service quotas</a></li>
+<li>max message size - 10 MB per message (after base64 encoding).</li>
+<li>sending identity - domain or an email address</li>
+<li>send emails via SMTP or API (AWS CLI, <a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#sendEmail-property">AWS SDK</a>)</li>
+<li>connect to a URL that provides an endpoint for the Amazon SES API or SMTP interface (e.g. email-smtp.us-east-1.amazonaws.com:587)</li>
+<li>DKIM support - DKIM works by adding a digital signature to the headers of an email message. This signature can then be validated against a public cryptographic key that is located in the organization&rsquo;s DNS record</li>
+<li>SPF support - SPF establishes a method for receiving mail servers to verify that incoming email from a domain was sent from a host authorized by that domain’s administrators</li>
+<li>IAM to control user access to email sending (e.g. <code>ses:SendEmail</code>)</li>
+<li>Configuration sets - groups of rules that you can apply to the emails you send using Amazon SES.  can publish email sending events to CWL, Firehose, SNS</li>
+<li>Event types - Send, Reject, Delivery, Bounce, Complaint, Click  Open  Rendering Failure</li>
+<li>store inbound emails in S3</li>
+<li>trigger lambdas based on inbound emails</li>
+<li>publish your email sending events to CWLs or kinesis firehose</li>
+<li>list management
+<ul>
+<li>customers can manage their own mailing lists, known as contact lists.</li>
+<li>can create topics, associate topic preferences to a contact and specify <code>OPT_[IN|OUT]</code> for the topic.</li>
+</ul>
+</li>
+<li>Global Suppression List
+<ul>
+<li>includes a global suppression list. When any Amazon SES customer sends an email that results in a hard bounce, Amazon SES adds the email address that produced the bounce to a global suppression list. The global suppression list is global in the sense that it applies to all Amazon SES customers. In other words, if a different customer attempts to send an email to an address that&rsquo;s on the global suppression list, Amazon SES accepts the message, but doesn&rsquo;t send it, because the email address is suppressed.</li>
+<li>enabled by default for all Amazon SES accounts. You can&rsquo;t disable it.</li>
+</ul>
+</li>
+<li>reputation dashboard to track bounce and complaint rates</li>
+<li>Dedicated IP Addresses</li>
+<li>IP pool management – If you lease dedicated IP addresses to use with Amazon SES, you can create groups of these addresses, called dedicated IP pools. You can then associate these dedicated IP pools with configuration sets</li>
+<li>SES sandbox - all new accounts.
+<ul>
+<li>only send mail to verified email addresses and domains</li>
+<li>only send mail from verified email addresses and domains</li>
+<li>send a maximum of 200 messages per 24-hour period</li>
+<li>send a maximum of 1 message per second</li>
+</ul>
+</li>
+<li>need to <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/request-production-access.html?icmpid=docs_ses_console">request production access</a> to move out of sandbox</li>
+</ul>
+<hr>
+<h2 id="send-email-using-api">Send Email Using API</h2>
+<p>create <a href="destination.json"><code>destination.json</code></a> and <a href="message.json"><code>message.json</code></a> files</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># send email</span>
+<span class="c1"># NOTE: cli security principal must have `ses:SendEmail` permission</span>
+aws ses send-email <span class="se">\
+</span><span class="se"></span>    --from <span class="s1">&#39;brian.pfeil@allthecloudbits.com&#39;</span> <span class="se">\
+</span><span class="se"></span>    --destination file://destination.json <span class="se">\
+</span><span class="se"></span>    --message file://message.json
+
+<span class="c1"># output/response</span>
+<span class="c1"># {</span>
+<span class="c1">#    &#34;MessageId&#34;: &#34;010001788372bd22-b3d9950b-8310-43bf-bef3-256917951097-000000&#34;</span>
+<span class="c1"># }</span>
+</code></pre></div><p><img src="https://www.evernote.com/l/AAGAskHOcRZEfrW-0s7YxNaLr8juV6o_FZwB/image.png" alt=""></p>
+<hr>
+<h2 id="using-smtp-interface">Using SMTP interface</h2>
+<h3 id="create-smtp-credentials">Create SMTP Credentials</h3>
+<p><img src="https://www.evernote.com/l/AAGSNu1zXqpCG5BHQmlu-0ioPQSr1yW5sWYB/image.png" alt=""></p>
+<p>Creates IAM user <code>arn:aws:iam::529276214230:user/ses-smtp-user.20210330-092121</code> with following policy</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+    <span class="nt">&#34;Version&#34;</span><span class="p">:</span> <span class="s2">&#34;2012-10-17&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;Statement&#34;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&#34;Effect&#34;</span><span class="p">:</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;Action&#34;</span><span class="p">:</span> <span class="s2">&#34;ses:SendRawEmail&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;Resource&#34;</span><span class="p">:</span> <span class="s2">&#34;*&#34;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="send-email-using-smtp">Send Email using SMTP</h3>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Testing your connection to the Amazon SES SMTP interface</span>
+openssl s_client -crlf -quiet -starttls smtp -connect email-smtp.us-east-1.amazonaws.com:587
+
+<span class="c1"># base64 encode creds</span>
+<span class="nv">SMTP_USERNAME</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> -n <span class="s2">&#34;SMTPUsername&#34;</span> <span class="p">|</span> openssl enc -base64<span class="k">)</span>
+<span class="nv">SMTP_PASSWORD</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> -n <span class="s2">&#34;SMTPPassword&#34;</span> <span class="p">|</span> openssl enc -base64<span class="k">)</span>
+
+<span class="c1"># create SMTP email</span>
+<span class="c1"># see `smtp-email-example.txt`</span>
+
+<span class="c1"># send email</span>
+openssl s_client -crlf -quiet -starttls smtp -connect email-smtp.us-east-1.amazonaws.com:587 &lt; smtp-email-example.txt
+</code></pre></div><hr>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Documentation | Amazon Simple Email Service</a></li>
+</ul>
+
+
         
-        <div class="posts-list">
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/python/">
-        <h2 class="post-title">Python</h2>
+
         
-        
-        
-    </a>
 
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
+        <hr />
 
-    November 20, 2020
+        <section id="social-share">
+          <div class="list-inline footer-links text-center">
+            <span class="text-muted">share on</span><br />
+            <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-ses%2f&amp;text=AWS%20SES&amp;via=pfeilbr"
+              target="_blank" title="Share on Twitter">Twitter</a>
+            &nbsp;&bull;&nbsp;
+            <a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-ses%2f&amp;title=AWS%20SES" target="_blank"
+              title="Share on Reddit">
+              Reddit
+            </a>
 
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/python/">python</a>
-    
-    
-  </span>
-  
-  
+          </div>
 
 
-  
-  
-</span>
-    </p>
-    
 
-    
-    
-    
+        </section>
 
 
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/serverless-flask/">
-        <h2 class="post-title">Serverless Flask</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    November 13, 2020
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/serverless/">serverless</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/flask/">flask</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/python/">python</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/lambda/">lambda</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/api-gateway/">api-gateway</a>
-    
-    
-  </span>
-  
-  
 
 
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
 
 
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/dynamodb-export-to-s3-and-query-with-athena/">
-        <h2 class="post-title">DynamoDB Export to S3 and Query with Athena</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    November 11, 2020
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/dynamodb/">dynamodb</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/s3/">s3</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/athena/">athena</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/aws-database-migration-service/">
-        <h2 class="post-title">AWS Database Migration Service</h2>
         
         
         
-    </a>
+        
 
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    November 1, 2020
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/aws-cloudwatch-logs-insights/">
-        <h2 class="post-title">AWS CloudWatch Logs Insights</h2>
         
         
-        
-    </a>
 
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    October 30, 2020
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/cloudwatch/">cloudwatch</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/dynamic-nodejs-code-execution/">
-        <h2 class="post-title">Dynamic Nodejs Code Execution</h2>
         
         
+      </article>
+
+      
+      <ul class="pager blog-pager">
         
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    October 28, 2020
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/nodejs/">nodejs</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/aws-kendra/">
-        <h2 class="post-title">AWS Kendra</h2>
+        <li class="previous">
+          <a href="https://brianpfeil.com/post/aws-copilot/" data-toggle="tooltip" data-placement="top"
+            title="AWS Copilot">&larr; AWS Copilot</a>
+        </li>
         
         
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    October 27, 2020
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/kendra/">kendra</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/search/">search</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/machine-learning/">machine-learning</a>
-    
-    
-  </span>
-  
-  
+      </ul>
+      
 
 
-  
-  
-</span>
-    </p>
-    
+      
+      
+      
+      
 
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/aws-javascript-sdk-v3/">
-        <h2 class="post-title">AWS JavaScript SDK V3</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    October 26, 2020
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/sdk/">sdk</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/javascript/">javascript</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/aws-transfer-family/">
-        <h2 class="post-title">AWS Transfer Family</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    October 23, 2020
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/aws-transfer-family/">aws-transfer-family</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/sftp/">sftp</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/ftps/">ftps</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/ftp/">ftp</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://brianpfeil.com/post/aws-appconfig/">
-        <h2 class="post-title">AWS AppConfig</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-
-    October 20, 2020
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/appconfig/">appconfig</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/configuration/">configuration</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/deployment/">deployment</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/lambda/">lambda</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
-</span>
-    </p>
-    
-
-    
-    
-    
-
-
-    
-
-</article>
-          
-        </div>
-        
-          <ul class="pager main-pager">
-            
-              <li class="previous">
-                <a href="https://brianpfeil.com/categories/playground/page/1/">&larr; Newer Posts</a>
-              </li>
-            
-            
-              <li class="next">
-                <a href="https://brianpfeil.com/categories/playground/page/3/">Older Posts &rarr;</a>
-              </li>
-            
-          </ul>
-        
-      </div>
     </div>
   </div>
+</div>
 
     
 <footer>

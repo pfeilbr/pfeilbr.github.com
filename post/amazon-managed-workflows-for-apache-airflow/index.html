@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>AWS Copilot - Brian Pfeil</title>
+  <title>Amazon Managed Workflows For Apache Airflow - Brian Pfeil</title>
   <meta name="author" content="Brian Pfeil"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -43,8 +43,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/brianpfeil.com\/post\/aws-copilot\/",
-          "name": "A w s copilot"
+          "@id": "https:\/\/brianpfeil.com\/post\/amazon-managed-workflows-for-apache-airflow\/",
+          "name": "Amazon managed workflows for apache airflow"
         }
     }]
 }
@@ -55,15 +55,15 @@
   "author": {
     "name" : "Brian Pfeil"
   },
-  "headline": "AWS Copilot",
+  "headline": "Amazon Managed Workflows For Apache Airflow",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  277 ,
-  "datePublished" : "2021-03-21T00:00:00",
-  "dateModified" : "2021-03-21T00:00:00",
+  "wordCount":  391 ,
+  "datePublished" : "2021-03-13T00:00:00",
+  "dateModified" : "2021-03-13T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
-  "keywords" : [ "aws, ecs, copilot" ],
-  "mainEntityOfPage" : "https:\/\/brianpfeil.com\/post\/aws-copilot\/",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/brianpfeil.com\/post\/amazon-managed-workflows-for-apache-airflow\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/brianpfeil.com\/",
@@ -77,12 +77,12 @@
 }
 </script>
 
-<meta property="og:title" content="AWS Copilot" />
-<meta property="og:url" content="https://brianpfeil.com/post/aws-copilot/" />
+<meta property="og:title" content="Amazon Managed Workflows For Apache Airflow" />
+<meta property="og:url" content="https://brianpfeil.com/post/amazon-managed-workflows-for-apache-airflow/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Brian Pfeil" />
 
-  <meta name="twitter:title" content="AWS Copilot" />
+  <meta name="twitter:title" content="Amazon Managed Workflows For Apache Airflow" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
@@ -261,7 +261,7 @@ if (!doNotTrack) {
 
             
             
-            <h1>AWS Copilot</h1>
+            <h1>Amazon Managed Workflows For Apache Airflow</h1>
             
 
 
@@ -274,31 +274,13 @@ if (!doNotTrack) {
   
   
 
-    March 21, 2021
+    March 13, 2021
 
   
   
   
   
 
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/ecs/">ecs</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/copilot/">copilot</a>
-    
-    
-  </span>
-  
   
 
 
@@ -320,66 +302,109 @@ if (!doNotTrack) {
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         <div class="alert alert-info small bg-info" role="alert">
-<span class="text-muted">code for article</span>&nbsp;<a href="https://github.com/pfeilbr/aws-copilot-playground" target="_blank"><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/aws-copilot-playground</a>
+<span class="text-muted">code for article</span>&nbsp;<a href="https://github.com/pfeilbr/amazon-managed-workflows-for-apache-airflow-playground" target="_blank"><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/amazon-managed-workflows-for-apache-airflow-playground</a>
 </div>
-<p>learn <a href="https://aws.github.io/copilot-cli/">AWS Copilot CLI</a></p>
-<h3 id="workload-types">Workload Types</h3>
+<p>learn <a href="https://docs.aws.amazon.com/mwaa/index.html">Amazon Managed Workflows for Apache Airflow</a></p>
+<h2 id="install-steps">Install Steps</h2>
+<ol>
+<li>create S3 bucket with versioning enabled</li>
+<li>create VPC - this is where RDS Postgres for airflow data lives, the airflow web UI runs in a container here</li>
+<li>create aiflow environment</li>
+</ol>
+<h2 id="notes">Notes</h2>
 <ul>
-<li>load balanced web service</li>
-<li>backend service - isolated to private VPC that is accessible to frontend web app (load balanced web service)</li>
-<li>scheduled job</li>
+<li>you create named MWAA environments and they each have own configuration</li>
+<li>airflow ui exposed publically or private within VPC</li>
+<li>login to <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/access-airflow-ui.html">airflow ui with IAM user</a></li>
+<li>can create <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/access-airflow-ui.html#call-mwaa-apis-web">web login token</a> via AWS CLI</li>
+<li>upload DAG .py files to <code>dag</code> path in S3</li>
+<li>run DAGs via airflow cli, REST endpoint, boto3</li>
+<li>invoke <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/samples-lambda.html">DAG via lambda</a></li>
+<li>install additional deps by providing requirements.txt</li>
+<li>auto scales up and down via Apache Celery Executor by adding / removing worker containers as needed</li>
+<li>scale via number of workers, and environment class</li>
 </ul>
-<h3 id="concepts">Concepts</h3>
+<h2 id="airflow">Airflow</h2>
+<p><strong>Plugins</strong></p>
 <ul>
-<li>Application - a group of related services, environments, and pipelines</li>
-<li>Environments - environment can have its own version of a service running allowing you to create a &ldquo;test&rdquo; and &ldquo;production&rdquo; environment</li>
-<li>Service - your code and all of the supporting infrastructure needed to get it up and running on AWS</li>
-<li>Jobs - ephemeral ECS tasks that are triggered by an event.  uses CloudWatch&rsquo;s rate expressions.  Scheduled Jobs are composed of an AmazonECS Task Definition, Task Role, Task Execution Role, a Step Function State Machine for retrying on failures, and finally an Event Rule to trigger the state machine.</li>
-<li>Pipelines - release pipeline that deploys your service whenever you push to your git repository. (At this time, Copilot supports GitHub, Bitbucket, and CodeCommit repositories.) When a push is detected, your pipeline will build your service, push the image to ECR, and deploy to your environments.</li>
+<li>Hooks: Hooks are basically python modules that enables tasks to access external platform, like AWS, AZURE, GCP and many more.</li>
+<li>Sensors: Sensors are python modules which are used to create watcher tasks(in the most basic sense), for example s3Sensor is used to create s3 file watcher task. A sensor stays in running state till a specific state appears.</li>
+<li>Operators: Operators are typically execution engines. Operators are used to create task that execute some process, based on the type of Operator. For example: PythonOperator can be used create a task that will run a specific python method.</li>
 </ul>
-<h3 id="notes">Notes</h3>
+<p><strong>XCom</strong></p>
 <ul>
-<li>copilot cli automatically creates thw following stacks
-<ul>
-<li><code>aws-copilot-playground-infrastructure-roles</code> stack
-<img src="https://www.evernote.com/l/AAFuJxIjJk9CnIj2PLZgRPE00acVAbuftYkB/image.png" alt=""></li>
-<li><code>StackSet-aws-copilot-playground-infrastructure-777bf4f7-f4a1-469e-bbff-5113f346b47e</code>
-<img src="https://www.evernote.com/l/AAEi6LD4-VxJOIFL2e84M4nrNp8l_TsMZlwB/image.png" alt=""></li>
+<li>share small bits of data between tasks</li>
+<li>stored in airflow postgres db</li>
 </ul>
-</li>
-<li>similar dev workflow to Elastic Beanstalk (eb), Cloud Foundry (cf), heroku.</li>
-</ul>
-<h3 id="files-and-directories">Files and Directories</h3>
-<ul>
-<li><a href="copilot"><code>copilot/</code></a> - copilot working directory</li>
-<li><a href="copilot/aws-copilot-playground-nginx/manifest.yml">copilot/aws-copilot-playground-nginx/manifest.yml</a> - manifest file generated by copilot</li>
-</ul>
-<h2 id="running">Running</h2>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># copilot does not allow use of root account.</span>
-<span class="c1"># copilot will use `AWS_PROFILE` setting</span>
-<span class="nb">export</span> <span class="nv">AWS_PROFILE</span><span class="o">=</span>admin
-
-copilot init
-
-copilot deploy
-
-copilot app show
-
-copilot svc ls
-
-<span class="c1"># create new service (web, backend, scheduled)</span>
-copilot svc init
-
-copilot svc show
-
-copilot svc logs
-
-<span class="c1"># delete all resources / stack(s)</span>
-copilot app delete
+<h2 id="example-environment-attributes">Example Environment Attributes</h2>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+    <span class="nt">&#34;Environment&#34;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&#34;AirflowConfigurationOptions&#34;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="nt">&#34;AirflowVersion&#34;</span><span class="p">:</span> <span class="s2">&#34;1.10.12&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;Arn&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:airflow:eu-west-1:xxxxxxxxxxxx:environment/airflow-blogpost-dublin&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;CreatedAt&#34;</span><span class="p">:</span> <span class="mf">1610632127.0</span><span class="p">,</span>
+        <span class="nt">&#34;DagS3Path&#34;</span><span class="p">:</span> <span class="s2">&#34;dags&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;EnvironmentClass&#34;</span><span class="p">:</span> <span class="s2">&#34;mw1.medium&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;ExecutionRoleArn&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:iam:: xxxxxxxxxxxx:role/airflow-demo-mwaa-eks-iamrole&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;LastUpdate&#34;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&#34;CreatedAt&#34;</span><span class="p">:</span> <span class="mf">1611137820.0</span><span class="p">,</span>
+            <span class="nt">&#34;Status&#34;</span><span class="p">:</span> <span class="s2">&#34;SUCCESS&#34;</span>
+        <span class="p">},</span>
+        <span class="nt">&#34;LoggingConfiguration&#34;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&#34;DagProcessingLogs&#34;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&#34;CloudWatchLogGroupArn&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:logs:: xxxxxxxxxxxx:log-group:airflow-ricsue-dublin-DAGProcessing&#34;</span><span class="p">,</span>
+                <span class="nt">&#34;Enabled&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&#34;LogLevel&#34;</span><span class="p">:</span> <span class="s2">&#34;INFO&#34;</span>
+            <span class="p">},</span>
+            <span class="nt">&#34;SchedulerLogs&#34;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&#34;CloudWatchLogGroupArn&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:logs:: xxxxxxxxxxxx:log-group:airflow-ricsue-dublin-Scheduler&#34;</span><span class="p">,</span>
+                <span class="nt">&#34;Enabled&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&#34;LogLevel&#34;</span><span class="p">:</span> <span class="s2">&#34;INFO&#34;</span>
+            <span class="p">},</span>
+            <span class="nt">&#34;TaskLogs&#34;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&#34;CloudWatchLogGroupArn&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:logs:: xxxxxxxxxxxx:log-group:airflow-ricsue-dublin-Task&#34;</span><span class="p">,</span>
+                <span class="nt">&#34;Enabled&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&#34;LogLevel&#34;</span><span class="p">:</span> <span class="s2">&#34;INFO&#34;</span>
+            <span class="p">},</span>
+            <span class="nt">&#34;WebserverLogs&#34;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&#34;CloudWatchLogGroupArn&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:logs:: xxxxxxxxxxxx:log-group:airflow-ricsue-dublin-WebServer&#34;</span><span class="p">,</span>
+                <span class="nt">&#34;Enabled&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&#34;LogLevel&#34;</span><span class="p">:</span> <span class="s2">&#34;INFO&#34;</span>
+            <span class="p">},</span>
+            <span class="nt">&#34;WorkerLogs&#34;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&#34;CloudWatchLogGroupArn&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:logs:: xxxxxxxxxxxx:log-group:airflow-ricsue-dublin-Worker&#34;</span><span class="p">,</span>
+                <span class="nt">&#34;Enabled&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&#34;LogLevel&#34;</span><span class="p">:</span> <span class="s2">&#34;INFO&#34;</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&#34;MaxWorkers&#34;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="nt">&#34;Name&#34;</span><span class="p">:</span> <span class="s2">&#34;ricsue-dublin&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;NetworkConfiguration&#34;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&#34;SecurityGroupIds&#34;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&#34;sg-0c88ef4755c295zzz&#34;</span>
+            <span class="p">],</span>
+            <span class="nt">&#34;SubnetIds&#34;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&#34;subnet-0493dffd0282f4xxx&#34;</span><span class="p">,</span>
+                <span class="s2">&#34;subnet-08f416023356ffyyy&#34;</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="nt">&#34;RequirementsS3Path&#34;</span><span class="p">:</span> <span class="s2">&#34;requirements/requirements.txt&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;ServiceRoleArn&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:iam:: xxxxxxxxxxxx:role/aws-service-role/airflow.amazonaws.com/AWSServiceRoleForAmazonMWAA&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;SourceBucketArn&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:s3:::airflow-mybucket&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;Status&#34;</span><span class="p">:</span> <span class="s2">&#34;AVAILABLE&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;Tags&#34;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="nt">&#34;WebserverAccessMode&#34;</span><span class="p">:</span> <span class="s2">&#34;PUBLIC_ONLY&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;WebserverUrl&#34;</span><span class="p">:</span> <span class="s2">&#34;aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee.c5.eu-west-1.airflow.amazonaws.com&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;WeeklyMaintenanceWindowStart&#34;</span><span class="p">:</span> <span class="s2">&#34;SUN:14:00&#34;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div><h2 id="resources">Resources</h2>
 <ul>
-<li><a href="https://aws.github.io/copilot-cli/">AWS Copilot CLI - AWS Copilot CLI</a></li>
-<li><a href="https://ecsworkshop.com">ECSworkshop.com</a></li>
+<li><a href="https://docs.aws.amazon.com/mwaa/index.html">Amazon Managed Workflows for Apache Airflow</a></li>
+<li><a href="https://dev.to/aws/interacting-with-amazon-managed-workflows-for-apache-airflow-via-the-command-line-4e91">Interacting with Amazon Managed Workflows for Apache Airflow via the command line</a></li>
+<li><a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/mwaa/index.html">AWS CLI Command Reference | mwaa</a></li>
+<li><a href="https://medium.com/swlh/airflow-custom-plugins-38f0848b74c5">Airflow — Custom Plugins</a></li>
+<li><a href="https://marclamberti.com/blog/airflow-xcom/">Airflow XCOM : The Ultimate Guide</a></li>
 </ul>
 
 
@@ -392,10 +417,10 @@ copilot app delete
         <section id="social-share">
           <div class="list-inline footer-links text-center">
             <span class="text-muted">share on</span><br />
-            <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-copilot%2f&amp;text=AWS%20Copilot&amp;via=pfeilbr"
+            <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2famazon-managed-workflows-for-apache-airflow%2f&amp;text=Amazon%20Managed%20Workflows%20For%20Apache%20Airflow&amp;via=pfeilbr"
               target="_blank" title="Share on Twitter">Twitter</a>
             &nbsp;&bull;&nbsp;
-            <a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-copilot%2f&amp;title=AWS%20Copilot" target="_blank"
+            <a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2famazon-managed-workflows-for-apache-airflow%2f&amp;title=Amazon%20Managed%20Workflows%20For%20Apache%20Airflow" target="_blank"
               title="Share on Reddit">
               Reddit
             </a>
@@ -413,11 +438,6 @@ copilot app delete
 
         
         
-        
-        
-
-        
-        
 
         
         
@@ -427,14 +447,14 @@ copilot app delete
       <ul class="pager blog-pager">
         
         <li class="previous">
-          <a href="https://brianpfeil.com/post/amazon-managed-workflows-for-apache-airflow/" data-toggle="tooltip" data-placement="top"
-            title="Amazon Managed Workflows For Apache Airflow">&larr; Amazon Managed Workflows For Apache Airflow</a>
+          <a href="https://brianpfeil.com/post/aws-glue-pyspark-fetch-databases-and-tables-metadata/" data-toggle="tooltip" data-placement="top"
+            title="AWS Glue Pyspark Fetch Databases and Tables Metadata">&larr; AWS Glue Pyspark Fetch Databases and Tables Metadata</a>
         </li>
         
         
         <li class="next">
-          <a href="https://brianpfeil.com/post/aws-ses/" data-toggle="tooltip" data-placement="top"
-            title="AWS SES">AWS SES &rarr;</a>
+          <a href="https://brianpfeil.com/post/aws-copilot/" data-toggle="tooltip" data-placement="top"
+            title="AWS Copilot">AWS Copilot &rarr;</a>
         </li>
         
       </ul>

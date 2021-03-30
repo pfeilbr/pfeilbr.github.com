@@ -6,10 +6,19 @@
     <description>Recent content on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Mar 2021 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 30 Mar 2021 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS SES</title>
+      <link>https://brianpfeil.com/post/aws-ses/</link>
+      <pubDate>Tue, 30 Mar 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-ses/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>AWS Copilot</title>
@@ -17,6 +26,15 @@
       <pubDate>Sun, 21 Mar 2021 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-copilot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Amazon Managed Workflows For Apache Airflow</title>
+      <link>https://brianpfeil.com/post/amazon-managed-workflows-for-apache-airflow/</link>
+      <pubDate>Sat, 13 Mar 2021 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/post/amazon-managed-workflows-for-apache-airflow/</guid>
       <description></description>
     </item>
     
