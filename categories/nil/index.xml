@@ -6,10 +6,19 @@
     <description>Recent content in &lt;nil&gt; on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Mar 2021 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 02 Apr 2021 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/categories/nil/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>API Gateway Service Integrations for HTTP APIs</title>
+      <link>https://brianpfeil.com/post/api-gateway-service-integrations-for-http-apis/</link>
+      <pubDate>Fri, 02 Apr 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/api-gateway-service-integrations-for-http-apis/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>AWS SES</title>
@@ -116,6 +125,15 @@
       <pubDate>Mon, 28 Sep 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/mdx-deck/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS AppFlow Veeva Vault to S3</title>
+      <link>https://brianpfeil.com/post/aws-appflow-veeva-vault-to-s3/</link>
+      <pubDate>Tue, 08 Sep 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-appflow-veeva-vault-to-s3/</guid>
       <description></description>
     </item>
     

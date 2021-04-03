@@ -58,7 +58,7 @@
   "headline": "AWS SES",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  590 ,
+  "wordCount":  625 ,
   "datePublished" : "2021-03-30T00:00:00",
   "dateModified" : "2021-03-30T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -334,13 +334,14 @@ if (!doNotTrack) {
 <li>send emails via SMTP or API (AWS CLI, <a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#sendEmail-property">AWS SDK</a>)</li>
 <li>connect to a URL that provides an endpoint for the Amazon SES API or SMTP interface (e.g. email-smtp.us-east-1.amazonaws.com:587)</li>
 <li>DKIM support - DKIM works by adding a digital signature to the headers of an email message. This signature can then be validated against a public cryptographic key that is located in the organization&rsquo;s DNS record</li>
-<li>SPF support - SPF establishes a method for receiving mail servers to verify that incoming email from a domain was sent from a host authorized by that domain’s administrators</li>
+<li>SPF support - SPF establishes a method for receiving mail servers to verify that incoming email from a domain was sent from a host authorized by that domain’s administrators. TXT record <code>&quot;v=spf1 include:amazonses.com ~all&quot;</code></li>
 <li>IAM to control user access to email sending (e.g. <code>ses:SendEmail</code>)</li>
 <li>Configuration sets - groups of rules that you can apply to the emails you send using Amazon SES.  can publish email sending events to CWL, Firehose, SNS</li>
 <li>Event types - Send, Reject, Delivery, Bounce, Complaint, Click  Open  Rendering Failure</li>
 <li>store inbound emails in S3</li>
 <li>trigger lambdas based on inbound emails</li>
 <li>publish your email sending events to CWLs or kinesis firehose</li>
+<li>Sending personalized email via email templates.  templates contain placeholder values.  based on Handlebars template system</li>
 <li>list management
 <ul>
 <li>customers can manage their own mailing lists, known as contact lists.</li>
@@ -365,6 +366,7 @@ if (!doNotTrack) {
 </ul>
 </li>
 <li>need to <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/request-production-access.html?icmpid=docs_ses_console">request production access</a> to move out of sandbox</li>
+<li>VPC endpoint support - see <a href="https://aws.amazon.com/blogs/aws/new-amazon-simple-email-service-ses-for-vpc-endpoints/">New – Amazon Simple Email Service (SES) for VPC Endpoints</a></li>
 </ul>
 <hr>
 <h2 id="send-email-using-api">Send Email Using API</h2>
@@ -464,6 +466,11 @@ openssl s_client -crlf -quiet -starttls smtp -connect email-smtp.us-east-1.amazo
             title="AWS Copilot">&larr; AWS Copilot</a>
         </li>
         
+        
+        <li class="next">
+          <a href="https://brianpfeil.com/post/api-gateway-service-integrations-for-http-apis/" data-toggle="tooltip" data-placement="top"
+            title="API Gateway Service Integrations for HTTP APIs">API Gateway Service Integrations for HTTP APIs &rarr;</a>
+        </li>
         
       </ul>
       

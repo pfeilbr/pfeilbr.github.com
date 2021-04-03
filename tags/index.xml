@@ -6,17 +6,53 @@
     <description>Recent content in Tags on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Mar 2021 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 02 Apr 2021 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>api-gateway</title>
+      <link>https://brianpfeil.com/tags/api-gateway/</link>
+      <pubDate>Fri, 02 Apr 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/api-gateway/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>aws</title>
       <link>https://brianpfeil.com/tags/aws/</link>
-      <pubDate>Tue, 30 Mar 2021 00:00:00 -0400</pubDate>
+      <pubDate>Fri, 02 Apr 2021 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cloudwatch</title>
+      <link>https://brianpfeil.com/tags/cloudwatch/</link>
+      <pubDate>Fri, 02 Apr 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/cloudwatch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>eventbridge</title>
+      <link>https://brianpfeil.com/tags/eventbridge/</link>
+      <pubDate>Fri, 02 Apr 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/eventbridge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>integration</title>
+      <link>https://brianpfeil.com/tags/integration/</link>
+      <pubDate>Fri, 02 Apr 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/integration/</guid>
       <description></description>
     </item>
     
@@ -156,15 +192,6 @@
     </item>
     
     <item>
-      <title>api-gateway</title>
-      <link>https://brianpfeil.com/tags/api-gateway/</link>
-      <pubDate>Fri, 13 Nov 2020 00:00:00 -0500</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/api-gateway/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>flask</title>
       <link>https://brianpfeil.com/tags/flask/</link>
       <pubDate>Fri, 13 Nov 2020 00:00:00 -0500</pubDate>
@@ -197,15 +224,6 @@
       <pubDate>Wed, 11 Nov 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/tags/s3/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cloudwatch</title>
-      <link>https://brianpfeil.com/tags/cloudwatch/</link>
-      <pubDate>Fri, 30 Oct 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/cloudwatch/</guid>
       <description></description>
     </item>
     
@@ -435,6 +453,15 @@
     </item>
     
     <item>
+      <title>appflow</title>
+      <link>https://brianpfeil.com/tags/appflow/</link>
+      <pubDate>Tue, 08 Sep 2020 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/appflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>design</title>
       <link>https://brianpfeil.com/tags/design/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 -0400</pubDate>
@@ -467,24 +494,6 @@
       <pubDate>Tue, 01 Sep 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/ui-components/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>appflow</title>
-      <link>https://brianpfeil.com/tags/appflow/</link>
-      <pubDate>Thu, 27 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/appflow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>eventbridge</title>
-      <link>https://brianpfeil.com/tags/eventbridge/</link>
-      <pubDate>Thu, 27 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/eventbridge/</guid>
       <description></description>
     </item>
     
