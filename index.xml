@@ -6,10 +6,28 @@
     <description>Recent content on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Apr 2021 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 06 Apr 2021 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>API Gateway Private Endpoints</title>
+      <link>https://brianpfeil.com/post/api-gateway-private-endpoints/</link>
+      <pubDate>Tue, 06 Apr 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/api-gateway-private-endpoints/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CFN Diagram</title>
+      <link>https://brianpfeil.com/post/cfn-diagram/</link>
+      <pubDate>Mon, 05 Apr 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/cfn-diagram/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>API Gateway Service Integrations for HTTP APIs</title>
@@ -39,7 +57,7 @@
     </item>
     
     <item>
-      <title>Amazon Managed Workflows For Apache Airflow</title>
+      <title>Amazon Managed Workflows for Apache Airflow</title>
       <link>https://brianpfeil.com/post/amazon-managed-workflows-for-apache-airflow/</link>
       <pubDate>Sat, 13 Mar 2021 00:00:00 -0500</pubDate>
       

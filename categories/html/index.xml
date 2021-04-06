@@ -6,10 +6,19 @@
     <description>Recent content in html on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Mar 2021 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 05 Apr 2021 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/categories/html/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CFN Diagram</title>
+      <link>https://brianpfeil.com/post/cfn-diagram/</link>
+      <pubDate>Mon, 05 Apr 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/cfn-diagram/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>AWS Copilot</title>

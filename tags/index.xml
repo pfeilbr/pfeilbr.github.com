@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Apr 2021 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 06 Apr 2021 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://brianpfeil.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>api-gateway</title>
       <link>https://brianpfeil.com/tags/api-gateway/</link>
-      <pubDate>Fri, 02 Apr 2021 00:00:00 -0400</pubDate>
+      <pubDate>Tue, 06 Apr 2021 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/api-gateway/</guid>
       <description></description>
@@ -23,9 +23,54 @@
     <item>
       <title>aws</title>
       <link>https://brianpfeil.com/tags/aws/</link>
-      <pubDate>Fri, 02 Apr 2021 00:00:00 -0400</pubDate>
+      <pubDate>Tue, 06 Apr 2021 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>network</title>
+      <link>https://brianpfeil.com/tags/network/</link>
+      <pubDate>Tue, 06 Apr 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vpc</title>
+      <link>https://brianpfeil.com/tags/vpc/</link>
+      <pubDate>Tue, 06 Apr 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/vpc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cloudformation</title>
+      <link>https://brianpfeil.com/tags/cloudformation/</link>
+      <pubDate>Mon, 05 Apr 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/cloudformation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>diagram</title>
+      <link>https://brianpfeil.com/tags/diagram/</link>
+      <pubDate>Mon, 05 Apr 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/diagram/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tools</title>
+      <link>https://brianpfeil.com/tags/tools/</link>
+      <pubDate>Mon, 05 Apr 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/tools/</guid>
       <description></description>
     </item>
     
@@ -525,29 +570,11 @@
     </item>
     
     <item>
-      <title>diagram</title>
-      <link>https://brianpfeil.com/tags/diagram/</link>
-      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/diagram/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>golang</title>
       <link>https://brianpfeil.com/tags/golang/</link>
       <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tools</title>
-      <link>https://brianpfeil.com/tags/tools/</link>
-      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/tools/</guid>
       <description></description>
     </item>
     
@@ -800,15 +827,6 @@
       <pubDate>Wed, 14 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/build-tools/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cloudformation</title>
-      <link>https://brianpfeil.com/tags/cloudformation/</link>
-      <pubDate>Wed, 14 Aug 2019 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/cloudformation/</guid>
       <description></description>
     </item>
     
@@ -1592,15 +1610,6 @@
       <pubDate>Sun, 11 Sep 2011 00:58:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/tags/mobile/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>network</title>
-      <link>https://brianpfeil.com/tags/network/</link>
-      <pubDate>Fri, 05 Aug 2011 00:58:00 +0000</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/network/</guid>
       <description></description>
     </item>
     

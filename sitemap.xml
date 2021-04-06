@@ -4,31 +4,86 @@
   
   <url>
     <loc>https://brianpfeil.com/categories/nil/</loc>
-    <lastmod>2021-04-02T00:00:00-04:00</lastmod>
+    <lastmod>2021-04-06T00:00:00-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/post/api-gateway-service-integrations-for-http-apis/</loc>
-    <lastmod>2021-04-02T00:00:00-04:00</lastmod>
+    <loc>https://brianpfeil.com/post/api-gateway-private-endpoints/</loc>
+    <lastmod>2021-04-06T00:00:00-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://brianpfeil.com/tags/api-gateway/</loc>
-    <lastmod>2021-04-02T00:00:00-04:00</lastmod>
+    <lastmod>2021-04-06T00:00:00-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://brianpfeil.com/tags/aws/</loc>
-    <lastmod>2021-04-02T00:00:00-04:00</lastmod>
+    <lastmod>2021-04-06T00:00:00-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://brianpfeil.com/</loc>
-    <lastmod>2021-04-02T00:00:00-04:00</lastmod>
+    <lastmod>2021-04-06T00:00:00-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://brianpfeil.com/categories/</loc>
+    <lastmod>2021-04-06T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/network/</loc>
+    <lastmod>2021-04-06T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/playground/</loc>
+    <lastmod>2021-04-06T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/</loc>
+    <lastmod>2021-04-06T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/</loc>
+    <lastmod>2021-04-06T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/vpc/</loc>
+    <lastmod>2021-04-06T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/cfn-diagram/</loc>
+    <lastmod>2021-04-05T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/cloudformation/</loc>
+    <lastmod>2021-04-05T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/diagram/</loc>
+    <lastmod>2021-04-05T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/categories/html/</loc>
+    <lastmod>2021-04-05T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/tags/tools/</loc>
+    <lastmod>2021-04-05T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brianpfeil.com/post/api-gateway-service-integrations-for-http-apis/</loc>
     <lastmod>2021-04-02T00:00:00-04:00</lastmod>
   </url>
   
@@ -44,21 +99,6 @@
   
   <url>
     <loc>https://brianpfeil.com/tags/integration/</loc>
-    <lastmod>2021-04-02T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/playground/</loc>
-    <lastmod>2021-04-02T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/post/</loc>
-    <lastmod>2021-04-02T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/</loc>
     <lastmod>2021-04-02T00:00:00-04:00</lastmod>
   </url>
   
@@ -89,11 +129,6 @@
   
   <url>
     <loc>https://brianpfeil.com/tags/ecs/</loc>
-    <lastmod>2021-03-21T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/categories/html/</loc>
     <lastmod>2021-03-21T00:00:00-04:00</lastmod>
   </url>
   
@@ -543,11 +578,6 @@
   </url>
   
   <url>
-    <loc>https://brianpfeil.com/tags/diagram/</loc>
-    <lastmod>2020-08-18T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://brianpfeil.com/categories/Go/</loc>
     <lastmod>2020-08-18T00:00:00-04:00</lastmod>
   </url>
@@ -564,11 +594,6 @@
   
   <url>
     <loc>https://brianpfeil.com/post/mage/</loc>
-    <lastmod>2020-08-18T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/tools/</loc>
     <lastmod>2020-08-18T00:00:00-04:00</lastmod>
   </url>
   
@@ -1014,11 +1039,6 @@
   
   <url>
     <loc>https://brianpfeil.com/tags/build-tools/</loc>
-    <lastmod>2019-08-14T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/cloudformation/</loc>
     <lastmod>2019-08-14T00:00:00-04:00</lastmod>
   </url>
   
@@ -2319,11 +2339,6 @@
   
   <url>
     <loc>https://brianpfeil.com/categories/mac/</loc>
-    <lastmod>2011-08-05T00:58:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brianpfeil.com/tags/network/</loc>
     <lastmod>2011-08-05T00:58:00+00:00</lastmod>
   </url>
   
