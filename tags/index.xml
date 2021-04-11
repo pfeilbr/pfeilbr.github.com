@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Apr 2021 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cdk</title>
+      <link>https://brianpfeil.com/tags/cdk/</link>
+      <pubDate>Sun, 11 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/cdk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>react</title>
+      <link>https://brianpfeil.com/tags/react/</link>
+      <pubDate>Sun, 11 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rfc</title>
+      <link>https://brianpfeil.com/tags/rfc/</link>
+      <pubDate>Sun, 11 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/rfc/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>architecture</title>
       <link>https://brianpfeil.com/tags/architecture/</link>
@@ -494,15 +521,6 @@
     </item>
     
     <item>
-      <title>react</title>
-      <link>https://brianpfeil.com/tags/react/</link>
-      <pubDate>Mon, 28 Sep 2020 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/react/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>appflow</title>
       <link>https://brianpfeil.com/tags/appflow/</link>
       <pubDate>Tue, 08 Sep 2020 00:00:00 -0400</pubDate>
@@ -886,15 +904,6 @@
       <pubDate>Mon, 22 Jul 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/youtube/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cdk</title>
-      <link>https://brianpfeil.com/tags/cdk/</link>
-      <pubDate>Thu, 11 Jul 2019 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/cdk/</guid>
       <description></description>
     </item>
     
