@@ -6,11 +6,7 @@
     <description>Recent content in bash on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 13 Oct 2020 00:00:00 -0400</lastBuildDate>
-    
-	<atom:link href="https://brianpfeil.com/tags/bash/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 13 Oct 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/bash/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bash Shell Script</title>
       <link>https://brianpfeil.com/post/bash-shell-script/</link>

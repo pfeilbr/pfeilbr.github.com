@@ -6,11 +6,7 @@
     <description>Recent content in sam on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Jan 2021 00:00:00 -0500</lastBuildDate>
-    
-	<atom:link href="https://brianpfeil.com/tags/sam/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 08 Jan 2021 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/tags/sam/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SAM Lambda Layers</title>
       <link>https://brianpfeil.com/post/sam-lambda-layers/</link>

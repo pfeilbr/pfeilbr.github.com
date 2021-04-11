@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>AWS Well Architected - Brian Pfeil</title>
+  <meta name="author" content="Brian Pfeil"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Brian Pfeil",
+    
+    "url": "https:\/\/brianpfeil.com\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/brianpfeil.com\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/brianpfeil.com\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/brianpfeil.com\/post\/aws-well-architected\/",
+          "name": "Aws well architected"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Brian Pfeil"
+  },
+  "headline": "AWS Well Architected",
+  "description" : "",
+  "inLanguage" : "en",
+  "wordCount":  464 ,
+  "datePublished" : "2021-04-09T00:00:00",
+  "dateModified" : "2021-04-09T00:00:00",
+  "image" : "https:\/\/brianpfeil.com\/",
+  "keywords" : [ "aws, aws-well-architected, architecture" ],
+  "mainEntityOfPage" : "https:\/\/brianpfeil.com\/post\/aws-well-architected\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/brianpfeil.com\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/brianpfeil.com\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="AWS Well Architected" />
+<meta property="og:url" content="https://brianpfeil.com/post/aws-well-architected/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Brian Pfeil" />
+
+  <meta name="twitter:title" content="AWS Well Architected" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@pfeilbr" />
+  <meta name="twitter:creator" content="@pfeilbr" />
+  <meta name="generator" content="Hugo 0.82.0" />
+  <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://brianpfeil.com/css/highlight.min.css" /><link rel="stylesheet" href="https://brianpfeil.com/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+<link rel="stylesheet" href="https://brianpfeil.com/css/custom.css" />
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-610553-4', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+
+
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      
+      <a class="navbar-brand" href="https://brianpfeil.com/">Brian Pfeil</a>
+      
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+
+      <ul class="nav navbar-nav navbar-right">
+        
+        
+        <li>
+          <a title="about" href="/about/">about</a>
+        </li>
+        
+
+        
+        
+        <li>
+          <a title="posts" href="/">posts</a>
+        </li>
+        
+
+        
+        
+        <li>
+          <a title="projects" href="/projects/">projects</a>
+        </li>
+        
+
+        
+        
+        <li>
+          <a title="tags" href="/tags/">tags</a>
+        </li>
+        
+
+        
+
+        
+
+        
+
+        <li>
+          
+          <a id="dark-mode-toggle">
+            <i class="fa fa-moon hidden" id="dark-mode-enabled-icon" aria-hidden="true"></i>
+            <i class="fa fa-sun hidden" id="dark-mode-disabled-icon" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header-section ">
+  
+  <div class="intro-header no-img">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div class="post-heading">
+            
+
+            
+            
+            <h1>AWS Well Architected</h1>
+            
+
+
+
+            
+            
+            
+            
+            <span class="post-meta">
+  
+  
+
+    April 9, 2021
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+  <span class="blog-tags">
+    &nbsp;&bull;&nbsp;
+    
+    <a href="https://brianpfeil.com//tags/aws/">aws</a>
+    ,
+    
+    <a href="https://brianpfeil.com//tags/aws-well-architected/">aws-well-architected</a>
+    ,
+    
+    <a href="https://brianpfeil.com//tags/architecture/">architecture</a>
+    
+    
+  </span>
+  
+  
+
+
+  
+  
+</span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+    
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <div class="alert alert-info small bg-info" role="alert">
+<span class="text-muted">code for article</span>&nbsp;<a href="https://github.com/pfeilbr/aws-well-architected-playground" target="_blank"><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/aws-well-architected-playground</a>
+</div>
+<p>deep dive on all things AWS Well-Architected</p>
+<h2 id="key-points">Key Points</h2>
+<ul>
+<li>consistent pre-launch review process against AWS best practices</li>
+<li>helps you understand the pros and cons of decisions you make while building systems</li>
+<li>review process is a conversation and not an audit.  working together to improve. practical advice.</li>
+<li>goal is not to have &ldquo;perfect&rdquo; architecture from the start. identify areas for improvement and choose a couple that delivery the most value</li>
+<li>AWS does not provide prescriptive guidance on how to perform the review.  WA tool is the closest.</li>
+<li>concepts: Pillars -&gt; Design Principles -&gt; Questions</li>
+<li>enables: learn -&gt; measure -&gt; improve iterative cycle</li>
+<li>input: answer questions, output: improvement plan (PDF reports)</li>
+<li>learning / education - can be used as standalone tool solely for learning what the best practices are</li>
+<li>milestone - record the state of a workload for given point in time. e.g. original design, design review, v1, v2</li>
+</ul>
+<h2 id="use-cases">Use Cases</h2>
+<ul>
+<li>learning best practices for the cloud</li>
+<li>technology governance</li>
+<li>portfolio management - inventory of workloads, historical decisions made, risks, highlights where to invest</li>
+</ul>
+<h2 id="well-architected-framework">Well-Architected Framework</h2>
+<blockquote>
+<p>The AWS Well-Architected Framework helps you to design and operate a reliable, secure, efficient, and cost-efficient systems on AWS. It also helps you constantly measure your architecture against best practices and provides you an opportunity to improve your architecture.</p>
+</blockquote>
+<h3 id="5-pillars">5 Pillars</h3>
+<ul>
+<li>Operational Excellence</li>
+<li>Security</li>
+<li>Reliability</li>
+<li>Performance Efficiency</li>
+<li>Cost Optimization</li>
+</ul>
+<h3 id="review-process">Review Process</h3>
+<blockquote>
+<p>The review process describes in high-level terms, how the assessment of the principles should be done. For AWS, this should be a lightweight process, which is taking rather hours, instead of days and it should be repeated multiple times across the architecture lifecycle. AWS states that it is important to have a conversation (not an audit) and a “blame-free approach” during the review and it is also important to involve the right people. The results of the conversations should be a list of issues that can then be prioritized based on the business context and that can be formulated into a set of actions that help to improve the overall customer experience of the architecture.</p>
+</blockquote>
+<h2 id="well-architected-tool">Well-Architected Tool</h2>
+<p>AWS Console Tool that steps a user through the Well-Architected Review Process</p>
+<h3 id="feature-request">Feature Request</h3>
+<p>One area where there is a gap for an enterprises are all the company specific policies, standards, and best practices that are additive and need to be addressed on top of AWS.  These types of questions and guidance would need to happen outside of WA Tool.</p>
+<p>A feature to define custom lenses - a customer defined lens.  This way the single WA Tool could be the method for review facilitation, improvement reporting and maintaining history.</p>
+<h2 id="key-visuals">Key Visuals</h2>
+<p><img src="https://www.evernote.com/l/AAGT8fHSJRtGV4338tvJ0FHMvbb_vfTh7qkB/image.png" alt="WA Tool Features" width="50%" /></p>
+<p><img src="https://www.evernote.com/l/AAE0ZIXQoM5KYK9TUKsBpNZ_dSQ_x27Ti_0B/image.png" alt="General Design Principles" width="50%" /></p>
+<p><img src="https://www.evernote.com/l/AAGxCfQWxsZMDZLQC9dqcm-EJRgkM3jsNlwB/image.png" alt="Intent of WA Review" width="50%" /></p>
+<p><img src="https://www.evernote.com/l/AAF2yN9IdGZOS6_CoSnpzjc0nWOru88e4a0B/image.png" alt="Review Benefits" width="50%" /></p>
+<p><img src="https://www.evernote.com/l/AAEqVMFtRnJBMp-iX7F3Y8eLLIu3kV6ruvQB/image.png" alt="" width="50%" /></p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://aws.amazon.com/architecture/well-architected">AWS Well-Architected</a></li>
+<li><a href="https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html">Documentation | AWS Well-Architected Framework</a></li>
+<li><a href="https://wa.aws.amazon.com/wat.thereviewprocess.wa-review.en.html">The Review Process - AWS Well-Architected Framework</a></li>
+<li><a href="https://www.rapyder.com/blogs/aws-well-architected-framework-checklist/">AWS Well Architected framework: A Complete Checklist</a></li>
+<li><a href="https://cloudnoon.com/blog/aws/aws-well-architected-framework-cheatsheet/">AWS Well-Architected Framework Cheatsheet | Cloud Noon</a></li>
+</ul>
+
+
+        
+
+        
+
+        <hr />
+
+        <section id="social-share">
+          <div class="list-inline footer-links text-center">
+            <span class="text-muted">share on</span><br />
+            <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-well-architected%2f&amp;text=AWS%20Well%20Architected&amp;via=pfeilbr"
+              target="_blank" title="Share on Twitter">Twitter</a>
+            &nbsp;&bull;&nbsp;
+            <a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-well-architected%2f&amp;title=AWS%20Well%20Architected" target="_blank"
+              title="Share on Reddit">
+              Reddit
+            </a>
+
+          </div>
+
+
+
+        </section>
+
+
+
+
+
+
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+      </article>
+
+      
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="https://brianpfeil.com/post/api-gateway-private-endpoints/" data-toggle="tooltip" data-placement="top"
+            title="API Gateway Private Endpoints">&larr; API Gateway Private Endpoints</a>
+        </li>
+        
+        
+      </ul>
+      
+
+
+      
+      
+      
+      
+
+    </div>
+  </div>
+</div>
+
+    
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          
+          
+          
+          
+          <li>
+            <a href="https://twitter.com/pfeilbr" title="twitter">
+              <span class="footer-link">
+                twitter
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://github.com/pfeilbr" title="github">
+              <span class="footer-link">
+                github
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://stackoverflow.com/users/29148/pfeilbr" title="stack overflow">
+              <span class="footer-link">
+                stack overflow
+              </span>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="footer-link">
+                rss
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+          
+          <a href="https://brianpfeil.com">Brian Pfeil</a>
+          
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+          2021
+          
+
+          
+        </p>
+        
+        
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"
+  integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js"
+  integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://brianpfeil.com/js/main.js"></script>
+<script src="https://brianpfeil.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function () { $("pre.chroma").css("padding", "0"); }); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js"
+  integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js"
+  integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://brianpfeil.com/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+<script src="https://unpkg.com/darkreader@4.9.16/darkreader.js" crossorigin="anonymous"></script>
+
+<script>
+    
+    (() => {
+
+        DarkReader.setFetchMethod(window.fetch)
+
+        const DARK_MODE_ENABLED_KEY = "DARK_MODE_ENABLED_KEY"
+
+        const enabledIcon = document.getElementById("dark-mode-enabled-icon")
+        const disabledIcon = document.getElementById("dark-mode-disabled-icon")
+
+         
+        if (enabledIcon === null || disabledIcon === null) {
+            return
+        }
+
+        const toggleClassName = "hidden"
+
+        const enable = () => {
+
+            if (window.localStorage) {
+                DarkReader.enable({
+                    brightness: 100,
+                    contrast: 90,
+                    sepia: 10
+                });
+                window.localStorage.setItem(DARK_MODE_ENABLED_KEY, "true")
+
+                enabledIcon.classList.add(toggleClassName)
+                disabledIcon.classList.remove(toggleClassName)
+            }
+        }
+
+        const disable = () => {
+            if (window.localStorage) {
+                DarkReader.disable()
+                if (window.localStorage.getItem(DARK_MODE_ENABLED_KEY)) {
+                    window.localStorage.removeItem(DARK_MODE_ENABLED_KEY)
+                }
+
+                enabledIcon.classList.remove(toggleClassName)
+                disabledIcon.classList.add(toggleClassName)
+
+            }
+        }
+
+        const isEnabled = () => {
+            return window.localStorage && (window.localStorage.getItem(DARK_MODE_ENABLED_KEY) != null)
+        }
+
+        const toggle = () => {
+            if (isEnabled()) {
+                disable()
+            } else {
+                enable()
+            }
+        }
+
+
+        if (isEnabled()) {
+            enable()
+        } else {
+            disable()
+        }
+
+        const e = document.getElementById('dark-mode-toggle')
+        e.addEventListener('click', toggle)
+        
+        
+        
+        
+        
+        
+
+        
+        
+
+    })()
+
+</script>
+
+<script>
+     
+    
+
+</script>
+    
+  </body>
+</html>
+

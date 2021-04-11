@@ -86,7 +86,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.74.3" />
+  <meta name="generator" content="Hugo 0.82.0" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -401,16 +401,16 @@ docker-compose down
 <h3 id="changes">Changes</h3>
 <h4 id="allow-logging-in-to-a-wp-vip-site-eg-httpwp-vip-sitewp-admin-with-admin--password">Allow logging in to a WP VIP site (e.g. <a href="http://WP-VIP-SITE/wp-admin">http://WP-VIP-SITE/wp-admin</a>) with admin / password.</h4>
 <p>changed <code>wpcom_vip_is_restricted_username</code> @ <code>WP-VIP-SITE/public_html/wp-content/mu-plugins/security.php</code> to</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">function wpcom_vip_is_restricted_username( $username ) {
-	// return &#39;admin&#39; === $username
-	// 	|| WPCOM_VIP_MACHINE_USER_LOGIN === $username
-	// 	|| WPCOM_VIP_MACHINE_USER_EMAIL === $username;
-	return false;
-}
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="k">function</span> <span class="nf">wpcom_vip_is_restricted_username</span><span class="p">(</span> <span class="nv">$username</span> <span class="p">)</span> <span class="p">{</span>
+	<span class="c1">// return &#39;admin&#39; === $username
+</span><span class="c1"></span>	<span class="c1">// 	|| WPCOM_VIP_MACHINE_USER_LOGIN === $username
+</span><span class="c1"></span>	<span class="c1">// 	|| WPCOM_VIP_MACHINE_USER_EMAIL === $username;
+</span><span class="c1"></span>	<span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div><h4 id="remove-vip_maintenance_mode-not-defined-error-message-showing-in-wp-admin-and-site-uis">Remove <code>VIP_MAINTENANCE_MODE</code> not defined error message showing in wp-admin and site UIs</h4>
 <p>added the following to <code>WP-VIP-SITE/public_html/wp-content/client-mu-plugins/plugin-loader.php</code> to get rid of
 <code>VIP_MAINTENANCE_MODE</code> not defined error message showing in wp-admin and site UIs.</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">define( &#39;VIP_MAINTENANCE_MODE&#39;, false );
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="nx">define</span><span class="p">(</span> <span class="s1">&#39;VIP_MAINTENANCE_MODE&#39;</span><span class="p">,</span> <span class="k">false</span> <span class="p">);</span>
 </code></pre></div><hr>
 <h2 id="resources">Resources</h2>
 <ul>

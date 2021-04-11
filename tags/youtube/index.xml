@@ -6,11 +6,7 @@
     <description>Recent content in youtube on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Jul 2019 00:00:00 -0400</lastBuildDate>
-    
-	<atom:link href="https://brianpfeil.com/tags/youtube/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 22 Jul 2019 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/youtube/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>YouTube API</title>
       <link>https://brianpfeil.com/post/youtube-api/</link>

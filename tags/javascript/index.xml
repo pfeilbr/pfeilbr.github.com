@@ -6,11 +6,7 @@
     <description>Recent content in javascript on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Oct 2020 00:00:00 -0400</lastBuildDate>
-    
-	<atom:link href="https://brianpfeil.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 26 Oct 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AWS JavaScript SDK V3</title>
       <link>https://brianpfeil.com/post/aws-javascript-sdk-v3/</link>

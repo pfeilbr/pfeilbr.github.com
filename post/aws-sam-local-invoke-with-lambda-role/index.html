@@ -45,7 +45,7 @@
         "position": 3,
         "item": {
           "@id": "https:\/\/brianpfeil.com\/post\/aws-sam-local-invoke-with-lambda-role\/",
-          "name": "A w s s a m local invoke with lambda role"
+          "name": "Aws sam local invoke with lambda role"
         }
     }]
 }
@@ -59,7 +59,7 @@
   "headline": "AWS SAM Local Invoke with Lambda Role",
   "description" : "Running lambda locally with SAM in the lambda role security context",
   "inLanguage" : "en",
-  "wordCount":  532 ,
+  "wordCount":  533 ,
   "datePublished" : "2020-07-30T00:00:00",
   "dateModified" : "2020-07-30T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -89,7 +89,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.74.3" />
+  <meta name="generator" content="Hugo 0.82.0" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -375,9 +375,9 @@ region = us-east-1
 </code></pre></div><h3 id="running-sam-local">Running SAM Local</h3>
 <p>The SQS queue URL is provided to the lambda via an environment variable.  This is defined in the SAM template</p>
 <p><code>template.yaml</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">Environment</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="k">Variables</span><span class="p">:</span><span class="w">
-</span><span class="w">        </span><span class="k">QUEUE_URL</span><span class="p">:</span><span class="w"> </span>!Ref<span class="w"> </span>Queue<span class="w">
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">Environment</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">Variables</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="nt">QUEUE_URL</span><span class="p">:</span><span class="w"> </span>!<span class="l">Ref Queue</span><span class="w">
 </span></code></pre></div><p>We need <code>QUEUE_URL</code> to be available to our function running locally.  To do that we can create an environment variable .json file and pass as a parameter for sam local to use.</p>
 <p><code>env-vars.json</code></p>
 <div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>

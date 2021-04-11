@@ -6,11 +6,7 @@
     <description>Recent content in bundler on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Apr 2015 00:00:00 -0400</lastBuildDate>
-    
-	<atom:link href="https://brianpfeil.com/tags/bundler/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 03 Apr 2015 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/bundler/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>webpack</title>
       <link>https://brianpfeil.com/post/webpack/</link>

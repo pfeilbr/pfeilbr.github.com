@@ -44,7 +44,7 @@
         "position": 3,
         "item": {
           "@id": "https:\/\/brianpfeil.com\/post\/aws-cdk\/",
-          "name": "A w s c d k"
+          "name": "Aws cdk"
         }
     }]
 }
@@ -58,7 +58,7 @@
   "headline": "AWS CDK",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  32 ,
+  "wordCount":  239 ,
   "datePublished" : "2019-07-11T00:00:00",
   "dateModified" : "2019-07-11T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -86,7 +86,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.74.3" />
+  <meta name="generator" content="Hugo 0.82.0" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -321,10 +321,65 @@ if (!doNotTrack) {
 </div>
 <p>learn <a href="https://docs.aws.amazon.com/cdk/latest/guide/home.html">AWS Cloud Development Kit (CDK)</a></p>
 <p>see <a href="kitchen-sink/README.md"><code>kitchen-sink/README.md</code></a></p>
-<p>other directories are copied AWS examples</p>
-<h2 id="resources">Resources</h2>
+<h2 id="description">Description</h2>
+<ul>
+<li>express resources using general purpose programming languages (ts/js/python/java/C#)</li>
+<li>constructs - cfn (L1), CDK (L2), pattern/solution (L3)</li>
+<li>synth to cfn</li>
+<li>cloud assemblies - cfn + source code, docker images, assets (s3)</li>
+<li>aspects - ability to visit each node/resource in stack and apply changes</li>
+<li>Application -&gt; Stacks -&gt; Constructs</li>
+<li><code>[tf|k8s]</code> CDKs</li>
+<li>jsii - core/foundational tech for multi-language/polyglot support.  bind any language to underlying typescript implementation.</li>
+</ul>
+<h2 id="key-files-and-directories">Key Files and Directories</h2>
+<ul>
+<li><code>bin</code> - entry point to CDK app.  imports 1 or more stacks from <code>lib</code> folder</li>
+<li><code>lib/*-stack.*</code> - define stacks here which contain constructs</li>
+<li><code>cdk.json</code> - cdk configuration</li>
+<li><code>test</code> - unit/integration/e2e tests</li>
+<li><code>cdk.out</code> - CDK assembly / synth output (cfn, assets, etc.)</li>
+</ul>
+<h2 id="common-areas">Common Areas</h2>
+<ul>
+<li><code>@aws-cdk/core - App, Stack, Stack.account, Stack.region, Stack.tags, Stack.terminationProtection, Construct, Duration, CfnOutput</code></li>
+<li><code>lambda.Function</code>, <code>lambda.Code.fromAsset</code>, <code>lambda.Code.fromInline</code></li>
+<li><code>iam.PolicyStatement</code></li>
+</ul>
+<h2 id="common-steps">Common Steps</h2>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># init cdk app</span>
+cdk init app --language javascript
+cdk init app --language typescript
+
+<span class="c1"># list stacks in the app</span>
+cdk list
+
+<span class="c1"># [optional] build for ts -&gt; js.  not required for js</span>
+npm run build
+
+<span class="c1"># synthesize to cfn (`cdk.out`)</span>
+cdk synth
+
+<span class="c1"># run tests</span>
+npm <span class="nb">test</span>
+
+<span class="c1"># compare the specified stack with the deployed stack</span>
+cdk diff
+
+<span class="c1"># deploy</span>
+cdk deploy
+
+<span class="c1"># force deploy, no prompt</span>
+cdk deploy  --force --require-approval never
+
+<span class="c1"># delete</span>
+cdk destroy <span class="o">[</span>STACKS..<span class="o">]</span>
+
+</code></pre></div><h2 id="resources">Resources</h2>
 <ul>
 <li><a href="https://docs.aws.amazon.com/cdk/api/latest/">AWS CDK · AWS CDK Reference Documentation</a></li>
+<li><a href="https://aws.amazon.com/solutions/constructs/">Infrastructure-as-Code | Constructs | AWS Solutions</a></li>
+<li><a href="https://github.com/awslabs/aws-solutions-constructs">awslabs/aws-solutions-constructs</a></li>
 <li><a href="https://github.com/aws-samples/aws-cdk-examples">aws-samples/aws-cdk-examples</a></li>
 <li><a href="https://github.com/panacloud-modern-global-apps/full-stack-serverless-cdk">panacloud-modern-global-apps/full-stack-serverless-cdk</a></li>
 <li><a href="https://github.com/search?l=&amp;q=filename%3Acdk.json&amp;type=code">github | search | &ldquo;filename:cdk.json&rdquo;</a></li>

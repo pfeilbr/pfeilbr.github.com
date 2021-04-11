@@ -6,11 +6,7 @@
     <description>Recent content in music on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 26 Aug 2017 00:00:00 -0400</lastBuildDate>
-    
-	<atom:link href="https://brianpfeil.com/tags/music/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 26 Aug 2017 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/music/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Scribbletune</title>
       <link>https://brianpfeil.com/post/scribbletune/</link>

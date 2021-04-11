@@ -44,7 +44,7 @@
         "position": 3,
         "item": {
           "@id": "https:\/\/brianpfeil.com\/post\/aws-api-gateway-aws-service-integration\/",
-          "name": "A w s a p i gateway a w s service integration"
+          "name": "Aws API gateway aws service integration"
         }
     }]
 }
@@ -58,7 +58,7 @@
   "headline": "AWS API Gateway AWS Service Integration",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  243 ,
+  "wordCount":  246 ,
   "datePublished" : "2020-08-20T00:00:00",
   "dateModified" : "2020-08-20T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -86,7 +86,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.74.3" />
+  <meta name="generator" content="Hugo 0.82.0" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -362,17 +362,17 @@ make teardown
 </code></pre></div><hr>
 <h2 id="details">Details</h2>
 <p>invoking the <a href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutEvents.html">EventBridge PutEvents</a> action with the request payload using the <code>APIGatewayEventBridgeAccessRole</code> role.</p>
-<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">Integration</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="k">Type</span><span class="p">:</span><span class="w"> </span>AWS<span class="w">
-</span><span class="w">    </span><span class="k">Credentials</span><span class="p">:</span><span class="w"> </span>!GetAtt<span class="w"> </span>APIGatewayEventBridgeAccessRole.Arn<span class="w">
-</span><span class="w">    </span><span class="k">IntegrationHttpMethod</span><span class="p">:</span><span class="w"> </span>POST<span class="w">
-</span><span class="w">    </span><span class="k">Uri</span><span class="p">:</span><span class="w"> </span>!Sub<span class="w"> </span><span class="s2">&#34;arn:aws:apigateway:${AWS::Region}:events:action/PutEvents&#34;</span><span class="w">
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">Integration</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l">AWS</span><span class="w">
+</span><span class="w">    </span><span class="nt">Credentials</span><span class="p">:</span><span class="w"> </span>!<span class="l">GetAtt APIGatewayEventBridgeAccessRole.Arn</span><span class="w">
+</span><span class="w">    </span><span class="nt">IntegrationHttpMethod</span><span class="p">:</span><span class="w"> </span><span class="l">POST</span><span class="w">
+</span><span class="w">    </span><span class="nt">Uri</span><span class="p">:</span><span class="w"> </span>!<span class="l">Sub &#34;arn:aws:apigateway:${AWS::Region}:events:action/PutEvents&#34;</span><span class="w">
 </span></code></pre></div><p>setting the required headers to invoke the PutEvents action</p>
-<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">RequestTemplates</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="k">application/json</span><span class="p">:</span><span class="w"> </span><span class="sd">|
-</span><span class="sd">        $input.json(&#34;$&#34;)</span><span class="w">
-</span><span class="w">        </span><span class="c">#set($context.requestOverride.header.X-Amz-Target =&#34;AWSEvents.PutEvents&#34;)</span><span class="w">
-</span><span class="w">        </span><span class="c">#set($context.requestOverride.header.Content-Type =&#34;application/x-amz-json-1.1&#34;)</span><span class="w">
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">RequestTemplates</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">application/json</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span><span class="sd">        $input.json(&#34;$&#34;)
+</span><span class="sd">        #set($context.requestOverride.header.X-Amz-Target =&#34;AWSEvents.PutEvents&#34;)
+</span><span class="sd">        #set($context.requestOverride.header.Content-Type =&#34;application/x-amz-json-1.1&#34;)</span><span class="w">        
 </span></code></pre></div><h2 id="resources">Resources</h2>
 <ul>
 <li><a href="https://aws.amazon.com/premiumsupport/knowledge-center/api-gateway-proxy-integrate-service/#:~:text=You%20can%20integrate%20many%20AWS,request%20parameters%20are%20correctly%20mapped.">Use API Gateway as a Proxy for Another AWS Service</a></li>

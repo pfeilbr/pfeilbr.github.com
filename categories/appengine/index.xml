@@ -6,11 +6,7 @@
     <description>Recent content in appengine on Brian Pfeil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Nov 2011 11:48:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://brianpfeil.com/categories/appengine/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 20 Nov 2011 11:48:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/categories/appengine/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emailing Todos to Dropbox</title>
       <link>https://brianpfeil.com/post/emailing-todos-to-dropbox/</link>
