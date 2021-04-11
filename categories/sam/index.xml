@@ -1,20 +1,92 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>sam on Brian Pfeil</title>
-    <link>https://brianpfeil.com/categories/sam/</link>
-    <description>Recent content in sam on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/categories/sam/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>sam on Brian Pfeil</title>
+        <link>https://brianpfeil.com/categories/sam/</link>
+        <description>Recent content in sam on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/categories/sam/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AWS SAM Local Invoke with Lambda Role</title>
-      <link>https://brianpfeil.com/post/aws-sam-local-invoke-with-lambda-role/</link>
-      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
+<title>AWS SAM Local Invoke with Lambda Role</title>
+<link>https://brianpfeil.com/post/aws-sam-local-invoke-with-lambda-role/</link>
+<pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-sam-local-invoke-with-lambda-role/</guid>
-      <description>Running lambda locally with SAM in the lambda role security context</description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-sam-golang-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-sam-golang-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/serverless/sam/&#34;&gt;AWS Serverless Application Model&lt;/a&gt; (SAM) allows you to develop and test your lambda backed API Gateway endpoints locally via &lt;a href=&#34;https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-cli-command-reference-sam-local-start-api.html&#34;&gt;sam local start-api&lt;/a&gt;.  By default, your function is invoked with the default credentials you have configured for the &lt;a href=&#34;https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html&#34;&gt;AWS CLI&lt;/a&gt;.  If your function accesses other AWS services, it may encounter permission issues.  It&amp;rsquo;s ideal to have your lambda run under as close to the same security context locally as it would when deployed.  In the example below, lambda sends a message to a SQS worker queue.  The permissions for the queue are configured to allow the lambda role to send a message to it.  The following details how to achieve this.&lt;/p&gt;
+&lt;h3 id=&#34;allowing-our-lambda-role-to-be-assumed&#34;&gt;Allowing Our Lambda Role to be Assumed&lt;/h3&gt;
+&lt;p&gt;In our scenario, we have a local user profile named &lt;code&gt;admin&lt;/code&gt; stored in &lt;code&gt;~/.aws/credentials&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;[admin]
+aws_access_key_id     = YOUR_ACCESS_KEY
+aws_secret_access_key = YOUR_SECRET_ACCESS_KEY
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This user needs to be able to assume our &lt;code&gt;my-lambda-role&lt;/code&gt; role.  We define the following &lt;strong&gt;Role Trust&lt;/strong&gt; policy to enable:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;#34;Version&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;2012-10-17&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;#34;Statement&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;nt&#34;&gt;&amp;#34;Effect&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Allow&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+      &lt;span class=&#34;nt&#34;&gt;&amp;#34;Principal&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;Service&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;lambda.amazonaws.com&amp;#34;&lt;/span&gt;
+      &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+      &lt;span class=&#34;nt&#34;&gt;&amp;#34;Action&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;sts:AssumeRole&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;nt&#34;&gt;&amp;#34;Effect&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Allow&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+      &lt;span class=&#34;nt&#34;&gt;&amp;#34;Principal&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;AWS&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;arn:aws:iam::xxxxxxxxxxxx:user/admin&amp;#34;&lt;/span&gt;
+      &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+      &lt;span class=&#34;nt&#34;&gt;&amp;#34;Action&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;sts:AssumeRole&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;configure-assume-role-via-aws-cli&#34;&gt;Configure Assume Role via AWS CLI&lt;/h3&gt;
+&lt;p&gt;Next we need to configure the AWS CLI to assume a role.  We can do so by adding the following to &lt;code&gt;~/.aws/config&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;# ~/.aws/config
+
+[profile my-lambda-role]
+role_arn = arn:aws:iam::xxxxxxxxxxxx:role/my-lambda-role
+source_profile = admin
+output = json
+region = us-east-1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note the &lt;code&gt;source_profile = admin&lt;/code&gt; line.  This identifies the profile in &lt;code&gt;~/.aws/credentials&lt;/code&gt; that will be used to assume the role.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;See &lt;a href=&#34;https://aws.amazon.com/premiumsupport/knowledge-center/iam-assume-role-cli/&#34;&gt;How do I assume an IAM role using the AWS CLI?&lt;/a&gt; for full details on options.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We can test with the following:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;aws --profile my-lambda-role sts get-caller-identity
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If successful, the response will look like.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;UserId&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;AROAXWO2SDPLLBS55Q345:botocore-session-1596129185&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Account&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;xxxxxxxxxxxx&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Arn&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;arn:aws:sts::529276214230:assumed-role/my-lambda-role/botocore-&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;running-sam-local&#34;&gt;Running SAM Local&lt;/h3&gt;
+&lt;p&gt;The SQS queue URL is provided to the lambda via an environment variable.  This is defined in the SAM template&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;template.yaml&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;Environment&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;Variables&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;QUEUE_URL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;!&lt;span class=&#34;l&#34;&gt;Ref Queue&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We need &lt;code&gt;QUEUE_URL&lt;/code&gt; to be available to our function running locally.  To do that we can create an environment variable .json file and pass as a parameter for sam local to use.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;env-vars.json&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Parameters&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;QUEUE_URL&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://sqs.us-east-1.amazonaws.com/xxxxxxxxxxxx/aws-sam-golang-example-Queue-Q12J860AETTS&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We can now start the local SAM API server and test our endpoint&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;sam &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; start-api --profile my-lambda-role --env-vars env-vars.json
+
+curl -X POST http://127.0.0.1:3000/job -d &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;name&amp;#34;: &amp;#34;my job&amp;#34;}&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;We&amp;rsquo;ve seen how to run a lambda locally with the same security context as when deployed.  SAM provides a great development workflow to allow quick iterations.  The local environment provided via docker tries to be as true to the AWS environment, but you should test with the real services as early as possible.&lt;/p&gt;
+&lt;p&gt;One point to note, you must have the AWS resources your lambda is interacting with provisioned.  For example, the SQS queue must exist.  SAM does not provide a locally running SQS service.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://github.com/pfeilbr/aws-sam-golang-playground&#34;&gt;source&lt;/a&gt; for this example is written in Go, which has a great workflow.  Our focus wasn&amp;rsquo;t on the code, but if you want more &lt;strong&gt;Go + SAM + Lambda&lt;/strong&gt;, be sure to check out the AWS &lt;a href=&#34;https://golang.serverlessworkshops.io/&#34;&gt;GO SERVERLESS!&lt;/a&gt; workshop by AWS Serverless Developer Advocate &lt;a href=&#34;https://twitter.com/rts_rob&#34;&gt;Rob Sutter&lt;/a&gt;.  It covers the details and workflow of using Go with SAM.&lt;/p&gt;
+</description>
+</item>
     
   </channel>
 </rss>

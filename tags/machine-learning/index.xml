@@ -1,47 +1,171 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>machine-learning on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/machine-learning/</link>
-    <description>Recent content in machine-learning on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 27 Oct 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>machine-learning on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/machine-learning/</link>
+        <description>Recent content in machine-learning on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 27 Oct 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AWS Kendra</title>
-      <link>https://brianpfeil.com/post/aws-kendra/</link>
-      <pubDate>Tue, 27 Oct 2020 00:00:00 -0400</pubDate>
+<title>AWS Kendra</title>
+<link>https://brianpfeil.com/post/aws-kendra/</link>
+<pubDate>Tue, 27 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-kendra/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-kendra-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-kendra-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://aws.amazon.com/kendra/&#34;&gt;Amazon Kendra&lt;/a&gt;, intelligent search service powered by machine learning&lt;/p&gt;
+&lt;h2 id=&#34;concepts&#34;&gt;Concepts&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Index - two types. document (unstructured) and &lt;a href=&#34;https://docs.aws.amazon.com/kendra/latest/dg/in-creating-faq.html&#34;&gt;FAQ (structured)&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can add documents directly to an index using the BatchPutDocument operation&lt;/li&gt;
+&lt;li&gt;You can add questions and answers (FAQs) directly to your index using the console or the CreateFaq operation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Data Source - s3, salesforce documents, sharepoint, &lt;em&gt;custom&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Documents - html, ppt, doc, pdf, txt&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;custom fields - can define custom fields of types: Date, Number, String, String List&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Queries - natural language (NLP), keyword queries, Factoid questions — Simple
+who, what, when, or where questions.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Facets are scoped views of a set of search results&lt;/li&gt;
+&lt;li&gt;By default, Query returns all search results. To filter responses, you can perform logical operations on the document attributes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tags - can assign tags to indexes, data sources, and FAQs&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;default encryption at rest with customer of AWS KMS keys&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;general-steps&#34;&gt;General Steps&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;create index&lt;/li&gt;
+&lt;li&gt;add data sources for index&lt;/li&gt;
+&lt;li&gt;synchronize the data source&lt;/li&gt;
+&lt;li&gt;query/search the index&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;editions&#34;&gt;Editions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Developer&lt;/li&gt;
+&lt;li&gt;Enterprise&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You specify &lt;code&gt;Edition: DEVELOPER_EDITION | ENTERPRISE_EDITION&lt;/code&gt; when you create an index&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;creating-example-index&#34;&gt;Creating Example Index&lt;/h2&gt;
+&lt;p&gt;see &lt;a href=&#34;main.py&#34;&gt;&lt;code&gt;main.py&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;sam deploy --guided
+&lt;span class=&#34;c1&#34;&gt;# copy outputs into `.env`&lt;/span&gt;
+python main.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/kendra/latest/dg/what-is-kendra.html&#34;&gt;Amazon Kendra Docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/kendra/latest/dg/gs-python.html&#34;&gt;Getting started (AWS SDK for Python (Boto3)) - Amazon Kendra&lt;/a&gt; - shows create index, create data source for index, sync data source, all while waiting for each step to complete in between&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/kendra/latest/dg/deploying.html&#34;&gt;Deploying Amazon Kendra&lt;/a&gt; - pre-built react frontend for kendra.  provides &lt;code&gt;&amp;lt;search /&amp;gt;&lt;/code&gt; react component
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://kendrasamples.s3.amazonaws.com/kendrasamples.zip&#34;&gt;https://kendrasamples.s3.amazonaws.com/kendrasamples.zip&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/aws-samples/enterprise-search-with-amazon-kendra-workshop&#34;&gt;aws-samples/enterprise-search-with-amazon-kendra-workshop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/kendra/latest/dg/data-source-custom.html&#34;&gt;Kendra | Using a custom data source&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>AWS Comprehend</title>
-      <link>https://brianpfeil.com/post/aws-comprehend/</link>
-      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
+<title>AWS Comprehend</title>
+<link>https://brianpfeil.com/post/aws-comprehend/</link>
+<pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-comprehend/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-comprehend-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-comprehend-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://aws.amazon.com/comprehend/&#34;&gt;Amazon Comprehend [Medical]&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;files-and-directories-of-interest&#34;&gt;Files and Directories of Interest&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;src/index.js&#34;&gt;&lt;code&gt;src/index.js&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;src/index.test.js&#34;&gt;&lt;code&gt;src/index.test.js&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;src/fixtures&#34;&gt;&lt;code&gt;src/fixtures&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;src/example-responses&#34;&gt;&lt;code&gt;src/example-responses&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# while developing&lt;/span&gt;
+npm &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; -- --watch
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/comprehend/&#34;&gt;Amazon Comprehend - Natural Language Processing (NLP) and Machine Learning (ML)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/comprehend/latest/dg/comprehend-general.html&#34;&gt;Comprehend  - Amazon Comprehend&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/comprehend/latest/dg/comprehend-medical.html&#34;&gt;Amazon Comprehend Medical - Amazon Comprehend&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>Imagenet</title>
-      <link>https://brianpfeil.com/post/imagenet/</link>
-      <pubDate>Wed, 31 Jan 2018 00:00:00 -0500</pubDate>
+<title>Imagenet</title>
+<link>https://brianpfeil.com/post/imagenet/</link>
+<pubDate>Wed, 31 Jan 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/imagenet/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/imagenet-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/imagenet-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;project to explore &lt;a href=&#34;http://www.image-net.org/&#34;&gt;ImageNet&lt;/a&gt; image data for ML applications&lt;/p&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;p&gt;run jupyter notebook via &lt;code&gt;kjupyter&lt;/code&gt; command&lt;/p&gt;
+&lt;p&gt;see &lt;a href=&#34;&#34;&gt;imagenet-classify.ipynb&lt;/a&gt;&lt;/p&gt;
+</description>
+</item>
     
     <item>
-      <title>Deep and Machine Learning</title>
-      <link>https://brianpfeil.com/post/deep-and-machine-learning/</link>
-      <pubDate>Sun, 24 Sep 2017 00:00:00 -0400</pubDate>
+<title>Deep and Machine Learning</title>
+<link>https://brianpfeil.com/post/deep-and-machine-learning/</link>
+<pubDate>Sun, 24 Sep 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/deep-and-machine-learning/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/deep-and-machine-learning-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/deep-and-machine-learning-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;docker image + jupyter notebook UI for learning and experimenting with deep and machine learning.&lt;/p&gt;
+&lt;p&gt;docker image based on &lt;a href=&#34;https://github.com/floydhub/dl-docker&#34;&gt;https://github.com/floydhub/dl-docker&lt;/a&gt; - All-in-one Docker image for Deep Learning&lt;/p&gt;
+&lt;p&gt;docker hub image @ &lt;a href=&#34;https://hub.docker.com/r/pfeilbr/deep-and-machine-learning/&#34;&gt;https://hub.docker.com/r/pfeilbr/deep-and-machine-learning/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;docker run -it -p 8888:8888 -p 6006:6006 -v /Users/brianpfeil/projects/deep-and-machine-learning-playground:/root/sharedfolder pfeilbr/deep-and-machine-learning:v2 bash
+
+&lt;span class=&#34;c1&#34;&gt;# this lands you at a bash prompt in the container&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# start jupyter&lt;/span&gt;
+jupyter notebook
+
+&lt;span class=&#34;c1&#34;&gt;# open browser to http://localhost:8888/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;to-save-container-changes&#34;&gt;To save container changes&lt;/h2&gt;
+&lt;p&gt;for example to save software installs (e.g. apache mxnet was added to image)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# list images to find commit id&lt;/span&gt;
+docker ps -a
+
+&lt;span class=&#34;c1&#34;&gt;# commit changes&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# docker commit 5b4a6fb7117b pfeilbr/deep-and-machine-learning:TAG&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# e.g. &lt;/span&gt;
+docker commit 5b4a6fb7117b pfeilbr/deep-and-machine-learning:v2
+
+&lt;span class=&#34;c1&#34;&gt;# push new image to docker hub&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# docker push pfeilbr/deep-and-machine-learning:TAG&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# e.g.&lt;/span&gt;
+docker push pfeilbr/deep-and-machine-learning:v2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
   </channel>
 </rss>

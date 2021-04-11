@@ -1,20 +1,71 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>virtualization on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/virtualization/</link>
-    <description>Recent content in virtualization on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 09 Feb 2020 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/tags/virtualization/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>virtualization on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/virtualization/</link>
+        <description>Recent content in virtualization on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 09 Feb 2020 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/tags/virtualization/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Multipass</title>
-      <link>https://brianpfeil.com/post/multipass/</link>
-      <pubDate>Sun, 09 Feb 2020 00:00:00 -0500</pubDate>
+<title>Multipass</title>
+<link>https://brianpfeil.com/post/multipass/</link>
+<pubDate>Sun, 09 Feb 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/multipass/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/multipass-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/multipass-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://multipass.run/&#34;&gt;multipass&lt;/a&gt; - command line interface to launch, manage and generally fiddle about with instances of Linux&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://multipass.run/docs&#34;&gt;multipass | docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://multipass.run/docs/working-with-instances&#34;&gt;Working with Multipass instances&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;session&#34;&gt;Session&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install&lt;/span&gt;
+brew cask install multipass
+
+&lt;span class=&#34;c1&#34;&gt;# set to use virtualbox instead of hyperkit, which is the default on macOS (ran into issues with hyperkit)&lt;/span&gt;
+sudo multipass &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; local.driver&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;virtualbox
+
+&lt;span class=&#34;c1&#34;&gt;# launch default ubuntu instance&lt;/span&gt;
+multipass launch
+
+&lt;span class=&#34;c1&#34;&gt;# set the primary instance.  if you don&amp;#39;t specify the instance a command, this is the instance used&lt;/span&gt;
+multipass &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; client.primary-name&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;capital-tapir
+
+&lt;span class=&#34;c1&#34;&gt;# list instances&lt;/span&gt;
+multipass ls
+
+&lt;span class=&#34;c1&#34;&gt;# open shell (uses ssh under the covers)&lt;/span&gt;
+multipass shell
+
+&lt;span class=&#34;c1&#34;&gt;# execute command and exit&lt;/span&gt;
+multipass &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; capital-tapir -- ls
+
+&lt;span class=&#34;c1&#34;&gt;# mount local host folder into instance&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# /Users/pfeilbr/tmp (host) =&amp;gt; /Users/pfeilbr/tmp (instance)&lt;/span&gt;
+multipass mount ~/tmp capital-tapir
+
+&lt;span class=&#34;c1&#34;&gt;# unmount mounts&lt;/span&gt;
+multipass unmount capital-tapir
+
+&lt;span class=&#34;c1&#34;&gt;# list info about instance&lt;/span&gt;
+multipass info capital-tapir
+
+multipass &lt;span class=&#34;nb&#34;&gt;suspend&lt;/span&gt; capital-tapir
+
+multipass restart capital-tapir
+
+multipass stop capital-tapir
+
+multipass delete capital-tapir
+
+&lt;span class=&#34;c1&#34;&gt;# purge all deleted instances permanently&lt;/span&gt;
+multipass purge
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
   </channel>
 </rss>

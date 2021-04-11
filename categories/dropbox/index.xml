@@ -1,20 +1,80 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>dropbox on Brian Pfeil</title>
-    <link>https://brianpfeil.com/categories/dropbox/</link>
-    <description>Recent content in dropbox on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 20 Nov 2011 11:48:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/categories/dropbox/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>dropbox on Brian Pfeil</title>
+        <link>https://brianpfeil.com/categories/dropbox/</link>
+        <description>Recent content in dropbox on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 20 Nov 2011 11:48:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/categories/dropbox/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Emailing Todos to Dropbox</title>
-      <link>https://brianpfeil.com/post/emailing-todos-to-dropbox/</link>
-      <pubDate>Sun, 20 Nov 2011 11:48:00 +0000</pubDate>
+<title>Emailing Todos to Dropbox</title>
+<link>https://brianpfeil.com/post/emailing-todos-to-dropbox/</link>
+<pubDate>Sun, 20 Nov 2011 11:48:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/emailing-todos-to-dropbox/</guid>
-      <description>allow universal access to your TODOs by storing them in dropbox via email</description>
-    </item>
+<description>&lt;p&gt;Between work and home,I&amp;rsquo;ve always got more things to do than I can keep
+straight my head. Like most people, I keep a to-do list so I don&amp;rsquo;t have to
+worry about forgetting it. My to-do list is a simple bulleted text
+(&lt;a href=&#34;http://daringfireball.net/projects/markdown/&#34;&gt;Markdown&lt;/a&gt;) file that I keep in &lt;a href=&#34;http://dropbox.com&#34;&gt;Dropbox&lt;/a&gt; so I can access it from anywhere.&lt;/p&gt;
+&lt;pre&gt;
+# TODOS
+
+* get gas
+* get leaf bags
+* send thank you cards
+
+# Completed
+
+* get propane
+* get burgers and hot dogs
+&lt;/pre&gt;
+&lt;p&gt;This setup works fairly well, but they&amp;rsquo;re times when I think of something I need to do, but I don&amp;rsquo;t get it into this list because of the time it takes to add it. The usual scenario is that I&amp;rsquo;m not sitting in front of a computer, and I need to add it using my iPhone. There are plenty of to-do and dropbox text
+file editor apps our there to choose from (way too many), but none of them make it fast enough to enter, and fit &lt;em&gt;my to-do-list-text-file-in-dropbox&lt;/em&gt;
+setup.&lt;/p&gt;
+&lt;p&gt;The best case scenario would be an app, that opens awaiting my next to-do, and I&amp;rsquo;d just type it in, and it&amp;rsquo;d add it to my to-do list text file in dropbox in
+the right format. I thought about making an app that did just that, but I knew there had to be an easier way. That&amp;rsquo;s when email popped into my head. It&amp;rsquo;s
+dead simple, and available everywhere. I&amp;rsquo;d never have an excuse not to get something on the list. It&amp;rsquo;s also fast and easy to send email.&lt;/p&gt;
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;My solution is to send an email to a special &amp;ldquo;todo&amp;rdquo; email address where the subject would be the todo item, the email would be processed, and the item added to my to-do list text file in dropbox.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://code.google.com/appengine&#34;&gt;Google App Engine&lt;/a&gt; lets you run web apps on Google infrastructure for free, and they offer a way to receive and process email. Dropbox provides a &lt;a href=&#34;https://www.dropbox.com/developers/start/setup#python&#34;&gt;Dropbox Python SDK&lt;/a&gt; to get at your files, which is works out nicely since Python is the primary language used for App Engine development.&lt;/p&gt;
+&lt;p&gt;You can take a look at the &lt;a href=&#34;http://code.google.com/appengine/docs/python/mail/receivingmail.html&#34;&gt;Google App Engine Receiving Email Documentation&lt;/a&gt;, but the gist of it is that an email sent to &lt;code&gt;NAME@APP.appspotmail.com&lt;/code&gt; will
+result in a &lt;code&gt;HTTP POST&lt;/code&gt; request sent to &lt;code&gt;/_ah/mail/NAME@APP.appspotmail.com&lt;/code&gt; with the POST body containing the contents of the email. Google provides a nice &lt;code&gt;InboundMailHandler&lt;/code&gt; class to make handling inbound email a breeze.&lt;/p&gt;
+&lt;p&gt;The first thing we need to do is to map a handler for inbound emails. I&amp;rsquo;m using the &lt;a href=&#34;https://www.djangoproject.com/&#34;&gt;Django&lt;/a&gt; Python web framework in my app engine app, which provides
+some connivence mechanisms. To map a URL to a handler we add the following to the &lt;code&gt;urls.py&lt;/code&gt; file.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;urlpatterns = patterns(&amp;#39;&amp;#39;,
+    (r&amp;#39;^_ah/mail/todo@myapp.appspotmail.com`, &amp;#39;emailengine.views.todo_email_handler&amp;#39;),
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We mapped the url to &lt;code&gt;todo_email_handler&lt;/code&gt; method&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;def todo_email_handler(request):
+    if request.POST:
+        message = mail.InboundEmailMessage(request.raw_post_data)
+        logging.info(&amp;#34;Received a message from: &amp;#34; + message.sender)
+        if is_whitelisted_email_address(message.sender):
+            mgr = DropboxManager()
+            mgr.add_todo(message.subject)
+            logging.info(&amp;#34;Received a message from: &amp;#34; + message.sender + &amp;#34;, Todo:&amp;#34; + message.subject)
+    return HttpResponse(&amp;#39;ok&amp;#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In order to prevent anyone from adding to-do items to my list, I added the
+&lt;code&gt;is_whitelisted_email_address&lt;/code&gt; method to restrict processing of emails to only
+those that come from me.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;def is_whitelisted_email_address(email):
+    result = False
+    for whitelist_email in EMAIL_ADDRESS_WHITELIST:
+        if email.lower().find(whitelist_email) != -1:
+            result = True
+
+    return result
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The work to add the to-do item to the TODO.txt file in dropbox is&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;mgr = DropboxManager()
+mgr.add_todo(message.subject)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I created the &lt;code&gt;DropboxManager&lt;/code&gt; class as a simple wrapper around the Dropbox
+API. This keeps the code tidy, and all the dropbox specific code like the app
+key, secret, and token in one place.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;m sure one of the many existing to-do list apps fits the needs of most people.  This solution required a little work upfront, but has already proven to be a timesaver.&lt;/p&gt;
+</description>
+</item>
     
   </channel>
 </rss>

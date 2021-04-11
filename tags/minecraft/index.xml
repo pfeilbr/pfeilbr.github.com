@@ -1,20 +1,64 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>minecraft on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/minecraft/</link>
-    <description>Recent content in minecraft on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 29 Oct 2017 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/minecraft/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>minecraft on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/minecraft/</link>
+        <description>Recent content in minecraft on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 29 Oct 2017 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/minecraft/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Minecraft Spigot Plugin</title>
-      <link>https://brianpfeil.com/post/minecraft-spigot-plugin/</link>
-      <pubDate>Sun, 29 Oct 2017 00:00:00 -0400</pubDate>
+<title>Minecraft Spigot Plugin</title>
+<link>https://brianpfeil.com/post/minecraft-spigot-plugin/</link>
+<pubDate>Sun, 29 Oct 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/minecraft-spigot-plugin/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/minecraft-spigot-plugin-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/minecraft-spigot-plugin-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Learn plugin development for the &lt;a href=&#34;https://www.spigotmc.org/&#34;&gt;spigot&lt;/a&gt; minecraft server.&lt;/p&gt;
+&lt;h2 id=&#34;project-setup-and-configuration&#34;&gt;Project Setup and Configuration&lt;/h2&gt;
+&lt;p&gt;see &lt;a href=&#34;https://www.spigotmc.org/wiki/creating-a-blank-spigot-plugin-in-intellijidea/&#34;&gt;Creating a blank Spigot plugin in IntelliJIDEA&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Add spigot.jar
+&lt;img src=&#34;https://www.evernote.com/l/AAHhcvybx3RKapL18y7xSp4ymKgZtUAbL84B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Artifacts
+&lt;img src=&#34;https://www.evernote.com/l/AAE8M-RArFVHpoDLu6v2O_BvwzHKNoIeO90B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Remote Debug Configuration
+&lt;img src=&#34;https://www.evernote.com/l/AAE21iCYOIJMoaW17bE5nbukROJw2lVRcV4B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;developing-hot-swaplive-coding&#34;&gt;Developing (hot swap/live coding)&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;launch minecraft server in debug mode&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ./minecraft-spigot-server
+./start.command
+&lt;span class=&#34;c1&#34;&gt;# java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar spigot-1.12.2.jar&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Launch Debug confifguration in IntelliJ&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAFw9XSyXzpIX5t6QwLOch_j1PcMn1vmLW8B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Set breakpoints, etc. in code&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Launch minecraft and play&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Breakpoints will be hit.&lt;/p&gt;
+&lt;p&gt;Use Evaluate Code Fragment to explore while debugger is paused
+&lt;img src=&#34;https://www.evernote.com/l/AAGy9jk28LxLgaoP2bB-FCd4k4sGHAHOI9UB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You can edit code, save, and build (cmd-F9).  It&amp;rsquo;ll live apply/hot swap without stopping server.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.spigotmc.org/wiki/intellij-debug-your-plugin/&#34;&gt;https://www.spigotmc.org/wiki/intellij-debug-your-plugin/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
   </channel>
 </rss>

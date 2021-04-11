@@ -1,20 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>opencv on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/opencv/</link>
-    <description>Recent content in opencv on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 31 Jan 2018 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/tags/opencv/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>opencv on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/opencv/</link>
+        <description>Recent content in opencv on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 31 Jan 2018 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/tags/opencv/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>OpenCV Python</title>
-      <link>https://brianpfeil.com/post/opencv-python/</link>
-      <pubDate>Wed, 31 Jan 2018 00:00:00 -0500</pubDate>
+<title>OpenCV Python</title>
+<link>https://brianpfeil.com/post/opencv-python/</link>
+<pubDate>Wed, 31 Jan 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/opencv-python/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/opencv-python-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/opencv-python-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;code is split between jupyter notebook(s) and python (.py) files&lt;/p&gt;
+&lt;h2 id=&#34;to-create-virtualenv-only-required-for-first-time-setup&#34;&gt;to create virtualenv (only required for first time setup)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;python3 -m venv .env
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;activate virtualenv&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; .env/bin/activate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;display webcam video&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;python opencv-webcam.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;example run screenshot
+&lt;img src=&#34;https://www.evernote.com/l/AAEIScL_DhlHx7ZaJPGL_aa5di-WK_tHsKMB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+</item>
     
   </channel>
 </rss>

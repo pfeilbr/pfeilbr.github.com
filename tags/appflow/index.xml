@@ -1,29 +1,99 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>appflow on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/appflow/</link>
-    <description>Recent content in appflow on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 08 Sep 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/appflow/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>appflow on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/appflow/</link>
+        <description>Recent content in appflow on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 08 Sep 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/appflow/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AWS AppFlow Veeva Vault to S3</title>
-      <link>https://brianpfeil.com/post/aws-appflow-veeva-vault-to-s3/</link>
-      <pubDate>Tue, 08 Sep 2020 00:00:00 -0400</pubDate>
+<title>AWS AppFlow Veeva Vault to S3</title>
+<link>https://brianpfeil.com/post/aws-appflow-veeva-vault-to-s3/</link>
+<pubDate>Tue, 08 Sep 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-appflow-veeva-vault-to-s3/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-appflow-veeva-vault-to-s3-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-appflow-veeva-vault-to-s3-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/appflow/&#34;&gt;AWS AppFlow&lt;/a&gt; example of Veeva Vault data -&amp;gt; AppFlow -&amp;gt; S3.&lt;/p&gt;
+&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;no events from Vault.  only poll / query existing data manually/on demand or schedule.
+&lt;img src=&#34;https://www.evernote.com/l/AAF3BbJNMHdIaLNUl9hNZAHO8Zr3e7bSZ1MB/image.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;at the time (2020-09-08) EventBridge was not available as a destination.
+&lt;ul&gt;
+&lt;li&gt;available destinations: redshift, s3, salesforce&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;screenshot-tour&#34;&gt;Screenshot Tour&lt;/h2&gt;
+&lt;p&gt;veeva vault data source general information&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAE4K0xTZj9ISLsONEom0QqFaIaMVLrjUnsB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAHUtXCllmhCcL9GDEM3niCGEzB9JgG-3OsB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;veeva vault org&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAGxHwv8cW9MeIDr3Cz9Duqg7wr5Oj6ukrkB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;veeva vault connection&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAHRq_vW-vNLlIsvbObynfHTqtZdZz1Q1gAB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;source -&amp;gt; destination&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAFCvNEVU0BN-YZKQZibgPJBqJzrMcfs0LEB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;mapping&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAFUFvxxDcVJJLSOtBohXBcELSRI6VQrC7cB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAGCQd2v2sVAe4sOxBweWzz-O6iZdj93ENYB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;created&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAHfQEEVKGFNVbg_ir7aBoxYBVwjhYcpDZkB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;run history&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAEW45w_DDJIgbJm_ucY-uMGAxoohGZ8AwwB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;data landed in s3&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAE_dm6okTFHs6TCPnRfFcmAdBo-yIVHs7YB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAFejlfQEE1J1LfEmGJ-hra2Tn3FRWgKzVsB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/appflow/integrations/#Veeva&#34;&gt;AppFlow Saas Applications | Veeva Vault&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.veevavault.com/&#34;&gt;https://developer.veevavault.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>AWS AppFlow Salesforce EventBridge</title>
-      <link>https://brianpfeil.com/post/aws-appflow-salesforce-eventbridge/</link>
-      <pubDate>Thu, 27 Aug 2020 00:00:00 -0400</pubDate>
+<title>AWS AppFlow Salesforce EventBridge</title>
+<link>https://brianpfeil.com/post/aws-appflow-salesforce-eventbridge/</link>
+<pubDate>Thu, 27 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-appflow-salesforce-eventbridge/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-appflow-salesforce-eventbridge-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-appflow-salesforce-eventbridge-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/appflow/&#34;&gt;AWS AppFlow&lt;/a&gt; example of salesforce event -&amp;gt; AppFlow -&amp;gt; EventBridge -&amp;gt; CloudWatch Logs.  Followed steps in &lt;a href=&#34;https://aws.amazon.com/blogs/compute/building-salesforce-integrations-with-amazon-eventbridge/&#34;&gt;Building Salesforce integrations with Amazon EventBridge and Amazon AppFlow | Amazon Web Services&lt;/a&gt; post.&lt;/p&gt;
+&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;observed low latency - AppFlow flow runs within 2 seconds of event being generated in salesforce.&lt;/li&gt;
+&lt;li&gt;only fields specified in mapping are passed to EventBridge as properties of &lt;code&gt;detail&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/appflow/latest/userguide/private-flows.html&#34;&gt;Private Amazon AppFlow flows&lt;/a&gt; is available for salesforce that uses AWS PrivateLink to route data over AWS infrastructure without exposing it to the public internet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;screenshot-tour&#34;&gt;Screenshot Tour&lt;/h2&gt;
+&lt;p&gt;Turn on Change Data Capture for the relevant objects in salesforce
+&lt;img src=&#34;https://www.evernote.com/l/AAFmryV0UxVKY5eprjjdQ-_4IgJG7JvB5AAB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Error when CDC is not turned on in salesforce for the object
+&lt;img src=&#34;https://www.evernote.com/l/AAEDjQW7qIpJ7azu59MIH05tvwqdqYOjrbsB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;AppFlow leverages already installed/available &amp;ldquo;Amazon AppFlow Embedded Login App&amp;rdquo; Connected App in salesforce&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAEyS5AOJn9F8pnZVMiV0Up7f5ydSNPApQwB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAGR_pfFpElDa4WwFTLoHEtGhpPxDKREPnoB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAEG72PQcHlNhrTqGdsmhe0DrtStP8VuCnE&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAH8LLu9mOVJar3EgvmDvSsLrEA4yFQehs8B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Run History
+&lt;img src=&#34;https://www.evernote.com/l/AAFPHkqjr_FJ1qtyysG35f8dO4wyIHz3DywB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Event in CloudWatch Logs
+&lt;img src=&#34;https://www.evernote.com/l/AAFpH1Az7IlBUavypLjw4LahE90ppWrjy0AB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;AppFlow Mapping
+&lt;img src=&#34;https://www.evernote.com/l/AAEG72PQcHlNhrTqGdsmhe0DrtStP8VuCnEB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/compute/building-salesforce-integrations-with-amazon-eventbridge/&#34;&gt;Building Salesforce integrations with Amazon EventBridge and Amazon AppFlow | Amazon Web Services&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
   </channel>
 </rss>

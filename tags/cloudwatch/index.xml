@@ -1,29 +1,110 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>cloudwatch on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/cloudwatch/</link>
-    <description>Recent content in cloudwatch on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 02 Apr 2021 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/cloudwatch/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>cloudwatch on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/cloudwatch/</link>
+        <description>Recent content in cloudwatch on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 02 Apr 2021 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/cloudwatch/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>API Gateway Service Integrations for HTTP APIs</title>
-      <link>https://brianpfeil.com/post/api-gateway-service-integrations-for-http-apis/</link>
-      <pubDate>Fri, 02 Apr 2021 00:00:00 -0400</pubDate>
+<title>API Gateway Service Integrations for HTTP APIs</title>
+<link>https://brianpfeil.com/post/api-gateway-service-integrations-for-http-apis/</link>
+<pubDate>Fri, 02 Apr 2021 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/api-gateway-service-integrations-for-http-apis/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/api-gateway-service-integrations-for-http-apis-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/api-gateway-service-integrations-for-http-apis-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Example API Gateway service integration with EventBridge with &lt;a href=&#34;https://aws.amazon.com/serverless/sam/&#34;&gt;SAM&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;API Gateway -&amp;gt; EventBridge -&amp;gt; CloudWatch Log Group&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; eventbridge
+
+&lt;span class=&#34;c1&#34;&gt;# deploy&lt;/span&gt;
+sam deploy --guided
+
+&lt;span class=&#34;c1&#34;&gt;# run following to given eventbridge rule permissions to write to log group&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# can not create resource-based policy for Log Group via cfn&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# see https://stackoverflow.com/questions/49242010/how-to-define-resource-policy-for-cloudwatch-logs-with-cloudformation&lt;/span&gt;
+aws logs put-resource-policy &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --region us-east-1 &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --policy-name eventbridge-rule-to-logs &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --policy-document &lt;span class=&#34;s1&#34;&gt;&amp;#39;{ &amp;#34;Version&amp;#34;: &amp;#34;2012-10-17&amp;#34;, &amp;#34;Statement&amp;#34;: [ {
+&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;        &amp;#34;Effect&amp;#34;: &amp;#34;Allow&amp;#34;, &amp;#34;Principal&amp;#34;: { &amp;#34;Service&amp;#34;: &amp;#34;events.amazonaws.com&amp;#34; },
+&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;        &amp;#34;Action&amp;#34;:[ &amp;#34;logs:CreateLogStream&amp;#34;, &amp;#34;logs:PutLogEvents&amp;#34; ],
+&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;        &amp;#34;Resource&amp;#34; : &amp;#34;arn:aws:logs:*:*:log-group:*&amp;#34; } ] }&amp;#39;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# send event to api gateway endpoint&lt;/span&gt;
+curl --header &lt;span class=&#34;s2&#34;&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  --request POST &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  --data &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;detail&amp;#34;:&amp;#34;{\&amp;#34;action\&amp;#34;: \&amp;#34;withdrawal\&amp;#34;, \&amp;#34;amount\&amp;#34;: 100}&amp;#34;}&amp;#39;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  https://8djn9e18ej.execute-api.us-east-1.amazonaws.com
+
+&lt;span class=&#34;c1&#34;&gt;# response: {&amp;#34;Entries&amp;#34;:[{&amp;#34;EventId&amp;#34;:&amp;#34;11555ee7-774f-e922-1022-46401bbe5f9b&amp;#34;}],&amp;#34;FailedEntryCount&amp;#34;:0}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# view event in log group&lt;/span&gt;
+aws logs tail &lt;span class=&#34;s2&#34;&gt;&amp;#34;apigateway-http-api-service-integration/EventBus&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# response&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# 2021-04-02T23:47:46+00:00 ca4b84fb-60f2-302d-b6ce-90338469d249 {&amp;#34;version&amp;#34;:&amp;#34;0&amp;#34;,&amp;#34;id&amp;#34;:&amp;#34;11555ee7-774f-e922-1022-46401bbe5f9b&amp;#34;,&amp;#34;detail-type&amp;#34;:&amp;#34;MyDetailType&amp;#34;,&amp;#34;source&amp;#34;:&amp;#34;demo&amp;#34;,&amp;#34;account&amp;#34;:&amp;#34;529276214230&amp;#34;,&amp;#34;time&amp;#34;:&amp;#34;2021-04-02T23:47:46Z&amp;#34;,&amp;#34;region&amp;#34;:&amp;#34;us-east-1&amp;#34;,&amp;#34;resources&amp;#34;:[],&amp;#34;detail&amp;#34;:{&amp;#34;action&amp;#34;:&amp;#34;withdrawal&amp;#34;,&amp;#34;amount&amp;#34;:100}}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# cleanup&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;STACK_NAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;apig-svc-int-eb-cwl-01&amp;#34;&lt;/span&gt;
+aws cloudformation delete-stack --stack-name &lt;span class=&#34;nv&#34;&gt;$STACK_NAME&lt;/span&gt;
+aws cloudformation &lt;span class=&#34;nb&#34;&gt;wait&lt;/span&gt; stack-delete-complete --stack-name &lt;span class=&#34;nv&#34;&gt;$STACK_NAME&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;screenshots&#34;&gt;Screenshots&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAGhwN9HdzBDQr8btg1JnU21bsyETK67NF8B/image.png&#34; alt=&#34;aws logs tail output&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAGNPTlsbFVPGJD5rauZvWI9f0BmOqN2MtEB/image.png&#34; alt=&#34;cloudwatch logs output&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services.html&#34;&gt;Working with AWS service integrations for HTTP APIs - Amazon API Gateway&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>AWS CloudWatch Logs Insights</title>
-      <link>https://brianpfeil.com/post/aws-cloudwatch-logs-insights/</link>
-      <pubDate>Fri, 30 Oct 2020 00:00:00 -0400</pubDate>
+<title>AWS CloudWatch Logs Insights</title>
+<link>https://brianpfeil.com/post/aws-cloudwatch-logs-insights/</link>
+<pubDate>Fri, 30 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cloudwatch-logs-insights/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-cloudwatch-logs-insights-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-cloudwatch-logs-insights-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AnalyzingLogData.html&#34;&gt;CloudWatch Logs Insights&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;running-example-query-via-aws-cli&#34;&gt;Running Example Query via AWS CLI&lt;/h2&gt;
+&lt;p&gt;see &lt;a href=&#34;main.sh&#34;&gt;&lt;code&gt;main.sh&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# run script containing query&lt;/span&gt;
+./main.sh
+&lt;span class=&#34;c1&#34;&gt;# OR&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# re-run on change&lt;/span&gt;
+make dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;example-queries&#34;&gt;Example Queries&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;fields @timestamp, detail.eventSource, detail.eventName, @message
+| sort @timestamp desc
+| limit 100
+
+
+fields @timestamp, detail.eventSource, detail.eventName, @message
+| filter detail.eventSource = &amp;#34;logs.amazonaws.com&amp;#34;
+| sort @timestamp desc
+| limit 100
+
+
+fields @timestamp, detail.requestParameters.bucketName, detail.eventSource, detail.eventName, @message
+| filter detail.eventSource like /s3.amazonaws.com/
+| sort @timestamp desc
+| limit 100
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_QuerySyntax.html&#34;&gt;CloudWatch Logs Insights Query Syntax&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_QuerySyntax-examples.html&#34;&gt;Sample Queries - Amazon CloudWatch Logs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
   </channel>
 </rss>

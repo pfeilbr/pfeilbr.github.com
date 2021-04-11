@@ -1,83 +1,272 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>tools on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/tools/</link>
-    <description>Recent content in tools on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 05 Apr 2021 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>tools on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/tools/</link>
+        <description>Recent content in tools on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 05 Apr 2021 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>CFN Diagram</title>
-      <link>https://brianpfeil.com/post/cfn-diagram/</link>
-      <pubDate>Mon, 05 Apr 2021 00:00:00 -0400</pubDate>
+<title>CFN Diagram</title>
+<link>https://brianpfeil.com/post/cfn-diagram/</link>
+<pubDate>Mon, 05 Apr 2021 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/cfn-diagram/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/cfn-diagram-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/cfn-diagram-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://github.com/mhlabs/cfn-diagram&#34;&gt;cfn-diagram&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;CLI tool to visualise CloudFormation/SAM/CDK templates as diagrams.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install&lt;/span&gt;
+npm i -g @mhlabs/cfn-diagram
+
+&lt;span class=&#34;c1&#34;&gt;# draw.io render&lt;/span&gt;
+cfn-dia draw.io --template-file CloudFrontS3WebsiteCdkStack.template.yaml &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --output-file CloudFrontS3WebsiteCdkStack.drawio
+
+&lt;span class=&#34;c1&#34;&gt;# html render&lt;/span&gt;
+cfn-dia html --template-file CloudFrontS3WebsiteCdkStack.template.yaml &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --output-path CloudFrontS3WebsiteCdkStack-html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;screenshots&#34;&gt;Screenshots&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAHOsXnnj4pIvKxyM_FrMsRFhlzkXpZ8gJAB/image.png&#34; alt=&#34;draw.io view in vscode&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAGRXpA0ux5B75sYfg9yRmbXZ6y4oRJJJ-IB/image.png&#34; alt=&#34;draw.io view in vscode - hover resource for details&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAGeo4YVPvdAYY3xn-jZe7I3E5NCIS6lorUB/image.png&#34; alt=&#34;html view&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;good starting point.  generate draw.io to get all resources and icons, then modify from there.&lt;/li&gt;
+&lt;li&gt;allows for filtering by resource types to eliminate resources that may not be needed.&lt;/li&gt;
+&lt;li&gt;works by importing cfn template into CDK.  CDK allows to treat as graph for traversal and inspection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mhlabs/cfn-diagram&#34;&gt;mhlabs/cfn-diagram&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.readysetcloud.io/blog/allen.helton/how-and-why-you-need-to-start-generating-your-diagrams/&#34;&gt;How (and Why) You Need To Start Generating Your Serverless Infrastructure Diagrams | Ready, Set, Cloud!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>Graphviz</title>
-      <link>https://brianpfeil.com/post/graphviz/</link>
-      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
+<title>Graphviz</title>
+<link>https://brianpfeil.com/post/graphviz/</link>
+<pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/graphviz/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/graphviz-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/graphviz-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://graphviz.org/&#34;&gt;Graphviz - Graph Visualization Software&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;example01.dot&#34;&gt;&lt;code&gt;example01.dot&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;developing&#34;&gt;Developing&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# vscode &amp;#34;Graphviz Interactive Preview&amp;#34; extension was not working with images&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# use the following to create .png image on .dot file change&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# open vscode in split view with .dot in one and .png in the other.&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# .png view will refresh when the file is updated.&lt;/span&gt;
+fswatch -o example01.dot &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; xargs -n1 -I&lt;span class=&#34;o&#34;&gt;{}&lt;/span&gt; dot -Tpng example01.dot -oexample01.png
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;screenshots&#34;&gt;Screenshots&lt;/h2&gt;
+&lt;p&gt;vscode example with &lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=tintinweb.graphviz-interactive-preview&#34;&gt;&amp;ldquo;Graphviz Interactive Preview&amp;rdquo;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAFUwF0MxjZOepisRfe4x3PcKd3Xrb3fxRIB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=tintinweb.graphviz-interactive-preview&#34;&gt;Graphviz Interactive Preview - Visual Studio Marketplace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ncona.com/2020/06/create-diagrams-with-code-using-graphviz/&#34;&gt;Create diagrams with code using Graphviz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>Mage</title>
-      <link>https://brianpfeil.com/post/mage/</link>
-      <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
+<title>Mage</title>
+<link>https://brianpfeil.com/post/mage/</link>
+<pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/mage/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/mage-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/mage-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://magefile.org/&#34;&gt;mage&lt;/a&gt;, a make/rake-like build tool using Go. You write plain-old go functions, and Mage automatically uses them as Makefile-like runnable targets.&lt;/p&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;git clone https://github.com/magefile/mage
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; mage
+go run bootstrap.go
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;git clone https://github.com/pfeilbr/mage-playground
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; mage-playground
+go mod init mage-playground
+&lt;span class=&#34;c1&#34;&gt;# NOTE: `go.mod` must exist in same directory as `magefile.go`&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# show targets&lt;/span&gt;
+mage
+
+&lt;span class=&#34;c1&#34;&gt;# run &amp;#34;hello&amp;#34; target&lt;/span&gt;
+mage hello
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
     <item>
-      <title>fswatch</title>
-      <link>https://brianpfeil.com/post/fswatch/</link>
-      <pubDate>Tue, 29 Jan 2019 00:00:00 -0500</pubDate>
+<title>fswatch</title>
+<link>https://brianpfeil.com/post/fswatch/</link>
+<pubDate>Tue, 29 Jan 2019 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/fswatch/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/fswatch-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/fswatch-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;learn &lt;a href=&#34;http://emcrisostomo.github.io/fswatch/&#34;&gt;fswatch&lt;/a&gt; file change monitor&lt;/li&gt;
+&lt;li&gt;github @ &lt;a href=&#34;https://github.com/emcrisostomo/fswatch&#34;&gt;emcrisostomo/fswatch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;example-script&#34;&gt;Example Script&lt;/h3&gt;
+&lt;p&gt;see &lt;a href=&#34;watch.sh&#34;&gt;&lt;code&gt;watch.sh&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;example-usage&#34;&gt;Example Usage&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# get file path information for changed files&lt;/span&gt;
+fswatch -0 .
+
+&lt;span class=&#34;c1&#34;&gt;# print file path information for each changed file on separate line&lt;/span&gt;
+fswatch -0 . &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; xargs -0 -n &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -I &lt;span class=&#34;o&#34;&gt;{}&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
     <item>
-      <title>Lerna</title>
-      <link>https://brianpfeil.com/post/lerna/</link>
-      <pubDate>Sun, 02 Sep 2018 00:00:00 -0400</pubDate>
+<title>Lerna</title>
+<link>https://brianpfeil.com/post/lerna/</link>
+<pubDate>Sun, 02 Sep 2018 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/lerna/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/lerna-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/lerna-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://lernajs.io/&#34;&gt;lerna&lt;/a&gt; &lt;em&gt;A tool for managing JavaScript projects with multiple packages&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;p&gt;install lerna
+&lt;code&gt;npm install --global lerna&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;example-workflow&#34;&gt;Example Workflow&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# init lerna repo&lt;/span&gt;
+mkdir lerna-playground
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; lerna-playground
+git init
+lerna init
+
+&lt;span class=&#34;c1&#34;&gt;# create mathlib&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; packages
+mkdir mathlib
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; mathlib
+npm init -f
+touch index.js &lt;span class=&#34;c1&#34;&gt;# write mathlib code&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# create client that depends on mathlib&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ..
+mkdir client
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; client
+npm init -f
+
+&lt;span class=&#34;c1&#34;&gt;# add mathlib&lt;/span&gt;
+lerna add mathlib
+
+&lt;span class=&#34;c1&#34;&gt;# create client code&lt;/span&gt;
+touch index.js
+
+&lt;span class=&#34;c1&#34;&gt;# run client&lt;/span&gt;
+node index.js
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
     <item>
-      <title>Emscripten</title>
-      <link>https://brianpfeil.com/post/emscripten/</link>
-      <pubDate>Thu, 02 Jun 2016 00:00:00 -0400</pubDate>
+<title>Emscripten</title>
+<link>https://brianpfeil.com/post/emscripten/</link>
+<pubDate>Thu, 02 Jun 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/emscripten/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/emscripten-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/emscripten-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn and experiment with &lt;a href=&#34;http://kripken.github.io/emscripten-site/&#34;&gt;emscripten&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Follow the &lt;a href=&#34;http://kripken.github.io/emscripten-site/docs/getting_started/downloads.html&#34;&gt;Download and install&lt;/a&gt; instructions&lt;/li&gt;
+&lt;li&gt;Run the following&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# base install location&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# ~/dev/emsdk_portable&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# source in environment to update PATH and make tools available&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# could add to .bash_profile to make available in all shells&lt;/span&gt;
+$ &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/dev/emsdk_env.sh
+
+
+&lt;span class=&#34;c1&#34;&gt;# needed to add python2 symlink (see https://github.com/kripken/emscripten/issues/3872)&lt;/span&gt;
+$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /usr/local/bin
+$ ln -s /usr/bin/python2.7 python2
+
+&lt;span class=&#34;c1&#34;&gt;# compile c file to javascript -&amp;gt; generates output/hello_world.js&lt;/span&gt;
+$ emcc hello_world.c -o output/hello_world.js
+$ node output/hello_world.js
+
+&lt;span class=&#34;c1&#34;&gt;# compile c file and generate html to view it -&amp;gt; generates output/hello.html and output/hello.js&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# NOTE: overwrites&lt;/span&gt;
+$ emcc hello_world.c -o output/hello.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
     <item>
-      <title>Nexe</title>
-      <link>https://brianpfeil.com/post/nexe/</link>
-      <pubDate>Tue, 05 Apr 2016 00:00:00 -0400</pubDate>
+<title>Nexe</title>
+<link>https://brianpfeil.com/post/nexe/</link>
+<pubDate>Tue, 05 Apr 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/nexe/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/nexe-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/nexe-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Learn and experiment with &lt;a href=&#34;https://github.com/jaredallard/nexe&#34;&gt;nexe&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;nexe lets you &lt;em&gt;create a single executable out of your node.js apps&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ npm install nexe -g
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;p&gt;There are two methods to run nexe, command line and by specifying the paramaters in &lt;code&gt;package.json&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;command-line&#34;&gt;Command line&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ nexe -r 4.2.4 -i ./index.js -o ./main.nex
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Downloads node source 4.2.4 for the platform it&amp;rsquo;s running on in &lt;code&gt;./tmp&lt;/code&gt; directory, compiles
+it, uses browserify on &lt;code&gt;./index.js&lt;/code&gt; then bundles it all an outputs &lt;code&gt;./main.nex&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;packagejson&#34;&gt;&lt;code&gt;package.json&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;nexe&lt;/code&gt; property of &lt;code&gt;package.json&lt;/code&gt; specifies all the parameters&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ nexe
+
+&lt;span class=&#34;c1&#34;&gt;# output is ./main.nex, which is specified in the nexe.output property&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
     <item>
-      <title>Beefy</title>
-      <link>https://brianpfeil.com/post/beefy/</link>
-      <pubDate>Fri, 16 Oct 2015 00:00:00 -0400</pubDate>
+<title>Beefy</title>
+<link>https://brianpfeil.com/post/beefy/</link>
+<pubDate>Fri, 16 Oct 2015 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/beefy/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/beefy-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/beefy-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Learn and experiment with &lt;a href=&#34;http://didact.us/beefy/&#34;&gt;Beefy&lt;/a&gt;, which makes working with &lt;a href=&#34;http://browserify.org/&#34;&gt;Browserify&lt;/a&gt; a little nicer.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;running&#34;&gt;Running&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Clone this repo&lt;/li&gt;
+&lt;li&gt;Install deps&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ npm install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Run with live reload and es6 support (&lt;a href=&#34;https://github.com/babel/babelify&#34;&gt;babelify&lt;/a&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ beefy index.js --live --open -- -t babelify
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://didact.us/beefy/cows.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+</item>
     
   </channel>
 </rss>

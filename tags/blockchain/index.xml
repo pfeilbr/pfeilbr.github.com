@@ -1,20 +1,60 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>blockchain on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/blockchain/</link>
-    <description>Recent content in blockchain on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 17 Jan 2017 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/tags/blockchain/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>blockchain on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/blockchain/</link>
+        <description>Recent content in blockchain on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 17 Jan 2017 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/tags/blockchain/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Ethereum</title>
-      <link>https://brianpfeil.com/post/ethereum/</link>
-      <pubDate>Tue, 17 Jan 2017 00:00:00 -0500</pubDate>
+<title>Ethereum</title>
+<link>https://brianpfeil.com/post/ethereum/</link>
+<pubDate>Tue, 17 Jan 2017 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/ethereum/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/ethereum-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/ethereum-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn and experiment with &lt;a href=&#34;https://www.ethereum.org/&#34;&gt;Ethereum&lt;/a&gt; decentralized blockchain based platform&lt;/p&gt;
+&lt;h2 id=&#34;todo&#34;&gt;TODO&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;walk all the testnet transaction and get counts of the addresses to see which addresses produce the most transactions&lt;/li&gt;
+&lt;li&gt;walk all testnet transactions and plot transaction count over time for the top X% of addresses that produce the most transactions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;files-and-directories-of-interest&#34;&gt;Files and Directories of Interest&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Production&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;~/Library/Ethereum
+~/Library/Ethereum/geth/chaindata
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;TEST-NET&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;~/Library/Ethereum/testnet
+~/Library/Ethereum/testnet/geth/chaindata
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;ethereum-wallet&#34;&gt;Ethereum Wallet&lt;/h2&gt;
+&lt;p&gt;Ethereum Wallet Screenshot&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://static-screenshots-01.s3-website-us-east-1.amazonaws.com/Ethereum_Wallet_1E2DB8EC.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;gethhttpsgithubcomethereumgo-ethereumwikigeth-cli&#34;&gt;&lt;a href=&#34;https://github.com/ethereum/go-ethereum/wiki/geth&#34;&gt;Geth&lt;/a&gt; CLI&lt;/h2&gt;
+&lt;p&gt;command line interface for running a full ethereum node&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# attach to existing geth instance (e.g. Ethereum Wallet GUI app&amp;#39;s geth instance). opens up a javascript repl&lt;/span&gt;
+geth attach
+
+&lt;span class=&#34;c1&#34;&gt;# js console&lt;/span&gt;
+geth console
+
+&lt;span class=&#34;c1&#34;&gt;# open testnet console&lt;/span&gt;
+geth --testnet console
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;ethereum-block-explorer&#34;&gt;Ethereum Block Explorer&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;production - &lt;a href=&#34;https://etherscan.io/&#34;&gt;https://etherscan.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;testnet - &lt;a href=&#34;https://testnet.etherscan.io/&#34;&gt;https://testnet.etherscan.io/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ethereum-javascript-apihttpsgithubcomethereumweb3js&#34;&gt;&lt;a href=&#34;https://github.com/ethereum/web3.js&#34;&gt;Ethereum Javascript API&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ethereum/wiki/wiki/JavaScript-API&#34;&gt;Web3 JavaScript Ðapp API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ethereum/web3.js&#34;&gt;web3.js&lt;/a&gt; npm module&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
   </channel>
 </rss>

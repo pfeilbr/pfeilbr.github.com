@@ -1,20 +1,37 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>codepipeline on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/codepipeline/</link>
-    <description>Recent content in codepipeline on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 20 Dec 2018 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/tags/codepipeline/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>codepipeline on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/codepipeline/</link>
+        <description>Recent content in codepipeline on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 20 Dec 2018 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/tags/codepipeline/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AWS CodePipeline</title>
-      <link>https://brianpfeil.com/post/aws-codepipeline/</link>
-      <pubDate>Thu, 20 Dec 2018 00:00:00 -0500</pubDate>
+<title>AWS CodePipeline</title>
+<link>https://brianpfeil.com/post/aws-codepipeline/</link>
+<pubDate>Thu, 20 Dec 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-codepipeline/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-codepipeline-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-codepipeline-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://aws.amazon.com/codepipeline/&#34;&gt;AWS CodePipeline&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;using-codebuild-for-a-custom-codepipeline-deploy-phase&#34;&gt;Using CodeBuild for a &amp;ldquo;custom&amp;rdquo; CodePipeline deploy phase&lt;/h3&gt;
+&lt;p&gt;CodeBuild gives you a amz linux server and you can run whatever you want.  This is an example using it for the &amp;ldquo;deployment&amp;rdquo; phase.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;During the &amp;ldquo;build&amp;rdquo; phase in &lt;code&gt;buildspec.yml&lt;/code&gt;, the &lt;code&gt;post_build&lt;/code&gt; command runs &lt;code&gt;mv deploy-buildspec.yml buildspec.yml&lt;/code&gt;.  The newly renamed &lt;code&gt;buildspec.yml&lt;/code&gt; is what gets used in the &amp;ldquo;deploy&amp;rdquo; phase.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAEkOojbyctN75VbQiLP8fFMkUGDRHzdSXoB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAFU2st8OqlCRKXxHsA7YuWmwGmo1OXtvAYB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;exporting-pipeline-definitionmetadata&#34;&gt;Exporting Pipeline Definition/Metadata&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;via &lt;a href=&#34;https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CodePipeline.html#getPipeline-property&#34;&gt;&lt;code&gt;CodePipeline.getPipeline&lt;/code&gt;&lt;/a&gt; method&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;nx&#34;&gt;node&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;scripts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;pipeline&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;js&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;/pipeline-definition-export.json&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
   </channel>
 </rss>

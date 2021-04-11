@@ -1,29 +1,80 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>mac on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/mac/</link>
-    <description>Recent content in mac on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 05 Jun 2014 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>mac on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/mac/</link>
+        <description>Recent content in mac on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 05 Jun 2014 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/mac/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Mac Swift</title>
-      <link>https://brianpfeil.com/post/mac-swift/</link>
-      <pubDate>Thu, 05 Jun 2014 00:00:00 -0400</pubDate>
+<title>Mac Swift</title>
+<link>https://brianpfeil.com/post/mac-swift/</link>
+<pubDate>Thu, 05 Jun 2014 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/mac-swift/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/mac-swift-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/mac-swift-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;div style=&#34;clear: both&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;swifthttpsdeveloperapplecomlibraryprereleaseiosdocumentationswiftconceptualswift_programming_language-playground&#34;&gt;&lt;a href=&#34;https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language&#34;&gt;Swift&lt;/a&gt; Playground&lt;/h2&gt;
+&lt;p&gt;Swift playground for exploring the &lt;a href=&#34;https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language&#34;&gt;swift programming language&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;playground-specific-functions&#34;&gt;Playground Specific Functions&lt;/h2&gt;
+&lt;p&gt;There are a set of functions that enable the code you write to interact with the plaground UI.  For example, you can display a UIView live.  The &lt;code&gt;XCPlayground&lt;/code&gt; module provides these functions&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;XCPSetExecutionShouldContinueIndefinitely(continueIndefinitely:Bool)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Allows async code to run.  For example, &lt;code&gt;dispatch_*&lt;/code&gt; calls and networking.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;XCPCaptureValue(identifier: String, value:AnyObject)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Displays the value in the view pane with the identifier as the title&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;XCPShowView(identifier: String, view: NSView)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Display the provided view in the view pane with the identifier as the title&lt;/p&gt;
+</description>
+</item>
     
     <item>
-      <title>Automatic Network Location</title>
-      <link>https://brianpfeil.com/post/automatic-network-location/</link>
-      <pubDate>Fri, 05 Aug 2011 00:58:00 +0000</pubDate>
+<title>Automatic Network Location</title>
+<link>https://brianpfeil.com/post/automatic-network-location/</link>
+<pubDate>Fri, 05 Aug 2011 00:58:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/automatic-network-location/</guid>
-      <description>simplify networking regardless of location</description>
-    </item>
+<description>&lt;p&gt;I bounce back and forth between work and home with a MacBook Pro.
+At work, I&amp;rsquo;m behind a firewall, and have to go through a web proxy to get to
+public internet sites. I have 2 network locations setup, &lt;strong&gt;home&lt;/strong&gt; and &lt;strong&gt;work&lt;/strong&gt;.  When
+I get to work I manually set my location to work, and when I get home, I
+manually set it to home again.&lt;/p&gt;
+&lt;p&gt;I got tired of remembering to do this so I looked around, and found &lt;a href=&#34;http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man8/scselect.8.html&#34;&gt;scselect&lt;/a&gt;.
+&lt;code&gt;scselect&lt;/code&gt; is a command line utility that comes with
+&lt;strong&gt;OS X&lt;/strong&gt; that lets you set your location by name&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;scselect &lt;span class=&#34;s2&#34;&gt;&amp;#34;home&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now all I needed was a way to determine whether I was at work or home and then run
+&lt;a href=&#34;http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man8/scselect.8.html&#34;&gt;scselect&lt;/a&gt; with the corresponding location.  My work assigned ip address has a
+set prefix, so I can use that to say I&amp;rsquo;m at work and anything else would default
+to home.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# exit code is 0 if on work network and 1 otherwise&lt;/span&gt;
+ifconfig &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep -i &lt;span class=&#34;s2&#34;&gt;&amp;#34;inet 59.33&amp;#34;&lt;/span&gt; &amp;gt; /dev/null
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In order to prevent setting the location to the same location we need to find out
+what the current location is.  Running &lt;code&gt;scselect&lt;/code&gt; with no arguments displays a list
+of locations and the active one is marked with an asterisk (*).  Here&amp;rsquo;s my list.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&amp;gt; scselect
+Defined sets include: &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;* &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; current &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+   575844ED-8466-479C-9567-3F0B7D767EE9	&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;home&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+   3DF4B8B9-2E92-4F61-B684-74E0D0D38DEE	&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Automatic&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ * 6064213B-532D-43C9-8941-DC72B6487955	&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;work&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The output is a bit messy, and we need to parse out the active location.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;ch&#34;&gt;#!/usr/bin/env ruby&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# example output: * 6064213B-532D-43C9-8941-DC72B6487955	(work)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;output&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sb&#34;&gt;`scselect 2&amp;gt;&amp;amp;amp;1 | grep &amp;#39; &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;* &amp;#39;`&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# parse out the location.&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;location&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;output&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;scan&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/\(.*\)/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;first&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gsub&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/[\(\)]/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# location = work&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We now compare the active location with the location our ip address tells us.  If different,
+we call &lt;code&gt;scselect&lt;/code&gt; with the new location.&lt;/p&gt;
+&lt;p&gt;Complete script is available &lt;a href=&#34;https://gist.github.com/1195922&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+</description>
+</item>
     
   </channel>
 </rss>

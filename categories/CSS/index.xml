@@ -1,56 +1,972 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>CSS on Brian Pfeil</title>
-    <link>https://brianpfeil.com/categories/CSS/</link>
-    <description>Recent content in CSS on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 26 Feb 2020 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/categories/CSS/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>CSS on Brian Pfeil</title>
+        <link>https://brianpfeil.com/categories/CSS/</link>
+        <description>Recent content in CSS on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 26 Feb 2020 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/categories/CSS/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Azure Pipelines</title>
-      <link>https://brianpfeil.com/post/azure-pipelines/</link>
-      <pubDate>Wed, 26 Feb 2020 00:00:00 -0500</pubDate>
+<title>Azure Pipelines</title>
+<link>https://brianpfeil.com/post/azure-pipelines/</link>
+<pubDate>Wed, 26 Feb 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-pipelines/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/azure-pipelines-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/azure-pipelines-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://docs.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops&#34;&gt;azure pipelines&lt;/a&gt;&lt;/p&gt;
+&lt;!-- TOC --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#azure-pipelines-playground&#34;&gt;azure-pipelines-playground&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#description&#34;&gt;Description&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#infrastructure-provisioning-steps&#34;&gt;Infrastructure Provisioning Steps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#website-content-publishing-steps&#34;&gt;Website Content Publishing Steps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#deprovisioning&#34;&gt;Deprovisioning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#architecture&#34;&gt;Architecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#key-files-and-directories&#34;&gt;Key Files and Directories&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#screenshots&#34;&gt;Screenshots&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#todo&#34;&gt;TODO&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#completed--cancelled&#34;&gt;Completed / Cancelled&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#notes&#34;&gt;Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#scratch&#34;&gt;Scratch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- /TOC --&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+&lt;p&gt;Pipeline performs an atomic deploy of static content from a github repo to a static site (Rout53 + ACM + WAF CloudFront + S3 when) a tag (release)
+is applied to the repo&lt;/p&gt;
+&lt;h2 id=&#34;infrastructure-provisioning-steps&#34;&gt;Infrastructure Provisioning Steps&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;create route 53 hosted zone for your domain name (e.g. &lt;code&gt;mydomain.com&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;update &lt;code&gt;DOMAIN_NAME&lt;/code&gt; parameter in &lt;a href=&#34;scripts/stack.sh&#34;&gt;&lt;code&gt;scripts/stack.sh&lt;/code&gt;&lt;/a&gt; with the hosted zone name&lt;/li&gt;
+&lt;li&gt;provision aws resources &lt;code&gt;./scripts/stack.sh create&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Check ACM to confirm Certificate validation via DNS validation has completed.  May need to add DNS validation records to route53 hosted zone.&lt;/li&gt;
+&lt;li&gt;update pipeline variables
+&lt;ul&gt;
+&lt;li&gt;REGION - &lt;em&gt;default is us-east-1&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;STACK_NAME - defined in &lt;a href=&#34;scripts/stack.sh&#34;&gt;&lt;code&gt;scripts/stack.sh&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;AWS_ACCESS_KEY_ID - &lt;code&gt;AccessKey&lt;/code&gt; output in &lt;code&gt;./tmp/${STACK_NAME}-outputs.json&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;AWS_SECRET_ACCESS_KEY - &lt;code&gt;SecretKey&lt;/code&gt; output in &lt;code&gt;./tmp/${STACK_NAME}-outputs.json&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;website-content-publishing-steps&#34;&gt;Website Content Publishing Steps&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;ensure you have &lt;code&gt;develop&lt;/code&gt; branch checked out &lt;em&gt;(this corresponds to staging environment)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;update website content in &lt;a href=&#34;public&#34;&gt;&lt;code&gt;public&lt;/code&gt;&lt;/a&gt; directory and push to github.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(optional)&lt;/em&gt; update redirect rules in &lt;a href=&#34;routing-rules/routing-rules.txt&#34;&gt;&lt;code&gt;routing-rules/routing-rules.txt&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;push your commit(s) to remote (github)&lt;/li&gt;
+&lt;li&gt;publish will run.  can take up to 20 minutes to complete due CloudFront distribution update.&lt;/li&gt;
+&lt;li&gt;verify updated content by visiting &lt;a href=&#34;https://staging.mydomain.com&#34;&gt;https://staging.mydomain.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;to publish staging to production, checkout master branch and merge in develop&lt;/li&gt;
+&lt;li&gt;push your commit(s) to remote (github)&lt;/li&gt;
+&lt;li&gt;verify updated content by visiting &lt;a href=&#34;https://mydomain.com&#34;&gt;https://mydomain.com&lt;/a&gt; and &lt;a href=&#34;https://www.mydomain.com&#34;&gt;https://www.mydomain.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;deprovisioning&#34;&gt;Deprovisioning&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;deprovision aws resources &lt;code&gt;./scripts/stack.sh delete&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(optional)&lt;/em&gt; manually delete S3 website and CloudFront logs buckets.
+&lt;blockquote&gt;
+&lt;p&gt;these are not deleted because they still contain objects&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(optional)&lt;/em&gt; run &lt;code&gt;./scripts/stack.sh delete&lt;/code&gt; again to permanently delete stack&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;architecture&#34;&gt;Architecture&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;assets/images/architecture.png&#34; alt=&#34;architecture&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;key-files-and-directories&#34;&gt;Key Files and Directories&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;cfn-templates/resources.yaml&#34;&gt;&lt;code&gt;cfn-templates/resources.yaml&lt;/code&gt;&lt;/a&gt; - CloudFormation stack for provisioning AWS resources.
+&lt;ul&gt;
+&lt;li&gt;S3 bucket(s) for static content (staging + production)&lt;/li&gt;
+&lt;li&gt;CloudFront distribution(s) (staging + production)&lt;/li&gt;
+&lt;li&gt;lambda@edge function for basic auth for staging site&lt;/li&gt;
+&lt;li&gt;WAF Web ACL for CloudFront distribution(s)&lt;/li&gt;
+&lt;li&gt;aws secrets manager secret (json doc) to store basic auth users&lt;/li&gt;
+&lt;li&gt;S3 bucket for CloudFront access logs&lt;/li&gt;
+&lt;li&gt;SSL Certificate (ACM)&lt;/li&gt;
+&lt;li&gt;route53 root domain ALIAS record to CloudFront distribution&lt;/li&gt;
+&lt;li&gt;route53 &lt;strong&gt;staging&lt;/strong&gt; and &lt;strong&gt;www&lt;/strong&gt; CNAME records to CloudFront distribution&lt;/li&gt;
+&lt;li&gt;IAM user for CI/CD automation used by the azure pipeline&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;public&#34;&gt;&lt;code&gt;public&lt;/code&gt;&lt;/a&gt; - static web content&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;scripts/stack.sh&#34;&gt;&lt;code&gt;scripts/stack.sh&lt;/code&gt;&lt;/a&gt; - provisions AWS resources&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;tmp/automation-stack-outputs.json&#34;&gt;&lt;code&gt;tmp/automation-outputs.json&lt;/code&gt;&lt;/a&gt; - stack outputs stored here.  &lt;em&gt;file gets created when stack is provisioned.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;scripts/tag-and-trigger-publish.sh&#34;&gt;&lt;code&gt;scripts/tag-and-trigger-publish.sh&lt;/code&gt;&lt;/a&gt; - tags and pushes the tag to github to trigger the publish pipeline&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;scripts/publish.sh&#34;&gt;&lt;code&gt;scripts/publish.sh&lt;/code&gt;&lt;/a&gt; - publishes a new version of the static site based on git tag.  this is used by pipeline&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;azure-pipelines.yml&#34;&gt;&lt;code&gt;azure-pipelines.yml&lt;/code&gt;&lt;/a&gt; - pipeline definition that get triggered on tag to publish to site&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;screenshots&#34;&gt;Screenshots&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Pipeline Variables&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAHE5oOGeN9Kv7oZa-EDbz0NwbJwlITnmBkB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;todo&#34;&gt;TODO&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;route53 CNAME record to point directly to S3 bucket website domain.  used to troubleshoot/bypass cache issues.
+&lt;ul&gt;
+&lt;li&gt;e.g. &lt;a href=&#34;https://bucket.mysite.com&#34;&gt;https://bucket.mysite.com&lt;/a&gt; -&amp;gt; &lt;a href=&#34;https://bucket.s3-website-us-east-1.amazonaws.com&#34;&gt;https://bucket.s3-website-us-east-1.amazonaws.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;research basic auth options
+&lt;ul&gt;
+&lt;li&gt;ok not to have basic auth?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;completed--cancelled&#34;&gt;Completed / Cancelled&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;add WAF ACL and associate to CF dist(s)
+&lt;ul&gt;
+&lt;li&gt;see &lt;a href=&#34;https://forums.aws.amazon.com/thread.jspa?messageID=936616&amp;amp;#936616&#34;&gt;Web ACL created om WAF V2 not accessible on CloudFront&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;add API origin to CF distribution for requests to /api/* path
+&lt;ul&gt;
+&lt;li&gt;precedence to 1, forward query strings, cookies, all all HTTP methods&lt;/li&gt;
+&lt;li&gt;this is IMPORTANT &lt;strong&gt;You can indeed put CF dist in front of APIG, the trick is to force HTTPS only &amp;ldquo;Viewer Protocol Policy&amp;rdquo; AND to NOT forward the HOST header because APIG needs SNI&lt;/strong&gt;. see &lt;a href=&#34;https://stackoverflow.com/questions/32825413/how-do-you-add-cloudfront-in-front-of-api-gateway&#34;&gt;How do you add CloudFront in front of API Gateway&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://advancedweb.hu/how-to-use-api-gateway-with-cloudfront/&#34;&gt;How to use API Gateway with CloudFront&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;add staging CloudFront distribution
+&lt;ul&gt;
+&lt;li&gt;options
+&lt;ul&gt;
+&lt;li&gt;separate bucket s3://stage s3://prod&lt;/li&gt;
+&lt;li&gt;single bucket with prefix s3://bucket/stage/* s3://bucket/prod/*&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;update s3 redirect/routing rules for deploy version prefix
+&lt;ul&gt;
+&lt;li&gt;e.g. domain.com/oldlink would point to /v0.0.1/newlink in the bucket. the &lt;code&gt;/v0.0.1&lt;/code&gt; prefix need to be updated in all redirect rules on deploy&lt;/li&gt;
+&lt;li&gt;see &lt;a href=&#34;https://docs.aws.amazon.com/cli/latest/reference/s3api/put-bucket-website.html&#34;&gt;https://docs.aws.amazon.com/cli/latest/reference/s3api/put-bucket-website.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;more reliable method of picking the origin path to update since there are two origins&lt;/li&gt;
+&lt;li&gt;create IAM policy and role for resource provisioning
+&lt;ul&gt;
+&lt;li&gt;look at CloudFormation | Stack | Resources view for resource types&lt;/li&gt;
+&lt;li&gt;specify resource name prefix and suffix as variable to allow for change&lt;/li&gt;
+&lt;li&gt;specify role-arn for cloudformation cli&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;redirects
+&lt;ul&gt;
+&lt;li&gt;options
+&lt;ul&gt;
+&lt;li&gt;via lambda@edge&lt;/li&gt;
+&lt;li&gt;check if WAF supports&lt;/li&gt;
+&lt;li&gt;S3 bucket routing rules (&lt;code&gt;AWS::S3::Bucket RoutingRule&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;s3 object metadata header. see &lt;a href=&#34;https://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html#advanced-conditional-redirects&#34;&gt;(Optional) Configuring a Webpage Redirect&lt;/a&gt; and &lt;a href=&#34;https://docs.aws.amazon.com/AmazonS3/latest/API/API_CopyObject.html#RESTObjectCOPY-requests-request-headers&#34;&gt;&lt;code&gt;x-amz-website-redirect-location&lt;/code&gt;&lt;/a&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If the bucket is configured as a website, redirects requests for this object to another object in the same bucket or to an external URL. Amazon S3 stores the value of this header in the object metadata.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;trailing slashes: see the following on how to handle &lt;a href=&#34;https://forums.aws.amazon.com/thread.jspa?threadID=168000#jive-message-592535&#34;&gt;Re: S3 make a non-trailing slash URL send a 301 instead of a 302&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;basic auth on staging cloudfront dist
+&lt;ul&gt;
+&lt;li&gt;options
+&lt;ul&gt;
+&lt;li&gt;lambda@edge&lt;/li&gt;
+&lt;li&gt;WAF rule for Authorization header&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;update &lt;code&gt;scripts/publish.sh&lt;/code&gt; with proper cache control for index.html (no-cache)
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;aws s3 sync --cache-control &lt;span class=&#34;s1&#34;&gt;&amp;#39;max-age=604800&amp;#39;&lt;/span&gt; --exclude index.html build/ s3://mywebsitebucket/
+aws s3 sync --cache-control &lt;span class=&#34;s1&#34;&gt;&amp;#39;no-cache&amp;#39;&lt;/span&gt; build/ s3://mywebsitebucket/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;deny requests directly to s3.  must use domain.  remove OAI and add this.  this will allows redirects in S3 to work.
+&lt;ul&gt;
+&lt;li&gt;see &lt;a href=&#34;https://aws.amazon.com/premiumsupport/knowledge-center/cloudfront-serve-static-website/&#34;&gt;How do I use CloudFront to serve a static website hosted on Amazon S3?&lt;/a&gt; for details.&lt;/li&gt;
+&lt;li&gt;TLDR; the referer is set on the CloudFront distribution and is a secret.  the S3 bucket policy only allows requests from this referer&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/premiumsupport/knowledge-center/s3-rest-api-cloudfront-error-403/&#34;&gt;I’m using an S3 REST API endpoint as the origin of my CloudFront distribution. Why am I getting 403 Access Denied errors?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/premiumsupport/knowledge-center/s3-website-cloudfront-error-403/&#34;&gt;I’m using an S3 website endpoint as the origin of my CloudFront distribution. Why am I getting 403 Access Denied errors?&lt;/a&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Version&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;2012-10-17&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Id&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;http referer policy ${DomainName}&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Statement&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;Sid&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Allow get requests referred by ${DomainName}&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;Effect&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Allow&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;Principal&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;*&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;Action&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;s3:GetObject&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;Resource&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;arn:aws:s3:::${BUCKET}/*&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;Condition&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                &lt;span class=&#34;nt&#34;&gt;&amp;#34;StringLike&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;aws:Referer&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+                        &lt;span class=&#34;s2&#34;&gt;&amp;#34;http://${DomainName}/*&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                        &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://${DomainName}/*&amp;#34;&lt;/span&gt;
+                    &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+            &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;Sid&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Explicit deny to ensure requests are allowed only from specific referer.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;Effect&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Deny&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;Principal&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;*&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;Action&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;s3:GetObject&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;Resource&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;arn:aws:s3:::${BUCKET}/*&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;Condition&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                &lt;span class=&#34;nt&#34;&gt;&amp;#34;StringNotLike&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;aws:Referer&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+                        &lt;span class=&#34;s2&#34;&gt;&amp;#34;http://${DomainName}/*&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                        &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://${DomainName}/*&amp;#34;&lt;/span&gt;
+                    &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+            &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;pipeline is running in azure DevOps tied to personal gmail account&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;scratch&#34;&gt;Scratch&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# delete all remote tags&lt;/span&gt;
+git tag -l &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; xargs -n &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; git push --delete origin
+
+&lt;span class=&#34;c1&#34;&gt;# delete all local tags&lt;/span&gt;
+git tag &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; xargs git tag -d
+
+&lt;span class=&#34;c1&#34;&gt;#REDIRECT_LOCATION=&amp;#34;https://allthecloudbits.com/products/product02/&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;REGION&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;us-east-1&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;STACK_NAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;dev-agency-website&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;BUCKET&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;aws cloudformation describe-stacks --region &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;REGION&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; --stack-name &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;STACK_NAME&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; --query &lt;span class=&#34;s2&#34;&gt;&amp;#34;Stacks[0].Outputs[?OutputKey==&amp;#39;WebsiteBucketName&amp;#39;].OutputValue&amp;#34;&lt;/span&gt; --output text&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;PREFIX&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;v0.0.1&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;TARGET&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PREFIX&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/about&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;REDIRECT_LOCATION&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/about/&amp;#34;&lt;/span&gt;
+
+aws --profile automation-user s3api put-object &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --bucket &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;BUCKET&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --key &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;TARGET&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --website-redirect-location &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;REDIRECT_LOCATION&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --content-length &lt;span class=&#34;s2&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt;
+
+aws --profile automation-user s3api head-object &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --bucket &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;BUCKET&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --key &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;TARGET&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+
+aws --profile automation-user s3api delete-object &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --bucket &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;BUCKET&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --key &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;TARGET&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+
+
+aws --profile automation-user s3api list-objects &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --bucket &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;BUCKET&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;policy components&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Effect&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Allow&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Principal&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;arn:aws:iam::529276214230:user/admin&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Action&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;s3:*&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Resource&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;arn:aws:s3:::dev-agency-website-s3bucketforwebsitecontent-11u56g1n9u9oo/*&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Effect&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Allow&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Principal&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;*&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Action&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;s3:GetObject&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Resource&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;arn:aws:s3:::dev-agency-website-s3bucketforwebsitecontent-11u56g1n9u9oo/*&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Condition&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;StringLike&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;aws:Referer&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;79011a81-c048-4877-84f4-efe9577d7250&amp;#34;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Effect&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Deny&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Principal&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;*&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Action&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;s3:GetObject&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Resource&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;arn:aws:s3:::dev-agency-website-s3bucketforwebsitecontent-11u56g1n9u9oo/*&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Condition&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;StringNotLike&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;aws:Referer&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;79011a81-c048-4877-84f4-efe9577d7250&amp;#34;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;err&#34;&gt;create_routing_rule()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;err&#34;&gt;bucket=$1&lt;/span&gt;
+    &lt;span class=&#34;err&#34;&gt;prefix=$2&lt;/span&gt;
+    &lt;span class=&#34;err&#34;&gt;target=$3&lt;/span&gt;
+    &lt;span class=&#34;err&#34;&gt;redirect_location=$4&lt;/span&gt;
+
+    &lt;span class=&#34;err&#34;&gt;aws&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;s3api&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;put-object&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;\&lt;/span&gt;
+        &lt;span class=&#34;err&#34;&gt;--bucket&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;${bucket}&amp;#34;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;\&lt;/span&gt;
+        &lt;span class=&#34;err&#34;&gt;--key&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;${prefix}${target}&amp;#34;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;\&lt;/span&gt;
+        &lt;span class=&#34;err&#34;&gt;--website-redirect-location&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;${redirect_location}&amp;#34;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;\&lt;/span&gt;
+        &lt;span class=&#34;err&#34;&gt;--content-length&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;err&#34;&gt;create_routing_rules()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;err&#34;&gt;bucket=$1&lt;/span&gt;
+    &lt;span class=&#34;err&#34;&gt;prefix=$2&lt;/span&gt;
+
+    &lt;span class=&#34;err&#34;&gt;IFS=$&amp;#39;\r\n&amp;#39;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;GLOBIGNORE=&amp;#39;*&amp;#39;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;rules=($(cat&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;routing-rules/routing-rules.txt))&lt;/span&gt; 
+
+    &lt;span class=&#34;err&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;rule&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;${rules[@]}&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;err&#34;&gt;do&lt;/span&gt;
+        &lt;span class=&#34;err&#34;&gt;components=($(echo&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$rule&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;tr&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;\r\n&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;))&lt;/span&gt;
+        &lt;span class=&#34;err&#34;&gt;target=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;${components[1]}&amp;#34;&lt;/span&gt;
+        &lt;span class=&#34;err&#34;&gt;redirect_location=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;${components[2]}&amp;#34;&lt;/span&gt;
+        &lt;span class=&#34;err&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;target=${target}, redirect_location=${redirect_location}&amp;#34;&lt;/span&gt;
+
+        &lt;span class=&#34;err&#34;&gt;create_routing_rule&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;${bucket}&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;${prefix}&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;${target}&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;${redirect_location}&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;err&#34;&gt;done&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;err&#34;&gt;create_routing_rules&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;dev-agency-website-s3bucketforwebsitecontent-1fbv8htrn7nna&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;v0.0.1&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;on&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;tag&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_SOURCEBRANCHNAME=v&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_SOURCEBRANCH=refs/tags/v&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_SOURCEVERSION=f&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;302&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ed&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;7e007&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;57&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;118&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8835&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;378&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ddd&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;04&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;63e105&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;c&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_SOURCEVERSIONMESSAGE=output&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;env&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;variables&lt;/span&gt;
+
+&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;on&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;develop&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;branch&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_SOURCEBRANCHNAME=develop&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_SOURCEBRANCH=refs/heads/develop&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_SOURCEVERSION=e&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;59&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;dfea&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;bd&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;88&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;be&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3808&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;46&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;48&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;da&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ddd&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;83e8&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;809&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_SOURCEVERSIONMESSAGE=output&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;env&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;variables&lt;/span&gt;
+
+&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;pipeline&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;environment&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;variables&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;LEIN_HOME=/usr/local/lib/lein&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_QUEUEDBY=GitHub&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;AGENT_HOMEDIRECTORY=/home/vsts/agents/&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;2.165&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;M&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;_HOME=/usr/share/apache-maven&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;-3.6&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BOOST_ROOT=/usr/local/share/boost/&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.69&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_STAGEDISPLAYNAME=__default&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;AGENT_VERSION=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;2.165&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_JOBATTEMPT=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;GOROOT_&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;_X&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;64&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;=/usr/local/go&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.11&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;ANDROID_HOME=/usr/local/lib/android/sdk&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;JAVA_HOME_&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;_X&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;64&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;=/usr/lib/jvm/zulu&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;-11&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;-azure-amd&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;64&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_TEAMFOUNDATIONSERVERURI=https://dev.azure.com/brianpfeil/&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;ImageVersion=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;20200301.1&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;AGENT_TOOLSDIRECTORY=/opt/hostedtoolcache&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_DEFINITIONID=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;AGENT_DISABLELOGPLUGIN_TESTFILEPUBLISHERPLUGIN=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;LANG=C.UTF&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;-8&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;AGENT_WORKFOLDER=/home/vsts/work&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;AZURE_EXTENSION_DIR=/opt/az/azcliextensions&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_DEFINITIONNAME=pfeilbr.azure-pipelines-playground&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;AGENT_TEMPDIRECTORY=/home/vsts/work/_temp&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;INVOCATION_ID=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;71&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;915879&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;cc&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;04391&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;20e7&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2867&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;21806&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;JAVA_HOME_&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;_X&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;64&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;=/usr/lib/jvm/zulu&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;-12&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;-azure-amd&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;64&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;AWS_SECRET_ACCESS_KEY=***&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_REQUESTEDFOR=Brian&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;Pfeil&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_PHASENAME=Job&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;ANDROID_SDK_ROOT=/usr/local/lib/android/sdk&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_JOBIDENTIFIER=Job.__default&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_PULLREQUEST_ISFORK=False&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;JAVA_HOME=/usr/lib/jvm/zulu&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;-8&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;-azure-amd&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;64&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_JOBPARALLELISMTAG=Private&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;DOTNET_SKIP_FIRST_TIME_EXPERIENCE=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;USER=vsts&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_REASON=IndividualCI&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;AGENT_OS=Linux&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_ISSCHEDULED=False&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_SOURCEVERSION=f&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;302&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ed&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;7e007&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;57&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;118&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8835&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;378&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ddd&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;04&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;63e105&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;c&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;ENDPOINT_URL_SYSTEMVSSCONNECTION=https://dev.azure.com/brianpfeil/&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_SOURCEBRANCH=refs/tags/v&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;GRADLE_HOME=/usr/share/gradle&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_WORKFOLDER=/home/vsts/work&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_QUEUEDBYID=a&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;399e9&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;-ba&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;17-47&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ed&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;-9005-8&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;263530&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;afdf&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;AGENT_DISABLELOGPLUGIN_TESTRESULTLOGPLUGIN=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;AGENT_ROOTDIRECTORY=/home/vsts/work&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;PWD=/home/vsts/work/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/s&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;ImageOS=ubuntu&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;18&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;HOME=/home/vsts&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;AGENT_ID=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;GOROOT=/usr/local/go&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.12&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;JOURNAL_STREAM=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;31906&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_TOTALJOBSINPHASE=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_COLLECTIONURI=https://dev.azure.com/brianpfeil/&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;RUNNER_TOOLSDIRECTORY=/opt/hostedtoolcache&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;JAVA_HOME_&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;_X&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;64&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;=/usr/lib/jvm/zulu&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;-8&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;-azure-amd&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;64&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;AGENT_OSARCHITECTURE=X&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;64&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_CULTURE=en-US&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_TEAMPROJECTID=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;398&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5300-9203-4&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;-957&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;-82&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;eedb&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;aea&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;92&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;VSTS_AGENT_PERFLOG=/home/vsts/perflog&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;CONDA=/usr/share/miniconda&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;PIPELINE_WORKSPACE=/home/vsts/work/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;GOROOT_&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;_X&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;64&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;=/usr/local/go&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.13&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BOOST_ROOT_&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;69&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;=/usr/local/share/boost/&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.69&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_JOBPOSITIONINPHASE=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;DEBIAN_FRONTEND=noninteractive&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_JOBID=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1170&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;-54&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2-53&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3-20&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;dd&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;-22&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;fc&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;dff&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;55&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;AGENT_JOBNAME=Job&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;AGENT_ACCEPTTEEEULA=True&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_STAGEATTEMPT=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_PIPELINESTARTTIME=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2020-03-05&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;22&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;STACK_NAME=dev-agency-website&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_REPOSITORY_URI=https://github.com/pfeilbr/azure-pipelines-playground&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;AGENT_READONLYVARIABLES=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_REPOSITORY_PROVIDER=GitHub&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_TASKINSTANCENAME=CmdLine&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;GOROOT_&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;_X&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;64&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;=/usr/local/go&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.12&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;GECKOWEBDRIVER=/usr/local/share/gecko_driver&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_PLANID=b&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;cbb&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3-6&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;-4&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;-85&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;da&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;-7&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;89&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;56&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;bfcc&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_DEFINITIONVERSION=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;13&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;TASK_DISPLAYNAME=deploy&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_HOSTTYPE=build&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;CHROMEWEBDRIVER=/usr/local/share/chrome_driver&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_STAGINGDIRECTORY=/home/vsts/work/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/a&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;MSDEPLOY_HTTP_USER_AGENT=VSTS_&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;cc&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;55890-46&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;6-40&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1-9714-8220&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ddd&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;bd&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;_build_&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_REQUESTEDFOREMAIL=brian.pfeil@gmail.com&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;TF_BUILD=True&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;AZURE_HTTP_USER_AGENT=VSTS_&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;cc&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;55890-46&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;6-40&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1-9714-8220&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ddd&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;bd&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;_build_&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_REPOSITORY_LOCALPATH=/home/vsts/work/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/s&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_PHASEDISPLAYNAME=Job&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_REPOSITORY_NAME=pfeilbr/azure-pipelines-playground&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_ARTIFACTSTAGINGDIRECTORY=/home/vsts/work/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/a&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_TASKDEFINITIONSURI=https://dev.azure.com/brianpfeil/&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_REPOSITORY_GIT_SUBMODULECHECKOUT=False&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_SOURCEVERSIONAUTHOR=Brian&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;Pfeil&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_TASKDISPLAYNAME=deploy&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_STAGENAME=__default&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;VSTS_PROCESS_LOOKUP_ID=vsts_f&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;104e61&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;-5&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;db&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9-493&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;-8204-4&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ffeb&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8973&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;65&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_REPOSITORY_ID=pfeilbr/azure-pipelines-playground&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_SOURCEVERSIONMESSAGE=output&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;env&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;variables&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM=build&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_PHASEATTEMPT=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;VCPKG_INSTALLATION_ROOT=/usr/local/share/vcpkg&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_JOBNAME=__default&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;REGION=us-east&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;-1&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_PHASEID=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;60-14&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;7-570&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;-14&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;-fa&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;42&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ad&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;92&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;52&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;a&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;AGENT_MACHINENAME=fv-az&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;755&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;COMMON_TESTRESULTSDIRECTORY=/home/vsts/work/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/TestResults&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;agent.jobstatus=Succeeded&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;JAVA_HOME_&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;_X&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;64&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;=/usr/lib/jvm/zulu&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;-7&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;-azure-amd&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;64&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_DEFINITIONNAME=pfeilbr.azure-pipelines-playground&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;AWS_ACCESS_KEY_ID=AKIAXWO&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;SDPLDE&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;43&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;XM&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;W&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_ARTIFACTSDIRECTORY=/home/vsts/work/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/a&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SHLVL=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_REQUESTEDFORID=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ba&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;760&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;-cdcf&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;-6&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;15-8&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;80&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;-c&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;37&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;de&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;cf&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;7631&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;AGENT_NAME=Hosted&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;Agent&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_BUILDNUMBER=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;20200305.5&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_SOURCEBRANCHNAME=v&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_JOBDISPLAYNAME=Job&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_SOURCESDIRECTORY=/home/vsts/work/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/s&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;LEIN_JAR=/usr/local/lib/lein/self-installs/leiningen&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;-2.9&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;-standalone.jar&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_BUILDURI=vstfs:///Build/Build/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;53&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_SERVERTYPE=Hosted&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_TIMELINEID=b&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;cbb&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3-6&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;-4&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;-85&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;da&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;-7&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;89&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;56&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;bfcc&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;AGENT_RETAINDEFAULTENCODING=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_TASKINSTANCEID=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;939e41&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;-62&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2-5605&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;-5e05&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;-fc&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3554&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;afc&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_DEFAULTWORKINGDIRECTORY=/home/vsts/work/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/s&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;AGENT_JOBSTATUS=Succeeded&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;ANT_HOME=/usr/share/ant&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_REPOSITORY_CLEAN=False&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_TEAMPROJECT=project&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;01&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;PATH=/usr/share/rust/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SELENIUM_JAR_PATH=/usr/share/java/selenium-server-standalone.jar&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;CHROME_BIN=/usr/bin/google-chrome&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_COLLECTIONID=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;cc&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;55890-46&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;6-40&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1-9714-8220&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ddd&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;bd&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_CONTAINERID=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5246219&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_TEAMFOUNDATIONCOLLECTIONURI=https://dev.azure.com/brianpfeil/&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;GIT_TERMINAL_PROMPT=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;AGENT_BUILDDIRECTORY=/home/vsts/work/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_STAGEID=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;96&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ac&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2280-8&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;cb&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4-5&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5-99&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;de-dd&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;da&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;759617&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;d&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SYSTEM_ENABLEACCESSTOKEN=SecretVariable&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_BINARIESDIRECTORY=/home/vsts/work/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/b&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;BUILD_BUILDID=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;53&lt;/span&gt;
+
+&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;BUILD_REPOSITORY_URI&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/tree/$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;BUILD_SOURCEBRANCHNAME&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;BUILD_REPOSITORY_URI&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/commit/$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;BUILD_SOURCEVERSION&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;athena&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;create&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;table&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;CloudFront&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;logs&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;EXTERNAL&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;IF&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;NOT&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;EXISTS&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;default.cloudfront_logs_stagingallthecloudbits&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;(&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;`date`&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;DATE,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;time&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;STRING,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;location&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;STRING,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;bytes&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;BIGINT,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;request_ip&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;STRING,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;method&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;STRING,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;host&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;STRING,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;uri&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;STRING,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;status&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;INT,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;referrer&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;STRING,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;user_agent&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;STRING,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;query_string&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;STRING,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;cookie&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;STRING,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;result_type&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;STRING,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;request_id&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;STRING,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;host_header&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;STRING,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;request_protocol&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;STRING,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;request_bytes&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;BIGINT,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;time_taken&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;FLOAT,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;xforwarded_for&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;STRING,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;ssl_protocol&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;STRING,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;ssl_cipher&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;STRING,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;response_result_type&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;STRING,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;http_version&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;STRING,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;fle_status&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;STRING,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;fle_encrypted_fields&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;INT,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;c_port&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;INT,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;time_to_first_byte&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;FLOAT,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;x_edge_detailed_result_type&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;STRING,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;sc_content_type&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;STRING,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;sc_content_len&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;BIGINT,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;sc_range_start&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;BIGINT,&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;sc_range_end&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;BIGINT&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;ROW&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;FORMAT&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;DELIMITED&lt;/span&gt; 
+&lt;span class=&#34;err&#34;&gt;FIELDS&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;TERMINATED&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;BY&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;#39;\t&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;LOCATION&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;#39;s&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;://dev-agency-website-cloudfrontlogsbucket-jf&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ykpajh&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/cloudfront/logs/staging.allthecloudbits.com/&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;TBLPROPERTIES&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;#39;skip.header.line.count&amp;#39;=&amp;#39;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;query&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;default&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;cloudfront_logs_stagingallthecloudbits&amp;#34;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;limit&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;
+
+&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;CF&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;dist&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;WAF&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;association&lt;/span&gt; 
+&lt;span class=&#34;err&#34;&gt;myDistribution&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;Type&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;AWS::CloudFront::Distribution&lt;/span&gt;
+  &lt;span class=&#34;err&#34;&gt;Properties:&lt;/span&gt;
+    &lt;span class=&#34;err&#34;&gt;DistributionConfig:&lt;/span&gt;
+        &lt;span class=&#34;err&#34;&gt;WebACLId:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;!Ref&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;MyWebACL&lt;/span&gt;
+
+&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;aws&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;managed&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;rule&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;groups&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list.html&lt;/span&gt;
+
+&lt;span class=&#34;err&#34;&gt;AWS::WAFv&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;::WebACL&lt;/span&gt;
+
+
+
+   &lt;span class=&#34;err&#34;&gt;Type:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;AWS::WAFv&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;::WebACL&lt;/span&gt;
+    &lt;span class=&#34;err&#34;&gt;Properties:&lt;/span&gt;
+      &lt;span class=&#34;err&#34;&gt;Name:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;waf-webacl&lt;/span&gt;
+      &lt;span class=&#34;err&#34;&gt;Scope:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;CLOUDFRONT&lt;/span&gt;
+      &lt;span class=&#34;err&#34;&gt;Description:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;CloudFront&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;WAF&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;WebACL&lt;/span&gt;
+      &lt;span class=&#34;err&#34;&gt;DefaultAction:&lt;/span&gt;
+        &lt;span class=&#34;err&#34;&gt;Allow:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{}&lt;/span&gt;
+      &lt;span class=&#34;err&#34;&gt;VisibilityConfig:&lt;/span&gt;
+        &lt;span class=&#34;err&#34;&gt;SampledRequestsEnabled:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+        &lt;span class=&#34;err&#34;&gt;CloudWatchMetricsEnabled:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+        &lt;span class=&#34;err&#34;&gt;MetricName:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;ExampleWebACLMetric&lt;/span&gt;
+      &lt;span class=&#34;err&#34;&gt;Rules:&lt;/span&gt;
+        &lt;span class=&#34;err&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;Name:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;RuleWithAWSManagedRules&lt;/span&gt;
+          &lt;span class=&#34;err&#34;&gt;Priority:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+          &lt;span class=&#34;err&#34;&gt;OverrideAction:&lt;/span&gt;
+            &lt;span class=&#34;err&#34;&gt;Count:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{}&lt;/span&gt;
+          &lt;span class=&#34;err&#34;&gt;VisibilityConfig:&lt;/span&gt;
+            &lt;span class=&#34;err&#34;&gt;SampledRequestsEnabled:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+            &lt;span class=&#34;err&#34;&gt;CloudWatchMetricsEnabled:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+            &lt;span class=&#34;err&#34;&gt;MetricName:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;RuleWithAWSManagedRulesMetric&lt;/span&gt;
+          &lt;span class=&#34;err&#34;&gt;Statement:&lt;/span&gt;
+            &lt;span class=&#34;err&#34;&gt;ManagedRuleGroupStatement:&lt;/span&gt;
+              &lt;span class=&#34;err&#34;&gt;VendorName:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;AWS&lt;/span&gt;
+              &lt;span class=&#34;err&#34;&gt;Name:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;AWSManagedRulesCommonRuleSet&lt;/span&gt;
+              &lt;span class=&#34;err&#34;&gt;ExcludedRules:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
     <item>
-      <title>TailwindCSS</title>
-      <link>https://brianpfeil.com/post/tailwindcss/</link>
-      <pubDate>Thu, 16 Jan 2020 00:00:00 -0500</pubDate>
+<title>TailwindCSS</title>
+<link>https://brianpfeil.com/post/tailwindcss/</link>
+<pubDate>Thu, 16 Jan 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/tailwindcss/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/tailwindcss-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/tailwindcss-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://tailwindcss.com/&#34;&gt;tailwindcss&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://dev.to/hagnerd/setting-up-tailwind-with-create-react-app-4jd&#34;&gt;https://dev.to/hagnerd/setting-up-tailwind-with-create-react-app-4jd&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;create-react-app README.md below&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;This project was bootstrapped with &lt;a href=&#34;https://github.com/facebook/create-react-app&#34;&gt;Create React App&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;available-scripts&#34;&gt;Available Scripts&lt;/h2&gt;
+&lt;p&gt;In the project directory, you can run:&lt;/p&gt;
+&lt;h3 id=&#34;yarn-start&#34;&gt;&lt;code&gt;yarn start&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Runs the app in the development mode.&lt;br /&gt;
+Open &lt;a href=&#34;http://localhost:3000&#34;&gt;http://localhost:3000&lt;/a&gt; to view it in the browser.&lt;/p&gt;
+&lt;p&gt;The page will reload if you make edits.&lt;br /&gt;
+You will also see any lint errors in the console.&lt;/p&gt;
+&lt;h3 id=&#34;yarn-test&#34;&gt;&lt;code&gt;yarn test&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Launches the test runner in the interactive watch mode.&lt;br /&gt;
+See the section about &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/running-tests&#34;&gt;running tests&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;h3 id=&#34;yarn-build&#34;&gt;&lt;code&gt;yarn build&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Builds the app for production to the &lt;code&gt;build&lt;/code&gt; folder.&lt;br /&gt;
+It correctly bundles React in production mode and optimizes the build for the best performance.&lt;/p&gt;
+&lt;p&gt;The build is minified and the filenames include the hashes.&lt;br /&gt;
+Your app is ready to be deployed!&lt;/p&gt;
+&lt;p&gt;See the section about &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/deployment&#34;&gt;deployment&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;h3 id=&#34;yarn-eject&#34;&gt;&lt;code&gt;yarn eject&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Note: this is a one-way operation. Once you &lt;code&gt;eject&lt;/code&gt;, you can’t go back!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you aren’t satisfied with the build tool and configuration choices, you can &lt;code&gt;eject&lt;/code&gt; at any time. This command will remove the single build dependency from your project.&lt;/p&gt;
+&lt;p&gt;Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except &lt;code&gt;eject&lt;/code&gt; will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.&lt;/p&gt;
+&lt;p&gt;You don’t have to ever use &lt;code&gt;eject&lt;/code&gt;. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.&lt;/p&gt;
+&lt;h2 id=&#34;learn-more&#34;&gt;Learn More&lt;/h2&gt;
+&lt;p&gt;You can learn more in the &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/getting-started&#34;&gt;Create React App documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To learn React, check out the &lt;a href=&#34;https://reactjs.org/&#34;&gt;React documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;code-splitting&#34;&gt;Code Splitting&lt;/h3&gt;
+&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/code-splitting&#34;&gt;https://facebook.github.io/create-react-app/docs/code-splitting&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;analyzing-the-bundle-size&#34;&gt;Analyzing the Bundle Size&lt;/h3&gt;
+&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size&#34;&gt;https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;making-a-progressive-web-app&#34;&gt;Making a Progressive Web App&lt;/h3&gt;
+&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app&#34;&gt;https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;advanced-configuration&#34;&gt;Advanced Configuration&lt;/h3&gt;
+&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/advanced-configuration&#34;&gt;https://facebook.github.io/create-react-app/docs/advanced-configuration&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;deployment&#34;&gt;Deployment&lt;/h3&gt;
+&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/deployment&#34;&gt;https://facebook.github.io/create-react-app/docs/deployment&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;yarn-build-fails-to-minify&#34;&gt;&lt;code&gt;yarn build&lt;/code&gt; fails to minify&lt;/h3&gt;
+&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify&#34;&gt;https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify&lt;/a&gt;&lt;/p&gt;
+</description>
+</item>
     
     <item>
-      <title>Serverless Plugin CloudFront Lambda Edge</title>
-      <link>https://brianpfeil.com/post/serverless-plugin-cloudfront-lambda-edge/</link>
-      <pubDate>Tue, 10 Sep 2019 00:00:00 -0400</pubDate>
+<title>Serverless Plugin CloudFront Lambda Edge</title>
+<link>https://brianpfeil.com/post/serverless-plugin-cloudfront-lambda-edge/</link>
+<pubDate>Tue, 10 Sep 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-plugin-cloudfront-lambda-edge/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/serverless-plugin-cloudfront-lambda-edge-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/serverless-plugin-cloudfront-lambda-edge-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://github.com/silvermine/serverless-plugin-cloudfront-lambda-edge&#34;&gt;silvermine/serverless-plugin-cloudfront-lambda-edge&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;visit &lt;a href=&#34;https://d3cztrjc4xcpde.cloudfront.net&#34;&gt;https://d3cztrjc4xcpde.cloudfront.net&lt;/a&gt; and login with user01/password01&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Basic Auth Challenge&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;username: user01
+password: password01
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;users are stored in aws secrets manager and sourced from &lt;a href=&#34;users.json&#34;&gt;&lt;code&gt;users.json&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# deploy all (provision infra, build static site, copy to s3, invalidate cache).&lt;/span&gt;
+npm run deploy
+
+&lt;span class=&#34;c1&#34;&gt;# separate component deploys&lt;/span&gt;
+npm run deploy-infrastructure
+npm run build-static-site &lt;span class=&#34;c1&#34;&gt;# gatsby&lt;/span&gt;
+npm run publish-static-assets-to-bucket
+npm run cloudfront:invalidate
+
+&lt;span class=&#34;c1&#34;&gt;# bucket&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# not accessible because of Origin Access Identity applied&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# e.g. http://s3-cf-private-static-site-01-dev.s3-website-us-east-1.amazonaws.com&lt;/span&gt;
+open &lt;span class=&#34;s2&#34;&gt;&amp;#34;http://&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;node scripts/get-stack-property.js WebsiteBucketName&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.s3-website-us-east-1.amazonaws.com/index.html&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# cloudfront url. e.g. https://d3cztrjc4xcpde.cloudfront.net&lt;/span&gt;
+open &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;node scripts/get-stack-property.js CloudFrontDistributionDomainName&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;removing-auth&#34;&gt;Removing Auth&lt;/h2&gt;
+&lt;p&gt;Update CloudFront Behavior to remove &amp;ldquo;Viewer Request&amp;rdquo; &amp;ldquo;Lambda Function Association&amp;rdquo;, then invalidate cache on all &amp;ldquo;*&amp;rdquo;.&lt;/p&gt;
+&lt;h2 id=&#34;viewing-cloudwatch-logs-for-lambdaedge-functions&#34;&gt;Viewing CloudWatch Logs for Lambda@Edge Functions&lt;/h2&gt;
+&lt;p&gt;logging takes place in the region of the edge (PoP) location.  This will vary based on the client location.&lt;/p&gt;
+&lt;p&gt;Visit CloudFront | Monitoring | Lambda@Edge Functions | YOUR FUNCTION, then click &lt;code&gt;[View Function Metrics]&lt;/code&gt; button&lt;/p&gt;
+&lt;p&gt;see &lt;a href=&#34;https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-edge-testing-debugging.html#lambda-edge-testing-debugging-determine-region&#34;&gt;Determining the Lambda@Edge Region&lt;/a&gt; for more details&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAH3ZzTj929MNqiRZIcn1zj1G0WzeI5ZSGQB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;lambdaedge-request&#34;&gt;Lambda@Edge Request&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;event&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;Records&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+            &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                &lt;span class=&#34;nt&#34;&gt;&amp;#34;cf&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;config&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                        &lt;span class=&#34;nt&#34;&gt;&amp;#34;distributionDomainName&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;d13ydba49ilc9v.cloudfront.net&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                        &lt;span class=&#34;nt&#34;&gt;&amp;#34;distributionId&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;E20V9SS2N0VT6P&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                        &lt;span class=&#34;nt&#34;&gt;&amp;#34;eventType&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;viewer-request&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                        &lt;span class=&#34;nt&#34;&gt;&amp;#34;requestId&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;NcxNfOh2NaptKOLBlSimVF7AAlRp10OM-F1-CMZsJOGSMEkHUVd25A==&amp;#34;&lt;/span&gt;
+                    &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;request&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                        &lt;span class=&#34;nt&#34;&gt;&amp;#34;clientIp&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;100.11.96.70&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                        &lt;span class=&#34;nt&#34;&gt;&amp;#34;headers&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;host&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Host&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;d13ydba49ilc9v.cloudfront.net&amp;#34;&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+                            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;user-agent&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;User-Agent&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36&amp;#34;&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+                            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;authorization&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;authorization&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Basic dXNlcjpwYXNz&amp;#34;&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+                            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;upgrade-insecure-requests&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;upgrade-insecure-requests&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+                            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;sec-fetch-mode&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;sec-fetch-mode&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;navigate&amp;#34;&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+                            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;sec-fetch-user&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;sec-fetch-user&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;?1&amp;#34;&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+                            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;accept&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;accept&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3&amp;#34;&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+                            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;sec-fetch-site&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;sec-fetch-site&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;none&amp;#34;&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+                            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;accept-encoding&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;accept-encoding&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;gzip, deflate, br&amp;#34;&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+                            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;accept-language&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;accept-language&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;en-US,en;q=0.9,nb;q=0.8,fr;q=0.7&amp;#34;&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+                            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;if-none-match&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;if-none-match&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;\&amp;#34;2cad58ac06c32be3c6384050881bc507\&amp;#34;&amp;#34;&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+                            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;if-modified-since&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;if-modified-since&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Tue, 10 Sep 2019 21:32:57 GMT&amp;#34;&lt;/span&gt;
+                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+                            &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+                        &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+                        &lt;span class=&#34;nt&#34;&gt;&amp;#34;method&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;GET&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                        &lt;span class=&#34;nt&#34;&gt;&amp;#34;querystring&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                        &lt;span class=&#34;nt&#34;&gt;&amp;#34;uri&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;
+                    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+            &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;add origin access identity
+&lt;ul&gt;
+&lt;li&gt;see the following for cfn markup &lt;a href=&#34;https://github.com/lroguet/amzn-cloudformation/blob/master/storage-content-delivery/static-website-with-cloudfront.yml&#34;&gt;https://github.com/lroguet/amzn-cloudformation/blob/master/storage-content-delivery/static-website-with-cloudfront.yml&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html&#34;&gt;Restricting Access to Amazon S3 Content by Using an Origin Access Identity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;S3 Bucket | &lt;a href=&#34;https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html#example-bucket-policies-use-case-6&#34;&gt;Granting Permission to an Amazon CloudFront Origin Identity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;todo&#34;&gt;TODO&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;DNS (route 53)
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-cloudfront-distribution.html&#34;&gt;Routing Traffic to an Amazon CloudFront Web Distribution by Using Your Domain Name&lt;/a&gt;.  Covers [root|sub]domainsG&lt;/li&gt;
+&lt;li&gt;see &lt;a href=&#34;https://www.brautaset.org/articles/2017/route-53-cloudformation.html&#34;&gt;https://www.brautaset.org/articles/2017/route-53-cloudformation.html&lt;/a&gt;.  Contains ApexRecordSet (example.com) and WwwRecordSet (&lt;a href=&#34;http://www.example.com&#34;&gt;www.example.com&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-route53.html#w2ab1c17c23c81c11&#34;&gt;Alias Resource Record Set for a CloudFront Distribution&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;update &lt;code&gt;serverless.yml:iamRoleStatements&lt;/code&gt; with dynamic region, account id, and secretsmanager name
+&lt;ul&gt;
+&lt;li&gt;via &lt;a href=&#34;https://github.com/svdgraaf/serverless-pseudo-parameters#readme&#34;&gt;serverless-pseudo-parameters&lt;/a&gt; plugin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;scratch&#34;&gt;Scratch&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$(node ./scripts/get-stack-property.js )
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
     <item>
-      <title>AWS Amplify Console</title>
-      <link>https://brianpfeil.com/post/aws-amplify-console/</link>
-      <pubDate>Mon, 09 Sep 2019 00:00:00 -0400</pubDate>
+<title>AWS Amplify Console</title>
+<link>https://brianpfeil.com/post/aws-amplify-console/</link>
+<pubDate>Mon, 09 Sep 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-amplify-console/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-amplify-console-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-amplify-console-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html&#34;&gt;AWS Amplify Console&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;AWS Amplify Console is a continuous delivery and hosting service for modern web applications. The AWS Amplify Console simplifies the deployment of your application front end and backend. Connect to your code repository and your front end and backend are deployed in a single workflow, on every code commit.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Flow&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;You specify a source (github, bitbucket, gitlab, S3, zip file upload).&lt;/li&gt;
+&lt;li&gt;On code change (commit), it checks out the code to a CodeBuild project.  Runs your build, test, [backend] deploy, etc.&lt;/li&gt;
+&lt;li&gt;Deploys static web assets (.html, .js, .css, images) to S3 to be served with CloudFront&lt;/li&gt;
+&lt;li&gt;Verifies deployment by visiting root site URL with various deveice form factors (iPhone, iPad, desktop) and taking screenshots.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Build settings are defined in &lt;a href=&#34;amplify.yml&#34;&gt;&lt;code&gt;amplify.yml&lt;/code&gt;&lt;/a&gt;.  See &lt;a href=&#34;https://docs.aws.amazon.com/amplify/latest/userguide/build-settings.html&#34;&gt;Configuring Build Settings&lt;/a&gt; for YML Specification Syntax.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;set amplify service role.  codebuild env will assume this role and commands will execute in this context.
+&lt;img src=&#34;https://www.evernote.com/l/AAGKI4wgfUZB7YtWVDmqTmfg9YEzYSa4L38B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;showing assumed role in codebuild env
+&lt;img src=&#34;https://www.evernote.com/l/AAFxwKOPnvJLYb7DpmMr5vF7wLiU-xHSxUQB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Update SAM deploy bucket policy to allow amplify service (&lt;code&gt;amplify.amazonaws.com&lt;/code&gt;) to read/write to bucket.
+&lt;img src=&#34;https://www.evernote.com/l/AAHR9UMPba1ExLJ3iyLjgFUXFRWfOZhHP-0B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Custom Domain configuration&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAF1AkVJrulEaqzahfCSFkXqjg48rR0uAyMB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;App running on custom domain &lt;a href=&#34;https://amplify-master.minote.net/&#34;&gt;https://amplify-master.minote.net/&lt;/a&gt;
+&lt;img src=&#34;https://www.evernote.com/l/AAGOQ8JEMwZEyKLvrvI8DHNtjnK2FR-Y9RUB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/amplify/console/getting-started/&#34;&gt;Amplify Console | Getting Started&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/aws-amplify/amplify-console&#34;&gt;aws-amplify/amplify-console&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>GatsbyJS</title>
-      <link>https://brianpfeil.com/post/gatsbyjs/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 -0500</pubDate>
+<title>GatsbyJS</title>
+<link>https://brianpfeil.com/post/gatsbyjs/</link>
+<pubDate>Sat, 09 Mar 2019 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/gatsbyjs/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/gatsbyjs-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/gatsbyjs-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://www.gatsbyjs.org&#34;&gt;Gatsby&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;plugin&#34;&gt;Plugin&lt;/h2&gt;
+&lt;p&gt;custom plugin at &lt;a href=&#34;plugins/gatsby-source-random&#34;&gt;&lt;code&gt;plugins/gatsby-source-random&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;original &lt;code&gt;README.md&lt;/code&gt; from starter below&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;!-- AUTO-GENERATED-CONTENT:START (STARTER) --&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;a href=&#34;https://www.gatsbyjs.org&#34;&gt;
+    &lt;img alt=&#34;Gatsby&#34; src=&#34;https://www.gatsbyjs.org/monogram.svg&#34; width=&#34;60&#34; /&gt;
+  &lt;/a&gt;
+&lt;/p&gt;
+&lt;h1 align=&#34;center&#34;&gt;
+  Gatsby&#39;s default starter
+&lt;/h1&gt;
+&lt;p&gt;Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Have another more specific idea? You may want to check out our vibrant collection of &lt;a href=&#34;https://www.gatsbyjs.org/docs/gatsby-starters/&#34;&gt;official and community-created starters&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-quick-start&#34;&gt;🚀 Quick start&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Create a Gatsby site.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Use the Gatsby CLI to create a new site, specifying the default starter.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# create a new Gatsby site using the default starter&lt;/span&gt;
+gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Start developing.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Navigate into your new site’s directory and start it up.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; my-default-starter/
+gatsby develop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Open the source code and start editing!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Your site is now running at &lt;code&gt;http://localhost:8000&lt;/code&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: You&amp;rsquo;ll also see a second link: &lt;em&gt;&lt;code&gt;http://localhost:8000/___graphql&lt;/code&gt;&lt;/em&gt;. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the &lt;a href=&#34;https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql&#34;&gt;Gatsby tutorial&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Open the &lt;code&gt;my-default-starter&lt;/code&gt; directory in your code editor of choice and edit &lt;code&gt;src/pages/index.js&lt;/code&gt;. Save your changes and the browser will update in real time!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;-whats-inside&#34;&gt;🧐 What&amp;rsquo;s inside?&lt;/h2&gt;
+&lt;p&gt;A quick look at the top-level files and directories you&amp;rsquo;ll see in a Gatsby project.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.
+├── node_modules
+├── src
+├── .gitignore
+├── .prettierrc
+├── gatsby-browser.js
+├── gatsby-config.js
+├── gatsby-node.js
+├── gatsby-ssr.js
+├── LICENSE
+├── package-lock.json
+├── package.json
+└── README.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;/node_modules&lt;/code&gt;&lt;/strong&gt;: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;/src&lt;/code&gt;&lt;/strong&gt;: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. &lt;code&gt;src&lt;/code&gt; is a convention for “source code”.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;.gitignore&lt;/code&gt;&lt;/strong&gt;: This file tells git which files it should not track / not maintain a version history for.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;.prettierrc&lt;/code&gt;&lt;/strong&gt;: This is a configuration file for &lt;a href=&#34;https://prettier.io/&#34;&gt;Prettier&lt;/a&gt;. Prettier is a tool to help keep the formatting of your code consistent.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;gatsby-browser.js&lt;/code&gt;&lt;/strong&gt;: This file is where Gatsby expects to find any usage of the &lt;a href=&#34;https://www.gatsbyjs.org/docs/browser-apis/&#34;&gt;Gatsby browser APIs&lt;/a&gt; (if any). These allow customization/extension of default Gatsby settings affecting the browser.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;gatsby-config.js&lt;/code&gt;&lt;/strong&gt;: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the &lt;a href=&#34;https://www.gatsbyjs.org/docs/gatsby-config/&#34;&gt;config docs&lt;/a&gt; for more detail).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;gatsby-node.js&lt;/code&gt;&lt;/strong&gt;: This file is where Gatsby expects to find any usage of the &lt;a href=&#34;https://www.gatsbyjs.org/docs/node-apis/&#34;&gt;Gatsby Node APIs&lt;/a&gt; (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;gatsby-ssr.js&lt;/code&gt;&lt;/strong&gt;: This file is where Gatsby expects to find any usage of the &lt;a href=&#34;https://www.gatsbyjs.org/docs/ssr-apis/&#34;&gt;Gatsby server-side rendering APIs&lt;/a&gt; (if any). These allow customization of default Gatsby settings affecting server-side rendering.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;LICENSE&lt;/code&gt;&lt;/strong&gt;: Gatsby is licensed under the MIT license.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;package-lock.json&lt;/code&gt;&lt;/strong&gt; (See &lt;code&gt;package.json&lt;/code&gt; below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. &lt;strong&gt;(You won’t change this file directly).&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;package.json&lt;/code&gt;&lt;/strong&gt;: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;README.md&lt;/code&gt;&lt;/strong&gt;: A text file containing useful reference information about your project.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;-learning-gatsby&#34;&gt;🎓 Learning Gatsby&lt;/h2&gt;
+&lt;p&gt;Looking for more guidance? Full documentation for Gatsby lives &lt;a href=&#34;https://www.gatsbyjs.org/&#34;&gt;on the website&lt;/a&gt;. Here are some places to start:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;For most developers, we recommend starting with our &lt;a href=&#34;https://www.gatsbyjs.org/tutorial/&#34;&gt;in-depth tutorial for creating a site with Gatsby&lt;/a&gt;.&lt;/strong&gt; It starts with zero assumptions about your level of ability and walks through every step of the process.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;To dive straight into code samples, head &lt;a href=&#34;https://www.gatsbyjs.org/docs/&#34;&gt;to our documentation&lt;/a&gt;.&lt;/strong&gt; In particular, check out the &lt;em&gt;Guides&lt;/em&gt;, &lt;em&gt;API Reference&lt;/em&gt;, and &lt;em&gt;Advanced Tutorials&lt;/em&gt; sections in the sidebar.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-deploy&#34;&gt;💫 Deploy&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default&#34;&gt;&lt;img src=&#34;https://www.netlify.com/img/deploy/button.svg&#34; alt=&#34;Deploy to Netlify&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;!-- AUTO-GENERATED-CONTENT:END --&gt;
+</description>
+</item>
     
   </channel>
 </rss>

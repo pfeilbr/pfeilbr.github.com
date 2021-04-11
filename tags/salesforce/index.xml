@@ -1,56 +1,214 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>salesforce on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/salesforce/</link>
-    <description>Recent content in salesforce on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 27 Aug 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/salesforce/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>salesforce on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/salesforce/</link>
+        <description>Recent content in salesforce on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 27 Aug 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/salesforce/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AWS AppFlow Salesforce EventBridge</title>
-      <link>https://brianpfeil.com/post/aws-appflow-salesforce-eventbridge/</link>
-      <pubDate>Thu, 27 Aug 2020 00:00:00 -0400</pubDate>
+<title>AWS AppFlow Salesforce EventBridge</title>
+<link>https://brianpfeil.com/post/aws-appflow-salesforce-eventbridge/</link>
+<pubDate>Thu, 27 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-appflow-salesforce-eventbridge/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-appflow-salesforce-eventbridge-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-appflow-salesforce-eventbridge-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/appflow/&#34;&gt;AWS AppFlow&lt;/a&gt; example of salesforce event -&amp;gt; AppFlow -&amp;gt; EventBridge -&amp;gt; CloudWatch Logs.  Followed steps in &lt;a href=&#34;https://aws.amazon.com/blogs/compute/building-salesforce-integrations-with-amazon-eventbridge/&#34;&gt;Building Salesforce integrations with Amazon EventBridge and Amazon AppFlow | Amazon Web Services&lt;/a&gt; post.&lt;/p&gt;
+&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;observed low latency - AppFlow flow runs within 2 seconds of event being generated in salesforce.&lt;/li&gt;
+&lt;li&gt;only fields specified in mapping are passed to EventBridge as properties of &lt;code&gt;detail&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/appflow/latest/userguide/private-flows.html&#34;&gt;Private Amazon AppFlow flows&lt;/a&gt; is available for salesforce that uses AWS PrivateLink to route data over AWS infrastructure without exposing it to the public internet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;screenshot-tour&#34;&gt;Screenshot Tour&lt;/h2&gt;
+&lt;p&gt;Turn on Change Data Capture for the relevant objects in salesforce
+&lt;img src=&#34;https://www.evernote.com/l/AAFmryV0UxVKY5eprjjdQ-_4IgJG7JvB5AAB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Error when CDC is not turned on in salesforce for the object
+&lt;img src=&#34;https://www.evernote.com/l/AAEDjQW7qIpJ7azu59MIH05tvwqdqYOjrbsB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;AppFlow leverages already installed/available &amp;ldquo;Amazon AppFlow Embedded Login App&amp;rdquo; Connected App in salesforce&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAEyS5AOJn9F8pnZVMiV0Up7f5ydSNPApQwB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAGR_pfFpElDa4WwFTLoHEtGhpPxDKREPnoB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAEG72PQcHlNhrTqGdsmhe0DrtStP8VuCnE&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAH8LLu9mOVJar3EgvmDvSsLrEA4yFQehs8B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Run History
+&lt;img src=&#34;https://www.evernote.com/l/AAFPHkqjr_FJ1qtyysG35f8dO4wyIHz3DywB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Event in CloudWatch Logs
+&lt;img src=&#34;https://www.evernote.com/l/AAFpH1Az7IlBUavypLjw4LahE90ppWrjy0AB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;AppFlow Mapping
+&lt;img src=&#34;https://www.evernote.com/l/AAEG72PQcHlNhrTqGdsmhe0DrtStP8VuCnEB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/compute/building-salesforce-integrations-with-amazon-eventbridge/&#34;&gt;Building Salesforce integrations with Amazon EventBridge and Amazon AppFlow | Amazon Web Services&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>Cognito Federated to Salesforce and S3 Presigned URL</title>
-      <link>https://brianpfeil.com/post/cognito-federated-to-salesforce-and-s3-presigned-url/</link>
-      <pubDate>Thu, 13 Jun 2019 00:00:00 -0400</pubDate>
+<title>Cognito Federated to Salesforce and S3 Presigned URL</title>
+<link>https://brianpfeil.com/post/cognito-federated-to-salesforce-and-s3-presigned-url/</link>
+<pubDate>Thu, 13 Jun 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/cognito-federated-to-salesforce-and-s3-presigned-url/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/cognito-federated-to-salesforce-and-s3-presigned-url-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/cognito-federated-to-salesforce-and-s3-presigned-url-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;login-with-cognito-federated-to-salesforce-example&#34;&gt;Login with Cognito Federated to Salesforce Example&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;see &lt;a href=&#34;index.html&#34;&gt;&lt;code&gt;index.html&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;see &lt;code&gt;~/Dropbox/notes/static-s3-cognito-authentication.md&lt;/code&gt; on local machine also for greater detail on setup&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# local dev&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# start server.  serves static files from current directory &amp;#39;.&amp;#39;.  listens on ssl 443&lt;/span&gt;
+sudo node server.js
+open https://localhost
+
+&lt;span class=&#34;c1&#34;&gt;# on s3&lt;/span&gt;
+open https://pfeil-static-site-01.s3.amazonaws.com/index.html
+
+&lt;span class=&#34;c1&#34;&gt;# on cloudfront&lt;/span&gt;
+open https://d3tz189emgpc7c.cloudfront.net/index.html
+
+&lt;span class=&#34;c1&#34;&gt;# copy updated file to s3&lt;/span&gt;
+aws s3 cp index.html s3://pfeil-static-site-01/index.html
+&lt;span class=&#34;c1&#34;&gt;# invalidate cloudfront dist after copy&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# if any login issues&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# clear site data for https://pfeil-dev-ed.my.salesforce.com in chrome dev tools&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;pre-signed-url-example&#34;&gt;Pre-signed URL Example&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;see &lt;a href=&#34;index.js&#34;&gt;&lt;code&gt;index.js&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;node index.js&lt;/code&gt; outputs pre-signed url. (uses ~/.aws/credentials and pre-signed URL generated under that users context/permission)&lt;/li&gt;
+&lt;li&gt;PUT / upload file to S3 via &lt;code&gt;curl -X PUT -T hello.txt -L &#39;&amp;lt;pre-signed url&amp;gt;&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>Metaforce</title>
-      <link>https://brianpfeil.com/post/metaforce/</link>
-      <pubDate>Wed, 09 Sep 2015 00:00:00 -0400</pubDate>
+<title>Metaforce</title>
+<link>https://brianpfeil.com/post/metaforce/</link>
+<pubDate>Wed, 09 Sep 2015 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/metaforce/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/metaforce-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/metaforce-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Playground to learn and experiment with the &lt;a href=&#34;https://github.com/ejholmes/metaforce&#34;&gt;metaforce&lt;/a&gt; gem for interacting with the salesforce metadata api.&lt;/p&gt;
+</description>
+</item>
     
     <item>
-      <title>JSForce</title>
-      <link>https://brianpfeil.com/post/jsforce/</link>
-      <pubDate>Thu, 12 Jun 2014 00:00:00 -0400</pubDate>
+<title>JSForce</title>
+<link>https://brianpfeil.com/post/jsforce/</link>
+<pubDate>Thu, 12 Jun 2014 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/jsforce/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/jsforce-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/jsforce-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Area to learn and play with &lt;a href=&#34;http://jsforce.github.io/&#34;&gt;JSForce&lt;/a&gt;.  &lt;a href=&#34;&#34;&gt;index.js&lt;/a&gt; contains the code.&lt;/p&gt;
+&lt;h3 id=&#34;migratorjs&#34;&gt;&lt;code&gt;migrator.js&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;migrates salesforce metadata from a source org to a target org&lt;/p&gt;
+&lt;p&gt;To Run&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ ./node_modules/.bin/babel-node migrator.js
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;sharing-rules-operationsjs&#34;&gt;&lt;code&gt;sharing-rules-operations.js&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;created country code firewall criteria based sharing rules&lt;/p&gt;
+&lt;p&gt;To Run&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ ./node_modules/.bin/babel-node sharing-rules-operations.js
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;account-fetcherjs&#34;&gt;&lt;code&gt;account-fetcher.js&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Developing&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ &lt;span class=&#34;nv&#34;&gt;DEBUG&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;account* nodemon -e js account-fetcher.js
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
     <item>
-      <title>Salesforce and jQuery Mobile</title>
-      <link>https://brianpfeil.com/post/salesforce-and-jquery-mobile/</link>
-      <pubDate>Sun, 11 Sep 2011 00:58:00 +0000</pubDate>
+<title>Salesforce and jQuery Mobile</title>
+<link>https://brianpfeil.com/post/salesforce-and-jquery-mobile/</link>
+<pubDate>Sun, 11 Sep 2011 00:58:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/salesforce-and-jquery-mobile/</guid>
-      <description>create custom mobile UIs on top of salesforce data with jQuery Mobile</description>
-    </item>
+<description>&lt;p&gt;I wanted to do a project to learn &lt;a href=&#34;http://salesforce.com&#34;&gt;salesforce&lt;/a&gt;, but not a trivial hello
+world style example. I had recently played around with &lt;a href=&#34;http://jquerymobile.com/&#34;&gt;jQuery Mobile&lt;/a&gt;, but
+didn&amp;rsquo;t do anything significant with it. I decided to put together a basic
+mobile CRM app.  Here&amp;rsquo;s what the finished app looks like.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.skitch.com/20110910-enbnxextqtsfyc431skq2m9ws6.png&#34; alt=&#34;contact list screen shot&#34;&gt;
+&lt;img src=&#34;https://img.skitch.com/20110910-di6tn8haxrr7abtks1927cj11r.png&#34; alt=&#34;view contact screen shot&#34;&gt;
+&lt;img src=&#34;https://img.skitch.com/20110910-mq92tg5csrc43equ7rskyyjrp1.png&#34; alt=&#34;edit contact screen shot&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://salesforce.com&#34;&gt;Salesforce&lt;/a&gt; provides a full-featured environment for free to anyone. It takes
+no time to &lt;a href=&#34;http://www.developerforce.com/events/regular/registration.php&#34;&gt;sign-up&lt;/a&gt; for this &lt;a href=&#34;http://wiki.developerforce.com/index.php/Developer_Edition&#34;&gt;Developer Edition&lt;/a&gt;, and you get access to
+everything. If you&amp;rsquo;re just getting started with &lt;a href=&#34;http://salesforce.com&#34;&gt;salesforce&lt;/a&gt;, I &lt;em&gt;can&amp;rsquo;t
+recommend enough&lt;/em&gt; the online tutorials, workbooks, and documentation at
+&lt;a href=&#34;http://developer.force.com&#34;&gt;developer.force.com&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;accessing-the-app-data&#34;&gt;Accessing the App Data&lt;/h2&gt;
+&lt;p&gt;Our app will contain Contact and Account data.  We&amp;rsquo;ll use Apex Web Service methods to provide the data.  We can get all our Contacts with the following:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;webService&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Contact&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getContacts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;n&#34;&gt;ApexPages&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;StandardSetController&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;setCon&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ApexPages&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;StandardSetController&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;
+		&lt;span class=&#34;n&#34;&gt;Database&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getQueryLocator&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;
+        	&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lastname&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;firstname&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;department&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;phone&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;email&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Contact&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]));&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Contact&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setCon&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getRecords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Next we need to call the web service method from the client code.  We&amp;rsquo;ll use the force.com ajax apex javascript libraries to access our data.  Add these script references to your page &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; section.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/soap/ajax/15.0/connection.js&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/soap/ajax/15.0/apex.js&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To call the web service method from JavaScript we use this simple one-liner.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;contacts&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;sforce&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;apex&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;execute&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;MyWebService&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;getContacts&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;building-the-ui&#34;&gt;Building the UI&lt;/h2&gt;
+&lt;p&gt;Our mobile app UI will be 100% &lt;a href=&#34;http://jquerymobile.com/&#34;&gt;jQuery Mobile&lt;/a&gt;, and we can use &lt;a href=&#34;http://force.com&#34;&gt;force.com&lt;/a&gt;
+&lt;a href=&#34;http://developer.force.com/sites&#34;&gt;Sites&lt;/a&gt; to provide pure web content. &lt;a href=&#34;http://developer.force.com/sites&#34;&gt;Sites&lt;/a&gt; by default provides configurable
+headers, footers, navigation, etc. that you can apply themes to. We don&amp;rsquo;t want
+any of this in our app since we&amp;rsquo;ll be controlling everything in the UI. To
+turn off the default stylesheets, header, and navigation elements your
+&lt;code&gt;apex:page&lt;/code&gt; element should set the corresponding attributes, and should look
+similar to the following:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;apex:page&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;showHeader&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;false&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;sidebar&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;false&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;standardStylesheets&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;false&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;contentType&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;text/html&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now we&amp;rsquo;ll add in the jQuery Mobile references.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;rel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;stylesheet&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.css&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://code.jquery.com/jquery-1.6.2.min.js&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The beauty of jQuery Mobile is that all you have to do is markup your html
+with the correct attributes to get a mobile UI. You don&amp;rsquo;t need to write any
+JavaScript. Usually you serve up the jQuery &lt;em&gt;Mobilized&lt;/em&gt; html from the server.
+We want our app to run and function when the device is offline, so we&amp;rsquo;re going
+to generate the html at run-time on the client using JavaScript to remove the
+dependency on the server.&lt;/p&gt;
+&lt;p&gt;To minimize the amount of html we embed in our JavaScript, we&amp;rsquo;re going to use
+&lt;a href=&#34;http://api.jquery.com/jQuery.template/&#34;&gt;jQuery Templates&lt;/a&gt;. &lt;a href=&#34;http://api.jquery.com/jQuery.template/&#34;&gt;jQuery Templates&lt;/a&gt; allows us to write our html for the UI
+as we usually would, and to leave placeholders for the pieces we want to
+replace. Here&amp;rsquo;s an example of a template used to generate a list page.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;object-list-page-template&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;text/x-jquery-tmpl&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;role&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;page&amp;#34;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;${type}-list-page&amp;#34;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;${type}-list-page&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;role&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;header&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+		&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;pageTitle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/h1&amp;gt;&lt;/span&gt;
+		&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;${type}-add-link&amp;#39;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;obj&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;${type}&amp;#39;&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;ui-btn-right object-add-link&amp;#39;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;icon&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;add&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/a&amp;gt;&lt;/span&gt;
+	&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/div&amp;gt;&lt;/span&gt;
+
+	&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;role&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;content&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+		&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ul&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;role&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;listview&amp;#34;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;${type}-list&amp;#34;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;filter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+		&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/ul&amp;gt;&lt;/span&gt;
+	&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/div&amp;gt;&lt;/span&gt;
+
+	&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;role&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;footer&amp;#34;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;footer-nav-bar&amp;#39;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;fixed&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+		&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;role&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;navbar&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+			&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+				&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;#contact-list-page&amp;#34;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;transition&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;fade&amp;#34;&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;${(type == &amp;#39;contact&amp;#39;) ? &amp;#39;ui-btn-active&amp;#39; : &amp;#39;&amp;#39;} ui-state-persist&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Contacts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+				&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;#account-list-page&amp;#34;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;transition&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;fade&amp;#34;&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;${(type == &amp;#39;account&amp;#39;) ? &amp;#39;ui-btn-active&amp;#39; : &amp;#39;&amp;#39;} ui-state-persist&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Accounts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+			&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/ul&amp;gt;&lt;/span&gt;
+		&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/div&amp;gt;&lt;/span&gt;
+	&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/div&amp;gt;&lt;/span&gt;
+
+&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The things wrapped in &lt;code&gt;${}&lt;/code&gt; are replaced with the values.  The way we use the template is by calling the &lt;code&gt;$.tmpl&lt;/code&gt; method.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;$page&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;#object-list-page-template&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;tmpl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;jQuery Templates are very powerful, and really help with the maintainability of your code.  Check out the &lt;a href=&#34;http://api.jquery.com/jQuery.template/&#34;&gt;documentation&lt;/a&gt; to learn more.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;This provides an overview of the core pieces of the solution and the technologies used.  If you like to dive in deeper, the complete source is available on &lt;strong&gt;&lt;a href=&#34;https://github.com/pfeilbr/salesforce-jquery-mobile&#34;&gt;github&lt;/a&gt;&lt;/strong&gt;, and the working app is available &lt;strong&gt;&lt;a href=&#34;http://j.mp/msales-dev&#34;&gt;here&lt;/a&gt;&lt;/strong&gt; (must be viewed in a &lt;a href=&#34;http://www.webkit.org/&#34;&gt;WebKit&lt;/a&gt; based browser).&lt;/p&gt;
+</description>
+</item>
     
   </channel>
 </rss>

@@ -1,146 +1,580 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Python on Brian Pfeil</title>
-    <link>https://brianpfeil.com/categories/Python/</link>
-    <description>Recent content in Python on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 19 Feb 2021 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/categories/Python/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Python on Brian Pfeil</title>
+        <link>https://brianpfeil.com/categories/Python/</link>
+        <description>Recent content in Python on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 19 Feb 2021 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/categories/Python/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AWS Glue Pyspark Fetch Databases and Tables Metadata</title>
-      <link>https://brianpfeil.com/post/aws-glue-pyspark-fetch-databases-and-tables-metadata/</link>
-      <pubDate>Fri, 19 Feb 2021 00:00:00 -0500</pubDate>
+<title>AWS Glue Pyspark Fetch Databases and Tables Metadata</title>
+<link>https://brianpfeil.com/post/aws-glue-pyspark-fetch-databases-and-tables-metadata/</link>
+<pubDate>Fri, 19 Feb 2021 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-glue-pyspark-fetch-databases-and-tables-metadata/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-glue-pyspark-fetch-databases-and-tables-metadata-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-glue-pyspark-fetch-databases-and-tables-metadata-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;example AWS Glue pyspark job script that fetches all the catalog databases and tables metadata.&lt;/p&gt;
+&lt;p&gt;see &lt;a href=&#34;main.py&#34;&gt;&lt;code&gt;main.py&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;first method uses &lt;a href=&#34;https://spark.apache.org/sql/&#34;&gt;spark sql&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;second method uses &lt;a href=&#34;https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/glue.html&#34;&gt;python boto3 Glue client&lt;/a&gt; to interact with &lt;a href=&#34;https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api.html&#34;&gt;Glue API&lt;/a&gt; directly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
+&lt;p&gt;ensure &lt;code&gt;--enable-glue-datacatalog&lt;/code&gt; is enabled for glue job to allow spark sql to access metadata catalog&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAG3O9zQGjhBQYiqT7_owkUm9K-UXd0bMCEB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Glue Console Script View&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAG2b5Bdis5KFbt6ijxtySgIG7e2P8jPE0UB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+</item>
     
     <item>
-      <title>SAM Lambda Layers</title>
-      <link>https://brianpfeil.com/post/sam-lambda-layers/</link>
-      <pubDate>Fri, 08 Jan 2021 00:00:00 -0500</pubDate>
+<title>SAM Lambda Layers</title>
+<link>https://brianpfeil.com/post/sam-lambda-layers/</link>
+<pubDate>Fri, 08 Jan 2021 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/sam-lambda-layers/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/sam-lambda-layers-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/sam-lambda-layers-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://aws.amazon.com/blogs/compute/working-with-aws-lambda-and-lambda-layers-in-aws-sam/&#34;&gt;SAM lambda layers&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;running-example&#34;&gt;Running Example&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; lambda-layer-python
+
+sam build
+
+&lt;span class=&#34;c1&#34;&gt;# run lambda with layer locally&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# `--force-image-build` to clear out layer cache&lt;/span&gt;
+sam &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; invoke --force-image-build
+
+&lt;span class=&#34;c1&#34;&gt;# start local api endpoint&lt;/span&gt;
+sam &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; start-api --force-image-build
+curl http://127.0.0.1:3000/
+
+&lt;span class=&#34;c1&#34;&gt;# deploy&lt;/span&gt;
+sam deploy --guided
+
+&lt;span class=&#34;c1&#34;&gt;# run lambda behind api gateway endpoint&lt;/span&gt;
+curl https://hl6u5bubr4.execute-api.us-east-1.amazonaws.com/Prod/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/compute/working-with-aws-lambda-and-lambda-layers-in-aws-sam/&#34;&gt;Working with AWS Lambda and Lambda Layers in AWS SAM&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>Click CLI</title>
-      <link>https://brianpfeil.com/post/click-cli/</link>
-      <pubDate>Thu, 07 Jan 2021 00:00:00 -0500</pubDate>
+<title>Click CLI</title>
+<link>https://brianpfeil.com/post/click-cli/</link>
+<pubDate>Thu, 07 Jan 2021 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/click-cli/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/click-cli-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/click-cli-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://click.palletsprojects.com/&#34;&gt;Click&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;a python package for creating beautiful command line interfaces in a composable way with as little code as necessary&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;see &lt;a href=&#34;main.py&#34;&gt;&lt;code&gt;main.py&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;pipenv install
+pipenv shell
+python main.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://click.palletsprojects.com/&#34;&gt;Click&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>AWS Data Wrangler</title>
-      <link>https://brianpfeil.com/post/aws-data-wrangler/</link>
-      <pubDate>Wed, 06 Jan 2021 00:00:00 -0500</pubDate>
+<title>AWS Data Wrangler</title>
+<link>https://brianpfeil.com/post/aws-data-wrangler/</link>
+<pubDate>Wed, 06 Jan 2021 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-data-wrangler/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-data-wrangler-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-data-wrangler-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://aws-data-wrangler.readthedocs.io&#34;&gt;AWS Data Wrangler&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;python initiative that extends the power of Pandas library to AWS connecting DataFrames and AWS data related services (Amazon Redshift, AWS Glue, Amazon Athena, Amazon Timestream, Amazon EMR, Amazon QuickSight, etc).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;running-examples&#34;&gt;Running Examples&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install venv and deps&lt;/span&gt;
+pipenv install
+
+&lt;span class=&#34;c1&#34;&gt;# activate venv&lt;/span&gt;
+pipenv shell
+
+&lt;span class=&#34;c1&#34;&gt;# run examples&lt;/span&gt;
+python main.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;See &lt;a href=&#34;https://github.com/awslabs/aws-data-wrangler/tree/master/tutorials&#34;&gt;https://github.com/awslabs/aws-data-wrangler/tree/master/tutorials&lt;/a&gt; for example usages.&lt;/p&gt;
+&lt;h2 id=&#34;lambda-layer&#34;&gt;Lambda Layer&lt;/h2&gt;
+&lt;p&gt;Can be used via a &lt;a href=&#34;https://aws-data-wrangler.readthedocs.io/en/stable/install.html#aws-lambda-layer&#34;&gt;lambda layer&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws-data-wrangler.readthedocs.io/&#34;&gt;https://aws-data-wrangler.readthedocs.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/awslabs/aws-data-wrangler&#34;&gt;awslabs/aws-data-wrangler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws-data-wrangler.readthedocs.io/en/stable/api.html&#34;&gt;AWS Data Wrangler| API Reference&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/awslabs/aws-data-wrangler/tree/master/tutorials&#34;&gt;https://github.com/awslabs/aws-data-wrangler/tree/master/tutorials&lt;/a&gt; - notebooks with examples&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>Python</title>
-      <link>https://brianpfeil.com/post/python/</link>
-      <pubDate>Fri, 20 Nov 2020 00:00:00 -0500</pubDate>
+<title>Python</title>
+<link>https://brianpfeil.com/post/python/</link>
+<pubDate>Fri, 20 Nov 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/python/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/python-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/python-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn and experiment with python, it&amp;rsquo;s libraries, and packages&lt;/p&gt;
+&lt;p&gt;add &lt;code&gt;test_*.py&lt;/code&gt; file to &lt;a href=&#34;tests/unit&#34;&gt;tests/unit&lt;/a&gt; directory with code to test, learn, experiment with language, library, package, etc.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# clone and cd into this repo&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# activate venv&lt;/span&gt;
+pipenv shell
+
+&lt;span class=&#34;c1&#34;&gt;# install deps (e.g. nodemon)&lt;/span&gt;
+npm install
+
+&lt;span class=&#34;c1&#34;&gt;# run tests&lt;/span&gt;
+npm run &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# run tests and watch for changes to re-run&lt;/span&gt;
+npm run test:watch
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
     <item>
-      <title>Serverless Flask</title>
-      <link>https://brianpfeil.com/post/serverless-flask/</link>
-      <pubDate>Fri, 13 Nov 2020 00:00:00 -0500</pubDate>
+<title>Serverless Flask</title>
+<link>https://brianpfeil.com/post/serverless-flask/</link>
+<pubDate>Fri, 13 Nov 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-flask/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/serverless-flask-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/serverless-flask-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Example of running python &lt;a href=&#34;https://flask.palletsprojects.com/&#34;&gt;Flask&lt;/a&gt; app on Lambda + API Gateway via &lt;a href=&#34;https://www.serverless.com/&#34;&gt;serverless framework&lt;/a&gt;.  Based on &lt;a href=&#34;https://www.serverless.com/blog/flask-python-rest-api-serverless-lambda-dynamodb&#34;&gt;Build a Python REST API with Serverless, Lambda, and DynamoDB&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;architecture&#34;&gt;Architecture&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/guides/serverless-flask/serverless-flask-architecture.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.serverless.com/&#34;&gt;serverless framework&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.docker.com/products/docker-desktop&#34;&gt;Docker Desktop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Python 3.8&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/pypa/pipenv&#34;&gt;pipenv&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ensure python venv loaded in shell&lt;/span&gt;
+pipenv shell
+
+&lt;span class=&#34;c1&#34;&gt;# install npm deps for serverless&lt;/span&gt;
+npm install
+
+&lt;span class=&#34;c1&#34;&gt;# run flash app locally.  server reloads on file change.  still need to refresh page in browser&lt;/span&gt;
+npm run dev
+
+&lt;span class=&#34;c1&#34;&gt;# deploy. (docker must be running to build python packages for linux target / lambda)&lt;/span&gt;
+npm run deploy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.serverless.com/flask&#34;&gt;The Official Guide to Serverless Flask&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.serverless.com/blog/flask-python-rest-api-serverless-lambda-dynamodb&#34;&gt;Build a Python REST API with Serverless, Lambda, and DynamoDB&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>AWS Kendra</title>
-      <link>https://brianpfeil.com/post/aws-kendra/</link>
-      <pubDate>Tue, 27 Oct 2020 00:00:00 -0400</pubDate>
+<title>AWS Kendra</title>
+<link>https://brianpfeil.com/post/aws-kendra/</link>
+<pubDate>Tue, 27 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-kendra/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-kendra-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-kendra-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://aws.amazon.com/kendra/&#34;&gt;Amazon Kendra&lt;/a&gt;, intelligent search service powered by machine learning&lt;/p&gt;
+&lt;h2 id=&#34;concepts&#34;&gt;Concepts&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Index - two types. document (unstructured) and &lt;a href=&#34;https://docs.aws.amazon.com/kendra/latest/dg/in-creating-faq.html&#34;&gt;FAQ (structured)&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can add documents directly to an index using the BatchPutDocument operation&lt;/li&gt;
+&lt;li&gt;You can add questions and answers (FAQs) directly to your index using the console or the CreateFaq operation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Data Source - s3, salesforce documents, sharepoint, &lt;em&gt;custom&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Documents - html, ppt, doc, pdf, txt&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;custom fields - can define custom fields of types: Date, Number, String, String List&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Queries - natural language (NLP), keyword queries, Factoid questions — Simple
+who, what, when, or where questions.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Facets are scoped views of a set of search results&lt;/li&gt;
+&lt;li&gt;By default, Query returns all search results. To filter responses, you can perform logical operations on the document attributes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tags - can assign tags to indexes, data sources, and FAQs&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;default encryption at rest with customer of AWS KMS keys&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;general-steps&#34;&gt;General Steps&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;create index&lt;/li&gt;
+&lt;li&gt;add data sources for index&lt;/li&gt;
+&lt;li&gt;synchronize the data source&lt;/li&gt;
+&lt;li&gt;query/search the index&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;editions&#34;&gt;Editions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Developer&lt;/li&gt;
+&lt;li&gt;Enterprise&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You specify &lt;code&gt;Edition: DEVELOPER_EDITION | ENTERPRISE_EDITION&lt;/code&gt; when you create an index&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;creating-example-index&#34;&gt;Creating Example Index&lt;/h2&gt;
+&lt;p&gt;see &lt;a href=&#34;main.py&#34;&gt;&lt;code&gt;main.py&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;sam deploy --guided
+&lt;span class=&#34;c1&#34;&gt;# copy outputs into `.env`&lt;/span&gt;
+python main.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/kendra/latest/dg/what-is-kendra.html&#34;&gt;Amazon Kendra Docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/kendra/latest/dg/gs-python.html&#34;&gt;Getting started (AWS SDK for Python (Boto3)) - Amazon Kendra&lt;/a&gt; - shows create index, create data source for index, sync data source, all while waiting for each step to complete in between&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/kendra/latest/dg/deploying.html&#34;&gt;Deploying Amazon Kendra&lt;/a&gt; - pre-built react frontend for kendra.  provides &lt;code&gt;&amp;lt;search /&amp;gt;&lt;/code&gt; react component
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://kendrasamples.s3.amazonaws.com/kendrasamples.zip&#34;&gt;https://kendrasamples.s3.amazonaws.com/kendrasamples.zip&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/aws-samples/enterprise-search-with-amazon-kendra-workshop&#34;&gt;aws-samples/enterprise-search-with-amazon-kendra-workshop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/kendra/latest/dg/data-source-custom.html&#34;&gt;Kendra | Using a custom data source&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>Diagrams As Code</title>
-      <link>https://brianpfeil.com/post/diagrams-as-code/</link>
-      <pubDate>Thu, 01 Oct 2020 00:00:00 -0400</pubDate>
+<title>Diagrams As Code</title>
+<link>https://brianpfeil.com/post/diagrams-as-code/</link>
+<pubDate>Thu, 01 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/diagrams-as-code/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/diagrams-as-code-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/diagrams-as-code-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://diagrams.mingrammer.com/&#34;&gt;Diagrams&lt;/a&gt;(Diagram as Code), lets you draw the cloud system architecture in Python code&lt;/p&gt;
+&lt;h2 id=&#34;diagram-authoring-workflow&#34;&gt;Diagram Authoring Workflow&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;pipenv install &lt;span class=&#34;c1&#34;&gt;# install deps&lt;/span&gt;
+pipenv shell &lt;span class=&#34;c1&#34;&gt;# correct python env&lt;/span&gt;
+make dev &lt;span class=&#34;c1&#34;&gt;# re-runs on file changes / live reload&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# split vscode window.  put .py on left and *.png in right&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# edit and save .py&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;screenshots&#34;&gt;Screenshots&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAGCWiB_BW9E2IIES3CRl0ICn4NJ_VhsEIoB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+</item>
     
     <item>
-      <title>Flask</title>
-      <link>https://brianpfeil.com/post/flask/</link>
-      <pubDate>Sat, 15 Feb 2020 00:00:00 -0500</pubDate>
+<title>Flask</title>
+<link>https://brianpfeil.com/post/flask/</link>
+<pubDate>Sat, 15 Feb 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/flask/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/flask-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/flask-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;flask-playground&#34;&gt;flask-playground&lt;/h1&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://www.palletsprojects.com/p/flask/&#34;&gt;flask&lt;/a&gt;, the python web application framework&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;server.py&#34;&gt;&lt;code&gt;server.py&lt;/code&gt;&lt;/a&gt; - flask server&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;client.py&#34;&gt;&lt;code&gt;client.py&lt;/code&gt;&lt;/a&gt; - http client.  uses &lt;code&gt;requests&lt;/code&gt; to POST the &lt;a href=&#34;image.jpeg&#34;&gt;&lt;code&gt;image.jpeg&lt;/code&gt;&lt;/a&gt; image file&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;load-test.sh&#34;&gt;&lt;code&gt;load-test.sh&lt;/code&gt;&lt;/a&gt; - load test via parallel requests&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://pipenv.kennethreitz.org/&#34;&gt;pipenv&lt;/a&gt; for python environment/packages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install all dependencies&lt;/span&gt;
+pipenv install --dev
+
+&lt;span class=&#34;c1&#34;&gt;# load python enviroment&lt;/span&gt;
+pipenv shell
+
+&lt;span class=&#34;c1&#34;&gt;# run server in debug (livereload - reload on file changes) mode&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;FLASK_DEBUG&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;FLASK_RUN_PORT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5000&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;FLASK_APP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;server.py flask run
+
+&lt;span class=&#34;c1&#34;&gt;# run client&lt;/span&gt;
+python client.py
+
+&lt;span class=&#34;c1&#34;&gt;# load test&lt;/span&gt;
+chmod +x load-test.sh
+./load-test.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
     <item>
-      <title>Python Async Await</title>
-      <link>https://brianpfeil.com/post/python-async-await/</link>
-      <pubDate>Wed, 05 Feb 2020 00:00:00 -0500</pubDate>
+<title>Python Async Await</title>
+<link>https://brianpfeil.com/post/python-async-await/</link>
+<pubDate>Wed, 05 Feb 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/python-async-await/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/python-async-await-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/python-async-await-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://docs.python.org/3/library/asyncio-task.html&#34;&gt;python async await&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://pipenv.kennethreitz.org/&#34;&gt;Pipenv&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;git clone&lt;/li&gt;
+&lt;li&gt;pipenv install&lt;/li&gt;
+&lt;li&gt;pipenv run python main.py&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+</item>
     
     <item>
-      <title>Pipenv</title>
-      <link>https://brianpfeil.com/post/pipenv/</link>
-      <pubDate>Wed, 07 Aug 2019 00:00:00 -0400</pubDate>
+<title>Pipenv</title>
+<link>https://brianpfeil.com/post/pipenv/</link>
+<pubDate>Wed, 07 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/pipenv/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/pipenv-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/pipenv-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://github.com/pypa/pipenv&#34;&gt;pipenv&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Pipenv is a tool that aims to bring the best of all packaging worlds (bundler, composer, npm, cargo, yarn, etc.) to the Python world. Windows is a first-class citizen, in our world.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It automatically creates and manages a virtualenv for your projects, as well as adds/removes packages from your Pipfile as you install/uninstall packages. It also generates the ever-important Pipfile.lock, which is used to produce deterministic builds.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;based on &lt;a href=&#34;https://docs.python-guide.org/dev/virtualenvs/&#34;&gt;https://docs.python-guide.org/dev/virtualenvs/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install&lt;/span&gt;
+pip3 install pipenv
+
+&lt;span class=&#34;c1&#34;&gt;# create directory&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/tmp
+mkdir pipenv-playground
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; pipenv-playground
+
+&lt;span class=&#34;c1&#34;&gt;# install dependency&lt;/span&gt;
+pipenv install requests
+
+&lt;span class=&#34;c1&#34;&gt;# write some code that uses the dependency&lt;/span&gt;
+touch main.py
+
+&lt;span class=&#34;c1&#34;&gt;# run it using the created virtualenv&lt;/span&gt;
+pipenv run python main.py
+
+&lt;span class=&#34;c1&#34;&gt;# can also specify `python3` explicitly&lt;/span&gt;
+pipenv run python3 main.py
+
+&lt;span class=&#34;c1&#34;&gt;# try with jupyter notebook&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ..
+mkdir jupyter-notebook-playground
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; jupyter-notebook-playground
+pipenv install jupyter
+pipenv run jupyter notebook
+
+&lt;span class=&#34;c1&#34;&gt;# try with jupyterlab&lt;/span&gt;
+pipenv install jupyterlab
+pipenv run jupyter lab
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
     <item>
-      <title>Python Packaging</title>
-      <link>https://brianpfeil.com/post/python-packaging/</link>
-      <pubDate>Wed, 07 Aug 2019 00:00:00 -0400</pubDate>
+<title>Python Packaging</title>
+<link>https://brianpfeil.com/post/python-packaging/</link>
+<pubDate>Wed, 07 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/python-packaging/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/python-packaging-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/python-packaging-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn python packaging via &lt;a href=&#34;https://packaging.python.org/tutorials/packaging-projects/&#34;&gt;Packaging Python Projects&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;view example package at &lt;a href=&#34;https://test.pypi.org/project/example-pkg-pfeilbr/&#34;&gt;https://test.pypi.org/project/example-pkg-pfeilbr/&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;
+python3 -m venv .venv
+&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; .venv/bin/activate
+mkdir example-pkg-pfeilbr
+touch example-pkg-pfeilbr/__init__.py
+python3 -m pip install --user --upgrade setuptools wheel
+python3 setup.py sdist bdist_wheel
+pip install --upgrade pip
+pip install wheel
+pip install twine
+python3 -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+
+&lt;span class=&#34;c1&#34;&gt;# testing&lt;/span&gt;
+mkdir tmp
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; tmp
+python3 -m venv .venv
+&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; .venv/bin/activate
+pip list
+python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps example-pkg-pfeilbr
+
+&lt;span class=&#34;c1&#34;&gt;# to install specific version.  did this because it was using 0.0.1 from a cache&lt;/span&gt;
+python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps &lt;span class=&#34;s1&#34;&gt;&amp;#39;example-pkg-pfeilbr==0.0.2&amp;#39;&lt;/span&gt;
+
+pip list
+
+&lt;span class=&#34;c1&#34;&gt;# test using package&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -e &lt;span class=&#34;s2&#34;&gt;&amp;#34;import example_pkg_pfeilbr\nprint(example_pkg_pfeilbr.name)&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; python
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAFV5Z92tLtH4bxLDZj52Ok7WpUvaabNZ4kB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAGOtALBRBRHtZgMsWnV1JArEJRyT9SjZQ4B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;example-package&#34;&gt;Example Package&lt;/h1&gt;
+&lt;p&gt;This is a simple example package. You can use
+&lt;a href=&#34;https://guides.github.com/features/mastering-markdown/&#34;&gt;Github-flavored Markdown&lt;/a&gt;
+to write your content.&lt;/p&gt;
+</description>
+</item>
     
     <item>
-      <title>Serverless Python</title>
-      <link>https://brianpfeil.com/post/serverless-python/</link>
-      <pubDate>Fri, 10 Nov 2017 00:00:00 -0500</pubDate>
+<title>Serverless Python</title>
+<link>https://brianpfeil.com/post/serverless-python/</link>
+<pubDate>Fri, 10 Nov 2017 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-python/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/serverless-python-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/serverless-python-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;experiment with the &lt;a href=&#34;https://serverless.com/framework/&#34;&gt;serverless framework&lt;/a&gt; using python&lt;/p&gt;
+&lt;p&gt;based on &lt;a href=&#34;https://serverless.com/blog/serverless-python-packaging/&#34;&gt;https://serverless.com/blog/serverless-python-packaging/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;session&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install `serverless framework` if not already installed&lt;/span&gt;
+npm install serverless -g
+
+&lt;span class=&#34;c1&#34;&gt;# create serverless python project&lt;/span&gt;
+serverless create --template aws-python3  --name numpy-test --path numpy-test
+
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; numpy-test
+
+&lt;span class=&#34;c1&#34;&gt;# create isolated virtualenv&lt;/span&gt;
+virtualenv venv --python&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;python3
+touch handler.py
+code .
+&lt;span class=&#34;c1&#34;&gt;# add code for `handler.py`&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# activate virtualenv&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; venv/bin/activate
+
+&lt;span class=&#34;c1&#34;&gt;# run to test&lt;/span&gt;
+python handler.py
+
+pip install numpy
+
+&lt;span class=&#34;c1&#34;&gt;# save dependencies&lt;/span&gt;
+pip freeze &amp;gt; requirements.txt
+cat requirements.txt
+
+&lt;span class=&#34;c1&#34;&gt;# install dependencies (don&amp;#39;t need to execute if starting from scratch)&lt;/span&gt;
+pip install -r requirements.txt
+
+python handler.py
+npm init --force
+
+&lt;span class=&#34;c1&#34;&gt;# add serverless `serverless-python-requirements` plugin&lt;/span&gt;
+npm install --save serverless-python-requirements
+
+&lt;span class=&#34;c1&#34;&gt;# deploy&lt;/span&gt;
+sls deploy
+
+&lt;span class=&#34;c1&#34;&gt;# invoke lambda and output log&lt;/span&gt;
+sls invoke -f numpy --log
+
+&lt;span class=&#34;c1&#34;&gt;# cleanup&lt;/span&gt;
+sls remove
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
     <item>
-      <title>Boto</title>
-      <link>https://brianpfeil.com/post/boto/</link>
-      <pubDate>Mon, 30 Oct 2017 00:00:00 -0400</pubDate>
+<title>Boto</title>
+<link>https://brianpfeil.com/post/boto/</link>
+<pubDate>Mon, 30 Oct 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/boto/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/boto-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/boto-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn and experiment with &lt;a href=&#34;https://github.com/boto/boto3&#34;&gt;Boto 3 / AWS SDK for Python&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Initial setup&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;git clone &amp;lt;this repo&amp;gt;
+
+&lt;span class=&#34;c1&#34;&gt;# ensure python 3.x&lt;/span&gt;
+python3 -m venv venv
+&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; venv/bin/activate
+
+&lt;span class=&#34;c1&#34;&gt;# install dependencies&lt;/span&gt;
+pip install boto3
+pip install -U python-dotenv
+
+&lt;span class=&#34;c1&#34;&gt;# save dependencies&lt;/span&gt;
+pip freeze &amp;gt; requirements.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Running&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# setup virtualenv&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; venv/bin/activate
+pip install -r requirements.txt
+
+&lt;span class=&#34;c1&#34;&gt;# run script&lt;/span&gt;
+python s3-example.py
+
+&lt;span class=&#34;c1&#34;&gt;# exit virtualenv / deactivate&lt;/span&gt;
+deactivate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
     <item>
-      <title>Spark</title>
-      <link>https://brianpfeil.com/post/spark/</link>
-      <pubDate>Fri, 05 Jun 2015 00:00:00 -0400</pubDate>
+<title>Spark</title>
+<link>https://brianpfeil.com/post/spark/</link>
+<pubDate>Fri, 05 Jun 2015 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/spark/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/spark-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/spark-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Project to learn and experiment with the &lt;a href=&#34;https://spark.apache.org&#34;&gt;Spark&lt;/a&gt; cluster computing system.&lt;/p&gt;
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+&lt;p&gt;spark installed at &lt;code&gt;~/dev/spark-2.2.0-bin-hadoop2.7&lt;/code&gt; and is part of &lt;code&gt;PATH&lt;/code&gt; in &lt;code&gt;.bash_profile&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;export SPARK_HOME=~/dev/spark-2.2.0-bin-hadoop2.7
+export PATH=$SPARK_HOME/bin:$PATH
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;running-an-example&#34;&gt;Running an example&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ spark-submit dataframes-and-sql-examples.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;docker&#34;&gt;Docker&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ docker run -i -t -P --name spark -v /Users/pfeilbr/Dropbox/mac01/Users/brianpfeil/projects/spark-playground:/src sequenceiq/spark:latest bash
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://spark.apache.org/docs/latest/&#34;&gt;Spark Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
   </channel>
 </rss>

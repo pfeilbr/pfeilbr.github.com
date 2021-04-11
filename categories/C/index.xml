@@ -1,29 +1,81 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>C on Brian Pfeil</title>
-    <link>https://brianpfeil.com/categories/C/</link>
-    <description>Recent content in C on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 11 Nov 2019 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/categories/C/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>C on Brian Pfeil</title>
+        <link>https://brianpfeil.com/categories/C/</link>
+        <description>Recent content in C on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 11 Nov 2019 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/categories/C/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>GLib</title>
-      <link>https://brianpfeil.com/post/glib/</link>
-      <pubDate>Mon, 11 Nov 2019 00:00:00 -0500</pubDate>
+<title>GLib</title>
+<link>https://brianpfeil.com/post/glib/</link>
+<pubDate>Mon, 11 Nov 2019 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/glib/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/glib-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/glib-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://wiki.gnome.org/Projects/GLib&#34;&gt;GNOME | GLib&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;see &lt;a href=&#34;main.c&#34;&gt;&lt;code&gt;main.c&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;brew install cmake
+brew install glib
+brew install pkg-config
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;build-and-run&#34;&gt;Build and Run&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;mkdir -p build &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; build
+cmake .. &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; make
+
+&lt;span class=&#34;c1&#34;&gt;# run&lt;/span&gt;
+./glib-playground
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;output&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAGf1T2-fgtCd6uHZGme-lg4Wl3IeEdUV-UB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.ibm.com/tutorials/l-glib/&#34;&gt;Manage C data using the GLib collections&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.gnome.org/Projects/GLib&#34;&gt;GNOME | GLib&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/GNOME/glib&#34;&gt;GNOME/glib&lt;/a&gt; repo&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>Emscripten</title>
-      <link>https://brianpfeil.com/post/emscripten/</link>
-      <pubDate>Thu, 02 Jun 2016 00:00:00 -0400</pubDate>
+<title>Emscripten</title>
+<link>https://brianpfeil.com/post/emscripten/</link>
+<pubDate>Thu, 02 Jun 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/emscripten/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/emscripten-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/emscripten-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn and experiment with &lt;a href=&#34;http://kripken.github.io/emscripten-site/&#34;&gt;emscripten&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Follow the &lt;a href=&#34;http://kripken.github.io/emscripten-site/docs/getting_started/downloads.html&#34;&gt;Download and install&lt;/a&gt; instructions&lt;/li&gt;
+&lt;li&gt;Run the following&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# base install location&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# ~/dev/emsdk_portable&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# source in environment to update PATH and make tools available&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# could add to .bash_profile to make available in all shells&lt;/span&gt;
+$ &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/dev/emsdk_env.sh
+
+
+&lt;span class=&#34;c1&#34;&gt;# needed to add python2 symlink (see https://github.com/kripken/emscripten/issues/3872)&lt;/span&gt;
+$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /usr/local/bin
+$ ln -s /usr/bin/python2.7 python2
+
+&lt;span class=&#34;c1&#34;&gt;# compile c file to javascript -&amp;gt; generates output/hello_world.js&lt;/span&gt;
+$ emcc hello_world.c -o output/hello_world.js
+$ node output/hello_world.js
+
+&lt;span class=&#34;c1&#34;&gt;# compile c file and generate html to view it -&amp;gt; generates output/hello.html and output/hello.js&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# NOTE: overwrites&lt;/span&gt;
+$ emcc hello_world.c -o output/hello.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
   </channel>
 </rss>

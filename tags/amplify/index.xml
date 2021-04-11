@@ -1,29 +1,84 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>amplify on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/amplify/</link>
-    <description>Recent content in amplify on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 09 Sep 2019 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/amplify/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>amplify on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/amplify/</link>
+        <description>Recent content in amplify on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 09 Sep 2019 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/amplify/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AWS Amplify Console</title>
-      <link>https://brianpfeil.com/post/aws-amplify-console/</link>
-      <pubDate>Mon, 09 Sep 2019 00:00:00 -0400</pubDate>
+<title>AWS Amplify Console</title>
+<link>https://brianpfeil.com/post/aws-amplify-console/</link>
+<pubDate>Mon, 09 Sep 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-amplify-console/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-amplify-console-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-amplify-console-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html&#34;&gt;AWS Amplify Console&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;AWS Amplify Console is a continuous delivery and hosting service for modern web applications. The AWS Amplify Console simplifies the deployment of your application front end and backend. Connect to your code repository and your front end and backend are deployed in a single workflow, on every code commit.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Flow&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;You specify a source (github, bitbucket, gitlab, S3, zip file upload).&lt;/li&gt;
+&lt;li&gt;On code change (commit), it checks out the code to a CodeBuild project.  Runs your build, test, [backend] deploy, etc.&lt;/li&gt;
+&lt;li&gt;Deploys static web assets (.html, .js, .css, images) to S3 to be served with CloudFront&lt;/li&gt;
+&lt;li&gt;Verifies deployment by visiting root site URL with various deveice form factors (iPhone, iPad, desktop) and taking screenshots.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Build settings are defined in &lt;a href=&#34;amplify.yml&#34;&gt;&lt;code&gt;amplify.yml&lt;/code&gt;&lt;/a&gt;.  See &lt;a href=&#34;https://docs.aws.amazon.com/amplify/latest/userguide/build-settings.html&#34;&gt;Configuring Build Settings&lt;/a&gt; for YML Specification Syntax.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;set amplify service role.  codebuild env will assume this role and commands will execute in this context.
+&lt;img src=&#34;https://www.evernote.com/l/AAGKI4wgfUZB7YtWVDmqTmfg9YEzYSa4L38B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;showing assumed role in codebuild env
+&lt;img src=&#34;https://www.evernote.com/l/AAFxwKOPnvJLYb7DpmMr5vF7wLiU-xHSxUQB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Update SAM deploy bucket policy to allow amplify service (&lt;code&gt;amplify.amazonaws.com&lt;/code&gt;) to read/write to bucket.
+&lt;img src=&#34;https://www.evernote.com/l/AAHR9UMPba1ExLJ3iyLjgFUXFRWfOZhHP-0B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Custom Domain configuration&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAF1AkVJrulEaqzahfCSFkXqjg48rR0uAyMB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;App running on custom domain &lt;a href=&#34;https://amplify-master.minote.net/&#34;&gt;https://amplify-master.minote.net/&lt;/a&gt;
+&lt;img src=&#34;https://www.evernote.com/l/AAGOQ8JEMwZEyKLvrvI8DHNtjnK2FR-Y9RUB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/amplify/console/getting-started/&#34;&gt;Amplify Console | Getting Started&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/aws-amplify/amplify-console&#34;&gt;aws-amplify/amplify-console&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>AWS Amplify JS App</title>
-      <link>https://brianpfeil.com/post/aws-amplify-js-app/</link>
-      <pubDate>Tue, 13 Nov 2018 00:00:00 -0500</pubDate>
+<title>AWS Amplify JS App</title>
+<link>https://brianpfeil.com/post/aws-amplify-js-app/</link>
+<pubDate>Tue, 13 Nov 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-amplify-js-app/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-amplify-js-app-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-amplify-js-app-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;learn &lt;a href=&#34;https://aws-amplify.github.io/&#34;&gt;AWS Amplify Framework&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;getting started walkthrough @ &lt;a href=&#34;https://aws-amplify.github.io/docs/js/start?ref=amplify-js-btn&amp;amp;platform=purejs&#34;&gt;https://aws-amplify.github.io/docs/js/start?ref=amplify-js-btn&amp;amp;platform=purejs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Session&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;mkdir aws-amplify-js-app-playground
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; aws-amplify-js-app-playground/&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;n
+mkdir src
+touch package.json index.html webpack.config.js src/app.js
+touch README.md
+npm i
+npm start
+npm install --save aws-amplify
+amplify init
+amplify status
+amplify add analytics
+amplify push
+amplify add hosting
+amplify publish
+amplify status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
   </channel>
 </rss>

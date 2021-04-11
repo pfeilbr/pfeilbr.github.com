@@ -1,38 +1,122 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Java on Brian Pfeil</title>
-    <link>https://brianpfeil.com/categories/Java/</link>
-    <description>Recent content in Java on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 27 Oct 2019 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/categories/Java/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Java on Brian Pfeil</title>
+        <link>https://brianpfeil.com/categories/Java/</link>
+        <description>Recent content in Java on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 27 Oct 2019 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/categories/Java/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Serverless Lambda Java</title>
-      <link>https://brianpfeil.com/post/serverless-lambda-java/</link>
-      <pubDate>Sun, 27 Oct 2019 00:00:00 -0400</pubDate>
+<title>Serverless Lambda Java</title>
+<link>https://brianpfeil.com/post/serverless-lambda-java/</link>
+<pubDate>Sun, 27 Oct 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-lambda-java/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/serverless-lambda-java-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/serverless-lambda-java-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href=&#34;https://serverless.com/&#34;&gt;serverless framework&lt;/a&gt; + &lt;a href=&#34;https://docs.aws.amazon.com/lambda/latest/dg/java-programming-model.html&#34;&gt;lambda java&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;build-and-deploy&#34;&gt;Build and Deploy&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/projects/serverless-lambda-java-playground
+serverless create --template aws-java-maven
+mvn clean install
+sls deploy --verbose
+sls invoke --function hello --data &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;msg&amp;#34;: &amp;#34;hello&amp;#34;}&amp;#39;&lt;/span&gt; --log
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;statusCode&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;body&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;{\&amp;#34;message\&amp;#34;:\&amp;#34;Go Serverless v1.x! Your function executed successfully!\&amp;#34;,\&amp;#34;input\&amp;#34;:{}}&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;headers&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;X-Powered-By&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;AWS Lambda &amp;amp; serverless&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;isBase64Encoded&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://serverless.com/blog/how-to-create-a-rest-api-in-java-using-dynamodb-and-serverless/&#34;&gt;How to create a REST API in Java using DynamoDB and Serverless&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>Intellij Maven App</title>
-      <link>https://brianpfeil.com/post/intellij-maven-app/</link>
-      <pubDate>Wed, 14 Aug 2019 00:00:00 -0400</pubDate>
+<title>Intellij Maven App</title>
+<link>https://brianpfeil.com/post/intellij-maven-app/</link>
+<pubDate>Wed, 14 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/intellij-maven-app/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/intellij-maven-app-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/intellij-maven-app-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;example of IntelliJ Maven App&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://maven.apache.org/plugins/maven-assembly-plugin/usage.html&#34;&gt;Apache Maven Assembly Plugin / Usage&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# clean&lt;/span&gt;
+mvn clean
+
+&lt;span class=&#34;c1&#34;&gt;# package with all dependencies and make .jar executable&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# see `pom.xml` for details&lt;/span&gt;
+mvn package
+
+&lt;span class=&#34;c1&#34;&gt;# run jar&lt;/span&gt;
+java -jar ./target/app01-1.0-SNAPSHOT-jar-with-dependencies.jar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
     <item>
-      <title>Minecraft Spigot Plugin</title>
-      <link>https://brianpfeil.com/post/minecraft-spigot-plugin/</link>
-      <pubDate>Sun, 29 Oct 2017 00:00:00 -0400</pubDate>
+<title>Minecraft Spigot Plugin</title>
+<link>https://brianpfeil.com/post/minecraft-spigot-plugin/</link>
+<pubDate>Sun, 29 Oct 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/minecraft-spigot-plugin/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/minecraft-spigot-plugin-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/minecraft-spigot-plugin-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Learn plugin development for the &lt;a href=&#34;https://www.spigotmc.org/&#34;&gt;spigot&lt;/a&gt; minecraft server.&lt;/p&gt;
+&lt;h2 id=&#34;project-setup-and-configuration&#34;&gt;Project Setup and Configuration&lt;/h2&gt;
+&lt;p&gt;see &lt;a href=&#34;https://www.spigotmc.org/wiki/creating-a-blank-spigot-plugin-in-intellijidea/&#34;&gt;Creating a blank Spigot plugin in IntelliJIDEA&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Add spigot.jar
+&lt;img src=&#34;https://www.evernote.com/l/AAHhcvybx3RKapL18y7xSp4ymKgZtUAbL84B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Artifacts
+&lt;img src=&#34;https://www.evernote.com/l/AAE8M-RArFVHpoDLu6v2O_BvwzHKNoIeO90B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Remote Debug Configuration
+&lt;img src=&#34;https://www.evernote.com/l/AAE21iCYOIJMoaW17bE5nbukROJw2lVRcV4B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;developing-hot-swaplive-coding&#34;&gt;Developing (hot swap/live coding)&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;launch minecraft server in debug mode&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ./minecraft-spigot-server
+./start.command
+&lt;span class=&#34;c1&#34;&gt;# java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar spigot-1.12.2.jar&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Launch Debug confifguration in IntelliJ&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAFw9XSyXzpIX5t6QwLOch_j1PcMn1vmLW8B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Set breakpoints, etc. in code&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Launch minecraft and play&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Breakpoints will be hit.&lt;/p&gt;
+&lt;p&gt;Use Evaluate Code Fragment to explore while debugger is paused
+&lt;img src=&#34;https://www.evernote.com/l/AAGy9jk28LxLgaoP2bB-FCd4k4sGHAHOI9UB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You can edit code, save, and build (cmd-F9).  It&amp;rsquo;ll live apply/hot swap without stopping server.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.spigotmc.org/wiki/intellij-debug-your-plugin/&#34;&gt;https://www.spigotmc.org/wiki/intellij-debug-your-plugin/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
   </channel>
 </rss>

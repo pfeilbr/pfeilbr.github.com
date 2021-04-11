@@ -1,56 +1,352 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>sam on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/sam/</link>
-    <description>Recent content in sam on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 08 Jan 2021 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/tags/sam/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>sam on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/sam/</link>
+        <description>Recent content in sam on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 08 Jan 2021 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/tags/sam/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>SAM Lambda Layers</title>
-      <link>https://brianpfeil.com/post/sam-lambda-layers/</link>
-      <pubDate>Fri, 08 Jan 2021 00:00:00 -0500</pubDate>
+<title>SAM Lambda Layers</title>
+<link>https://brianpfeil.com/post/sam-lambda-layers/</link>
+<pubDate>Fri, 08 Jan 2021 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/sam-lambda-layers/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/sam-lambda-layers-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/sam-lambda-layers-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://aws.amazon.com/blogs/compute/working-with-aws-lambda-and-lambda-layers-in-aws-sam/&#34;&gt;SAM lambda layers&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;running-example&#34;&gt;Running Example&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; lambda-layer-python
+
+sam build
+
+&lt;span class=&#34;c1&#34;&gt;# run lambda with layer locally&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# `--force-image-build` to clear out layer cache&lt;/span&gt;
+sam &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; invoke --force-image-build
+
+&lt;span class=&#34;c1&#34;&gt;# start local api endpoint&lt;/span&gt;
+sam &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; start-api --force-image-build
+curl http://127.0.0.1:3000/
+
+&lt;span class=&#34;c1&#34;&gt;# deploy&lt;/span&gt;
+sam deploy --guided
+
+&lt;span class=&#34;c1&#34;&gt;# run lambda behind api gateway endpoint&lt;/span&gt;
+curl https://hl6u5bubr4.execute-api.us-east-1.amazonaws.com/Prod/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/compute/working-with-aws-lambda-and-lambda-layers-in-aws-sam/&#34;&gt;Working with AWS Lambda and Lambda Layers in AWS SAM&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>AWS SAM Step Functions</title>
-      <link>https://brianpfeil.com/post/aws-sam-step-functions/</link>
-      <pubDate>Fri, 14 Aug 2020 00:00:00 -0400</pubDate>
+<title>AWS SAM Step Functions</title>
+<link>https://brianpfeil.com/post/aws-sam-step-functions/</link>
+<pubDate>Fri, 14 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-sam-step-functions/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-sam-step-functions-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-sam-step-functions-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn and experiment with using &lt;a href=&#34;https://aws.amazon.com/serverless/sam/&#34;&gt;AWS SAM&lt;/a&gt; to define and deploy &lt;a href=&#34;https://aws.amazon.com/step-functions/&#34;&gt;AWS Step Functions&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;see &lt;a href=&#34;template.yaml&#34;&gt;&lt;code&gt;template.yaml&lt;/code&gt;&lt;/a&gt; and &lt;a href=&#34;data/event-bus-events.json&#34;&gt;&lt;code&gt;data/event-bus-events.json&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# deploy&lt;/span&gt;
+sam deploy --guided
+
+&lt;span class=&#34;c1&#34;&gt;# trigger step fn via EventBridge rule&lt;/span&gt;
+aws events put-events --cli-input-json file://data/event-bus-events.json
+
+&lt;span class=&#34;c1&#34;&gt;# e.g. output&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# {&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#     &amp;#34;FailedEntryCount&amp;#34;: 0,&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#     &amp;#34;Entries&amp;#34;: [&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#         {&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#             &amp;#34;EventId&amp;#34;: &amp;#34;369fc438-8a99-bc45-7d79-46788420dbf8&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#         }&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#     ]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# }&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# trigger via API Gateway.  starts step fn then returns (does not wait for step fn to complete)&lt;/span&gt;
+curl https://4cakde2i15.execute-api.us-east-1.amazonaws.com/Prod/start
+
+&lt;span class=&#34;c1&#34;&gt;# e.g. output&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# {&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#     &amp;#34;executionArn&amp;#34;: &amp;#34;arn:aws:states:us-east-1:529276214230:execution:SimpleStateMachine-zIFFWgUF6O6D:53313d15-1005-44d0-84a0-ea57b66d1ac3&amp;#34;,&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#     &amp;#34;startDate&amp;#34;: 1.597426336318E9&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# }&lt;/span&gt;
+
+
+&lt;span class=&#34;c1&#34;&gt;# teardown&lt;/span&gt;
+aws cloudformation delete-stack --stack-name &lt;span class=&#34;s2&#34;&gt;&amp;#34;aws-sam-step-functions-playground&amp;#34;&lt;/span&gt; --region &lt;span class=&#34;s2&#34;&gt;&amp;#34;us-east-1&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/compute/simplifying-application-orchestration-with-aws-step-functions-and-aws-sam/&#34;&gt;Simplifying application orchestration with AWS Step Functions and AWS SAM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[aws | events | put-events]](&lt;a href=&#34;https://docs.aws.amazon.com/cli/latest/reference/events/put-events.html#examples&#34;&gt;https://docs.aws.amazon.com/cli/latest/reference/events/put-events.html#examples&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>AWS SAM Golang</title>
-      <link>https://brianpfeil.com/post/aws-sam-golang/</link>
-      <pubDate>Thu, 30 Jul 2020 00:00:00 -0400</pubDate>
+<title>AWS SAM Golang</title>
+<link>https://brianpfeil.com/post/aws-sam-golang/</link>
+<pubDate>Thu, 30 Jul 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-sam-golang/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-sam-golang-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-sam-golang-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;An example API and Worker written in Golang using the Amazon Serverless
+Application Model (AWS SAM).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;modified version of &lt;a href=&#34;https://github.com/cpliakas/aws-sam-golang-example&#34;&gt;cpliakas/aws-sam-golang-example&lt;/a&gt;.  switched to use go modules, added the use of local environment variables, and run sam local assuming lambda function role.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;Go is arguably one of the easiest languages in which to write a RESTful API.
+With the addition of &lt;a href=&#34;https://aws.amazon.com/blogs/compute/announcing-go-support-for-aws-lambda/&#34;&gt;Go support for AWS Lambda&lt;/a&gt;
+coupled with the maturity of tooling around the &lt;a href=&#34;https://github.com/awslabs/serverless-application-model&#34;&gt;AWS Serverless Application Model&lt;/a&gt;,
+deploying Golang-based APIs to serverless infrastructure is becoming much more
+straightforward, too. Thanks to the &lt;a href=&#34;https://github.com/apex/gateway&#34;&gt;APEX Gateway&lt;/a&gt;,
+you can even write APIs in a familiar manner without changing how the code is
+structured.&lt;/p&gt;
+&lt;p&gt;The purpose of this project is to give a slightly more complicated example than
+the &amp;ldquo;hello world&amp;rdquo; ones provided by Amazon with a toolchain that supports both
+local development and deployment to AWS as well as design patterns that
+facilitate unit testing.&lt;/p&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/&#34;&gt;An AWS account&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://golang.org/doc/install&#34;&gt;Golang&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://golang.github.io/dep/docs/installation.html&#34;&gt;dep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.docker.com/install&#34;&gt;Docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://nodejs.org/en/download/&#34;&gt;Node.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/cli/latest/userguide/installing.html&#34;&gt;AWS Command Line Interface&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/serverless/sam/&#34;&gt;SAM CLI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stedolan.github.io/jq/&#34;&gt;jq&lt;/a&gt; (optional)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;p&gt;With a &lt;a href=&#34;https://golang.org/doc/install#testing&#34;&gt;correctly configured&lt;/a&gt; Go toolchain:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;git clone https://github.com/pfeilbr/aws-sam-golang-example
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;h3 id=&#34;run-the-api-locally&#34;&gt;Run the API Locally&lt;/h3&gt;
+&lt;p&gt;:warning: Make sure to install all the &lt;a href=&#34;#prerequisites&#34;&gt;Prerequisites&lt;/a&gt;. On Mac
+OSX and Windows, ensure that the Docker VM is running.&lt;/p&gt;
+&lt;p&gt;Build the API and run it locally:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nv&#34;&gt;GOARCH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;amd64 &lt;span class=&#34;nv&#34;&gt;GOOS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;linux go build -o api ./service/api
+sam &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; start-api
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or &amp;hellip;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;make run
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can now consume the API using your tool of choice. &lt;a href=&#34;https://httpie.org/&#34;&gt;HTTPie&lt;/a&gt;
+is pretty awesome.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;http localhost:3000/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;HTTP/1.1 200 OK
+Content-Length: 28
+Content-Type: application/json; charset=utf8
+Date: Sat, 03 Feb 2018 20:12:07 GMT
+
+{
+    &amp;#34;message&amp;#34;: &amp;#34;Hello, world!&amp;#34;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;deploy-to-aws&#34;&gt;Deploy to AWS&lt;/h3&gt;
+&lt;p&gt;First, set the following environment variables replacing &lt;code&gt;&amp;lt;MY-BUCKET-NAME&amp;gt;&lt;/code&gt; and
+&lt;code&gt;&amp;lt;MY-STACK-NAME&amp;gt;&lt;/code&gt; as appropriate:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;S3_BUCKET&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;MY-BUCKET-NAME&amp;gt;&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;STACK_NAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;MY-STACK-NAME&amp;gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now build, package, and deploy the application:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nv&#34;&gt;GOOS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;linux &lt;span class=&#34;nv&#34;&gt;GOARCH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;amd64 go build -o api ./service/api
+&lt;span class=&#34;nv&#34;&gt;GOOS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;linux &lt;span class=&#34;nv&#34;&gt;GOARCH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;amd64 go build -o error ./service/error
+&lt;span class=&#34;nv&#34;&gt;GOOS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;linux &lt;span class=&#34;nv&#34;&gt;GOARCH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;amd64 go build -o worker ./service/worker
+
+sam package --template-file template.yaml --s3-bucket &lt;span class=&#34;nv&#34;&gt;$S3_BUCKET&lt;/span&gt; --output-template-file packaged.yaml
+sam deploy --stack-name &lt;span class=&#34;nv&#34;&gt;$STACK_NAME&lt;/span&gt; --template-file packaged.yaml --capabilities CAPABILITY_IAM
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or &amp;hellip;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;make deploy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;consume-the-endpoint&#34;&gt;Consume the Endpoint&lt;/h3&gt;
+&lt;p&gt;The API endpoint is captured in the CloudFormation stack&amp;rsquo;s &lt;code&gt;Endpoint&lt;/code&gt; output
+key. Either view the output value via the AWS Management Console, or run the
+following command assuming the &lt;a href=&#34;https://stedolan.github.io/jq/&#34;&gt;jq&lt;/a&gt; tool is
+installed:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;aws cloudformation describe-stacks --stack-name &lt;span class=&#34;nv&#34;&gt;$STACK_NAME&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq -r &lt;span class=&#34;s1&#34;&gt;&amp;#39;.Stacks[0].Outputs[0].OutputValue&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Again, &lt;a href=&#34;https://httpie.org/&#34;&gt;HTTPie&lt;/a&gt; is a pretty awesome tool.&lt;/p&gt;
+&lt;h3 id=&#34;view-aws-logs&#34;&gt;View AWS Logs&lt;/h3&gt;
+&lt;p&gt;Run the following command to get the CloudWatch logs for the API.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;sam logs -n Api --stack-name &lt;span class=&#34;nv&#34;&gt;$STACK_NAME&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Replace &lt;code&gt;Api&lt;/code&gt; with &lt;code&gt;Worker&lt;/code&gt; or &lt;code&gt;Error&lt;/code&gt; to get logs for the Lambda functions in
+those resources as well.&lt;/p&gt;
+&lt;p&gt;:warning: The &lt;code&gt;sam&lt;/code&gt; tool will throw a nasty stack trace if you try to view the
+logs before the Lambda function has been invoked. Only run this command after
+you have made requests to the corresponding handlers.&lt;/p&gt;
+&lt;h2 id=&#34;session&#34;&gt;Session&lt;/h2&gt;
+&lt;p&gt;example development session&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;S3_BUCKET&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;S3_SAM_DEPLOY_BUCKET&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;STACK_NAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;basename &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;pwd&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# test&lt;/span&gt;
+make &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# build&lt;/span&gt;
+make build
+
+&lt;span class=&#34;c1&#34;&gt;# build&lt;/span&gt;
+make deploy
+
+&lt;span class=&#34;c1&#34;&gt;# start SAM local API&lt;/span&gt;
+sam &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; start-api --profile my-lambda-role --env-vars env-vars.json
+
+&lt;span class=&#34;c1&#34;&gt;# GET&lt;/span&gt;
+curl -X POST http://127.0.0.1:3000
+
+&lt;span class=&#34;c1&#34;&gt;# POST a job&lt;/span&gt;
+curl -X POST http://127.0.0.1:3000/job -d &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;name&amp;#34;: &amp;#34;my job&amp;#34;}&amp;#39;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# tail the logs for the worker that processes SQS messages&lt;/span&gt;
+lumigo-cli tail-cloudwatch-logs --namePrefix &lt;span class=&#34;s2&#34;&gt;&amp;#34;/aws/lambda/aws-sam-golang-example-Worker&amp;#34;&lt;/span&gt; --region &lt;span class=&#34;s2&#34;&gt;&amp;#34;us-east-1&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
     <item>
-      <title>AWS SAM Local Invoke with Lambda Role</title>
-      <link>https://brianpfeil.com/post/aws-sam-local-invoke-with-lambda-role/</link>
-      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
+<title>AWS SAM Local Invoke with Lambda Role</title>
+<link>https://brianpfeil.com/post/aws-sam-local-invoke-with-lambda-role/</link>
+<pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-sam-local-invoke-with-lambda-role/</guid>
-      <description>Running lambda locally with SAM in the lambda role security context</description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-sam-golang-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-sam-golang-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/serverless/sam/&#34;&gt;AWS Serverless Application Model&lt;/a&gt; (SAM) allows you to develop and test your lambda backed API Gateway endpoints locally via &lt;a href=&#34;https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-cli-command-reference-sam-local-start-api.html&#34;&gt;sam local start-api&lt;/a&gt;.  By default, your function is invoked with the default credentials you have configured for the &lt;a href=&#34;https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html&#34;&gt;AWS CLI&lt;/a&gt;.  If your function accesses other AWS services, it may encounter permission issues.  It&amp;rsquo;s ideal to have your lambda run under as close to the same security context locally as it would when deployed.  In the example below, lambda sends a message to a SQS worker queue.  The permissions for the queue are configured to allow the lambda role to send a message to it.  The following details how to achieve this.&lt;/p&gt;
+&lt;h3 id=&#34;allowing-our-lambda-role-to-be-assumed&#34;&gt;Allowing Our Lambda Role to be Assumed&lt;/h3&gt;
+&lt;p&gt;In our scenario, we have a local user profile named &lt;code&gt;admin&lt;/code&gt; stored in &lt;code&gt;~/.aws/credentials&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;[admin]
+aws_access_key_id     = YOUR_ACCESS_KEY
+aws_secret_access_key = YOUR_SECRET_ACCESS_KEY
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This user needs to be able to assume our &lt;code&gt;my-lambda-role&lt;/code&gt; role.  We define the following &lt;strong&gt;Role Trust&lt;/strong&gt; policy to enable:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;#34;Version&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;2012-10-17&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;#34;Statement&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;nt&#34;&gt;&amp;#34;Effect&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Allow&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+      &lt;span class=&#34;nt&#34;&gt;&amp;#34;Principal&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;Service&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;lambda.amazonaws.com&amp;#34;&lt;/span&gt;
+      &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+      &lt;span class=&#34;nt&#34;&gt;&amp;#34;Action&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;sts:AssumeRole&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;nt&#34;&gt;&amp;#34;Effect&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Allow&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+      &lt;span class=&#34;nt&#34;&gt;&amp;#34;Principal&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;AWS&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;arn:aws:iam::xxxxxxxxxxxx:user/admin&amp;#34;&lt;/span&gt;
+      &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+      &lt;span class=&#34;nt&#34;&gt;&amp;#34;Action&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;sts:AssumeRole&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;configure-assume-role-via-aws-cli&#34;&gt;Configure Assume Role via AWS CLI&lt;/h3&gt;
+&lt;p&gt;Next we need to configure the AWS CLI to assume a role.  We can do so by adding the following to &lt;code&gt;~/.aws/config&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;# ~/.aws/config
+
+[profile my-lambda-role]
+role_arn = arn:aws:iam::xxxxxxxxxxxx:role/my-lambda-role
+source_profile = admin
+output = json
+region = us-east-1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note the &lt;code&gt;source_profile = admin&lt;/code&gt; line.  This identifies the profile in &lt;code&gt;~/.aws/credentials&lt;/code&gt; that will be used to assume the role.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;See &lt;a href=&#34;https://aws.amazon.com/premiumsupport/knowledge-center/iam-assume-role-cli/&#34;&gt;How do I assume an IAM role using the AWS CLI?&lt;/a&gt; for full details on options.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We can test with the following:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;aws --profile my-lambda-role sts get-caller-identity
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If successful, the response will look like.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;UserId&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;AROAXWO2SDPLLBS55Q345:botocore-session-1596129185&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Account&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;xxxxxxxxxxxx&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Arn&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;arn:aws:sts::529276214230:assumed-role/my-lambda-role/botocore-&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;running-sam-local&#34;&gt;Running SAM Local&lt;/h3&gt;
+&lt;p&gt;The SQS queue URL is provided to the lambda via an environment variable.  This is defined in the SAM template&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;template.yaml&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;Environment&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;Variables&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;QUEUE_URL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;!&lt;span class=&#34;l&#34;&gt;Ref Queue&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We need &lt;code&gt;QUEUE_URL&lt;/code&gt; to be available to our function running locally.  To do that we can create an environment variable .json file and pass as a parameter for sam local to use.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;env-vars.json&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Parameters&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;QUEUE_URL&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://sqs.us-east-1.amazonaws.com/xxxxxxxxxxxx/aws-sam-golang-example-Queue-Q12J860AETTS&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We can now start the local SAM API server and test our endpoint&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;sam &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; start-api --profile my-lambda-role --env-vars env-vars.json
+
+curl -X POST http://127.0.0.1:3000/job -d &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;name&amp;#34;: &amp;#34;my job&amp;#34;}&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;We&amp;rsquo;ve seen how to run a lambda locally with the same security context as when deployed.  SAM provides a great development workflow to allow quick iterations.  The local environment provided via docker tries to be as true to the AWS environment, but you should test with the real services as early as possible.&lt;/p&gt;
+&lt;p&gt;One point to note, you must have the AWS resources your lambda is interacting with provisioned.  For example, the SQS queue must exist.  SAM does not provide a locally running SQS service.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://github.com/pfeilbr/aws-sam-golang-playground&#34;&gt;source&lt;/a&gt; for this example is written in Go, which has a great workflow.  Our focus wasn&amp;rsquo;t on the code, but if you want more &lt;strong&gt;Go + SAM + Lambda&lt;/strong&gt;, be sure to check out the AWS &lt;a href=&#34;https://golang.serverlessworkshops.io/&#34;&gt;GO SERVERLESS!&lt;/a&gt; workshop by AWS Serverless Developer Advocate &lt;a href=&#34;https://twitter.com/rts_rob&#34;&gt;Rob Sutter&lt;/a&gt;.  It covers the details and workflow of using Go with SAM.&lt;/p&gt;
+</description>
+</item>
     
     <item>
-      <title>AWS SAM Local</title>
-      <link>https://brianpfeil.com/post/aws-sam-local/</link>
-      <pubDate>Fri, 16 Aug 2019 00:00:00 -0400</pubDate>
+<title>AWS SAM Local</title>
+<link>https://brianpfeil.com/post/aws-sam-local/</link>
+<pubDate>Fri, 16 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-sam-local/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-sam-local-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-sam-local-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://github.com/awslabs/aws-sam-local&#34;&gt;aws-sam-local&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;session&#34;&gt;session&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; examples/hello-world
+
+sam &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; invoke &lt;span class=&#34;s2&#34;&gt;&amp;#34;HelloWorld&amp;#34;&lt;/span&gt; -e event.json
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;name&amp;#34;: &amp;#34;Brian&amp;#34; }&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sam &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; invoke &lt;span class=&#34;s2&#34;&gt;&amp;#34;HelloWorld&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# debugging&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# ensure launch.json localRoot is set to directory where index.js or code exists&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# e.g. &amp;#34;localRoot&amp;#34;: &amp;#34;${workspaceRoot}/examples/hello-world&amp;#34;&lt;/span&gt;
+sam &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; invoke -e event.json -d &lt;span class=&#34;m&#34;&gt;5858&lt;/span&gt; HelloWorld
+
+&lt;span class=&#34;c1&#34;&gt;# set breakpoints in code (vscode)&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# then run debug in vscode&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# package&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# NOTE: bucket must exist (`aws s3 mb s3://sam-deploy-bucket-01`)&lt;/span&gt;
+sam package --template-file template.yaml --s3-bucket sam-deploy-bucket-01 --output-template-file packaged.yaml
+
+&lt;span class=&#34;c1&#34;&gt;# deploy&lt;/span&gt;
+sam deploy --template-file packaged.yaml --stack-name sam-hello-world-v0 --capabilities CAPABILITY_IAM
+
+&lt;span class=&#34;c1&#34;&gt;# invoke&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# NOTE: you&amp;#39;ll need to lookup the &amp;#34;full&amp;#34; function name&lt;/span&gt;
+aws lambda invoke --function-name &lt;span class=&#34;s2&#34;&gt;&amp;#34;sam-hello-world-v1-HelloWorld-L8DLT50DZNIJ&amp;#34;&lt;/span&gt; --payload &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;name&amp;#34;: &amp;#34;brian&amp;#34;}&amp;#39;&lt;/span&gt; output.log&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; cat output.log
+
+&lt;span class=&#34;c1&#34;&gt;# view logs&lt;/span&gt;
+sam logs -n HelloWorld --stack-name sam-hello-world-v1
+
+&lt;span class=&#34;c1&#34;&gt;# ---&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# invoke lambda via api gateway example&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; examples/api-event-source
+
+&lt;span class=&#34;c1&#34;&gt;# local development&lt;/span&gt;
+sam &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; start-api
+curl http://127.0.0.1:3000/
+
+&lt;span class=&#34;c1&#34;&gt;# package&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# NOTE: bucket must exist (`aws s3 mb s3://sam-deploy-bucket-01`)&lt;/span&gt;
+sam package --template-file template.yaml --s3-bucket sam-deploy-bucket-01 --output-template-file packaged.yaml
+
+&lt;span class=&#34;c1&#34;&gt;# deploy&lt;/span&gt;
+sam deploy --template-file packaged.yaml --stack-name api-event-source-v1 --capabilities CAPABILITY_IAM
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;resources&#34;&gt;Resources&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/serverless-application-model/index.html&#34;&gt;AWS Serverless Application Model (AWS SAM) Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
   </channel>
 </rss>

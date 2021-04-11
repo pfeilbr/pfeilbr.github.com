@@ -1,155 +1,585 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>nodejs on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/nodejs/</link>
-    <description>Recent content in nodejs on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 28 Oct 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>nodejs on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/nodejs/</link>
+        <description>Recent content in nodejs on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 28 Oct 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Dynamic Nodejs Code Execution</title>
-      <link>https://brianpfeil.com/post/dynamic-nodejs-code-execution/</link>
-      <pubDate>Wed, 28 Oct 2020 00:00:00 -0400</pubDate>
+<title>Dynamic Nodejs Code Execution</title>
+<link>https://brianpfeil.com/post/dynamic-nodejs-code-execution/</link>
+<pubDate>Wed, 28 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/dynamic-nodejs-code-execution/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/dynamic-nodejs-code-execution-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/dynamic-nodejs-code-execution-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;example(s) of dynamically executing nodejs code.  see &lt;a href=&#34;index.js&#34;&gt;&lt;code&gt;index.js&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;node index.js
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
     <item>
-      <title>YouTube API</title>
-      <link>https://brianpfeil.com/post/youtube-api/</link>
-      <pubDate>Mon, 22 Jul 2019 00:00:00 -0400</pubDate>
+<title>YouTube API</title>
+<link>https://brianpfeil.com/post/youtube-api/</link>
+<pubDate>Mon, 22 Jul 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/youtube-api/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/youtube-api-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/youtube-api-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://developers.google.com/youtube/v3/&#34;&gt;youtube api&lt;/a&gt; using node.js&lt;/p&gt;
+&lt;p&gt;see &lt;a href=&#34;src/index.js&#34;&gt;&lt;code&gt;src/index.js&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install deps&lt;/span&gt;
+npm install
+
+&lt;span class=&#34;c1&#34;&gt;# setup your .env with your youtube api key&lt;/span&gt;
+cp .env.sample .env
+
+&lt;span class=&#34;c1&#34;&gt;# run&lt;/span&gt;
+npm start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
     <item>
-      <title>Azure Nodejs ARM Resources</title>
-      <link>https://brianpfeil.com/post/azure-nodejs-arm-resources/</link>
-      <pubDate>Wed, 15 May 2019 00:00:00 -0400</pubDate>
+<title>Azure Nodejs ARM Resources</title>
+<link>https://brianpfeil.com/post/azure-nodejs-arm-resources/</link>
+<pubDate>Wed, 15 May 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-nodejs-arm-resources/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/azure-nodejs-arm-resources-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/azure-nodejs-arm-resources-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;manipulate azure resources (deployments, etc.) programmatically via nodejs&lt;/p&gt;
+</description>
+</item>
     
     <item>
-      <title>Azure Nodejs ARM Storage</title>
-      <link>https://brianpfeil.com/post/azure-nodejs-arm-storage/</link>
-      <pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+<title>Azure Nodejs ARM Storage</title>
+<link>https://brianpfeil.com/post/azure-nodejs-arm-storage/</link>
+<pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-nodejs-arm-storage/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/azure-nodejs-arm-storage-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/azure-nodejs-arm-storage-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;manipulate azure storage accounts programmatically via nodejs&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/javascript/api/overview/azure/storage?view=azure-node-latest&#34;&gt;Azure Storage modules for Node.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>Twit Twitter API Client</title>
-      <link>https://brianpfeil.com/post/twit-twitter-api-client/</link>
-      <pubDate>Mon, 19 Nov 2018 00:00:00 -0500</pubDate>
+<title>Twit Twitter API Client</title>
+<link>https://brianpfeil.com/post/twit-twitter-api-client/</link>
+<pubDate>Mon, 19 Nov 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/twit-twitter-api-client/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/twit-twitter-api-client-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/twit-twitter-api-client-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://github.com/ttezel/twit&#34;&gt;twit&lt;/a&gt;, the Twitter API Client for node.  Supports both the REST and Streaming API.&lt;/p&gt;
+&lt;p&gt;see &lt;a href=&#34;index.js&#34;&gt;&lt;code&gt;index.js&lt;/code&gt;&lt;/a&gt; for examples&lt;/p&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;cp .env.sample .env
+&lt;span class=&#34;c1&#34;&gt;# update .env with your twitter developer consumer and access values (e.g. app defined @ https://developer.twitter.com)&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Uncomment examples in `index.js` to run&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# dev / live reload&lt;/span&gt;
+npm run dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ttezel/twit&#34;&gt;https://github.com/ttezel/twit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.twitter.com/en/docs&#34;&gt;https://developer.twitter.com/en/docs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>Lerna</title>
-      <link>https://brianpfeil.com/post/lerna/</link>
-      <pubDate>Sun, 02 Sep 2018 00:00:00 -0400</pubDate>
+<title>Lerna</title>
+<link>https://brianpfeil.com/post/lerna/</link>
+<pubDate>Sun, 02 Sep 2018 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/lerna/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/lerna-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/lerna-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://lernajs.io/&#34;&gt;lerna&lt;/a&gt; &lt;em&gt;A tool for managing JavaScript projects with multiple packages&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;p&gt;install lerna
+&lt;code&gt;npm install --global lerna&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;example-workflow&#34;&gt;Example Workflow&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# init lerna repo&lt;/span&gt;
+mkdir lerna-playground
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; lerna-playground
+git init
+lerna init
+
+&lt;span class=&#34;c1&#34;&gt;# create mathlib&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; packages
+mkdir mathlib
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; mathlib
+npm init -f
+touch index.js &lt;span class=&#34;c1&#34;&gt;# write mathlib code&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# create client that depends on mathlib&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ..
+mkdir client
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; client
+npm init -f
+
+&lt;span class=&#34;c1&#34;&gt;# add mathlib&lt;/span&gt;
+lerna add mathlib
+
+&lt;span class=&#34;c1&#34;&gt;# create client code&lt;/span&gt;
+touch index.js
+
+&lt;span class=&#34;c1&#34;&gt;# run client&lt;/span&gt;
+node index.js
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
     <item>
-      <title>Scribbletune</title>
-      <link>https://brianpfeil.com/post/scribbletune/</link>
-      <pubDate>Sat, 26 Aug 2017 00:00:00 -0400</pubDate>
+<title>Scribbletune</title>
+<link>https://brianpfeil.com/post/scribbletune/</link>
+<pubDate>Sat, 26 Aug 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/scribbletune/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/scribbletune-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/scribbletune-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://github.com/walmik/scribbletune&#34;&gt;Scribbletune&lt;/a&gt;.  Generate musical patterns with JavaScript and export as MIDI files using Node.js&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;install timidity command line midi player via &lt;code&gt;brew install timidity&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.systutorials.com/docs/linux/man/1-timidity/&#34;&gt;timidity man docs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>Nexe</title>
-      <link>https://brianpfeil.com/post/nexe/</link>
-      <pubDate>Tue, 05 Apr 2016 00:00:00 -0400</pubDate>
+<title>Nexe</title>
+<link>https://brianpfeil.com/post/nexe/</link>
+<pubDate>Tue, 05 Apr 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/nexe/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/nexe-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/nexe-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Learn and experiment with &lt;a href=&#34;https://github.com/jaredallard/nexe&#34;&gt;nexe&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;nexe lets you &lt;em&gt;create a single executable out of your node.js apps&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ npm install nexe -g
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;p&gt;There are two methods to run nexe, command line and by specifying the paramaters in &lt;code&gt;package.json&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;command-line&#34;&gt;Command line&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ nexe -r 4.2.4 -i ./index.js -o ./main.nex
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Downloads node source 4.2.4 for the platform it&amp;rsquo;s running on in &lt;code&gt;./tmp&lt;/code&gt; directory, compiles
+it, uses browserify on &lt;code&gt;./index.js&lt;/code&gt; then bundles it all an outputs &lt;code&gt;./main.nex&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;packagejson&#34;&gt;&lt;code&gt;package.json&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;nexe&lt;/code&gt; property of &lt;code&gt;package.json&lt;/code&gt; specifies all the parameters&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ nexe
+
+&lt;span class=&#34;c1&#34;&gt;# output is ./main.nex, which is specified in the nexe.output property&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
     <item>
-      <title>Node OData</title>
-      <link>https://brianpfeil.com/post/node-odata/</link>
-      <pubDate>Fri, 18 Mar 2016 00:00:00 -0400</pubDate>
+<title>Node OData</title>
+<link>https://brianpfeil.com/post/node-odata/</link>
+<pubDate>Fri, 18 Mar 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/node-odata/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/node-odata-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/node-odata-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;node-odata-playground&#34;&gt;node-odata-playground&lt;/h2&gt;
+&lt;p&gt;This is an example of a custom OData 4.0 provider that can be consumed by
+salesforce &lt;a href=&#34;https://developer.salesforce.com/trailhead/en/lightning_connect/lightning_connect_introduction&#34;&gt;Lightning Connect&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;setup&#34;&gt;Setup&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ npm install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;running&#34;&gt;Running&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ node custom-odata-provider-example.js
+
+&lt;span class=&#34;c1&#34;&gt;# run ngrok to expose local server publicly&lt;/span&gt;
+$ ngrok &lt;span class=&#34;m&#34;&gt;1337&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;OData Endpoints you can visit&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1337&#34;&gt;http://localhost:1337&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1337/$metadata&#34;&gt;http://localhost:1337/$metadata&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1337/$metadata#PIMSProduct&#34;&gt;http://localhost:1337/$metadata#PIMSProduct&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1337/PIMSProduct?$count=false&#34;&gt;http://localhost:1337/PIMSProduct?$count=false&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1337/todos?$count=false&#34;&gt;http://localhost:1337/todos?$count=false&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Using &lt;code&gt;brian.pfeil.1@gmail.com&lt;/code&gt; salesforce org.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Screenshots&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Query Example&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://static-content-01.s3-website-us-east-1.amazonaws.com/Screenshot_3_17_16__5_15_PM_1C9B5623.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;External Data Source&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://static-content-01.s3-website-us-east-1.amazonaws.com/External_Data_Source__Test___Salesforce_-_Developer_Edition_1C9B56D1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;External Object&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://static-content-01.s3-website-us-east-1.amazonaws.com/External_Object__todos___Salesforce_-_Developer_Edition_1C9B56F9.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Filter Criteria / Where Clause&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://static-content-01.s3-website-us-east-1.amazonaws.com/SoqlX___Brian_Pfeil__brian_pfeil_1_gmail_com_on_na15__and_node-odata-playground_%E2%80%94_node_custom-odata-provider-example_js_%E2%80%94_80%C3%9724_and_custom-odata-provider-example_js_%E2%80%94__Users_pfeilbr_Dropbox_mac01_Users_brianpfeil_projects_node-odata-playgro_1C9B5794.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+</item>
     
     <item>
-      <title>Beefy</title>
-      <link>https://brianpfeil.com/post/beefy/</link>
-      <pubDate>Fri, 16 Oct 2015 00:00:00 -0400</pubDate>
+<title>Beefy</title>
+<link>https://brianpfeil.com/post/beefy/</link>
+<pubDate>Fri, 16 Oct 2015 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/beefy/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/beefy-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/beefy-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Learn and experiment with &lt;a href=&#34;http://didact.us/beefy/&#34;&gt;Beefy&lt;/a&gt;, which makes working with &lt;a href=&#34;http://browserify.org/&#34;&gt;Browserify&lt;/a&gt; a little nicer.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;running&#34;&gt;Running&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Clone this repo&lt;/li&gt;
+&lt;li&gt;Install deps&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ npm install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Run with live reload and es6 support (&lt;a href=&#34;https://github.com/babel/babelify&#34;&gt;babelify&lt;/a&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ beefy index.js --live --open -- -t babelify
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://didact.us/beefy/cows.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+</item>
     
     <item>
-      <title>Node Coveralls</title>
-      <link>https://brianpfeil.com/post/node-coveralls/</link>
-      <pubDate>Tue, 29 Sep 2015 00:00:00 -0400</pubDate>
+<title>Node Coveralls</title>
+<link>https://brianpfeil.com/post/node-coveralls/</link>
+<pubDate>Tue, 29 Sep 2015 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/node-coveralls/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/node-coveralls-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/node-coveralls-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;node-coveralls-playground&#34;&gt;node-coveralls-playground&lt;/h1&gt;
+&lt;p&gt;To learn and experiment with &lt;a href=&#34;https://coveralls.io/&#34;&gt;coveralls&lt;/a&gt; test coverage service.&lt;/p&gt;
+&lt;h2 id=&#34;setup-steps&#34;&gt;Setup Steps&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Install deps&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ npm install mocha coveralls mocha-lcov-reporter --save-dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Install &lt;a href=&#34;https://gotwarlost.github.io/istanbul/&#34;&gt;istanbul&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ npm install istanbul --save-dev -g
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If running from command line, ensure &lt;code&gt;.coveralls.yml&lt;/code&gt; is in current directory.  It should contain a line with &lt;code&gt;repo_token: REPO_TOKEN&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;p&gt;To run on the tests in the &lt;code&gt;test/&lt;/code&gt; directory.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec &amp;amp;&amp;amp; cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js &amp;amp;&amp;amp; rm -rf ./coverage
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;You can view the raw coverage output in the &lt;code&gt;./coverage&lt;/code&gt; directory.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+</item>
     
     <item>
-      <title>WebdriverIO</title>
-      <link>https://brianpfeil.com/post/webdriverio/</link>
-      <pubDate>Thu, 20 Aug 2015 00:00:00 -0400</pubDate>
+<title>WebdriverIO</title>
+<link>https://brianpfeil.com/post/webdriverio/</link>
+<pubDate>Thu, 20 Aug 2015 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/webdriverio/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/webdriverio-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/webdriverio-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;running-selenium-standalone-server-preferred--lighter-weight&#34;&gt;Running Selenium Standalone Server (Preferred / lighter weight)&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Start selenium Standalone server&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# run the following in it&amp;#39;s own shell and leave running&lt;/span&gt;
+$ java -jar selenium-server/selenium-server-standalone-2.53.0.jar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Run script&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ node index.js
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;running-selenium-hub-and-nodes-using-docker&#34;&gt;Running Selenium Hub and Node(s) Using Docker&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;start hub (clients connect to this)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; $ docker run -d -P --name selenium-hub -e GRID_TIMEOUT=10000 selenium/hub
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;start chrome node (hub delegates work to it)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; $ docker run -d --link selenium-hub:hub selenium/node-chrome
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Get host and port for &amp;ldquo;selenium-hub&amp;rdquo; container and use them in your client.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://static-content-01.s3-website-us-east-1.amazonaws.com//Kitematic_1B862C7B.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Example client config&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;options&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;nx&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;192.168.99.100&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+	&lt;span class=&#34;nx&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;32768&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+	&lt;span class=&#34;nx&#34;&gt;desiredCapabilities&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;nx&#34;&gt;browserName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;chrome&amp;#39;&lt;/span&gt;
+	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;see &lt;a href=&#34;index.js&#34;&gt;&lt;code&gt;index.js&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+</item>
     
     <item>
-      <title>Dockerized Node.js App on Elastic Beanstalk Example</title>
-      <link>https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/dockerized-nodejs-app-on-elastic-beanstalk-example/</link>
-      <pubDate>Wed, 25 Mar 2015 19:06:15 +0000</pubDate>
+<title>Dockerized Node.js App on Elastic Beanstalk Example</title>
+<link>https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/dockerized-nodejs-app-on-elastic-beanstalk-example/</link>
+<pubDate>Wed, 25 Mar 2015 19:06:15 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/dockerized-nodejs-app-on-elastic-beanstalk-example/</guid>
-      <description>better your developer workflow with Docker + NodeJS</description>
-    </item>
+<description>&lt;p&gt;Example of developing and deploying a &lt;a href=&#34;(https://www.docker.com/)&#34;&gt;dockerized&lt;/a&gt; &lt;a href=&#34;https://nodejs.org/&#34;&gt;Node.js&lt;/a&gt; app to &lt;a href=&#34;http://aws.amazon.com/elasticbeanstalk/&#34;&gt;Elastic Beanstalk&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;source on Github at &lt;a href=&#34;https://github.com/pfeilbr/Elastic-Beanstalk-Docker-Node.js-Example&#34;&gt;pfeilbr/Elastic-Beanstalk-Docker-Node.js-Example&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;local-development-workflow&#34;&gt;Local Development Workflow&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Edit code. e.g. &lt;code&gt;index.js&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Build image&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ docker build --tag=&amp;#34;pfeilbr/eb-docker-node-example&amp;#34; .
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ docker run -p 80:80 -it -rm -name eb-docker-node-example pfeilbr/eb-docker-node-example
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Get docker host ip &lt;em&gt;(optional.  only if using &lt;a href=&#34;http://boot2docker.io/&#34;&gt;boot2docker&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ boot2docker ip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Open browser to &lt;code&gt;http://&amp;lt;boot2docker ip&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;initial-deployment&#34;&gt;Initial Deployment&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Init git repo&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ git init .
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add files to repo&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ git add .
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Commit changes&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ git commit -m &amp;#34;init&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create eb app&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ eb init # populate details
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Populate all details&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create environment for app&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ eb create dev-env
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT&lt;/strong&gt; Must immediately update the ec2 instance with tags so it doesn&amp;rsquo;t get terminated.  Enable termination protection on the ec2 instance.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Output&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://note.io/1ETb45Y&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;deploying-updates&#34;&gt;Deploying Updates&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Modify code and test via [Local Development Workflow]&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Commit changes&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ git commit -a -m &amp;#34;my updates&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Deploy to eb&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ eb deploy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NOTE: Takes between 3-5 min to deploy changes&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Output&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://note.io/1FFQXuL&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;establish-interactive-bash-shell-in-running-docker-container&#34;&gt;Establish Interactive Bash Shell in Running Docker Container&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;ssh into ec2 docker host server&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ eb ssh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Get container name&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ sudo docker ps # save off name of container
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Connect/attach with an interactive bash session&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ sudo docker exec -i -t &amp;lt;container name&amp;gt; bash
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Example Session with Output&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://note.io/1CYSlIH&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+</item>
     
     <item>
-      <title>Cross-platform Desktop Apps with NW.js</title>
-      <link>https://brianpfeil.com/post/cross-platform-desktop-apps-with-nw-js/</link>
-      <pubDate>Sun, 15 Feb 2015 11:22:57 +0000</pubDate>
+<title>Cross-platform Desktop Apps with NW.js</title>
+<link>https://brianpfeil.com/post/cross-platform-desktop-apps-with-nw-js/</link>
+<pubDate>Sun, 15 Feb 2015 11:22:57 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/cross-platform-desktop-apps-with-nw-js/</guid>
-      <description>use the power and ease of NodeJS to create cross-platform desktop apps</description>
-    </item>
+<description>&lt;p&gt;&lt;img src=&#34;images/nw.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Post is based on the &lt;a href=&#34;https://github.com/pfeilbr/nwjs-playground&#34;&gt;pfeilbr/nwjs-playground&lt;/a&gt; project.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;nwjshttpnwjsio-playground&#34;&gt;&lt;a href=&#34;http://nwjs.io&#34;&gt;NW.js&lt;/a&gt; Playground&lt;/h1&gt;
+&lt;p&gt;Project to learn and experiment with &lt;a href=&#34;http://nwjs.io&#34;&gt;NW.js&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;NW.js enables the creation of cross platform desktop applications.  Your UI is built with standard html, js, and css technologies.  Access to the underlying desktop OS capabilites are provided by giving you access to &lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt;.  You can use the Node.js core modules plus any of the 3rd party &lt;a href=&#34;https://www.npmjs.com/&#34;&gt;NPM&lt;/a&gt; modules;&lt;/p&gt;
+&lt;h2 id=&#34;installing-nwjs&#34;&gt;Installing NW.js&lt;/h2&gt;
+&lt;p&gt;Download and unpack nwjs app for your platform from &lt;a href=&#34;http://nwjs.io&#34;&gt;http://nwjs.io&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;On OSX you&amp;rsquo;ll end up with &lt;code&gt;/Applications/nwjs.app&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;developing-your-app&#34;&gt;Developing Your App&lt;/h2&gt;
+&lt;p&gt;create &lt;code&gt;index.html&lt;/code&gt; and &lt;code&gt;package.json&lt;/code&gt; files&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;see &lt;a href=&#34;https://github.com/nwjs/nw.js#quick-start&#34;&gt;nw.js quick-start&lt;/a&gt; for details&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This app is a minimal example with an added &lt;code&gt;app.js&lt;/code&gt; file for javascript.  It&amp;rsquo;s sets the &lt;code&gt;document.body&lt;/code&gt; to &lt;code&gt;&#39;Hello There&#39;&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;p&gt;Create alias in &lt;code&gt;~/.bash_profile&lt;/code&gt;to ease the use from terminal&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# alias to nw&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;nw&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/Applications/nwjs.app/Contents/MacOS/nwjs&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/projects/nwjs-playground
+$ nw .
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;packaging-as-app-on-osx&#34;&gt;Packaging as app on OSX&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Create &lt;code&gt;.nw&lt;/code&gt; file&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ cd ~/projects/nwjs-playground
+$ zip -r ../${PWD##*/}.nw *
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;.nw&lt;/code&gt; file will be created along side the project directory&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;make copy of &lt;code&gt;nwjs.app&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ cp -r /Applications/nwjs.app /Applications/myapp.app
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Copy &lt;code&gt;.nw&lt;/code&gt; file into myapp.app bundle&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ cp ../nwjs-playground.nw /Applications/myapp.app/Contents/Resources/app.nw
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+</item>
     
     <item>
-      <title>NWjs</title>
-      <link>https://brianpfeil.com/post/nwjs/</link>
-      <pubDate>Sun, 15 Feb 2015 00:00:00 -0500</pubDate>
+<title>NWjs</title>
+<link>https://brianpfeil.com/post/nwjs/</link>
+<pubDate>Sun, 15 Feb 2015 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/nwjs/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/nwjs-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/nwjs-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;nwjshttpnwjsio-playground&#34;&gt;&lt;a href=&#34;http://nwjs.io&#34;&gt;NW.js&lt;/a&gt; playground&lt;/h1&gt;
+&lt;p&gt;Project to learn and experiment with &lt;a href=&#34;http://nwjs.io&#34;&gt;NW.js&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;NW.js enables the creation of cross platform desktop applications.  Your UI is built with standard html, js, and css technologies.  Access to the underlying desktop OS capabilites are provided by giving you access to &lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt;.  You can use the Node.js core modules plus any of the 3rd party &lt;a href=&#34;https://www.npmjs.com/&#34;&gt;NPM&lt;/a&gt; modules;&lt;/p&gt;
+&lt;h2 id=&#34;installing-nwjs&#34;&gt;Installing NW.js&lt;/h2&gt;
+&lt;p&gt;Download and unpack nwjs app for your platform from &lt;a href=&#34;http://nwjs.io&#34;&gt;http://nwjs.io&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;On OSX you&amp;rsquo;ll end up with &lt;code&gt;/Applications/nwjs.app&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;developing-your-app&#34;&gt;Developing Your App&lt;/h2&gt;
+&lt;p&gt;create &lt;code&gt;index.html&lt;/code&gt; and &lt;code&gt;package.json&lt;/code&gt; files&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;see &lt;a href=&#34;https://github.com/nwjs/nw.js#quick-start&#34;&gt;nw.js quick-start&lt;/a&gt; for details&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This app is a minimal example with an added &lt;code&gt;app.js&lt;/code&gt; file for javascript.  It&amp;rsquo;s sets the &lt;code&gt;document.body&lt;/code&gt; to &lt;code&gt;&#39;Hello There&#39;&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;p&gt;Create alias in &lt;code&gt;~/.bash_profile&lt;/code&gt;to ease the use from terminal&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# alias to nw&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;nw&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/Applications/nwjs.app/Contents/MacOS/nwjs&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/projects/nwjs-playground
+nw .
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;packaging-as-app-on-osx&#34;&gt;Packaging as app on OSX&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Create &lt;code&gt;.nw&lt;/code&gt; file&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/projects/nwjs-playground
+zip -r ../&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PWD&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;##*/&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;.nw *
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;.nw&lt;/code&gt; file will be created along side the project directory&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;make copy of &lt;code&gt;nwjs.app&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;cp -r /Applications/nwjs.app /Applications/myapp.app
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Copy &lt;code&gt;.nw&lt;/code&gt; file into myapp.app bundle&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;cp ../nwjs-playground.nw /Applications/myapp.app/Contents/Resources/app.nw
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+</item>
     
     <item>
-      <title>Nodemailer</title>
-      <link>https://brianpfeil.com/post/nodemailer/</link>
-      <pubDate>Sat, 06 Dec 2014 00:00:00 -0500</pubDate>
+<title>Nodemailer</title>
+<link>https://brianpfeil.com/post/nodemailer/</link>
+<pubDate>Sat, 06 Dec 2014 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/nodemailer/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/nodemailer-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/nodemailer-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Playground for exploring the use of &lt;a href=&#34;http://www.nodemailer.com/&#34;&gt;Nodemailer&lt;/a&gt; to send email&lt;/p&gt;
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+&lt;p&gt;Update &lt;code&gt;index.js&lt;/code&gt; with email password before running.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install
+npm start OR node index.js
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+</item>
     
   </channel>
 </rss>

@@ -1,29 +1,179 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>PHP on Brian Pfeil</title>
-    <link>https://brianpfeil.com/categories/PHP/</link>
-    <description>Recent content in PHP on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 13 Jul 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/categories/PHP/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PHP on Brian Pfeil</title>
+        <link>https://brianpfeil.com/categories/PHP/</link>
+        <description>Recent content in PHP on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 13 Jul 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/categories/PHP/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Bref PHP Lambda</title>
-      <link>https://brianpfeil.com/post/bref-php-lambda/</link>
-      <pubDate>Mon, 13 Jul 2020 00:00:00 -0400</pubDate>
+<title>Bref PHP Lambda</title>
+<link>https://brianpfeil.com/post/bref-php-lambda/</link>
+<pubDate>Mon, 13 Jul 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/bref-php-lambda/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/bref-php-lambda-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/bref-php-lambda-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://bref.sh/&#34;&gt;bref&lt;/a&gt;, deploy and run serverless PHP applications&lt;/p&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.php.net/&#34;&gt;PHP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.serverless.com/&#34;&gt;serverless framework&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install&lt;/span&gt;
+composer require bref/bref
+
+&lt;span class=&#34;c1&#34;&gt;# init&lt;/span&gt;
+vendor/bin/bref init
+
+&lt;span class=&#34;c1&#34;&gt;# edit `index.php`&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# deploy&lt;/span&gt;
+serverless deploy
+
+&lt;span class=&#34;c1&#34;&gt;# test / invoke&lt;/span&gt;
+serverless invoke -f &lt;span class=&#34;s2&#34;&gt;&amp;#34;function&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# test / invoke with event data&lt;/span&gt;
+serverless invoke --function &lt;span class=&#34;s2&#34;&gt;&amp;#34;function&amp;#34;&lt;/span&gt; --data &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;name&amp;#34;: &amp;#34;foo&amp;#34;}&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://bref.sh/docs/installation.html&#34;&gt;bref | Installation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>Wordpress</title>
-      <link>https://brianpfeil.com/post/wordpress/</link>
-      <pubDate>Tue, 22 Oct 2019 00:00:00 -0400</pubDate>
+<title>Wordpress</title>
+<link>https://brianpfeil.com/post/wordpress/</link>
+<pubDate>Tue, 22 Oct 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/wordpress/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/wordpress-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/wordpress-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn and experiment with all things &lt;a href=&#34;https://wordpress.com/&#34;&gt;WordPress&lt;/a&gt; and &lt;a href=&#34;https://wpvip.com/&#34;&gt;WordPress VIP&lt;/a&gt; (aka Enterprise WordPress)&lt;/p&gt;
+&lt;h2 id=&#34;running-using-docker-compose&#34;&gt;Running using Docker Compose&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ensure docker is up and running&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# start&lt;/span&gt;
+docker-compose up -d
+
+&lt;span class=&#34;c1&#34;&gt;# admin ui (login: admin/password01)&lt;/span&gt;
+open http://localhost:8000/wp-admin
+
+&lt;span class=&#34;c1&#34;&gt;# site&lt;/span&gt;
+open http://localhost:8000
+
+&lt;span class=&#34;c1&#34;&gt;# root rest api routes&lt;/span&gt;
+curl http://localhost:8000/index.php?rest_route&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/ &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq &lt;span class=&#34;s1&#34;&gt;&amp;#39;.&amp;#39;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# rest api routes&lt;/span&gt;
+curl http://localhost:8000/&lt;span class=&#34;se&#34;&gt;\?&lt;/span&gt;rest_route&lt;span class=&#34;se&#34;&gt;\=&lt;/span&gt;/wp/v2 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq &lt;span class=&#34;s1&#34;&gt;&amp;#39;.&amp;#39;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# rest api posts example&lt;/span&gt;
+curl http://localhost:8000/?rest_route&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/wp/v2/posts &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq &lt;span class=&#34;s1&#34;&gt;&amp;#39;.&amp;#39;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# stop&lt;/span&gt;
+docker-compose down
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;extending-wp-rest-api--adding-custom-endpoints--custom-plugin-example&#34;&gt;Extending WP REST API | Adding Custom Endpoints | Custom Plugin Example&lt;/h2&gt;
+&lt;p&gt;based on &lt;a href=&#34;https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/&#34;&gt;Adding Custom Endpoints&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;create &lt;a href=&#34;wp-root/wp-content/plugins/myplugin.php&#34;&gt;&lt;code&gt;wp-root/wp-content/plugins/myplugin.php&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;if needed, copy to &amp;ldquo;live&amp;rdquo; plugins directory&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;cp wp-root/wp-content/plugins/myplugin.php html/wp-content/plugins/myplugin.php
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;activate via Admin | Plugins
+&lt;img src=&#34;assets/images/admin-plugin-01.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;access custom endpoint &lt;a href=&#34;http://localhost:8000/index.php?rest_route=/myplugin/v1/author/1&#34;&gt;http://localhost:8000/index.php?rest_route=/myplugin/v1/author/1&lt;/a&gt;
+&lt;img src=&#34;assets/images/custom-endpoint-response-json.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;running-using-vvv-varying-vagrant-vagrantshttpsvaryingvagrantvagrantsorg&#34;&gt;Running using &lt;a href=&#34;https://varyingvagrantvagrants.org/&#34;&gt;VVV (Varying Vagrant Vagrants)&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;setup&#34;&gt;Setup&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;install &lt;a href=&#34;https://varyingvagrantvagrants.org/docs/en-US/installation/software-requirements/&#34;&gt;System Requirements&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;execute &lt;a href=&#34;https://varyingvagrantvagrants.org/docs/en-US/installation/&#34;&gt;Installation&lt;/a&gt; steps&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;running&#34;&gt;Running&lt;/h3&gt;
+&lt;p&gt;root directory path &lt;code&gt;~/vagrant-local&lt;/code&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;vagrant up&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;add VirtualBox port mappings &lt;code&gt;0.0.0.0:80 -&amp;gt; 80&lt;/code&gt;
+&lt;img src=&#34;assets/images/Port_Forwarding_Rules_and_vagrant-local_39d50a0a4d6_-_Network_and_Oracle_VM_VirtualBox_Manager.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;update &lt;code&gt;/etc/hosts&lt;/code&gt; to point to &lt;code&gt;127.0.0.1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo sed -i.bu &#39;s/192.168.50.4/127.0.0.1/g&#39; /etc/hosts&lt;/code&gt;
+&lt;img src=&#34;assets/images/hosts_%E2%80%94_notes.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;visit &lt;a href=&#34;http://vvv.test&#34;&gt;http://vvv.test&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Shouldn&amp;rsquo;t need to do the &lt;code&gt;/etc/hosts&lt;/code&gt; and VirtualBox port mapping steps.  This is a workaround to deal with an iss where macOS ignores the entries added by the &lt;code&gt;vagrant-hostsupdater&lt;/code&gt; plugin in &lt;code&gt;/etc/hosts&lt;/code&gt; file.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;stopping&#34;&gt;stopping&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;vagrant halt&lt;/code&gt;
+&lt;blockquote&gt;
+&lt;p&gt;this removes &lt;code&gt;/etc/hosts&lt;/code&gt; entries&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;changes&#34;&gt;Changes&lt;/h3&gt;
+&lt;h4 id=&#34;allow-logging-in-to-a-wp-vip-site-eg-httpwp-vip-sitewp-admin-with-admin--password&#34;&gt;Allow logging in to a WP VIP site (e.g. &lt;a href=&#34;http://WP-VIP-SITE/wp-admin&#34;&gt;http://WP-VIP-SITE/wp-admin&lt;/a&gt;) with admin / password.&lt;/h4&gt;
+&lt;p&gt;changed &lt;code&gt;wpcom_vip_is_restricted_username&lt;/code&gt; @ &lt;code&gt;WP-VIP-SITE/public_html/wp-content/mu-plugins/security.php&lt;/code&gt; to&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;wpcom_vip_is_restricted_username&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$username&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;c1&#34;&gt;// return &amp;#39;admin&amp;#39; === $username
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;c1&#34;&gt;// 	|| WPCOM_VIP_MACHINE_USER_LOGIN === $username
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;c1&#34;&gt;// 	|| WPCOM_VIP_MACHINE_USER_EMAIL === $username;
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;remove-vip_maintenance_mode-not-defined-error-message-showing-in-wp-admin-and-site-uis&#34;&gt;Remove &lt;code&gt;VIP_MAINTENANCE_MODE&lt;/code&gt; not defined error message showing in wp-admin and site UIs&lt;/h4&gt;
+&lt;p&gt;added the following to &lt;code&gt;WP-VIP-SITE/public_html/wp-content/client-mu-plugins/plugin-loader.php&lt;/code&gt; to get rid of
+&lt;code&gt;VIP_MAINTENANCE_MODE&lt;/code&gt; not defined error message showing in wp-admin and site UIs.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;nx&#34;&gt;define&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;VIP_MAINTENANCE_MODE&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;false&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.docker.com/compose/wordpress/&#34;&gt;Quickstart: Compose and WordPress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wpvip.com/documentation/&#34;&gt;WordPress VIP Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.wordpress.org/rest-api/&#34;&gt;WordPress | REST API Handbook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.wordpress.org/block-editor/&#34;&gt;Block Editor Handbook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/WordPress/gutenberg&#34;&gt;WordPress/gutenberg&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/WordPress/gutenberg/blob/master/packages/block-library/README.md&#34;&gt;packages/block-library&lt;/a&gt; - Block library for the WordPress editor.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wordpress.github.io/gutenberg/?path=/story/docs-introduction--page&#34;&gt;WordPress Storybook site&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.wordpress.org/&#34;&gt;developer.wordpress.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://codex.wordpress.org/&#34;&gt;codex.wordpress.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/&#34;&gt;Adding Custom Endpoints&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.wpgraphql.com/&#34;&gt;WPGraphQL&lt;/a&gt; - graphql API for WP&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Automattic/vip-go-mu-plugins&#34;&gt;Automattic/vip-go-mu-plugins&lt;/a&gt; - The development repo for mu-plugins used on the VIP Go platform.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Automattic/vip-go-mu-plugins-built&#34;&gt;Automattic/vip-go-mu-plugins-built&lt;/a&gt; - The generated repo for mu-plugins used on the VIP Go platform&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.wordpress.org/themes/advanced-topics/child-themes/&#34;&gt;Theme Handbook / Advanced Theme Topics / Child Themes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
   </channel>
 </rss>

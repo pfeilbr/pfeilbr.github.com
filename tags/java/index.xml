@@ -1,29 +1,70 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>java on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/java/</link>
-    <description>Recent content in java on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 27 Oct 2019 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>java on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/java/</link>
+        <description>Recent content in java on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 27 Oct 2019 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Serverless Lambda Java</title>
-      <link>https://brianpfeil.com/post/serverless-lambda-java/</link>
-      <pubDate>Sun, 27 Oct 2019 00:00:00 -0400</pubDate>
+<title>Serverless Lambda Java</title>
+<link>https://brianpfeil.com/post/serverless-lambda-java/</link>
+<pubDate>Sun, 27 Oct 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-lambda-java/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/serverless-lambda-java-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/serverless-lambda-java-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href=&#34;https://serverless.com/&#34;&gt;serverless framework&lt;/a&gt; + &lt;a href=&#34;https://docs.aws.amazon.com/lambda/latest/dg/java-programming-model.html&#34;&gt;lambda java&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;build-and-deploy&#34;&gt;Build and Deploy&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/projects/serverless-lambda-java-playground
+serverless create --template aws-java-maven
+mvn clean install
+sls deploy --verbose
+sls invoke --function hello --data &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;msg&amp;#34;: &amp;#34;hello&amp;#34;}&amp;#39;&lt;/span&gt; --log
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;statusCode&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;body&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;{\&amp;#34;message\&amp;#34;:\&amp;#34;Go Serverless v1.x! Your function executed successfully!\&amp;#34;,\&amp;#34;input\&amp;#34;:{}}&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;headers&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;#34;X-Powered-By&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;AWS Lambda &amp;amp; serverless&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;isBase64Encoded&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://serverless.com/blog/how-to-create-a-rest-api-in-java-using-dynamodb-and-serverless/&#34;&gt;How to create a REST API in Java using DynamoDB and Serverless&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>Intellij Maven App</title>
-      <link>https://brianpfeil.com/post/intellij-maven-app/</link>
-      <pubDate>Wed, 14 Aug 2019 00:00:00 -0400</pubDate>
+<title>Intellij Maven App</title>
+<link>https://brianpfeil.com/post/intellij-maven-app/</link>
+<pubDate>Wed, 14 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/intellij-maven-app/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/intellij-maven-app-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/intellij-maven-app-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;example of IntelliJ Maven App&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://maven.apache.org/plugins/maven-assembly-plugin/usage.html&#34;&gt;Apache Maven Assembly Plugin / Usage&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# clean&lt;/span&gt;
+mvn clean
+
+&lt;span class=&#34;c1&#34;&gt;# package with all dependencies and make .jar executable&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# see `pom.xml` for details&lt;/span&gt;
+mvn package
+
+&lt;span class=&#34;c1&#34;&gt;# run jar&lt;/span&gt;
+java -jar ./target/app01-1.0-SNAPSHOT-jar-with-dependencies.jar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
   </channel>
 </rss>

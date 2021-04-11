@@ -1,74 +1,265 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>framework on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/framework/</link>
-    <description>Recent content in framework on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 01 Sep 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/framework/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>framework on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/framework/</link>
+        <description>Recent content in framework on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 01 Sep 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/framework/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Antd React</title>
-      <link>https://brianpfeil.com/post/antd-react/</link>
-      <pubDate>Tue, 01 Sep 2020 00:00:00 -0400</pubDate>
+<title>Antd React</title>
+<link>https://brianpfeil.com/post/antd-react/</link>
+<pubDate>Tue, 01 Sep 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/antd-react/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/antd-react-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/antd-react-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://ant.design/&#34;&gt;Ant Design (antd)&lt;/a&gt; for &lt;a href=&#34;https://reactjs.org/&#34;&gt;React&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;files-and-directories&#34;&gt;Files and Directories&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;src/App.js&#34;&gt;&lt;code&gt;src/App.js&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;src/App.css&#34;&gt;&lt;code&gt;src/App.css&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ant.design/docs/react/use-with-create-react-app&#34;&gt;Use in create-react-app - Ant Design&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;This project was bootstrapped with &lt;a href=&#34;https://github.com/facebook/create-react-app&#34;&gt;Create React App&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;available-scripts&#34;&gt;Available Scripts&lt;/h2&gt;
+&lt;p&gt;In the project directory, you can run:&lt;/p&gt;
+&lt;h3 id=&#34;yarn-start&#34;&gt;&lt;code&gt;yarn start&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Runs the app in the development mode.&lt;br /&gt;
+Open &lt;a href=&#34;http://localhost:3000&#34;&gt;http://localhost:3000&lt;/a&gt; to view it in the browser.&lt;/p&gt;
+&lt;p&gt;The page will reload if you make edits.&lt;br /&gt;
+You will also see any lint errors in the console.&lt;/p&gt;
+&lt;h3 id=&#34;yarn-test&#34;&gt;&lt;code&gt;yarn test&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Launches the test runner in the interactive watch mode.&lt;br /&gt;
+See the section about &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/running-tests&#34;&gt;running tests&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;h3 id=&#34;yarn-build&#34;&gt;&lt;code&gt;yarn build&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Builds the app for production to the &lt;code&gt;build&lt;/code&gt; folder.&lt;br /&gt;
+It correctly bundles React in production mode and optimizes the build for the best performance.&lt;/p&gt;
+&lt;p&gt;The build is minified and the filenames include the hashes.&lt;br /&gt;
+Your app is ready to be deployed!&lt;/p&gt;
+&lt;p&gt;See the section about &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/deployment&#34;&gt;deployment&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;h3 id=&#34;yarn-eject&#34;&gt;&lt;code&gt;yarn eject&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Note: this is a one-way operation. Once you &lt;code&gt;eject&lt;/code&gt;, you can’t go back!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you aren’t satisfied with the build tool and configuration choices, you can &lt;code&gt;eject&lt;/code&gt; at any time. This command will remove the single build dependency from your project.&lt;/p&gt;
+&lt;p&gt;Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except &lt;code&gt;eject&lt;/code&gt; will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.&lt;/p&gt;
+&lt;p&gt;You don’t have to ever use &lt;code&gt;eject&lt;/code&gt;. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.&lt;/p&gt;
+&lt;h2 id=&#34;learn-more&#34;&gt;Learn More&lt;/h2&gt;
+&lt;p&gt;You can learn more in the &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/getting-started&#34;&gt;Create React App documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To learn React, check out the &lt;a href=&#34;https://reactjs.org/&#34;&gt;React documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;code-splitting&#34;&gt;Code Splitting&lt;/h3&gt;
+&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/code-splitting&#34;&gt;https://facebook.github.io/create-react-app/docs/code-splitting&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;analyzing-the-bundle-size&#34;&gt;Analyzing the Bundle Size&lt;/h3&gt;
+&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size&#34;&gt;https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;making-a-progressive-web-app&#34;&gt;Making a Progressive Web App&lt;/h3&gt;
+&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app&#34;&gt;https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;advanced-configuration&#34;&gt;Advanced Configuration&lt;/h3&gt;
+&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/advanced-configuration&#34;&gt;https://facebook.github.io/create-react-app/docs/advanced-configuration&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;deployment&#34;&gt;Deployment&lt;/h3&gt;
+&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/deployment&#34;&gt;https://facebook.github.io/create-react-app/docs/deployment&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;yarn-build-fails-to-minify&#34;&gt;&lt;code&gt;yarn build&lt;/code&gt; fails to minify&lt;/h3&gt;
+&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify&#34;&gt;https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify&lt;/a&gt;&lt;/p&gt;
+</description>
+</item>
     
     <item>
-      <title>TailwindCSS</title>
-      <link>https://brianpfeil.com/post/tailwindcss/</link>
-      <pubDate>Thu, 16 Jan 2020 00:00:00 -0500</pubDate>
+<title>TailwindCSS</title>
+<link>https://brianpfeil.com/post/tailwindcss/</link>
+<pubDate>Thu, 16 Jan 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/tailwindcss/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/tailwindcss-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/tailwindcss-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://tailwindcss.com/&#34;&gt;tailwindcss&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://dev.to/hagnerd/setting-up-tailwind-with-create-react-app-4jd&#34;&gt;https://dev.to/hagnerd/setting-up-tailwind-with-create-react-app-4jd&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;create-react-app README.md below&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;This project was bootstrapped with &lt;a href=&#34;https://github.com/facebook/create-react-app&#34;&gt;Create React App&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;available-scripts&#34;&gt;Available Scripts&lt;/h2&gt;
+&lt;p&gt;In the project directory, you can run:&lt;/p&gt;
+&lt;h3 id=&#34;yarn-start&#34;&gt;&lt;code&gt;yarn start&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Runs the app in the development mode.&lt;br /&gt;
+Open &lt;a href=&#34;http://localhost:3000&#34;&gt;http://localhost:3000&lt;/a&gt; to view it in the browser.&lt;/p&gt;
+&lt;p&gt;The page will reload if you make edits.&lt;br /&gt;
+You will also see any lint errors in the console.&lt;/p&gt;
+&lt;h3 id=&#34;yarn-test&#34;&gt;&lt;code&gt;yarn test&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Launches the test runner in the interactive watch mode.&lt;br /&gt;
+See the section about &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/running-tests&#34;&gt;running tests&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;h3 id=&#34;yarn-build&#34;&gt;&lt;code&gt;yarn build&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Builds the app for production to the &lt;code&gt;build&lt;/code&gt; folder.&lt;br /&gt;
+It correctly bundles React in production mode and optimizes the build for the best performance.&lt;/p&gt;
+&lt;p&gt;The build is minified and the filenames include the hashes.&lt;br /&gt;
+Your app is ready to be deployed!&lt;/p&gt;
+&lt;p&gt;See the section about &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/deployment&#34;&gt;deployment&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;h3 id=&#34;yarn-eject&#34;&gt;&lt;code&gt;yarn eject&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Note: this is a one-way operation. Once you &lt;code&gt;eject&lt;/code&gt;, you can’t go back!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you aren’t satisfied with the build tool and configuration choices, you can &lt;code&gt;eject&lt;/code&gt; at any time. This command will remove the single build dependency from your project.&lt;/p&gt;
+&lt;p&gt;Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except &lt;code&gt;eject&lt;/code&gt; will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.&lt;/p&gt;
+&lt;p&gt;You don’t have to ever use &lt;code&gt;eject&lt;/code&gt;. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.&lt;/p&gt;
+&lt;h2 id=&#34;learn-more&#34;&gt;Learn More&lt;/h2&gt;
+&lt;p&gt;You can learn more in the &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/getting-started&#34;&gt;Create React App documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To learn React, check out the &lt;a href=&#34;https://reactjs.org/&#34;&gt;React documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;code-splitting&#34;&gt;Code Splitting&lt;/h3&gt;
+&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/code-splitting&#34;&gt;https://facebook.github.io/create-react-app/docs/code-splitting&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;analyzing-the-bundle-size&#34;&gt;Analyzing the Bundle Size&lt;/h3&gt;
+&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size&#34;&gt;https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;making-a-progressive-web-app&#34;&gt;Making a Progressive Web App&lt;/h3&gt;
+&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app&#34;&gt;https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;advanced-configuration&#34;&gt;Advanced Configuration&lt;/h3&gt;
+&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/advanced-configuration&#34;&gt;https://facebook.github.io/create-react-app/docs/advanced-configuration&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;deployment&#34;&gt;Deployment&lt;/h3&gt;
+&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/deployment&#34;&gt;https://facebook.github.io/create-react-app/docs/deployment&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;yarn-build-fails-to-minify&#34;&gt;&lt;code&gt;yarn build&lt;/code&gt; fails to minify&lt;/h3&gt;
+&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify&#34;&gt;https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify&lt;/a&gt;&lt;/p&gt;
+</description>
+</item>
     
     <item>
-      <title>KeystoneJS</title>
-      <link>https://brianpfeil.com/post/keystonejs/</link>
-      <pubDate>Thu, 20 Oct 2016 00:00:00 -0400</pubDate>
+<title>KeystoneJS</title>
+<link>https://brianpfeil.com/post/keystonejs/</link>
+<pubDate>Thu, 20 Oct 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/keystonejs/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/keystonejs-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/keystonejs-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Learn and experiment with &lt;a href=&#34;http://keystonejs.com/&#34;&gt;KeystoneJS&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;install-and-run&#34;&gt;Install and Run&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ npm install
+
+&lt;span class=&#34;c1&#34;&gt;# create dir for mongodb files&lt;/span&gt;
+$ mkdir -p data/db
+
+&lt;span class=&#34;c1&#34;&gt;# start mongodb&lt;/span&gt;
+$ mongod --dbpath data/db &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# start webapp&lt;/span&gt;
+$ node keystone.js
+
+&lt;span class=&#34;c1&#34;&gt;# visit http://localhost:3000/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Admin Login&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Email: brian.pfeil@gmail.com
+Password: admin
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+</item>
     
     <item>
-      <title>Phaser</title>
-      <link>https://brianpfeil.com/post/phaser/</link>
-      <pubDate>Tue, 02 Aug 2016 00:00:00 -0400</pubDate>
+<title>Phaser</title>
+<link>https://brianpfeil.com/post/phaser/</link>
+<pubDate>Tue, 02 Aug 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/phaser/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/phaser-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/phaser-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;project to learn the &lt;a href=&#34;http://phaser.io/&#34;&gt;Phaser&lt;/a&gt; HTML5 game framework&lt;/p&gt;
+&lt;h2 id=&#34;stackem-game&#34;&gt;stackem game&lt;/h2&gt;
+&lt;p&gt;Simple drop and stack game&lt;/p&gt;
+&lt;p&gt;Play @ &lt;a href=&#34;https://pfeilbr.github.io/phaser-playground/&#34;&gt;https://pfeilbr.github.io/phaser-playground/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;developing&#34;&gt;Developing&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# start live reload server&lt;/span&gt;
+live-server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
     <item>
-      <title>Angular2</title>
-      <link>https://brianpfeil.com/post/angular2/</link>
-      <pubDate>Wed, 13 Jan 2016 00:00:00 -0500</pubDate>
+<title>Angular2</title>
+<link>https://brianpfeil.com/post/angular2/</link>
+<pubDate>Wed, 13 Jan 2016 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/angular2/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/angular2-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/angular2-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Project to learn and experiment with &lt;a href=&#34;http://angular.io&#34;&gt;Angular2&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;running&#34;&gt;Running&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ npm install
+$ npm start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;make changes and page will live reload&lt;/p&gt;
+</description>
+</item>
     
     <item>
-      <title>NWjs</title>
-      <link>https://brianpfeil.com/post/nwjs/</link>
-      <pubDate>Sun, 15 Feb 2015 00:00:00 -0500</pubDate>
+<title>NWjs</title>
+<link>https://brianpfeil.com/post/nwjs/</link>
+<pubDate>Sun, 15 Feb 2015 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/nwjs/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/nwjs-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/nwjs-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;nwjshttpnwjsio-playground&#34;&gt;&lt;a href=&#34;http://nwjs.io&#34;&gt;NW.js&lt;/a&gt; playground&lt;/h1&gt;
+&lt;p&gt;Project to learn and experiment with &lt;a href=&#34;http://nwjs.io&#34;&gt;NW.js&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;NW.js enables the creation of cross platform desktop applications.  Your UI is built with standard html, js, and css technologies.  Access to the underlying desktop OS capabilites are provided by giving you access to &lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt;.  You can use the Node.js core modules plus any of the 3rd party &lt;a href=&#34;https://www.npmjs.com/&#34;&gt;NPM&lt;/a&gt; modules;&lt;/p&gt;
+&lt;h2 id=&#34;installing-nwjs&#34;&gt;Installing NW.js&lt;/h2&gt;
+&lt;p&gt;Download and unpack nwjs app for your platform from &lt;a href=&#34;http://nwjs.io&#34;&gt;http://nwjs.io&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;On OSX you&amp;rsquo;ll end up with &lt;code&gt;/Applications/nwjs.app&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;developing-your-app&#34;&gt;Developing Your App&lt;/h2&gt;
+&lt;p&gt;create &lt;code&gt;index.html&lt;/code&gt; and &lt;code&gt;package.json&lt;/code&gt; files&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;see &lt;a href=&#34;https://github.com/nwjs/nw.js#quick-start&#34;&gt;nw.js quick-start&lt;/a&gt; for details&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This app is a minimal example with an added &lt;code&gt;app.js&lt;/code&gt; file for javascript.  It&amp;rsquo;s sets the &lt;code&gt;document.body&lt;/code&gt; to &lt;code&gt;&#39;Hello There&#39;&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;p&gt;Create alias in &lt;code&gt;~/.bash_profile&lt;/code&gt;to ease the use from terminal&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# alias to nw&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;nw&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/Applications/nwjs.app/Contents/MacOS/nwjs&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/projects/nwjs-playground
+nw .
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;packaging-as-app-on-osx&#34;&gt;Packaging as app on OSX&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Create &lt;code&gt;.nw&lt;/code&gt; file&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/projects/nwjs-playground
+zip -r ../&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PWD&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;##*/&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;.nw *
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;.nw&lt;/code&gt; file will be created along side the project directory&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;make copy of &lt;code&gt;nwjs.app&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;cp -r /Applications/nwjs.app /Applications/myapp.app
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Copy &lt;code&gt;.nw&lt;/code&gt; file into myapp.app bundle&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;cp ../nwjs-playground.nw /Applications/myapp.app/Contents/Resources/app.nw
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+</item>
     
     <item>
-      <title>Kendo UI</title>
-      <link>https://brianpfeil.com/post/kendo-ui/</link>
-      <pubDate>Sat, 02 Aug 2014 00:00:00 -0400</pubDate>
+<title>Kendo UI</title>
+<link>https://brianpfeil.com/post/kendo-ui/</link>
+<pubDate>Sat, 02 Aug 2014 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/kendo-ui/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/kendo-ui-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/kendo-ui-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Place to play around and learn &lt;a href=&#34;http://www.telerik.com/kendo-ui&#34;&gt;Kendo UI&lt;/a&gt;&lt;/p&gt;
+</description>
+</item>
     
   </channel>
 </rss>

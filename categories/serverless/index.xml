@@ -1,20 +1,188 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>serverless on Brian Pfeil</title>
-    <link>https://brianpfeil.com/categories/serverless/</link>
-    <description>Recent content in serverless on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/categories/serverless/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>serverless on Brian Pfeil</title>
+        <link>https://brianpfeil.com/categories/serverless/</link>
+        <description>Recent content in serverless on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 20 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/categories/serverless/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Serverless Architecture: Key Service Considerations</title>
-      <link>https://brianpfeil.com/post/serverless-architecture-key-considerations-per-service/</link>
-      <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
+<title>Serverless Architecture: Key Service Considerations</title>
+<link>https://brianpfeil.com/post/serverless-architecture-key-considerations-per-service/</link>
+<pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-architecture-key-considerations-per-service/</guid>
-      <description>Key service considerations and configuration options for a serverless architecture</description>
-    </item>
+<description>&lt;p&gt;A serverless architecture is &amp;ldquo;typically&amp;rdquo; composed of many services.  The following
+covers the key considerations and configuration options for the &lt;em&gt;most common&lt;/em&gt; AWS services leveraged for serverless architectures.&lt;/p&gt;
+&lt;hr&gt;
+&lt;!-- TOC --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#relevant-patterns&#34;&gt;Relevant Patterns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#lambda&#34;&gt;Lambda&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sns&#34;&gt;SNS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sqs&#34;&gt;SQS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#kinesis&#34;&gt;Kinesis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#eventbridge&#34;&gt;EventBridge&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#dynamodb&#34;&gt;DynamoDB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#step-functions&#34;&gt;Step Functions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#api-gateway&#34;&gt;API Gateway&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cloudfront&#34;&gt;CloudFront&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#route53&#34;&gt;Route53&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#global-accelerator&#34;&gt;Global Accelerator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#waf&#34;&gt;WAF&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- /TOC --&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;relevant-patterns&#34;&gt;Relevant Patterns&lt;/h3&gt;
+&lt;p&gt;common cloud native patterns to consider in the context of serverless architectures &lt;u&gt;of scale&lt;/u&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;event sourcing&lt;/li&gt;
+&lt;li&gt;circuit breaker - trip circuit to prevent downstream systems overload&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/builders-library/using-load-shedding-to-avoid-overload/&#34;&gt;load shedding&lt;/a&gt; - prevent backlog buildup&lt;/li&gt;
+&lt;li&gt;handle poison messages - prevent kinesis and dynamodb streams from progressing&lt;/li&gt;
+&lt;li&gt;prevent distributed transactions.  e.g. lambda send job to SQS and stores status in dynamodb.  break it up.  lambda put job status in dynamo -&amp;gt; dynamo stream -&amp;gt; lambda send job to SQS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;lambdahttpsawsamazoncomlambda&#34;&gt;&lt;a href=&#34;https://aws.amazon.com/lambda/&#34;&gt;Lambda&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;synchronous vs asynchronous vs poll based (poll based is sync) - impacts automatic retries, stuck messages due to poison message, etc.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;see &lt;a href=&#34;https://aws.amazon.com/blogs/architecture/understanding-the-different-ways-to-invoke-lambda-functions/&#34;&gt;Understanding the Different Ways to Invoke Lambda Functions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;if lambda is strictly a glue passthrough for API Gateway to call a backend AWS service, look to use &lt;a href=&#34;https://lumigo.io/blog/the-why-when-and-how-of-api-gateway-service-proxies/&#34;&gt;API Gateway Service Proxies&lt;/a&gt; to remove lambda.  simpler/cheaper/etc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;memory&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DLQ&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;lambda destinations (only for async invokes)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;reserved concurrency - concurrency allocated for a specific function. e.g. i always want fn X to be able to run 10 lambda invokes concurrently&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;provisioned concurrency - pre-warmed lambda instances / no cold starts.  good for latency sensitive needs&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;can optionally use auto scaling to adjust on based on metrics and/or schedule.&lt;/li&gt;
+&lt;li&gt;will spill over to on-demand scaling (lambda default)&lt;/li&gt;
+&lt;li&gt;Provisioned Concurrency comes out of your regional concurrency limit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;concurrent executions (throttles) - 1000 per account&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;timeout - 15min&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;set code timeouts based on remaining invocation time provided in context&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;burst concurrency - 500 - 3000&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;burst - 500 new instances / min&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;poll based options (kinesis, dynamodb, SQS)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;on-failure destination (SNS or SQS)&lt;/li&gt;
+&lt;li&gt;retry attempts&lt;/li&gt;
+&lt;li&gt;max age of record - use to implement load shedding (prioritize newer messages)&lt;/li&gt;
+&lt;li&gt;split batch on error&lt;/li&gt;
+&lt;li&gt;concurrent batches per shard&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;snshttpsawsamazoncomsns&#34;&gt;&lt;a href=&#34;https://aws.amazon.com/sns/&#34;&gt;SNS&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;fan out to address scale&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/kms/&#34;&gt;KMS&lt;/a&gt; to encrypt payloads&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sqshttpsawsamazoncomsqs&#34;&gt;&lt;a href=&#34;https://aws.amazon.com/sqs/&#34;&gt;SQS&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;batch size - batch fails as unit&lt;/li&gt;
+&lt;li&gt;visibility timeout - set to 6x lambda timeout&lt;/li&gt;
+&lt;li&gt;message retention period&lt;/li&gt;
+&lt;li&gt;delivery delay - max 15min&lt;/li&gt;
+&lt;li&gt;types - standard vs FIFO
+&lt;ul&gt;
+&lt;li&gt;standard - at least once delivery.  need to ensure idempotent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;alarm on queue depth&lt;/li&gt;
+&lt;li&gt;KMS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;kinesishttpsawsamazoncomkinesis&#34;&gt;&lt;a href=&#34;https://aws.amazon.com/kinesis/&#34;&gt;Kinesis&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;partition key - choose wisely as order is guaranteed per shard and pk determines the shard the message lands on&lt;/li&gt;
+&lt;li&gt;poison messages (retry until success - can cause backlog)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/kms/&#34;&gt;KMS&lt;/a&gt; to encrypt payloads&lt;/li&gt;
+&lt;li&gt;enhanced fan-out via AWS::Kinesis::StreamConsumer.  each consumer gets 2 MiB per second for every shard you subscribe to.  can subscribe a max of 5 consumers per stream.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;eventbridgehttpsawsamazoncomeventbridge&#34;&gt;&lt;a href=&#34;https://aws.amazon.com/eventbridge/&#34;&gt;EventBridge&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;put events - 2400 requests per second per region&lt;/li&gt;
+&lt;li&gt;invocation &lt;a href=&#34;https://docs.aws.amazon.com/eventbridge/latest/userguide/cloudwatch-limits-eventbridge.html&#34;&gt;quota&lt;/a&gt; -  4500 requests per second per region (invocation is an event matching a rule and being sent on to the rule’s targets)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;dynamodbhttpsawsamazoncomdynamodb&#34;&gt;&lt;a href=&#34;https://aws.amazon.com/dynamodb/&#34;&gt;DynamoDB&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;global tables - for resilient active-active architectures&lt;/li&gt;
+&lt;li&gt;throttles&lt;/li&gt;
+&lt;li&gt;streams - 24hr data retention.  poison messages (retry until success - can cause backlog)&lt;/li&gt;
+&lt;li&gt;partition key - distribute data among nodes to minimize hot partitions&lt;/li&gt;
+&lt;li&gt;TTL - can the data be removed automatically&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;step-functionshttpsawsamazoncomstep-functions&#34;&gt;&lt;a href=&#34;https://aws.amazon.com/step-functions/&#34;&gt;Step Functions&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Standard Workflows vs &lt;a href=&#34;https://aws.amazon.com/about-aws/whats-new/2019/12/introducing-aws-step-functions-express-workflows/&#34;&gt;Express Workflows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://theburningmonk.com/2017/07/applying-the-saga-pattern-with-aws-lambda-and-step-functions/&#34;&gt;saga&lt;/a&gt; pattern for rollback&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/new-step-functions-support-for-dynamic-parallelism/&#34;&gt;parallel map&lt;/a&gt; opportunities - run tasks in parallel&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;api-gatewayhttpsawsamazoncomapi-gateway&#34;&gt;&lt;a href=&#34;https://aws.amazon.com/api-gateway/&#34;&gt;API Gateway&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;REST API vs &lt;a href=&#34;https://aws.amazon.com/blogs/compute/announcing-http-apis-for-amazon-api-gateway/&#34;&gt;HTTP API&lt;/a&gt; (&lt;a href=&#34;https://aws.amazon.com/api-gateway/pricing/&#34;&gt;cheaper&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-caching.html&#34;&gt;caching&lt;/a&gt; - fixed cost based on time / no pay per use&lt;/li&gt;
+&lt;li&gt;throttles&lt;/li&gt;
+&lt;li&gt;timeout - 29s&lt;/li&gt;
+&lt;li&gt;auth - cognito, JWT, IAM (aws sigv4), custom lambda auth&lt;/li&gt;
+&lt;li&gt;OpenAPI specs for payload validation&lt;/li&gt;
+&lt;li&gt;service proxies - no need for lambda glue in middle&lt;/li&gt;
+&lt;li&gt;custom domains&lt;/li&gt;
+&lt;li&gt;websockets&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;cloudfronthttpsawsamazoncomcloudfront&#34;&gt;&lt;a href=&#34;https://aws.amazon.com/cloudfront/&#34;&gt;CloudFront&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html&#34;&gt;origin access identity&lt;/a&gt; to force traffic through CloudFront and removes direct access to S3 website domain URL&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html&#34;&gt;signed URLs or cookies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;lambda@edge - headers only requests, rewrite URLs, server-side rendering (SSR), auth, etc.&lt;/li&gt;
+&lt;li&gt;cache invalidations&lt;/li&gt;
+&lt;li&gt;non GET HTTP methods support.  must explicitly turn on support for PUT, POST, PATCH, etc.&lt;/li&gt;
+&lt;li&gt;WAF in front&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;route53httpsawsamazoncomroute53&#34;&gt;&lt;a href=&#34;https://aws.amazon.com/route53/&#34;&gt;Route53&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-geoproximity&#34;&gt;Geoproximity routing&lt;/a&gt; for global solutions serving multiple regions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;global-acceleratorhttpsawsamazoncomglobal-accelerator&#34;&gt;&lt;a href=&#34;https://aws.amazon.com/global-accelerator/&#34;&gt;Global Accelerator&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;uses the AWS global network to optimize the path from your users to your applications, improving the performance of your traffic by as much as 60%&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;wafhttpsawsamazoncomwaf&#34;&gt;&lt;a href=&#34;https://aws.amazon.com/waf/&#34;&gt;WAF&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;can put in front of API Gateway or CloudFront&lt;/li&gt;
+&lt;li&gt;API Gateway provides overlapping functionality with WAF.  Need to determine the appropriate service to use.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
   </channel>
 </rss>

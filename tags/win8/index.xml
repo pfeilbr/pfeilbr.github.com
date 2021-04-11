@@ -1,20 +1,80 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>win8 on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/win8/</link>
-    <description>Recent content in win8 on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 21 Sep 2011 23:12:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/tags/win8/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>win8 on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/win8/</link>
+        <description>Recent content in win8 on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 21 Sep 2011 23:12:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/tags/win8/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Metro UI: Initial Thoughts</title>
-      <link>https://brianpfeil.com/post/metro-ui-initial-thoughts/</link>
-      <pubDate>Wed, 21 Sep 2011 23:12:00 +0000</pubDate>
+<title>Metro UI: Initial Thoughts</title>
+<link>https://brianpfeil.com/post/metro-ui-initial-thoughts/</link>
+<pubDate>Wed, 21 Sep 2011 23:12:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/metro-ui-initial-thoughts/</guid>
-      <description>slick new UI overhaul for Windows</description>
-    </item>
+<description>&lt;p&gt;I&amp;rsquo;ve been digesting all the new information around Windows 8 and Metro over
+the past week. I&amp;rsquo;ve watched the &lt;a href=&#34;http://www.buildwindows.com/&#34;&gt;BUILD Conference&lt;/a&gt; &lt;a href=&#34;http://channel9.msdn.com/Events/BUILD/BUILD2011?t=metro%2Bstyle%2Bapp&#34;&gt;Channel 9 Videos&lt;/a&gt;,
+read the articles and docs on the &lt;a href=&#34;http://msdn.microsoft.com/en-us/windows/apps/&#34;&gt;Windows Dev Center&lt;/a&gt; and the &lt;a href=&#34;http://blogs.msdn.com/b/b8/&#34;&gt;Building Windows 8 blog&lt;/a&gt;. The best resource for your time
+on learning what Metro is all about from a design perspective is &lt;a href=&#34;http://channel9.msdn.com/Events/BUILD/BUILD2011/BPS-1004&#34;&gt;8 traits of great Metro style apps&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The Metro Style interface is a totally new and original approach to UI.
+Microsoft put a lot of thought into the design of it, and they demonstrated
+this by providing background during the BUILD sessions on how they studied how
+users held and used slate devices, what areas of the screen where reachable by
+their thumbs, etc.&lt;/p&gt;
+&lt;p&gt;The concept of dedicating all the available screen space to content with no
+chrome makes perfect sense. It doesn&amp;rsquo;t makes sense for all applications,
+especially those rich in functionality. For example, Microsoft showed
+Photoshop and it&amp;rsquo;s many tool palettes and menus, and it was clear that you
+wouldn&amp;rsquo;t make a Metro Style Photoshop app. Metro makes sense for &amp;ldquo;consumery&amp;rdquo;
+type apps like casual games, productivity apps, and rich media apps; the same
+things you see on an iPad or Android tablet. This is one of the reasons that
+they need to support &amp;ldquo;classic&amp;rdquo; windows app, and they can&amp;rsquo;t make a clean break
+to the Metro Style UI.&lt;/p&gt;
+&lt;p&gt;One potential problem with the immersive content, and no chrome approach is
+the lack of discoverability to take actions on the content. Metro relies
+heavily on gestures that take place at the edges of the screen. For example to
+display the charm bar, you place your finger off to the right of the screen
+where there isn&amp;rsquo;t any content and touch isn&amp;rsquo;t recognized then swipe in towards
+the center of the screen. Another example is the application bar at the bottom
+where you have to swipe up to summon it. Is a user gonna know to do this? Will
+devices come with an in-your-face tutorial on these things when you first boot
+it up?  There have been many studies that have proven if it&amp;rsquo;s out of site then
+users won&amp;rsquo;t discover it. For touch, there are only two gestures you should
+assume your users know, and that&amp;rsquo;s tap and swipe to scroll; everything else is
+power user territory.&lt;/p&gt;
+&lt;p&gt;There&amp;rsquo;s another issue around using a mouse in Metro. Microsoft made the
+statement that Metro is a natural fit for a mouse in addition to touch. I&amp;rsquo;ve
+been using the Developer Preview running in VMware, and using a mouse with
+Metro is very tedious. The level of indirection you have between the mouse and
+what happens on the screen makes the things that work well with touch feel
+like a large amount of effort. I actually resorted to using the &lt;a href=&#34;http://www.groovypost.com/groovytip/windows-8-metro-keyboard-shortcuts/&#34;&gt;windows 8 keyboard shortcuts&lt;/a&gt;.
+to activate the standard toolbars and menus because it was so painful. If the
+apps interaction is limited to clicks and/or keyboard input with no
+application bar, then the mouse could work, but that&amp;rsquo;s only gonna be a handful
+of apps.&lt;/p&gt;
+&lt;p&gt;The tiles interface for the home screen was very visually appealing in all the
+BUILD demos with nice typography, rich pictures, and pastel colors. This is
+great and demos well when Microsoft controls all the apps, but what happens
+when you have a whole community of app developers who have their own opinions
+on design and style building Metro apps. The app that doesn&amp;rsquo;t use a pastel
+color for their tile background, shows a poorly shot overexposed photo that
+the user took on their phone, uses an ugly icon, etc. There&amp;rsquo;s nothing from
+keeping people from doing this. Microsoft is aware of this and they emphasized
+many times in the BUILD sessions to use the templates they provide in Visual
+Studio 11. This is a problem on any platform, and it happens on iOS and
+Android, but the reason it&amp;rsquo;s a bigger issue for Metro is that it&amp;rsquo;s critical to
+have in place for the immersive experience. All you have is content. You don&amp;rsquo;t
+have standard chrome title bars and toolbars with a standard look and feel to
+make your app fit in. Content is everything, and if it&amp;rsquo;s poor, then it&amp;rsquo;ll
+stick out like a sore thumb.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s still early. Microsoft always previews things and gets them out early to
+users, so I&amp;rsquo;m sure there&amp;rsquo;ll be some tweaks. This is a big change for them, and
+the most recent thing as big as this has been there move into the game console
+space with XBox. Time will tell.&lt;/p&gt;
+</description>
+</item>
     
   </channel>
 </rss>

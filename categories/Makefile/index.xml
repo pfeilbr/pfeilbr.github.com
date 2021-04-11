@@ -1,38 +1,145 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Makefile on Brian Pfeil</title>
-    <link>https://brianpfeil.com/categories/Makefile/</link>
-    <description>Recent content in Makefile on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 20 Aug 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/categories/Makefile/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Makefile on Brian Pfeil</title>
+        <link>https://brianpfeil.com/categories/Makefile/</link>
+        <description>Recent content in Makefile on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 20 Aug 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/categories/Makefile/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AWS API Gateway AWS Service Integration</title>
-      <link>https://brianpfeil.com/post/aws-api-gateway-aws-service-integration/</link>
-      <pubDate>Thu, 20 Aug 2020 00:00:00 -0400</pubDate>
+<title>AWS API Gateway AWS Service Integration</title>
+<link>https://brianpfeil.com/post/aws-api-gateway-aws-service-integration/</link>
+<pubDate>Thu, 20 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-api-gateway-aws-service-integration/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-api-gateway-aws-service-integration-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-api-gateway-aws-service-integration-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;shows how an API Gateway endpoint can directly invoke an aws service like EventBridge, DynamoDB, etc.  No
+lambda in the middle (reduces latency and costs).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;HTTP REST APIs are the most common integration pattern.  API Gateway is AWS managed service for creating REST APIs.  It allows us to apply security, throttling, logging, etc. to our APIs.  In some cases an API is simply a passthrough to a backend AWS service.  The typical approach is to have API Gateway invoke a lambda, which then contains the code to call th target AWS service.  If you don&amp;rsquo;t need to perform any additional logic to the request prior to calling the backend AWS service, you may be able to use an API Gateway AWS service integration, which can directly invoke the AWS service.  This simplifies the architecture, reduces request latency and reduces costs.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Prerequisites&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/&#34;&gt;An AWS account&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/cli/latest/userguide/installing.html&#34;&gt;AWS Command Line Interface&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/serverless/sam/&#34;&gt;SAM CLI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Running&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# clone repo&lt;/span&gt;
+git clone https://github.com/pfeilbr/aws-api-gateway-aws-service-integration-playground
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; aws-api-gateway-aws-service-integration-playground
+
+&lt;span class=&#34;c1&#34;&gt;# deploy&lt;/span&gt;
+make deploy
+
+&lt;span class=&#34;c1&#34;&gt;# test&lt;/span&gt;
+make &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;example output&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Entries&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;EventId&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;58c635b4-21aa-09d8-0ad3-0874b7dc0a39&amp;#34;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;FailedEntryCount&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# teardown&lt;/span&gt;
+make teardown
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;details&#34;&gt;Details&lt;/h2&gt;
+&lt;p&gt;invoking the &lt;a href=&#34;https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutEvents.html&#34;&gt;EventBridge PutEvents&lt;/a&gt; action with the request payload using the &lt;code&gt;APIGatewayEventBridgeAccessRole&lt;/code&gt; role.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;Integration&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;Type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;AWS&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;Credentials&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;!&lt;span class=&#34;l&#34;&gt;GetAtt APIGatewayEventBridgeAccessRole.Arn&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;IntegrationHttpMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;POST&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;Uri&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;!&lt;span class=&#34;l&#34;&gt;Sub &amp;#34;arn:aws:apigateway:${AWS::Region}:events:action/PutEvents&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;setting the required headers to invoke the PutEvents action&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;RequestTemplates&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;application/json&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;sd&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;sd&#34;&gt;        $input.json(&amp;#34;$&amp;#34;)
+&lt;/span&gt;&lt;span class=&#34;sd&#34;&gt;        #set($context.requestOverride.header.X-Amz-Target =&amp;#34;AWSEvents.PutEvents&amp;#34;)
+&lt;/span&gt;&lt;span class=&#34;sd&#34;&gt;        #set($context.requestOverride.header.Content-Type =&amp;#34;application/x-amz-json-1.1&amp;#34;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/premiumsupport/knowledge-center/api-gateway-proxy-integrate-service/#:~:text=You%20can%20integrate%20many%20AWS,request%20parameters%20are%20correctly%20mapped.&#34;&gt;Use API Gateway as a Proxy for Another AWS Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ThijsJung/phrasebook-API/blob/64d62722976ed9350a935b474a10a0a49ae3348b/cloudformation/phrasebook.yaml#L40&#34;&gt;&lt;code&gt;AWS::ApiGateway::Method.Integration&lt;/code&gt;&lt;/a&gt; to dynamodb Query example&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutEvents.html&#34;&gt;PutEvents - Amazon EventBridge&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api&#34;&gt;CloudFormation Resources Generated By SAM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://forums.aws.amazon.com/thread.jspa?messageID=953197&amp;amp;#953197&#34;&gt;API Gateway integration problem&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>PHP Lambda Layer</title>
-      <link>https://brianpfeil.com/post/php-lambda-layer/</link>
-      <pubDate>Thu, 02 Jul 2020 00:00:00 -0400</pubDate>
+<title>PHP Lambda Layer</title>
+<link>https://brianpfeil.com/post/php-lambda-layer/</link>
+<pubDate>Thu, 02 Jul 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/php-lambda-layer/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/php-lambda-layer-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/php-lambda-layer-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://github.com/stackery/php-lambda-layer&#34;&gt;stackery/php-lambda-layer&lt;/a&gt; for running PHP on lambda&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Prerequisites&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.php.net/&#34;&gt;php&lt;/a&gt; 7.x&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://getcomposer.org/&#34;&gt;composer&lt;/a&gt; installed globally (used by makefile)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Key Files&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;src/php/index.php&#34;&gt;src/php/index.php&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;src/php/php.ini&#34;&gt;src/php/php.ini&lt;/a&gt; - for enabled extensions&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;template.yaml&#34;&gt;template.yaml&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;packaged.yaml&#34;&gt;packaged.yaml&lt;/a&gt; - &lt;em&gt;generated via sam&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Session&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;see &lt;a href=&#34;Makefile&#34;&gt;Makefile&lt;/a&gt; for details and make changes to variables as necessary.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# deploy stack&lt;/span&gt;
+make deploy
+
+&lt;span class=&#34;c1&#34;&gt;# test api gateway endpoint URL&lt;/span&gt;
+make &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# delete stack&lt;/span&gt;
+make delete
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/compute/introducing-the-new-serverless-lamp-stack/&#34;&gt;Introducing the new Serverless LAMP stack&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/compute/introducing-the-serverless-lamp-stack-part-2-relational-databases/&#34;&gt;Introducing the serverless LAMP stack – part 2 relational databases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/aws-samples/php-examples-for-aws-lambda&#34;&gt;aws-samples/php-examples-for-aws-lambda&lt;/a&gt; - github repo for article.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/apn/aws-lambda-custom-runtime-for-php-a-practical-example/&#34;&gt;AWS Lambda Custom Runtime for PHP: A Practical Example&lt;/a&gt; - &lt;em&gt;older article, but covers low level details&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/sdk-for-php/&#34;&gt;AWS SDK for PHP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>Make</title>
-      <link>https://brianpfeil.com/post/make/</link>
-      <pubDate>Mon, 13 Jan 2020 00:00:00 -0500</pubDate>
+<title>Make</title>
+<link>https://brianpfeil.com/post/make/</link>
+<pubDate>Mon, 13 Jan 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/make/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/make-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/make-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://www.gnu.org/software/make/manual/make.html&#34;&gt;make&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.gnu.org/software/make/manual/make.html&#34;&gt;GNU make manual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://learning.oreilly.com/library/view/the-gnu-make/9781457189883/ch01.html&#34;&gt;The GNU Make Book&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/2145590/what-is-the-purpose-of-phony-in-a-makefile&#34;&gt;purpose of .PHONY&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# run `make` whenever Makefile changes&lt;/span&gt;
+fswatch -o Makefile &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; xargs -n1 -I&lt;span class=&#34;o&#34;&gt;{}&lt;/span&gt; make
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
   </channel>
 </rss>

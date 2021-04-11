@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>web on Brian Pfeil</title>
-    <link>https://brianpfeil.com/categories/web/</link>
-    <description>Recent content in web on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 16 Sep 2012 02:43:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/categories/web/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>web on Brian Pfeil</title>
+        <link>https://brianpfeil.com/categories/web/</link>
+        <description>Recent content in web on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 16 Sep 2012 02:43:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/categories/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hosting Static Sites on Heroku</title>
-      <link>https://brianpfeil.com/post/hosting-static-sites-on-heroku/</link>
-      <pubDate>Sun, 16 Sep 2012 02:43:00 +0000</pubDate>
+<title>Hosting Static Sites on Heroku</title>
+<link>https://brianpfeil.com/post/hosting-static-sites-on-heroku/</link>
+<pubDate>Sun, 16 Sep 2012 02:43:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/hosting-static-sites-on-heroku/</guid>
-      <description>easy git push deployment of static sites on Heroku</description>
-    </item>
+<description>&lt;img src=&#34;images/heroku.jpg&#34; width=&#34;125px&#34;&gt;
+&lt;p&gt;I was recently creating a web site for a family member, and was looking around for the best place to host it.  It&amp;rsquo;s a simple personal site that only contains static content.  There are many options out there from the freebie wordpress options to rackspace and the like.  None of the &amp;ldquo;web publishing platform&amp;rdquo; type sites were a fit because I wanted full control over the layout, and look and feel of the site.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve been working with &lt;a href=&#34;http://heroku.com&#34;&gt;Heroku&lt;/a&gt; for my day job for web applications, and it&amp;rsquo;s been simple to get things up and running at no cost.  Heroku allows you to create a web application for free, and only if you need to scale to support the traffic do you have to pay.&lt;/p&gt;
+&lt;p&gt;One of the limitations of using the free plan with heroku is that if your app hasn&amp;rsquo;t recieved any traffic within an hour, it puts it into an idle state.  They call this &lt;a href=&#34;https://devcenter.heroku.com/articles/dynos&#34;&gt;dyno idling&lt;/a&gt;  and when a request comes in and your dyno is in an idle state, it has to spin it back up, and that takes time.  In my experience, I&amp;rsquo;ll go to hit the site and it takes approx. 5 seconds to respond.  It&amp;rsquo;s free, so I can understand when they do this to save on compute resources, and if you have pay / have multiple dynos, they never with idle your app.&lt;/p&gt;
+&lt;p&gt;To work around this you just need to have at least 1 request come in an hour.  There are many ways to do this, and I took the simple approach of using a monitoring service (&lt;a href=&#34;https://www.pingdom.com/&#34;&gt;pingdom&lt;/a&gt;) to check/ping the site for availability every 5 minutes.  You could also implement by using a background worker process.&lt;/p&gt;
+&lt;p&gt;There’s a great &lt;a href=&#34;https://devcenter.heroku.com/articles/static-sites-ruby&#34;&gt;Creating Static Sites in Ruby with Rack&lt;/a&gt; walkthrough on the heroku dev center that will have you up and running in few minutes. They provide a fully functional &lt;a href=&#34;https://github.com/leereilly/static-site-heroku-cedar-example&#34;&gt;sample application&lt;/a&gt; that you can modify to make you own.&lt;/p&gt;
+</description>
+</item>
     
   </channel>
 </rss>

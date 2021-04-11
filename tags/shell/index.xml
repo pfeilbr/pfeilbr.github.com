@@ -1,20 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>shell on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/shell/</link>
-    <description>Recent content in shell on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 13 Oct 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>shell on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/shell/</link>
+        <description>Recent content in shell on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 13 Oct 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Bash Shell Script</title>
-      <link>https://brianpfeil.com/post/bash-shell-script/</link>
-      <pubDate>Tue, 13 Oct 2020 00:00:00 -0400</pubDate>
+<title>Bash Shell Script</title>
+<link>https://brianpfeil.com/post/bash-shell-script/</link>
+<pubDate>Tue, 13 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/bash-shell-script/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/bash-shell-script-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/bash-shell-script-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn and experiment with &lt;a href=&#34;https://www.gnu.org/software/bash/&#34;&gt;bash&lt;/a&gt; shell scripts&lt;/p&gt;
+&lt;h2 id=&#34;development-workflow&#34;&gt;Development Workflow&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;main.sh&#34;&gt;&lt;code&gt;main.sh&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# re-run on changes to main.sh.  run in own shell / blocks&lt;/span&gt;
+make dev
+
+&lt;span class=&#34;c1&#34;&gt;# edit main.sh&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
   </channel>
 </rss>

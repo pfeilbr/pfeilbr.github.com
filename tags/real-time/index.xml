@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>real-time on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/real-time/</link>
-    <description>Recent content in real-time on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 21 Oct 2017 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/real-time/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>real-time on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/real-time/</link>
+        <description>Recent content in real-time on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 21 Oct 2017 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/real-time/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Pusher</title>
-      <link>https://brianpfeil.com/post/pusher/</link>
-      <pubDate>Sat, 21 Oct 2017 00:00:00 -0400</pubDate>
+<title>Pusher</title>
+<link>https://brianpfeil.com/post/pusher/</link>
+<pubDate>Sat, 21 Oct 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/pusher/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/pusher-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/pusher-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://pusher.com&#34;&gt;pusher&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;run-client&#34;&gt;Run Client&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://jsbin.com/modutol/edit?html,js,output&#34;&gt;https://jsbin.com/modutol/edit?html,js,output&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;server-triggered-event&#34;&gt;Server triggered event&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;node index.js
+&lt;span class=&#34;c1&#34;&gt;# this will cause alert with message in client web browser&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
   </channel>
 </rss>

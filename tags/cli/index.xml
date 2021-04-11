@@ -1,56 +1,237 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>cli on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/cli/</link>
-    <description>Recent content in cli on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 07 Jan 2021 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/tags/cli/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>cli on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/cli/</link>
+        <description>Recent content in cli on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 07 Jan 2021 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/tags/cli/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Click CLI</title>
-      <link>https://brianpfeil.com/post/click-cli/</link>
-      <pubDate>Thu, 07 Jan 2021 00:00:00 -0500</pubDate>
+<title>Click CLI</title>
+<link>https://brianpfeil.com/post/click-cli/</link>
+<pubDate>Thu, 07 Jan 2021 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/click-cli/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/click-cli-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/click-cli-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://click.palletsprojects.com/&#34;&gt;Click&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;a python package for creating beautiful command line interfaces in a composable way with as little code as necessary&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;see &lt;a href=&#34;main.py&#34;&gt;&lt;code&gt;main.py&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;pipenv install
+pipenv shell
+python main.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://click.palletsprojects.com/&#34;&gt;Click&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>GitHub CLI</title>
-      <link>https://brianpfeil.com/post/github-cli/</link>
-      <pubDate>Fri, 02 Oct 2020 00:00:00 -0400</pubDate>
+<title>GitHub CLI</title>
+<link>https://brianpfeil.com/post/github-cli/</link>
+<pubDate>Fri, 02 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/github-cli/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/github-cli-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/github-cli-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://cli.github.com/&#34;&gt;GitHub CLI&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://cli.github.com/&#34;&gt;GitHub CLI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cli.github.com/manual/&#34;&gt;GitHub CLI | Manual&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>Lumigo CLI</title>
-      <link>https://brianpfeil.com/post/lumigo-cli/</link>
-      <pubDate>Fri, 17 Jul 2020 00:00:00 -0400</pubDate>
+<title>Lumigo CLI</title>
+<link>https://brianpfeil.com/post/lumigo-cli/</link>
+<pubDate>Fri, 17 Jul 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/lumigo-cli/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/lumigo-cli-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/lumigo-cli-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/lumigo-io/lumigo-cli&#34;&gt;lumigo-CLI&lt;/a&gt; is a command line tool that contains a collection of helpful commands for working with AWS Lambda and the serverless AWS services it integrates with.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s an invaluable tool for serverless development on AWS.  It contains commands that let you work with individual services line sending messages to SNS, SQS, and Kinesis.  Tailing changes to CloudWatch Logs, DynamoDB, Kinesis, EventBridge, SNS, SQS.  Automatically tune lambda for the optimal memory configuration, measure lambda cold starts.&lt;/p&gt;
+&lt;p&gt;Easy to install via global npm package (&lt;code&gt;npm install lumigo-cli -g&lt;/code&gt;).&lt;/p&gt;
+&lt;h2 id=&#34;example-usage&#34;&gt;Example Usage&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# display contents of gzipped cloudfront log file to stdout&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# see S3 SQL reference @  https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-glacier-select-sql-reference-select.html&lt;/span&gt;
+lumigo-cli s3-select-batch &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  --region&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;us-east-1&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  --bucket&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;com.brianpfeil.cloudfront.logs&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  --prefix&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;brianpfeil.com/E2IL5HY5XTHLNW.2019-09-17-21.66bbda6b.gz&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  --expression&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;SELECT * FROM S3Object s&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  --fileType&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;CSV&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  --compressionType&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;GZIP&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# list Lambda functions in ALL regions&lt;/span&gt;
+lumigo-cli list-lambda
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
     <item>
-      <title>Azure CLI</title>
-      <link>https://brianpfeil.com/post/azure-cli/</link>
-      <pubDate>Tue, 14 May 2019 00:00:00 -0400</pubDate>
+<title>Azure CLI</title>
+<link>https://brianpfeil.com/post/azure-cli/</link>
+<pubDate>Tue, 14 May 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-cli/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/azure-cli-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/azure-cli-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;azure cli usage examples&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# version info&lt;/span&gt;
+az -v
+
+&lt;span class=&#34;c1&#34;&gt;# help&lt;/span&gt;
+az -h
+
+&lt;span class=&#34;c1&#34;&gt;# find examples&lt;/span&gt;
+az find &lt;span class=&#34;s2&#34;&gt;&amp;#34;az functionapp list&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# interactive login&lt;/span&gt;
+az login
+
+&lt;span class=&#34;c1&#34;&gt;# log in with a service principal using client secret.&lt;/span&gt;
+az login --service-principal -u http://azure-cli-2019-05-09-16-09-40 -p &lt;span class=&#34;s1&#34;&gt;&amp;#39;[CLIENT_SECRET_HERE]&amp;#39;&lt;/span&gt; --tenant brianpfeilgmail.onmicrosoft.com
+
+az &lt;span class=&#34;nb&#34;&gt;logout&lt;/span&gt;
+
+az account show
+az account show &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq &lt;span class=&#34;s1&#34;&gt;&amp;#39;.tenantId&amp;#39;&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;TENANT_ID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;az account show --query tenantId --output tsv&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+
+az account list
+az account get-access-token
+
+az account list-locations
+
+&lt;span class=&#34;c1&#34;&gt;# list account fields in table format&lt;/span&gt;
+az account list --output table --query &lt;span class=&#34;s1&#34;&gt;&amp;#39;[].{Name:name, SubscriptionId:id, TenantId:tenantId}&amp;#39;&lt;/span&gt;
+
+
+&lt;span class=&#34;c1&#34;&gt;# details of signed in user&lt;/span&gt;
+az ad signed-in-user show
+
+&lt;span class=&#34;c1&#34;&gt;# ad&lt;/span&gt;
+az ad -h
+
+&lt;span class=&#34;c1&#34;&gt;# ad service principals&lt;/span&gt;
+az ad sp -h
+
+&lt;span class=&#34;c1&#34;&gt;# create a service principal and configure its access to Azure&lt;/span&gt;
+az ad sp create-for-rbac
+
+&lt;span class=&#34;c1&#34;&gt;# list service principals&lt;/span&gt;
+az ad sp list
+
+&lt;span class=&#34;c1&#34;&gt;# list service principals with subset of properties&lt;/span&gt;
+az ad sp list --query &lt;span class=&#34;s2&#34;&gt;&amp;#34;[].{id:appId, tenant:appOwnerTenantId, name:displayName}&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# list role assignments for service principal&lt;/span&gt;
+az role assignment list --assignee &lt;span class=&#34;s1&#34;&gt;&amp;#39;http://azure-cli-2019-05-09-16-09-40&amp;#39;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# list role assignments for user (user sign-in name)&lt;/span&gt;
+az role assignment list --assignee &lt;span class=&#34;s1&#34;&gt;&amp;#39;dev01@brianpfeilgmail.onmicrosoft.com&amp;#39;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# list role assignments for user (object id)&lt;/span&gt;
+az role assignment list --assignee &lt;span class=&#34;s1&#34;&gt;&amp;#39;38d35c72-5a26-464c-bbb3-c4487a1d4779&amp;#39;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# list role assignments for service principal&lt;/span&gt;
+az role assignment list --assignee &lt;span class=&#34;s2&#34;&gt;&amp;#34;http://service-principal-01&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# reset service principal password.  if you forgot or lost it, this is the only way to get it.&lt;/span&gt;
+az ad sp credential reset --name &lt;span class=&#34;s2&#34;&gt;&amp;#34;http://service-principal-01&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# output&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# {&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#   &amp;#34;appId&amp;#34;: &amp;#34;00133c8e-a08e-490e-ae7c-872ea2debf1e&amp;#34;,&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#   &amp;#34;name&amp;#34;: &amp;#34;http://service-principal-01&amp;#34;,&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#   &amp;#34;password&amp;#34;: &amp;#34;09tGSBcRsl_Gml7DI7VkRniFu_r_xxxxxx&amp;#34;,&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#   &amp;#34;tenant&amp;#34;: &amp;#34;b0579be4-503f-48ca-9bd2-ca22100857dd&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# }&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# login with service principal&lt;/span&gt;
+az login --service-principal --username &lt;span class=&#34;s2&#34;&gt;&amp;#34;http://service-principal-01&amp;#34;&lt;/span&gt; --password &lt;span class=&#34;s2&#34;&gt;&amp;#34;09tGSBcRsl_Gml7DI7VkRniFu_r_xxxxxx&amp;#34;&lt;/span&gt; --tenant &lt;span class=&#34;s2&#34;&gt;&amp;#34;b0579be4-503f-48ca-9bd2-ca22100857dd&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# get access token (bearer)&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# NOTE: must be logged in with `service-principal-01` above for this example&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# or may need to add client id to authorize application.  see following screenshot&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# &amp;lt;https://www.evernote.com/l/AAFJLMG88QhDgqehvtS8P-qkVuCcmFFUhCMB/image.png&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;ACCESS_TOKEN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;az account get-access-token --resource &lt;span class=&#34;s1&#34;&gt;&amp;#39;https://brianpfeilmyfn01.azurewebsites.net&amp;#39;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+
+
+&lt;span class=&#34;c1&#34;&gt;# call endpoint protected by azure ad.  e.g. functions function endpoint&lt;/span&gt;
+curl --header &lt;span class=&#34;s2&#34;&gt;&amp;#34;Authorization: Bearer &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;ACCESS_TOKEN&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; https://brianpfeilmyfn01.azurewebsites.net/api/HttpExample
+
+&lt;span class=&#34;c1&#34;&gt;# show service principal details&lt;/span&gt;
+az ad sp show --id &lt;span class=&#34;s2&#34;&gt;&amp;#34;http://service-principal-01&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# get access token (Bearer) that can be used as `Authorization` header&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# current user&lt;/span&gt;
+az account get-access-token
+
+&lt;span class=&#34;c1&#34;&gt;# for specific resource&lt;/span&gt;
+az account get-access-token --resource &lt;span class=&#34;s1&#34;&gt;&amp;#39;https://vault.azure.net&amp;#39;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# list app registrations&lt;/span&gt;
+az ad app list --query &lt;span class=&#34;s1&#34;&gt;&amp;#39;[].{displayName: displayName}&amp;#39;&lt;/span&gt; --output table
+
+&lt;span class=&#34;c1&#34;&gt;# create resource group&lt;/span&gt;
+az group create --name &lt;span class=&#34;s2&#34;&gt;&amp;#34;group01&amp;#34;&lt;/span&gt; --location eastus
+
+&lt;span class=&#34;c1&#34;&gt;# list resource group names&lt;/span&gt;
+az group list &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq &lt;span class=&#34;s1&#34;&gt;&amp;#39;.[].name&amp;#39;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# delete resource group&lt;/span&gt;
+az group delete --name &lt;span class=&#34;s2&#34;&gt;&amp;#34;group01&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# deploy arm template examples&lt;/span&gt;
+az group deployment create --name &lt;span class=&#34;s2&#34;&gt;&amp;#34;my-deployment-01&amp;#34;&lt;/span&gt; --resource-group &lt;span class=&#34;s2&#34;&gt;&amp;#34;my-resource-group-01&amp;#34;&lt;/span&gt;   --template-file template.json --parameters @parameters.json
+
+az group deployment create   --name cosmosdbaccountdeployment01   --resource-group group01   --template-file azure-cosmos-db-account.json   --parameters &lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;account01&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;location&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;eastus&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;locationName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;East US&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;defaultExperience&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;DocumentDB&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# interactive/repl mode.  immediately exits / doesn&amp;#39;t work as of 2019-05-14&lt;/span&gt;
+az interactive
+
+
+&lt;span class=&#34;c1&#34;&gt;# list all resources&lt;/span&gt;
+az resource list
+
+az role assignment list
+
+az role definition list
+
+az role definition list --custom-role-only &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; --output json &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq &lt;span class=&#34;s1&#34;&gt;&amp;#39;.[] | {&amp;#34;roleName&amp;#34;:.roleName, &amp;#34;roleType&amp;#34;:.roleType}&amp;#39;&lt;/span&gt;
+az role definition list &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq &lt;span class=&#34;s1&#34;&gt;&amp;#39;.[].description&amp;#39;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# list storage account&lt;/span&gt;
+az storage account list &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq &lt;span class=&#34;s1&#34;&gt;&amp;#39;.[].name&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
     <item>
-      <title>Angular CLI App</title>
-      <link>https://brianpfeil.com/post/angular-cli-app/</link>
-      <pubDate>Mon, 09 May 2016 00:00:00 -0400</pubDate>
+<title>Angular CLI App</title>
+<link>https://brianpfeil.com/post/angular-cli-app/</link>
+<pubDate>Mon, 09 May 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/angular-cli-app/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/angular-cli-app-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/angular-cli-app-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn and experiment with &lt;a href=&#34;https://github.com/angular/angular-cli&#34;&gt;angular-cli&lt;/a&gt;&lt;/p&gt;
+</description>
+</item>
     
   </channel>
 </rss>

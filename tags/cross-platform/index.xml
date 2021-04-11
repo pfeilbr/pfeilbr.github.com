@@ -1,20 +1,67 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>cross-platform on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/cross-platform/</link>
-    <description>Recent content in cross-platform on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 15 Feb 2015 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/tags/cross-platform/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>cross-platform on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/cross-platform/</link>
+        <description>Recent content in cross-platform on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 15 Feb 2015 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/tags/cross-platform/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>NWjs</title>
-      <link>https://brianpfeil.com/post/nwjs/</link>
-      <pubDate>Sun, 15 Feb 2015 00:00:00 -0500</pubDate>
+<title>NWjs</title>
+<link>https://brianpfeil.com/post/nwjs/</link>
+<pubDate>Sun, 15 Feb 2015 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/nwjs/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/nwjs-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/nwjs-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;nwjshttpnwjsio-playground&#34;&gt;&lt;a href=&#34;http://nwjs.io&#34;&gt;NW.js&lt;/a&gt; playground&lt;/h1&gt;
+&lt;p&gt;Project to learn and experiment with &lt;a href=&#34;http://nwjs.io&#34;&gt;NW.js&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;NW.js enables the creation of cross platform desktop applications.  Your UI is built with standard html, js, and css technologies.  Access to the underlying desktop OS capabilites are provided by giving you access to &lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt;.  You can use the Node.js core modules plus any of the 3rd party &lt;a href=&#34;https://www.npmjs.com/&#34;&gt;NPM&lt;/a&gt; modules;&lt;/p&gt;
+&lt;h2 id=&#34;installing-nwjs&#34;&gt;Installing NW.js&lt;/h2&gt;
+&lt;p&gt;Download and unpack nwjs app for your platform from &lt;a href=&#34;http://nwjs.io&#34;&gt;http://nwjs.io&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;On OSX you&amp;rsquo;ll end up with &lt;code&gt;/Applications/nwjs.app&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;developing-your-app&#34;&gt;Developing Your App&lt;/h2&gt;
+&lt;p&gt;create &lt;code&gt;index.html&lt;/code&gt; and &lt;code&gt;package.json&lt;/code&gt; files&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;see &lt;a href=&#34;https://github.com/nwjs/nw.js#quick-start&#34;&gt;nw.js quick-start&lt;/a&gt; for details&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This app is a minimal example with an added &lt;code&gt;app.js&lt;/code&gt; file for javascript.  It&amp;rsquo;s sets the &lt;code&gt;document.body&lt;/code&gt; to &lt;code&gt;&#39;Hello There&#39;&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;p&gt;Create alias in &lt;code&gt;~/.bash_profile&lt;/code&gt;to ease the use from terminal&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# alias to nw&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;nw&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/Applications/nwjs.app/Contents/MacOS/nwjs&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/projects/nwjs-playground
+nw .
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;packaging-as-app-on-osx&#34;&gt;Packaging as app on OSX&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Create &lt;code&gt;.nw&lt;/code&gt; file&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/projects/nwjs-playground
+zip -r ../&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PWD&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;##*/&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;.nw *
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;.nw&lt;/code&gt; file will be created along side the project directory&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;make copy of &lt;code&gt;nwjs.app&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;cp -r /Applications/nwjs.app /Applications/myapp.app
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Copy &lt;code&gt;.nw&lt;/code&gt; file into myapp.app bundle&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;cp ../nwjs-playground.nw /Applications/myapp.app/Contents/Resources/app.nw
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+</item>
     
   </channel>
 </rss>

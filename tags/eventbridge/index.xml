@@ -1,47 +1,195 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>eventbridge on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/eventbridge/</link>
-    <description>Recent content in eventbridge on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 02 Apr 2021 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/eventbridge/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>eventbridge on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/eventbridge/</link>
+        <description>Recent content in eventbridge on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 02 Apr 2021 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/eventbridge/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>API Gateway Service Integrations for HTTP APIs</title>
-      <link>https://brianpfeil.com/post/api-gateway-service-integrations-for-http-apis/</link>
-      <pubDate>Fri, 02 Apr 2021 00:00:00 -0400</pubDate>
+<title>API Gateway Service Integrations for HTTP APIs</title>
+<link>https://brianpfeil.com/post/api-gateway-service-integrations-for-http-apis/</link>
+<pubDate>Fri, 02 Apr 2021 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/api-gateway-service-integrations-for-http-apis/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/api-gateway-service-integrations-for-http-apis-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/api-gateway-service-integrations-for-http-apis-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Example API Gateway service integration with EventBridge with &lt;a href=&#34;https://aws.amazon.com/serverless/sam/&#34;&gt;SAM&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;API Gateway -&amp;gt; EventBridge -&amp;gt; CloudWatch Log Group&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; eventbridge
+
+&lt;span class=&#34;c1&#34;&gt;# deploy&lt;/span&gt;
+sam deploy --guided
+
+&lt;span class=&#34;c1&#34;&gt;# run following to given eventbridge rule permissions to write to log group&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# can not create resource-based policy for Log Group via cfn&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# see https://stackoverflow.com/questions/49242010/how-to-define-resource-policy-for-cloudwatch-logs-with-cloudformation&lt;/span&gt;
+aws logs put-resource-policy &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --region us-east-1 &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --policy-name eventbridge-rule-to-logs &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --policy-document &lt;span class=&#34;s1&#34;&gt;&amp;#39;{ &amp;#34;Version&amp;#34;: &amp;#34;2012-10-17&amp;#34;, &amp;#34;Statement&amp;#34;: [ {
+&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;        &amp;#34;Effect&amp;#34;: &amp;#34;Allow&amp;#34;, &amp;#34;Principal&amp;#34;: { &amp;#34;Service&amp;#34;: &amp;#34;events.amazonaws.com&amp;#34; },
+&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;        &amp;#34;Action&amp;#34;:[ &amp;#34;logs:CreateLogStream&amp;#34;, &amp;#34;logs:PutLogEvents&amp;#34; ],
+&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;        &amp;#34;Resource&amp;#34; : &amp;#34;arn:aws:logs:*:*:log-group:*&amp;#34; } ] }&amp;#39;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# send event to api gateway endpoint&lt;/span&gt;
+curl --header &lt;span class=&#34;s2&#34;&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  --request POST &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  --data &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;detail&amp;#34;:&amp;#34;{\&amp;#34;action\&amp;#34;: \&amp;#34;withdrawal\&amp;#34;, \&amp;#34;amount\&amp;#34;: 100}&amp;#34;}&amp;#39;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  https://8djn9e18ej.execute-api.us-east-1.amazonaws.com
+
+&lt;span class=&#34;c1&#34;&gt;# response: {&amp;#34;Entries&amp;#34;:[{&amp;#34;EventId&amp;#34;:&amp;#34;11555ee7-774f-e922-1022-46401bbe5f9b&amp;#34;}],&amp;#34;FailedEntryCount&amp;#34;:0}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# view event in log group&lt;/span&gt;
+aws logs tail &lt;span class=&#34;s2&#34;&gt;&amp;#34;apigateway-http-api-service-integration/EventBus&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# response&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# 2021-04-02T23:47:46+00:00 ca4b84fb-60f2-302d-b6ce-90338469d249 {&amp;#34;version&amp;#34;:&amp;#34;0&amp;#34;,&amp;#34;id&amp;#34;:&amp;#34;11555ee7-774f-e922-1022-46401bbe5f9b&amp;#34;,&amp;#34;detail-type&amp;#34;:&amp;#34;MyDetailType&amp;#34;,&amp;#34;source&amp;#34;:&amp;#34;demo&amp;#34;,&amp;#34;account&amp;#34;:&amp;#34;529276214230&amp;#34;,&amp;#34;time&amp;#34;:&amp;#34;2021-04-02T23:47:46Z&amp;#34;,&amp;#34;region&amp;#34;:&amp;#34;us-east-1&amp;#34;,&amp;#34;resources&amp;#34;:[],&amp;#34;detail&amp;#34;:{&amp;#34;action&amp;#34;:&amp;#34;withdrawal&amp;#34;,&amp;#34;amount&amp;#34;:100}}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# cleanup&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;STACK_NAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;apig-svc-int-eb-cwl-01&amp;#34;&lt;/span&gt;
+aws cloudformation delete-stack --stack-name &lt;span class=&#34;nv&#34;&gt;$STACK_NAME&lt;/span&gt;
+aws cloudformation &lt;span class=&#34;nb&#34;&gt;wait&lt;/span&gt; stack-delete-complete --stack-name &lt;span class=&#34;nv&#34;&gt;$STACK_NAME&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;screenshots&#34;&gt;Screenshots&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAGhwN9HdzBDQr8btg1JnU21bsyETK67NF8B/image.png&#34; alt=&#34;aws logs tail output&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAGNPTlsbFVPGJD5rauZvWI9f0BmOqN2MtEB/image.png&#34; alt=&#34;cloudwatch logs output&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services.html&#34;&gt;Working with AWS service integrations for HTTP APIs - Amazon API Gateway&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>AWS AppFlow Salesforce EventBridge</title>
-      <link>https://brianpfeil.com/post/aws-appflow-salesforce-eventbridge/</link>
-      <pubDate>Thu, 27 Aug 2020 00:00:00 -0400</pubDate>
+<title>AWS AppFlow Salesforce EventBridge</title>
+<link>https://brianpfeil.com/post/aws-appflow-salesforce-eventbridge/</link>
+<pubDate>Thu, 27 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-appflow-salesforce-eventbridge/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-appflow-salesforce-eventbridge-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-appflow-salesforce-eventbridge-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/appflow/&#34;&gt;AWS AppFlow&lt;/a&gt; example of salesforce event -&amp;gt; AppFlow -&amp;gt; EventBridge -&amp;gt; CloudWatch Logs.  Followed steps in &lt;a href=&#34;https://aws.amazon.com/blogs/compute/building-salesforce-integrations-with-amazon-eventbridge/&#34;&gt;Building Salesforce integrations with Amazon EventBridge and Amazon AppFlow | Amazon Web Services&lt;/a&gt; post.&lt;/p&gt;
+&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;observed low latency - AppFlow flow runs within 2 seconds of event being generated in salesforce.&lt;/li&gt;
+&lt;li&gt;only fields specified in mapping are passed to EventBridge as properties of &lt;code&gt;detail&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/appflow/latest/userguide/private-flows.html&#34;&gt;Private Amazon AppFlow flows&lt;/a&gt; is available for salesforce that uses AWS PrivateLink to route data over AWS infrastructure without exposing it to the public internet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;screenshot-tour&#34;&gt;Screenshot Tour&lt;/h2&gt;
+&lt;p&gt;Turn on Change Data Capture for the relevant objects in salesforce
+&lt;img src=&#34;https://www.evernote.com/l/AAFmryV0UxVKY5eprjjdQ-_4IgJG7JvB5AAB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Error when CDC is not turned on in salesforce for the object
+&lt;img src=&#34;https://www.evernote.com/l/AAEDjQW7qIpJ7azu59MIH05tvwqdqYOjrbsB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;AppFlow leverages already installed/available &amp;ldquo;Amazon AppFlow Embedded Login App&amp;rdquo; Connected App in salesforce&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAEyS5AOJn9F8pnZVMiV0Up7f5ydSNPApQwB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAGR_pfFpElDa4WwFTLoHEtGhpPxDKREPnoB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAEG72PQcHlNhrTqGdsmhe0DrtStP8VuCnE&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAH8LLu9mOVJar3EgvmDvSsLrEA4yFQehs8B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Run History
+&lt;img src=&#34;https://www.evernote.com/l/AAFPHkqjr_FJ1qtyysG35f8dO4wyIHz3DywB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Event in CloudWatch Logs
+&lt;img src=&#34;https://www.evernote.com/l/AAFpH1Az7IlBUavypLjw4LahE90ppWrjy0AB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;AppFlow Mapping
+&lt;img src=&#34;https://www.evernote.com/l/AAEG72PQcHlNhrTqGdsmhe0DrtStP8VuCnEB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/compute/building-salesforce-integrations-with-amazon-eventbridge/&#34;&gt;Building Salesforce integrations with Amazon EventBridge and Amazon AppFlow | Amazon Web Services&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>AWS API Gateway AWS Service Integration</title>
-      <link>https://brianpfeil.com/post/aws-api-gateway-aws-service-integration/</link>
-      <pubDate>Thu, 20 Aug 2020 00:00:00 -0400</pubDate>
+<title>AWS API Gateway AWS Service Integration</title>
+<link>https://brianpfeil.com/post/aws-api-gateway-aws-service-integration/</link>
+<pubDate>Thu, 20 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-api-gateway-aws-service-integration/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-api-gateway-aws-service-integration-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-api-gateway-aws-service-integration-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;shows how an API Gateway endpoint can directly invoke an aws service like EventBridge, DynamoDB, etc.  No
+lambda in the middle (reduces latency and costs).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;HTTP REST APIs are the most common integration pattern.  API Gateway is AWS managed service for creating REST APIs.  It allows us to apply security, throttling, logging, etc. to our APIs.  In some cases an API is simply a passthrough to a backend AWS service.  The typical approach is to have API Gateway invoke a lambda, which then contains the code to call th target AWS service.  If you don&amp;rsquo;t need to perform any additional logic to the request prior to calling the backend AWS service, you may be able to use an API Gateway AWS service integration, which can directly invoke the AWS service.  This simplifies the architecture, reduces request latency and reduces costs.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Prerequisites&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/&#34;&gt;An AWS account&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/cli/latest/userguide/installing.html&#34;&gt;AWS Command Line Interface&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/serverless/sam/&#34;&gt;SAM CLI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Running&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# clone repo&lt;/span&gt;
+git clone https://github.com/pfeilbr/aws-api-gateway-aws-service-integration-playground
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; aws-api-gateway-aws-service-integration-playground
+
+&lt;span class=&#34;c1&#34;&gt;# deploy&lt;/span&gt;
+make deploy
+
+&lt;span class=&#34;c1&#34;&gt;# test&lt;/span&gt;
+make &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;example output&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Entries&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;#34;EventId&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;58c635b4-21aa-09d8-0ad3-0874b7dc0a39&amp;#34;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;FailedEntryCount&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# teardown&lt;/span&gt;
+make teardown
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;details&#34;&gt;Details&lt;/h2&gt;
+&lt;p&gt;invoking the &lt;a href=&#34;https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutEvents.html&#34;&gt;EventBridge PutEvents&lt;/a&gt; action with the request payload using the &lt;code&gt;APIGatewayEventBridgeAccessRole&lt;/code&gt; role.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;Integration&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;Type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;AWS&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;Credentials&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;!&lt;span class=&#34;l&#34;&gt;GetAtt APIGatewayEventBridgeAccessRole.Arn&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;IntegrationHttpMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;POST&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;Uri&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;!&lt;span class=&#34;l&#34;&gt;Sub &amp;#34;arn:aws:apigateway:${AWS::Region}:events:action/PutEvents&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;setting the required headers to invoke the PutEvents action&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;RequestTemplates&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;application/json&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;sd&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;sd&#34;&gt;        $input.json(&amp;#34;$&amp;#34;)
+&lt;/span&gt;&lt;span class=&#34;sd&#34;&gt;        #set($context.requestOverride.header.X-Amz-Target =&amp;#34;AWSEvents.PutEvents&amp;#34;)
+&lt;/span&gt;&lt;span class=&#34;sd&#34;&gt;        #set($context.requestOverride.header.Content-Type =&amp;#34;application/x-amz-json-1.1&amp;#34;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/premiumsupport/knowledge-center/api-gateway-proxy-integrate-service/#:~:text=You%20can%20integrate%20many%20AWS,request%20parameters%20are%20correctly%20mapped.&#34;&gt;Use API Gateway as a Proxy for Another AWS Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ThijsJung/phrasebook-API/blob/64d62722976ed9350a935b474a10a0a49ae3348b/cloudformation/phrasebook.yaml#L40&#34;&gt;&lt;code&gt;AWS::ApiGateway::Method.Integration&lt;/code&gt;&lt;/a&gt; to dynamodb Query example&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutEvents.html&#34;&gt;PutEvents - Amazon EventBridge&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api&#34;&gt;CloudFormation Resources Generated By SAM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://forums.aws.amazon.com/thread.jspa?messageID=953197&amp;amp;#953197&#34;&gt;API Gateway integration problem&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>AWS EventBridge</title>
-      <link>https://brianpfeil.com/post/aws-eventbridge/</link>
-      <pubDate>Tue, 19 May 2020 00:00:00 -0400</pubDate>
+<title>AWS EventBridge</title>
+<link>https://brianpfeil.com/post/aws-eventbridge/</link>
+<pubDate>Tue, 19 May 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-eventbridge/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-eventbridge-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-eventbridge-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://aws.amazon.com/eventbridge/&#34;&gt;AWS EventBridge&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# put events on default event bus&lt;/span&gt;
+aws events put-events --entries file://sample-events/my-custom-app-events.json
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jbesw/s3-to-lambda/blob/master/eventbridge/README.md&#34;&gt;https://github.com/jbesw/s3-to-lambda/blob/master/eventbridge/README.md&lt;/a&gt; - examples using &lt;code&gt;AWS::Events::Rule&lt;/code&gt; in SAM to map event sources to targets (e.g. lambda, kinesis, etc.)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
   </channel>
 </rss>

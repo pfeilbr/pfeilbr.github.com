@@ -1,29 +1,111 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>golang on Brian Pfeil</title>
-    <link>https://brianpfeil.com/categories/golang/</link>
-    <description>Recent content in golang on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 02 Dec 2015 13:54:15 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>golang on Brian Pfeil</title>
+        <link>https://brianpfeil.com/categories/golang/</link>
+        <description>Recent content in golang on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 02 Dec 2015 13:54:15 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/categories/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Atom Golang Setup</title>
-      <link>https://brianpfeil.com/post/atom-golang-support/</link>
-      <pubDate>Wed, 02 Dec 2015 13:54:15 +0000</pubDate>
+<title>Atom Golang Setup</title>
+<link>https://brianpfeil.com/post/atom-golang-support/</link>
+<pubDate>Wed, 02 Dec 2015 13:54:15 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/atom-golang-support/</guid>
-      <description>Atom and Golang, a perfect match</description>
-    </item>
+<description>&lt;p&gt;I&amp;rsquo;ve recently switched to &lt;a href=&#34;https://atom.io&#34;&gt;Atom&lt;/a&gt; from &lt;a href=&#34;http://www.sublimetext.com/&#34;&gt;Sublime Text&lt;/a&gt; for web development.  The transition was relatively painless since many of the keyboard shortcuts and capabilities are the same in.  I really enjoy usig Atom and want to have that same experience with programming in &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt;.  This documents my Go setup in Atom.&lt;/p&gt;
+&lt;h3 id=&#34;install-and-configuration-steps&#34;&gt;Install and Configuration Steps&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Install &lt;a href=&#34;https://github.com/joefitzgerald/go-plus&#34;&gt;go-plus&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Set the go-plus &lt;code&gt;GOPATH&lt;/code&gt; setting&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://static-content-01.s3-website-us-east-1.amazonaws.com//Settings_-__Users_pfeilbr_go_src_github_com_pfeilbr_go-gorilla-mux-playground_-_Atom_1C0E5214.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Ideally the Atom application process should have &lt;code&gt;GOPATH&lt;/code&gt; in its &lt;code&gt;ENV&lt;/code&gt; and you shouldn&amp;rsquo;t have to set this.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Install atom &lt;a href=&#34;https://atom.io/packages/build&#34;&gt;build&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Set build &lt;code&gt;Panel Visibility&lt;/code&gt; setting to &lt;code&gt;Keep Visible&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://static-content-01.s3-website-us-east-1.amazonaws.com//Screenshot_12_1_15__5_12_PM_1C0E52F8.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add &lt;code&gt;.atom-build.json&lt;/code&gt; to root of your project directory&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;#34;cmd&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;$GOROOT/bin/go run {FILE_ACTIVE}&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;#34;shell&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;#34;env&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;GOROOT&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/local/go&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;GOPATH&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/Users/pfeilbr/go&amp;#34;&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://static-content-01.s3-website-us-east-1.amazonaws.com//Screenshot_12_1_15__5_05_PM_1C0E513F.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;keyboard-shortcuts&#34;&gt;Keyboard Shortcuts&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cmd-alt-b&lt;/code&gt; - run current file&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cmd-alt-g&lt;/code&gt; - goto definition&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ctrl-space&lt;/code&gt; - code completion&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>Concurrent Downloader in Go</title>
-      <link>https://brianpfeil.com/post/concurrent-downloader-in-go/</link>
-      <pubDate>Thu, 26 Mar 2015 01:36:21 +0000</pubDate>
+<title>Concurrent Downloader in Go</title>
+<link>https://brianpfeil.com/post/concurrent-downloader-in-go/</link>
+<pubDate>Thu, 26 Mar 2015 01:36:21 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/concurrent-downloader-in-go/</guid>
-      <description>example of Go&amp;rsquo;s first class concurrency support</description>
-    </item>
+<description>&lt;p&gt;&lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; has been getting a lot of traction among the &lt;a href=&#34;https://medium.com/code-adventures/farewell-node-js-4ba9e7f3e52b&#34;&gt;coding elite&lt;/a&gt; due to it&amp;rsquo;s simplicity, speed, and most touted, it&amp;rsquo;s ability to enable concurrent solutions.&lt;/p&gt;
+&lt;p&gt;Go is a very small language.  If you have experience with a few languages, you can learn in a few days and fit and keep it all in your head.  With most other languages, I&amp;rsquo;m accustomed to looking up documentation or examples on stackoverflow while I code.  With Go, I find I don&amp;rsquo;t do it as much.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s a language influenced by C and the rest of curly brace family of languages.  It compiles down into standalone binaries with no dependencies.  I can&amp;rsquo;t emphasize how great this is for building cross-platform tools.  You write your code once, and can cross-compile to any of core three OSs (&lt;a href=&#34;https://www.google.com/search?q=osx&#34;&gt;osx&lt;/a&gt;, &lt;a href=&#34;https://www.google.com/search?q=linux&#34;&gt;linux&lt;/a&gt;, &lt;a href=&#34;https://www.google.com/search?q=windows&#34;&gt;windows&lt;/a&gt;) from any one of them.  No need to run a windows VM to build for windows.&lt;/p&gt;
+&lt;p&gt;The most visible feature and probably most discussed is it&amp;rsquo;s concurrency model.  It provides the primitive &lt;a href=&#34;https://gobyexample.com/channels&#34;&gt;channel&lt;/a&gt; construct, with along with the &lt;a href=&#34;https://gobyexample.com/channels&#34;&gt;syntax&lt;/a&gt; makes tackling concurrency problems more intuitive than the typical thread construct provided by a majority of languages.&lt;/p&gt;
+&lt;p&gt;In order to get a thorough understanding of concurrency in go, I thought of a real world problem that lends itself to being solved via concurrency.  The &lt;a href=&#34;http://atp.fm/episodes/98&#34;&gt;ATP&lt;/a&gt; podcast with &lt;a href=&#34;http://marco.org&#34;&gt;Marco Arment&lt;/a&gt; was food for thought for an example real world.  Downloading web content and indexing it in an efficient manner is a problem many web based services do.  The process of indexing web content is computationally expensive, and only doing it when neccessary is desired.  If the web content hasn&amp;rsquo;t changed, then we shouldn&amp;rsquo;t waste compute resources indexing the content.  One way to detect this is by doing an MD5 hash of the web contents (HTML page) and only index it if it&amp;rsquo;s changed.&lt;/p&gt;
+&lt;p&gt;The first step is fetching the contents of the web resource via a URL.  The built-in &lt;code&gt;net/http&lt;/code&gt; package turns this into a one-liner&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;resp, err := http.Get(url)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can then get the body&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;body, err := ioutil.ReadAll(resp.Body)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and create an MD5 hash of it&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hash := md5.Sum(body)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now onto the interesting part of parallelizing.  We create a simple structure to hold the information needed to do the work.  In this case it&amp;rsquo;s simply a URL&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;type URLJob struct {
+	url string
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We also need to create a structure to hold the results&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;type URLResult struct {
+	URL  string
+	Body string
+	MD5  string
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With these in place we con now focus on the work with our &lt;code&gt;worker&lt;/code&gt; function.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;func worker(id int, jobs &amp;lt;-chan URLJob, results chan&amp;lt;- URLResult) {
+	for j := range jobs {
+        fmt.Println(&amp;quot;worker&amp;quot;, id, &amp;quot;processing job&amp;quot;, j.url)
+        results &amp;lt;- fetch(j.url)
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let&amp;rsquo;s focus on the arguments.  &lt;code&gt;jobs &amp;lt;-chan URLJob&lt;/code&gt; is an array of channels where you can send &lt;code&gt;URLJob&lt;/code&gt; instances to it.  &lt;code&gt;results chan&amp;lt;- URLResult&lt;/code&gt; is an array of channels where we can send the results to.&lt;/p&gt;
+&lt;p&gt;We then invoke via a goroutine&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;go worker(w, jobs, results)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is where the magic happens.  &lt;code&gt;go func&lt;/code&gt; creates a goroutine that is ran concurrently by the Go runtime.&lt;/p&gt;
+&lt;p&gt;In our example, waiting on the network to respond with the contents of the URL is the limiting factor.  In this case, all these http GET requests will be fired off essentially at once, and as the responses return our &lt;code&gt;results&lt;/code&gt; channel array will be updated.  You could request 1000s of URLs at a time and assuming the response contents are not huge, this wouldn&amp;rsquo;t move the needle noticably on CPU and memory for a reasonably sized machine.&lt;/p&gt;
+&lt;p&gt;Parallelism is baked into all hardware these days and is the way the computing hardware industry holds true to Moores law.  Modern languages like Go need to surface these advances, but without the usual cognitive load of using threads.  The holy grail of writing your code as if everything is syncronous and having it parallelized automatically for you to make use of all the cores, etc. seems a ways off or most likely will never happen.  In the meantime Go is making a good run at it and moving us forward in this space.&lt;/p&gt;
+&lt;p&gt;Example code for the concurrent downloader example is on github at &lt;a href=&#34;https://github.com/pfeilbr/concurrent-downloader&#34;&gt;pfeilbr/concurrent-downloader&lt;/a&gt;.&lt;/p&gt;
+</description>
+</item>
     
   </channel>
 </rss>

@@ -1,20 +1,68 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>cloud9 on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/cloud9/</link>
-    <description>Recent content in cloud9 on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 05 Oct 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/cloud9/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>cloud9 on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/cloud9/</link>
+        <description>Recent content in cloud9 on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 05 Oct 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/cloud9/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AWS Cloud9</title>
-      <link>https://brianpfeil.com/post/aws-cloud9/</link>
-      <pubDate>Mon, 05 Oct 2020 00:00:00 -0400</pubDate>
+<title>AWS Cloud9</title>
+<link>https://brianpfeil.com/post/aws-cloud9/</link>
+<pubDate>Mon, 05 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cloud9/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-cloud9-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-cloud9-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;learn &lt;a href=&#34;https://aws.amazon.com/cloud9/&#34;&gt;AWS Cloud9&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;setup remote development environment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;enabling-ssh-connectivity&#34;&gt;Enabling SSH Connectivity&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;add SSH inbound rule to Security Group
+&lt;img src=&#34;https://www.evernote.com/l/AAEY_BSM7g5PVa72gIFEevDXgdKE1E-zAdoB/image.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;add &lt;code&gt;~/.ssh/id_rsa.pub&lt;/code&gt; to &lt;code&gt;/home/ec2-user/.ssh/authorized_keys&lt;/code&gt;.  do this via Cloud9 IDE shell
+&lt;img src=&#34;https://www.evernote.com/l/AAGhf-SuVVRDtpS8fMS9lRQmHCwQSs6A1v8B/image.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;ssh -i ~/.ssh/id_rsa  &lt;a href=&#34;mailto:ubuntu@dev01.brianpfeil.com&#34;&gt;ubuntu@dev01.brianpfeil.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;troubleshooting&#34;&gt;Troubleshooting&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;may need to connect via Cloud9 IDE to &amp;ldquo;wake up&amp;rdquo;/start instance due to &amp;ldquo;auto stop&amp;rdquo; of EC2 instance after
+X minutes.&lt;/li&gt;
+&lt;li&gt;May need to remote remote host in &lt;code&gt;~/.ssh/known_hosts&lt;/code&gt; on client if the following error
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;man-in-the-middle attack&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;!
+It is also possible that a host key has just been changed.
+The fingerprint &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; the ECDSA key sent by the remote host is
+SHA256:&amp;lt;deleted&amp;gt;
+Please contact your system administrator.
+Add correct host key in ~/.ssh/known_hosts to get rid of this message.
+Offending ECDSA key in ~/.ssh/known_hosts:37
+ECDSA host key &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; dev01.brianpfeil.com has changed and you have requested strict checking.
+Host key verification failed.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;vs-code-remote-development-on-cloud9&#34;&gt;VS Code Remote Development on Cloud9&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;perform &amp;ldquo;Enabling SSH Connectivity&amp;rdquo; steps&lt;/li&gt;
+&lt;li&gt;see &lt;a href=&#34;https://code.visualstudio.com/docs/remote/ssh-tutorial&#34;&gt;vscode | Remote development over SSH&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;vscode remotely SSH connected screenshot&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAFjZ-9n0FZKAYf1bAOao7RJcTKpfeEMEy4B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://code.visualstudio.com/docs/remote/remote-overview&#34;&gt;VS Code Remote Development&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://code.visualstudio.com/docs/remote/ssh-tutorial&#34;&gt;vscode | Remote development over SSH&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
   </channel>
 </rss>

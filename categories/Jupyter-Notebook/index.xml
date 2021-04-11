@@ -1,47 +1,153 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Jupyter Notebook on Brian Pfeil</title>
-    <link>https://brianpfeil.com/categories/Jupyter-Notebook/</link>
-    <description>Recent content in Jupyter Notebook on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 05 Oct 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/categories/Jupyter-Notebook/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Jupyter Notebook on Brian Pfeil</title>
+        <link>https://brianpfeil.com/categories/Jupyter-Notebook/</link>
+        <description>Recent content in Jupyter Notebook on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 05 Oct 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/categories/Jupyter-Notebook/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Boto3</title>
-      <link>https://brianpfeil.com/post/boto3/</link>
-      <pubDate>Mon, 05 Oct 2020 00:00:00 -0400</pubDate>
+<title>Boto3</title>
+<link>https://brianpfeil.com/post/boto3/</link>
+<pubDate>Mon, 05 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/boto3/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/boto3-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/boto3-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://github.com/boto/boto3&#34;&gt;boto3&lt;/a&gt;, the Amazon Web Services (AWS) SDK for Python&lt;/p&gt;
+&lt;h2 id=&#34;concepts&#34;&gt;Concepts&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Clients&lt;/strong&gt; provide a low-level interface to AWS whose methods map close to 1:1 with service APIs. All service operations are supported by clients. Clients are generated from a JSON service definition file.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Resources&lt;/strong&gt; represent an object-oriented interface to Amazon Web Services (AWS). They provide a higher-level abstraction than the raw, low-level calls made by service clients. To use resources, you invoke the resource() method of a Session and pass in a service name:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Session&lt;/strong&gt; manages state about a particular configuration. By default, a session is created for you when needed. However, it&amp;rsquo;s possible and recommended that in some scenarios you maintain your own session. Sessions typically store the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Credentials&lt;/li&gt;
+&lt;li&gt;AWS Region&lt;/li&gt;
+&lt;li&gt;Other configurations related to your profile&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Collection&lt;/strong&gt; provides an iterable interface to a group of resources. A collection seamlessly handles pagination for you, making it possible to easily iterate over all items from all pages of data.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Paginators&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Some AWS operations return results that are incomplete and require subsequent requests in order to attain the entire result set. The process of sending subsequent requests to continue where a previous request left off is called pagination.  Paginators are a feature of boto3 that act as an abstraction over the process of iterating over an entire result set of a truncated API operation.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;developing&#34;&gt;Developing&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install virtual env and dependencies&lt;/span&gt;
+pipenv install
+
+&lt;span class=&#34;c1&#34;&gt;# (optional) install additional pip package&lt;/span&gt;
+pipenv install &amp;lt;package&amp;gt;
+
+&lt;span class=&#34;c1&#34;&gt;# activate python virtual env (optional)&lt;/span&gt;
+pipenv shell
+
+&lt;span class=&#34;c1&#34;&gt;# run on change&lt;/span&gt;
+make dev
+
+&lt;span class=&#34;c1&#34;&gt;# --- running via jupyter notebook ---&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# in vscode&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# click on `main.ipynb`.  this will automatically start jupyter notebook and connect&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# ctrl+enter to run cell&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# ctrl+space for intellisense&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# see [How to use Pipenv with Jupyter and VSCode](https://towardsdatascience.com/how-to-use-pipenv-with-jupyter-and-vscode-ae0e970df486)&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# manually run jupyter notebook&lt;/span&gt;
+pipenv run jupyter notebook
+
+&lt;span class=&#34;c1&#34;&gt;# access via browser manually (auto opens via above command)&lt;/span&gt;
+open http://localhost:8888/tree
+
+&lt;span class=&#34;c1&#34;&gt;# convert notebook to python.  generates `main_notebook.py`&lt;/span&gt;
+jupyter nbconvert --to script main.ipynb --output main_notebook
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
+&lt;p&gt;for vscode, install &lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance&#34;&gt;Pylance - Visual Studio Marketplace&lt;/a&gt; extension&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://boto3.readthedocs.io/&#34;&gt;Boto3 documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/boto/boto3&#34;&gt;boto/boto3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://pypi.org/project/boto3-stubs/&#34;&gt;boto3-stubs&lt;/a&gt; - for code completion&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://code.visualstudio.com/docs/python/jupyter-support&#34;&gt;Working with Jupyter Notebooks in Visual Studio Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://towardsdatascience.com/how-to-use-pipenv-with-jupyter-and-vscode-ae0e970df486&#34;&gt;How to use Pipenv with Jupyter and VSCode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://towardsdatascience.com/vscode-jupyter-notebooks-are-getting-an-upgrade-cc9aaaefc744&#34;&gt;Big Upgrades are coming to VSCode Jupyter Notebooks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>Imagenet</title>
-      <link>https://brianpfeil.com/post/imagenet/</link>
-      <pubDate>Wed, 31 Jan 2018 00:00:00 -0500</pubDate>
+<title>Imagenet</title>
+<link>https://brianpfeil.com/post/imagenet/</link>
+<pubDate>Wed, 31 Jan 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/imagenet/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/imagenet-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/imagenet-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;project to explore &lt;a href=&#34;http://www.image-net.org/&#34;&gt;ImageNet&lt;/a&gt; image data for ML applications&lt;/p&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;p&gt;run jupyter notebook via &lt;code&gt;kjupyter&lt;/code&gt; command&lt;/p&gt;
+&lt;p&gt;see &lt;a href=&#34;&#34;&gt;imagenet-classify.ipynb&lt;/a&gt;&lt;/p&gt;
+</description>
+</item>
     
     <item>
-      <title>OpenCV Python</title>
-      <link>https://brianpfeil.com/post/opencv-python/</link>
-      <pubDate>Wed, 31 Jan 2018 00:00:00 -0500</pubDate>
+<title>OpenCV Python</title>
+<link>https://brianpfeil.com/post/opencv-python/</link>
+<pubDate>Wed, 31 Jan 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/opencv-python/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/opencv-python-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/opencv-python-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;code is split between jupyter notebook(s) and python (.py) files&lt;/p&gt;
+&lt;h2 id=&#34;to-create-virtualenv-only-required-for-first-time-setup&#34;&gt;to create virtualenv (only required for first time setup)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;python3 -m venv .env
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;activate virtualenv&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; .env/bin/activate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;display webcam video&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;python opencv-webcam.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;example run screenshot
+&lt;img src=&#34;https://www.evernote.com/l/AAEIScL_DhlHx7ZaJPGL_aa5di-WK_tHsKMB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+</item>
     
     <item>
-      <title>Deep and Machine Learning</title>
-      <link>https://brianpfeil.com/post/deep-and-machine-learning/</link>
-      <pubDate>Sun, 24 Sep 2017 00:00:00 -0400</pubDate>
+<title>Deep and Machine Learning</title>
+<link>https://brianpfeil.com/post/deep-and-machine-learning/</link>
+<pubDate>Sun, 24 Sep 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/deep-and-machine-learning/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/deep-and-machine-learning-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/deep-and-machine-learning-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;docker image + jupyter notebook UI for learning and experimenting with deep and machine learning.&lt;/p&gt;
+&lt;p&gt;docker image based on &lt;a href=&#34;https://github.com/floydhub/dl-docker&#34;&gt;https://github.com/floydhub/dl-docker&lt;/a&gt; - All-in-one Docker image for Deep Learning&lt;/p&gt;
+&lt;p&gt;docker hub image @ &lt;a href=&#34;https://hub.docker.com/r/pfeilbr/deep-and-machine-learning/&#34;&gt;https://hub.docker.com/r/pfeilbr/deep-and-machine-learning/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;docker run -it -p 8888:8888 -p 6006:6006 -v /Users/brianpfeil/projects/deep-and-machine-learning-playground:/root/sharedfolder pfeilbr/deep-and-machine-learning:v2 bash
+
+&lt;span class=&#34;c1&#34;&gt;# this lands you at a bash prompt in the container&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# start jupyter&lt;/span&gt;
+jupyter notebook
+
+&lt;span class=&#34;c1&#34;&gt;# open browser to http://localhost:8888/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;to-save-container-changes&#34;&gt;To save container changes&lt;/h2&gt;
+&lt;p&gt;for example to save software installs (e.g. apache mxnet was added to image)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# list images to find commit id&lt;/span&gt;
+docker ps -a
+
+&lt;span class=&#34;c1&#34;&gt;# commit changes&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# docker commit 5b4a6fb7117b pfeilbr/deep-and-machine-learning:TAG&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# e.g. &lt;/span&gt;
+docker commit 5b4a6fb7117b pfeilbr/deep-and-machine-learning:v2
+
+&lt;span class=&#34;c1&#34;&gt;# push new image to docker hub&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# docker push pfeilbr/deep-and-machine-learning:TAG&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# e.g.&lt;/span&gt;
+docker push pfeilbr/deep-and-machine-learning:v2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
   </channel>
 </rss>

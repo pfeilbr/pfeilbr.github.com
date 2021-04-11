@@ -1,20 +1,79 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>aws-well-architected on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/aws-well-architected/</link>
-    <description>Recent content in aws-well-architected on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 09 Apr 2021 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/aws-well-architected/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>aws-well-architected on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/aws-well-architected/</link>
+        <description>Recent content in aws-well-architected on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 09 Apr 2021 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/aws-well-architected/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AWS Well Architected</title>
-      <link>https://brianpfeil.com/post/aws-well-architected/</link>
-      <pubDate>Fri, 09 Apr 2021 00:00:00 -0400</pubDate>
+<title>AWS Well Architected</title>
+<link>https://brianpfeil.com/post/aws-well-architected/</link>
+<pubDate>Fri, 09 Apr 2021 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-well-architected/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-well-architected-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-well-architected-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;deep dive on all things AWS Well-Architected&lt;/p&gt;
+&lt;h2 id=&#34;key-points&#34;&gt;Key Points&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;consistent pre-launch review process against AWS best practices&lt;/li&gt;
+&lt;li&gt;helps you understand the pros and cons of decisions you make while building systems&lt;/li&gt;
+&lt;li&gt;review process is a conversation and not an audit.  working together to improve. practical advice.&lt;/li&gt;
+&lt;li&gt;goal is not to have &amp;ldquo;perfect&amp;rdquo; architecture from the start. identify areas for improvement and choose a couple that delivery the most value&lt;/li&gt;
+&lt;li&gt;AWS does not provide prescriptive guidance on how to perform the review.  WA tool is the closest.&lt;/li&gt;
+&lt;li&gt;concepts: Pillars -&amp;gt; Design Principles -&amp;gt; Questions&lt;/li&gt;
+&lt;li&gt;enables: learn -&amp;gt; measure -&amp;gt; improve iterative cycle&lt;/li&gt;
+&lt;li&gt;input: answer questions, output: improvement plan (PDF reports)&lt;/li&gt;
+&lt;li&gt;learning / education - can be used as standalone tool solely for learning what the best practices are&lt;/li&gt;
+&lt;li&gt;milestone - record the state of a workload for given point in time. e.g. original design, design review, v1, v2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;use-cases&#34;&gt;Use Cases&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;learning best practices for the cloud&lt;/li&gt;
+&lt;li&gt;technology governance&lt;/li&gt;
+&lt;li&gt;portfolio management - inventory of workloads, historical decisions made, risks, highlights where to invest&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;well-architected-framework&#34;&gt;Well-Architected Framework&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The AWS Well-Architected Framework helps you to design and operate a reliable, secure, efficient, and cost-efficient systems on AWS. It also helps you constantly measure your architecture against best practices and provides you an opportunity to improve your architecture.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;5-pillars&#34;&gt;5 Pillars&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Operational Excellence&lt;/li&gt;
+&lt;li&gt;Security&lt;/li&gt;
+&lt;li&gt;Reliability&lt;/li&gt;
+&lt;li&gt;Performance Efficiency&lt;/li&gt;
+&lt;li&gt;Cost Optimization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;review-process&#34;&gt;Review Process&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The review process describes in high-level terms, how the assessment of the principles should be done. For AWS, this should be a lightweight process, which is taking rather hours, instead of days and it should be repeated multiple times across the architecture lifecycle. AWS states that it is important to have a conversation (not an audit) and a “blame-free approach” during the review and it is also important to involve the right people. The results of the conversations should be a list of issues that can then be prioritized based on the business context and that can be formulated into a set of actions that help to improve the overall customer experience of the architecture.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;well-architected-tool&#34;&gt;Well-Architected Tool&lt;/h2&gt;
+&lt;p&gt;AWS Console Tool that steps a user through the Well-Architected Review Process&lt;/p&gt;
+&lt;h3 id=&#34;feature-request&#34;&gt;Feature Request&lt;/h3&gt;
+&lt;p&gt;One area where there is a gap for an enterprises are all the company specific policies, standards, and best practices that are additive and need to be addressed on top of AWS.  These types of questions and guidance would need to happen outside of WA Tool.&lt;/p&gt;
+&lt;p&gt;A feature to define custom lenses - a customer defined lens.  This way the single WA Tool could be the method for review facilitation, improvement reporting and maintaining history.&lt;/p&gt;
+&lt;h2 id=&#34;key-visuals&#34;&gt;Key Visuals&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAGT8fHSJRtGV4338tvJ0FHMvbb_vfTh7qkB/image.png&#34; alt=&#34;WA Tool Features&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAE0ZIXQoM5KYK9TUKsBpNZ_dSQ_x27Ti_0B/image.png&#34; alt=&#34;General Design Principles&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAGxCfQWxsZMDZLQC9dqcm-EJRgkM3jsNlwB/image.png&#34; alt=&#34;Intent of WA Review&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAF2yN9IdGZOS6_CoSnpzjc0nWOru88e4a0B/image.png&#34; alt=&#34;Review Benefits&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAEqVMFtRnJBMp-iX7F3Y8eLLIu3kV6ruvQB/image.png&#34; alt=&#34;&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/architecture/well-architected&#34;&gt;AWS Well-Architected&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html&#34;&gt;Documentation | AWS Well-Architected Framework&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wa.aws.amazon.com/wat.thereviewprocess.wa-review.en.html&#34;&gt;The Review Process - AWS Well-Architected Framework&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.rapyder.com/blogs/aws-well-architected-framework-checklist/&#34;&gt;AWS Well Architected framework: A Complete Checklist&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cloudnoon.com/blog/aws/aws-well-architected-framework-cheatsheet/&#34;&gt;AWS Well-Architected Framework Cheatsheet | Cloud Noon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
   </channel>
 </rss>

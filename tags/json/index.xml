@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>json on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/json/</link>
-    <description>Recent content in json on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 06 Jun 2018 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/json/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>json on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/json/</link>
+        <description>Recent content in json on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 06 Jun 2018 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/json/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>JSON Schema</title>
-      <link>https://brianpfeil.com/post/json-schema/</link>
-      <pubDate>Wed, 06 Jun 2018 00:00:00 -0400</pubDate>
+<title>JSON Schema</title>
+<link>https://brianpfeil.com/post/json-schema/</link>
+<pubDate>Wed, 06 Jun 2018 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/json-schema/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/json-schema-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/json-schema-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;project to learn &lt;a href=&#34;http://json-schema.org/&#34;&gt;JSON schema&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;see &lt;a href=&#34;__tests__/main.spec.ts&#34;&gt;main.spec.ts&lt;/a&gt; for examples&lt;/li&gt;
+&lt;li&gt;run examples/tests &lt;code&gt;npm run test&lt;/code&gt; or &lt;code&gt;npm run test:watch&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;uses &lt;a href=&#34;https://ajv.js.org/&#34;&gt;Ajv&lt;/a&gt; schema validator&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
   </channel>
 </rss>

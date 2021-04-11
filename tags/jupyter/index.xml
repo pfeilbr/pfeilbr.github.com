@@ -1,29 +1,106 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>jupyter on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/jupyter/</link>
-    <description>Recent content in jupyter on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 19 Jan 2019 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/tags/jupyter/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>jupyter on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/jupyter/</link>
+        <description>Recent content in jupyter on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 19 Jan 2019 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/tags/jupyter/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Jupyter Kernel Gateway</title>
-      <link>https://brianpfeil.com/post/jupyter-kernel-gateway/</link>
-      <pubDate>Sat, 19 Jan 2019 00:00:00 -0500</pubDate>
+<title>Jupyter Kernel Gateway</title>
+<link>https://brianpfeil.com/post/jupyter-kernel-gateway/</link>
+<pubDate>Sat, 19 Jan 2019 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/jupyter-kernel-gateway/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/jupyter-kernel-gateway-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/jupyter-kernel-gateway-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://jupyter-kernel-gateway.readthedocs.io/en/latest/index.html&#34;&gt;Jupyter Kernel Gateway&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;development&#34;&gt;Development&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# build image&lt;/span&gt;
+docker build -t pfeilbr/jupyter-kernel-gateway .
+
+&lt;span class=&#34;c1&#34;&gt;# run&lt;/span&gt;
+docker run -it --rm -p 8888:8888 pfeilbr/jupyter-kernel-gateway
+
+&lt;span class=&#34;c1&#34;&gt;# view swagger json&lt;/span&gt;
+open http://0.0.0.0:8888/api/swagger.json
+
+&lt;span class=&#34;c1&#34;&gt;# expose to public internet&lt;/span&gt;
+ngrok http &lt;span class=&#34;m&#34;&gt;8888&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# view in swagger ui&lt;/span&gt;
+open https://petstore.swagger.io
+
+&lt;span class=&#34;c1&#34;&gt;# enter https://NGROK_HOST/api/swagger.json in explore&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# e.g.&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#   https://0278ef82.ngrok.io/api/swagger.json&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# needed to add CORS params in `docker-stacks-image/Dockerfile` `CMD` statement&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# running `browser-client-example.js` in chrome DevTools&lt;/span&gt;
+open http://0.0.0.0:8888/api/swagger.json
+&lt;span class=&#34;c1&#34;&gt;# open DevTools and run code in Sources | Snippets&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# push docker image&lt;/span&gt;
+docker push pfeilbr/jupyter-kernel-gateway
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;screenshots&#34;&gt;Screenshots&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAHBAoPzt9NOyLDDhg90a4FkOcrCBAs7vz4B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+</item>
     
     <item>
-      <title>Jupyter</title>
-      <link>https://brianpfeil.com/post/jupyter/</link>
-      <pubDate>Sat, 09 Sep 2017 00:00:00 -0400</pubDate>
+<title>Jupyter</title>
+<link>https://brianpfeil.com/post/jupyter/</link>
+<pubDate>Sat, 09 Sep 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/jupyter/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/jupyter-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/jupyter-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn and experiment with &lt;a href=&#34;http://jupyter.org/&#34;&gt;jupyter&lt;/a&gt; notebooks&lt;/p&gt;
+&lt;h2 id=&#34;jupyterlabhttpsgithubcomjupyterlabjupyterlab-early-preview-as-of-this---2017-09-09&#34;&gt;&lt;a href=&#34;https://github.com/jupyterlab/jupyterlab&#34;&gt;jupyterlab&lt;/a&gt; (early preview as of this - 2017-09-09)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install&lt;/span&gt;
+conda install -c conda-forge jupyterlab
+
+&lt;span class=&#34;c1&#34;&gt;# run&lt;/span&gt;
+jupyter lab
+
+&lt;span class=&#34;c1&#34;&gt;# notebook server now running @ http://localhost:8888&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;screenshots&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAGQllPjiA5Oe4vmdCFYv5OR0i59KLGupXoB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAE03lHOtuRDX4Flxj33p8Lrxjab350GANAB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;jupyter-notebook-classic-ui&#34;&gt;jupyter notebook (classic UI)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# run&lt;/span&gt;
+jupyter notebook
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;screenshots&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAESPeQa1u1PFa73VSOrmP2wRw4uJ8CARi4B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;jupyter-qtconsolehttpsqtconsolereadthedocsioenstableindexhtml&#34;&gt;&lt;a href=&#34;https://qtconsole.readthedocs.io/en/stable/index.html&#34;&gt;jupyter qtconsole&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The Qt console is a very lightweight application that largely feels like a terminal, but provides a number of enhancements only possible in a GUI, such as inline figures, proper multi-line editing with syntax highlighting, graphical calltips, and much more. The Qt console can use any Jupyter kernel.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install&lt;/span&gt;
+conda install qtconsole
+conda install pyqt
+
+&lt;span class=&#34;c1&#34;&gt;# run&lt;/span&gt;
+jupyter qtconsole
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;screenshots&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAG_J_WaXklPBJxd_gS1-8JvTLMnu0Z6RcMB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ijavascript-kernel&#34;&gt;IJavascript Kernel&lt;/h2&gt;
+&lt;p&gt;IJavascript is a Javascript kernel (node.js) for the Jupyter notebook&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install&lt;/span&gt;
+npm install -g ijavascript
+
+&lt;span class=&#34;c1&#34;&gt;# registers the IJavascript kernel with Jupyter&lt;/span&gt;
+ijsinstall
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;screenshots&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAFzQ-qoH-dIc5661TFz2RRk2hIekySeDs0B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAG5nUlw2dBIgqnqNfJyuJ6Gc7DZoo-EbaUB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+</item>
     
   </channel>
 </rss>

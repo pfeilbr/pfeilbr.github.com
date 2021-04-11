@@ -1,29 +1,62 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>heroku on Brian Pfeil</title>
-    <link>https://brianpfeil.com/categories/heroku/</link>
-    <description>Recent content in heroku on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 05 Jul 2014 16:01:23 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/categories/heroku/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>heroku on Brian Pfeil</title>
+        <link>https://brianpfeil.com/categories/heroku/</link>
+        <description>Recent content in heroku on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 05 Jul 2014 16:01:23 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/categories/heroku/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Heroku Connect</title>
-      <link>https://brianpfeil.com/post/heroku-connect/</link>
-      <pubDate>Sat, 05 Jul 2014 16:01:23 +0000</pubDate>
+<title>Heroku Connect</title>
+<link>https://brianpfeil.com/post/heroku-connect/</link>
+<pubDate>Sat, 05 Jul 2014 16:01:23 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/heroku-connect/</guid>
-      <description>leverage SQL along with all the industry standard SQL tools to access to your salesforce data</description>
-    </item>
+<description>&lt;p&gt;&lt;a href=&#34;https://www.heroku.com/connect&#34;&gt;Heroku Connect&lt;/a&gt; was announced at &lt;a href=&#34;http://www.salesforce.com/dreamforce&#34;&gt;Dreamforce&lt;/a&gt; &amp;lsquo;13 shortly after salesforce aquired &lt;a href=&#34;http://www.cloudconnect.com/&#34;&gt;cloudconnect&lt;/a&gt;.  Cloudconnect is the original product created by &lt;a href=&#34;https://twitter.com/adam_g&#34;&gt;Adam Gross&lt;/a&gt;, formerly of &lt;a href=&#34;http://dropbox.com&#34;&gt;Dropbox&lt;/a&gt; that became Heroku Connect.&lt;/p&gt;
+&lt;p&gt;There&amp;rsquo;s a rich developer ecosystem around web apps built with popular web frameworks such as &lt;a href=&#34;http://rubyonrails.org/&#34;&gt;Rails&lt;/a&gt;, &lt;a href=&#34;https://www.djangoproject.com/&#34;&gt;Django&lt;/a&gt;, &lt;a href=&#34;http://expressjs.com/&#34;&gt;Express&lt;/a&gt;, &lt;a href=&#34;http://symfony.com/&#34;&gt;Symfony&lt;/a&gt;, etc.  All of these frameworks assume a relational database as a backend, which because of it&amp;rsquo;s age, usage, and rich set of existing toolsets, makes it easy to get started with.  Salesforce&amp;rsquo;s force.com platform wanted gain this ease of use and speed at which apps could be developed.  Salesforce has it&amp;rsquo;s own data storage solution that is built for scale and multitenatcy and doesn&amp;rsquo;t cleanly map to the standard relational model.&lt;/p&gt;
+&lt;p&gt;Connect solves this problem by bi-directionaly synchronizing your salesforce data to a heroku postgres database.  Once in postgres, all the popular web frameworks with a huge developer community can be used to develop salesforce apps.&lt;/p&gt;
+&lt;h2 id=&#34;heroku-connect-setup&#34;&gt;Heroku Connect Setup&lt;/h2&gt;
+&lt;p&gt;Connect is provided as a &lt;a href=&#34;https://addons.heroku.com/&#34;&gt;heroku add-on&lt;/a&gt;, which enables easy intregration with heroku apps.  A prerequisite is to have a postgres database provisioned for connect to synchronize your salesforce data to.  Once your database is in place, you install the add-on via&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;heroku addons:add herokuconnect -a appname&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s what it looks like&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The rest of the setup and configuration takes place in the Heroku Connect web interface.  You access it by logging into heroku and navigate to your app, then click the Heroku Connect link in the Add-ons section.  This will lauch the web ui.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;On first lauch you will be greeted with a setup screen.  This will automatically use to the &lt;code&gt;DATABASE_URL&lt;/code&gt; config variable, which was put in place when the postgres database was provisioned.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The final setup looks like&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Next you need to authorize Connect to access your salesforce org&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;You allow permission&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/7.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;You are then ready to configure the data you want to use with Connect.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/8.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.heroku.com/archives/2014/5/13/introducing_heroku_connect&#34;&gt;Introducing Heroku Connect: Connecting Clouds and Customers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://devcenter.heroku.com/articles/herokuconnect&#34;&gt;Heroku Connect Dev Center article&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
     <item>
-      <title>Hosting Static Sites on Heroku</title>
-      <link>https://brianpfeil.com/post/hosting-static-sites-on-heroku/</link>
-      <pubDate>Sun, 16 Sep 2012 02:43:00 +0000</pubDate>
+<title>Hosting Static Sites on Heroku</title>
+<link>https://brianpfeil.com/post/hosting-static-sites-on-heroku/</link>
+<pubDate>Sun, 16 Sep 2012 02:43:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/hosting-static-sites-on-heroku/</guid>
-      <description>easy git push deployment of static sites on Heroku</description>
-    </item>
+<description>&lt;img src=&#34;images/heroku.jpg&#34; width=&#34;125px&#34;&gt;
+&lt;p&gt;I was recently creating a web site for a family member, and was looking around for the best place to host it.  It&amp;rsquo;s a simple personal site that only contains static content.  There are many options out there from the freebie wordpress options to rackspace and the like.  None of the &amp;ldquo;web publishing platform&amp;rdquo; type sites were a fit because I wanted full control over the layout, and look and feel of the site.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve been working with &lt;a href=&#34;http://heroku.com&#34;&gt;Heroku&lt;/a&gt; for my day job for web applications, and it&amp;rsquo;s been simple to get things up and running at no cost.  Heroku allows you to create a web application for free, and only if you need to scale to support the traffic do you have to pay.&lt;/p&gt;
+&lt;p&gt;One of the limitations of using the free plan with heroku is that if your app hasn&amp;rsquo;t recieved any traffic within an hour, it puts it into an idle state.  They call this &lt;a href=&#34;https://devcenter.heroku.com/articles/dynos&#34;&gt;dyno idling&lt;/a&gt;  and when a request comes in and your dyno is in an idle state, it has to spin it back up, and that takes time.  In my experience, I&amp;rsquo;ll go to hit the site and it takes approx. 5 seconds to respond.  It&amp;rsquo;s free, so I can understand when they do this to save on compute resources, and if you have pay / have multiple dynos, they never with idle your app.&lt;/p&gt;
+&lt;p&gt;To work around this you just need to have at least 1 request come in an hour.  There are many ways to do this, and I took the simple approach of using a monitoring service (&lt;a href=&#34;https://www.pingdom.com/&#34;&gt;pingdom&lt;/a&gt;) to check/ping the site for availability every 5 minutes.  You could also implement by using a background worker process.&lt;/p&gt;
+&lt;p&gt;There’s a great &lt;a href=&#34;https://devcenter.heroku.com/articles/static-sites-ruby&#34;&gt;Creating Static Sites in Ruby with Rack&lt;/a&gt; walkthrough on the heroku dev center that will have you up and running in few minutes. They provide a fully functional &lt;a href=&#34;https://github.com/leereilly/static-site-heroku-cedar-example&#34;&gt;sample application&lt;/a&gt; that you can modify to make you own.&lt;/p&gt;
+</description>
+</item>
     
   </channel>
 </rss>

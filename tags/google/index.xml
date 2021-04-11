@@ -1,29 +1,52 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>google on Brian Pfeil</title>
-    <link>https://brianpfeil.com/tags/google/</link>
-    <description>Recent content in google on Brian Pfeil</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 25 Sep 2018 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/google/index.xml" rel="self" type="application/rss+xml" />
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>google on Brian Pfeil</title>
+        <link>https://brianpfeil.com/tags/google/</link>
+        <description>Recent content in google on Brian Pfeil</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 25 Sep 2018 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/google/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Google Test CPP Test Framework</title>
-      <link>https://brianpfeil.com/post/google-test-cpp-test-framework/</link>
-      <pubDate>Tue, 25 Sep 2018 00:00:00 -0400</pubDate>
+<title>Google Test CPP Test Framework</title>
+<link>https://brianpfeil.com/post/google-test-cpp-test-framework/</link>
+<pubDate>Tue, 25 Sep 2018 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/google-test-cpp-test-framework/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/google-test-cpp-test-framework-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/google-test-cpp-test-framework-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;learn &lt;a href=&#34;https://github.com/google/googletest&#34;&gt;googletest&lt;/a&gt; / &lt;a href=&#34;https://github.com/google/googletest&#34;&gt;gtest&lt;/a&gt; C++ test framework&lt;/p&gt;
+&lt;p&gt;see &lt;code&gt;README.md&lt;/code&gt; in each subdirectory under &lt;a href=&#34;src&#34;&gt;&lt;code&gt;src&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;gtest-install&#34;&gt;gtest install&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# download source&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/dev
+curl -LO https://github.com/google/googletest/archive/release-1.8.1.zip
+unzip release-1.8.1.zip
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; googletest-release-1.8.1
+mkdir build
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; build
+cmake ..
+make
+make install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+</item>
     
     <item>
-      <title>Node Google Cloud</title>
-      <link>https://brianpfeil.com/post/node-google-cloud/</link>
-      <pubDate>Fri, 09 Dec 2016 00:00:00 -0500</pubDate>
+<title>Node Google Cloud</title>
+<link>https://brianpfeil.com/post/node-google-cloud/</link>
+<pubDate>Fri, 09 Dec 2016 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/node-google-cloud/</guid>
-      <description></description>
-    </item>
+<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
+&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/node-google-cloud-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/node-google-cloud-playground&lt;/a&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;speech/README.md&#34;&gt;Speech API&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+</item>
     
   </channel>
 </rss>
