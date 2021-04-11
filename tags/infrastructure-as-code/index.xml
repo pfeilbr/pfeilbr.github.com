@@ -14,12 +14,7 @@
 <pubDate>Tue, 05 Nov 2019 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/terraform/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/terraform-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/terraform-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn and experiment with &lt;a href=&#34;https://www.terraform.io/&#34;&gt;Terraform&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;followed Packer &lt;a href=&#34;https://www.terraform.io/intro/getting-started/install.html&#34;&gt;GETTING STARTED&lt;/a&gt; docs&lt;/p&gt;
-</description>
+<description>Terraform</description>
 </item>
     
     <item>
@@ -28,60 +23,7 @@
 <pubDate>Wed, 09 Oct 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/stackery/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/stackery-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/stackery-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://www.stackery.io&#34;&gt;stackery&lt;/a&gt;.  Project based on &lt;a href=&#34;https://docs.stackery.io/docs/quickstart/quickstart-nodejs/&#34;&gt;Stackery Quickstart NodeJS&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;comments-as-of-2019-10-09&#34;&gt;Comments (as of 2019-10-09)&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;competes with &lt;a href=&#34;https://serverless.com/dashboard/&#34;&gt;serverless dashboard&lt;/a&gt;.  many of the same features.  secrets service, environment management, team/collaboration support&lt;/li&gt;
-&lt;li&gt;says it supports serverless framework (serverless.yml), but SAM seems to be the first class citizen.  SAM since its based on CF, lags behind in feature support over serverless.  Serverless fills the gaps with custom plugins.&lt;/li&gt;
-&lt;li&gt;installs a stack (roles, buckets, CodeBuild project, lambdas, SNS topics, etc.) into your account to link your aws account to the stackery SaaS service.&lt;/li&gt;
-&lt;li&gt;the stackery cli feels heavy due to the number of flags and arguments you need to supply.  e.g. always specifying env and aws profile.&lt;/li&gt;
-&lt;li&gt;documentation feels a bit all over the place.  this may be because the tool doesn&amp;rsquo;t have strong opinions and is favoring flexibility.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;docker&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;session&#34;&gt;Session&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ensure docker is running&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# install&lt;/span&gt;
-brew tap stackery/tap
-brew install stackery-cli
-
-stackery login
-
-&lt;span class=&#34;c1&#34;&gt;# init&lt;/span&gt;
-stackery init -n stackery-quickstart
-
-&lt;span class=&#34;c1&#34;&gt;# visual editor&lt;/span&gt;
-stackery edit
-
-&lt;span class=&#34;c1&#34;&gt;# deploy&lt;/span&gt;
-stackery deploy --interactive-setup
-
-&lt;span class=&#34;c1&#34;&gt;# cd to function directory&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; src/get
-
-&lt;span class=&#34;c1&#34;&gt;# invoke&lt;/span&gt;
-stackery &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; invoke -e pfeilbr-development --aws-profile admin
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Stackery editor that generates cloudformation (&lt;code&gt;template.yml&lt;/code&gt;) or serverless framework (&lt;code&gt;serverless.yml&lt;/code&gt;).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAFgto9OKTlMwKVUOV7Lhf2CztcnBgXKJ_MB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAFgto9OKTlMwKVUOV7Lhf2CztcnBgXKJ_MB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;There is a &lt;a href=&#34;https://docs.stackery.io/docs/using-stackery/security-permissions-and-controls/&#34;&gt;&amp;ldquo;link your AWS account with Stackery&amp;rdquo;&lt;/a&gt; one time setup.&lt;/p&gt;
-&lt;p&gt;Creates CF Stack for initial setup.  Includes Roles, Bucket, CodeBuild, Lambdas, SNS.
-&lt;img src=&#34;https://www.evernote.com/l/AAF1h3yovr1McrljVXDcmL0UbeDZ91r_Do0B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Roles created during one time setup
-&lt;img src=&#34;https://www.evernote.com/l/AAEqUjVG_31HLZX63acjnPe3Xs7L4BYbn_AB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.stackery.io/docs/quickstart/quickstart-nodejs/&#34;&gt;Stackery Quickstart NodeJS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.stackery.io&#34;&gt;Stackery Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>Stackery</description>
 </item>
     
   </channel>

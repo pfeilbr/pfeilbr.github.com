@@ -14,28 +14,7 @@
 <pubDate>Tue, 12 May 2015 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/html-video-embed/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/html-video-embed-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/html-video-embed-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Project to learn and experiment with various HTML video players&lt;/p&gt;
-&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Start a local webserver&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; python -m SimpleHTTPServer 8000
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Visit the &lt;code&gt;.html&lt;/code&gt; files to view video embeds.
-e.g. &lt;a href=&#34;http://localhost:8000/test-screencast-jwplayer.html&#34;&gt;http://localhost:8000/test-screencast-jwplayer.html&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.jwplayer.com/&#34;&gt;JW Player&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.videojs.com/&#34;&gt;Video.js&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>HTML Video Embed</description>
 </item>
     
     <item>
@@ -44,95 +23,7 @@ e.g. &lt;a href=&#34;http://localhost:8000/test-screencast-jwplayer.html&#34;&gt
 <pubDate>Tue, 27 Sep 2011 19:31:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/best-fit-web-font-sizing/</guid>
-<description>&lt;p&gt;I&amp;rsquo;ve been working on a web app that targets both smartphones and tablets. The
-large variation in screen sizes has sent me down the path of using a dynamic
-proportional layout that adapts to fit the available space. For example, I&amp;rsquo;ve
-allocated 20% of the available vertical space to the header section that
-displays a title. The &lt;a href=&#34;http://layout.jquery-dev.net/&#34;&gt;jQuery UI.Layout Plug-in&lt;/a&gt; has worked great for laying out the
-content areas, but I ran into a wall when it came to sizing my text
-proportionately.&lt;/p&gt;
-&lt;p&gt;The basic problem is that I have a box, and I want to display some text in it
-at the largest font size without it being wrapped or clipped. The only way to
-determine the bounding rectangle a string of text with certain font
-characteristics, is to create it, add it to the DOM, and then measure it. The
-following function does just that.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;function sizeWithText(text, cssStyles) {
-	// create temp element to hold our text
-	var e = document.createElement(&amp;#39;span&amp;#39;);
-	e.appendChild(document.createTextNode(text));
-
-	// apply any styles that have been passed in
-	// to our element - these can affect the text size
-	for (var prop in cssStyles) {
-		e.style[prop] = cssStyles[prop];
-	}
-
-	// hide our temp element
-	e.style[&amp;#39;visibility&amp;#39;] = &amp;#39;hidden&amp;#39;;
-
-	// add to DOM in order to have it render
-	document.body.appendChild(e);
-
-	// get the bounding rectangle dimensions
-	var s = {w: e.offsetWidth, h: e.offsetHeight};
-
-	// remove from DOM
-	document.body.removeChild(e);
-
-	return s;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The &lt;code&gt;cssStyles&lt;/code&gt; parameter holds the other css style attributes that you&amp;rsquo;d like to apply to the text.  For example, you might have a &lt;code&gt;font-weight: bold&lt;/code&gt; attribute that increases the size of the text, and we want to make sure we account for it.&lt;/p&gt;
-&lt;p&gt;Now we can use this function to check whether text with a font size and a set of styles will fit in our box.  We set the font size to 1 and continuously increase it by 1 check whether it&amp;rsquo;ll fit at every iteration.  As soon as it doesn&amp;rsquo;t, we stop.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;function bestFitTextSize(text, css, width, height) {
-	var pixel = 1;
-
-	do {
-		css[&amp;#39;font-size&amp;#39;] = (pixel++) + &amp;#39;px&amp;#39;;
-		s = sizeWithText(text, css);
-	} while ( (s.w &amp;lt; width) &amp;amp;&amp;amp; (s.h &amp;lt; height) )
-
-	return pixel - 2;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is a brute force and inefficient way to do the calculation, and there are improvements that could be made.  We could start at a reasonable font size like 6px, increment by standard font sizes, etc., but this is fine for my usage where I only do it once on app load.&lt;/p&gt;
-&lt;p&gt;Here&amp;rsquo;s a code sample that shows how the previous functions are used.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;// box we want to fill with text
-var c = document.getElementById(&amp;#39;content&amp;#39;);
-
-// out text
-var text = &amp;#39;Lorem ipsum dolor sit amet&amp;#39;;
-
-// styles
-var cssStyles = {
-	&amp;#39;font-family&amp;#39;: &amp;#39;Impact&amp;#39;,
-	&amp;#39;font-style&amp;#39;: &amp;#39;normal&amp;#39;,
-	&amp;#39;font-weight&amp;#39;: &amp;#39;bolder&amp;#39;,
-	&amp;#39;letter-spacing&amp;#39;: &amp;#39;1px&amp;#39;,
-	&amp;#39;text-shadow&amp;#39;: &amp;#39;3px 3px 3px white&amp;#39;
-};
-
-// size the text to fit
-function applyBestFitText() {
-	// get the pixel size for the font
-	var px = bestFitTextSize(text, cssStyles, c.offsetWidth, c.offsetHeight);
-	cssStyles[&amp;#39;font-size&amp;#39;] = px + &amp;#39;px&amp;#39;;
-
-	// set the text
-	c.innerHTML = text;
-
-	// apply our styles
-	for (var prop in cssStyles) {
-		c.style[prop] = cssStyles[prop];
-	}
-}
-
-// adjust if the size changes
-window.addEventListener(&amp;#39;resize&amp;#39;, applyBestFitText, false);
-
-// call for first time adjustment
-applyBestFitText();
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The complete example is available as a &lt;a href=&#34;https://gist.github.com/1248669&#34;&gt;gist&lt;/a&gt;&lt;/p&gt;
-</description>
+<description>Best Fit Web Font Sizing</description>
 </item>
     
   </channel>

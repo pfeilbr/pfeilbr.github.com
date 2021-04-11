@@ -14,173 +14,7 @@
 <pubDate>Sun, 11 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/reactcdk-rfc/</guid>
-<description>&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;original RFC proposal date 2020-09-27&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/aws/aws-cdk-rfcs/issues/256&#34;&gt;Issue | ReactCDK: Add JSX/TSX Support&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/aws/aws-cdk-rfcs/pull/258&#34;&gt;PR | &amp;ldquo;RFC 256: ReactCDK - Add JSX/TSX Support&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/pfeilbr/aws-cdk-rfcs/blob/f3fd72f30e/text/0256-react-cdk-add-jsx-tsx-support.md&#34;&gt;Rendered Proposal (feature: &lt;code&gt;react-cdk-add-jsx-tsx-support&lt;/code&gt;)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
-&lt;p&gt;Support the expression of cloud infrastructure resources via React JSX / TSX. Cloud solutions
-are composed of many services. Being able to efficiently and naturally express the composition
-is a developer ergonomics/DX concern.&lt;/p&gt;
-&lt;h1 id=&#34;readme&#34;&gt;README&lt;/h1&gt;
-&lt;p&gt;Create CDK applications using React.&lt;/p&gt;
-&lt;h2 id=&#34;hello-reactcdk&#34;&gt;Hello ReactCDK&lt;/h2&gt;
-&lt;p&gt;Example ReactCDK application&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-jsx&#34; data-lang=&#34;jsx&#34;&gt;&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;ReactCDK&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;App&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Stack&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;@aws-cdk/react&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Bucket&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;@aws-cdk/react/s3&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;CloudFrontDistribution&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Origins&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;DefaultOrigin&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;@aws-cdk/react/cloudfront&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Api&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Resource&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Integration&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;@aws-cdk/react/apigateway&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Lambda&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;@aws-cdk/react/lambda&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-
-&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;EchoLambda&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;Lambda&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;kr&#34;&gt;async&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;({&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;event&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;context&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;({&lt;/span&gt;
-      &lt;span class=&#34;s2&#34;&gt;&amp;#34;statusCode&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-      &lt;span class=&#34;s2&#34;&gt;&amp;#34;headers&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-            &lt;span class=&#34;s2&#34;&gt;&amp;#34;Content-Type&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;application/json&amp;#34;&lt;/span&gt;
-        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-      &lt;span class=&#34;s2&#34;&gt;&amp;#34;body: JSON.stringify(event)
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    })
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;  &amp;lt;/Lambda&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;)
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;const EchoApi = (
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;  &amp;lt;Api&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    &amp;lt;Resource path=&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;      &amp;lt;Integration type=&amp;#34;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;lambda&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;        &amp;lt;EchoLambda /&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;      &amp;lt;/Integration&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    &amp;lt;/Resource&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;  &amp;lt;/Api&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;)
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;const WebsiteBucket = () =&amp;gt; (
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;  &amp;lt;Bucket src=&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;kr&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; /&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;)
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;const MyCloudFrontDistribution = (
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;  &amp;lt;CloudFrontDistribution&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    &amp;lt;Origins&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;      &amp;lt;DefaultOrigin oai=&amp;#34;&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;        &amp;lt;WebsiteBucket /&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;      &amp;lt;/DefaultOrigin&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;      &amp;lt;Origin path=&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;api&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/*&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;EchoApi&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;/&amp;gt;&lt;/span&gt;
-      &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;Origin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;Origins&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;CloudFrontDistribution&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-
-&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;MyApp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;App&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;Stack&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;MyCloudFrontDistribution&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;/&amp;gt;&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;Stack&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;App&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-
-&lt;span class=&#34;nx&#34;&gt;ReactCDK&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;render&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;MyApp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;region&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;us-east-1&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;motivation&#34;&gt;Motivation&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Why are we doing this?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Developer accessibility.  Expanding and making the AWS platform accessible
-to a larger group of people.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Library / framework support is a natural evolution on top of already
-supported CDK languages.&lt;/li&gt;
-&lt;li&gt;React is familiar to a large group of frontend developers. It&amp;rsquo;s a generalized
-tech that allows developers to naturally express composition, which is the core
-tenet of serverless / serviceful solutions.&lt;/li&gt;
-&lt;li&gt;This eases developers into more advanced AWS usage and therefore enabling them
-to get more value from the platform.&lt;/li&gt;
-&lt;li&gt;Library/framework support on top of already supported language (ts) via jsii&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;What use cases does it support?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The large pool of existing React developers who have experience with React and it&amp;rsquo;s
-component based composition idioms.  Allows them to reuse and leverage their existing
-knowledge to build full stack cloud solutions.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;What is the expected outcome?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;More people leveraging CDK suite -&amp;gt; more innovation and solutions -&amp;gt; advance humanity.&lt;/p&gt;
-&lt;h1 id=&#34;design-summary&#34;&gt;Design Summary&lt;/h1&gt;
-&lt;p&gt;Code generate a set of ReactCDK components that has feature parity with all TS
-components from cfn constructs to solutions constructs.&lt;/p&gt;
-&lt;h1 id=&#34;detailed-design&#34;&gt;Detailed Design&lt;/h1&gt;
-&lt;h2 id=&#34;codegen-reactcdk-components&#34;&gt;Codegen ReactCDK components&lt;/h2&gt;
-&lt;p&gt;A set of ReactCDK components that has feature parity with all TS components from cfn constructs to solutions constructs.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;mapping from react concepts of props, state, children, render props to typescript
-CDK constructors, params, hierarchical nesting (parent), etc.&lt;/li&gt;
-&lt;li&gt;code generated based on the jsii manifests of CDK modules
-&lt;a href=&#34;(https://twitter.com/emeshbi/status/1305017904027643906?s=20)&#34;&gt;via&lt;/a&gt; @eladb&lt;/li&gt;
-&lt;li&gt;custom react renderer / reconciler where cloud (cfn) is it&amp;rsquo;s render target getting there via CDK language layer.&lt;/li&gt;
-&lt;li&gt;ReactCDKBaseComponent (class or functional component/hooks friendly)&lt;/li&gt;
-&lt;li&gt;ReactCDKPatternComponent - pre-composed infra for common use cases.&lt;/li&gt;
-&lt;li&gt;leverage React ecosystem adjacencies (e.g. react storybook, etc.)&lt;/li&gt;
-&lt;li&gt;wrap these ReactCDK components for Amplify “Backend” library&lt;/li&gt;
-&lt;li&gt;special cases of lambda function code being webpack + babel + etc being
-transpiled, bundled, etc. and handed over to CDK provisioning layer.
-&lt;blockquote&gt;
-&lt;p&gt;this is a bit more involved and also needs research.  this is the blending of app code and infra resources it
-interacts with.
-This is somewhat similar to
-&lt;a href=&#34;https://blog.meteor.com/the-meteor-chef-an-introduction-to-apollo-b1904955289e&#34;&gt;Meteor&lt;/a&gt;,
-but instead of only mongodb, it&amp;rsquo;s every cfn supported AWS service.  Need to not make same mistakes as meteor.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;step function special cases where the components that make it up are customized for developer ergonomics/dx.&lt;/li&gt;
-&lt;li&gt;this is additional alternative to amplify add [backend] (e.g. api, auth, etc.)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;drawbacks&#34;&gt;Drawbacks&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;React is not universally liked.  If it becomes associated with CDK there is potential brand/product damage.&lt;/li&gt;
-&lt;li&gt;CDK is associated and tied to AWS brand.  AWS tends to support all &amp;ldquo;popular&amp;rdquo; frameworks equally.  Favoring one might
-not be good for brand.&lt;/li&gt;
-&lt;li&gt;Might draw demand / more work for Vue.js, Angular, Svelete, etc. support&lt;/li&gt;
-&lt;li&gt;Frontend libraries and frameworks come and go much more frequently than programming languages.&lt;/li&gt;
-&lt;li&gt;React itself has gone through major &amp;ldquo;idiomatic&amp;rdquo; changes throughout it&amp;rsquo;s short lifetime.  For example, classes,
-functional components, hooks.  JSX has remained stable, but there could be &amp;ldquo;another&amp;rdquo; evolution step that makes JSX
-a moving target.&lt;/li&gt;
-&lt;li&gt;A new layer and choice is introduced to the end user.  Should I use a supported programming language or go up a
-layer and use a supported higher-level technology.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;rationale-and-alternatives&#34;&gt;Rationale and Alternatives&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;leverage developers existing knowledge around technologies that easy the use of component oriented solutions.&lt;/li&gt;
-&lt;li&gt;there are no technical negative impacts in not doing this.  Purely additive.  There is only the &amp;ldquo;potential&amp;rdquo; lost
-opportunity cost.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;adoption-strategy&#34;&gt;Adoption Strategy&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Leverage existing Amplify brand platform/position with frontend developer community.&lt;/li&gt;
-&lt;li&gt;This is an additive &amp;ldquo;personality&amp;rdquo; / choice for a target CDK user type.  Does not impact existing code bases.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;unresolved-questions&#34;&gt;Unresolved questions&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;mapping from react concepts of props, state, children, render props to typescript CDK constructors, params,
-hierarchical nesting (parent), etc.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;future-possibilities&#34;&gt;Future Possibilities&lt;/h1&gt;
-&lt;p&gt;There currently is a &amp;ldquo;locality of code&amp;rdquo; issue with CDK, SAM, CFN, etc.  The infrastructure I define is not close to
-the application code that leverages it (e.g. lambda code living in separate file, referencing it via &lt;code&gt;s3://.zip&lt;/code&gt;).
-Explicit IAM permissions (or what could be codegened) live only in infra code.  Application code events expressed in
-code seamlessly leveraging EventBridge for example without the developer needing to do any additional work.  Would be
-a step towards a &amp;ldquo;cloud native programming language&amp;rdquo; where the programming language control constructs naturally scale
-and map to corresponding services (e.g. control flow -&amp;gt; step fn, events -&amp;gt; EventBridge,
-lambdas (lang level) -&amp;gt; lambdas :))&lt;/p&gt;
-&lt;h1 id=&#34;implementation-plan&#34;&gt;Implementation Plan&lt;/h1&gt;
-&lt;h1 id=&#34;resources&#34;&gt;Resources&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;original &amp;ldquo;concept&amp;rdquo; conversation on &lt;a href=&#34;https://twitter.com/pfeilbr/status/1304757893544148992?s=20&#34;&gt;twitter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://gist.github.com/pfeilbr/78db35ec7cac5886f771bc2d81e7aacd&#34;&gt;&lt;code&gt;Hello ReactCDK&lt;/code&gt; app concept gist&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.atulr.com/react-custom-renderer-1&#34;&gt;Part 1/3 - Beginners guide to Custom React Renderers. How to build your own renderer from scratch?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>ReactCDK RFC</description>
 </item>
     
     <item>
@@ -189,30 +23,7 @@ lambdas (lang level) -&amp;gt; lambdas :))&lt;/p&gt;
 <pubDate>Mon, 28 Sep 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/mdx-deck/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/mdx-deck-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/mdx-deck-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://github.com/jxnblk/mdx-deck&#34;&gt;jxnblk/mdx-deck&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;examples/example01/deck.mdx&#34;&gt;&lt;code&gt;examples/example01/deck.mdx&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;examples/example01/package.json&#34;&gt;&lt;code&gt;examples/example01/package.json:scripts&lt;/code&gt;&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;build/serve static site, export to PDF&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;export-to-pdf&#34;&gt;Export to PDF&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# run in own shell. blocks&lt;/span&gt;
-npm start
-
-&lt;span class=&#34;c1&#34;&gt;# run in different shell&lt;/span&gt;
-npm run pdf
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/jxnblk/mdx-deck/blob/master/docs/theming.md&#34;&gt;mdx-deck | Theming&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/jxnblk/mdx-deck/blob/master/docs/exporting.md&#34;&gt;mdx-deck | Exporting&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>MDX Deck</description>
 </item>
     
     <item>
@@ -221,58 +32,7 @@ npm run pdf
 <pubDate>Tue, 01 Sep 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/antd-react/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/antd-react-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/antd-react-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://ant.design/&#34;&gt;Ant Design (antd)&lt;/a&gt; for &lt;a href=&#34;https://reactjs.org/&#34;&gt;React&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;files-and-directories&#34;&gt;Files and Directories&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;src/App.js&#34;&gt;&lt;code&gt;src/App.js&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;src/App.css&#34;&gt;&lt;code&gt;src/App.css&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://ant.design/docs/react/use-with-create-react-app&#34;&gt;Use in create-react-app - Ant Design&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;This project was bootstrapped with &lt;a href=&#34;https://github.com/facebook/create-react-app&#34;&gt;Create React App&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;available-scripts&#34;&gt;Available Scripts&lt;/h2&gt;
-&lt;p&gt;In the project directory, you can run:&lt;/p&gt;
-&lt;h3 id=&#34;yarn-start&#34;&gt;&lt;code&gt;yarn start&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;Runs the app in the development mode.&lt;br /&gt;
-Open &lt;a href=&#34;http://localhost:3000&#34;&gt;http://localhost:3000&lt;/a&gt; to view it in the browser.&lt;/p&gt;
-&lt;p&gt;The page will reload if you make edits.&lt;br /&gt;
-You will also see any lint errors in the console.&lt;/p&gt;
-&lt;h3 id=&#34;yarn-test&#34;&gt;&lt;code&gt;yarn test&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;Launches the test runner in the interactive watch mode.&lt;br /&gt;
-See the section about &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/running-tests&#34;&gt;running tests&lt;/a&gt; for more information.&lt;/p&gt;
-&lt;h3 id=&#34;yarn-build&#34;&gt;&lt;code&gt;yarn build&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;Builds the app for production to the &lt;code&gt;build&lt;/code&gt; folder.&lt;br /&gt;
-It correctly bundles React in production mode and optimizes the build for the best performance.&lt;/p&gt;
-&lt;p&gt;The build is minified and the filenames include the hashes.&lt;br /&gt;
-Your app is ready to be deployed!&lt;/p&gt;
-&lt;p&gt;See the section about &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/deployment&#34;&gt;deployment&lt;/a&gt; for more information.&lt;/p&gt;
-&lt;h3 id=&#34;yarn-eject&#34;&gt;&lt;code&gt;yarn eject&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Note: this is a one-way operation. Once you &lt;code&gt;eject&lt;/code&gt;, you can’t go back!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;If you aren’t satisfied with the build tool and configuration choices, you can &lt;code&gt;eject&lt;/code&gt; at any time. This command will remove the single build dependency from your project.&lt;/p&gt;
-&lt;p&gt;Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except &lt;code&gt;eject&lt;/code&gt; will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.&lt;/p&gt;
-&lt;p&gt;You don’t have to ever use &lt;code&gt;eject&lt;/code&gt;. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.&lt;/p&gt;
-&lt;h2 id=&#34;learn-more&#34;&gt;Learn More&lt;/h2&gt;
-&lt;p&gt;You can learn more in the &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/getting-started&#34;&gt;Create React App documentation&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;To learn React, check out the &lt;a href=&#34;https://reactjs.org/&#34;&gt;React documentation&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;code-splitting&#34;&gt;Code Splitting&lt;/h3&gt;
-&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/code-splitting&#34;&gt;https://facebook.github.io/create-react-app/docs/code-splitting&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;analyzing-the-bundle-size&#34;&gt;Analyzing the Bundle Size&lt;/h3&gt;
-&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size&#34;&gt;https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;making-a-progressive-web-app&#34;&gt;Making a Progressive Web App&lt;/h3&gt;
-&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app&#34;&gt;https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;advanced-configuration&#34;&gt;Advanced Configuration&lt;/h3&gt;
-&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/advanced-configuration&#34;&gt;https://facebook.github.io/create-react-app/docs/advanced-configuration&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;deployment&#34;&gt;Deployment&lt;/h3&gt;
-&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/deployment&#34;&gt;https://facebook.github.io/create-react-app/docs/deployment&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;yarn-build-fails-to-minify&#34;&gt;&lt;code&gt;yarn build&lt;/code&gt; fails to minify&lt;/h3&gt;
-&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify&#34;&gt;https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify&lt;/a&gt;&lt;/p&gt;
-</description>
+<description>Antd React</description>
 </item>
     
     <item>
@@ -281,50 +41,7 @@ Your app is ready to be deployed!&lt;/p&gt;
 <pubDate>Thu, 19 Mar 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/react-async/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/react-async-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/react-async-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://docs.react-async.com/&#34;&gt;React Async&lt;/a&gt;, a React component and hook for declarative promise resolution and data fetching&lt;/p&gt;
-&lt;p&gt;see &lt;a href=&#34;src/App.js&#34;&gt;&lt;code&gt;src/App.js&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;This project was bootstrapped with &lt;a href=&#34;https://github.com/facebook/create-react-app&#34;&gt;Create React App&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;available-scripts&#34;&gt;Available Scripts&lt;/h2&gt;
-&lt;p&gt;In the project directory, you can run:&lt;/p&gt;
-&lt;h3 id=&#34;yarn-start&#34;&gt;&lt;code&gt;yarn start&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;Runs the app in the development mode.&lt;br /&gt;
-Open &lt;a href=&#34;http://localhost:3000&#34;&gt;http://localhost:3000&lt;/a&gt; to view it in the browser.&lt;/p&gt;
-&lt;p&gt;The page will reload if you make edits.&lt;br /&gt;
-You will also see any lint errors in the console.&lt;/p&gt;
-&lt;h3 id=&#34;yarn-test&#34;&gt;&lt;code&gt;yarn test&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;Launches the test runner in the interactive watch mode.&lt;br /&gt;
-See the section about &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/running-tests&#34;&gt;running tests&lt;/a&gt; for more information.&lt;/p&gt;
-&lt;h3 id=&#34;yarn-build&#34;&gt;&lt;code&gt;yarn build&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;Builds the app for production to the &lt;code&gt;build&lt;/code&gt; folder.&lt;br /&gt;
-It correctly bundles React in production mode and optimizes the build for the best performance.&lt;/p&gt;
-&lt;p&gt;The build is minified and the filenames include the hashes.&lt;br /&gt;
-Your app is ready to be deployed!&lt;/p&gt;
-&lt;p&gt;See the section about &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/deployment&#34;&gt;deployment&lt;/a&gt; for more information.&lt;/p&gt;
-&lt;h3 id=&#34;yarn-eject&#34;&gt;&lt;code&gt;yarn eject&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Note: this is a one-way operation. Once you &lt;code&gt;eject&lt;/code&gt;, you can’t go back!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;If you aren’t satisfied with the build tool and configuration choices, you can &lt;code&gt;eject&lt;/code&gt; at any time. This command will remove the single build dependency from your project.&lt;/p&gt;
-&lt;p&gt;Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except &lt;code&gt;eject&lt;/code&gt; will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.&lt;/p&gt;
-&lt;p&gt;You don’t have to ever use &lt;code&gt;eject&lt;/code&gt;. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.&lt;/p&gt;
-&lt;h2 id=&#34;learn-more&#34;&gt;Learn More&lt;/h2&gt;
-&lt;p&gt;You can learn more in the &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/getting-started&#34;&gt;Create React App documentation&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;To learn React, check out the &lt;a href=&#34;https://reactjs.org/&#34;&gt;React documentation&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;code-splitting&#34;&gt;Code Splitting&lt;/h3&gt;
-&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/code-splitting&#34;&gt;https://facebook.github.io/create-react-app/docs/code-splitting&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;analyzing-the-bundle-size&#34;&gt;Analyzing the Bundle Size&lt;/h3&gt;
-&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size&#34;&gt;https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;making-a-progressive-web-app&#34;&gt;Making a Progressive Web App&lt;/h3&gt;
-&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app&#34;&gt;https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;advanced-configuration&#34;&gt;Advanced Configuration&lt;/h3&gt;
-&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/advanced-configuration&#34;&gt;https://facebook.github.io/create-react-app/docs/advanced-configuration&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;deployment&#34;&gt;Deployment&lt;/h3&gt;
-&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/deployment&#34;&gt;https://facebook.github.io/create-react-app/docs/deployment&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;yarn-build-fails-to-minify&#34;&gt;&lt;code&gt;yarn build&lt;/code&gt; fails to minify&lt;/h3&gt;
-&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify&#34;&gt;https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify&lt;/a&gt;&lt;/p&gt;
-</description>
+<description>React Async</description>
 </item>
     
     <item>
@@ -333,46 +50,7 @@ Your app is ready to be deployed!&lt;/p&gt;
 <pubDate>Sun, 29 Dec 2019 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/react-bootstrap/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/react-bootstrap-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/react-bootstrap-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;available-scripts&#34;&gt;Available Scripts&lt;/h2&gt;
-&lt;p&gt;In the project directory, you can run:&lt;/p&gt;
-&lt;h3 id=&#34;yarn-start&#34;&gt;&lt;code&gt;yarn start&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;Runs the app in the development mode.&lt;br /&gt;
-Open &lt;a href=&#34;http://localhost:3000&#34;&gt;http://localhost:3000&lt;/a&gt; to view it in the browser.&lt;/p&gt;
-&lt;p&gt;The page will reload if you make edits.&lt;br /&gt;
-You will also see any lint errors in the console.&lt;/p&gt;
-&lt;h3 id=&#34;yarn-test&#34;&gt;&lt;code&gt;yarn test&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;Launches the test runner in the interactive watch mode.&lt;br /&gt;
-See the section about &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/running-tests&#34;&gt;running tests&lt;/a&gt; for more information.&lt;/p&gt;
-&lt;h3 id=&#34;yarn-build&#34;&gt;&lt;code&gt;yarn build&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;Builds the app for production to the &lt;code&gt;build&lt;/code&gt; folder.&lt;br /&gt;
-It correctly bundles React in production mode and optimizes the build for the best performance.&lt;/p&gt;
-&lt;p&gt;The build is minified and the filenames include the hashes.&lt;br /&gt;
-Your app is ready to be deployed!&lt;/p&gt;
-&lt;p&gt;See the section about &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/deployment&#34;&gt;deployment&lt;/a&gt; for more information.&lt;/p&gt;
-&lt;h3 id=&#34;yarn-eject&#34;&gt;&lt;code&gt;yarn eject&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Note: this is a one-way operation. Once you &lt;code&gt;eject&lt;/code&gt;, you can’t go back!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;If you aren’t satisfied with the build tool and configuration choices, you can &lt;code&gt;eject&lt;/code&gt; at any time. This command will remove the single build dependency from your project.&lt;/p&gt;
-&lt;p&gt;Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except &lt;code&gt;eject&lt;/code&gt; will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.&lt;/p&gt;
-&lt;p&gt;You don’t have to ever use &lt;code&gt;eject&lt;/code&gt;. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.&lt;/p&gt;
-&lt;h2 id=&#34;learn-more&#34;&gt;Learn More&lt;/h2&gt;
-&lt;p&gt;You can learn more in the &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/getting-started&#34;&gt;Create React App documentation&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;To learn React, check out the &lt;a href=&#34;https://reactjs.org/&#34;&gt;React documentation&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;code-splitting&#34;&gt;Code Splitting&lt;/h3&gt;
-&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/code-splitting&#34;&gt;https://facebook.github.io/create-react-app/docs/code-splitting&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;analyzing-the-bundle-size&#34;&gt;Analyzing the Bundle Size&lt;/h3&gt;
-&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size&#34;&gt;https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;making-a-progressive-web-app&#34;&gt;Making a Progressive Web App&lt;/h3&gt;
-&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app&#34;&gt;https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;advanced-configuration&#34;&gt;Advanced Configuration&lt;/h3&gt;
-&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/advanced-configuration&#34;&gt;https://facebook.github.io/create-react-app/docs/advanced-configuration&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;deployment&#34;&gt;Deployment&lt;/h3&gt;
-&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/deployment&#34;&gt;https://facebook.github.io/create-react-app/docs/deployment&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;yarn-build-fails-to-minify&#34;&gt;&lt;code&gt;yarn build&lt;/code&gt; fails to minify&lt;/h3&gt;
-&lt;p&gt;This section has moved here: &lt;a href=&#34;https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify&#34;&gt;https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify&lt;/a&gt;&lt;/p&gt;
-</description>
+<description>React Bootstrap</description>
 </item>
     
     <item>
@@ -381,12 +59,7 @@ Your app is ready to be deployed!&lt;/p&gt;
 <pubDate>Mon, 11 Feb 2019 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/react-hooks/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/react-hooks-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/react-hooks-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://reactjs.org/docs/hooks-intro.html&#34;&gt;React Hooks&lt;/a&gt; introduced in React 16.8&lt;/p&gt;
-&lt;p&gt;see &lt;a href=&#34;src/App.tsx&#34;&gt;&lt;code&gt;src/App.tsx&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+<description>React Hooks</description>
 </item>
     
     <item>
@@ -395,16 +68,7 @@ Your app is ready to be deployed!&lt;/p&gt;
 <pubDate>Fri, 25 Jan 2019 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/storybook-ui-development-environment/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/storybook-ui-development-environment-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/storybook-ui-development-environment-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://storybook.js.org/&#34;&gt;Storybook&lt;/a&gt; UI Development Environment&lt;/p&gt;
-&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;add stories to &lt;code&gt;src/components/*.stories.js&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;run storybook via &lt;code&gt;npm run storybook&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>Storybook UI Development Environment</description>
 </item>
     
     <item>
@@ -413,20 +77,7 @@ Your app is ready to be deployed!&lt;/p&gt;
 <pubDate>Sat, 29 Jul 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/react-router-4/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/react-router-4-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/react-router-4-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;project to learn and experiment with &lt;a href=&#34;https://reacttraining.com/react-router/&#34;&gt;react-router&lt;/a&gt; 4&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;built with &lt;a href=&#34;https://github.com/facebookincubator/create-react-app&#34;&gt;create-react-app&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;see &lt;code&gt;src/index.js&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;install deps and run&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ yarn
-$ yarn start
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;upgrade all deps&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ yarn upgrade react react-dom react-redux react-router react-router-dom react-router-redux redux react-scripts
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+<description>React Router 4</description>
 </item>
     
     <item>
@@ -435,13 +86,7 @@ $ yarn start
 <pubDate>Tue, 01 Nov 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/nextjs/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/nextjs-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/nextjs-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Learn &lt;a href=&#34;https://github.com/zeit/next.js&#34;&gt;Next.js&lt;/a&gt;, a small framework for server-rendered universal JavaScript webapps, built on top of React, Webpack and Babel&lt;/p&gt;
-&lt;h2 id=&#34;developing&#34;&gt;Developing&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ npm run dev
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+<description>NextJS</description>
 </item>
     
     <item>
@@ -450,34 +95,7 @@ $ yarn start
 <pubDate>Fri, 20 May 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/gitbook/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/gitbook-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/gitbook-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;a href=&#34;http://toolchain.gitbook.com/&#34;&gt;GitBook Toolchain Documentation&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;setup&#34;&gt;Setup&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ npm install gitbook-cli -g
-$ mkdir gitbook-playground
-$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; gitbook-playground/
-$ gitbook init
-
-&lt;span class=&#34;c1&#34;&gt;# MAKE EDITS - see http://toolchain.gitbook.com/&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# server via built-in webserver&lt;/span&gt;
-$ gitbook serve
-
-&lt;span class=&#34;c1&#34;&gt;# generate pdf&lt;/span&gt;
-$ gitbook pdf ./ ./mybook.pdf
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-&lt;h1 id=&#34;section-1&#34;&gt;Section 1&lt;/h1&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-&lt;h2 id=&#34;subsection-1&#34;&gt;Subsection 1&lt;/h2&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-&lt;h1 id=&#34;section-2&#34;&gt;Section 2&lt;/h1&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-&lt;h2 id=&#34;subsection-1-1&#34;&gt;Subsection 1&lt;/h2&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-</description>
+<description>GitBook</description>
 </item>
     
     <item>
@@ -486,33 +104,7 @@ $ gitbook pdf ./ ./mybook.pdf
 <pubDate>Wed, 04 May 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/react-redux/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/react-redux-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/react-redux-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn and experiment with&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://facebook.github.io/react/&#34;&gt;react&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://redux.js.org/&#34;&gt;redux&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/reactjs/react-redux&#34;&gt;react-redux&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/reactjs/react-router-redux&#34;&gt;react-router-redux&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Based on &lt;a href=&#34;https://github.com/jackielii/simplest-redux-example&#34;&gt;jackielii/simplest-redux-example&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;npm install&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;npm start&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;open http://localhost:8080/webpack-dev-server/ in the browser&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;files&#34;&gt;Files&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;index.html&#34;&gt;index.html&lt;/a&gt; - host page&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;index.js&#34;&gt;index.js&lt;/a&gt; - entry point&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;main.css&#34;&gt;main.css&lt;/a&gt; - styles&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;webpack.config.js&#34;&gt;webpack.config.js&lt;/a&gt; - webpack config&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>React Redux</description>
 </item>
     
     <item>
@@ -521,47 +113,7 @@ $ gitbook pdf ./ ./mybook.pdf
 <pubDate>Fri, 27 Mar 2015 16:36:59 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/react-native-initial-thoughts/</guid>
-<description>&lt;p&gt;&lt;img src=&#34;images/react.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://facebook.github.io/react-native/&#34;&gt;React Native&lt;/a&gt; was released as open source yesterday.  There&amp;rsquo;s been quite a bit of build up and excitement since the &lt;a href=&#34;https://www.youtube.com/watch?v=7rDsRXj9-cU&#34;&gt;React.js Conf 2015 video&lt;/a&gt;.  The video showed a &lt;strong&gt;real&lt;/strong&gt; app being built with a web development style workflow (your favorite editor with livereload).  I&amp;rsquo;ve built some apps using &lt;a href=&#34;http://facebook.github.io/react/&#34;&gt;React.js&lt;/a&gt; and really appreciate the simplicity and development workflow.  Having the same for native app development definitely is exciting.  I&amp;rsquo;ve gottent to spend a few hours with it and it looks like it&amp;rsquo;s living up to the hype.&lt;/p&gt;
-&lt;p&gt;I started in with the &lt;a href=&#34;http://facebook.github.io/react-native/docs/tutorial.html#content&#34;&gt;tutorial&lt;/a&gt;, which is a movies app backed by &lt;a href=&#34;http://www.rottentomatoes.com/&#34;&gt;Rotten Tomatoes&lt;/a&gt; data.  The main UI is a run of the mill &lt;a href=&#34;http://facebook.github.io/react-native/docs/listview.html#content&#34;&gt;List View&lt;/a&gt; with each cell containing a poster image, and the movie title and year.&lt;/p&gt;
-&lt;p&gt;It shows fetching data over the network, some of the concerns with rendering list views, and the react core concept of only re-rendering thing that&amp;rsquo;ve changes with &lt;code&gt;ListView.DataSource.rowHasChanged&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;They sprinkle in &lt;a href=&#34;https://github.com/lukehoban/es6features&#34;&gt;ES6&lt;/a&gt; syntax within the examples, and some of it I had to look up.  This is a good way to give people a gentle introduction to it.  I can see how it might be a bit distracting if your trying to learn something new.  Having to learn language level features on top of a new framework could be offputting for some.&lt;/p&gt;
-&lt;h2 id=&#34;yep-its-all-in-that-single-file&#34;&gt;Yep. It&amp;rsquo;s All in that single file.&lt;/h2&gt;
-&lt;p&gt;It does a good job with starting off with a single minimal view and layering on the different concepts to get you to some more than &lt;code&gt;hello world&lt;/code&gt;, but not a &lt;strong&gt;real&lt;/strong&gt; app.  One of the things that stood out to me and made it much easier to follow is that all the code is in a single file.  UI, style, logic, and data.  This is huge from a learning and user uptake perspective.  For larger apps, it will get cumbersome quickly and using separate &lt;code&gt;.js&lt;/code&gt; files and &lt;code&gt;require&lt;/code&gt; them in will make it managaeble.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;ve seen way too much time spent in other javascript frameworks first introducing the &lt;a href=&#34;https://scotch.io/tutorials/angularjs-best-practices-directory-structure&#34;&gt;file and directory layout&lt;/a&gt;.  There are as many different ways to lay things out as there are javascript frameworks these days.  I agree it&amp;rsquo;s important for maintainability and collaboration, but when starting out, I feel it should be kept simple, and only restructure when needed.  Choice is good, but I hope facebook explicitly documents their recommended layout and people just use it.&lt;/p&gt;
-&lt;h2 id=&#34;native-modules-call-for-community-contributions&#34;&gt;Native Modules: Call for Community Contributions&lt;/h2&gt;
-&lt;p&gt;If react native doesn&amp;rsquo;t provide the UI component or capability you need, they allow extension via &lt;a href=&#34;http://facebook.github.io/react-native/docs/nativemodulesios.html#content&#34;&gt;Native Modules&lt;/a&gt;.  Bridging is never pretty as it always feels like you need to switch contexts and be aware this is a &lt;code&gt;bridge component&lt;/code&gt;.  They do their best to minimize this and in the spirit of react it&amp;rsquo;s lightweight and only requires the minimal amount of hooks to do it&amp;rsquo;s job.&lt;/p&gt;
-&lt;p&gt;You only need to implement the &lt;a href=&#34;http://facebook.github.io/react-native/docs/nativemodulesios.html#ios-calendar-module-example&#34;&gt;RCTBridgeModule&lt;/a&gt; &lt;a href=&#34;https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithProtocols/WorkingwithProtocols.html&#34;&gt;protocol&lt;/a&gt; to expose native code.&lt;/p&gt;
-&lt;p&gt;Here&amp;rsquo;s the &lt;a href=&#34;http://facebook.github.io/react-native/docs/nativemodulesios.html#content&#34;&gt;example&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;// CalendarManager.h
-#import &amp;#34;RCTBridgeModule.h&amp;#34;
-
-@interface CalendarManager : NSObject &amp;lt;RCTBridgeModule&amp;gt;
-@end
-
-// CalendarManager.m
-@implementation CalendarManager
-
-- (void)addEventWithName:(NSString *)name location:(NSString *)location
-{
-  RCT_EXPORT();
-  RCTLogInfo(@&amp;#34;Pretending to create an event %@ at %@&amp;#34;, name, location);
-}
-
-@end
-
-var CalendarManager = require(&amp;#39;NativeModules&amp;#39;).CalendarManager;
-CalendarManager.addEventWithName(&amp;#39;Birthday Party&amp;#39;, &amp;#39;4 Privet Drive, Surrey&amp;#39;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;As you can see, it&amp;rsquo;s minimally intrusive on both the objc and js sides.&lt;/p&gt;
-&lt;p&gt;Native Modules is the community aspect of this effort and if done right will give it staying power.  The productivity and developer workflow benefits of &lt;code&gt;npm install awesomesauce&lt;/code&gt; is the one of the core underlying reasons for javascript/node popularity.&lt;/p&gt;
-&lt;p&gt;A decision needs to be made on whether &lt;a href=&#34;https://www.npmjs.com/&#34;&gt;npm&lt;/a&gt; or a native packager like &lt;a href=&#34;http://cocoapods.org/&#34;&gt;Cocoapods&lt;/a&gt; will be the vehicle for packaging and distributing native modules.  To keep it x-platform and support android, npm would be the obvious choice.  It&amp;rsquo;s important for the react native team to make a decision on this and define this from the start.  People will fill the gaps that react native doesn&amp;rsquo;t include. The easier you make it for them to publish for community, the better off the ecosystem will be.&lt;/p&gt;
-&lt;h2 id=&#34;fetchhttpsfetchspecwhatwgorg&#34;&gt;&lt;a href=&#34;https://fetch.spec.whatwg.org/&#34;&gt;Fetch&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Networking and more specifically the ability to fetch HTTP resources is a core capability of a majority of applications today.  While walking through the tutorial I saw the use of &lt;a href=&#34;http://facebook.github.io/react-native/docs/network.html#content&#34;&gt;fetch&lt;/a&gt;, but had never seen it before.  I thought it was something that facebook defined and injected that bridged into iOS&amp;rsquo;s networking.  It does this, but in addition it&amp;rsquo;s based on the &lt;a href=&#34;https://fetch.spec.whatwg.org/&#34;&gt;fetch networking API&lt;/a&gt;, which is going through the standard process.  Hopefully a higher profile project like react native will give it some legs.&lt;/p&gt;
-&lt;h2 id=&#34;onward&#34;&gt;Onward&lt;/h2&gt;
-&lt;p&gt;Native development on the native target platform will always be more popular.  It doesn&amp;rsquo;t strive to or need to try to supplant native development.  Capturing the web development community alone is a huge audience.  More importantly, the react community is full of super star developers that will acively champion things they like.  If it reached the success of a &lt;a href=&#34;http://xamarin.com/&#34;&gt;Xamarin&lt;/a&gt; and as large a community, it would be quite an achievement.&lt;/p&gt;
-&lt;p&gt;It&amp;rsquo;s early and if you don&amp;rsquo;t have a lot free time or care to be on the bleeding edge, I&amp;rsquo;d recommend waiting a bit before using it to develop a production app.  As with anything new and in interest of the long-term goals, I&amp;rsquo;m sure there will be bugs to work through, breaking changes, API changes, additional development and debugging tooling, etc.&lt;/p&gt;
-&lt;p&gt;Even if I don&amp;rsquo;t dive right in, at a minimum I&amp;rsquo;ll keep up with it&amp;rsquo;s progress via rss feeds and twitter.  Kudos to the react native team for a great launch and wish them the best.&lt;/p&gt;
-</description>
+<description>React Native - Initial Thoughts</description>
 </item>
     
   </channel>

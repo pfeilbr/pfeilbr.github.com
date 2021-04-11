@@ -14,56 +14,7 @@
 <pubDate>Mon, 13 Jul 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/heroku-node-worker/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/heroku-node-worker-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/heroku-node-worker-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;example of running a long lived worker process on heroku that is not a web app/server&lt;/p&gt;
-&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://heroku.com&#34;&gt;heroku&lt;/a&gt; account&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://devcenter.heroku.com/articles/heroku-cli&#34;&gt;Heroku CLI&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# clone&lt;/span&gt;
-git clone https://github.com/pfeilbr/heroku-node-worker-playground.git
-
-&lt;span class=&#34;c1&#34;&gt;# change to root directory&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; heroku-node-worker-playground
-
-&lt;span class=&#34;c1&#34;&gt;# create heroku app&lt;/span&gt;
-heroku create
-
-&lt;span class=&#34;c1&#34;&gt;# &amp;gt;&amp;gt;&amp;gt; make changes to `worker.js`, install packages, etc.&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# test locally&lt;/span&gt;
-npm run worker
-
-&lt;span class=&#34;c1&#34;&gt;# commit changes&lt;/span&gt;
-git commit -a -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;my awesome changes&amp;#34;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# deploy / push changes to heroku&lt;/span&gt;
-git push heroku master &lt;span class=&#34;c1&#34;&gt;# if worker is already running, this push will kill it and start the new one&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# run worker only / stop web dyno&lt;/span&gt;
-heroku ps:scale &lt;span class=&#34;nv&#34;&gt;web&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;worker&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# verify running&lt;/span&gt;
-heroku ps
-
-&lt;span class=&#34;c1&#34;&gt;# view logs&lt;/span&gt;
-heroku logs -t
-
-&lt;span class=&#34;c1&#34;&gt;# stop worker&lt;/span&gt;
-heroku ps:scale &lt;span class=&#34;nv&#34;&gt;worker&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# start worker&lt;/span&gt;
-heroku ps:scale &lt;span class=&#34;nv&#34;&gt;worker&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://devcenter.heroku.com/articles/node-redis-workers&#34;&gt;Background Jobs in Node.js with Redis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://devcenter.heroku.com/articles/run-non-web-java-processes-on-heroku&#34;&gt;Run Non-web Java Dynos on Heroku&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>Heroku Node Worker</description>
 </item>
     
     <item>
@@ -72,42 +23,7 @@ heroku ps:scale &lt;span class=&#34;nv&#34;&gt;worker&lt;/span&gt;&lt;span class
 <pubDate>Fri, 04 Nov 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/heroku-container/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/heroku-container-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/heroku-container-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Learn heroku container support.  Based on Heroku &lt;a href=&#34;https://devcenter.heroku.com/articles/container-registry-and-runtime&#34;&gt;Container Registry and Runtime&lt;/a&gt; article&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;
-&lt;span class=&#34;c1&#34;&gt;# install container support&lt;/span&gt;
-heroku plugins:install heroku-container-registry
-
-&lt;span class=&#34;c1&#34;&gt;# login to registry&lt;/span&gt;
-heroku container:login
-
-&lt;span class=&#34;c1&#34;&gt;# build&lt;/span&gt;
-docker build -t my-nodejs-app .
-
-&lt;span class=&#34;c1&#34;&gt;# run&lt;/span&gt;
-docker run -it --rm -p 8000:8000 --name my-running-app my-nodejs-app
-&lt;span class=&#34;c1&#34;&gt;# visit http://localhost:8000&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# create heroku app&lt;/span&gt;
-heroku create
-
-&lt;span class=&#34;c1&#34;&gt;# push.  NOTE: app name of &amp;#34;stormy-badlands-73151&amp;#34; will be different&lt;/span&gt;
-heroku container:push web --app stormy-badlands-73151
-
-&lt;span class=&#34;c1&#34;&gt;# check that it is up and running&lt;/span&gt;
-heroku ps --app stormy-badlands-73151
-
-&lt;span class=&#34;c1&#34;&gt;# visit in browser&lt;/span&gt;
-heroku open --app stormy-badlands-73151
-
-&lt;span class=&#34;c1&#34;&gt;# update flow&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# make change to `server.js`&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# build and push&lt;/span&gt;
-heroku container:push web --app stormy-badlands-73151
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+<description>Heroku Container</description>
 </item>
     
     <item>
@@ -116,11 +32,7 @@ heroku container:push web --app stormy-badlands-73151
 <pubDate>Wed, 23 Sep 2015 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/heroku-deploy/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/heroku-deploy-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/heroku-deploy-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;To learn and experiment with various heroku deployment options such as github and dropbox&lt;/p&gt;
-</description>
+<description>Heroku Deploy</description>
 </item>
     
     <item>
@@ -129,21 +41,7 @@ heroku container:push web --app stormy-badlands-73151
 <pubDate>Wed, 23 Sep 2015 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/heroku-docker/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/heroku-docker-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/heroku-docker-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;http://static-content-01.s3-website-us-east-1.amazonaws.com/1__pfeilbr_ifa102990____projects_heroku-container-playground__zsh__and_README_md_%E2%80%94__Users_pfeilbr_projects_heroku-docker-playground_1DCCBC2B.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;heroku-docker-playground&#34;&gt;Heroku Docker Playground&lt;/h1&gt;
-&lt;p&gt;To learn &lt;a href=&#34;https://devcenter.heroku.com/articles/docker&#34;&gt;heroku-docker&lt;/a&gt; to Build, run and deploy Heroku apps with Docker&lt;/p&gt;
-&lt;h2 id=&#34;deploy-note&#34;&gt;Deploy Note&lt;/h2&gt;
-&lt;p&gt;Renamed app to &amp;ldquo;heroku-docker-playground&amp;rdquo; via heroku web app.  Need to push via the following.&lt;/p&gt;
-&lt;p&gt;heroku docker:release &amp;ndash;app heroku-docker-playground&lt;/p&gt;
-&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://devcenter.heroku.com/articles/docker&#34;&gt;Build and Deploy with Docker&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>Heroku Docker</description>
 </item>
     
     <item>
@@ -152,33 +50,7 @@ heroku container:push web --app stormy-badlands-73151
 <pubDate>Sat, 05 Jul 2014 16:01:23 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/heroku-connect/</guid>
-<description>&lt;p&gt;&lt;a href=&#34;https://www.heroku.com/connect&#34;&gt;Heroku Connect&lt;/a&gt; was announced at &lt;a href=&#34;http://www.salesforce.com/dreamforce&#34;&gt;Dreamforce&lt;/a&gt; &amp;lsquo;13 shortly after salesforce aquired &lt;a href=&#34;http://www.cloudconnect.com/&#34;&gt;cloudconnect&lt;/a&gt;.  Cloudconnect is the original product created by &lt;a href=&#34;https://twitter.com/adam_g&#34;&gt;Adam Gross&lt;/a&gt;, formerly of &lt;a href=&#34;http://dropbox.com&#34;&gt;Dropbox&lt;/a&gt; that became Heroku Connect.&lt;/p&gt;
-&lt;p&gt;There&amp;rsquo;s a rich developer ecosystem around web apps built with popular web frameworks such as &lt;a href=&#34;http://rubyonrails.org/&#34;&gt;Rails&lt;/a&gt;, &lt;a href=&#34;https://www.djangoproject.com/&#34;&gt;Django&lt;/a&gt;, &lt;a href=&#34;http://expressjs.com/&#34;&gt;Express&lt;/a&gt;, &lt;a href=&#34;http://symfony.com/&#34;&gt;Symfony&lt;/a&gt;, etc.  All of these frameworks assume a relational database as a backend, which because of it&amp;rsquo;s age, usage, and rich set of existing toolsets, makes it easy to get started with.  Salesforce&amp;rsquo;s force.com platform wanted gain this ease of use and speed at which apps could be developed.  Salesforce has it&amp;rsquo;s own data storage solution that is built for scale and multitenatcy and doesn&amp;rsquo;t cleanly map to the standard relational model.&lt;/p&gt;
-&lt;p&gt;Connect solves this problem by bi-directionaly synchronizing your salesforce data to a heroku postgres database.  Once in postgres, all the popular web frameworks with a huge developer community can be used to develop salesforce apps.&lt;/p&gt;
-&lt;h2 id=&#34;heroku-connect-setup&#34;&gt;Heroku Connect Setup&lt;/h2&gt;
-&lt;p&gt;Connect is provided as a &lt;a href=&#34;https://addons.heroku.com/&#34;&gt;heroku add-on&lt;/a&gt;, which enables easy intregration with heroku apps.  A prerequisite is to have a postgres database provisioned for connect to synchronize your salesforce data to.  Once your database is in place, you install the add-on via&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;heroku addons:add herokuconnect -a appname&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Here&amp;rsquo;s what it looks like&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;images/1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;The rest of the setup and configuration takes place in the Heroku Connect web interface.  You access it by logging into heroku and navigate to your app, then click the Heroku Connect link in the Add-ons section.  This will lauch the web ui.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;images/2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;On first lauch you will be greeted with a setup screen.  This will automatically use to the &lt;code&gt;DATABASE_URL&lt;/code&gt; config variable, which was put in place when the postgres database was provisioned.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;images/3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;images/4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;The final setup looks like&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;images/5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Next you need to authorize Connect to access your salesforce org&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;images/6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;You allow permission&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;images/7.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;You are then ready to configure the data you want to use with Connect.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;images/8.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.heroku.com/archives/2014/5/13/introducing_heroku_connect&#34;&gt;Introducing Heroku Connect: Connecting Clouds and Customers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://devcenter.heroku.com/articles/herokuconnect&#34;&gt;Heroku Connect Dev Center article&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>Heroku Connect</description>
 </item>
     
     <item>
@@ -187,13 +59,7 @@ heroku container:push web --app stormy-badlands-73151
 <pubDate>Sun, 16 Sep 2012 02:43:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/hosting-static-sites-on-heroku/</guid>
-<description>&lt;img src=&#34;images/heroku.jpg&#34; width=&#34;125px&#34;&gt;
-&lt;p&gt;I was recently creating a web site for a family member, and was looking around for the best place to host it.  It&amp;rsquo;s a simple personal site that only contains static content.  There are many options out there from the freebie wordpress options to rackspace and the like.  None of the &amp;ldquo;web publishing platform&amp;rdquo; type sites were a fit because I wanted full control over the layout, and look and feel of the site.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;ve been working with &lt;a href=&#34;http://heroku.com&#34;&gt;Heroku&lt;/a&gt; for my day job for web applications, and it&amp;rsquo;s been simple to get things up and running at no cost.  Heroku allows you to create a web application for free, and only if you need to scale to support the traffic do you have to pay.&lt;/p&gt;
-&lt;p&gt;One of the limitations of using the free plan with heroku is that if your app hasn&amp;rsquo;t recieved any traffic within an hour, it puts it into an idle state.  They call this &lt;a href=&#34;https://devcenter.heroku.com/articles/dynos&#34;&gt;dyno idling&lt;/a&gt;  and when a request comes in and your dyno is in an idle state, it has to spin it back up, and that takes time.  In my experience, I&amp;rsquo;ll go to hit the site and it takes approx. 5 seconds to respond.  It&amp;rsquo;s free, so I can understand when they do this to save on compute resources, and if you have pay / have multiple dynos, they never with idle your app.&lt;/p&gt;
-&lt;p&gt;To work around this you just need to have at least 1 request come in an hour.  There are many ways to do this, and I took the simple approach of using a monitoring service (&lt;a href=&#34;https://www.pingdom.com/&#34;&gt;pingdom&lt;/a&gt;) to check/ping the site for availability every 5 minutes.  You could also implement by using a background worker process.&lt;/p&gt;
-&lt;p&gt;There’s a great &lt;a href=&#34;https://devcenter.heroku.com/articles/static-sites-ruby&#34;&gt;Creating Static Sites in Ruby with Rack&lt;/a&gt; walkthrough on the heroku dev center that will have you up and running in few minutes. They provide a fully functional &lt;a href=&#34;https://github.com/leereilly/static-site-heroku-cedar-example&#34;&gt;sample application&lt;/a&gt; that you can modify to make you own.&lt;/p&gt;
-</description>
+<description>Hosting Static Sites on Heroku</description>
 </item>
     
   </channel>

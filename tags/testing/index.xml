@@ -14,115 +14,7 @@
 <pubDate>Thu, 30 Jul 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-sam-golang/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-sam-golang-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-sam-golang-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;An example API and Worker written in Golang using the Amazon Serverless
-Application Model (AWS SAM).&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;modified version of &lt;a href=&#34;https://github.com/cpliakas/aws-sam-golang-example&#34;&gt;cpliakas/aws-sam-golang-example&lt;/a&gt;.  switched to use go modules, added the use of local environment variables, and run sam local assuming lambda function role.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;Go is arguably one of the easiest languages in which to write a RESTful API.
-With the addition of &lt;a href=&#34;https://aws.amazon.com/blogs/compute/announcing-go-support-for-aws-lambda/&#34;&gt;Go support for AWS Lambda&lt;/a&gt;
-coupled with the maturity of tooling around the &lt;a href=&#34;https://github.com/awslabs/serverless-application-model&#34;&gt;AWS Serverless Application Model&lt;/a&gt;,
-deploying Golang-based APIs to serverless infrastructure is becoming much more
-straightforward, too. Thanks to the &lt;a href=&#34;https://github.com/apex/gateway&#34;&gt;APEX Gateway&lt;/a&gt;,
-you can even write APIs in a familiar manner without changing how the code is
-structured.&lt;/p&gt;
-&lt;p&gt;The purpose of this project is to give a slightly more complicated example than
-the &amp;ldquo;hello world&amp;rdquo; ones provided by Amazon with a toolchain that supports both
-local development and deployment to AWS as well as design patterns that
-facilitate unit testing.&lt;/p&gt;
-&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/&#34;&gt;An AWS account&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://golang.org/doc/install&#34;&gt;Golang&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://golang.github.io/dep/docs/installation.html&#34;&gt;dep&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.docker.com/install&#34;&gt;Docker&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://nodejs.org/en/download/&#34;&gt;Node.js&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/cli/latest/userguide/installing.html&#34;&gt;AWS Command Line Interface&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/serverless/sam/&#34;&gt;SAM CLI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://stedolan.github.io/jq/&#34;&gt;jq&lt;/a&gt; (optional)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-&lt;p&gt;With a &lt;a href=&#34;https://golang.org/doc/install#testing&#34;&gt;correctly configured&lt;/a&gt; Go toolchain:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;git clone https://github.com/pfeilbr/aws-sam-golang-example
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
-&lt;h3 id=&#34;run-the-api-locally&#34;&gt;Run the API Locally&lt;/h3&gt;
-&lt;p&gt;:warning: Make sure to install all the &lt;a href=&#34;#prerequisites&#34;&gt;Prerequisites&lt;/a&gt;. On Mac
-OSX and Windows, ensure that the Docker VM is running.&lt;/p&gt;
-&lt;p&gt;Build the API and run it locally:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nv&#34;&gt;GOARCH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;amd64 &lt;span class=&#34;nv&#34;&gt;GOOS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;linux go build -o api ./service/api
-sam &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; start-api
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or &amp;hellip;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;make run
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can now consume the API using your tool of choice. &lt;a href=&#34;https://httpie.org/&#34;&gt;HTTPie&lt;/a&gt;
-is pretty awesome.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;http localhost:3000/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;HTTP/1.1 200 OK
-Content-Length: 28
-Content-Type: application/json; charset=utf8
-Date: Sat, 03 Feb 2018 20:12:07 GMT
-
-{
-    &amp;#34;message&amp;#34;: &amp;#34;Hello, world!&amp;#34;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;deploy-to-aws&#34;&gt;Deploy to AWS&lt;/h3&gt;
-&lt;p&gt;First, set the following environment variables replacing &lt;code&gt;&amp;lt;MY-BUCKET-NAME&amp;gt;&lt;/code&gt; and
-&lt;code&gt;&amp;lt;MY-STACK-NAME&amp;gt;&lt;/code&gt; as appropriate:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;S3_BUCKET&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;MY-BUCKET-NAME&amp;gt;&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;STACK_NAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;MY-STACK-NAME&amp;gt;&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now build, package, and deploy the application:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nv&#34;&gt;GOOS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;linux &lt;span class=&#34;nv&#34;&gt;GOARCH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;amd64 go build -o api ./service/api
-&lt;span class=&#34;nv&#34;&gt;GOOS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;linux &lt;span class=&#34;nv&#34;&gt;GOARCH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;amd64 go build -o error ./service/error
-&lt;span class=&#34;nv&#34;&gt;GOOS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;linux &lt;span class=&#34;nv&#34;&gt;GOARCH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;amd64 go build -o worker ./service/worker
-
-sam package --template-file template.yaml --s3-bucket &lt;span class=&#34;nv&#34;&gt;$S3_BUCKET&lt;/span&gt; --output-template-file packaged.yaml
-sam deploy --stack-name &lt;span class=&#34;nv&#34;&gt;$STACK_NAME&lt;/span&gt; --template-file packaged.yaml --capabilities CAPABILITY_IAM
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or &amp;hellip;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;make deploy
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;consume-the-endpoint&#34;&gt;Consume the Endpoint&lt;/h3&gt;
-&lt;p&gt;The API endpoint is captured in the CloudFormation stack&amp;rsquo;s &lt;code&gt;Endpoint&lt;/code&gt; output
-key. Either view the output value via the AWS Management Console, or run the
-following command assuming the &lt;a href=&#34;https://stedolan.github.io/jq/&#34;&gt;jq&lt;/a&gt; tool is
-installed:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;aws cloudformation describe-stacks --stack-name &lt;span class=&#34;nv&#34;&gt;$STACK_NAME&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq -r &lt;span class=&#34;s1&#34;&gt;&amp;#39;.Stacks[0].Outputs[0].OutputValue&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Again, &lt;a href=&#34;https://httpie.org/&#34;&gt;HTTPie&lt;/a&gt; is a pretty awesome tool.&lt;/p&gt;
-&lt;h3 id=&#34;view-aws-logs&#34;&gt;View AWS Logs&lt;/h3&gt;
-&lt;p&gt;Run the following command to get the CloudWatch logs for the API.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;sam logs -n Api --stack-name &lt;span class=&#34;nv&#34;&gt;$STACK_NAME&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Replace &lt;code&gt;Api&lt;/code&gt; with &lt;code&gt;Worker&lt;/code&gt; or &lt;code&gt;Error&lt;/code&gt; to get logs for the Lambda functions in
-those resources as well.&lt;/p&gt;
-&lt;p&gt;:warning: The &lt;code&gt;sam&lt;/code&gt; tool will throw a nasty stack trace if you try to view the
-logs before the Lambda function has been invoked. Only run this command after
-you have made requests to the corresponding handlers.&lt;/p&gt;
-&lt;h2 id=&#34;session&#34;&gt;Session&lt;/h2&gt;
-&lt;p&gt;example development session&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;S3_BUCKET&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;S3_SAM_DEPLOY_BUCKET&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;STACK_NAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;basename &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;pwd&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# test&lt;/span&gt;
-make &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# build&lt;/span&gt;
-make build
-
-&lt;span class=&#34;c1&#34;&gt;# build&lt;/span&gt;
-make deploy
-
-&lt;span class=&#34;c1&#34;&gt;# start SAM local API&lt;/span&gt;
-sam &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; start-api --profile my-lambda-role --env-vars env-vars.json
-
-&lt;span class=&#34;c1&#34;&gt;# GET&lt;/span&gt;
-curl -X POST http://127.0.0.1:3000
-
-&lt;span class=&#34;c1&#34;&gt;# POST a job&lt;/span&gt;
-curl -X POST http://127.0.0.1:3000/job -d &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;name&amp;#34;: &amp;#34;my job&amp;#34;}&amp;#39;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# tail the logs for the worker that processes SQS messages&lt;/span&gt;
-lumigo-cli tail-cloudwatch-logs --namePrefix &lt;span class=&#34;s2&#34;&gt;&amp;#34;/aws/lambda/aws-sam-golang-example-Worker&amp;#34;&lt;/span&gt; --region &lt;span class=&#34;s2&#34;&gt;&amp;#34;us-east-1&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+<description>AWS SAM Golang</description>
 </item>
     
     <item>
@@ -131,51 +23,7 @@ lumigo-cli tail-cloudwatch-logs --namePrefix &lt;span class=&#34;s2&#34;&gt;&amp
 <pubDate>Thu, 02 Jan 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/googletest/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/googletest-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/googletest-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://github.com/google/googletest&#34;&gt;Googletest&lt;/a&gt;, Google Testing and Mocking Framework with CMake&lt;/p&gt;
-&lt;p&gt;based on &lt;a href=&#34;https://raymii.org/s/tutorials/Cpp_project_setup_with_cmake_and_unit_tests.html&#34;&gt;https://raymii.org/s/tutorials/Cpp_project_setup_with_cmake_and_unit_tests.html&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# begin: one-time setup to add googletest dependency&lt;/span&gt;
-mkdir lib
-&lt;span class=&#34;nb&#34;&gt;pushd&lt;/span&gt; lib
-git clone https://github.com/google/googletest/
-&lt;span class=&#34;nb&#34;&gt;popd&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# end: one-time setup&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;#clean&lt;/span&gt;
-./run.sh clean
-
-&lt;span class=&#34;c1&#34;&gt;# build&lt;/span&gt;
-./run.sh buildandtest
-
-&lt;span class=&#34;c1&#34;&gt;# run tests&lt;/span&gt;
-./run.sh &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# build and run tests when file changes under src/ and tst/&lt;/span&gt;
-./run.sh watch
-
-&lt;span class=&#34;c1&#34;&gt;# build main binary&lt;/span&gt;
-./run.sh buildmain
-
-&lt;span class=&#34;c1&#34;&gt;# run main binary&lt;/span&gt;
-./run.sh main
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;googletest-command-line-examples&#34;&gt;googletest command line examples&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# run all tests&lt;/span&gt;
-./build/tst/app_tst
-
-&lt;span class=&#34;c1&#34;&gt;# list tests&lt;/span&gt;
-./build/tst/app_tst --gtest_list_tests
-
-&lt;span class=&#34;c1&#34;&gt;# run specific test&lt;/span&gt;
-./build/tst/app_tst --gtest_filter&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;MyLib.adhoc
-
-&lt;span class=&#34;c1&#34;&gt;# run all tests in MyLib&lt;/span&gt;
-./build/tst/app_tst --gtest_filter&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;MyLib.*&amp;#39;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# list command line options&lt;/span&gt;
-./build/tst/app_tst --help
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+<description>Googletest</description>
 </item>
     
     <item>
@@ -184,15 +32,7 @@ git clone https://github.com/google/googletest/
 <pubDate>Tue, 22 Aug 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/puppeteer/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/puppeteer-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/puppeteer-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://github.com/GoogleChrome/puppeteer&#34;&gt;puppeteer&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Puppeteer is a Node library which provides a high-level API to control headless Chrome over the DevTools Protocol. It can also be configured to use full (non-headless) Chrome.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;see &lt;a href=&#34;examples&#34;&gt;&lt;code&gt;examples&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+<description>Puppeteer</description>
 </item>
     
     <item>
@@ -201,32 +41,7 @@ git clone https://github.com/google/googletest/
 <pubDate>Tue, 29 Sep 2015 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/node-coveralls/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/node-coveralls-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/node-coveralls-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;h1 id=&#34;node-coveralls-playground&#34;&gt;node-coveralls-playground&lt;/h1&gt;
-&lt;p&gt;To learn and experiment with &lt;a href=&#34;https://coveralls.io/&#34;&gt;coveralls&lt;/a&gt; test coverage service.&lt;/p&gt;
-&lt;h2 id=&#34;setup-steps&#34;&gt;Setup Steps&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Install deps&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ npm install mocha coveralls mocha-lcov-reporter --save-dev
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Install &lt;a href=&#34;https://gotwarlost.github.io/istanbul/&#34;&gt;istanbul&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ npm install istanbul --save-dev -g
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;If running from command line, ensure &lt;code&gt;.coveralls.yml&lt;/code&gt; is in current directory.  It should contain a line with &lt;code&gt;repo_token: REPO_TOKEN&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
-&lt;p&gt;To run on the tests in the &lt;code&gt;test/&lt;/code&gt; directory.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec &amp;amp;&amp;amp; cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js &amp;amp;&amp;amp; rm -rf ./coverage
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;You can view the raw coverage output in the &lt;code&gt;./coverage&lt;/code&gt; directory.&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
+<description>Node Coveralls</description>
 </item>
     
     <item>
@@ -235,44 +50,7 @@ git clone https://github.com/google/googletest/
 <pubDate>Thu, 20 Aug 2015 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/webdriverio/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/webdriverio-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/webdriverio-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;h1 id=&#34;running-selenium-standalone-server-preferred--lighter-weight&#34;&gt;Running Selenium Standalone Server (Preferred / lighter weight)&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;Start selenium Standalone server&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# run the following in it&amp;#39;s own shell and leave running&lt;/span&gt;
-$ java -jar selenium-server/selenium-server-standalone-2.53.0.jar
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;Run script&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ node index.js
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;running-selenium-hub-and-nodes-using-docker&#34;&gt;Running Selenium Hub and Node(s) Using Docker&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;start hub (clients connect to this)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; $ docker run -d -P --name selenium-hub -e GRID_TIMEOUT=10000 selenium/hub
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;start chrome node (hub delegates work to it)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; $ docker run -d --link selenium-hub:hub selenium/node-chrome
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Get host and port for &amp;ldquo;selenium-hub&amp;rdquo; container and use them in your client.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://static-content-01.s3-website-us-east-1.amazonaws.com//Kitematic_1B862C7B.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Example client config&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;options&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-	&lt;span class=&#34;nx&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;192.168.99.100&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-	&lt;span class=&#34;nx&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;32768&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-	&lt;span class=&#34;nx&#34;&gt;desiredCapabilities&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-		&lt;span class=&#34;nx&#34;&gt;browserName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;chrome&amp;#39;&lt;/span&gt;
-	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;see &lt;a href=&#34;index.js&#34;&gt;&lt;code&gt;index.js&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+<description>WebdriverIO</description>
 </item>
     
     <item>
@@ -281,72 +59,7 @@ $ java -jar selenium-server/selenium-server-standalone-2.53.0.jar
 <pubDate>Sun, 15 Feb 2015 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/karma/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/karma-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/karma-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Project to learn and experiment with the Karma javascript test runner.  Karma runs your javascript tests in multiple browsers.&lt;/p&gt;
-&lt;h2 id=&#34;quickstart-tutorial&#34;&gt;Quickstart Tutorial&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Change to project directory&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; $ cd ~/projects/karma-playground
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;New NPM project&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; $ npm init
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;accept all defaults&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Install karma&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Install Karma:&lt;/span&gt;
-$ npm install karma --save-dev
-
-&lt;span class=&#34;c1&#34;&gt;# Install plugins that your project needs:&lt;/span&gt;
-$ npm install karma-jasmine karma-chrome-launcher --save-dev
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Install global karma cli so we can type &lt;code&gt;karma&lt;/code&gt; without the full path from anywhere.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; $ npm install -g karma-cli
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Create sample test.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Using &lt;a href=&#34;http://jasmine.github.io/&#34;&gt;Jasmine&lt;/a&gt; for our example.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ mkdir &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
-$ touch test/sample1.js
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// test/sample1.js
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;describe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;A suite&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;nx&#34;&gt;it&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;contains spec with an expectation&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;nx&#34;&gt;expect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;toBe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Generate the karma configuration file&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; $ karma init my.conf.js
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Start karma&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; # Start Karma using your configuration:
- $ karma start my.conf.js
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
-&lt;p&gt;You&amp;rsquo;ll see Chrome or the browsers you chose start&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;http://note.io/1FdGfLE&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-</description>
+<description>Karma</description>
 </item>
     
     <item>
@@ -355,21 +68,7 @@ $ touch test/sample1.js
 <pubDate>Wed, 04 Feb 2015 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/sauce-labs/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/sauce-labs-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/sauce-labs-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Playground to learn, explore, and play with &lt;a href=&#34;https://saucelabs.com&#34;&gt;Sauce Labs&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;sauce-labs-nodejs-tutorialhttpsdocssaucelabscomtutorialsnode-js&#34;&gt;&lt;a href=&#34;https://docs.saucelabs.com/tutorials/node-js/&#34;&gt;Sauce Labs Node.js Tutorial&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;tutorial/&lt;/code&gt; directory is from following the tutorial @ &lt;a href=&#34;https://docs.saucelabs.com/tutorials/node-js/&#34;&gt;Sauce Labs Node.js Tutorial&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;tutorial/test/sauce/tutorial-specs.js&lt;/code&gt; contains the tests and is where you can modify the code.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Quickstart&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Bypasses almost all tutorial steps because they&amp;rsquo;ve been completed&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;cd tutorial/
-grunt
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Example Test Run Output Screenshot
-&lt;img src=&#34;http://note.io/15PU4jY&#34; alt=&#34;Example Test Run Output Screenshot&#34;&gt;&lt;/p&gt;
-</description>
+<description>Sauce Labs</description>
 </item>
     
   </channel>

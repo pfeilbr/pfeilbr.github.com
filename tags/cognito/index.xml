@@ -14,75 +14,7 @@
 <pubDate>Thu, 26 Sep 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cognito-developer-authenticated-identities/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-cognito-developer-authenticated-identities-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-cognito-developer-authenticated-identities-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://docs.aws.amazon.com/cognito/latest/developerguide/developer-authenticated-identities.html&#34;&gt;Developer Authenticated Identities (Identity Pools)&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;With developer authenticated identities, you can register and authenticate users via your own existing authentication process, while still using Amazon Cognito to synchronize user data and access AWS resources.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;example-using-aws-cli&#34;&gt;Example using AWS CLI&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Add custom authentication provider (&lt;code&gt;DEVELOPER_PROVIDER_NAME&lt;/code&gt;) to your identity pool via &amp;ldquo;Edit identity pool&amp;rdquo; UI&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAF_NlVpnfROCK-Jim33jq2iewvgWWp6LW8B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;setup shell variables&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nv&#34;&gt;IDENTITY_POOL_ID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;us-east-1:335c1f44-87c9-4bbd-a314-93b47d91fadd&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;DEVELOPER_PROVIDER_NAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;com.brianpfeil.app01
-
-&lt;span class=&#34;c1&#34;&gt;# this is YOUR applications userid&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;DEVELOPER_PROVIDER_USERID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;003&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;create identity&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;aws cognito-identity get-open-id-token-for-developer-identity --identity-pool-id &lt;span class=&#34;nv&#34;&gt;$IDENTITY_POOL_ID&lt;/span&gt; --logins &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$DEVELOPER_PROVIDER_NAME&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$DEVELOPER_PROVIDER_USERID&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;example output&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Token&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;eyJraWQiOiJ1cy1lYXN0LTExIiwidHlwIjoiSldTIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJ1cy1lYXN0LTE6YWVjYjU4YTgtMjc3Ni00NDMxLTk3OGMtZDYzOTVlMWI1Mzc5IiwiYXVkIjoidXMtZWFzdC0xOjMzNWMxZjQ0LTg3YzktNGJiZC1hMzE0LTkzYjQ3ZDkxZmFkZCIsImFtciI6WyJhdXRoZW50aWNhdGVkIiwiY29tLmJyaWFucGZlaWwuYXBwMDEiLCJjb20uYnJpYW5wZmVpbC5hcHAwMTp1cy1lYXN0LTE6MzM1YzFmNDQtODdjOS00YmJkLWEzMTQtOTNiNDdkOTFmYWRkOjAwMyJdLCJpc3MiOiJodHRwczovL2NvZ25pdG8taWRlbnRpdHkuYW1hem9uYXdzLmNvbSIsImV4cCI6MTU2OTUyMzg3NSwiaWF0IjoxNTY5NTIyOTc1fQ.F6ST-AQWETHUAAR7JM-IU1ZIFLDEVL9ZBNM49WDOL_RXLLCYEY2KYUICHSGYLERD4WWLHWEJG-AOHFMMS0DUXT-UANA3BENUFFZWWSBAYVD0N2BHCLHZG7PURTRKRDN2XRFGDGQQ2PIMURMWAIPSB0ZCM-EXMSV-QAGOGKE5C2QR0P91BICL_LB1OQRTF9VXANPEMFFSAMZED776WHKR8ZMP7NTXZBMRE453QFW7VGVNKV3KJDTAKSRVZJS6YVW7BXY74_OQUJCFF9KWXJSMTEBNOIMHEFI3LJ25HSDDJ4LMLBGODD_ET4PPSUORIVLGW4UQ-7PJYHCAYTBDV0MXAQ&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;#34;IdentityId&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;us-east-1:aecb58a8-2776-4431-978c-d6395e1b5379&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;get token&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;aws cognito-identity get-open-id-token-for-developer-identity --identity-pool-id &lt;span class=&#34;nv&#34;&gt;$IDENTITY_POOL_ID&lt;/span&gt; --identity-id  &lt;span class=&#34;nv&#34;&gt;$IDENTITY_ID&lt;/span&gt; --logins &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$DEVELOPER_PROVIDER_NAME&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$DEVELOPER_PROVIDER_USERID&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;example output&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Token&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;eyJraWQiOiJ1cy1lYXN0LTExIiwidHlwIjoiSldTIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJ1cy1lYXN0LTE6YWVjYjU4YTgtMjc3Ni00NDMxLTk3OGMtZDYzOTVlMWI1Mzc5IiwiYXVkIjoidXMtZWFzdC0xOjMzNWMxZjQ0LTg3YzktNGJiZC1hMzE0LTkzYjQ3ZDkxZmFkZCIsImFtciI6WyJhdXRoZW50aWNhdGVkIiwiY29tLmJyaWFucGZlaWwuYXBwMDEiLCJjb20uYnJpYW5wZmVpbC5hcHAwMTp1cy1lYXN0LTE6MzM1YzFmNDQtODdjOS00YmJkLWEzMTQtOTNiNDdkOTFmYWRkOjAwMyJdLCJpc3MiOiJodHRwczovL2NvZ25pdG8taWRlbnRpdHkuYW1hem9uYXdzLmNvbSIsImV4cCI6MTU2OTUyNDg5OCwiaWF0IjoxNTY5NTIzOTk4fQ.S8JRKAALQZV0FT0GX6WDBE2EZUH2UPHIJLQ1AX9_PQBXLDM4V7UFFVUDXMHGHMZ2T4VMC6R2ILUJATYO05EIKB4HKWPEHSJWHAT8ZUQ9MRVEZ4KJFAY-7ER4LCGKN8MW-ZTZWQRPXUAYGP3RHQFYDV7FGJCJ3GE-MTTCBGXRAY_0H8NNOQE2F1WRO0KPE-Q-8GXF2P89WGFM9FAHZYOBV0FCZYOH8LCAZ7CKQJQ6FO8NYIAQDXDWFJM5-SLMPRYJLBIW88PBLO00ASOP5OGTHFD61JJCUUXFDRB6UTUGM-RUNILJRCTZB5_AB0FXS2YWAG2YZ3_JOFPWDLL-FNQ2UA&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;#34;IdentityId&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;us-east-1:aecb58a8-2776-4431-978c-d6395e1b5379&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;    
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;get credentials&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;aws cognito-identity get-credentials-for-identity --identity-id &lt;span class=&#34;nv&#34;&gt;$IDENTITY_ID&lt;/span&gt; --logins &lt;span class=&#34;s2&#34;&gt;&amp;#34;cognito-identity.amazonaws.com=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$TOKEN&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;example output&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Credentials&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;nt&#34;&gt;&amp;#34;SecretKey&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;U6hHM5cdTBjcXG3hxb6VcIwkijvskj72M+81CHBi&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-        &lt;span class=&#34;nt&#34;&gt;&amp;#34;SessionToken&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;AgoJb3JpZ2luX2VjEIv//////////wEaCXVzLWVhc3QtMSJHMEUCIBbT6h4a8ZGV4lCrmmTIulJJkG9PnVCx4Cy2ddoU06ROAiEAzFVPpVhXwV3HAqhif23WOyn7j6I3sH4oCJjV6xZdK/gq3wQIZBAAGgw1MjkyNzYyMTQyMzAiDL0IwoimnbzRFyLAAiq8BIZJyKSEKLiEYpr45CDmkze7rxFb15buX2/L/9RGiAEThi0SmPF4eq+92c3UAsV7gkqajqdYHTEkksErAHrEAyyxLg62X6csqcAUo2rxdjvcG020qAbIEQ4d9m7ZfdZtsb9ByedAHCeJBNpDuIxio7EZfnfB/CUzElgLhWBIsWp+/3xCLoT4D2ElkfmjFEQ2Or6Hy/vcSc+ypaHIaaDN7bRrUDfZDFGkJaypqg7TKfCz8W1NV8UGjkc03x3EtxEawHb9om8Nb6KjZOjRoZf9HL9U4BGaHGmkx2Jlp2VB5k2zZks5+u2udZYDyYCrKOT+9Af+4KAyMtfooBfmvkY+n1hoS/7bgW1NgOGTPOfO7oTbuBBwCdtdN5EdJGkWmQDF0//y/m37kv6aPGefyc8XPz2gK1insPp67J/S1mGpMkSgLMijw60JkY2JZLc1shZg8hNZjxCnLd+ADMwxj27/jro/vypng8bq/9zQHCQT0NrH3PUrvyYdDjXo/58DLYLb8hoQmHx0gMBACdmcL9f3v0mNdi0rPKFuOtxOw9Z136cotgZeeRiQvJeRATQ2c8rUNWM2O4duc9+0CxguDZlvLpo+p3XsOPD8Ti5BS89R2lIU0p8iiNhCdHbp41ISxEzYNG4kFjw6uLnHM7Icni98K+QRTNQTISPNZTLALCFRNGEHFTJ3T7SMY0MPLV1EF7MODNOWMTO9SFJP0ITA5RQ6VXWLN6PU8II2OGXUSTWU9VGWG+AYUOKS5AKOQ5JVMIWTTOWFORQBWWGQ8G2OBX9WQLE7KCJHV7PEEQX2Z7/IY9SHDLV1MNP7SQBPJKS+MPGCK+DLCL8ZBMJLZCEL4H7VMIV+9TMCPK9J3LADATRGXCFYXEMMXLXG0YIK8GBTLU8QRJFYKWEDMZHARZ8MGRIOT7I9RSI6DAIBKWRNSKJ/EWTI4AJNQJLIDUAMOPBUDIUSJQHA5/WQMHQHORMYEKTXZBC2+8VAGR+WGL2F48IDWFFGWI1FS7UK7OFR&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-        &lt;span class=&#34;nt&#34;&gt;&amp;#34;Expiration&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1569527701.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-        &lt;span class=&#34;nt&#34;&gt;&amp;#34;AccessKeyId&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ASIAXWO2SDPLARQRZ55K&amp;#34;&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;#34;IdentityId&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;us-east-1:aecb58a8-2776-4431-978c-d6395e1b5379&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;NOTE: &lt;code&gt;--logins cognito-identity.amazonaws.com=&lt;/code&gt;.  See &lt;a href=&#34;https://aws.amazon.com/blogs/mobile/understanding-amazon-cognito-authentication-part-4-enhanced-flow/&#34;&gt;https://aws.amazon.com/blogs/mobile/understanding-amazon-cognito-authentication-part-4-enhanced-flow/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;When using an Amazon Cognito token with GetCredentialsForIdentity, you use the key cognito-identity.amazonaws.com in the logins parameter.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;You can now use &lt;code&gt;AccessKeyId&lt;/code&gt;, &lt;code&gt;SecretKey&lt;/code&gt;, and &lt;code&gt;SessionToken&lt;/code&gt; to access AWS resources.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;resources&#34;&gt;Resources&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/cognito/latest/developerguide/developer-authenticated-identities.html&#34;&gt;Developer Authenticated Identities (Identity Pools)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/mobile/understanding-amazon-cognito-authentication-part-2-developer-authenticated-identities/&#34;&gt;Understanding Amazon Cognito Authentication Part 2: Developer Authenticated Identities&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>AWS Cognito Developer Authenticated Identities</description>
 </item>
     
     <item>
@@ -91,38 +23,7 @@
 <pubDate>Thu, 13 Jun 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/cognito-federated-to-salesforce-and-s3-presigned-url/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/cognito-federated-to-salesforce-and-s3-presigned-url-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/cognito-federated-to-salesforce-and-s3-presigned-url-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;login-with-cognito-federated-to-salesforce-example&#34;&gt;Login with Cognito Federated to Salesforce Example&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;see &lt;a href=&#34;index.html&#34;&gt;&lt;code&gt;index.html&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;see &lt;code&gt;~/Dropbox/notes/static-s3-cognito-authentication.md&lt;/code&gt; on local machine also for greater detail on setup&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# local dev&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# start server.  serves static files from current directory &amp;#39;.&amp;#39;.  listens on ssl 443&lt;/span&gt;
-sudo node server.js
-open https://localhost
-
-&lt;span class=&#34;c1&#34;&gt;# on s3&lt;/span&gt;
-open https://pfeil-static-site-01.s3.amazonaws.com/index.html
-
-&lt;span class=&#34;c1&#34;&gt;# on cloudfront&lt;/span&gt;
-open https://d3tz189emgpc7c.cloudfront.net/index.html
-
-&lt;span class=&#34;c1&#34;&gt;# copy updated file to s3&lt;/span&gt;
-aws s3 cp index.html s3://pfeil-static-site-01/index.html
-&lt;span class=&#34;c1&#34;&gt;# invalidate cloudfront dist after copy&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# if any login issues&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# clear site data for https://pfeil-dev-ed.my.salesforce.com in chrome dev tools&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;pre-signed-url-example&#34;&gt;Pre-signed URL Example&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;see &lt;a href=&#34;index.js&#34;&gt;&lt;code&gt;index.js&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;node index.js&lt;/code&gt; outputs pre-signed url. (uses ~/.aws/credentials and pre-signed URL generated under that users context/permission)&lt;/li&gt;
-&lt;li&gt;PUT / upload file to S3 via &lt;code&gt;curl -X PUT -T hello.txt -L &#39;&amp;lt;pre-signed url&amp;gt;&#39;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>Cognito Federated to Salesforce and S3 Presigned URL</description>
 </item>
     
   </channel>

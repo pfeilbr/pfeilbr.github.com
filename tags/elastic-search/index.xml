@@ -14,66 +14,7 @@
 <pubDate>Wed, 25 Mar 2015 21:25:09 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/running-elasticsearch-on-elastic-beanstalk/</guid>
-<description>&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt; code on github @ &lt;a href=&#34;https://github.com/pfeilbr/Elastic-Beanstalk-Dockerrun.aws.json-Example&#34;&gt;pfeilbr/Elastic-Beanstalk-Dockerrun.aws.json-Example&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;This article will show you the steps to run &lt;a href=&#34;https://www.elastic.co/&#34;&gt;elasticsearch&lt;/a&gt; on &lt;a href=&#34;http://aws.amazon.com/elasticbeanstalk/&#34;&gt;AWS Elastic Beanstalk&lt;/a&gt;. This example uses the &lt;a href=&#34;https://registry.hub.docker.com/_/elasticsearch/&#34;&gt;elasticsearch docker image&lt;/a&gt; as an example.  Once running you can visit &lt;code&gt;http://&amp;lt;beanstalk domain&amp;gt;/?pretty&lt;/code&gt; an you will see the root elastic search JSON response.&lt;/p&gt;
-&lt;h2 id=&#34;initial-deployment&#34;&gt;Initial Deployment&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Modify &lt;code&gt;Dockerrun.aws.json&lt;/code&gt; for your needs.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker_image.html#create_deploy_docker_image_dockerrun&#34;&gt;Dockerrun.aws.json&lt;/a&gt; reference&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Commit changes to repo&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ git commit -a -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;changes&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;assumes &lt;code&gt;Dockerrun.aws.json&lt;/code&gt; has already been added to repo.  if not, &lt;code&gt;git add .&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Create eb app&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ eb init # populate details
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;NOTE: select Docker.  Populate all details&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Create environment for app&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ eb create dev-env
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;IMPORTANT&lt;/strong&gt; Must immediately update the ec2 instance with tags so it doesn&amp;rsquo;t get terminated.  Enable termination protection on the ec2 instance.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;deploying-updates&#34;&gt;Deploying Updates&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Modify &lt;code&gt;Dockerrun.aws.json&lt;/code&gt; for your needs.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Commit changes&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ git commit -a -m &amp;#34;my updates&amp;#34;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Deploy to eb&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ eb deploy
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;NOTE: Takes between 3-5 min to deploy changes&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
-&lt;p&gt;Port mapping details specific to aws beanstalk&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;images/config.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-</description>
+<description>Running Elasticsearch on AWS Elastic Beanstalk</description>
 </item>
     
   </channel>

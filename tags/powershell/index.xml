@@ -14,24 +14,7 @@
 <pubDate>Mon, 12 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/powershell/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/powershell-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/powershell-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# connects to Azure with an authenticated account for use with cmdlets from the&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# Az PowerShell modules&lt;/span&gt;
-Connect-AzAccount
-
-Get-AzADUser -ObjectId &lt;span class=&#34;s2&#34;&gt;&amp;#34;user@example.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; fl
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-macos&#34;&gt;Installing PowerShell on macOS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/powershell/azure&#34;&gt;Azure PowerShell documentation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://techgenix.com/powershell-in-macos/&#34;&gt;Yes you can! Use PowerShell in MacOS to connect to Microsoft Azure&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://developer.microsoft.com/en-us/microsoft-365/blogs/microsoft-graph-powershell-preview-now-on-powershell-gallery/&#34;&gt;Microsoft Graph PowerShell Preview - Now on PowerShell Gallery&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;scratch&#34;&gt;Scratch&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+<description>PowerShell</description>
 </item>
     
   </channel>

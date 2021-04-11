@@ -14,26 +14,7 @@
 <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/mage/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/mage-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/mage-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://magefile.org/&#34;&gt;mage&lt;/a&gt;, a make/rake-like build tool using Go. You write plain-old go functions, and Mage automatically uses them as Makefile-like runnable targets.&lt;/p&gt;
-&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;git clone https://github.com/magefile/mage
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; mage
-go run bootstrap.go
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;git clone https://github.com/pfeilbr/mage-playground
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; mage-playground
-go mod init mage-playground
-&lt;span class=&#34;c1&#34;&gt;# NOTE: `go.mod` must exist in same directory as `magefile.go`&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# show targets&lt;/span&gt;
-mage
-
-&lt;span class=&#34;c1&#34;&gt;# run &amp;#34;hello&amp;#34; target&lt;/span&gt;
-mage hello
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+<description>Mage</description>
 </item>
     
     <item>
@@ -42,115 +23,7 @@ mage hello
 <pubDate>Thu, 30 Jul 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-sam-golang/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-sam-golang-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-sam-golang-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;An example API and Worker written in Golang using the Amazon Serverless
-Application Model (AWS SAM).&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;modified version of &lt;a href=&#34;https://github.com/cpliakas/aws-sam-golang-example&#34;&gt;cpliakas/aws-sam-golang-example&lt;/a&gt;.  switched to use go modules, added the use of local environment variables, and run sam local assuming lambda function role.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;Go is arguably one of the easiest languages in which to write a RESTful API.
-With the addition of &lt;a href=&#34;https://aws.amazon.com/blogs/compute/announcing-go-support-for-aws-lambda/&#34;&gt;Go support for AWS Lambda&lt;/a&gt;
-coupled with the maturity of tooling around the &lt;a href=&#34;https://github.com/awslabs/serverless-application-model&#34;&gt;AWS Serverless Application Model&lt;/a&gt;,
-deploying Golang-based APIs to serverless infrastructure is becoming much more
-straightforward, too. Thanks to the &lt;a href=&#34;https://github.com/apex/gateway&#34;&gt;APEX Gateway&lt;/a&gt;,
-you can even write APIs in a familiar manner without changing how the code is
-structured.&lt;/p&gt;
-&lt;p&gt;The purpose of this project is to give a slightly more complicated example than
-the &amp;ldquo;hello world&amp;rdquo; ones provided by Amazon with a toolchain that supports both
-local development and deployment to AWS as well as design patterns that
-facilitate unit testing.&lt;/p&gt;
-&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/&#34;&gt;An AWS account&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://golang.org/doc/install&#34;&gt;Golang&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://golang.github.io/dep/docs/installation.html&#34;&gt;dep&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.docker.com/install&#34;&gt;Docker&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://nodejs.org/en/download/&#34;&gt;Node.js&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/cli/latest/userguide/installing.html&#34;&gt;AWS Command Line Interface&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/serverless/sam/&#34;&gt;SAM CLI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://stedolan.github.io/jq/&#34;&gt;jq&lt;/a&gt; (optional)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-&lt;p&gt;With a &lt;a href=&#34;https://golang.org/doc/install#testing&#34;&gt;correctly configured&lt;/a&gt; Go toolchain:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;git clone https://github.com/pfeilbr/aws-sam-golang-example
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
-&lt;h3 id=&#34;run-the-api-locally&#34;&gt;Run the API Locally&lt;/h3&gt;
-&lt;p&gt;:warning: Make sure to install all the &lt;a href=&#34;#prerequisites&#34;&gt;Prerequisites&lt;/a&gt;. On Mac
-OSX and Windows, ensure that the Docker VM is running.&lt;/p&gt;
-&lt;p&gt;Build the API and run it locally:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nv&#34;&gt;GOARCH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;amd64 &lt;span class=&#34;nv&#34;&gt;GOOS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;linux go build -o api ./service/api
-sam &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; start-api
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or &amp;hellip;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;make run
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can now consume the API using your tool of choice. &lt;a href=&#34;https://httpie.org/&#34;&gt;HTTPie&lt;/a&gt;
-is pretty awesome.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;http localhost:3000/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;HTTP/1.1 200 OK
-Content-Length: 28
-Content-Type: application/json; charset=utf8
-Date: Sat, 03 Feb 2018 20:12:07 GMT
-
-{
-    &amp;#34;message&amp;#34;: &amp;#34;Hello, world!&amp;#34;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;deploy-to-aws&#34;&gt;Deploy to AWS&lt;/h3&gt;
-&lt;p&gt;First, set the following environment variables replacing &lt;code&gt;&amp;lt;MY-BUCKET-NAME&amp;gt;&lt;/code&gt; and
-&lt;code&gt;&amp;lt;MY-STACK-NAME&amp;gt;&lt;/code&gt; as appropriate:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;S3_BUCKET&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;MY-BUCKET-NAME&amp;gt;&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;STACK_NAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;MY-STACK-NAME&amp;gt;&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now build, package, and deploy the application:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nv&#34;&gt;GOOS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;linux &lt;span class=&#34;nv&#34;&gt;GOARCH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;amd64 go build -o api ./service/api
-&lt;span class=&#34;nv&#34;&gt;GOOS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;linux &lt;span class=&#34;nv&#34;&gt;GOARCH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;amd64 go build -o error ./service/error
-&lt;span class=&#34;nv&#34;&gt;GOOS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;linux &lt;span class=&#34;nv&#34;&gt;GOARCH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;amd64 go build -o worker ./service/worker
-
-sam package --template-file template.yaml --s3-bucket &lt;span class=&#34;nv&#34;&gt;$S3_BUCKET&lt;/span&gt; --output-template-file packaged.yaml
-sam deploy --stack-name &lt;span class=&#34;nv&#34;&gt;$STACK_NAME&lt;/span&gt; --template-file packaged.yaml --capabilities CAPABILITY_IAM
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or &amp;hellip;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;make deploy
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;consume-the-endpoint&#34;&gt;Consume the Endpoint&lt;/h3&gt;
-&lt;p&gt;The API endpoint is captured in the CloudFormation stack&amp;rsquo;s &lt;code&gt;Endpoint&lt;/code&gt; output
-key. Either view the output value via the AWS Management Console, or run the
-following command assuming the &lt;a href=&#34;https://stedolan.github.io/jq/&#34;&gt;jq&lt;/a&gt; tool is
-installed:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;aws cloudformation describe-stacks --stack-name &lt;span class=&#34;nv&#34;&gt;$STACK_NAME&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq -r &lt;span class=&#34;s1&#34;&gt;&amp;#39;.Stacks[0].Outputs[0].OutputValue&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Again, &lt;a href=&#34;https://httpie.org/&#34;&gt;HTTPie&lt;/a&gt; is a pretty awesome tool.&lt;/p&gt;
-&lt;h3 id=&#34;view-aws-logs&#34;&gt;View AWS Logs&lt;/h3&gt;
-&lt;p&gt;Run the following command to get the CloudWatch logs for the API.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;sam logs -n Api --stack-name &lt;span class=&#34;nv&#34;&gt;$STACK_NAME&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Replace &lt;code&gt;Api&lt;/code&gt; with &lt;code&gt;Worker&lt;/code&gt; or &lt;code&gt;Error&lt;/code&gt; to get logs for the Lambda functions in
-those resources as well.&lt;/p&gt;
-&lt;p&gt;:warning: The &lt;code&gt;sam&lt;/code&gt; tool will throw a nasty stack trace if you try to view the
-logs before the Lambda function has been invoked. Only run this command after
-you have made requests to the corresponding handlers.&lt;/p&gt;
-&lt;h2 id=&#34;session&#34;&gt;Session&lt;/h2&gt;
-&lt;p&gt;example development session&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;S3_BUCKET&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;S3_SAM_DEPLOY_BUCKET&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;STACK_NAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;basename &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;pwd&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# test&lt;/span&gt;
-make &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# build&lt;/span&gt;
-make build
-
-&lt;span class=&#34;c1&#34;&gt;# build&lt;/span&gt;
-make deploy
-
-&lt;span class=&#34;c1&#34;&gt;# start SAM local API&lt;/span&gt;
-sam &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; start-api --profile my-lambda-role --env-vars env-vars.json
-
-&lt;span class=&#34;c1&#34;&gt;# GET&lt;/span&gt;
-curl -X POST http://127.0.0.1:3000
-
-&lt;span class=&#34;c1&#34;&gt;# POST a job&lt;/span&gt;
-curl -X POST http://127.0.0.1:3000/job -d &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;name&amp;#34;: &amp;#34;my job&amp;#34;}&amp;#39;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# tail the logs for the worker that processes SQS messages&lt;/span&gt;
-lumigo-cli tail-cloudwatch-logs --namePrefix &lt;span class=&#34;s2&#34;&gt;&amp;#34;/aws/lambda/aws-sam-golang-example-Worker&amp;#34;&lt;/span&gt; --region &lt;span class=&#34;s2&#34;&gt;&amp;#34;us-east-1&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+<description>AWS SAM Golang</description>
 </item>
     
     <item>
@@ -159,18 +32,7 @@ lumigo-cli tail-cloudwatch-logs --namePrefix &lt;span class=&#34;s2&#34;&gt;&amp
 <pubDate>Wed, 17 Jun 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-golang/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/serverless-golang-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/serverless-golang-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;see &lt;a href=&#34;myservice/README.md&#34;&gt;myservice/README.md&lt;/a&gt; for build and deploy steps&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;this is based on serverless framework from Jan 2018 (just adding as repo now June 2020)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;see &lt;a href=&#34;https://golang.serverlessworkshops.io/&#34;&gt;golang.serverlessworkshops.io&lt;/a&gt; for more modern example (&lt;a href=&#34;https://blog.golang.org/using-go-modules&#34;&gt;go modules&lt;/a&gt;) using &lt;a href=&#34;https://aws.amazon.com/serverless/sam/&#34;&gt;AWS SAM&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
+<description>Serverless Golang</description>
 </item>
     
     <item>
@@ -179,27 +41,7 @@ lumigo-cli tail-cloudwatch-logs --namePrefix &lt;span class=&#34;s2&#34;&gt;&amp
 <pubDate>Thu, 16 Apr 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/goreleaser/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/goreleaser-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/goreleaser-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://goreleaser.com/&#34;&gt;GoReleaser&lt;/a&gt; release automation tool for Go projects.&lt;/p&gt;
-&lt;p&gt;see &lt;a href=&#34;https://goreleaser.com/quick-start/&#34;&gt;https://goreleaser.com/quick-start/&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;session&#34;&gt;Session&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;goreleaser --snapshot --skip-publish --rm-dist
-
-&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;GITHUB_TOKEN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;GITHUB_TOKEN&amp;#39;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# tag.  release name is based on it&lt;/span&gt;
-git tag -a v0.1.0 -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;First release&amp;#34;&lt;/span&gt;
-git push origin v0.1.0
-
-&lt;span class=&#34;c1&#34;&gt;# run locally without publishing to github&lt;/span&gt;
-goreleaser --snapshot --rm-dist
-
-&lt;span class=&#34;c1&#34;&gt;# build and publish&lt;/span&gt;
-goreleaser
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+<description>GoReleaser</description>
 </item>
     
     <item>
@@ -208,22 +50,7 @@ goreleaser
 <pubDate>Wed, 15 Jan 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/go-modules/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/go-modules-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/go-modules-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn using &lt;a href=&#34;https://blog.golang.org/using-go-modules&#34;&gt;golang modules&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.golang.org/using-go-modules&#34;&gt;https://blog.golang.org/using-go-modules&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/golang/go/wiki/Modules&#34;&gt;golang/go/wiki/Modules&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;session&#34;&gt;Session&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# run tests recursively on change&lt;/span&gt;
-fswatch -o . &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; xargs -n1 -I&lt;span class=&#34;o&#34;&gt;{}&lt;/span&gt; go &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; -v ./...
-
-&lt;span class=&#34;c1&#34;&gt;# run main on change&lt;/span&gt;
-fswatch -o . &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; xargs -n1 -I&lt;span class=&#34;o&#34;&gt;{}&lt;/span&gt; go run main.go
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+<description>Go Modules</description>
 </item>
     
     <item>
@@ -232,15 +59,7 @@ fswatch -o . &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; xargs -n1 -I&lt;span c
 <pubDate>Mon, 13 Jan 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/go-sdl2/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/go-sdl2-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/go-sdl2-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://github.com/veandco/go-sdl2&#34;&gt;go-sdl2&lt;/a&gt;, the SDL2 wrapped for Go users&lt;/p&gt;
-&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/veandco/go-sdl2-examples&#34;&gt;veandco/go-sdl2-examples&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>Go SDL2</description>
 </item>
     
     <item>
@@ -249,18 +68,7 @@ fswatch -o . &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; xargs -n1 -I&lt;span c
 <pubDate>Mon, 24 Jun 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/golang-debug-in-docker-with-delve/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/golang-debug-in-docker-with-delve-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/golang-debug-in-docker-with-delve-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;based on &lt;a href=&#34;https://medium.com/@kaperys/delve-into-docker-d6c92be2f823&#34;&gt;Debugging Go using Delve, Docker and VS Code&lt;/a&gt; post&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;make run &lt;span class=&#34;c1&#34;&gt;# or make build first&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# set breakpoint in vscode on line 18, then Debug | Start Debugging&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/go-delve/delve/blob/master/Documentation/usage/dlv_debug.md&#34;&gt;dlv debug&lt;/a&gt; cli docs&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>Golang Debug In Docker with Delve</description>
 </item>
     
     <item>
@@ -269,20 +77,7 @@ fswatch -o . &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; xargs -n1 -I&lt;span c
 <pubDate>Sat, 03 Feb 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/golang-dep/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/golang-dep-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/golang-dep-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;project to learn to use &lt;a href=&#34;https://golang.github.io/dep/&#34;&gt;dep&lt;/a&gt; the dependency management tool for &lt;a href=&#34;https://golang.org/&#34;&gt;go&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# create new project&lt;/span&gt;
-dep init
-
-&lt;span class=&#34;c1&#34;&gt;# add new import(s) in source code&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# pull down imports into ./vendor/&lt;/span&gt;
-dep ensure
-
-&lt;span class=&#34;c1&#34;&gt;# can always run `dep ensure` to sync everything up&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+<description>Golang Dep</description>
 </item>
     
     <item>
@@ -291,17 +86,7 @@ dep ensure
 <pubDate>Sun, 11 Jan 2015 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/go-postgres/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/go-postgres-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/go-postgres-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;playground for go &lt;a href=&#34;http://godoc.org/github.com/lib/pq&#34;&gt;lib/pq&lt;/a&gt; package&lt;/p&gt;
-&lt;h3 id=&#34;dependencies&#34;&gt;Dependencies&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;go get github.com/lib/pq
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;running&#34;&gt;Running&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;go run main.go
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+<description>Go Postgres</description>
 </item>
     
     <item>
@@ -310,22 +95,7 @@ dep ensure
 <pubDate>Tue, 31 Dec 2013 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/go/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/go-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/go-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;A set of example &lt;a href=&#34;http://golang.org/&#34;&gt;Go&lt;/a&gt; programs for learning&lt;/p&gt;
-&lt;p&gt;Each subdirectory contains an example&lt;/p&gt;
-&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;go run filename
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;e.g.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;go run hello.go
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://golang.org/doc/&#34;&gt;Go Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>Go</description>
 </item>
     
   </channel>

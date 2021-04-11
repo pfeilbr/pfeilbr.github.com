@@ -14,65 +14,7 @@
 <pubDate>Tue, 20 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-appconfig/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-appconfig-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-appconfig-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html&#34;&gt;AWS AppConfig&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;create, manage, and quickly deploy application configurations. AWS AppConfig supports controlled deployments to applications of any size and includes built-in validation checks and monitoring. You can use AWS AppConfig with applications hosted on EC2 instances, AWS Lambda, containers, mobile applications, or IoT devices.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;concepts&#34;&gt;Concepts&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Domain&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Application (myapp)&lt;/li&gt;
-&lt;li&gt;Environment (dev, test, demo, prod)&lt;/li&gt;
-&lt;li&gt;Configuration Profile - versioned configuration data.  text, json, yaml, S3 object, SSM Document, SSM Parameter, CodePipeline&lt;/li&gt;
-&lt;li&gt;Deployment - types: &lt;code&gt;AllAtOnce&lt;/code&gt;, &lt;code&gt;Linear50PercentEvery30Seconds&lt;/code&gt;, &lt;code&gt;Canary10Percent20Minutes&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Functional&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;deploy configuration changes from a central location&lt;/li&gt;
-&lt;li&gt;rules to validate your configuration. configurations that aren&amp;rsquo;t valid can&amp;rsquo;t be deployed.
-&lt;ul&gt;
-&lt;li&gt;validation types: JSON schema, Lambda. see &lt;a href=&#34;https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-configuration-and-profile-validators.html&#34;&gt;About validators&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;examples&#34;&gt;Example(s)&lt;/h2&gt;
-&lt;p&gt;get configuration via cli&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;aws appconfig get-configuration &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --application &lt;span class=&#34;s1&#34;&gt;&amp;#39;app01&amp;#39;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --environment &lt;span class=&#34;s1&#34;&gt;&amp;#39;dev&amp;#39;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --configuration &lt;span class=&#34;s1&#34;&gt;&amp;#39;config-profile-01&amp;#39;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --client-id &lt;span class=&#34;s1&#34;&gt;&amp;#39;test&amp;#39;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    appconfig.json
-
-&lt;span class=&#34;c1&#34;&gt;# view results in specified output file `appconfig.json`&lt;/span&gt;
-cat appconfig.json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;output&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAEqjn5qdblEL5J0kWjsMG2g4OkInAN-hOkB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;aws-console-screenshots&#34;&gt;AWS Console Screenshots&lt;/h2&gt;
-&lt;p&gt;Configuration profile source types&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAFPtmY9U1tLhL_v42m3BOxd-jtaQ0ZYJBsB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Example JSON configuration profile&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAG_2LdzxtpK6o_hfXg_hc2Q-ZfMkjGMCGkB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Deployment Strategy Types&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAEujdNkJthBD7jwMEzwtF6qj0GctFCDsuoB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Start Deployment&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAH80DpD0MpJILm3IYc6KpR9yPw3nt845c0B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Deployment&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAGc3YJs7dhBWr2FLWxLN7yOycCdpbI2ybUB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html&#34;&gt;AWS AppConfig Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/es/blogs/mt/introducing-aws-appconfig-lambda-extension-deploying-application-configuration-serverless/&#34;&gt;Deploying application configuration to serverless: introducing the AWS AppConfig Lambda extension&lt;/a&gt; - blog post on how to use &lt;a href=&#34;https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-integration-lambda-extensions.html&#34;&gt;AppConfig Lambda extension&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-integration-lambda-extensions.html&#34;&gt;AWS AppConfig integration with Lambda extensions&lt;/a&gt; -&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/aws-samples/sessions-with-aws-sam/blob/master/appconfig-lambda-extensions/README.md&#34;&gt;sessions-with-aws-sam/appconfig-lambda-extensions/README.md&lt;/a&gt; - good complete reference implementation on how to effectively use with lambda&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/sthulb/appconfig-demo&#34;&gt;sthulb/appconfig-demo&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>AWS AppConfig</description>
 </item>
     
   </channel>

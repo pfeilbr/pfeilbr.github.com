@@ -14,17 +14,7 @@
 <pubDate>Tue, 02 Aug 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/phaser/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/phaser-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/phaser-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;project to learn the &lt;a href=&#34;http://phaser.io/&#34;&gt;Phaser&lt;/a&gt; HTML5 game framework&lt;/p&gt;
-&lt;h2 id=&#34;stackem-game&#34;&gt;stackem game&lt;/h2&gt;
-&lt;p&gt;Simple drop and stack game&lt;/p&gt;
-&lt;p&gt;Play @ &lt;a href=&#34;https://pfeilbr.github.io/phaser-playground/&#34;&gt;https://pfeilbr.github.io/phaser-playground/&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;developing&#34;&gt;Developing&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# start live reload server&lt;/span&gt;
-live-server
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+<description>Phaser</description>
 </item>
     
   </channel>

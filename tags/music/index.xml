@@ -14,15 +14,7 @@
 <pubDate>Sat, 26 Aug 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/scribbletune/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/scribbletune-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/scribbletune-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://github.com/walmik/scribbletune&#34;&gt;Scribbletune&lt;/a&gt;.  Generate musical patterns with JavaScript and export as MIDI files using Node.js&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;install timidity command line midi player via &lt;code&gt;brew install timidity&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.systutorials.com/docs/linux/man/1-timidity/&#34;&gt;timidity man docs&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>Scribbletune</description>
 </item>
     
   </channel>

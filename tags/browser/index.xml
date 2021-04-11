@@ -14,15 +14,7 @@
 <pubDate>Tue, 22 Aug 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/puppeteer/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/puppeteer-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/puppeteer-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://github.com/GoogleChrome/puppeteer&#34;&gt;puppeteer&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Puppeteer is a Node library which provides a high-level API to control headless Chrome over the DevTools Protocol. It can also be configured to use full (non-headless) Chrome.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;see &lt;a href=&#34;examples&#34;&gt;&lt;code&gt;examples&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+<description>Puppeteer</description>
 </item>
     
     <item>
@@ -31,44 +23,7 @@
 <pubDate>Thu, 20 Aug 2015 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/webdriverio/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/webdriverio-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/webdriverio-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;h1 id=&#34;running-selenium-standalone-server-preferred--lighter-weight&#34;&gt;Running Selenium Standalone Server (Preferred / lighter weight)&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;Start selenium Standalone server&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# run the following in it&amp;#39;s own shell and leave running&lt;/span&gt;
-$ java -jar selenium-server/selenium-server-standalone-2.53.0.jar
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;Run script&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ node index.js
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;running-selenium-hub-and-nodes-using-docker&#34;&gt;Running Selenium Hub and Node(s) Using Docker&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;start hub (clients connect to this)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; $ docker run -d -P --name selenium-hub -e GRID_TIMEOUT=10000 selenium/hub
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;start chrome node (hub delegates work to it)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; $ docker run -d --link selenium-hub:hub selenium/node-chrome
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Get host and port for &amp;ldquo;selenium-hub&amp;rdquo; container and use them in your client.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://static-content-01.s3-website-us-east-1.amazonaws.com//Kitematic_1B862C7B.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Example client config&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;options&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-	&lt;span class=&#34;nx&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;192.168.99.100&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-	&lt;span class=&#34;nx&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;32768&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-	&lt;span class=&#34;nx&#34;&gt;desiredCapabilities&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-		&lt;span class=&#34;nx&#34;&gt;browserName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;chrome&amp;#39;&lt;/span&gt;
-	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;see &lt;a href=&#34;index.js&#34;&gt;&lt;code&gt;index.js&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+<description>WebdriverIO</description>
 </item>
     
   </channel>

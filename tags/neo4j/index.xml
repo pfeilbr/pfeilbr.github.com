@@ -14,66 +14,7 @@
 <pubDate>Mon, 05 Aug 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/neo4j/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/neo4j-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/neo4j-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://neo4j.com&#34;&gt;neo4j&lt;/a&gt; graph database&lt;/p&gt;
-&lt;h2 id=&#34;example-session&#34;&gt;Example Session&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# update&lt;/span&gt;
-brew update
-
-&lt;span class=&#34;c1&#34;&gt;# install&lt;/span&gt;
-brew install neo4j
-
-&lt;span class=&#34;c1&#34;&gt;# add neo4j binaries to path&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;:/usr/local/Cellar/neo4j/3.5.8/bin&amp;#34;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# start server&lt;/span&gt;
-neo4j start
-
-&lt;span class=&#34;c1&#34;&gt;# open web ui&lt;/span&gt;
-open http://localhost:7474/
-
-&lt;span class=&#34;c1&#34;&gt;# it&amp;#39;ll prompt for password on first time&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# user and password is neo4j&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# you then need to change the password&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# open neo4j shell (Cypher Shell)&lt;/span&gt;
-cypher-shell -u neo4j -p PASSWORD
-
-&lt;span class=&#34;c1&#34;&gt;# create nodes in shell&lt;/span&gt;
-CREATE &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;p:Person &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;name:&lt;span class=&#34;s1&#34;&gt;&amp;#39;brian&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;})&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-CREATE &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;p:Person &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;name:&lt;span class=&#34;s1&#34;&gt;&amp;#39;tricia&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;})&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# create relationship&lt;/span&gt;
-MATCH &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;brian:Person &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;name:&lt;span class=&#34;s1&#34;&gt;&amp;#39;brian&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;})&lt;/span&gt;
-MATCH &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;tricia:Person &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;name:&lt;span class=&#34;s1&#34;&gt;&amp;#39;tricia&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;})&lt;/span&gt;
-CREATE &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;brian&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;:IS_MARRIED_TO&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;-&amp;gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;tricia&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-CREATE &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;tricia&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;:IS_MARRIED_TO&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;-&amp;gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;brian&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# query `IS_MARRIED_TO` relationship&lt;/span&gt;
-MATCH &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;p1:Person&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;rel:IS_MARRIED_TO&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;-&amp;gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;p2:Person&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-RETURN p1 AS spouse1, p2 AS spouse2&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-
-&lt;span class=&#34;c1&#34;&gt;# clean up: delete all nodes and relationships&lt;/span&gt;
-MATCH &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;n&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-DETACH DELETE n&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# exit shell&lt;/span&gt;
-:exit
-
-&lt;span class=&#34;c1&#34;&gt;# stop server&lt;/span&gt;
-neo4j stop
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Web UI&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAEzw2ySyp5Jv7e6bDQQrJocVkLMHq_l994B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://neo4j.com/docs/&#34;&gt;neo4j documentation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>Neo4j</description>
 </item>
     
   </channel>

@@ -14,41 +14,7 @@
 <pubDate>Sat, 18 May 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-kubernetes-service-aks/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/azure-kubernetes-service-aks-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/azure-kubernetes-service-aks-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn azure kubernetes service&lt;/p&gt;
-&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# create resource group&lt;/span&gt;
-az group create --name &lt;span class=&#34;s2&#34;&gt;&amp;#34;pfeilbr-aks-01&amp;#34;&lt;/span&gt; --location eastus
-
-&lt;span class=&#34;c1&#34;&gt;# create cluster&lt;/span&gt;
-az aks create &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --resource-group &lt;span class=&#34;s2&#34;&gt;&amp;#34;pfeilbr-aks-01&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --name &lt;span class=&#34;s2&#34;&gt;&amp;#34;pfeilbr-aks-01&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --node-count &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --location eastus &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --enable-addons monitoring &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --generate-ssh-keys
-
-&lt;span class=&#34;c1&#34;&gt;# set connectivity to cluster for kubectl&lt;/span&gt;
-az aks get-credentials --resource-group &lt;span class=&#34;s2&#34;&gt;&amp;#34;pfeilbr-aks-01&amp;#34;&lt;/span&gt; --name &lt;span class=&#34;s2&#34;&gt;&amp;#34;pfeilbr-aks-01&amp;#34;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# list cluster nodes&lt;/span&gt;
-kubectl get nodes
-
-&lt;span class=&#34;c1&#34;&gt;# deploy&lt;/span&gt;
-kubectl apply -f azure-vote.yaml
-
-&lt;span class=&#34;c1&#34;&gt;# monitor deployment progress&lt;/span&gt;
-kubectl get service azure-vote-front --watch
-
-&lt;span class=&#34;c1&#34;&gt;# open &amp;#34;EXTERNAL-IP&amp;#34; in browser to view webapp&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# delete cluster&lt;/span&gt;
-az group delete --name &lt;span class=&#34;s2&#34;&gt;&amp;#34;pfeilbr-aks-01&amp;#34;&lt;/span&gt; --yes --no-wait
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAHFfcVhlCJNT5rYgPkVTwZ4NL5x57QaNd0B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-</description>
+<description>Azure Kubernetes Service AKS</description>
 </item>
     
     <item>
@@ -57,83 +23,7 @@ az group delete --name &lt;span class=&#34;s2&#34;&gt;&amp;#34;pfeilbr-aks-01&am
 <pubDate>Tue, 18 Oct 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/kubernetes/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/kubernetes-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/kubernetes-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn kubernetes.  based on tutorial at &lt;a href=&#34;http://kubernetes.io/docs/tutorials/kubernetes-basics&#34;&gt;http://kubernetes.io/docs/tutorials/kubernetes-basics&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;install-and-start-minikubehttpsgithubcomkubernetesminikube&#34;&gt;Install and start &lt;a href=&#34;https://github.com/kubernetes/minikube&#34;&gt;minikube&lt;/a&gt;&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/tmp
-$ curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.11.0/minikube-darwin-amd64 &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; chmod +x minikube &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo mv minikube /usr/local/bin/
-
-&lt;span class=&#34;c1&#34;&gt;# verify install&lt;/span&gt;
-$ minikube version
-
-&lt;span class=&#34;c1&#34;&gt;# start&lt;/span&gt;
-$ minikube start
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;minikube VMs, etc. are stored in &lt;code&gt;~/.minikube&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ tree ~/.minikube
-
-.
-├── addons
-├── apiserver.crt
-├── apiserver.key
-├── ca.crt
-├── ca.key
-├── ca.pem
-├── cache
-│   ├── iso
-│   │   └── minikube-0.7.iso
-│   └── localkube
-├── cert.pem
-├── certs
-│   ├── ca-key.pem
-│   ├── ca.pem
-│   ├── cert.pem
-│   └── key.pem
-├── config
-├── key.pem
-└── machines
-    ├── minikube
-    │   ├── boot2docker.iso
-    │   ├── config.json
-    │   ├── disk.vmdk
-    │   ├── id_rsa
-    │   ├── id_rsa.pub
-    │   └── minikube
-    │       ├── Logs
-    │       │   └── VBox.log
-    │       ├── minikube.vbox
-    │       └── minikube.vbox-prev
-    ├── server-key.pem
-    └── server.pem
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;rest-api&#34;&gt;REST API&lt;/h3&gt;
-&lt;p&gt;start proxy to allow access&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ kubectl proxy
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Access API&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ curl http://127.0.0.1:8001/api
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;nt&#34;&gt;&amp;#34;kind&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;APIVersions&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-  &lt;span class=&#34;nt&#34;&gt;&amp;#34;versions&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-    &lt;span class=&#34;s2&#34;&gt;&amp;#34;v1&amp;#34;&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-  &lt;span class=&#34;nt&#34;&gt;&amp;#34;serverAddressByClientCIDRs&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-      &lt;span class=&#34;nt&#34;&gt;&amp;#34;clientCIDR&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;0.0.0.0/0&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-      &lt;span class=&#34;nt&#34;&gt;&amp;#34;serverAddress&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;10.0.2.15:8443&amp;#34;&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;visit API endpoint at &lt;a href=&#34;http://127.0.0.1:8001/api&#34;&gt;http://127.0.0.1:8001/api&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;visit kubernetes-dashboard at &lt;a href=&#34;http://127.0.0.1:8001/api/v1/proxy/namespaces/kube-system/services/kubernetes-dashboard/#/workload?namespace=default&#34;&gt;http://127.0.0.1:8001/api/v1/proxy/namespaces/kube-system/services/kubernetes-dashboard/#/workload?namespace=default&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;accessing-services&#34;&gt;Accessing Services&lt;/h2&gt;
-&lt;p&gt;The cluster ip address as exposed to host machine can be obtained via&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ kubectl cluster-info
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://static-content-01.s3-website-us-east-1.amazonaws.com/1__kubectl_proxy__kubectl__1DB53603.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-</description>
+<description>Kubernetes</description>
 </item>
     
   </channel>

@@ -14,40 +14,7 @@
 <pubDate>Mon, 05 Apr 2021 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/cfn-diagram/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/cfn-diagram-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/cfn-diagram-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://github.com/mhlabs/cfn-diagram&#34;&gt;cfn-diagram&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;CLI tool to visualise CloudFormation/SAM/CDK templates as diagrams.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install&lt;/span&gt;
-npm i -g @mhlabs/cfn-diagram
-
-&lt;span class=&#34;c1&#34;&gt;# draw.io render&lt;/span&gt;
-cfn-dia draw.io --template-file CloudFrontS3WebsiteCdkStack.template.yaml &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --output-file CloudFrontS3WebsiteCdkStack.drawio
-
-&lt;span class=&#34;c1&#34;&gt;# html render&lt;/span&gt;
-cfn-dia html --template-file CloudFrontS3WebsiteCdkStack.template.yaml &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --output-path CloudFrontS3WebsiteCdkStack-html
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;screenshots&#34;&gt;Screenshots&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAHOsXnnj4pIvKxyM_FrMsRFhlzkXpZ8gJAB/image.png&#34; alt=&#34;draw.io view in vscode&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAGRXpA0ux5B75sYfg9yRmbXZ6y4oRJJJ-IB/image.png&#34; alt=&#34;draw.io view in vscode - hover resource for details&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAGeo4YVPvdAYY3xn-jZe7I3E5NCIS6lorUB/image.png&#34; alt=&#34;html view&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;good starting point.  generate draw.io to get all resources and icons, then modify from there.&lt;/li&gt;
-&lt;li&gt;allows for filtering by resource types to eliminate resources that may not be needed.&lt;/li&gt;
-&lt;li&gt;works by importing cfn template into CDK.  CDK allows to treat as graph for traversal and inspection&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/mhlabs/cfn-diagram&#34;&gt;mhlabs/cfn-diagram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.readysetcloud.io/blog/allen.helton/how-and-why-you-need-to-start-generating-your-diagrams/&#34;&gt;How (and Why) You Need To Start Generating Your Serverless Infrastructure Diagrams | Ready, Set, Cloud!&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>CFN Diagram</description>
 </item>
     
     <item>
@@ -56,69 +23,7 @@ cfn-dia html --template-file CloudFrontS3WebsiteCdkStack.template.yaml &lt;span 
 <pubDate>Sun, 21 Mar 2021 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-copilot/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-copilot-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-copilot-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://aws.github.io/copilot-cli/&#34;&gt;AWS Copilot CLI&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;workload-types&#34;&gt;Workload Types&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;load balanced web service&lt;/li&gt;
-&lt;li&gt;backend service - isolated to private VPC that is accessible to frontend web app (load balanced web service)&lt;/li&gt;
-&lt;li&gt;scheduled job&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;concepts&#34;&gt;Concepts&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Application - a group of related services, environments, and pipelines&lt;/li&gt;
-&lt;li&gt;Environments - environment can have its own version of a service running allowing you to create a &amp;ldquo;test&amp;rdquo; and &amp;ldquo;production&amp;rdquo; environment&lt;/li&gt;
-&lt;li&gt;Service - your code and all of the supporting infrastructure needed to get it up and running on AWS&lt;/li&gt;
-&lt;li&gt;Jobs - ephemeral ECS tasks that are triggered by an event.  uses CloudWatch&amp;rsquo;s rate expressions.  Scheduled Jobs are composed of an AmazonECS Task Definition, Task Role, Task Execution Role, a Step Function State Machine for retrying on failures, and finally an Event Rule to trigger the state machine.&lt;/li&gt;
-&lt;li&gt;Pipelines - release pipeline that deploys your service whenever you push to your git repository. (At this time, Copilot supports GitHub, Bitbucket, and CodeCommit repositories.) When a push is detected, your pipeline will build your service, push the image to ECR, and deploy to your environments.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;notes&#34;&gt;Notes&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;copilot cli automatically creates thw following stacks
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;aws-copilot-playground-infrastructure-roles&lt;/code&gt; stack
-&lt;img src=&#34;https://www.evernote.com/l/AAFuJxIjJk9CnIj2PLZgRPE00acVAbuftYkB/image.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;StackSet-aws-copilot-playground-infrastructure-777bf4f7-f4a1-469e-bbff-5113f346b47e&lt;/code&gt;
-&lt;img src=&#34;https://www.evernote.com/l/AAEi6LD4-VxJOIFL2e84M4nrNp8l_TsMZlwB/image.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;similar dev workflow to Elastic Beanstalk (eb), Cloud Foundry (cf), heroku.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;files-and-directories&#34;&gt;Files and Directories&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;copilot&#34;&gt;&lt;code&gt;copilot/&lt;/code&gt;&lt;/a&gt; - copilot working directory&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;copilot/aws-copilot-playground-nginx/manifest.yml&#34;&gt;copilot/aws-copilot-playground-nginx/manifest.yml&lt;/a&gt; - manifest file generated by copilot&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# copilot does not allow use of root account.&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# copilot will use `AWS_PROFILE` setting&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;AWS_PROFILE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;admin
-
-copilot init
-
-copilot deploy
-
-copilot app show
-
-copilot svc ls
-
-&lt;span class=&#34;c1&#34;&gt;# create new service (web, backend, scheduled)&lt;/span&gt;
-copilot svc init
-
-copilot svc show
-
-copilot svc logs
-
-&lt;span class=&#34;c1&#34;&gt;# delete all resources / stack(s)&lt;/span&gt;
-copilot app delete
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://aws.github.io/copilot-cli/&#34;&gt;AWS Copilot CLI - AWS Copilot CLI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ecsworkshop.com&#34;&gt;ECSworkshop.com&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>AWS Copilot</description>
 </item>
     
     <item>
@@ -127,56 +32,7 @@ copilot app delete
 <pubDate>Mon, 13 Jul 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/heroku-node-worker/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/heroku-node-worker-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/heroku-node-worker-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;example of running a long lived worker process on heroku that is not a web app/server&lt;/p&gt;
-&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://heroku.com&#34;&gt;heroku&lt;/a&gt; account&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://devcenter.heroku.com/articles/heroku-cli&#34;&gt;Heroku CLI&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# clone&lt;/span&gt;
-git clone https://github.com/pfeilbr/heroku-node-worker-playground.git
-
-&lt;span class=&#34;c1&#34;&gt;# change to root directory&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; heroku-node-worker-playground
-
-&lt;span class=&#34;c1&#34;&gt;# create heroku app&lt;/span&gt;
-heroku create
-
-&lt;span class=&#34;c1&#34;&gt;# &amp;gt;&amp;gt;&amp;gt; make changes to `worker.js`, install packages, etc.&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# test locally&lt;/span&gt;
-npm run worker
-
-&lt;span class=&#34;c1&#34;&gt;# commit changes&lt;/span&gt;
-git commit -a -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;my awesome changes&amp;#34;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# deploy / push changes to heroku&lt;/span&gt;
-git push heroku master &lt;span class=&#34;c1&#34;&gt;# if worker is already running, this push will kill it and start the new one&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# run worker only / stop web dyno&lt;/span&gt;
-heroku ps:scale &lt;span class=&#34;nv&#34;&gt;web&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;worker&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# verify running&lt;/span&gt;
-heroku ps
-
-&lt;span class=&#34;c1&#34;&gt;# view logs&lt;/span&gt;
-heroku logs -t
-
-&lt;span class=&#34;c1&#34;&gt;# stop worker&lt;/span&gt;
-heroku ps:scale &lt;span class=&#34;nv&#34;&gt;worker&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# start worker&lt;/span&gt;
-heroku ps:scale &lt;span class=&#34;nv&#34;&gt;worker&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://devcenter.heroku.com/articles/node-redis-workers&#34;&gt;Background Jobs in Node.js with Redis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://devcenter.heroku.com/articles/run-non-web-java-processes-on-heroku&#34;&gt;Run Non-web Java Dynos on Heroku&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>Heroku Node Worker</description>
 </item>
     
     <item>
@@ -185,38 +41,7 @@ heroku ps:scale &lt;span class=&#34;nv&#34;&gt;worker&lt;/span&gt;&lt;span class
 <pubDate>Mon, 23 Mar 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/http-live-streaming-hls/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/http-live-streaming-hls-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/http-live-streaming-hls-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;example of creating an HTTP Live Stream video stream from an h.264 video file.&lt;/p&gt;
-&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;download and install &amp;ldquo;HTTP Live Streaming Tools&amp;rdquo; from &lt;a href=&#34;https://developer.apple.com/download/more/?=HLS&#34;&gt;https://developer.apple.com/download/more/?=HLS&lt;/a&gt; (binaries are installed to &lt;code&gt;/usr/local/bin&lt;/code&gt;)
-&lt;blockquote&gt;
-&lt;p&gt;need to login with apple developer account&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;running&#34;&gt;Running&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# create segments for HTTP Live Streaming from media file&lt;/span&gt;
-mediafilesegmenter &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  -f ./public &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  ./assets/video/SampleVideo_1280x720_10mb.mp4
-
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; public
-python -m SimpleHTTPServer &lt;span class=&#34;m&#34;&gt;8000&lt;/span&gt;
-open http://localhost:8000/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;public/index.html&#34;&gt;&lt;code&gt;public/index.html&lt;/code&gt;&lt;/a&gt; - include js code for video playback&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;assets/video/SampleVideo_1280x720_10mb.mp4&#34;&gt;&lt;code&gt;assets/video/SampleVideo_1280x720_10mb.mp4&lt;/code&gt;&lt;/a&gt; - sample video&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;resources&#34;&gt;Resources&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/41014197/how-can-i-play-a-m3u8-file-video-using-the-html5-video-element&#34;&gt;How can I play a m3u8 (file) video using the HTML5 &lt;video&gt; element?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.sample-videos.com/&#34;&gt;sample-videos.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/HTTP_Live_Streaming&#34;&gt;HTTP Live Streaming&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>HTTP Live Streaming HLS</description>
 </item>
     
     <item>
@@ -225,17 +50,7 @@ open http://localhost:8000/
 <pubDate>Fri, 06 Sep 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-polly/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-polly-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-polly-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;&#34;&gt;aws polly&lt;/a&gt; text-to-speech (TTS)&lt;/p&gt;
-&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
-&lt;p&gt;based on &lt;a href=&#34;https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-started-browser.html#getting-started-browser-scenario&#34;&gt;https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-started-browser.html#getting-started-browser-scenario&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;update js code in &lt;a href=&#34;polly.html&#34;&gt;&lt;code&gt;polly.html&lt;/code&gt;&lt;/a&gt; with the following&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;nx&#34;&gt;AWS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;config&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;region&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;YOUR_REGION&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;nx&#34;&gt;AWS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;config&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;credentials&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;AWS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;CognitoIdentityCredentials&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;({&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;IdentityPoolId&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;YOUR_IDENTITY_POOL_ID&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;open polly.html
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+<description>AWS Polly</description>
 </item>
     
     <item>
@@ -244,38 +59,7 @@ open http://localhost:8000/
 <pubDate>Thu, 13 Jun 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/cognito-federated-to-salesforce-and-s3-presigned-url/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/cognito-federated-to-salesforce-and-s3-presigned-url-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/cognito-federated-to-salesforce-and-s3-presigned-url-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;login-with-cognito-federated-to-salesforce-example&#34;&gt;Login with Cognito Federated to Salesforce Example&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;see &lt;a href=&#34;index.html&#34;&gt;&lt;code&gt;index.html&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;see &lt;code&gt;~/Dropbox/notes/static-s3-cognito-authentication.md&lt;/code&gt; on local machine also for greater detail on setup&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# local dev&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# start server.  serves static files from current directory &amp;#39;.&amp;#39;.  listens on ssl 443&lt;/span&gt;
-sudo node server.js
-open https://localhost
-
-&lt;span class=&#34;c1&#34;&gt;# on s3&lt;/span&gt;
-open https://pfeil-static-site-01.s3.amazonaws.com/index.html
-
-&lt;span class=&#34;c1&#34;&gt;# on cloudfront&lt;/span&gt;
-open https://d3tz189emgpc7c.cloudfront.net/index.html
-
-&lt;span class=&#34;c1&#34;&gt;# copy updated file to s3&lt;/span&gt;
-aws s3 cp index.html s3://pfeil-static-site-01/index.html
-&lt;span class=&#34;c1&#34;&gt;# invalidate cloudfront dist after copy&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# if any login issues&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# clear site data for https://pfeil-dev-ed.my.salesforce.com in chrome dev tools&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;pre-signed-url-example&#34;&gt;Pre-signed URL Example&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;see &lt;a href=&#34;index.js&#34;&gt;&lt;code&gt;index.js&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;node index.js&lt;/code&gt; outputs pre-signed url. (uses ~/.aws/credentials and pre-signed URL generated under that users context/permission)&lt;/li&gt;
-&lt;li&gt;PUT / upload file to S3 via &lt;code&gt;curl -X PUT -T hello.txt -L &#39;&amp;lt;pre-signed url&amp;gt;&#39;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>Cognito Federated to Salesforce and S3 Presigned URL</description>
 </item>
     
     <item>
@@ -284,27 +68,7 @@ aws s3 cp index.html s3://pfeil-static-site-01/index.html
 <pubDate>Thu, 17 Aug 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/s3-website/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/s3-website-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/s3-website-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://github.com/klaemo/s3-website&#34;&gt;s3-website&lt;/a&gt; npm module&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;usage session&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install deps&lt;/span&gt;
-npm install
-
-&lt;span class=&#34;c1&#34;&gt;# create static website&lt;/span&gt;
-./node_modules/s3-website/s3-website.js create 
-
-&lt;span class=&#34;c1&#34;&gt;# deploy static website&lt;/span&gt;
-com.brianpfeil.s3-website-playground.site01
-./node_modules/s3-website/s3-website.js deploy
-
-&lt;span class=&#34;c1&#34;&gt;# view &lt;/span&gt;
-open http://com.brianpfeil.s3-website-playground.site01.s3-website-us-east-1.amazonaws.com
-
-&lt;span class=&#34;c1&#34;&gt;# NOTE: using `./node_modules/s3-website/s3-website.js` to avoid global install and&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# doesn&amp;#39;t work with `npx` because of https://www.evernote.com/l/AAH8gou8OCZKF6rfnqA2Tom3BU7c0xuFTM0B/image.png&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+<description>S3 Website</description>
 </item>
     
     <item>
@@ -313,17 +77,7 @@ open http://com.brianpfeil.s3-website-playground.site01.s3-website-us-east-1.ama
 <pubDate>Thu, 15 Oct 2015 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/flexbox/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/flexbox-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/flexbox-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Project to learn and experiment with the &lt;a href=&#34;http://www.w3.org/TR/css3-flexbox/&#34;&gt;CSS3 Flexbox&lt;/a&gt; layout module.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;index.html&lt;/code&gt; is the entry point&lt;/p&gt;
-&lt;h3 id=&#34;resources&#34;&gt;Resources&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties&#34;&gt;A Visual Guide to CSS3 Flexbox Properties&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://css-tricks.com/snippets/css/a-guide-to-flexbox/&#34;&gt;A Complete Guide to Flexbox&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>Flexbox</description>
 </item>
     
     <item>
@@ -332,28 +86,7 @@ open http://com.brianpfeil.s3-website-playground.site01.s3-website-us-east-1.ama
 <pubDate>Tue, 12 May 2015 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/html-video-embed/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/html-video-embed-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/html-video-embed-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Project to learn and experiment with various HTML video players&lt;/p&gt;
-&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Start a local webserver&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; python -m SimpleHTTPServer 8000
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Visit the &lt;code&gt;.html&lt;/code&gt; files to view video embeds.
-e.g. &lt;a href=&#34;http://localhost:8000/test-screencast-jwplayer.html&#34;&gt;http://localhost:8000/test-screencast-jwplayer.html&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.jwplayer.com/&#34;&gt;JW Player&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.videojs.com/&#34;&gt;Video.js&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>HTML Video Embed</description>
 </item>
     
     <item>
@@ -362,95 +95,7 @@ e.g. &lt;a href=&#34;http://localhost:8000/test-screencast-jwplayer.html&#34;&gt
 <pubDate>Tue, 27 Sep 2011 19:31:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/best-fit-web-font-sizing/</guid>
-<description>&lt;p&gt;I&amp;rsquo;ve been working on a web app that targets both smartphones and tablets. The
-large variation in screen sizes has sent me down the path of using a dynamic
-proportional layout that adapts to fit the available space. For example, I&amp;rsquo;ve
-allocated 20% of the available vertical space to the header section that
-displays a title. The &lt;a href=&#34;http://layout.jquery-dev.net/&#34;&gt;jQuery UI.Layout Plug-in&lt;/a&gt; has worked great for laying out the
-content areas, but I ran into a wall when it came to sizing my text
-proportionately.&lt;/p&gt;
-&lt;p&gt;The basic problem is that I have a box, and I want to display some text in it
-at the largest font size without it being wrapped or clipped. The only way to
-determine the bounding rectangle a string of text with certain font
-characteristics, is to create it, add it to the DOM, and then measure it. The
-following function does just that.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;function sizeWithText(text, cssStyles) {
-	// create temp element to hold our text
-	var e = document.createElement(&amp;#39;span&amp;#39;);
-	e.appendChild(document.createTextNode(text));
-
-	// apply any styles that have been passed in
-	// to our element - these can affect the text size
-	for (var prop in cssStyles) {
-		e.style[prop] = cssStyles[prop];
-	}
-
-	// hide our temp element
-	e.style[&amp;#39;visibility&amp;#39;] = &amp;#39;hidden&amp;#39;;
-
-	// add to DOM in order to have it render
-	document.body.appendChild(e);
-
-	// get the bounding rectangle dimensions
-	var s = {w: e.offsetWidth, h: e.offsetHeight};
-
-	// remove from DOM
-	document.body.removeChild(e);
-
-	return s;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The &lt;code&gt;cssStyles&lt;/code&gt; parameter holds the other css style attributes that you&amp;rsquo;d like to apply to the text.  For example, you might have a &lt;code&gt;font-weight: bold&lt;/code&gt; attribute that increases the size of the text, and we want to make sure we account for it.&lt;/p&gt;
-&lt;p&gt;Now we can use this function to check whether text with a font size and a set of styles will fit in our box.  We set the font size to 1 and continuously increase it by 1 check whether it&amp;rsquo;ll fit at every iteration.  As soon as it doesn&amp;rsquo;t, we stop.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;function bestFitTextSize(text, css, width, height) {
-	var pixel = 1;
-
-	do {
-		css[&amp;#39;font-size&amp;#39;] = (pixel++) + &amp;#39;px&amp;#39;;
-		s = sizeWithText(text, css);
-	} while ( (s.w &amp;lt; width) &amp;amp;&amp;amp; (s.h &amp;lt; height) )
-
-	return pixel - 2;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is a brute force and inefficient way to do the calculation, and there are improvements that could be made.  We could start at a reasonable font size like 6px, increment by standard font sizes, etc., but this is fine for my usage where I only do it once on app load.&lt;/p&gt;
-&lt;p&gt;Here&amp;rsquo;s a code sample that shows how the previous functions are used.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;// box we want to fill with text
-var c = document.getElementById(&amp;#39;content&amp;#39;);
-
-// out text
-var text = &amp;#39;Lorem ipsum dolor sit amet&amp;#39;;
-
-// styles
-var cssStyles = {
-	&amp;#39;font-family&amp;#39;: &amp;#39;Impact&amp;#39;,
-	&amp;#39;font-style&amp;#39;: &amp;#39;normal&amp;#39;,
-	&amp;#39;font-weight&amp;#39;: &amp;#39;bolder&amp;#39;,
-	&amp;#39;letter-spacing&amp;#39;: &amp;#39;1px&amp;#39;,
-	&amp;#39;text-shadow&amp;#39;: &amp;#39;3px 3px 3px white&amp;#39;
-};
-
-// size the text to fit
-function applyBestFitText() {
-	// get the pixel size for the font
-	var px = bestFitTextSize(text, cssStyles, c.offsetWidth, c.offsetHeight);
-	cssStyles[&amp;#39;font-size&amp;#39;] = px + &amp;#39;px&amp;#39;;
-
-	// set the text
-	c.innerHTML = text;
-
-	// apply our styles
-	for (var prop in cssStyles) {
-		c.style[prop] = cssStyles[prop];
-	}
-}
-
-// adjust if the size changes
-window.addEventListener(&amp;#39;resize&amp;#39;, applyBestFitText, false);
-
-// call for first time adjustment
-applyBestFitText();
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The complete example is available as a &lt;a href=&#34;https://gist.github.com/1248669&#34;&gt;gist&lt;/a&gt;&lt;/p&gt;
-</description>
+<description>Best Fit Web Font Sizing</description>
 </item>
     
   </channel>

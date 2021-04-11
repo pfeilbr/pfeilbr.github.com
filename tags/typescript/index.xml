@@ -14,48 +14,7 @@
 <pubDate>Tue, 11 Jul 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-typescript-webpack/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/serverless-typescript-webpack-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/serverless-typescript-webpack-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;project to learn/explore &lt;a href=&#34;https://serverless.com/&#34;&gt;serverless&lt;/a&gt; + &lt;a href=&#34;https://www.typescriptlang.org/&#34;&gt;typescript&lt;/a&gt; + &lt;a href=&#34;https://webpack.js.org/&#34;&gt;webpack&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;session&#34;&gt;Session&lt;/h2&gt;
-&lt;p&gt;example testing and deployment session&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# cd to service dir&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; src/services/logger
-
-&lt;span class=&#34;c1&#34;&gt;# local test&lt;/span&gt;
-../../../node_modules/.bin/sls webpack invoke -f scan --data &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;value1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;value2&amp;#34;}&amp;#39;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# deploy&lt;/span&gt;
-../../../node_modules/.bin/sls deploy
-
-&lt;span class=&#34;c1&#34;&gt;# test logger endpoint - create log item&lt;/span&gt;
-curl -d &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;value1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;value2&amp;#34;}&amp;#39;&lt;/span&gt; -H &lt;span class=&#34;s2&#34;&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; -X POST https://4qodphulj8.execute-api.us-east-1.amazonaws.com/dev/logger
-
-&lt;span class=&#34;c1&#34;&gt;# lambda-limits service&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# invoke concurrent lambda executions test&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# ***warning** understand/check resource usage&lt;/span&gt;
-curl -X POST https://m1v5komsge.execute-api.us-east-1.amazonaws.com/dev/lambda-limits/concurrent
-
-&lt;span class=&#34;c1&#34;&gt;# kinesis-playground&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# PUT record&lt;/span&gt;
-curl -d &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;key1&amp;#34;:&amp;#34;value1&amp;#34;, &amp;#34;key2&amp;#34;:&amp;#34;value2&amp;#34;}&amp;#39;&lt;/span&gt; -H &lt;span class=&#34;s2&#34;&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; -X POST https://ijkemqb2r8.execute-api.us-east-1.amazonaws.com/dev/stream/put
-
-&lt;span class=&#34;c1&#34;&gt;# tail remote logs&lt;/span&gt;
-../../../node_modules/.bin/sls logs -f hello -t
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;updated &lt;code&gt;tsconfig.json&lt;/code&gt; with &lt;code&gt;&amp;quot;target&amp;quot;: &amp;quot;es2015&amp;quot;&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;needed to add the following for webpack + awesome-typescript-loader to run without errors&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;yarn add @types/node --dev
-yarn add @types/async --dev
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>Serverless TypeScript webpack</description>
 </item>
     
     <item>
@@ -64,32 +23,7 @@ yarn add @types/async --dev
 <pubDate>Wed, 18 May 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/typescript-node/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/typescript-node-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/typescript-node-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;example app showing how to setup and develop a typescript based node app using the &lt;a href=&#34;https://github.com/typings/typings&#34;&gt;typings TypeScript Definition Manager&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;initial-setup&#34;&gt;Initial Setup&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ npm init --force
-
-$ typings install --ambient node
-
-$ npm install request --save
-$ typings install --ambient request
-
-// tsc was complaining about &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;form-data&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
-$ typings install --ambient form-data
-
-// &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;Promise&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;Object.assign&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, etc.
-$ typings install --ambient es6-shim
-
-// compile from .ts to .js
-$ tsc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;developing&#34;&gt;Developing&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;// live re-compile and re-run on changes via nodemon
-$ npm run dev
-
-// NOTE: app will be ran 2xs on every change when editing in Atom since atom-typescript will re-compile also in addition to &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;tsc -w&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; in the &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;dev&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; npm script
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+<description>TypeScript Node</description>
 </item>
     
     <item>
@@ -98,33 +32,7 @@ $ npm run dev
 <pubDate>Mon, 02 May 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/typings/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/typings-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/typings-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn and experiment with TypeScript typings&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install typescript&lt;/span&gt;
-$ npm install typescript --global
-
-&lt;span class=&#34;c1&#34;&gt;# install typings&lt;/span&gt;
-$ npm install typings --global
-
-&lt;span class=&#34;c1&#34;&gt;# install node typings&lt;/span&gt;
-$ typings install node --ambient --save
-
-&lt;span class=&#34;c1&#34;&gt;# compile index.ts to index.js&lt;/span&gt;
-$ tsc
-
-&lt;span class=&#34;c1&#34;&gt;# run&lt;/span&gt;
-$ node index.js
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;see contents of &lt;code&gt;tsconfig.json&lt;/code&gt;, which tells &lt;code&gt;tsc&lt;/code&gt; how to compile&lt;/p&gt;
-&lt;h3 id=&#34;resources&#34;&gt;Resources&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.davevoyles.com/how-to-add-type-definitions-to-a-typescript-project/&#34;&gt;How to add type definitions to a TypeScript project&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/typings/typings&#34;&gt;typings&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/DefinitelyTyped/DefinitelyTyped&#34;&gt;DefinitelyTyped/DefinitelyTyped&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://definitelytyped.org/&#34;&gt;http://definitelytyped.org/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>Typings</description>
 </item>
     
   </channel>

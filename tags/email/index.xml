@@ -14,104 +14,7 @@
 <pubDate>Tue, 30 Mar 2021 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-ses/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-ses-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-ses-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://aws.amazon.com/ses/&#34;&gt;Simple Email Service (Amazon SES)&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;send or receive emails&lt;/li&gt;
-&lt;li&gt;verify domain (DNS txt) and/or email addresses (confirmation email) - verify that you own the email address or domain that you plan to send from&lt;/li&gt;
-&lt;li&gt;understand &lt;a href=&#34;https://docs.aws.amazon.com/ses/latest/DeveloperGuide/quotas.html&#34;&gt;Service quotas&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;max message size - 10 MB per message (after base64 encoding).&lt;/li&gt;
-&lt;li&gt;sending identity - domain or an email address&lt;/li&gt;
-&lt;li&gt;send emails via SMTP or API (AWS CLI, &lt;a href=&#34;https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#sendEmail-property&#34;&gt;AWS SDK&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;connect to a URL that provides an endpoint for the Amazon SES API or SMTP interface (e.g. email-smtp.us-east-1.amazonaws.com:587)&lt;/li&gt;
-&lt;li&gt;DKIM support - DKIM works by adding a digital signature to the headers of an email message. This signature can then be validated against a public cryptographic key that is located in the organization&amp;rsquo;s DNS record&lt;/li&gt;
-&lt;li&gt;SPF support - SPF establishes a method for receiving mail servers to verify that incoming email from a domain was sent from a host authorized by that domain’s administrators. TXT record &lt;code&gt;&amp;quot;v=spf1 include:amazonses.com ~all&amp;quot;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;IAM to control user access to email sending (e.g. &lt;code&gt;ses:SendEmail&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;Configuration sets - groups of rules that you can apply to the emails you send using Amazon SES.  can publish email sending events to CWL, Firehose, SNS&lt;/li&gt;
-&lt;li&gt;Event types - Send, Reject, Delivery, Bounce, Complaint, Click  Open  Rendering Failure&lt;/li&gt;
-&lt;li&gt;store inbound emails in S3&lt;/li&gt;
-&lt;li&gt;trigger lambdas based on inbound emails&lt;/li&gt;
-&lt;li&gt;publish your email sending events to CWLs or kinesis firehose&lt;/li&gt;
-&lt;li&gt;Sending personalized email via email templates.  templates contain placeholder values.  based on Handlebars template system&lt;/li&gt;
-&lt;li&gt;list management
-&lt;ul&gt;
-&lt;li&gt;customers can manage their own mailing lists, known as contact lists.&lt;/li&gt;
-&lt;li&gt;can create topics, associate topic preferences to a contact and specify &lt;code&gt;OPT_[IN|OUT]&lt;/code&gt; for the topic.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Global Suppression List
-&lt;ul&gt;
-&lt;li&gt;includes a global suppression list. When any Amazon SES customer sends an email that results in a hard bounce, Amazon SES adds the email address that produced the bounce to a global suppression list. The global suppression list is global in the sense that it applies to all Amazon SES customers. In other words, if a different customer attempts to send an email to an address that&amp;rsquo;s on the global suppression list, Amazon SES accepts the message, but doesn&amp;rsquo;t send it, because the email address is suppressed.&lt;/li&gt;
-&lt;li&gt;enabled by default for all Amazon SES accounts. You can&amp;rsquo;t disable it.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;reputation dashboard to track bounce and complaint rates&lt;/li&gt;
-&lt;li&gt;Dedicated IP Addresses&lt;/li&gt;
-&lt;li&gt;IP pool management – If you lease dedicated IP addresses to use with Amazon SES, you can create groups of these addresses, called dedicated IP pools. You can then associate these dedicated IP pools with configuration sets&lt;/li&gt;
-&lt;li&gt;SES sandbox - all new accounts.
-&lt;ul&gt;
-&lt;li&gt;only send mail to verified email addresses and domains&lt;/li&gt;
-&lt;li&gt;only send mail from verified email addresses and domains&lt;/li&gt;
-&lt;li&gt;send a maximum of 200 messages per 24-hour period&lt;/li&gt;
-&lt;li&gt;send a maximum of 1 message per second&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;need to &lt;a href=&#34;https://docs.aws.amazon.com/ses/latest/DeveloperGuide/request-production-access.html?icmpid=docs_ses_console&#34;&gt;request production access&lt;/a&gt; to move out of sandbox&lt;/li&gt;
-&lt;li&gt;VPC endpoint support - see &lt;a href=&#34;https://aws.amazon.com/blogs/aws/new-amazon-simple-email-service-ses-for-vpc-endpoints/&#34;&gt;New – Amazon Simple Email Service (SES) for VPC Endpoints&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;send-email-using-api&#34;&gt;Send Email Using API&lt;/h2&gt;
-&lt;p&gt;create &lt;a href=&#34;destination.json&#34;&gt;&lt;code&gt;destination.json&lt;/code&gt;&lt;/a&gt; and &lt;a href=&#34;message.json&#34;&gt;&lt;code&gt;message.json&lt;/code&gt;&lt;/a&gt; files&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# send email&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# NOTE: cli security principal must have `ses:SendEmail` permission&lt;/span&gt;
-aws ses send-email &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --from &lt;span class=&#34;s1&#34;&gt;&amp;#39;brian.pfeil@allthecloudbits.com&amp;#39;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --destination file://destination.json &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --message file://message.json
-
-&lt;span class=&#34;c1&#34;&gt;# output/response&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# {&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#    &amp;#34;MessageId&amp;#34;: &amp;#34;010001788372bd22-b3d9950b-8310-43bf-bef3-256917951097-000000&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# }&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAGAskHOcRZEfrW-0s7YxNaLr8juV6o_FZwB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;using-smtp-interface&#34;&gt;Using SMTP interface&lt;/h2&gt;
-&lt;h3 id=&#34;create-smtp-credentials&#34;&gt;Create SMTP Credentials&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAGSNu1zXqpCG5BHQmlu-0ioPQSr1yW5sWYB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Creates IAM user &lt;code&gt;arn:aws:iam::529276214230:user/ses-smtp-user.20210330-092121&lt;/code&gt; with following policy&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Version&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;2012-10-17&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Statement&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-            &lt;span class=&#34;nt&#34;&gt;&amp;#34;Effect&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Allow&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-            &lt;span class=&#34;nt&#34;&gt;&amp;#34;Action&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ses:SendRawEmail&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-            &lt;span class=&#34;nt&#34;&gt;&amp;#34;Resource&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;*&amp;#34;&lt;/span&gt;
-        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;send-email-using-smtp&#34;&gt;Send Email using SMTP&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Testing your connection to the Amazon SES SMTP interface&lt;/span&gt;
-openssl s_client -crlf -quiet -starttls smtp -connect email-smtp.us-east-1.amazonaws.com:587
-
-&lt;span class=&#34;c1&#34;&gt;# base64 encode creds&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;SMTP_USERNAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -n &lt;span class=&#34;s2&#34;&gt;&amp;#34;SMTPUsername&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; openssl enc -base64&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;SMTP_PASSWORD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -n &lt;span class=&#34;s2&#34;&gt;&amp;#34;SMTPPassword&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; openssl enc -base64&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# create SMTP email&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# see `smtp-email-example.txt`&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# send email&lt;/span&gt;
-openssl s_client -crlf -quiet -starttls smtp -connect email-smtp.us-east-1.amazonaws.com:587 &amp;lt; smtp-email-example.txt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html&#34;&gt;Documentation | Amazon Simple Email Service&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>AWS SES</description>
 </item>
     
     <item>
@@ -120,16 +23,7 @@ openssl s_client -crlf -quiet -starttls smtp -connect email-smtp.us-east-1.amazo
 <pubDate>Sat, 06 Dec 2014 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/nodemailer/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/nodemailer-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/nodemailer-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Playground for exploring the use of &lt;a href=&#34;http://www.nodemailer.com/&#34;&gt;Nodemailer&lt;/a&gt; to send email&lt;/p&gt;
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-&lt;p&gt;Update &lt;code&gt;index.js&lt;/code&gt; with email password before running.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;npm install
-npm start OR node index.js
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+<description>Nodemailer</description>
 </item>
     
   </channel>

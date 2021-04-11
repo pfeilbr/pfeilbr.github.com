@@ -14,46 +14,7 @@
 <pubDate>Wed, 02 Dec 2015 13:54:15 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/atom-golang-support/</guid>
-<description>&lt;p&gt;I&amp;rsquo;ve recently switched to &lt;a href=&#34;https://atom.io&#34;&gt;Atom&lt;/a&gt; from &lt;a href=&#34;http://www.sublimetext.com/&#34;&gt;Sublime Text&lt;/a&gt; for web development.  The transition was relatively painless since many of the keyboard shortcuts and capabilities are the same in.  I really enjoy usig Atom and want to have that same experience with programming in &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt;.  This documents my Go setup in Atom.&lt;/p&gt;
-&lt;h3 id=&#34;install-and-configuration-steps&#34;&gt;Install and Configuration Steps&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Install &lt;a href=&#34;https://github.com/joefitzgerald/go-plus&#34;&gt;go-plus&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Set the go-plus &lt;code&gt;GOPATH&lt;/code&gt; setting&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://static-content-01.s3-website-us-east-1.amazonaws.com//Settings_-__Users_pfeilbr_go_src_github_com_pfeilbr_go-gorilla-mux-playground_-_Atom_1C0E5214.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Ideally the Atom application process should have &lt;code&gt;GOPATH&lt;/code&gt; in its &lt;code&gt;ENV&lt;/code&gt; and you shouldn&amp;rsquo;t have to set this.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Install atom &lt;a href=&#34;https://atom.io/packages/build&#34;&gt;build&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Set build &lt;code&gt;Panel Visibility&lt;/code&gt; setting to &lt;code&gt;Keep Visible&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://static-content-01.s3-website-us-east-1.amazonaws.com//Screenshot_12_1_15__5_12_PM_1C0E52F8.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Add &lt;code&gt;.atom-build.json&lt;/code&gt; to root of your project directory&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;nt&#34;&gt;&amp;#34;cmd&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;$GOROOT/bin/go run {FILE_ACTIVE}&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-  &lt;span class=&#34;nt&#34;&gt;&amp;#34;shell&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-  &lt;span class=&#34;nt&#34;&gt;&amp;#34;env&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;#34;GOROOT&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/local/go&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;#34;GOPATH&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/Users/pfeilbr/go&amp;#34;&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://static-content-01.s3-website-us-east-1.amazonaws.com//Screenshot_12_1_15__5_05_PM_1C0E513F.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;keyboard-shortcuts&#34;&gt;Keyboard Shortcuts&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;cmd-alt-b&lt;/code&gt; - run current file&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;cmd-alt-g&lt;/code&gt; - goto definition&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ctrl-space&lt;/code&gt; - code completion&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>Atom Golang Setup</description>
 </item>
     
   </channel>

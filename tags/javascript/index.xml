@@ -14,76 +14,7 @@
 <pubDate>Mon, 26 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-javascript-sdk-v3/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-javascript-sdk-v3-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-javascript-sdk-v3-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn AWS JavaScript SDK v3&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;index.js&#34;&gt;&lt;code&gt;index.js&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;index.test.js&#34;&gt;&lt;code&gt;index.test.js&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;new-features&#34;&gt;New Features&lt;/h2&gt;
-&lt;h3 id=&#34;v3-commands&#34;&gt;v3 Commands&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;commands for each AWS Service package to enable you to perform operations for that AWS Service. After you install an AWS Service, you can browse the available commands in your project&amp;rsquo;s node-modules/@aws-sdk/client-PACKAGE_NAME/commands folder&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;middleware-stack&#34;&gt;middleware stack&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;can use a new middleware stack to control the lifecycle of an operation call&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Each middleware stage in the stack calls the next middleware stage after making any changes to the request object. This also makes debugging issues in the stack much easier, because you can see exactly which middleware stages were called leading up to the error.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Use Cases&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;debugging&lt;/li&gt;
-&lt;li&gt;logging&lt;/li&gt;
-&lt;li&gt;request updates&lt;/li&gt;
-&lt;li&gt;instrumentation&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Example middleware &lt;code&gt;args&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;DynamoDB&lt;/code&gt; &lt;code&gt;ListTablesCommand&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-      &lt;span class=&#34;nx&#34;&gt;middlewareStack&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Function&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;addRelativeTo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Function&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;addRelativeTo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;clone&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Function&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;clone&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;use&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Function&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;use&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;remove&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Function&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;remove&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;removeByTag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Function&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;removeByTag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;concat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Function&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;concat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;applyToStack&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Function&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;cloneTo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;resolve&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Function&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;resolve&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-      &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-      &lt;span class=&#34;nx&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{},&lt;/span&gt;
-      &lt;span class=&#34;nx&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;HttpRequest&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;method&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;POST&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;hostname&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;dynamodb.us-east-1.amazonaws.com&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;undefined&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;query&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{},&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;headers&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-          &lt;span class=&#34;s1&#34;&gt;&amp;#39;Content-Type&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;application/x-amz-json-1.0&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-          &lt;span class=&#34;s1&#34;&gt;&amp;#39;X-Amz-Target&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;DynamoDB_20120810.ListTables&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-          &lt;span class=&#34;s1&#34;&gt;&amp;#39;user-agent&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;aws-sdk-nodejs-v3-@aws-sdk/client-dynamodb/1.0.0-rc.2 darwin/v12.16.1&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-          &lt;span class=&#34;s1&#34;&gt;&amp;#39;content-length&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;2&amp;#39;&lt;/span&gt;
-        &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;{}&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;protocol&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;https:&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;
-      &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# run tests that exercise new features&lt;/span&gt;
-npm run &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; -- --watch
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/aws/aws-sdk-js-v3&#34;&gt;aws/aws-sdk-js-v3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html&#34;&gt;AWS SDK for JavaScript | Developer Guide for SDK Version 3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/developer/modular-aws-sdk-for-javascript-release-candidate/&#34;&gt;Modular AWS SDK for JavaScript – Release Candidate&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>AWS JavaScript SDK V3</description>
 </item>
     
     <item>
@@ -92,27 +23,7 @@ npm run &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; -- --watch
 <pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-comprehend/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-comprehend-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-comprehend-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://aws.amazon.com/comprehend/&#34;&gt;Amazon Comprehend [Medical]&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;files-and-directories-of-interest&#34;&gt;Files and Directories of Interest&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;src/index.js&#34;&gt;&lt;code&gt;src/index.js&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;src/index.test.js&#34;&gt;&lt;code&gt;src/index.test.js&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;src/fixtures&#34;&gt;&lt;code&gt;src/fixtures&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;src/example-responses&#34;&gt;&lt;code&gt;src/example-responses&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# while developing&lt;/span&gt;
-npm &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; -- --watch
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/comprehend/&#34;&gt;Amazon Comprehend - Natural Language Processing (NLP) and Machine Learning (ML)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/comprehend/latest/dg/comprehend-general.html&#34;&gt;Comprehend  - Amazon Comprehend&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/comprehend/latest/dg/comprehend-medical.html&#34;&gt;Amazon Comprehend Medical - Amazon Comprehend&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>AWS Comprehend</description>
 </item>
     
     <item>
@@ -121,35 +32,7 @@ npm &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; -- --watch
 <pubDate>Fri, 10 Jul 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/strapi/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/strapi-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/strapi-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://strapi.io/&#34;&gt;strapi&lt;/a&gt;, the open-source headless CMS&lt;/p&gt;
-&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.docker.com/products/docker-desktop&#34;&gt;docker desktop&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;session&#34;&gt;Session&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# create app&lt;/span&gt;
-npx create-strapi-app my-project --quickstart
-
-&lt;span class=&#34;c1&#34;&gt;# local docker install / run via https://strapi.io/documentation/v3.x/installation/docker.html&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# pull&lt;/span&gt;
-docker-compose pull
-
-&lt;span class=&#34;c1&#34;&gt;# run&lt;/span&gt;
-docker-compose up -d
-
-&lt;span class=&#34;c1&#34;&gt;# open web ui&lt;/span&gt;
-open http://localhost:1337/admin
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;screenshots&#34;&gt;Screenshots&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAH957Jw0WVBx5AIat1ulOIsv87pCNGk2DUB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://strapi.io/documentation/&#34;&gt;Strapi Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>Strapi</description>
 </item>
     
     <item>
@@ -158,34 +41,7 @@ open http://localhost:1337/admin
 <pubDate>Mon, 13 May 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-js-cognitive-services/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/azure-js-cognitive-services-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/azure-js-cognitive-services-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://docs.microsoft.com/en-us/azure/cognitive-services/&#34;&gt;azure cognitive services&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Examples&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;runHandwrittenOCRForURL()&lt;/code&gt; - uses computer vision &lt;code&gt;batchReadFile&lt;/code&gt; API to perform handwritten OCR on a image of a form (image sourced from public URL).&lt;/p&gt;
-&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/&#34;&gt;cognitive-services/computer-vision docs&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Create new cognitive services computer vision resource&lt;br&gt;
-run &lt;code&gt;az login&lt;/code&gt;, then &lt;code&gt;npm run provision&lt;/code&gt;&lt;br&gt;
-OR via portal
-&lt;img src=&#34;https://www.evernote.com/l/AAHErRlR-tFBJbb6x-JKpZTcsQpxXyx4KAAB/image.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
-&lt;li&gt;Copy &lt;a href=&#34;.env.sample&#34;&gt;&lt;code&gt;.env.sample&lt;/code&gt;&lt;/a&gt; to &lt;code&gt;.env&lt;/code&gt; and populate with values via the following steps.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;CLIENT_ID&lt;/code&gt;, &lt;code&gt;DOMAIN&lt;/code&gt;
-&lt;img src=&#34;https://www.evernote.com/l/AAExoADr6tVHoLj4lOD_58FCSWmWAelxCrMB/image.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
-&lt;li&gt;SUBSCRIPTION_ID
-&lt;img src=&#34;https://www.evernote.com/l/AAGdlioOXwpHEoGofH2nL-PJAIIOWlkvoiQB/image.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;COGNITIVE_SERVICES_ENDPOINT&lt;/code&gt;
-&lt;img src=&#34;https://www.evernote.com/l/AAETKioZuRpHD48_sa7nDTP5A-5zla0Oew0B/image.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;COGNITIVE_SERVICES_KEY&lt;/code&gt;
-&lt;img src=&#34;https://www.evernote.com/l/AAHdTNN4abtGmq5ZKgwh2vD6uOURbM6mhHwB/image.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
-&lt;li&gt;run &lt;code&gt;npm start&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+<description>Azure JS Cognitive Services</description>
 </item>
     
     <item>
@@ -194,28 +50,7 @@ OR via portal
 <pubDate>Wed, 08 May 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-cosmos-js-sdk/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/azure-cosmos-js-sdk-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/azure-cosmos-js-sdk-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://github.com/azure/azure-cosmos-js&#34;&gt;azure cosmos db javascript sdk&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;provision resources
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# create group&lt;/span&gt;
-az group create --name group01 --location &lt;span class=&#34;s2&#34;&gt;&amp;#34;East US&amp;#34;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# create cosmos db account&lt;/span&gt;
-az group deployment create &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;--name cosmosdbaccountdeployment01 &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;--resource-group group01 &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;--template-file arm-templates/azure-cosmos-db-account.json &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;--parameters &lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;account01&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;location&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;eastus&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;locationName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;East US&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;defaultExperience&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;DocumentDB&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;copy &lt;code&gt;.env.sample&lt;/code&gt; to &lt;code&gt;.env&lt;/code&gt; and populate with your information from &lt;strong&gt;Keys&lt;/strong&gt;
-&lt;img src=&#34;https://www.evernote.com/l/AAG3s-Zs6VRIPa7fvjL6KuMP03bCj8nDKhYB/image.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
-&lt;li&gt;run &lt;code&gt;npm start&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+<description>Azure Cosmos JS SDK</description>
 </item>
     
     <item>
@@ -224,30 +59,7 @@ az group deployment create &lt;span class=&#34;se&#34;&gt;\
 <pubDate>Tue, 13 Nov 2018 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-amplify-js-app/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-amplify-js-app-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-amplify-js-app-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;learn &lt;a href=&#34;https://aws-amplify.github.io/&#34;&gt;AWS Amplify Framework&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;getting started walkthrough @ &lt;a href=&#34;https://aws-amplify.github.io/docs/js/start?ref=amplify-js-btn&amp;amp;platform=purejs&#34;&gt;https://aws-amplify.github.io/docs/js/start?ref=amplify-js-btn&amp;amp;platform=purejs&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Session&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;mkdir aws-amplify-js-app-playground
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; aws-amplify-js-app-playground/&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;n
-mkdir src
-touch package.json index.html webpack.config.js src/app.js
-touch README.md
-npm i
-npm start
-npm install --save aws-amplify
-amplify init
-amplify status
-amplify add analytics
-amplify push
-amplify add hosting
-amplify publish
-amplify status
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+<description>AWS Amplify JS App</description>
 </item>
     
     <item>
@@ -256,14 +68,7 @@ amplify status
 <pubDate>Mon, 22 Oct 2018 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/dynogels/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/dynogels-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/dynogels-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://github.com/clarkie/dynogels&#34;&gt;dynogels&lt;/a&gt; - DynamoDB data mapper for node.js&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;this code uses &lt;a href=&#34;https://github.com/andrewoh531/dynogels-promisified&#34;&gt;dynogels-promisified&lt;/a&gt; to leverage async/await.  Promisifies by appending &lt;code&gt;Async&lt;/code&gt; to each method name.&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
+<description>Dynogels</description>
 </item>
     
     <item>
@@ -272,16 +77,7 @@ amplify status
 <pubDate>Sat, 21 Oct 2017 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/pusher/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/pusher-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/pusher-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://pusher.com&#34;&gt;pusher&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;run-client&#34;&gt;Run Client&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://jsbin.com/modutol/edit?html,js,output&#34;&gt;https://jsbin.com/modutol/edit?html,js,output&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;server-triggered-event&#34;&gt;Server triggered event&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;node index.js
-&lt;span class=&#34;c1&#34;&gt;# this will cause alert with message in client web browser&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+<description>Pusher</description>
 </item>
     
     <item>
@@ -290,13 +86,7 @@ amplify status
 <pubDate>Tue, 01 Nov 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/nextjs/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/nextjs-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/nextjs-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Learn &lt;a href=&#34;https://github.com/zeit/next.js&#34;&gt;Next.js&lt;/a&gt;, a small framework for server-rendered universal JavaScript webapps, built on top of React, Webpack and Babel&lt;/p&gt;
-&lt;h2 id=&#34;developing&#34;&gt;Developing&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ npm run dev
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+<description>NextJS</description>
 </item>
     
     <item>
@@ -305,28 +95,7 @@ amplify status
 <pubDate>Thu, 20 Oct 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/keystonejs/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/keystonejs-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/keystonejs-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Learn and experiment with &lt;a href=&#34;http://keystonejs.com/&#34;&gt;KeystoneJS&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;install-and-run&#34;&gt;Install and Run&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ npm install
-
-&lt;span class=&#34;c1&#34;&gt;# create dir for mongodb files&lt;/span&gt;
-$ mkdir -p data/db
-
-&lt;span class=&#34;c1&#34;&gt;# start mongodb&lt;/span&gt;
-$ mongod --dbpath data/db &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# start webapp&lt;/span&gt;
-$ node keystone.js
-
-&lt;span class=&#34;c1&#34;&gt;# visit http://localhost:3000/&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Admin Login&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Email: brian.pfeil@gmail.com
-Password: admin
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+<description>KeystoneJS</description>
 </item>
     
     <item>
@@ -335,17 +104,7 @@ Password: admin
 <pubDate>Tue, 02 Aug 2016 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/phaser/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/phaser-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/phaser-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;project to learn the &lt;a href=&#34;http://phaser.io/&#34;&gt;Phaser&lt;/a&gt; HTML5 game framework&lt;/p&gt;
-&lt;h2 id=&#34;stackem-game&#34;&gt;stackem game&lt;/h2&gt;
-&lt;p&gt;Simple drop and stack game&lt;/p&gt;
-&lt;p&gt;Play @ &lt;a href=&#34;https://pfeilbr.github.io/phaser-playground/&#34;&gt;https://pfeilbr.github.io/phaser-playground/&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;developing&#34;&gt;Developing&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# start live reload server&lt;/span&gt;
-live-server
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+<description>Phaser</description>
 </item>
     
     <item>
@@ -354,49 +113,7 @@ live-server
 <pubDate>Fri, 03 Apr 2015 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/webpack/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/webpack-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/webpack-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;A project to learn and experiment with the &lt;a href=&#34;http://webpack.github.io/&#34;&gt;webpack&lt;/a&gt; module bundler.&lt;/p&gt;
-&lt;h3 id=&#34;development&#34;&gt;Development&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Start local webpack server&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ webpack-dev-server --progress --colors --debug
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;This serves all changes out of memory.  Remember to run &lt;code&gt;webpack&lt;/code&gt; by itself to persist changes&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Open &lt;a href=&#34;http://localhost:8080/webpack-dev-server/bundle&#34;&gt;http://localhost:8080/webpack-dev-server/bundle&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Make code changes.  Changes will live reload.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Persist changes by running&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ webpack
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;directory-and-file-details&#34;&gt;Directory and File Details&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;public/&lt;/code&gt; - client side files
-&lt;code&gt;public/lib/index.js&lt;/code&gt; - webpacks entry point&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;code&gt;react-app.js&lt;/code&gt; - react application example&lt;/p&gt;
-&lt;p&gt;demonstrates the usage of&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;jsx loader&lt;/li&gt;
-&lt;li&gt;css loader&lt;/li&gt;
-&lt;li&gt;es6 support&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;code&gt;angular-app.js&lt;/code&gt; - angular application example&lt;/p&gt;
-&lt;p&gt;demonstrates the usage of&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;ng-cache loader for views and partials&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-</description>
+<description>webpack</description>
 </item>
     
     <item>
@@ -405,18 +122,7 @@ live-server
 <pubDate>Mon, 30 Mar 2015 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/es6/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/es6-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/es6-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Area to learn and experiment with &lt;a href=&#34;https://people.mozilla.org/~jorendorff/es6-draft.html&#34;&gt;ECMAScript 6&lt;/a&gt; using the &lt;a href=&#34;https://babeljs.io/&#34;&gt;Babel&lt;/a&gt;
-JavaScript compiler.&lt;/p&gt;
-&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;$ npm install
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Edit &lt;code&gt;app.js&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ node index.js
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+<description>ES6</description>
 </item>
     
     <item>
@@ -425,47 +131,7 @@ JavaScript compiler.&lt;/p&gt;
 <pubDate>Fri, 27 Mar 2015 16:36:59 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/react-native-initial-thoughts/</guid>
-<description>&lt;p&gt;&lt;img src=&#34;images/react.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://facebook.github.io/react-native/&#34;&gt;React Native&lt;/a&gt; was released as open source yesterday.  There&amp;rsquo;s been quite a bit of build up and excitement since the &lt;a href=&#34;https://www.youtube.com/watch?v=7rDsRXj9-cU&#34;&gt;React.js Conf 2015 video&lt;/a&gt;.  The video showed a &lt;strong&gt;real&lt;/strong&gt; app being built with a web development style workflow (your favorite editor with livereload).  I&amp;rsquo;ve built some apps using &lt;a href=&#34;http://facebook.github.io/react/&#34;&gt;React.js&lt;/a&gt; and really appreciate the simplicity and development workflow.  Having the same for native app development definitely is exciting.  I&amp;rsquo;ve gottent to spend a few hours with it and it looks like it&amp;rsquo;s living up to the hype.&lt;/p&gt;
-&lt;p&gt;I started in with the &lt;a href=&#34;http://facebook.github.io/react-native/docs/tutorial.html#content&#34;&gt;tutorial&lt;/a&gt;, which is a movies app backed by &lt;a href=&#34;http://www.rottentomatoes.com/&#34;&gt;Rotten Tomatoes&lt;/a&gt; data.  The main UI is a run of the mill &lt;a href=&#34;http://facebook.github.io/react-native/docs/listview.html#content&#34;&gt;List View&lt;/a&gt; with each cell containing a poster image, and the movie title and year.&lt;/p&gt;
-&lt;p&gt;It shows fetching data over the network, some of the concerns with rendering list views, and the react core concept of only re-rendering thing that&amp;rsquo;ve changes with &lt;code&gt;ListView.DataSource.rowHasChanged&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;They sprinkle in &lt;a href=&#34;https://github.com/lukehoban/es6features&#34;&gt;ES6&lt;/a&gt; syntax within the examples, and some of it I had to look up.  This is a good way to give people a gentle introduction to it.  I can see how it might be a bit distracting if your trying to learn something new.  Having to learn language level features on top of a new framework could be offputting for some.&lt;/p&gt;
-&lt;h2 id=&#34;yep-its-all-in-that-single-file&#34;&gt;Yep. It&amp;rsquo;s All in that single file.&lt;/h2&gt;
-&lt;p&gt;It does a good job with starting off with a single minimal view and layering on the different concepts to get you to some more than &lt;code&gt;hello world&lt;/code&gt;, but not a &lt;strong&gt;real&lt;/strong&gt; app.  One of the things that stood out to me and made it much easier to follow is that all the code is in a single file.  UI, style, logic, and data.  This is huge from a learning and user uptake perspective.  For larger apps, it will get cumbersome quickly and using separate &lt;code&gt;.js&lt;/code&gt; files and &lt;code&gt;require&lt;/code&gt; them in will make it managaeble.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;ve seen way too much time spent in other javascript frameworks first introducing the &lt;a href=&#34;https://scotch.io/tutorials/angularjs-best-practices-directory-structure&#34;&gt;file and directory layout&lt;/a&gt;.  There are as many different ways to lay things out as there are javascript frameworks these days.  I agree it&amp;rsquo;s important for maintainability and collaboration, but when starting out, I feel it should be kept simple, and only restructure when needed.  Choice is good, but I hope facebook explicitly documents their recommended layout and people just use it.&lt;/p&gt;
-&lt;h2 id=&#34;native-modules-call-for-community-contributions&#34;&gt;Native Modules: Call for Community Contributions&lt;/h2&gt;
-&lt;p&gt;If react native doesn&amp;rsquo;t provide the UI component or capability you need, they allow extension via &lt;a href=&#34;http://facebook.github.io/react-native/docs/nativemodulesios.html#content&#34;&gt;Native Modules&lt;/a&gt;.  Bridging is never pretty as it always feels like you need to switch contexts and be aware this is a &lt;code&gt;bridge component&lt;/code&gt;.  They do their best to minimize this and in the spirit of react it&amp;rsquo;s lightweight and only requires the minimal amount of hooks to do it&amp;rsquo;s job.&lt;/p&gt;
-&lt;p&gt;You only need to implement the &lt;a href=&#34;http://facebook.github.io/react-native/docs/nativemodulesios.html#ios-calendar-module-example&#34;&gt;RCTBridgeModule&lt;/a&gt; &lt;a href=&#34;https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithProtocols/WorkingwithProtocols.html&#34;&gt;protocol&lt;/a&gt; to expose native code.&lt;/p&gt;
-&lt;p&gt;Here&amp;rsquo;s the &lt;a href=&#34;http://facebook.github.io/react-native/docs/nativemodulesios.html#content&#34;&gt;example&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;// CalendarManager.h
-#import &amp;#34;RCTBridgeModule.h&amp;#34;
-
-@interface CalendarManager : NSObject &amp;lt;RCTBridgeModule&amp;gt;
-@end
-
-// CalendarManager.m
-@implementation CalendarManager
-
-- (void)addEventWithName:(NSString *)name location:(NSString *)location
-{
-  RCT_EXPORT();
-  RCTLogInfo(@&amp;#34;Pretending to create an event %@ at %@&amp;#34;, name, location);
-}
-
-@end
-
-var CalendarManager = require(&amp;#39;NativeModules&amp;#39;).CalendarManager;
-CalendarManager.addEventWithName(&amp;#39;Birthday Party&amp;#39;, &amp;#39;4 Privet Drive, Surrey&amp;#39;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;As you can see, it&amp;rsquo;s minimally intrusive on both the objc and js sides.&lt;/p&gt;
-&lt;p&gt;Native Modules is the community aspect of this effort and if done right will give it staying power.  The productivity and developer workflow benefits of &lt;code&gt;npm install awesomesauce&lt;/code&gt; is the one of the core underlying reasons for javascript/node popularity.&lt;/p&gt;
-&lt;p&gt;A decision needs to be made on whether &lt;a href=&#34;https://www.npmjs.com/&#34;&gt;npm&lt;/a&gt; or a native packager like &lt;a href=&#34;http://cocoapods.org/&#34;&gt;Cocoapods&lt;/a&gt; will be the vehicle for packaging and distributing native modules.  To keep it x-platform and support android, npm would be the obvious choice.  It&amp;rsquo;s important for the react native team to make a decision on this and define this from the start.  People will fill the gaps that react native doesn&amp;rsquo;t include. The easier you make it for them to publish for community, the better off the ecosystem will be.&lt;/p&gt;
-&lt;h2 id=&#34;fetchhttpsfetchspecwhatwgorg&#34;&gt;&lt;a href=&#34;https://fetch.spec.whatwg.org/&#34;&gt;Fetch&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Networking and more specifically the ability to fetch HTTP resources is a core capability of a majority of applications today.  While walking through the tutorial I saw the use of &lt;a href=&#34;http://facebook.github.io/react-native/docs/network.html#content&#34;&gt;fetch&lt;/a&gt;, but had never seen it before.  I thought it was something that facebook defined and injected that bridged into iOS&amp;rsquo;s networking.  It does this, but in addition it&amp;rsquo;s based on the &lt;a href=&#34;https://fetch.spec.whatwg.org/&#34;&gt;fetch networking API&lt;/a&gt;, which is going through the standard process.  Hopefully a higher profile project like react native will give it some legs.&lt;/p&gt;
-&lt;h2 id=&#34;onward&#34;&gt;Onward&lt;/h2&gt;
-&lt;p&gt;Native development on the native target platform will always be more popular.  It doesn&amp;rsquo;t strive to or need to try to supplant native development.  Capturing the web development community alone is a huge audience.  More importantly, the react community is full of super star developers that will acively champion things they like.  If it reached the success of a &lt;a href=&#34;http://xamarin.com/&#34;&gt;Xamarin&lt;/a&gt; and as large a community, it would be quite an achievement.&lt;/p&gt;
-&lt;p&gt;It&amp;rsquo;s early and if you don&amp;rsquo;t have a lot free time or care to be on the bleeding edge, I&amp;rsquo;d recommend waiting a bit before using it to develop a production app.  As with anything new and in interest of the long-term goals, I&amp;rsquo;m sure there will be bugs to work through, breaking changes, API changes, additional development and debugging tooling, etc.&lt;/p&gt;
-&lt;p&gt;Even if I don&amp;rsquo;t dive right in, at a minimum I&amp;rsquo;ll keep up with it&amp;rsquo;s progress via rss feeds and twitter.  Kudos to the react native team for a great launch and wish them the best.&lt;/p&gt;
-</description>
+<description>React Native - Initial Thoughts</description>
 </item>
     
     <item>
@@ -474,54 +140,7 @@ CalendarManager.addEventWithName(&amp;#39;Birthday Party&amp;#39;, &amp;#39;4 Pr
 <pubDate>Sun, 15 Feb 2015 11:22:57 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/cross-platform-desktop-apps-with-nw-js/</guid>
-<description>&lt;p&gt;&lt;img src=&#34;images/nw.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Post is based on the &lt;a href=&#34;https://github.com/pfeilbr/nwjs-playground&#34;&gt;pfeilbr/nwjs-playground&lt;/a&gt; project.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&#34;nwjshttpnwjsio-playground&#34;&gt;&lt;a href=&#34;http://nwjs.io&#34;&gt;NW.js&lt;/a&gt; Playground&lt;/h1&gt;
-&lt;p&gt;Project to learn and experiment with &lt;a href=&#34;http://nwjs.io&#34;&gt;NW.js&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;NW.js enables the creation of cross platform desktop applications.  Your UI is built with standard html, js, and css technologies.  Access to the underlying desktop OS capabilites are provided by giving you access to &lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt;.  You can use the Node.js core modules plus any of the 3rd party &lt;a href=&#34;https://www.npmjs.com/&#34;&gt;NPM&lt;/a&gt; modules;&lt;/p&gt;
-&lt;h2 id=&#34;installing-nwjs&#34;&gt;Installing NW.js&lt;/h2&gt;
-&lt;p&gt;Download and unpack nwjs app for your platform from &lt;a href=&#34;http://nwjs.io&#34;&gt;http://nwjs.io&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;On OSX you&amp;rsquo;ll end up with &lt;code&gt;/Applications/nwjs.app&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;developing-your-app&#34;&gt;Developing Your App&lt;/h2&gt;
-&lt;p&gt;create &lt;code&gt;index.html&lt;/code&gt; and &lt;code&gt;package.json&lt;/code&gt; files&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;see &lt;a href=&#34;https://github.com/nwjs/nw.js#quick-start&#34;&gt;nw.js quick-start&lt;/a&gt; for details&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;This app is a minimal example with an added &lt;code&gt;app.js&lt;/code&gt; file for javascript.  It&amp;rsquo;s sets the &lt;code&gt;document.body&lt;/code&gt; to &lt;code&gt;&#39;Hello There&#39;&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
-&lt;p&gt;Create alias in &lt;code&gt;~/.bash_profile&lt;/code&gt;to ease the use from terminal&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# alias to nw&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;nw&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/Applications/nwjs.app/Contents/MacOS/nwjs&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/projects/nwjs-playground
-$ nw .
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;packaging-as-app-on-osx&#34;&gt;Packaging as app on OSX&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Create &lt;code&gt;.nw&lt;/code&gt; file&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ cd ~/projects/nwjs-playground
-$ zip -r ../${PWD##*/}.nw *
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;.nw&lt;/code&gt; file will be created along side the project directory&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;make copy of &lt;code&gt;nwjs.app&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ cp -r /Applications/nwjs.app /Applications/myapp.app
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Copy &lt;code&gt;.nw&lt;/code&gt; file into myapp.app bundle&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$ cp ../nwjs-playground.nw /Applications/myapp.app/Contents/Resources/app.nw
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+<description>Cross-platform Desktop Apps with NW.js</description>
 </item>
     
     <item>
@@ -530,72 +149,7 @@ $ zip -r ../${PWD##*/}.nw *
 <pubDate>Sun, 15 Feb 2015 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/karma/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/karma-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/karma-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Project to learn and experiment with the Karma javascript test runner.  Karma runs your javascript tests in multiple browsers.&lt;/p&gt;
-&lt;h2 id=&#34;quickstart-tutorial&#34;&gt;Quickstart Tutorial&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Change to project directory&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; $ cd ~/projects/karma-playground
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;New NPM project&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; $ npm init
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;accept all defaults&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Install karma&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Install Karma:&lt;/span&gt;
-$ npm install karma --save-dev
-
-&lt;span class=&#34;c1&#34;&gt;# Install plugins that your project needs:&lt;/span&gt;
-$ npm install karma-jasmine karma-chrome-launcher --save-dev
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Install global karma cli so we can type &lt;code&gt;karma&lt;/code&gt; without the full path from anywhere.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; $ npm install -g karma-cli
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Create sample test.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Using &lt;a href=&#34;http://jasmine.github.io/&#34;&gt;Jasmine&lt;/a&gt; for our example.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ mkdir &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
-$ touch test/sample1.js
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// test/sample1.js
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;describe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;A suite&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;nx&#34;&gt;it&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;contains spec with an expectation&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;nx&#34;&gt;expect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;toBe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;``&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Generate the karma configuration file&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; $ karma init my.conf.js
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Start karma&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; # Start Karma using your configuration:
- $ karma start my.conf.js
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
-&lt;p&gt;You&amp;rsquo;ll see Chrome or the browsers you chose start&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;http://note.io/1FdGfLE&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-</description>
+<description>Karma</description>
 </item>
     
     <item>
@@ -604,11 +158,7 @@ $ touch test/sample1.js
 <pubDate>Sat, 02 Aug 2014 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/kendo-ui/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/kendo-ui-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/kendo-ui-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Place to play around and learn &lt;a href=&#34;http://www.telerik.com/kendo-ui&#34;&gt;Kendo UI&lt;/a&gt;&lt;/p&gt;
-</description>
+<description>Kendo UI</description>
 </item>
     
     <item>
@@ -617,17 +167,7 @@ $ touch test/sample1.js
 <pubDate>Fri, 13 Jun 2014 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/kue/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/kue-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/kue-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Playground for learning / playing with &lt;a href=&#34;https://github.com/learnboost/kue&#34;&gt;Kue&lt;/a&gt;.  Kue is a priority job queue for node.&lt;/p&gt;
-&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;redis-server # start redis server
-node index.js -m process # run job processor
-node index.js -m create # run job creator in another terminal
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;View the Kue web ui at &lt;a href=&#34;http://localhost:3000&#34;&gt;http://localhost:3000&lt;/a&gt;&lt;/p&gt;
-</description>
+<description>Kue</description>
 </item>
     
     <item>
@@ -636,22 +176,7 @@ node index.js -m create # run job creator in another terminal
 <pubDate>Thu, 12 Jun 2014 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/jsforce/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/jsforce-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/jsforce-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Area to learn and play with &lt;a href=&#34;http://jsforce.github.io/&#34;&gt;JSForce&lt;/a&gt;.  &lt;a href=&#34;&#34;&gt;index.js&lt;/a&gt; contains the code.&lt;/p&gt;
-&lt;h3 id=&#34;migratorjs&#34;&gt;&lt;code&gt;migrator.js&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;migrates salesforce metadata from a source org to a target org&lt;/p&gt;
-&lt;p&gt;To Run&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ ./node_modules/.bin/babel-node migrator.js
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;sharing-rules-operationsjs&#34;&gt;&lt;code&gt;sharing-rules-operations.js&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;created country code firewall criteria based sharing rules&lt;/p&gt;
-&lt;p&gt;To Run&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ ./node_modules/.bin/babel-node sharing-rules-operations.js
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;account-fetcherjs&#34;&gt;&lt;code&gt;account-fetcher.js&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Developing&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ &lt;span class=&#34;nv&#34;&gt;DEBUG&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;account* nodemon -e js account-fetcher.js
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+<description>JSForce</description>
 </item>
     
     <item>
@@ -660,95 +185,7 @@ node index.js -m create # run job creator in another terminal
 <pubDate>Tue, 27 Sep 2011 19:31:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/best-fit-web-font-sizing/</guid>
-<description>&lt;p&gt;I&amp;rsquo;ve been working on a web app that targets both smartphones and tablets. The
-large variation in screen sizes has sent me down the path of using a dynamic
-proportional layout that adapts to fit the available space. For example, I&amp;rsquo;ve
-allocated 20% of the available vertical space to the header section that
-displays a title. The &lt;a href=&#34;http://layout.jquery-dev.net/&#34;&gt;jQuery UI.Layout Plug-in&lt;/a&gt; has worked great for laying out the
-content areas, but I ran into a wall when it came to sizing my text
-proportionately.&lt;/p&gt;
-&lt;p&gt;The basic problem is that I have a box, and I want to display some text in it
-at the largest font size without it being wrapped or clipped. The only way to
-determine the bounding rectangle a string of text with certain font
-characteristics, is to create it, add it to the DOM, and then measure it. The
-following function does just that.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;function sizeWithText(text, cssStyles) {
-	// create temp element to hold our text
-	var e = document.createElement(&amp;#39;span&amp;#39;);
-	e.appendChild(document.createTextNode(text));
-
-	// apply any styles that have been passed in
-	// to our element - these can affect the text size
-	for (var prop in cssStyles) {
-		e.style[prop] = cssStyles[prop];
-	}
-
-	// hide our temp element
-	e.style[&amp;#39;visibility&amp;#39;] = &amp;#39;hidden&amp;#39;;
-
-	// add to DOM in order to have it render
-	document.body.appendChild(e);
-
-	// get the bounding rectangle dimensions
-	var s = {w: e.offsetWidth, h: e.offsetHeight};
-
-	// remove from DOM
-	document.body.removeChild(e);
-
-	return s;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The &lt;code&gt;cssStyles&lt;/code&gt; parameter holds the other css style attributes that you&amp;rsquo;d like to apply to the text.  For example, you might have a &lt;code&gt;font-weight: bold&lt;/code&gt; attribute that increases the size of the text, and we want to make sure we account for it.&lt;/p&gt;
-&lt;p&gt;Now we can use this function to check whether text with a font size and a set of styles will fit in our box.  We set the font size to 1 and continuously increase it by 1 check whether it&amp;rsquo;ll fit at every iteration.  As soon as it doesn&amp;rsquo;t, we stop.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;function bestFitTextSize(text, css, width, height) {
-	var pixel = 1;
-
-	do {
-		css[&amp;#39;font-size&amp;#39;] = (pixel++) + &amp;#39;px&amp;#39;;
-		s = sizeWithText(text, css);
-	} while ( (s.w &amp;lt; width) &amp;amp;&amp;amp; (s.h &amp;lt; height) )
-
-	return pixel - 2;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is a brute force and inefficient way to do the calculation, and there are improvements that could be made.  We could start at a reasonable font size like 6px, increment by standard font sizes, etc., but this is fine for my usage where I only do it once on app load.&lt;/p&gt;
-&lt;p&gt;Here&amp;rsquo;s a code sample that shows how the previous functions are used.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;// box we want to fill with text
-var c = document.getElementById(&amp;#39;content&amp;#39;);
-
-// out text
-var text = &amp;#39;Lorem ipsum dolor sit amet&amp;#39;;
-
-// styles
-var cssStyles = {
-	&amp;#39;font-family&amp;#39;: &amp;#39;Impact&amp;#39;,
-	&amp;#39;font-style&amp;#39;: &amp;#39;normal&amp;#39;,
-	&amp;#39;font-weight&amp;#39;: &amp;#39;bolder&amp;#39;,
-	&amp;#39;letter-spacing&amp;#39;: &amp;#39;1px&amp;#39;,
-	&amp;#39;text-shadow&amp;#39;: &amp;#39;3px 3px 3px white&amp;#39;
-};
-
-// size the text to fit
-function applyBestFitText() {
-	// get the pixel size for the font
-	var px = bestFitTextSize(text, cssStyles, c.offsetWidth, c.offsetHeight);
-	cssStyles[&amp;#39;font-size&amp;#39;] = px + &amp;#39;px&amp;#39;;
-
-	// set the text
-	c.innerHTML = text;
-
-	// apply our styles
-	for (var prop in cssStyles) {
-		c.style[prop] = cssStyles[prop];
-	}
-}
-
-// adjust if the size changes
-window.addEventListener(&amp;#39;resize&amp;#39;, applyBestFitText, false);
-
-// call for first time adjustment
-applyBestFitText();
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The complete example is available as a &lt;a href=&#34;https://gist.github.com/1248669&#34;&gt;gist&lt;/a&gt;&lt;/p&gt;
-</description>
+<description>Best Fit Web Font Sizing</description>
 </item>
     
   </channel>

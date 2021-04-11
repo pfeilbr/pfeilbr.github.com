@@ -14,21 +14,7 @@
 <pubDate>Fri, 19 Feb 2021 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-glue-pyspark-fetch-databases-and-tables-metadata/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-glue-pyspark-fetch-databases-and-tables-metadata-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-glue-pyspark-fetch-databases-and-tables-metadata-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;example AWS Glue pyspark job script that fetches all the catalog databases and tables metadata.&lt;/p&gt;
-&lt;p&gt;see &lt;a href=&#34;main.py&#34;&gt;&lt;code&gt;main.py&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;first method uses &lt;a href=&#34;https://spark.apache.org/sql/&#34;&gt;spark sql&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;second method uses &lt;a href=&#34;https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/glue.html&#34;&gt;python boto3 Glue client&lt;/a&gt; to interact with &lt;a href=&#34;https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api.html&#34;&gt;Glue API&lt;/a&gt; directly&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
-&lt;p&gt;ensure &lt;code&gt;--enable-glue-datacatalog&lt;/code&gt; is enabled for glue job to allow spark sql to access metadata catalog&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAG3O9zQGjhBQYiqT7_owkUm9K-UXd0bMCEB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Glue Console Script View&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAG2b5Bdis5KFbt6ijxtySgIG7e2P8jPE0UB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-</description>
+<description>AWS Glue Pyspark Fetch Databases and Tables Metadata</description>
 </item>
     
     <item>
@@ -37,44 +23,7 @@
 <pubDate>Tue, 09 Jul 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-glue/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-glue-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-glue-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn and experiment with &lt;a href=&#34;https://aws.amazon.com/glue/&#34;&gt;aws glue&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;running-python-shellhttpsdocsawsamazoncomgluelatestdgadd-job-pythonhtml-job&#34;&gt;Running &lt;a href=&#34;https://docs.aws.amazon.com/glue/latest/dg/add-job-python.html&#34;&gt;&amp;ldquo;Python Shell&amp;rdquo;&lt;/a&gt; Job&lt;/h2&gt;
-&lt;h3 id=&#34;local-runningtesting-of-script&#34;&gt;Local Running/Testing of Script&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;python3 -m venv venv
-&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; venv/bin/activate
-pip install -r requirements.txt
-python scripts/python3-shell-job-example.py
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;runningsubmitting-python-shell-job&#34;&gt;Running/Submitting Python Shell Job&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;cp .env.sample .env
-&lt;span class=&#34;c1&#34;&gt;# modify .env for your environment&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# following submits the job (scripts/python3-shell-job-example.py)&lt;/span&gt;
-node src/job-runner.js run-python-shell-script scripts/python3-shell-job-example.py
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;steps-to-run-scriptsexample-notebook-script-01pyscriptsexample-notebook-script-01py-in-sagemaker-notebook&#34;&gt;Steps to Run &lt;a href=&#34;scripts/example-notebook-script-01.py&#34;&gt;&lt;code&gt;scripts/example-notebook-script-01.py&lt;/code&gt;&lt;/a&gt; in SageMaker notebook&lt;/h2&gt;
-&lt;p&gt;see &lt;a href=&#34;scripts/example-notebook-script-01.py&#34;&gt;&lt;code&gt;scripts/example-notebook-script-01.py&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;upload data.csv to S3&lt;/li&gt;
-&lt;li&gt;create glue crawler for data.csv which results in a table in glue database being created
-&lt;blockquote&gt;
-&lt;p&gt;you can verify by previewing the data in athena&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;create aws glue Dev Endpoint
-&lt;blockquote&gt;
-&lt;p&gt;no need to specify ssh key&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;create SageMaker notebook
-&lt;blockquote&gt;
-&lt;p&gt;SageMaker notebook works just like Zepplin notebook, but less setup steps.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;open SageMaker notebook and past in code from &lt;a href=&#34;scripts/example-notebook-script-01.py&#34;&gt;&lt;code&gt;scripts/example-notebook-script-01.py&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+<description>AWS Glue</description>
 </item>
     
   </channel>

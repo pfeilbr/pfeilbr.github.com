@@ -14,47 +14,7 @@
 <pubDate>Fri, 27 Mar 2015 16:36:59 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/react-native-initial-thoughts/</guid>
-<description>&lt;p&gt;&lt;img src=&#34;images/react.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://facebook.github.io/react-native/&#34;&gt;React Native&lt;/a&gt; was released as open source yesterday.  There&amp;rsquo;s been quite a bit of build up and excitement since the &lt;a href=&#34;https://www.youtube.com/watch?v=7rDsRXj9-cU&#34;&gt;React.js Conf 2015 video&lt;/a&gt;.  The video showed a &lt;strong&gt;real&lt;/strong&gt; app being built with a web development style workflow (your favorite editor with livereload).  I&amp;rsquo;ve built some apps using &lt;a href=&#34;http://facebook.github.io/react/&#34;&gt;React.js&lt;/a&gt; and really appreciate the simplicity and development workflow.  Having the same for native app development definitely is exciting.  I&amp;rsquo;ve gottent to spend a few hours with it and it looks like it&amp;rsquo;s living up to the hype.&lt;/p&gt;
-&lt;p&gt;I started in with the &lt;a href=&#34;http://facebook.github.io/react-native/docs/tutorial.html#content&#34;&gt;tutorial&lt;/a&gt;, which is a movies app backed by &lt;a href=&#34;http://www.rottentomatoes.com/&#34;&gt;Rotten Tomatoes&lt;/a&gt; data.  The main UI is a run of the mill &lt;a href=&#34;http://facebook.github.io/react-native/docs/listview.html#content&#34;&gt;List View&lt;/a&gt; with each cell containing a poster image, and the movie title and year.&lt;/p&gt;
-&lt;p&gt;It shows fetching data over the network, some of the concerns with rendering list views, and the react core concept of only re-rendering thing that&amp;rsquo;ve changes with &lt;code&gt;ListView.DataSource.rowHasChanged&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;They sprinkle in &lt;a href=&#34;https://github.com/lukehoban/es6features&#34;&gt;ES6&lt;/a&gt; syntax within the examples, and some of it I had to look up.  This is a good way to give people a gentle introduction to it.  I can see how it might be a bit distracting if your trying to learn something new.  Having to learn language level features on top of a new framework could be offputting for some.&lt;/p&gt;
-&lt;h2 id=&#34;yep-its-all-in-that-single-file&#34;&gt;Yep. It&amp;rsquo;s All in that single file.&lt;/h2&gt;
-&lt;p&gt;It does a good job with starting off with a single minimal view and layering on the different concepts to get you to some more than &lt;code&gt;hello world&lt;/code&gt;, but not a &lt;strong&gt;real&lt;/strong&gt; app.  One of the things that stood out to me and made it much easier to follow is that all the code is in a single file.  UI, style, logic, and data.  This is huge from a learning and user uptake perspective.  For larger apps, it will get cumbersome quickly and using separate &lt;code&gt;.js&lt;/code&gt; files and &lt;code&gt;require&lt;/code&gt; them in will make it managaeble.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;ve seen way too much time spent in other javascript frameworks first introducing the &lt;a href=&#34;https://scotch.io/tutorials/angularjs-best-practices-directory-structure&#34;&gt;file and directory layout&lt;/a&gt;.  There are as many different ways to lay things out as there are javascript frameworks these days.  I agree it&amp;rsquo;s important for maintainability and collaboration, but when starting out, I feel it should be kept simple, and only restructure when needed.  Choice is good, but I hope facebook explicitly documents their recommended layout and people just use it.&lt;/p&gt;
-&lt;h2 id=&#34;native-modules-call-for-community-contributions&#34;&gt;Native Modules: Call for Community Contributions&lt;/h2&gt;
-&lt;p&gt;If react native doesn&amp;rsquo;t provide the UI component or capability you need, they allow extension via &lt;a href=&#34;http://facebook.github.io/react-native/docs/nativemodulesios.html#content&#34;&gt;Native Modules&lt;/a&gt;.  Bridging is never pretty as it always feels like you need to switch contexts and be aware this is a &lt;code&gt;bridge component&lt;/code&gt;.  They do their best to minimize this and in the spirit of react it&amp;rsquo;s lightweight and only requires the minimal amount of hooks to do it&amp;rsquo;s job.&lt;/p&gt;
-&lt;p&gt;You only need to implement the &lt;a href=&#34;http://facebook.github.io/react-native/docs/nativemodulesios.html#ios-calendar-module-example&#34;&gt;RCTBridgeModule&lt;/a&gt; &lt;a href=&#34;https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithProtocols/WorkingwithProtocols.html&#34;&gt;protocol&lt;/a&gt; to expose native code.&lt;/p&gt;
-&lt;p&gt;Here&amp;rsquo;s the &lt;a href=&#34;http://facebook.github.io/react-native/docs/nativemodulesios.html#content&#34;&gt;example&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;// CalendarManager.h
-#import &amp;#34;RCTBridgeModule.h&amp;#34;
-
-@interface CalendarManager : NSObject &amp;lt;RCTBridgeModule&amp;gt;
-@end
-
-// CalendarManager.m
-@implementation CalendarManager
-
-- (void)addEventWithName:(NSString *)name location:(NSString *)location
-{
-  RCT_EXPORT();
-  RCTLogInfo(@&amp;#34;Pretending to create an event %@ at %@&amp;#34;, name, location);
-}
-
-@end
-
-var CalendarManager = require(&amp;#39;NativeModules&amp;#39;).CalendarManager;
-CalendarManager.addEventWithName(&amp;#39;Birthday Party&amp;#39;, &amp;#39;4 Privet Drive, Surrey&amp;#39;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;As you can see, it&amp;rsquo;s minimally intrusive on both the objc and js sides.&lt;/p&gt;
-&lt;p&gt;Native Modules is the community aspect of this effort and if done right will give it staying power.  The productivity and developer workflow benefits of &lt;code&gt;npm install awesomesauce&lt;/code&gt; is the one of the core underlying reasons for javascript/node popularity.&lt;/p&gt;
-&lt;p&gt;A decision needs to be made on whether &lt;a href=&#34;https://www.npmjs.com/&#34;&gt;npm&lt;/a&gt; or a native packager like &lt;a href=&#34;http://cocoapods.org/&#34;&gt;Cocoapods&lt;/a&gt; will be the vehicle for packaging and distributing native modules.  To keep it x-platform and support android, npm would be the obvious choice.  It&amp;rsquo;s important for the react native team to make a decision on this and define this from the start.  People will fill the gaps that react native doesn&amp;rsquo;t include. The easier you make it for them to publish for community, the better off the ecosystem will be.&lt;/p&gt;
-&lt;h2 id=&#34;fetchhttpsfetchspecwhatwgorg&#34;&gt;&lt;a href=&#34;https://fetch.spec.whatwg.org/&#34;&gt;Fetch&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Networking and more specifically the ability to fetch HTTP resources is a core capability of a majority of applications today.  While walking through the tutorial I saw the use of &lt;a href=&#34;http://facebook.github.io/react-native/docs/network.html#content&#34;&gt;fetch&lt;/a&gt;, but had never seen it before.  I thought it was something that facebook defined and injected that bridged into iOS&amp;rsquo;s networking.  It does this, but in addition it&amp;rsquo;s based on the &lt;a href=&#34;https://fetch.spec.whatwg.org/&#34;&gt;fetch networking API&lt;/a&gt;, which is going through the standard process.  Hopefully a higher profile project like react native will give it some legs.&lt;/p&gt;
-&lt;h2 id=&#34;onward&#34;&gt;Onward&lt;/h2&gt;
-&lt;p&gt;Native development on the native target platform will always be more popular.  It doesn&amp;rsquo;t strive to or need to try to supplant native development.  Capturing the web development community alone is a huge audience.  More importantly, the react community is full of super star developers that will acively champion things they like.  If it reached the success of a &lt;a href=&#34;http://xamarin.com/&#34;&gt;Xamarin&lt;/a&gt; and as large a community, it would be quite an achievement.&lt;/p&gt;
-&lt;p&gt;It&amp;rsquo;s early and if you don&amp;rsquo;t have a lot free time or care to be on the bleeding edge, I&amp;rsquo;d recommend waiting a bit before using it to develop a production app.  As with anything new and in interest of the long-term goals, I&amp;rsquo;m sure there will be bugs to work through, breaking changes, API changes, additional development and debugging tooling, etc.&lt;/p&gt;
-&lt;p&gt;Even if I don&amp;rsquo;t dive right in, at a minimum I&amp;rsquo;ll keep up with it&amp;rsquo;s progress via rss feeds and twitter.  Kudos to the react native team for a great launch and wish them the best.&lt;/p&gt;
-</description>
+<description>React Native - Initial Thoughts</description>
 </item>
     
     <item>
@@ -63,20 +23,7 @@ CalendarManager.addEventWithName(&amp;#39;Birthday Party&amp;#39;, &amp;#39;4 Pr
 <pubDate>Fri, 21 Jun 2013 02:43:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/minotes/</guid>
-<description>&lt;img src=&#34;images/Icon-72@2x.png&#34; width=&#34;125px&#34;&gt;
-&lt;p&gt;There are many choices for notes apps out in the App Store.  So many that it&amp;rsquo;d be a couple days effort just to look into and evaluate them all.  Everything from the built-in simple Notes app to the feature packed &lt;a href=&#34;http://evernote.com/&#34;&gt;Evernote&lt;/a&gt;.  A notes app is one of those utility apps that gets a lot of mileage like mail and weather.  Something with high usage you want the most efficient and streamlined app.  It&amp;rsquo;s also something that becomes personal and people get attached to.&lt;/p&gt;
-&lt;p&gt;I wanted something extremely simple, clean up, and fast.  I started with the simplest possible solution of a single &lt;a href=&#34;https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITextView_Class/Reference/UITextView.html&#34;&gt;text view&lt;/a&gt; you could type in.  From that, the ability to create multiple notes was added, but I didn&amp;rsquo;t want the freedom to create as many notes as you want.  Having constraints on the number of notes forces the user to create more meaningful notes and manage / clean up notes.  The goal with minotes is not to have an archive of all historical notes with search, etc.  The type of notes appropriate for this app are short-lived ones and in general have a lifespan of around a week.  I landed on a UI metaphor similar to mobile safari with a max of 9 notes.&lt;/p&gt;
-&lt;p&gt;Preferences around typography and text size is something that is really needed in order to be useful for more than a specific set of users.  For example, older people may need a little bit larger font size, whereas younger users may want to cram more text on the screen and are fine with a smaller font size.  In order to keep it simple, there are three typefaces to choose from and in sizes, small, medium, large.&lt;/p&gt;
-&lt;p&gt;It&amp;rsquo;s an opinionated app built with my specific needs in mind.  It&amp;rsquo;s doesn&amp;rsquo;t try to appeal to all users universally, but if you like simple purpose built apps, check it out.&lt;/p&gt;
-&lt;div&gt;
-	&lt;img src=&#34;images/1.png&#34; width=&#34;150px&#34;&gt;&lt;/img&gt;
-    &lt;img src=&#34;images/2.png&#34; width=&#34;150px&#34;&gt;&lt;/img&gt;
-    &lt;img src=&#34;images/3.png&#34; width=&#34;150px&#34;&gt;&lt;/img&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;a href=&#34;http://minote.net&#34; target=&#34;_blank&#34;&gt;Minotes Product Page&lt;/a&gt;&lt;/p&gt;
-&lt;a href=&#34;https://itunes.apple.com/us/app/minotes/id648015483?ls=1&amp;mt=8&#34; target=&#34;_blank&#34;&gt;
-&lt;img src=&#34;images/app-store-badge-200x100.png&#34; width=&#34;125px&#34;&gt;
-&lt;/a&gt;</description>
+<description>Minotes</description>
 </item>
     
   </channel>

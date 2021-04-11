@@ -14,46 +14,7 @@
 <pubDate>Fri, 14 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-sam-step-functions/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-sam-step-functions-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-sam-step-functions-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn and experiment with using &lt;a href=&#34;https://aws.amazon.com/serverless/sam/&#34;&gt;AWS SAM&lt;/a&gt; to define and deploy &lt;a href=&#34;https://aws.amazon.com/step-functions/&#34;&gt;AWS Step Functions&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;see &lt;a href=&#34;template.yaml&#34;&gt;&lt;code&gt;template.yaml&lt;/code&gt;&lt;/a&gt; and &lt;a href=&#34;data/event-bus-events.json&#34;&gt;&lt;code&gt;data/event-bus-events.json&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# deploy&lt;/span&gt;
-sam deploy --guided
-
-&lt;span class=&#34;c1&#34;&gt;# trigger step fn via EventBridge rule&lt;/span&gt;
-aws events put-events --cli-input-json file://data/event-bus-events.json
-
-&lt;span class=&#34;c1&#34;&gt;# e.g. output&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# {&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#     &amp;#34;FailedEntryCount&amp;#34;: 0,&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#     &amp;#34;Entries&amp;#34;: [&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#         {&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#             &amp;#34;EventId&amp;#34;: &amp;#34;369fc438-8a99-bc45-7d79-46788420dbf8&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#         }&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#     ]&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# }&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# trigger via API Gateway.  starts step fn then returns (does not wait for step fn to complete)&lt;/span&gt;
-curl https://4cakde2i15.execute-api.us-east-1.amazonaws.com/Prod/start
-
-&lt;span class=&#34;c1&#34;&gt;# e.g. output&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# {&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#     &amp;#34;executionArn&amp;#34;: &amp;#34;arn:aws:states:us-east-1:529276214230:execution:SimpleStateMachine-zIFFWgUF6O6D:53313d15-1005-44d0-84a0-ea57b66d1ac3&amp;#34;,&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#     &amp;#34;startDate&amp;#34;: 1.597426336318E9&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# }&lt;/span&gt;
-
-
-&lt;span class=&#34;c1&#34;&gt;# teardown&lt;/span&gt;
-aws cloudformation delete-stack --stack-name &lt;span class=&#34;s2&#34;&gt;&amp;#34;aws-sam-step-functions-playground&amp;#34;&lt;/span&gt; --region &lt;span class=&#34;s2&#34;&gt;&amp;#34;us-east-1&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/compute/simplifying-application-orchestration-with-aws-step-functions-and-aws-sam/&#34;&gt;Simplifying application orchestration with AWS Step Functions and AWS SAM&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[aws | events | put-events]](&lt;a href=&#34;https://docs.aws.amazon.com/cli/latest/reference/events/put-events.html#examples&#34;&gt;https://docs.aws.amazon.com/cli/latest/reference/events/put-events.html#examples&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>AWS SAM Step Functions</description>
 </item>
     
   </channel>

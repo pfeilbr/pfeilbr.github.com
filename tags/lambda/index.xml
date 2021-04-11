@@ -14,33 +14,7 @@
 <pubDate>Fri, 08 Jan 2021 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/sam-lambda-layers/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/sam-lambda-layers-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/sam-lambda-layers-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://aws.amazon.com/blogs/compute/working-with-aws-lambda-and-lambda-layers-in-aws-sam/&#34;&gt;SAM lambda layers&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;running-example&#34;&gt;Running Example&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; lambda-layer-python
-
-sam build
-
-&lt;span class=&#34;c1&#34;&gt;# run lambda with layer locally&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# `--force-image-build` to clear out layer cache&lt;/span&gt;
-sam &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; invoke --force-image-build
-
-&lt;span class=&#34;c1&#34;&gt;# start local api endpoint&lt;/span&gt;
-sam &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; start-api --force-image-build
-curl http://127.0.0.1:3000/
-
-&lt;span class=&#34;c1&#34;&gt;# deploy&lt;/span&gt;
-sam deploy --guided
-
-&lt;span class=&#34;c1&#34;&gt;# run lambda behind api gateway endpoint&lt;/span&gt;
-curl https://hl6u5bubr4.execute-api.us-east-1.amazonaws.com/Prod/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/compute/working-with-aws-lambda-and-lambda-layers-in-aws-sam/&#34;&gt;Working with AWS Lambda and Lambda Layers in AWS SAM&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>SAM Lambda Layers</description>
 </item>
     
     <item>
@@ -49,37 +23,7 @@ curl https://hl6u5bubr4.execute-api.us-east-1.amazonaws.com/Prod/
 <pubDate>Fri, 13 Nov 2020 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-flask/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/serverless-flask-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/serverless-flask-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Example of running python &lt;a href=&#34;https://flask.palletsprojects.com/&#34;&gt;Flask&lt;/a&gt; app on Lambda + API Gateway via &lt;a href=&#34;https://www.serverless.com/&#34;&gt;serverless framework&lt;/a&gt;.  Based on &lt;a href=&#34;https://www.serverless.com/blog/flask-python-rest-api-serverless-lambda-dynamodb&#34;&gt;Build a Python REST API with Serverless, Lambda, and DynamoDB&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;architecture&#34;&gt;Architecture&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/guides/serverless-flask/serverless-flask-architecture.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.serverless.com/&#34;&gt;serverless framework&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.docker.com/products/docker-desktop&#34;&gt;Docker Desktop&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Python 3.8&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/pypa/pipenv&#34;&gt;pipenv&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ensure python venv loaded in shell&lt;/span&gt;
-pipenv shell
-
-&lt;span class=&#34;c1&#34;&gt;# install npm deps for serverless&lt;/span&gt;
-npm install
-
-&lt;span class=&#34;c1&#34;&gt;# run flash app locally.  server reloads on file change.  still need to refresh page in browser&lt;/span&gt;
-npm run dev
-
-&lt;span class=&#34;c1&#34;&gt;# deploy. (docker must be running to build python packages for linux target / lambda)&lt;/span&gt;
-npm run deploy
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.serverless.com/flask&#34;&gt;The Official Guide to Serverless Flask&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.serverless.com/blog/flask-python-rest-api-serverless-lambda-dynamodb&#34;&gt;Build a Python REST API with Serverless, Lambda, and DynamoDB&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>Serverless Flask</description>
 </item>
     
     <item>
@@ -88,65 +32,7 @@ npm run deploy
 <pubDate>Tue, 20 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-appconfig/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-appconfig-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-appconfig-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html&#34;&gt;AWS AppConfig&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;create, manage, and quickly deploy application configurations. AWS AppConfig supports controlled deployments to applications of any size and includes built-in validation checks and monitoring. You can use AWS AppConfig with applications hosted on EC2 instances, AWS Lambda, containers, mobile applications, or IoT devices.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;concepts&#34;&gt;Concepts&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Domain&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Application (myapp)&lt;/li&gt;
-&lt;li&gt;Environment (dev, test, demo, prod)&lt;/li&gt;
-&lt;li&gt;Configuration Profile - versioned configuration data.  text, json, yaml, S3 object, SSM Document, SSM Parameter, CodePipeline&lt;/li&gt;
-&lt;li&gt;Deployment - types: &lt;code&gt;AllAtOnce&lt;/code&gt;, &lt;code&gt;Linear50PercentEvery30Seconds&lt;/code&gt;, &lt;code&gt;Canary10Percent20Minutes&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Functional&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;deploy configuration changes from a central location&lt;/li&gt;
-&lt;li&gt;rules to validate your configuration. configurations that aren&amp;rsquo;t valid can&amp;rsquo;t be deployed.
-&lt;ul&gt;
-&lt;li&gt;validation types: JSON schema, Lambda. see &lt;a href=&#34;https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-configuration-and-profile-validators.html&#34;&gt;About validators&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;examples&#34;&gt;Example(s)&lt;/h2&gt;
-&lt;p&gt;get configuration via cli&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;aws appconfig get-configuration &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --application &lt;span class=&#34;s1&#34;&gt;&amp;#39;app01&amp;#39;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --environment &lt;span class=&#34;s1&#34;&gt;&amp;#39;dev&amp;#39;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --configuration &lt;span class=&#34;s1&#34;&gt;&amp;#39;config-profile-01&amp;#39;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --client-id &lt;span class=&#34;s1&#34;&gt;&amp;#39;test&amp;#39;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    appconfig.json
-
-&lt;span class=&#34;c1&#34;&gt;# view results in specified output file `appconfig.json`&lt;/span&gt;
-cat appconfig.json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;output&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAEqjn5qdblEL5J0kWjsMG2g4OkInAN-hOkB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;aws-console-screenshots&#34;&gt;AWS Console Screenshots&lt;/h2&gt;
-&lt;p&gt;Configuration profile source types&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAFPtmY9U1tLhL_v42m3BOxd-jtaQ0ZYJBsB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Example JSON configuration profile&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAG_2LdzxtpK6o_hfXg_hc2Q-ZfMkjGMCGkB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Deployment Strategy Types&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAEujdNkJthBD7jwMEzwtF6qj0GctFCDsuoB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Start Deployment&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAH80DpD0MpJILm3IYc6KpR9yPw3nt845c0B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Deployment&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAGc3YJs7dhBWr2FLWxLN7yOycCdpbI2ybUB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html&#34;&gt;AWS AppConfig Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/es/blogs/mt/introducing-aws-appconfig-lambda-extension-deploying-application-configuration-serverless/&#34;&gt;Deploying application configuration to serverless: introducing the AWS AppConfig Lambda extension&lt;/a&gt; - blog post on how to use &lt;a href=&#34;https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-integration-lambda-extensions.html&#34;&gt;AppConfig Lambda extension&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-integration-lambda-extensions.html&#34;&gt;AWS AppConfig integration with Lambda extensions&lt;/a&gt; -&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/aws-samples/sessions-with-aws-sam/blob/master/appconfig-lambda-extensions/README.md&#34;&gt;sessions-with-aws-sam/appconfig-lambda-extensions/README.md&lt;/a&gt; - good complete reference implementation on how to effectively use with lambda&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/sthulb/appconfig-demo&#34;&gt;sthulb/appconfig-demo&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>AWS AppConfig</description>
 </item>
     
     <item>
@@ -155,78 +41,7 @@ cat appconfig.json
 <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-sam-local-invoke-with-lambda-role/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-sam-golang-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-sam-golang-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/serverless/sam/&#34;&gt;AWS Serverless Application Model&lt;/a&gt; (SAM) allows you to develop and test your lambda backed API Gateway endpoints locally via &lt;a href=&#34;https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-cli-command-reference-sam-local-start-api.html&#34;&gt;sam local start-api&lt;/a&gt;.  By default, your function is invoked with the default credentials you have configured for the &lt;a href=&#34;https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html&#34;&gt;AWS CLI&lt;/a&gt;.  If your function accesses other AWS services, it may encounter permission issues.  It&amp;rsquo;s ideal to have your lambda run under as close to the same security context locally as it would when deployed.  In the example below, lambda sends a message to a SQS worker queue.  The permissions for the queue are configured to allow the lambda role to send a message to it.  The following details how to achieve this.&lt;/p&gt;
-&lt;h3 id=&#34;allowing-our-lambda-role-to-be-assumed&#34;&gt;Allowing Our Lambda Role to be Assumed&lt;/h3&gt;
-&lt;p&gt;In our scenario, we have a local user profile named &lt;code&gt;admin&lt;/code&gt; stored in &lt;code&gt;~/.aws/credentials&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;[admin]
-aws_access_key_id     = YOUR_ACCESS_KEY
-aws_secret_access_key = YOUR_SECRET_ACCESS_KEY
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This user needs to be able to assume our &lt;code&gt;my-lambda-role&lt;/code&gt; role.  We define the following &lt;strong&gt;Role Trust&lt;/strong&gt; policy to enable:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;nt&#34;&gt;&amp;#34;Version&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;2012-10-17&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-  &lt;span class=&#34;nt&#34;&gt;&amp;#34;Statement&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-      &lt;span class=&#34;nt&#34;&gt;&amp;#34;Effect&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Allow&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-      &lt;span class=&#34;nt&#34;&gt;&amp;#34;Principal&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;nt&#34;&gt;&amp;#34;Service&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;lambda.amazonaws.com&amp;#34;&lt;/span&gt;
-      &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-      &lt;span class=&#34;nt&#34;&gt;&amp;#34;Action&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;sts:AssumeRole&amp;#34;&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-      &lt;span class=&#34;nt&#34;&gt;&amp;#34;Effect&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Allow&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-      &lt;span class=&#34;nt&#34;&gt;&amp;#34;Principal&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;nt&#34;&gt;&amp;#34;AWS&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;arn:aws:iam::xxxxxxxxxxxx:user/admin&amp;#34;&lt;/span&gt;
-      &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-      &lt;span class=&#34;nt&#34;&gt;&amp;#34;Action&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;sts:AssumeRole&amp;#34;&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;configure-assume-role-via-aws-cli&#34;&gt;Configure Assume Role via AWS CLI&lt;/h3&gt;
-&lt;p&gt;Next we need to configure the AWS CLI to assume a role.  We can do so by adding the following to &lt;code&gt;~/.aws/config&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;# ~/.aws/config
-
-[profile my-lambda-role]
-role_arn = arn:aws:iam::xxxxxxxxxxxx:role/my-lambda-role
-source_profile = admin
-output = json
-region = us-east-1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note the &lt;code&gt;source_profile = admin&lt;/code&gt; line.  This identifies the profile in &lt;code&gt;~/.aws/credentials&lt;/code&gt; that will be used to assume the role.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;See &lt;a href=&#34;https://aws.amazon.com/premiumsupport/knowledge-center/iam-assume-role-cli/&#34;&gt;How do I assume an IAM role using the AWS CLI?&lt;/a&gt; for full details on options.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;We can test with the following:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;aws --profile my-lambda-role sts get-caller-identity
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If successful, the response will look like.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;#34;UserId&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;AROAXWO2SDPLLBS55Q345:botocore-session-1596129185&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Account&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;xxxxxxxxxxxx&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Arn&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;arn:aws:sts::529276214230:assumed-role/my-lambda-role/botocore-&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;running-sam-local&#34;&gt;Running SAM Local&lt;/h3&gt;
-&lt;p&gt;The SQS queue URL is provided to the lambda via an environment variable.  This is defined in the SAM template&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;template.yaml&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;Environment&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;Variables&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;QUEUE_URL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;!&lt;span class=&#34;l&#34;&gt;Ref Queue&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We need &lt;code&gt;QUEUE_URL&lt;/code&gt; to be available to our function running locally.  To do that we can create an environment variable .json file and pass as a parameter for sam local to use.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;env-vars.json&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;#34;Parameters&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;nt&#34;&gt;&amp;#34;QUEUE_URL&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://sqs.us-east-1.amazonaws.com/xxxxxxxxxxxx/aws-sam-golang-example-Queue-Q12J860AETTS&amp;#34;&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We can now start the local SAM API server and test our endpoint&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;sam &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; start-api --profile my-lambda-role --env-vars env-vars.json
-
-curl -X POST http://127.0.0.1:3000/job -d &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;name&amp;#34;: &amp;#34;my job&amp;#34;}&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
-&lt;p&gt;We&amp;rsquo;ve seen how to run a lambda locally with the same security context as when deployed.  SAM provides a great development workflow to allow quick iterations.  The local environment provided via docker tries to be as true to the AWS environment, but you should test with the real services as early as possible.&lt;/p&gt;
-&lt;p&gt;One point to note, you must have the AWS resources your lambda is interacting with provisioned.  For example, the SQS queue must exist.  SAM does not provide a locally running SQS service.&lt;/p&gt;
-&lt;p&gt;The &lt;a href=&#34;https://github.com/pfeilbr/aws-sam-golang-playground&#34;&gt;source&lt;/a&gt; for this example is written in Go, which has a great workflow.  Our focus wasn&amp;rsquo;t on the code, but if you want more &lt;strong&gt;Go + SAM + Lambda&lt;/strong&gt;, be sure to check out the AWS &lt;a href=&#34;https://golang.serverlessworkshops.io/&#34;&gt;GO SERVERLESS!&lt;/a&gt; workshop by AWS Serverless Developer Advocate &lt;a href=&#34;https://twitter.com/rts_rob&#34;&gt;Rob Sutter&lt;/a&gt;.  It covers the details and workflow of using Go with SAM.&lt;/p&gt;
-</description>
+<description>AWS SAM Local Invoke with Lambda Role</description>
 </item>
     
     <item>
@@ -235,37 +50,7 @@ curl -X POST http://127.0.0.1:3000/job -d &lt;span class=&#34;s1&#34;&gt;&amp;#3
 <pubDate>Mon, 13 Jul 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/bref-php-lambda/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/bref-php-lambda-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/bref-php-lambda-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://bref.sh/&#34;&gt;bref&lt;/a&gt;, deploy and run serverless PHP applications&lt;/p&gt;
-&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.php.net/&#34;&gt;PHP&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.serverless.com/&#34;&gt;serverless framework&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install&lt;/span&gt;
-composer require bref/bref
-
-&lt;span class=&#34;c1&#34;&gt;# init&lt;/span&gt;
-vendor/bin/bref init
-
-&lt;span class=&#34;c1&#34;&gt;# edit `index.php`&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# deploy&lt;/span&gt;
-serverless deploy
-
-&lt;span class=&#34;c1&#34;&gt;# test / invoke&lt;/span&gt;
-serverless invoke -f &lt;span class=&#34;s2&#34;&gt;&amp;#34;function&amp;#34;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# test / invoke with event data&lt;/span&gt;
-serverless invoke --function &lt;span class=&#34;s2&#34;&gt;&amp;#34;function&amp;#34;&lt;/span&gt; --data &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;name&amp;#34;: &amp;#34;foo&amp;#34;}&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://bref.sh/docs/installation.html&#34;&gt;bref | Installation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>Bref PHP Lambda</description>
 </item>
     
     <item>
@@ -274,42 +59,7 @@ serverless invoke --function &lt;span class=&#34;s2&#34;&gt;&amp;#34;function&am
 <pubDate>Thu, 02 Jul 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/php-lambda-layer/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/php-lambda-layer-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/php-lambda-layer-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://github.com/stackery/php-lambda-layer&#34;&gt;stackery/php-lambda-layer&lt;/a&gt; for running PHP on lambda&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Prerequisites&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.php.net/&#34;&gt;php&lt;/a&gt; 7.x&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://getcomposer.org/&#34;&gt;composer&lt;/a&gt; installed globally (used by makefile)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Key Files&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;src/php/index.php&#34;&gt;src/php/index.php&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;src/php/php.ini&#34;&gt;src/php/php.ini&lt;/a&gt; - for enabled extensions&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;template.yaml&#34;&gt;template.yaml&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;packaged.yaml&#34;&gt;packaged.yaml&lt;/a&gt; - &lt;em&gt;generated via sam&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Session&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;see &lt;a href=&#34;Makefile&#34;&gt;Makefile&lt;/a&gt; for details and make changes to variables as necessary.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# deploy stack&lt;/span&gt;
-make deploy
-
-&lt;span class=&#34;c1&#34;&gt;# test api gateway endpoint URL&lt;/span&gt;
-make &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# delete stack&lt;/span&gt;
-make delete
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/compute/introducing-the-new-serverless-lamp-stack/&#34;&gt;Introducing the new Serverless LAMP stack&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/compute/introducing-the-serverless-lamp-stack-part-2-relational-databases/&#34;&gt;Introducing the serverless LAMP stack – part 2 relational databases&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/aws-samples/php-examples-for-aws-lambda&#34;&gt;aws-samples/php-examples-for-aws-lambda&lt;/a&gt; - github repo for article.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/apn/aws-lambda-custom-runtime-for-php-a-practical-example/&#34;&gt;AWS Lambda Custom Runtime for PHP: A Practical Example&lt;/a&gt; - &lt;em&gt;older article, but covers low level details&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/sdk-for-php/&#34;&gt;AWS SDK for PHP&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>PHP Lambda Layer</description>
 </item>
     
     <item>
@@ -318,29 +68,7 @@ make delete
 <pubDate>Sun, 27 Oct 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-lambda-java/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/serverless-lambda-java-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/serverless-lambda-java-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;a href=&#34;https://serverless.com/&#34;&gt;serverless framework&lt;/a&gt; + &lt;a href=&#34;https://docs.aws.amazon.com/lambda/latest/dg/java-programming-model.html&#34;&gt;lambda java&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;build-and-deploy&#34;&gt;Build and Deploy&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/projects/serverless-lambda-java-playground
-serverless create --template aws-java-maven
-mvn clean install
-sls deploy --verbose
-sls invoke --function hello --data &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;msg&amp;#34;: &amp;#34;hello&amp;#34;}&amp;#39;&lt;/span&gt; --log
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;#34;statusCode&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;#34;body&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;{\&amp;#34;message\&amp;#34;:\&amp;#34;Go Serverless v1.x! Your function executed successfully!\&amp;#34;,\&amp;#34;input\&amp;#34;:{}}&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;#34;headers&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;nt&#34;&gt;&amp;#34;X-Powered-By&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;AWS Lambda &amp;amp; serverless&amp;#34;&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;#34;isBase64Encoded&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://serverless.com/blog/how-to-create-a-rest-api-in-java-using-dynamodb-and-serverless/&#34;&gt;How to create a REST API in Java using DynamoDB and Serverless&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>Serverless Lambda Java</description>
 </item>
     
     <item>
@@ -349,32 +77,7 @@ sls invoke --function hello --data &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp
 <pubDate>Wed, 18 Sep 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-lambda-layers/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/serverless-lambda-layers-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/serverless-lambda-layers-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn lambda layers with serverless framework&lt;/p&gt;
-&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
-&lt;p&gt;see &lt;a href=&#34;serverless.yml&#34;&gt;&lt;code&gt;serverless.yml&lt;/code&gt;&lt;/a&gt; and &lt;a href=&#34;index.js&#34;&gt;&lt;code&gt;index.js&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;layers are applied in order, meaning last layer in array is applied last and will overwrite any common files in other layers.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;
-&lt;span class=&#34;c1&#34;&gt;# install deps&lt;/span&gt;
-npm i
-
-&lt;span class=&#34;c1&#34;&gt;# run via local packages sls&lt;/span&gt;
-npm run sls -- deploy
-
-&lt;span class=&#34;c1&#34;&gt;# invoke and view logs&lt;/span&gt;
-npm run sls -- invoke --function hello --log
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAFsMFGUI8dB5LcruXVZSdIMEVGMsxFDoE4B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAEMx_FKalVN8YYr1pF_9gpeC_vlpaAkNVAB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://serverless.com/framework/docs/providers/aws/guide/layers/&#34;&gt;serverless docs | AWS - Layers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://medium.com/appgambit/part-2-create-lambda-layers-with-serverless-framework-and-offline-support-ad2a5a8dabfb&#34;&gt;Part 2 — Create Lambda Layers with Serverless Framework and Offline support&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>Serverless Lambda Layers</description>
 </item>
     
     <item>
@@ -383,164 +86,7 @@ npm run sls -- invoke --function hello --log
 <pubDate>Tue, 10 Sep 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-plugin-cloudfront-lambda-edge/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/serverless-plugin-cloudfront-lambda-edge-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/serverless-plugin-cloudfront-lambda-edge-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://github.com/silvermine/serverless-plugin-cloudfront-lambda-edge&#34;&gt;silvermine/serverless-plugin-cloudfront-lambda-edge&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;visit &lt;a href=&#34;https://d3cztrjc4xcpde.cloudfront.net&#34;&gt;https://d3cztrjc4xcpde.cloudfront.net&lt;/a&gt; and login with user01/password01&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Basic Auth Challenge&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;username: user01
-password: password01
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;users are stored in aws secrets manager and sourced from &lt;a href=&#34;users.json&#34;&gt;&lt;code&gt;users.json&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# deploy all (provision infra, build static site, copy to s3, invalidate cache).&lt;/span&gt;
-npm run deploy
-
-&lt;span class=&#34;c1&#34;&gt;# separate component deploys&lt;/span&gt;
-npm run deploy-infrastructure
-npm run build-static-site &lt;span class=&#34;c1&#34;&gt;# gatsby&lt;/span&gt;
-npm run publish-static-assets-to-bucket
-npm run cloudfront:invalidate
-
-&lt;span class=&#34;c1&#34;&gt;# bucket&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# not accessible because of Origin Access Identity applied&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# e.g. http://s3-cf-private-static-site-01-dev.s3-website-us-east-1.amazonaws.com&lt;/span&gt;
-open &lt;span class=&#34;s2&#34;&gt;&amp;#34;http://&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;node scripts/get-stack-property.js WebsiteBucketName&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.s3-website-us-east-1.amazonaws.com/index.html&amp;#34;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# cloudfront url. e.g. https://d3cztrjc4xcpde.cloudfront.net&lt;/span&gt;
-open &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;node scripts/get-stack-property.js CloudFrontDistributionDomainName&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;removing-auth&#34;&gt;Removing Auth&lt;/h2&gt;
-&lt;p&gt;Update CloudFront Behavior to remove &amp;ldquo;Viewer Request&amp;rdquo; &amp;ldquo;Lambda Function Association&amp;rdquo;, then invalidate cache on all &amp;ldquo;*&amp;rdquo;.&lt;/p&gt;
-&lt;h2 id=&#34;viewing-cloudwatch-logs-for-lambdaedge-functions&#34;&gt;Viewing CloudWatch Logs for Lambda@Edge Functions&lt;/h2&gt;
-&lt;p&gt;logging takes place in the region of the edge (PoP) location.  This will vary based on the client location.&lt;/p&gt;
-&lt;p&gt;Visit CloudFront | Monitoring | Lambda@Edge Functions | YOUR FUNCTION, then click &lt;code&gt;[View Function Metrics]&lt;/code&gt; button&lt;/p&gt;
-&lt;p&gt;see &lt;a href=&#34;https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-edge-testing-debugging.html#lambda-edge-testing-debugging-determine-region&#34;&gt;Determining the Lambda@Edge Region&lt;/a&gt; for more details&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAH3ZzTj929MNqiRZIcn1zj1G0WzeI5ZSGQB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;lambdaedge-request&#34;&gt;Lambda@Edge Request&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;#34;event&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;nt&#34;&gt;&amp;#34;Records&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-            &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-                &lt;span class=&#34;nt&#34;&gt;&amp;#34;cf&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;config&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-                        &lt;span class=&#34;nt&#34;&gt;&amp;#34;distributionDomainName&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;d13ydba49ilc9v.cloudfront.net&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                        &lt;span class=&#34;nt&#34;&gt;&amp;#34;distributionId&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;E20V9SS2N0VT6P&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                        &lt;span class=&#34;nt&#34;&gt;&amp;#34;eventType&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;viewer-request&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                        &lt;span class=&#34;nt&#34;&gt;&amp;#34;requestId&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;NcxNfOh2NaptKOLBlSimVF7AAlRp10OM-F1-CMZsJOGSMEkHUVd25A==&amp;#34;&lt;/span&gt;
-                    &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;request&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-                        &lt;span class=&#34;nt&#34;&gt;&amp;#34;clientIp&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;100.11.96.70&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                        &lt;span class=&#34;nt&#34;&gt;&amp;#34;headers&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;host&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Host&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;d13ydba49ilc9v.cloudfront.net&amp;#34;&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-                            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;user-agent&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;User-Agent&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36&amp;#34;&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-                            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;authorization&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;authorization&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Basic dXNlcjpwYXNz&amp;#34;&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-                            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;upgrade-insecure-requests&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;upgrade-insecure-requests&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-                            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;sec-fetch-mode&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;sec-fetch-mode&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;navigate&amp;#34;&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-                            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;sec-fetch-user&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;sec-fetch-user&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;?1&amp;#34;&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-                            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;accept&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;accept&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3&amp;#34;&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-                            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;sec-fetch-site&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;sec-fetch-site&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;none&amp;#34;&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-                            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;accept-encoding&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;accept-encoding&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;gzip, deflate, br&amp;#34;&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-                            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;accept-language&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;accept-language&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;en-US,en;q=0.9,nb;q=0.8,fr;q=0.7&amp;#34;&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-                            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;if-none-match&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;if-none-match&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;\&amp;#34;2cad58ac06c32be3c6384050881bc507\&amp;#34;&amp;#34;&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-                            &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-                            &lt;span class=&#34;nt&#34;&gt;&amp;#34;if-modified-since&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;if-modified-since&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                                    &lt;span class=&#34;nt&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Tue, 10 Sep 2019 21:32:57 GMT&amp;#34;&lt;/span&gt;
-                                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-                            &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-                        &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-                        &lt;span class=&#34;nt&#34;&gt;&amp;#34;method&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;GET&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                        &lt;span class=&#34;nt&#34;&gt;&amp;#34;querystring&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                        &lt;span class=&#34;nt&#34;&gt;&amp;#34;uri&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;
-                    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-                &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-            &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-        &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;add origin access identity
-&lt;ul&gt;
-&lt;li&gt;see the following for cfn markup &lt;a href=&#34;https://github.com/lroguet/amzn-cloudformation/blob/master/storage-content-delivery/static-website-with-cloudfront.yml&#34;&gt;https://github.com/lroguet/amzn-cloudformation/blob/master/storage-content-delivery/static-website-with-cloudfront.yml&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html&#34;&gt;Restricting Access to Amazon S3 Content by Using an Origin Access Identity&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;S3 Bucket | &lt;a href=&#34;https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html#example-bucket-policies-use-case-6&#34;&gt;Granting Permission to an Amazon CloudFront Origin Identity&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;todo&#34;&gt;TODO&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;DNS (route 53)
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-cloudfront-distribution.html&#34;&gt;Routing Traffic to an Amazon CloudFront Web Distribution by Using Your Domain Name&lt;/a&gt;.  Covers [root|sub]domainsG&lt;/li&gt;
-&lt;li&gt;see &lt;a href=&#34;https://www.brautaset.org/articles/2017/route-53-cloudformation.html&#34;&gt;https://www.brautaset.org/articles/2017/route-53-cloudformation.html&lt;/a&gt;.  Contains ApexRecordSet (example.com) and WwwRecordSet (&lt;a href=&#34;http://www.example.com&#34;&gt;www.example.com&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-route53.html#w2ab1c17c23c81c11&#34;&gt;Alias Resource Record Set for a CloudFront Distribution&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;update &lt;code&gt;serverless.yml:iamRoleStatements&lt;/code&gt; with dynamic region, account id, and secretsmanager name
-&lt;ul&gt;
-&lt;li&gt;via &lt;a href=&#34;https://github.com/svdgraaf/serverless-pseudo-parameters#readme&#34;&gt;serverless-pseudo-parameters&lt;/a&gt; plugin&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;scratch&#34;&gt;Scratch&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;$(node ./scripts/get-stack-property.js )
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+<description>Serverless Plugin CloudFront Lambda Edge</description>
 </item>
     
     <item>
@@ -549,16 +95,7 @@ open &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://&lt;/span&gt;&lt;span class
 <pubDate>Wed, 24 Jul 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/chrome-aws-lambda/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/chrome-aws-lambda-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/chrome-aws-lambda-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn the &lt;a href=&#34;https://github.com/alixaxel/chrome-aws-lambda&#34;&gt;chrome-aws-lambda&lt;/a&gt; package for use with aws lambda via &lt;a href=&#34;https://serverless.com/framework/&#34;&gt;serverless framework&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;screenshot-web-page&#34;&gt;Screenshot Web Page&lt;/h3&gt;
-&lt;p&gt;return screenshot of page from provided &lt;code&gt;url&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;example with &lt;a href=&#34;https://twitter.com&#34;&gt;https://twitter.com&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://SERVICE_ENDPOINT/dev/webpagescreenshot?url=https://twitter.com&#34;&gt;https://SERVICE_ENDPOINT/dev/webpagescreenshot?url=https://twitter.com&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAHuFLMzBhxOPrQx75otGHiArogvSLyRtKwB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-</description>
+<description>Chrome AWS Lambda</description>
 </item>
     
     <item>
@@ -567,25 +104,7 @@ open &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://&lt;/span&gt;&lt;span class
 <pubDate>Tue, 06 Dec 2016 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/apex-lambda/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/apex-lambda-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/apex-lambda-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;http://apex.run/&#34;&gt;Apex&lt;/a&gt; serverless architecture&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Example Session&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;apex init
-apex deploy
-apex logs --follow
-apex invoke hello
-&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -n &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;name&amp;#34;: &amp;#34;brian&amp;#34;}&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; apex invoke hello
-apex list
-&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -n &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;q&amp;#34;: &amp;#34;heroku&amp;#34;}&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; apex invoke search
-
-&lt;span class=&#34;c1&#34;&gt;# file upload example&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# see screenshot of how to access file contents from lambda @&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#   http://static-content-01.s3-website-us-east-1.amazonaws.com/2__apex_logs_-f__apex__1DF7126D.png&lt;/span&gt;
-curl -i -F &lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; -F &lt;span class=&#34;nv&#34;&gt;filedata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;@README.md https://UPDATEME.execute-api.us-east-1.amazonaws.com/prod/playground_api-gateway
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+<description>Apex Lambda</description>
 </item>
     
   </channel>

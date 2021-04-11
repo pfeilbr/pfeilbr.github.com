@@ -14,76 +14,7 @@
 <pubDate>Mon, 26 Oct 2020 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-javascript-sdk-v3/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-javascript-sdk-v3-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-javascript-sdk-v3-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn AWS JavaScript SDK v3&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;index.js&#34;&gt;&lt;code&gt;index.js&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;index.test.js&#34;&gt;&lt;code&gt;index.test.js&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;new-features&#34;&gt;New Features&lt;/h2&gt;
-&lt;h3 id=&#34;v3-commands&#34;&gt;v3 Commands&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;commands for each AWS Service package to enable you to perform operations for that AWS Service. After you install an AWS Service, you can browse the available commands in your project&amp;rsquo;s node-modules/@aws-sdk/client-PACKAGE_NAME/commands folder&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;middleware-stack&#34;&gt;middleware stack&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;can use a new middleware stack to control the lifecycle of an operation call&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Each middleware stage in the stack calls the next middleware stage after making any changes to the request object. This also makes debugging issues in the stack much easier, because you can see exactly which middleware stages were called leading up to the error.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Use Cases&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;debugging&lt;/li&gt;
-&lt;li&gt;logging&lt;/li&gt;
-&lt;li&gt;request updates&lt;/li&gt;
-&lt;li&gt;instrumentation&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Example middleware &lt;code&gt;args&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;DynamoDB&lt;/code&gt; &lt;code&gt;ListTablesCommand&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-      &lt;span class=&#34;nx&#34;&gt;middlewareStack&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Function&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;addRelativeTo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Function&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;addRelativeTo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;clone&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Function&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;clone&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;use&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Function&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;use&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;remove&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Function&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;remove&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;removeByTag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Function&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;removeByTag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;concat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Function&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;concat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;applyToStack&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Function&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;cloneTo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;resolve&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Function&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;resolve&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-      &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-      &lt;span class=&#34;nx&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{},&lt;/span&gt;
-      &lt;span class=&#34;nx&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;HttpRequest&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;method&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;POST&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;hostname&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;dynamodb.us-east-1.amazonaws.com&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;undefined&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;query&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{},&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;headers&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-          &lt;span class=&#34;s1&#34;&gt;&amp;#39;Content-Type&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;application/x-amz-json-1.0&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-          &lt;span class=&#34;s1&#34;&gt;&amp;#39;X-Amz-Target&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;DynamoDB_20120810.ListTables&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-          &lt;span class=&#34;s1&#34;&gt;&amp;#39;user-agent&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;aws-sdk-nodejs-v3-@aws-sdk/client-dynamodb/1.0.0-rc.2 darwin/v12.16.1&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-          &lt;span class=&#34;s1&#34;&gt;&amp;#39;content-length&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;2&amp;#39;&lt;/span&gt;
-        &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;{}&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;protocol&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;https:&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-        &lt;span class=&#34;nx&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;
-      &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# run tests that exercise new features&lt;/span&gt;
-npm run &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; -- --watch
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/aws/aws-sdk-js-v3&#34;&gt;aws/aws-sdk-js-v3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html&#34;&gt;AWS SDK for JavaScript | Developer Guide for SDK Version 3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/developer/modular-aws-sdk-for-javascript-release-candidate/&#34;&gt;Modular AWS SDK for JavaScript – Release Candidate&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>AWS JavaScript SDK V3</description>
 </item>
     
     <item>
@@ -92,31 +23,7 @@ npm run &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; -- --watch
 <pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-sdk-for-node-authentication/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/azure-sdk-for-node-authentication-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/azure-sdk-for-node-authentication-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn authentication methods for azure sdk for nodejs&lt;/p&gt;
-&lt;h2 id=&#34;service-principal-authentication&#34;&gt;Service Principal Authentication&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Based on &lt;a href=&#34;https://github.com/Azure/azure-sdk-for-node/blob/master/Documentation/Authentication.md#service-principal-authentication&#34;&gt;azure-sdk-for-node/Documentation/Authentication.md&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;clientId&lt;/code&gt;, &lt;code&gt;secret&lt;/code&gt;, and &lt;code&gt;domain&lt;/code&gt; are defined in &lt;code&gt;.env&lt;/code&gt;.  Copy &lt;a href=&#34;.env.sample&#34;&gt;&lt;code&gt;.env.sample&lt;/code&gt;&lt;/a&gt; to &lt;code&gt;.env&lt;/code&gt; and populate with values via the following steps.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;getting &lt;code&gt;clientId&lt;/code&gt; and &lt;code&gt;domain&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;run &lt;code&gt;az ad sp list&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAHU6ONDbO1KYIVV93m8-xaJWKd4r3SolgoB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;getting / creating secret&lt;/p&gt;
-&lt;p&gt;navigate to &lt;strong&gt;Portal | Azure Active Directory | App registrations&lt;/strong&gt;
-create new client secret if needed OR use existing
-&lt;img src=&#34;https://www.evernote.com/l/AAHlB4MduMBFjadlw1JlXT6hfMVn5OBBSIwB/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+<description>Azure SDK for Node Authentication</description>
 </item>
     
     <item>
@@ -125,28 +32,7 @@ create new client secret if needed OR use existing
 <pubDate>Wed, 08 May 2019 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-cosmos-js-sdk/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/azure-cosmos-js-sdk-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/azure-cosmos-js-sdk-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://github.com/azure/azure-cosmos-js&#34;&gt;azure cosmos db javascript sdk&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;running&#34;&gt;Running&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;provision resources
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# create group&lt;/span&gt;
-az group create --name group01 --location &lt;span class=&#34;s2&#34;&gt;&amp;#34;East US&amp;#34;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# create cosmos db account&lt;/span&gt;
-az group deployment create &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;--name cosmosdbaccountdeployment01 &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;--resource-group group01 &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;--template-file arm-templates/azure-cosmos-db-account.json &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;--parameters &lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;account01&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;location&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;eastus&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;locationName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;East US&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;defaultExperience&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;DocumentDB&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;copy &lt;code&gt;.env.sample&lt;/code&gt; to &lt;code&gt;.env&lt;/code&gt; and populate with your information from &lt;strong&gt;Keys&lt;/strong&gt;
-&lt;img src=&#34;https://www.evernote.com/l/AAG3s-Zs6VRIPa7fvjL6KuMP03bCj8nDKhYB/image.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
-&lt;li&gt;run &lt;code&gt;npm start&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+<description>Azure Cosmos JS SDK</description>
 </item>
     
     <item>
@@ -155,35 +41,7 @@ az group deployment create &lt;span class=&#34;se&#34;&gt;\
 <pubDate>Tue, 25 Sep 2018 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-sdk-cpp/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/aws-sdk-cpp-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/aws-sdk-cpp-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn &lt;a href=&#34;https://github.com/aws/aws-sdk-cpp&#34;&gt;aws-sdk-app&lt;/a&gt; C++ SDK&lt;/p&gt;
-&lt;p&gt;see &lt;code&gt;README.md&lt;/code&gt; file(s) in subdirectories of &lt;a href=&#34;src&#34;&gt;&lt;code&gt;src&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;install-aws-sdk-cpp&#34;&gt;install aws-sdk-cpp&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/dev
-git clone https://github.com/aws/aws-sdk-cpp.git
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; aws-sdk-cpp
-mkdir build
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; build
-cmake ..
-make
-make install
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;build-and-run-example&#34;&gt;build and run example&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; src/s3-example
-mkdir -p build &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; build
-cmake .. &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; make
-&lt;span class=&#34;c1&#34;&gt;# run&lt;/span&gt;
-./s3-example 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;output&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/l/AAHbKsr3KeNGBJvW9Vd8ksfJseH3wqGG7y4B/image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Key Install File Locations&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;/usr/local/lib/cmake/AWSSDK&lt;/code&gt; - cmake modules&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;/usr/local/include&lt;/code&gt; - headers installed&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;/usr/local/lib&lt;/code&gt; - libraries installed (e.g. libaws-cpp-sdk-core.dylib)&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<description>AWS SDK CPP</description>
 </item>
     
   </channel>

@@ -14,12 +14,7 @@
 <pubDate>Tue, 05 Nov 2019 00:00:00 -0500</pubDate>
       
       <guid>https://brianpfeil.com/post/terraform/</guid>
-<description>&lt;div class=&#34;alert alert-info small bg-info&#34; role=&#34;alert&#34;&gt;
-&lt;span class=&#34;text-muted&#34;&gt;code for article&lt;/span&gt;&amp;nbsp;&lt;a href=&#34;https://github.com/pfeilbr/terraform-playground&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fab fa-github fa-sm&#34;&gt;&lt;/i&gt;&amp;nbsp;pfeilbr/terraform-playground&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;learn and experiment with &lt;a href=&#34;https://www.terraform.io/&#34;&gt;Terraform&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;followed Packer &lt;a href=&#34;https://www.terraform.io/intro/getting-started/install.html&#34;&gt;GETTING STARTED&lt;/a&gt; docs&lt;/p&gt;
-</description>
+<description>Terraform</description>
 </item>
     
   </channel>
