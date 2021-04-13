@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  1922 ,
+  "wordCount":  4866 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -316,16 +316,20 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <blockquote>
-<p>A quick reference for key AWS services and what they do</p>
-</blockquote>
-<!-- TOC -->
+        <h1 id="aws-services">AWS Services</h1>
+<p>The following services are commonly used for AWS solutions.  Each service specifies key considerations and features per service for architecture and design.</p>
 <ul>
+<li><a href="#aws-services">AWS Services</a>
+<ul>
+<li><a href="#serverless-services">Serverless Services</a></li>
+<li><a href="#serverless-benefits">Serverless Benefits</a></li>
+<li><a href="#relevant-patterns">Relevant Patterns</a></li>
+<li><a href="#deployment-types">Deployment Types</a></li>
 <li><a href="#networking-and-content-delivery">Networking and Content Delivery</a>
 <ul>
 <li><a href="#vpc">VPC</a></li>
 <li><a href="#elbalb">ELB/ALB</a></li>
-<li><a href="#vpc-endpoint">VPC Endpoint</a></li>
+<li><a href="#privatelink--vpc-endpoint">PrivateLink / VPC Endpoint</a></li>
 <li><a href="#route-53">Route 53</a></li>
 <li><a href="#cloud-map">Cloud Map</a></li>
 <li><a href="#global-accelerator">Global Accelerator</a></li>
@@ -338,6 +342,7 @@ if (!doNotTrack) {
 <ul>
 <li><a href="#ec2">EC2</a></li>
 <li><a href="#ecs">ECS</a></li>
+<li><a href="#ecr">ECR</a></li>
 <li><a href="#fargate">Fargate</a></li>
 <li><a href="#batch">Batch</a></li>
 <li><a href="#eks">EKS</a></li>
@@ -373,9 +378,11 @@ if (!doNotTrack) {
 </li>
 <li><a href="#application-integration">Application Integration</a>
 <ul>
+<li><a href="#appflow">AppFlow</a></li>
 <li><a href="#step-functions">Step Functions</a></li>
 <li><a href="#sns">SNS</a></li>
 <li><a href="#sqs">SQS</a></li>
+<li><a href="#ses">SES</a></li>
 <li><a href="#eventbridge">EventBridge</a></li>
 <li><a href="#kinesis">Kinesis</a></li>
 </ul>
@@ -387,6 +394,7 @@ if (!doNotTrack) {
 <li><a href="#emr">EMR</a></li>
 <li><a href="#data-pipelines">Data Pipelines</a></li>
 <li><a href="#glue">Glue</a></li>
+<li><a href="#glue-databrew">Glue DataBrew</a></li>
 <li><a href="#athena">Athena</a></li>
 <li><a href="#quicksight">QuickSight</a></li>
 <li><a href="#lake-formation">Lake Formation</a></li>
@@ -394,24 +402,20 @@ if (!doNotTrack) {
 </li>
 <li><a href="#management--governance">Management &amp; Governance</a>
 <ul>
+<li><a href="#well-architected-framework">Well-Architected Framework</a></li>
 <li><a href="#control-tower">Control Tower</a></li>
 <li><a href="#organizations">Organizations</a></li>
 <li><a href="#cloudformation">CloudFormation</a></li>
+<li><a href="#serverless-application-repository-sar">Serverless Application Repository (SAR)</a></li>
 <li><a href="#service-catalog">Service Catalog</a></li>
 <li><a href="#config">Config</a></li>
-<li><a href="#cloudwatch-logs">CloudWatch Logs</a>
-<ul>
-<li><a href="#resources">Resources</a></li>
-</ul>
-</li>
-<li><a href="#cloudwatch-events">CloudWatch Events</a></li>
+<li><a href="#appconfig">AppConfig</a></li>
+<li><a href="#cloudwatch-logs">CloudWatch Logs</a></li>
+<li><a href="#cloudwatch-events-see-eventbridge">CloudWatch Events (see EventBridge)</a></li>
 <li><a href="#cloudwatch-insights">CloudWatch Insights</a></li>
-<li><a href="#cloudwatch-metrics">CloudWatch Metrics</a>
-<ul>
-<li><a href="#resources-1">Resources</a></li>
-</ul>
-</li>
+<li><a href="#cloudwatch-metrics">CloudWatch Metrics</a></li>
 <li><a href="#cloudwatch-alarms">CloudWatch Alarms</a></li>
+<li><a href="#cloudwatch-synthetics-canaries">CloudWatch Synthetics (Canaries)</a></li>
 <li><a href="#cloudtrail">CloudTrail</a></li>
 </ul>
 </li>
@@ -422,8 +426,13 @@ if (!doNotTrack) {
 <li><a href="#codebuild">CodeBuild</a></li>
 <li><a href="#codedeploy">CodeDeploy</a></li>
 <li><a href="#codepipeline">CodePipeline</a></li>
+<li><a href="#codeartifact">CodeArtifact</a></li>
 <li><a href="#x-ray">X-Ray</a></li>
+<li><a href="#aws-cli">AWS CLI</a></li>
 <li><a href="#amplify">Amplify</a></li>
+<li><a href="#sam-serverless-application-model">SAM (Serverless Application Model)</a></li>
+<li><a href="#cdk">CDK</a></li>
+<li><a href="#aws-sdks">AWS SDKs</a></li>
 </ul>
 </li>
 <li><a href="#machine-learning">Machine Learning</a>
@@ -438,6 +447,7 @@ if (!doNotTrack) {
 <li><a href="#forecast">Forecast</a></li>
 <li><a href="#personalize">Personalize</a></li>
 <li><a href="#lex">Lex</a></li>
+<li><a href="#kendra">Kendra</a></li>
 </ul>
 </li>
 <li><a href="#security-identity-and-compliance">Security, Identity, and Compliance</a>
@@ -446,26 +456,96 @@ if (!doNotTrack) {
 <li><a href="#cognito">Cognito</a></li>
 <li><a href="#secrets-manager">Secrets Manager</a></li>
 <li><a href="#waf">WAF</a></li>
-<li><a href="#firewall-manager">Firewall Manager</a></li>
 <li><a href="#certificate-manager-acm">Certificate Manager (ACM)</a></li>
 <li><a href="#kms">KMS</a></li>
 <li><a href="#directory-service">Directory Service</a></li>
 </ul>
 </li>
+<li><a href="#media-services">Media Services</a>
+<ul>
+<li><a href="#amazon-interactive-video-service">Amazon Interactive Video Service</a></li>
 </ul>
-<!-- /TOC -->
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="serverless-services">Serverless Services</h2>
+<ul>
+<li><a href="#route53">Route53</a></li>
+<li><a href="#global-accelerator">Global Accelerator</a></li>
+<li><a href="#waf">WAF</a></li>
+<li><a href="#cognito">Cognito</a></li>
+<li><a href="#cloudfront">CloudFront</a></li>
+<li><a href="#api-gateway">API Gateway</a></li>
+<li><a href="#appsync">AppSync</a></li>
+<li><a href="#amplify">Amplify</a></li>
+<li><a href="#lambda">Lambda</a></li>
+<li><a href="#dynamodb">DynamoDB</a></li>
+<li><a href="#s3">S3</a></li>
+<li><a href="#sns">SNS</a></li>
+<li><a href="#sqs">SQS</a></li>
+<li><a href="#ses">SES</a></li>
+<li><a href="#kinesis">Kinesis</a></li>
+<li><a href="#eventbridge">EventBridge</a></li>
+<li><a href="#step-functions">Step Functions</a></li>
+<li><a href="#athena">Athena</a></li>
+<li><a href="#ssm-parameter-store">SSM Parameter Store</a></li>
+<li><a href="#secrets-manager">Secrets Manager</a></li>
+<li><a href="#appconfig">AppConfig</a></li>
+<li><a href="#aws-config">AWS Config</a></li>
+<li><a href="#cloudwatch-synthetics-canaries">CloudWatch Synthetics (Canaries)</a></li>
+<li><a href="#cloudwatch-metrics-and-alarms">CloudWatch Metrics and Alarms</a></li>
+<li><a href="#cloudwatch-logs">CloudWatch Logs</a></li>
+<li><a href="#cloudformation">CloudFormation</a></li>
+<li><a href="#serverless-application-repository-sar">Serverless Application Repository (SAR)</a></li>
+<li><a href="#sam-serverless-application-model">SAM (Serverless Application Model)</a></li>
+<li><a href="#cdk">CDK</a></li>
+<li><a href="#x-ray">X-Ray</a></li>
+</ul>
+<h2 id="serverless-benefits">Serverless Benefits</h2>
+<ul>
+<li>less things to own</li>
+<li>less/no ops</li>
+<li>costs - pay-per-use</li>
+<li>elastic / limits scaling concerns</li>
+<li>deliver value quicker</li>
+<li>scale teams / org fit</li>
+<li>durability - services built-in replication across AZs or regions</li>
+<li>every service has soft limits for protection</li>
+</ul>
+<hr>
+<h2 id="relevant-patterns">Relevant Patterns</h2>
+<ul>
+<li>event sourcing</li>
+<li>circuit breaker - trip circuit to prevent downstream systems overload</li>
+<li>load shedding - prevent backlog buildup</li>
+<li>handle poison messages - prevent kinesis and dynamo streams from progressing</li>
+<li>prevent distributed transactions.  e.g. lambda send job to SQS and stores status in dynamodb.  break it up.  lambda put job status in dynamo -&gt; dynamo stream -&gt; lambda send job to SQS</li>
+<li>strangler - migrate from monolith to serverless.  e.g. DB - run RDS and dynamodb in parallel and update both for a period of time</li>
+</ul>
+<hr>
+<h2 id="deployment-types">Deployment Types</h2>
+<ul>
+<li>all-at-once</li>
+<li>blue/green</li>
+<li>canary - traffic shift percentages with metrics</li>
+<li>linear - changing the amount of traffic split to the new version incrementally according to a percentage that is provided when configured.</li>
+</ul>
 <hr>
 <h2 id="networking-and-content-delivery">Networking and Content Delivery</h2>
 <h3 id="vpc">VPC</h3>
 <ul>
 <li>virtual private cloud</li>
-<li>Subnets, route tables, internet gateways, elastic ips, nat gateways, network ACLs, security groups</li>
+<li>Subnets, route tables, internet gateways, elastic ips, nat gateways, network ACLs, security groups, prefix lists</li>
 </ul>
 <h3 id="elbalb">ELB/ALB</h3>
 <ul>
-<li>elastic (TCP) | application load balancer (http layer 7)</li>
+<li>elastic (TCP)</li>
+<li>ALB application load balancer (http layer 7) - Content-Based Routing</li>
+<li>NLB network load balancer (tcp layer 4)</li>
+<li>ELB elastic load balancer (tcp layer 4)</li>
 </ul>
-<h3 id="vpc-endpoint">VPC Endpoint</h3>
+<h3 id="privatelink--vpc-endpoint">PrivateLink / VPC Endpoint</h3>
 <ul>
 <li>connect to AWS services from VPC without going through internet</li>
 <li>enables you to privately connect your VPC to supported AWS services and VPC endpoint services powered by PrivateLink without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection</li>
@@ -483,9 +563,17 @@ if (!doNotTrack) {
 <h3 id="route-53">Route 53</h3>
 <ul>
 <li>managed DNS</li>
+<li>main service for reliability / DR</li>
+<li>public and private domains (hosted zones)</li>
+<li>route to aws services - CloudFront, API Gateway, ELB, RDS, S3 bucket, EC2, VPC Interface Endpoint</li>
+<li>record sets, TTL</li>
+<li>health checks</li>
+<li>load balancing via DNS</li>
+<li>routing policies - latency Based Routing, Geo DNS, Geoproximity, and Weighted Round Robin</li>
 <li>domain registration</li>
-<li>DNS / hosted zones</li>
-<li>Traffic Flow makes it easy for you to manage traffic globally through a variety of routing types, including Latency Based Routing, Geo DNS, Geoproximity, and Weighted Round Robin</li>
+<li>geo routing, geoproximity routing</li>
+<li>alias record type (aws specific.  used for root/bare/naked domains)</li>
+<li><a href="https://medium.com/@kumargaurav1247/aws-route53-cheat-sheet-in-2-minutes-ada9b7f0fcb">AWS Route53 — Cheat Sheet(In 2 Minutes)</a></li>
 </ul>
 <h3 id="cloud-map">Cloud Map</h3>
 <ul>
@@ -500,33 +588,79 @@ if (!doNotTrack) {
 <h3 id="cloudfront">CloudFront</h3>
 <ul>
 <li>CDN</li>
-<li>edge / PoP locations.  traffic over AWS global infrastructure</li>
-<li><a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html">Restricting Access to Amazon S3 Content by Using an Origin Access Identity</a></li>
+<li>POP / edge servers - traffic over AWS global infrastructure</li>
+<li>price classes</li>
+<li>ACM for TLS/SSL certs</li>
+<li>cache policies.  cookie, headers, querystring, TTLs configs</li>
+<li><a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html">origin access identity</a></li>
+<li>origin custom headers</li>
+<li>signed URLs or cookies</li>
+<li>origin groups - primary origin and a second origin to failover to</li>
+<li>custom error responses - http error codes mapped to response page paths</li>
+<li>georestrictions</li>
+<li>lambda@edge - headers only requests, rewrite URLs, server-side rendering (SSR), auth, etc.</li>
+<li>cache invalidations</li>
+<li>non GET HTTP methods support.  must explicitly turn on support for PUT, POST, PATCH, etc.</li>
+<li>WAF association</li>
+<li>can point to Object Lambda Access Point</li>
 </ul>
 <h3 id="api-gateway">API Gateway</h3>
 <ul>
+<li>REST API vs HTTP API (cost).  see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-vs-rest.html">Choosing between HTTP APIs and REST APIs</a></li>
 <li>edge (cloudfront) and regional endpoints</li>
 <li>API Keys</li>
+<li>caching (memcached) (fixes cost based on time / no pay per use)</li>
+<li>API Keys</li>
 <li>Usage Plans / quotas</li>
-<li>websockets</li>
+<li>client certificates - ensure requests to backend are from APIG</li>
+<li>throttles</li>
+<li>timeout - 29s</li>
+<li>request (POST) payload limits (10 MB).  no response size limits. (tested with proxy integration for 200 MB video file download)</li>
+<li>auth - cognito, JWT, IAM (aws sigv4), custom lambda auth</li>
+<li>OpenAPI / Swagger specs for payload validation</li>
+<li>service integrations - no need for lambda glue in middle</li>
+<li>velocity templates (vtl) - request/response mapping</li>
 <li>custom domains</li>
+<li>private endpoints</li>
+<li>websockets</li>
+<li>lambda integration.  point to lambda alias for deployments.</li>
+<li>stages</li>
+<li>mock integrations / responses</li>
 </ul>
 <h3 id="appsync">AppSync</h3>
 <ul>
 <li>GraphQL managed service</li>
 <li>integrates with Amazon DynamoDB, Amazon Elasticsearch, and Amazon Lambda</li>
+<li>resolvers</li>
+<li>resolver mapping templates via velocty (vtl)</li>
 <li>Real-time subscriptions</li>
+<li>aws specific graphql schema <a href="https://docs.amplify.aws/cli/graphql-transformer/directives"><code>@directives</code></a> for model (ddb), auth (cognito),</li>
+<li>GraphiQL</li>
+<li>javascript for vtl coming (2021-03-28)</li>
 </ul>
 <hr>
 <h2 id="compute">Compute</h2>
 <h3 id="ec2">EC2</h3>
+<ul>
+<li>AMI</li>
+<li>elastic IPs</li>
+<li>ASGs (launch templates)</li>
+<li>UserData - script to run on instance start</li>
+<li>EC2 metadata service</li>
+</ul>
 <h3 id="ecs">ECS</h3>
 <ul>
 <li>containers</li>
+<li>task definitions</li>
+</ul>
+<h3 id="ecr">ECR</h3>
+<ul>
+<li>container registry</li>
 </ul>
 <h3 id="fargate">Fargate</h3>
 <ul>
 <li>containers</li>
+<li>task definitions</li>
 <li>run containers without having to manage servers or clusters</li>
 </ul>
 <h3 id="batch">Batch</h3>
@@ -545,7 +679,45 @@ if (!doNotTrack) {
 <li>similar to DigitalOcean</li>
 </ul>
 <h3 id="elastic-beanstalk">Elastic Beanstalk</h3>
+<ul>
+<li>PaaS with language runtime + docker containers</li>
+<li>heroku-like</li>
+</ul>
 <h3 id="lambda">Lambda</h3>
+<ul>
+<li>synchronous vs asynchronous vs poll based/stream processing (poll based is sync. via event-source mappings)</li>
+<li>memory - single knob for memory and CPU</li>
+<li>DLQ</li>
+<li>lambda destinations (only for async invokes)</li>
+<li>reserved concurrency - concurrency allocated for a specific function. e.g. i always want fn X to be able to run 10 lambda invokes concurrently</li>
+<li>provisioned concurrency - pre-warmed lambda instances / no cold starts.  good for latency sensitive needs
+<ul>
+<li>can optionally use auto scaling to adjust on based on metrics and/or schedule.</li>
+<li>will spill over to on-demand scaling (lambda default)</li>
+<li>Provisioned Concurrency comes out of your regional concurrency limit</li>
+</ul>
+</li>
+<li>concurrent executions (throttles) - 1000 per account</li>
+<li>timeout - 15min
+<ul>
+<li>set code timeouts based on remaining invocation time provided in context</li>
+</ul>
+</li>
+<li>burst concurrency - 500 - 3000</li>
+<li>burst - 500 new instances / min</li>
+<li>poll based options (kinesis, dynamodb, SQS)
+<ul>
+<li>on-failure destination (SNS or SQS)</li>
+<li>retry attempts</li>
+<li>max age of record - use to implement load shedding (prioritize newer messages)</li>
+<li>split batch on error</li>
+<li>concurrent batches per shard</li>
+</ul>
+</li>
+<li>service integrations - <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-services.html">Using AWS Lambda with other services - AWS Lambda</a></li>
+<li>APIG -&gt; lambda</li>
+<li>ALB -&gt; lambda</li>
+</ul>
 <h3 id="lambdaedge">Lambda@Edge</h3>
 <ul>
 <li>feature of Amazon CloudFront that lets you run code closer to users of your application, which improves performance and reduces latency</li>
@@ -555,6 +727,15 @@ if (!doNotTrack) {
 <h3 id="s3">S3</h3>
 <ul>
 <li>object/blob storage</li>
+<li>versioned buckets</li>
+<li>presigned URLs for private content (download or upload)</li>
+<li><a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3 batch operations</a></li>
+<li>S3 select</li>
+<li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops-basics.html">batch operations</a> - perform operation on list of objects specified in manifest.  e.g. lambda, copy, etc.</li>
+<li>storage classes</li>
+<li>S3 event notifications - notification destinations are SNS, SQS, lambda</li>
+<li>replication - cross-region, same-region</li>
+<li><a href="https://aws.amazon.com/blogs/aws/introducing-amazon-s3-object-lambda-use-your-code-to-process-data-as-it-is-being-retrieved-from-s3/">S3 object lambda</a> - process data retrieved from S3 with lambda before returning it to an application. lambda calls <a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#writeGetObjectResponse-property"><code>writeGetObjectResponse</code></a> to send modified object contents back to <code>GET</code> request.  Create S3 Access Point, then Object Lambda Access Point.</li>
 </ul>
 <h3 id="glacier">Glacier</h3>
 <ul>
@@ -565,6 +746,7 @@ if (!doNotTrack) {
 <li>elastic file system for Linux-based workloads for use with AWS Cloud services and on-premises resources.</li>
 <li>can mount as NFS v4</li>
 <li>e.g. shared file system.  many EC2 instances can mount same efs file system.</li>
+<li>can mount to lambda local filesystem</li>
 </ul>
 <h3 id="fsx-for-windows-file-server">FSx for Windows File Server</h3>
 <ul>
@@ -583,6 +765,24 @@ if (!doNotTrack) {
 <hr>
 <h2 id="database">Database</h2>
 <h3 id="dynamodb">DynamoDB</h3>
+<ul>
+<li>concepts - tables, items, queries, scans, indexes</li>
+<li>global tables - for resilient active-active architectures</li>
+<li>DAX - DynamoDB Accelerator - in memory cache in front</li>
+<li>GSI (Global Secondary Indexes), LSI (Local Secondary Indexes)</li>
+<li>transactions</li>
+<li>throttles</li>
+<li>point-in-time recovery (PITR)</li>
+<li>streams - 24hr data retention.  poison messages (retry until success - can cause backlog)</li>
+<li>partition key - distribute data among nodes to minimize hot partitions</li>
+<li>TTL - can the data be removed automatically</li>
+<li>parallelization factor for DDB streams processed by lambda</li>
+<li>single table designs</li>
+<li>fine grained item (<code>dynamodb:LeadingKeys</code>) and attribute level IAM (<code>dynamodb:Attributes</code>).  enables multi-tenant isolation.</li>
+<li><a href="https://docs.aws.amazon.com/dynamodb-encryption-client/latest/devguide/what-is-ddb-encrypt.html">Amazon DynamoDB Encryption Client</a></li>
+<li><a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-reference.html">PartiQL - A SQL-Compatible Query Language for Amazon DynamoDB - Amazon DynamoDB</a></li>
+<li><a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DataExport.html">dynamodb table export to s3</a></li>
+</ul>
 <h3 id="documentdb-mongodb-compatibility">DocumentDB (MongoDB compatibility)</h3>
 <h3 id="rds">RDS</h3>
 <ul>
@@ -594,9 +794,14 @@ if (!doNotTrack) {
 </ul>
 <h3 id="elasticache">ElastiCache</h3>
 <ul>
-<li>redis and memcached</li>
+<li>managed redis and memcached</li>
 </ul>
 <h3 id="elasticsearch">ElasticSearch</h3>
+<ul>
+<li>cluster</li>
+<li>kibana - integrated with IAM</li>
+<li>IAM for granular es api operations</li>
+</ul>
 <h3 id="neptune">Neptune</h3>
 <ul>
 <li>graph database. query languages Apache TinkerPop Gremlin and SPARQL (RDF)</li>
@@ -616,33 +821,177 @@ if (!doNotTrack) {
 </ul>
 <hr>
 <h2 id="application-integration">Application Integration</h2>
+<h3 id="appflow">AppFlow</h3>
+<ul>
+<li>managed integration (ETL) service</li>
+<li>securely transfer data between SaaS applications (Salesforce, Marketo, Slack, etc.), and AWS services (S3, Redshift, EventBridge, etc.)</li>
+<li>concepts - flow, source, destination, flow trigger (on demand, event, schedule), map fields from source to destination (formula transforms, value validations), filters (determine records to transfer)</li>
+<li>Flow notifications - flow start|complete|deactivated events sent to CloudWatch Events/EventBridge (<code>&quot;source&quot;: &quot;aws.appflow&quot;</code>)</li>
+<li>security
+<ul>
+<li>encryption at rest - connection data stored in secrets manger using AWS managed or Customer managed CMK</li>
+<li>Encryption in Transit (TLS 1.2) - choose either an AWS managed CMK or a customer managed CMK. When executing a flow, Amazon AppFlow stores data temporarily in an intermediate S3 bucket and encrypts it using this key. This intermediate bucket is deleted after 24 hours, using a bucket lifecycle policy.</li>
+</ul>
+</li>
+<li><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonappflow.html#amazonappflow-actions-as-permissions">Actions defined by Amazon AppFlow</a></li>
+</ul>
 <h3 id="step-functions">Step Functions</h3>
-<p>orchestration with many built-in integrations to aws services</p>
+<ul>
+<li>Standard Workflows vs Express Workflows</li>
+<li>orchestration with many built-in integrations to aws services</li>
+<li>saga pattern for rollback</li>
+<li>parallel map opportunities - run tasks in parallel</li>
+<li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html#welcome-integrations">service integrations</a> - request/response, run a job (<code>.sync</code>), callback with task token (<code>.waitForTaskToken</code>)</li>
+</ul>
 <h3 id="sns">SNS</h3>
 <ul>
 <li>pub/sub</li>
 <li>message filtering with subscription</li>
 <li>push notifications</li>
+<li>standard topic
+<ul>
+<li>at least once delivery</li>
+<li>best effort ordering - ensure downstream consumers are idempotent</li>
+</ul>
+</li>
+<li>FIFO topic
+<ul>
+<li>strict ordering</li>
+<li>Strict deduplication: Duplicate messages aren&rsquo;t delivered.</li>
+<li>Deduplication happens within a 5-minute interval, from the message publish time.</li>
+</ul>
+</li>
+<li>fan out</li>
+<li>subscription filters</li>
+<li>destination types
+<ul>
+<li>SQS</li>
+<li>lambda</li>
+<li>http/s</li>
+<li>mobile push notifications</li>
+<li>SMS messages</li>
+<li>email</li>
+</ul>
+</li>
+<li>DLQ configuration</li>
+<li>KMS encryption</li>
 </ul>
 <h3 id="sqs">SQS</h3>
 <ul>
 <li>managed message queuing service</li>
+<li>batch size - batch fails as unit</li>
+<li>visibility timeout - set to 6x lambda timeout</li>
+<li>message retention period</li>
+<li>delivery delay - max 15min</li>
+<li>types - standard vs FIFO
+<ul>
+<li>standard - at least once delivery.  need to ensure idempotent</li>
+<li>FIFO - strict ordering.  exactly-once processing</li>
+</ul>
+</li>
+<li>alarm on queue depth</li>
+<li>KMS encryption</li>
+<li><a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html">DLQ</a> for redrive for messages that can&rsquo;t be delivered to target SQS queue</li>
+</ul>
+<h3 id="ses">SES</h3>
+<ul>
+<li>send or receive emails</li>
+<li>verify domain (DNS txt) and/or email addresses (confirmation email) - verify that you own the email address or domain that you plan to send from</li>
+<li>understand <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/quotas.html">Service quotas</a></li>
+<li>max message size - 10 MB per message (after base64 encoding).</li>
+<li>sending identity - domain or an email address</li>
+<li>send emails via SMTP or API (AWS CLI, <a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#sendEmail-property">AWS SDK</a>)</li>
+<li>connect to a URL that provides an endpoint for the Amazon SES API or SMTP interface (e.g. email-smtp.us-east-1.amazonaws.com:587)</li>
+<li>DKIM support - DKIM works by adding a digital signature to the headers of an email message. This signature can then be validated against a public cryptographic key that is located in the organization&rsquo;s DNS record</li>
+<li>SPF support - SPF establishes a method for receiving mail servers to verify that incoming email from a domain was sent from a host authorized by that domain’s administrators</li>
+<li>IAM to control user access to email sending (e.g. <code>ses:SendEmail</code>)</li>
+<li>Configuration sets - groups of rules that you can apply to the emails you send using Amazon SES.  can publish email sending events to CWL, Firehose, SNS</li>
+<li>Event types - Send, Reject, Delivery, Bounce, Complaint, Click  Open  Rendering Failure</li>
+<li>store inbound emails in S3</li>
+<li>trigger lambdas based on inbound emails</li>
+<li>publish your email sending events to CWLs or kinesis firehose</li>
+<li>Sending personalized email via email templates.  templates contain placeholder values.  based on Handlebars template system</li>
+<li>list management
+<ul>
+<li>customers can manage their own mailing lists, known as contact lists.</li>
+<li>can create topics, associate topic preferences to a contact and specify <code>OPT_[IN|OUT]</code> for the topic.</li>
+</ul>
+</li>
+<li>Global Suppression List
+<ul>
+<li>includes a global suppression list. When any Amazon SES customer sends an email that results in a hard bounce, Amazon SES adds the email address that produced the bounce to a global suppression list. The global suppression list is global in the sense that it applies to all Amazon SES customers. In other words, if a different customer attempts to send an email to an address that&rsquo;s on the global suppression list, Amazon SES accepts the message, but doesn&rsquo;t send it, because the email address is suppressed.</li>
+<li>enabled by default for all Amazon SES accounts. You can&rsquo;t disable it.</li>
+</ul>
+</li>
+<li>reputation dashboard to track bounce and complaint rates</li>
+<li>Dedicated IP Addresses</li>
+<li>IP pool management – If you lease dedicated IP addresses to use with Amazon SES, you can create groups of these addresses, called dedicated IP pools. You can then associate these dedicated IP pools with configuration sets</li>
+<li>SES sandbox - all new accounts.
+<ul>
+<li>only send mail to verified email addresses and domains</li>
+<li>only send mail from verified email addresses and domains</li>
+<li>send a maximum of 200 messages per 24-hour period</li>
+<li>send a maximum of 1 message per second</li>
+</ul>
+</li>
+<li>need to <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/request-production-access.html?icmpid=docs_ses_console">request production access</a> to move out of sandbox</li>
+<li>VPC endpoint support - see <a href="https://aws.amazon.com/blogs/aws/new-amazon-simple-email-service-ses-for-vpc-endpoints/">New – Amazon Simple Email Service (SES) for VPC Endpoints</a></li>
 </ul>
 <h3 id="eventbridge">EventBridge</h3>
 <ul>
 <li>pub/sub with many built-in integrations</li>
 <li>integrate with external SaaS or any custom application</li>
 <li>e.g. can log all events in account including CloudTrail to CloudWatch Log Group</li>
+<li>put events - 2400 requests per second per region</li>
+<li>AWS service rule <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-targets.html">targets</a></li>
+<li><a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-schemas.html">schema registry</a> - helps with managing and versioning event schemas for evolution.  Codegen code for handling events in various languages.  can auto discover schemas by observing events on the bus.  based on json schema</li>
+<li>invocation quota -  4500 requests per second per region (invocation is an event matching a rule and being sent on to the rule’s targets)</li>
+<li>DLQ</li>
+<li>EventBridge resource policies</li>
+<li>archive and replay events</li>
+<li>IAM - resource-based and identity-based policies.  owner of EB resources (bus, rules, etc.) is an AWS root account.</li>
+<li>supports sending and recieving events across accounts</li>
+<li><a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/create-partner-event-bus.html">SaaS Partner Integrations</a></li>
 </ul>
 <h3 id="kinesis">Kinesis</h3>
 <ul>
 <li>collect, process, and analyze real-time, streaming data</li>
 <li>kafka alternative</li>
+<li>partition key</li>
+<li>shard count</li>
+<li>lambda - lambda polls per shard
+<ul>
+<li>batch size</li>
+<li>batch window</li>
+<li>parallelization factor
+<ul>
+<li>Concurrent batches per shard – Process multiple batches from the same shard concurrently.</li>
+</ul>
+</li>
+<li>enhanced fan-out via AWS::Kinesis::StreamConsumer.  each consumer gets 2 MiB per second for every shard you subscribe to.  can subscribe a max of 5 consumers per stream.</li>
+<li>Starting position - Latest, Trim horizon, At timestamp</li>
+<li>On-failure destination</li>
+<li>Retry attempts</li>
+<li>Maximum age of record – The maximum age of a record that Lambda sends to your function.</li>
+<li>Split batch on error</li>
+</ul>
+</li>
+<li>poison messages (retry until success - can cause backlog)</li>
+<li>KMS</li>
+<li>aggregate multiple records into one while staying under size limits to increase throughput. see <a href="https://github.com/awslabs/kinesis-aggregation">https://github.com/awslabs/kinesis-aggregation</a></li>
+<li>no autoscaling around shards.  requires management/ops.  consider SQS first as there&rsquo;s less to manage and see if it can meet the need</li>
 </ul>
 <hr>
 <h2 id="analytics">Analytics</h2>
 <h3 id="kinesis-data-analytics">Kinesis Data Analytics</h3>
 <p>analyze streaming data with SQL</p>
+<ul>
+<li>real-time analysis</li>
+<li>supports SQL applications (aws specific) and apache flink applications</li>
+<li>concepts - application, input steam -&gt; application code (SQL statements) -&gt; output stream</li>
+<li>time based windows.  tumbling windows.</li>
+<li>pump</li>
+</ul>
 <h3 id="pinpoint">Pinpoint</h3>
 <p>usage, customer, and engagement analytics</p>
 <h3 id="emr">EMR</h3>
@@ -656,18 +1005,51 @@ if (!doNotTrack) {
 <ul>
 <li>catalog / metadata (hive metadata catalog)</li>
 <li>crawlers autodiscover schema</li>
-<li>[py]spark and scala</li>
+<li>data stores</li>
+<li>jobs</li>
+<li>job types - Spark, Streaming ETL, and Python shell</li>
+<li>languages - [py]spark and scala</li>
+<li>concepts - Data Catalog, Classifier, Connection, Crawler, Database, Table, Dynamic Frame (extend spark RDD), Job, Transform, Trigger (time based or event)</li>
+<li>glue notebook (Jupyter/Zeppelin) - interactive development and testing of your ETL scripts on a development endpoint</li>
+<li>partitions</li>
+<li>AWS Data Wrangler</li>
 </ul>
+<h3 id="glue-databrew">Glue DataBrew</h3>
+<ul>
+<li>visual data preparation service</li>
+<li>extract, clean, normalize, transform, combine, data at scale</li>
+<li>target audience: non-technical Data Analyst</li>
+<li>serverless.  pay for what you use</li>
+<li>concepts
+<ul>
+<li>datasets</li>
+<li>recipes - steps to apply/take on dataset</li>
+<li>job - recipe + dataset run</li>
+<li>project - visual workspace for working with data interactively.  can apply changes and visually see the results in UI.  you specify a sampling of the data to work with.</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://www.evernote.com/l/AAG7ZKzRRblBGakFLIWEBGTrsChbY2sRNlkB/image.png" alt=""></p>
 <h3 id="athena">Athena</h3>
 <ul>
+<li>serverless querying of S3 data</li>
+<li>federated query - run SQL queries across data stored in relational, non-relational, object, and custom data sources.</li>
+<li>CTAS - create table as select</li>
 <li>query S3 data in place.  pay per query / data accessed.</li>
 <li>integrated with glue catalog</li>
-<li>Presto</li>
+<li>Presto is underlying tech</li>
 </ul>
 <h3 id="quicksight">QuickSight</h3>
 <h3 id="lake-formation">Lake Formation</h3>
 <hr>
 <h2 id="management--governance">Management &amp; Governance</h2>
+<h3 id="well-architected-framework">Well-Architected Framework</h3>
+<ul>
+<li>describes the key concepts, design principles, and architectural best practices for designing and running workloads in the cloud</li>
+<li>5 pillars - Operational Excellence, Security, Reliability, Performance, Cost Optimization</li>
+<li>Well-Architected Tool - provides guidance by answer questions</li>
+<li>Lens - serverless, analytics, ML, SaaS, etc.</li>
+</ul>
 <h3 id="control-tower">Control Tower</h3>
 <p>set up and govern a new, secure multi-account AWS environment.  builders can provision new AWS accounts in a few clicks, while you have peace of mind knowing your accounts conform to your company-wide policies</p>
 <h3 id="organizations">Organizations</h3>
@@ -677,6 +1059,24 @@ if (!doNotTrack) {
 <h3 id="cloudformation">CloudFormation</h3>
 <ul>
 <li>declarative provisioning of AWS infrastructure/resource</li>
+<li>parameters, mappings, conditionals</li>
+<li>intrinsic functions</li>
+<li>nested stacks</li>
+<li>stack drift</li>
+<li>stacksets - deploy stack to multiple regions.  For DR, active-active, etc.</li>
+<li>max resources declared in stack (500)</li>
+<li>[custom resources]
+(<a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html">https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html</a>) - backed by lambda</li>
+<li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">macros</a> - lambda performs the template processing / transform</li>
+<li>modules - package resource configurations for inclusion across stack templates, in a transparent, manageable, and repeatable way</li>
+</ul>
+<h3 id="serverless-application-repository-sar">Serverless Application Repository (SAR)</h3>
+<blockquote>
+<p>enables teams, organizations, and individual developers to find, deploy, publish, share, store, and easily assemble serverless architectures</p>
+</blockquote>
+<ul>
+<li>any cfn can be used for SAR app</li>
+<li>iam for access to SAR app</li>
 </ul>
 <h3 id="service-catalog">Service Catalog</h3>
 <ul>
@@ -702,39 +1102,63 @@ if (!doNotTrack) {
 </ul>
 <h3 id="config">Config</h3>
 <ul>
+<li>monitor, notify, quarantine, remediate based on resource changes.</li>
+<li>RDK - rule development kit.  Config triggers lambda on resource changes.</li>
 <li>AWS Config is a service that enables you to assess, audit, and evaluate the configurations of your AWS resources. Config continuously monitors and records your AWS resource configurations and allows you to automate the evaluation of recorded configurations against desired configurations.</li>
 <li>define rules that get evaluated when any change is made (e.g. resource provisioned)</li>
 <li>there are aws managed rules that are part of the service and you can define custom ones via lambda</li>
 </ul>
+<h3 id="appconfig">AppConfig</h3>
+<ul>
+<li>feature flags, Update applications without interruptions, Control deployment of changes across your application</li>
+<li>a capability of AWS Systems Manager, to create, manage, and quickly deploy application configurations. AppConfig supports controlled deployments to applications of any size and includes built-in validation checks and monitoring. You can use AppConfig with applications hosted on EC2 instances, AWS Lambda, containers, mobile applications, or IoT devices.</li>
+<li>JSON Schema Validators - ensure that new or updated configuration settings conform to the best practices required by your application</li>
+<li>e.g. a JSON doc with application configuration can be sourced from S3, parameter store</li>
+</ul>
 <h3 id="cloudwatch-logs">CloudWatch Logs</h3>
 <ul>
 <li>centralize the logs from all of your systems, applications, and AWS services that you use, in a single, highly scalable service</li>
+<li>concepts - log groups, log streams</li>
+<li>subscriptions - real-time feed of log events from CloudWatch Logs (Kinesis <code>[stream|firehose]</code>, elasticsearch, Lambda)</li>
+<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/MonitoringLogData.html">Creating Metrics From Log Events Using Filters</a></li>
+<li>encrypt with KMS</li>
 </ul>
-<h4 id="resources">Resources</h4>
-<ul>
-<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/FilterAndPatternSyntax.html">CloudWatch Metric Filters</a> - define custom metrics based on a pattern matched to log streams in a log group.</li>
-<li><a href="https://aws.amazon.com/blogs/aws/simplified-time-series-analysis-with-amazon-cloudwatch-contributor-insights/">Simplified Time-Series Analysis with Amazon CloudWatch Contributor Insights</a> - generate metrics from CWL data (JSON or CLF formats)</li>
-</ul>
-<h3 id="cloudwatch-events">CloudWatch Events</h3>
+<h3 id="cloudwatch-events-see-eventbridge">CloudWatch Events (see <a href="">EventBridge</a>)</h3>
 <ul>
 <li>cron triggers</li>
 </ul>
 <h3 id="cloudwatch-insights">CloudWatch Insights</h3>
-<p>query log groups</p>
+<ul>
+<li>query log groups</li>
+<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_QuerySyntax.html">CWL Query Syntax</a></li>
+</ul>
 <h3 id="cloudwatch-metrics">CloudWatch Metrics</h3>
 <ul>
-<li>A metric represents a time-ordered set of data points that are published to CloudWatch</li>
-</ul>
-<h4 id="resources-1">Resources</h4>
-<ul>
-<li><a href="https://aws.amazon.com/blogs/devops/building-an-amazon-cloudwatch-dashboard-outside-of-the-aws-management-console/">Building an Amazon CloudWatch Dashboard Outside of the AWS Management Console</a> - display CloudWatch dashboard outside of AWS Console.  You specify the dashboard in JSON and it returns a binary image</li>
+<li>time series data</li>
+<li>metric - time-ordered set of data points that are published to CloudWatch</li>
+<li>concepts - namespace, dimensions (name/value pairs), units (Bytes, Seconds, Count, and Percent), time stamp, resolution (granularity)</li>
+<li>statistics - sum, max, min, average, sample count, percentile (pNN) (metric data aggregations over specified periods of time)</li>
+<li>metrics retention</li>
+<li>Dashboards - for Visualizations</li>
+<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/MonitoringLogData.html">Creating Metrics From Log Events Using Filters</a></li>
+<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Embedded_Metric_Format_Generation.html">Embedded Metric Format</a> - generate metrics from structured (json) log messages</li>
 </ul>
 <h3 id="cloudwatch-alarms">CloudWatch Alarms</h3>
 <ul>
 <li>notify via email, SNS topics</li>
 <li>create a CloudWatch alarm that watches a single CloudWatch metric or the result of a math expression based on CloudWatch metrics</li>
 <li>An alarm watches a single metric over a specified time period, and performs one or more specified actions, based on the value of the metric relative to a threshold over time. The action is a notification sent to an Amazon SNS topic or an Auto Scaling policy. You can also add alarms to dashboards.</li>
+<li>composite alarms</li>
+<li>Alarm States - OK, ALARM, INSUFFICIENT_DATA (missing data points)</li>
 </ul>
+<h3 id="cloudwatch-synthetics-canaries">CloudWatch Synthetics (Canaries)</h3>
+<ul>
+<li>supports monitoring your REST APIs, URLs, and website content every minute, 24x7, and alerts you when your application endpoints don’t behave as expected.</li>
+<li>Node.js based.  bundles in Puppeteer + Chromium to the runtime</li>
+</ul>
+<blockquote>
+<p>create canaries, configurable scripts that run on a schedule, to monitor your endpoints and APIs. Canaries follow the same routes and perform the same actions as a customer, which makes it possible for you to continually verify your customer experience even when you don&rsquo;t have any customer traffic on your applications. By using canaries, you can discover issues before your customers do.</p>
+</blockquote>
 <h3 id="cloudtrail">CloudTrail</h3>
 <ul>
 <li>logs all recording AWS API and Management Console actions to S3</li>
@@ -753,8 +1177,12 @@ if (!doNotTrack) {
 </ul>
 <h3 id="codebuild">CodeBuild</h3>
 <ul>
+<li>managed build service</li>
+<li>provides prepackaged build environments</li>
 <li>continuous integration service that compiles source code, runs tests, and produces software packages</li>
 <li>like Jenkins, Travis, CircleCI</li>
+<li>concepts - build project - environment (linux/windows, container image to use, etc.),</li>
+<li><a href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html"><code>buildspec.yml</code></a> - phases, env vars, artifacts</li>
 </ul>
 <h3 id="codedeploy">CodeDeploy</h3>
 <ul>
@@ -766,18 +1194,62 @@ if (!doNotTrack) {
 <li>orchestrates CodeBuild and CodeDeploy</li>
 <li>sources: github, CodeCommit, S3</li>
 </ul>
+<h3 id="codeartifact">CodeArtifact</h3>
+<ul>
+<li>fully managed software artifact repository service that makes it easy for organizations of any size to securely store, publish, and share packages used in their software development process</li>
+<li>artifactory competitor</li>
+</ul>
 <h3 id="x-ray">X-Ray</h3>
 <ul>
 <li>distributed tracing</li>
 <li>instrument code</li>
 <li>similar to zipkin, jaeger</li>
 </ul>
+<h3 id="aws-cli">AWS CLI</h3>
+<ul>
+<li><code>~/.aws/[config|credentials]</code></li>
+<li><code>--generate-cli-skeleton</code> - e.g. <code>aws codebuild start-build --generate-cli-skeleton &gt; build.json</code> -&gt; <code>aws codebuild start-build --cli-input-json file://start-build.json</code></li>
+</ul>
 <h3 id="amplify">Amplify</h3>
+<ul>
+<li>CLI to provision resources (Auth (cogntio), API (API Gateway), GraphQL (AppSync), Storage (S3, DynamoDB))</li>
+<li>client-side javascript/typescript, iOS, Android libraries and UI components</li>
+<li>Amplify Console.  CI/CD static site hosting.</li>
+</ul>
+<h3 id="sam-serverless-application-model">SAM (Serverless Application Model)</h3>
+<ul>
+<li>higher-level cfn resource types (transformed via cfn macro on backend)</li>
+<li>SAM CLI</li>
+<li>local development features via docker (apig endpoint</li>
+</ul>
+<h3 id="cdk">CDK</h3>
+<ul>
+<li>express resources using general purpose programming languages (ts/js/python/java/C#)</li>
+<li>constructs - cfn (L1), CDK (L2), pattern/solution (L3)</li>
+<li>synth to cfn</li>
+<li>cloud assemblies - cfn + source code, docker images, assets (s3)</li>
+<li>aspects - ability to visit each node/resource in stack and apply changes</li>
+<li>Application -&gt; Stacks -&gt; Constructs</li>
+<li><a href="https://docs.aws.amazon.com/cdk/latest/guide/context.html#context_example">Runtime context</a></li>
+<li><code>[tf|k8s]</code> CDKs</li>
+<li>jsii - core/foundational tech for multi-language/polyglot support.  bind any language to underlying typescript implementation.</li>
+<li>CDK pipelines for CI/CD</li>
+</ul>
+<h3 id="aws-sdks">AWS SDKs</h3>
+<ul>
+<li>built in retries, timeouts</li>
+<li>can configure timeouts (e.g. <code>AWS.config.update({maxRetries: 2, httpOptions: { timeout: 2 * 1000, connectTimeout: 3 * 1000, },})</code>)</li>
+</ul>
 <hr>
 <h2 id="machine-learning">Machine Learning</h2>
 <h3 id="sagemaker">SageMaker</h3>
 <ul>
 <li>build, train, and deploy machine learning models</li>
+<li>provides a suite of built-in algorithms (via docker containers)</li>
+<li>can provide custom containers</li>
+<li>model serving endpoints</li>
+<li>jupyter notebooks</li>
+<li>SageMaker notebook instance is a machine learning (ML) compute instance running the Jupyter Notebook App</li>
 </ul>
 <h3 id="comprehend">Comprehend</h3>
 <ul>
@@ -832,26 +1304,53 @@ if (!doNotTrack) {
 <li>conversational interfaces into any application using voice and text. Amazon Lex provides the advanced deep learning functionalities of automatic speech recognition (ASR) for converting speech to text, and natural language understanding (NLU) to recognize the intent of the text</li>
 <li>chat bots</li>
 </ul>
+<h3 id="kendra">Kendra</h3>
+<ul>
+<li>intelligent search service (ML powered)</li>
+<li>concepts - index, documents (html, pdf, word, ppt, txt), data sources (S3, confluence, OneDrive, etc.), query</li>
+<li>point indexer to files in S3</li>
+<li>pre-built faceted search UI component (web based)</li>
+<li>supports <a href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-custom.html">custom data sources</a>. e.g. salesforce attachments data source</li>
+<li>can create custom document attributes</li>
+<li>developer and enterprise editions</li>
+</ul>
 <hr>
 <h2 id="security-identity-and-compliance">Security, Identity, and Compliance</h2>
 <h3 id="iam">IAM</h3>
+<ul>
+<li>terms - Resources, Identities, Entities, Principals (person or application)</li>
+<li>authentication, authorization</li>
+<li>actions and operations on resources</li>
+<li>policy docs - AWS managed policies, Customer managed policies, Inline policies</li>
+<li>Identity-based and resource-based policies</li>
+<li>identities - users, groups, roles</li>
+<li>STS - temp security credentials</li>
+<li>assume role</li>
+<li>identity federation - Federated users and roles (via OIDC, SAML2, Cognito)</li>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_attribute-based-access-control.html">Attribute-based access control (ABAC)</a> - defines permissions based on attributes (tags)</li>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html">permission boundaries</a></li>
+<li>sigv4 requests</li>
+<li>account root user</li>
+<li>MFA</li>
+</ul>
 <h3 id="cognito">Cognito</h3>
+<ul>
+<li>UserPool</li>
+<li>IdentityPool - exchange UserPool.Identity for temporary IAM credentials
+<ul>
+<li>unauthenticated and authenticated roles</li>
+</ul>
+</li>
+<li>Built-in IdP Providers - amazon, google, twitter, facebook.</li>
+<li>Federation - OIDC, SAML</li>
+<li>API Gateway authorizer</li>
+<li>provided login UIs</li>
+</ul>
 <h3 id="secrets-manager">Secrets Manager</h3>
 <h3 id="waf">WAF</h3>
 <ul>
 <li>web application firewall</li>
-<li>associate with CloudFront, ALB, API Gateway</li>
-</ul>
-<h3 id="firewall-manager">Firewall Manager</h3>
-<ul>
-<li>centrally configure and manage firewall rules across accounts and applications (enterprise)</li>
-<li>e.g. create firewall manager policy that states all CloudFront and ALB instances across accounts must use a specific WebACL.
-<ul>
-<li>you can use tags to specify which CF and ALB instances to apply the RuleGroup to</li>
-</ul>
-</li>
-<li>can automatically apply WebACL to CF and/or ALB instances or only notify &ldquo;out of compliance&rdquo;</li>
-<li>aws config must be enabled and running in each account.  this detects CF and ALB changes.</li>
+<li>associate with ALB, CloudFront, API Gateway</li>
 </ul>
 <h3 id="certificate-manager-acm">Certificate Manager (ACM)</h3>
 <ul>
@@ -865,6 +1364,12 @@ if (!doNotTrack) {
 <ul>
 <li>provides multiple ways to set up and run Amazon Cloud Directory, Amazon Cognito, and Microsoft AD with other AWS services. Amazon Cloud Directory provides a highly scalable directory store for your application’s multihierarchical data. Amazon Cognito helps you create a directory store that authenticates your users either through your own user pools or through federated identity providers. AWS Directory Service for Microsoft Active Directory (Enterprise Edition), also known as Microsoft AD, enables your directory-aware workloads and AWS resources to use a managed Active Directory in the AWS Cloud.</li>
 </ul>
+<hr>
+<h2 id="media-services">Media Services</h2>
+<h3 id="amazon-interactive-video-service">Amazon Interactive Video Service</h3>
+<blockquote>
+<p>Amazon Interactive Video Service (Amazon IVS) is a managed live streaming solution that is quick and easy to set up, and ideal for creating interactive video experiences. Send your live streams to Amazon IVS using standard streaming software like Open Broadcaster Software (OBS) and the service does everything you need to make low-latency live video available to any viewer around the world, letting you focus on building interactive experiences alongside the live video.</p>
+</blockquote>
 
 
         
