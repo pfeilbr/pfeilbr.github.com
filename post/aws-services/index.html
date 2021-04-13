@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  4866 ,
+  "wordCount":  4883 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -944,6 +944,8 @@ if (!doNotTrack) {
 <li>e.g. can log all events in account including CloudTrail to CloudWatch Log Group</li>
 <li>put events - 2400 requests per second per region</li>
 <li>AWS service rule <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-targets.html">targets</a></li>
+<li>at-least-once event delivery to targets (ensure idempotent behavior)</li>
+<li>no ordering guarantees</li>
 <li><a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-schemas.html">schema registry</a> - helps with managing and versioning event schemas for evolution.  Codegen code for handling events in various languages.  can auto discover schemas by observing events on the bus.  based on json schema</li>
 <li>invocation quota -  4500 requests per second per region (invocation is an event matching a rule and being sent on to the rule’s targets)</li>
 <li>DLQ</li>
@@ -959,6 +961,7 @@ if (!doNotTrack) {
 <li>kafka alternative</li>
 <li>partition key</li>
 <li>shard count</li>
+<li>ordering guaranteed for messages per shard</li>
 <li>lambda - lambda polls per shard
 <ul>
 <li>batch size</li>
