@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  4883 ,
+  "wordCount":  4918 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -1109,6 +1109,7 @@ if (!doNotTrack) {
 <li>RDK - rule development kit.  Config triggers lambda on resource changes.</li>
 <li>AWS Config is a service that enables you to assess, audit, and evaluate the configurations of your AWS resources. Config continuously monitors and records your AWS resource configurations and allows you to automate the evaluation of recorded configurations against desired configurations.</li>
 <li>define rules that get evaluated when any change is made (e.g. resource provisioned)</li>
+<li>conformance - collection of Config rules and remediation actions. portable.  can be applied across multiple accounts and regions</li>
 <li>there are aws managed rules that are part of the service and you can define custom ones via lambda</li>
 </ul>
 <h3 id="appconfig">AppConfig</h3>
@@ -1186,6 +1187,7 @@ if (!doNotTrack) {
 <li>like Jenkins, Travis, CircleCI</li>
 <li>concepts - build project - environment (linux/windows, container image to use, etc.),</li>
 <li><a href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html"><code>buildspec.yml</code></a> - phases, env vars, artifacts</li>
+<li>can be used to run ad-hoc workloads over lambda when need to run longer than 15 min</li>
 </ul>
 <h3 id="codedeploy">CodeDeploy</h3>
 <ul>
