@@ -2,14 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://brianpfeil.com/tags/aws/</loc>
+    <lastmod>2021-04-15T00:00:00-04:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/post/aws-cdk-pipeline/</loc>
+    <lastmod>2021-04-15T00:00:00-04:00</lastmod>
+  </url><url>
     <loc>https://brianpfeil.com/</loc>
-    <lastmod>2021-04-11T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-15T00:00:00-04:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/categories/</loc>
+    <lastmod>2021-04-15T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/tags/cdk/</loc>
-    <lastmod>2021-04-11T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-15T00:00:00-04:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/tags/cicd/</loc>
+    <lastmod>2021-04-15T00:00:00-04:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/tags/codepipeline/</loc>
+    <lastmod>2021-04-15T00:00:00-04:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/categories/playground/</loc>
+    <lastmod>2021-04-15T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/post/</loc>
-    <lastmod>2021-04-11T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-15T00:00:00-04:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/tags/</loc>
+    <lastmod>2021-04-15T00:00:00-04:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/categories/TypeScript/</loc>
+    <lastmod>2021-04-15T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/tags/react/</loc>
     <lastmod>2021-04-11T00:00:00+00:00</lastmod>
@@ -20,16 +44,7 @@
     <loc>https://brianpfeil.com/tags/rfc/</loc>
     <lastmod>2021-04-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://brianpfeil.com/tags/</loc>
-    <lastmod>2021-04-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/categories/nil/</loc>
-    <lastmod>2021-04-09T00:00:00-04:00</lastmod>
-  </url><url>
     <loc>https://brianpfeil.com/tags/architecture/</loc>
-    <lastmod>2021-04-09T00:00:00-04:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/tags/aws/</loc>
     <lastmod>2021-04-09T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/post/aws-well-architected/</loc>
@@ -38,11 +53,11 @@
     <loc>https://brianpfeil.com/tags/aws-well-architected/</loc>
     <lastmod>2021-04-09T00:00:00-04:00</lastmod>
   </url><url>
-    <loc>https://brianpfeil.com/categories/</loc>
+    <loc>https://brianpfeil.com/categories/javascript/</loc>
     <lastmod>2021-04-09T00:00:00-04:00</lastmod>
   </url><url>
-    <loc>https://brianpfeil.com/categories/playground/</loc>
-    <lastmod>2021-04-09T00:00:00-04:00</lastmod>
+    <loc>https://brianpfeil.com/categories/nil/</loc>
+    <lastmod>2021-04-06T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/post/api-gateway-private-endpoints/</loc>
     <lastmod>2021-04-06T00:00:00-04:00</lastmod>
@@ -123,9 +138,6 @@
     <lastmod>2021-02-05T00:00:00-05:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/post/azure-durable-functions/</loc>
-    <lastmod>2021-02-05T00:00:00-05:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/categories/javascript/</loc>
     <lastmod>2021-02-05T00:00:00-05:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/post/azure-arm/</loc>
@@ -611,9 +623,6 @@
     <loc>https://brianpfeil.com/post/aws-delivlib/</loc>
     <lastmod>2019-09-03T00:00:00-04:00</lastmod>
   </url><url>
-    <loc>https://brianpfeil.com/categories/TypeScript/</loc>
-    <lastmod>2019-09-03T00:00:00-04:00</lastmod>
-  </url><url>
     <loc>https://brianpfeil.com/post/drawio/</loc>
     <lastmod>2019-08-26T00:00:00-04:00</lastmod>
   </url><url>
@@ -801,9 +810,6 @@
     <lastmod>2018-12-21T00:00:00-05:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/post/aws-codepipeline/</loc>
-    <lastmod>2018-12-20T00:00:00-05:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/tags/codepipeline/</loc>
     <lastmod>2018-12-20T00:00:00-05:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/post/twit-twitter-api-client/</loc>

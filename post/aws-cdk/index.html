@@ -58,7 +58,7 @@
   "headline": "AWS CDK",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  239 ,
+  "wordCount":  250 ,
   "datePublished" : "2019-07-11T00:00:00",
   "dateModified" : "2019-07-11T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -329,8 +329,10 @@ if (!doNotTrack) {
 <li>cloud assemblies - cfn + source code, docker images, assets (s3)</li>
 <li>aspects - ability to visit each node/resource in stack and apply changes</li>
 <li>Application -&gt; Stacks -&gt; Constructs</li>
+<li><a href="https://docs.aws.amazon.com/cdk/latest/guide/context.html#context_example">Runtime context</a></li>
 <li><code>[tf|k8s]</code> CDKs</li>
 <li>jsii - core/foundational tech for multi-language/polyglot support.  bind any language to underlying typescript implementation.</li>
+<li>CDK pipelines for CI/CD</li>
 </ul>
 <h2 id="key-files-and-directories">Key Files and Directories</h2>
 <ul>
@@ -344,7 +346,7 @@ if (!doNotTrack) {
 <ul>
 <li><code>@aws-cdk/core - App, Stack, Stack.account, Stack.region, Stack.tags, Stack.terminationProtection, Construct, Duration, CfnOutput</code></li>
 <li><code>lambda.Function</code>, <code>lambda.Code.fromAsset</code>, <code>lambda.Code.fromInline</code></li>
-<li><code>iam.PolicyStatement</code></li>
+<li><code>@aws-cdk/aws-iam - Role, User, Group, PolicyStatement</code></li>
 </ul>
 <h2 id="common-steps">Common Steps</h2>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># init cdk app</span>
@@ -653,7 +655,7 @@ cdk destroy <span class="o">[</span>STACKS..<span class="o">]</span>
 </script>
 
 <script>
-    const postCount= 230 
+    const postCount= 231 
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>

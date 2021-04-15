@@ -58,7 +58,7 @@
   "headline": "AWS Well-Architected",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  464 ,
+  "wordCount":  552 ,
   "datePublished" : "2021-04-09T00:00:00",
   "dateModified" : "2021-04-09T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -360,7 +360,22 @@ if (!doNotTrack) {
 </blockquote>
 <h2 id="well-architected-tool">Well-Architected Tool</h2>
 <p>AWS Console Tool that steps a user through the Well-Architected Review Process</p>
-<h3 id="feature-request">Feature Request</h3>
+<h3 id="well-architected-alternate-renditions">Well-Architected Alternate Renditions</h3>
+<p>Consuming the WA PDFs or web content can be a bit challenging with navigation.  The WA questions, resources, etc. are available as <code>json</code> via the AWS WA Console Tool with some scraping.  This creates alternate renditions based on this data.</p>
+<ul>
+<li>Run <a href="aws-well-architected-reformat/main.js"><code>aws-well-architected-reformat/main.js</code></a> to generate a reformatted and condensed version of WA.</li>
+<li>See <a href="aws-well-architected-reformat/data"><code>aws-well-architected-reformat/data</code></a> for the question data as <code>json</code> for each lens.</li>
+</ul>
+<p><strong>Notes on pulling data via AWS Console</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># aws console request format</span>
+POST https://console.aws.amazon.com/wellarchitected/api/apiservice
+
+<span class="o">{</span><span class="s2">&#34;method&#34;</span>:<span class="s2">&#34;GET&#34;</span>,<span class="s2">&#34;path&#34;</span>:<span class="s2">&#34;/workloads/4cfa14fe4a9d351afc9975cfdcb434af/lensReviews/wellarchitected/answers&#34;</span>,<span class="s2">&#34;region&#34;</span>:<span class="s2">&#34;us-east-1&#34;</span>,<span class="s2">&#34;headers&#34;</span>:<span class="o">{</span><span class="s2">&#34;Content-Type&#34;</span>:<span class="s2">&#34;application/json&#34;</span>,<span class="s2">&#34;Accept&#34;</span>:<span class="s2">&#34;application/json&#34;</span><span class="o">}</span>,<span class="s2">&#34;params&#34;</span>:<span class="o">{</span><span class="s2">&#34;PillarId&#34;</span>:<span class="s2">&#34;operationalExcellence&#34;</span>,<span class="s2">&#34;MaxResults&#34;</span>:50,<span class="s2">&#34;Locale&#34;</span>:<span class="s2">&#34;en&#34;</span><span class="o">}}</span>
+
+<span class="c1"># helpful Resources on right sidebar example</span>
+https://wa.aws.amazon.com/TypeII/en/foundationaltechnicalreview/foundationaltechnicalreview.sec_q1.helpful-resources.en.html
+
+</code></pre></div><h3 id="feature-request">Feature Request</h3>
 <p>One area where there is a gap for an enterprises are all the company specific policies, standards, and best practices that are additive and need to be addressed on top of AWS.  These types of questions and guidance would need to happen outside of WA Tool.</p>
 <p>A feature to define custom lenses - a customer defined lens.  This way the single WA Tool could be the method for review facilitation, improvement reporting and maintaining history.</p>
 <h2 id="key-visuals">Key Visuals</h2>
@@ -646,7 +661,7 @@ if (!doNotTrack) {
 </script>
 
 <script>
-    const postCount= 230 
+    const postCount= 231 
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>

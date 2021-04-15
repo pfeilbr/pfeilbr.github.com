@@ -7,14 +7,41 @@
         <description>Recent content in Tags on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 11 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/tags/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Thu, 15 Apr 2021 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+<title>aws</title>
+<link>https://brianpfeil.com/tags/aws/</link>
+<pubDate>Thu, 15 Apr 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/aws/</guid>
+<description>aws</description>
+</item>
+    
     <item>
 <title>cdk</title>
 <link>https://brianpfeil.com/tags/cdk/</link>
-<pubDate>Sun, 11 Apr 2021 00:00:00 +0000</pubDate>
+<pubDate>Thu, 15 Apr 2021 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/tags/cdk/</guid>
 <description>cdk</description>
+</item>
+    
+    <item>
+<title>cicd</title>
+<link>https://brianpfeil.com/tags/cicd/</link>
+<pubDate>Thu, 15 Apr 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/cicd/</guid>
+<description>cicd</description>
+</item>
+    
+    <item>
+<title>codepipeline</title>
+<link>https://brianpfeil.com/tags/codepipeline/</link>
+<pubDate>Thu, 15 Apr 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/codepipeline/</guid>
+<description>codepipeline</description>
 </item>
     
     <item>
@@ -42,15 +69,6 @@
       
       <guid>https://brianpfeil.com/tags/architecture/</guid>
 <description>architecture</description>
-</item>
-    
-    <item>
-<title>aws</title>
-<link>https://brianpfeil.com/tags/aws/</link>
-<pubDate>Fri, 09 Apr 2021 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/aws/</guid>
-<description>aws</description>
 </item>
     
     <item>
@@ -1005,15 +1023,6 @@
       
       <guid>https://brianpfeil.com/tags/rust/</guid>
 <description>rust</description>
-</item>
-    
-    <item>
-<title>codepipeline</title>
-<link>https://brianpfeil.com/tags/codepipeline/</link>
-<pubDate>Thu, 20 Dec 2018 00:00:00 -0500</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/codepipeline/</guid>
-<description>codepipeline</description>
 </item>
     
     <item>

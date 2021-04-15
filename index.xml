@@ -7,7 +7,16 @@
         <description>Recent content on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 11 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Thu, 15 Apr 2021 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+<title>AWS CDK Pipeline</title>
+<link>https://brianpfeil.com/post/aws-cdk-pipeline/</link>
+<pubDate>Thu, 15 Apr 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cdk-pipeline/</guid>
+<description>AWS CDK Pipeline</description>
+</item>
+    
     <item>
 <title>ReactCDK RFC</title>
 <link>https://brianpfeil.com/post/reactcdk-rfc/</link>
