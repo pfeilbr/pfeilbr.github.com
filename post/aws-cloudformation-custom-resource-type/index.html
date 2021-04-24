@@ -58,7 +58,7 @@
   "headline": "AWS CloudFormation Custom Resource Type",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  166 ,
+  "wordCount":  236 ,
   "datePublished" : "2021-04-23T00:00:00",
   "dateModified" : "2021-04-23T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -326,12 +326,34 @@ if (!doNotTrack) {
 <blockquote>
 <p>You can use the CloudFormation CLI to register extensions—both those you create yourself, as well as ones shared with you—with the CloudFormation registry. This enables you to use CloudFormation capabilities to create, provision, and manage these custom types in a safe and repeatable manner, just as you would any AWS resource</p>
 </blockquote>
-<p>see <a href="python-custom-resource-type-example"><code>python-custom-resource-type-example</code></a></p>
+<p>There are the following four types of CloudFormation extension mechanisms:</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html">CloudFormation Custom Resources</a></li>
+<li><a href="https://aws.amazon.com/blogs/mt/introducing-aws-cloudformation-modules/">CloudFormation Module</a></li>
+<li><a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-types.html">CloudFormation Custom Resource Types</a></li>
+<li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">CloudFormation Macros</a></li>
+</ul>
+<h2 id="example-custom-resource-types">Example Custom Resource Types</h2>
+<ul>
+<li><a href="python-custom-resource-type-example"><code>python-custom-resource-type-example</code></a></li>
+<li><a href="typescript-custom-resource-type-example"><code>typescript-custom-resource-type-example</code></a></li>
+</ul>
 <h2 id="notes">Notes</h2>
 <ul>
 <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html">Custom resources</a> can be backed by lambda or <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources-sns.html#walkthrough-custom-resources-sns-adding-nonaws-resource">SNS topic</a></li>
 </ul>
-<h2 id="resources">Resources</h2>
+<h2 id="todo">TODO</h2>
+<ul>
+<li>Org::Service::WAFCDN -&gt; CDK app containing</li>
+<li>API Gateway (custom auth token | or cloudformation security context identity) -&gt; Step Fn -&gt; create stack -&gt; wait stack -&gt; loop</li>
+<li>custom resource lambda handler is just a pass through to APIG provisioning the resources.</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">- <span class="nt">Sid</span><span class="p">:</span><span class="w"> </span><span class="l">DeleteAppRoles</span><span class="w">
+</span><span class="w">  </span><span class="nt">Effect</span><span class="p">:</span><span class="w"> </span><span class="l">Allow</span><span class="w">
+</span><span class="w">  </span><span class="nt">Action</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="l">wafcdn:*</span><span class="w">
+</span><span class="w">  </span><span class="nt">Resource</span><span class="p">:</span><span class="w"> </span>!<span class="l">Sub &#34;arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:type/resource/MyOrg-MyService-MyResource/*&#34;</span><span class="w">
+</span></code></pre></div><h2 id="resources">Resources</h2>
 <ul>
 <li><a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/what-is-cloudformation-cli.html">User Guide for Extension Development</a></li>
 <li><a href="https://aws.amazon.com/blogs/infrastructure-and-automation/using-python-to-create-aws-cloudformation-resource-providers/">Use Python to manage third-party resources in AWS CloudFormation | Amazon Web Services</a></li>

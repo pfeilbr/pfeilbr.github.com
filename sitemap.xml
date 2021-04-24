@@ -23,10 +23,10 @@
     <loc>https://brianpfeil.com/post/</loc>
     <lastmod>2021-04-23T00:00:00-04:00</lastmod>
   </url><url>
-    <loc>https://brianpfeil.com/categories/Python/</loc>
+    <loc>https://brianpfeil.com/tags/</loc>
     <lastmod>2021-04-23T00:00:00-04:00</lastmod>
   </url><url>
-    <loc>https://brianpfeil.com/tags/</loc>
+    <loc>https://brianpfeil.com/categories/TypeScript/</loc>
     <lastmod>2021-04-23T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/post/aws-cdk-pipeline/</loc>
@@ -39,9 +39,6 @@
     <lastmod>2021-04-15T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/tags/codepipeline/</loc>
-    <lastmod>2021-04-15T00:00:00-04:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/categories/TypeScript/</loc>
     <lastmod>2021-04-15T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/tags/react/</loc>
@@ -129,6 +126,9 @@
     <lastmod>2021-02-19T00:00:00-05:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/tags/glue/</loc>
+    <lastmod>2021-02-19T00:00:00-05:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/categories/Python/</loc>
     <lastmod>2021-02-19T00:00:00-05:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/tags/python/</loc>

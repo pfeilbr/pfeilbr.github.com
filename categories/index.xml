@@ -18,18 +18,9 @@
 </item>
     
     <item>
-<title>Python</title>
-<link>https://brianpfeil.com/categories/Python/</link>
-<pubDate>Fri, 23 Apr 2021 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/Python/</guid>
-<description>Python</description>
-</item>
-    
-    <item>
 <title>TypeScript</title>
 <link>https://brianpfeil.com/categories/TypeScript/</link>
-<pubDate>Thu, 15 Apr 2021 00:00:00 -0400</pubDate>
+<pubDate>Fri, 23 Apr 2021 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/categories/TypeScript/</guid>
 <description>TypeScript</description>
@@ -60,6 +51,15 @@
       
       <guid>https://brianpfeil.com/categories/html/</guid>
 <description>html</description>
+</item>
+    
+    <item>
+<title>Python</title>
+<link>https://brianpfeil.com/categories/Python/</link>
+<pubDate>Fri, 19 Feb 2021 00:00:00 -0500</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/Python/</guid>
+<description>Python</description>
 </item>
     
     <item>
