@@ -7,7 +7,16 @@
         <description>Recent content in cloudformation on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 05 Apr 2021 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/cloudformation/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Fri, 23 Apr 2021 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/cloudformation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+<title>AWS CloudFormation Custom Resource Type</title>
+<link>https://brianpfeil.com/post/aws-cloudformation-custom-resource-type/</link>
+<pubDate>Fri, 23 Apr 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/aws-cloudformation-custom-resource-type/</guid>
+<description>AWS CloudFormation Custom Resource Type</description>
+</item>
+    
     <item>
 <title>CFN Diagram</title>
 <link>https://brianpfeil.com/post/cfn-diagram/</link>

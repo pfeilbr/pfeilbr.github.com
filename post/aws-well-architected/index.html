@@ -58,7 +58,7 @@
   "headline": "AWS Well-Architected",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  552 ,
+  "wordCount":  563 ,
   "datePublished" : "2021-04-09T00:00:00",
   "dateModified" : "2021-04-09T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -363,13 +363,16 @@ if (!doNotTrack) {
 <h3 id="well-architected-alternate-renditions">Well-Architected Alternate Renditions</h3>
 <p>Consuming the WA PDFs or web content can be a bit challenging with navigation.  The WA questions, resources, etc. are available as <code>json</code> via the AWS WA Console Tool with some scraping.  This creates alternate renditions based on this data.</p>
 <ul>
-<li>Run <a href="aws-well-architected-reformat/main.js"><code>aws-well-architected-reformat/main.js</code></a> to generate a reformatted and condensed version of WA.</li>
+<li>Run <a href="aws-well-architected-reformat/main.js"><code>aws-well-architected-reformat/main.js</code></a> to generate a reformatted and condensed version of WA.
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">cd</span> aws-well-architected-reformat
+node main.js &gt; ../aws-well-architected-condensed.md
+</code></pre></div></li>
+<li>see alternate rendition at <a href="aws-well-architected-condensed.md"><code>aws-well-architected-condensed.md</code></a></li>
 <li>See <a href="aws-well-architected-reformat/data"><code>aws-well-architected-reformat/data</code></a> for the question data as <code>json</code> for each lens.</li>
 </ul>
 <p><strong>Notes on pulling data via AWS Console</strong></p>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># aws console request format</span>
 POST https://console.aws.amazon.com/wellarchitected/api/apiservice
-
 <span class="o">{</span><span class="s2">&#34;method&#34;</span>:<span class="s2">&#34;GET&#34;</span>,<span class="s2">&#34;path&#34;</span>:<span class="s2">&#34;/workloads/4cfa14fe4a9d351afc9975cfdcb434af/lensReviews/wellarchitected/answers&#34;</span>,<span class="s2">&#34;region&#34;</span>:<span class="s2">&#34;us-east-1&#34;</span>,<span class="s2">&#34;headers&#34;</span>:<span class="o">{</span><span class="s2">&#34;Content-Type&#34;</span>:<span class="s2">&#34;application/json&#34;</span>,<span class="s2">&#34;Accept&#34;</span>:<span class="s2">&#34;application/json&#34;</span><span class="o">}</span>,<span class="s2">&#34;params&#34;</span>:<span class="o">{</span><span class="s2">&#34;PillarId&#34;</span>:<span class="s2">&#34;operationalExcellence&#34;</span>,<span class="s2">&#34;MaxResults&#34;</span>:50,<span class="s2">&#34;Locale&#34;</span>:<span class="s2">&#34;en&#34;</span><span class="o">}}</span>
 
 <span class="c1"># helpful Resources on right sidebar example</span>
@@ -661,7 +664,7 @@ https://wa.aws.amazon.com/TypeII/en/foundationaltechnicalreview/foundationaltech
 </script>
 
 <script>
-    const postCount= 231 
+    const postCount= 232 
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>

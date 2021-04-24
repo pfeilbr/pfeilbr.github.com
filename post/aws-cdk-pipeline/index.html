@@ -58,7 +58,7 @@
   "headline": "AWS CDK Pipeline",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  492 ,
+  "wordCount":  589 ,
   "datePublished" : "2021-04-15T00:00:00",
   "dateModified" : "2021-04-15T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -326,8 +326,16 @@ if (!doNotTrack) {
 <span class="text-muted">code for article</span>&nbsp;<a href="https://github.com/pfeilbr/aws-cdk-pipeline-playground" target="_blank"><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/aws-cdk-pipeline-playground</a>
 </div>
 <p>learn AWS <a href="https://aws.amazon.com/blogs/developer/cdk-pipelines-continuous-delivery-for-aws-cdk-applications/">CDK Pipelines</a></p>
-<p>CI/CD pipeline and solution code exist in single CDK project / repo.  Any commits to <code>main</code> automatically trigger a <a href="https://aws.amazon.com/codepipeline/">CodePipeline</a> to run and deploy changes to production.  The changes can be to the solution or the pipeline itself.</p>
-<h2 id="high-level-workflow">High-level Workflow</h2>
+<p>Example CI/CD pipeline and solution code exist in single CDK project / repo in all authored in same language (typescript).  Any commits to <code>main</code> automatically trigger a <a href="https://aws.amazon.com/codepipeline/">CodePipeline</a> to run and deploy changes to production.  The changes can be to the solution or the pipeline itself.</p>
+<h2 id="summary">Summary</h2>
+<ul>
+<li>Simple API Gateway -&gt; Lambda solution to exercise CDK pipeline capabilities. via <a href="https://docs.aws.amazon.com/solutions/latest/constructs/aws-apigateway-lambda.html">AWS Solutions Constructs | aws-apigateway-lambda</a></li>
+<li>Creation of PreProd enviroment (stack) with e2e integration tests.</li>
+<li>Creation of Prod environment (stack)</li>
+<li>Automated creation of metrics, alarms, and notification (sns email) for API Gateway and Lambda resources via <a href="https://github.com/awslabs/cdk-watchful">awslabs/cdk-watchful</a></li>
+<li>Automated notification (sns email) of CodePipeline state change events (<code>STARTED</code>, <code>SUCCEEDED</code>, <code>FAILED</code>) via EventBridge -&gt; SNS rule.</li>
+</ul>
+<h2 id="high-level-development-workflow">High-level Development Workflow</h2>
 <ol>
 <li>Create solution stack <a href="lib/aws-cdk-pipeline-playground-stack.ts"><code>lib/aws-cdk-pipeline-playground-stack.ts</code></a> (<code>API gateway -&gt; Lambda</code>).</li>
 <li>Create stage <a href="lib/aws-cdk-pipeline-demo-stage.ts"><code>lib/aws-cdk-pipeline-demo-stage.ts</code></a>(<code>CdkpipelinesDemoStage</code>) that wraps the solution stack (<code>AwsCdkPipelinePlaygroundStack</code>) for CodePipeline</li>
@@ -412,10 +420,18 @@ npm i
 </code></pre></div></li>
 </ul>
 <h2 id="screenshots">Screenshots</h2>
+<h3 id="aws-console--codepipeline">AWS Console | CodePipeline</h3>
 <p><img src="https://www.evernote.com/l/AAE6NqeDir5OzJ03mkeMXRIxup_JygJDKG8B/image.png" alt="" width="75%" /></p>
 <p><img src="https://www.evernote.com/l/AAEubcb4P69PmJ1Av4SHOYfWhgyaQWmLBBsB/image.png" alt="" width="75%" /></p>
 <p><img src="https://www.evernote.com/l/AAHfP1motBxP3KPCmTNkFV2hatoUecHL5DgB/image.png" alt="" width="75%" /></p>
 <p><img src="https://www.evernote.com/l/AAHSk5xUmvdPm477hfHkLxRVPqGMUROrFLwB/image.png" alt="" width="75%" /></p>
+<h3 id="sns-email-notifications">SNS Email Notifications</h3>
+<p>CodePipeline State Change COMPLETED
+<img src="https://www.evernote.com/l/AAEEPW3ju7dGVZQz93zo4d4UEC0_CAg8wiIB/image.png" alt="" width="75%" /></p>
+<p>API Gateway 5XX Count Threshold Hit
+<img src="https://www.evernote.com/l/AAF_uNyvwUxB25RNyVJS-LF5bpg25ddWK_8B/image.png" alt="" width="75%" /></p>
+<p>Lambda Error Count Threshold Hit
+<img src="https://www.evernote.com/l/AAHGMhNbuAFBlLHq1jAK85_c9l4CUwDnZVsB/image.png" alt="" width="75%" /></p>
 <h2 id="resources">Resources</h2>
 <ul>
 <li><a href="https://aws.amazon.com/blogs/developer/cdk-pipelines-continuous-delivery-for-aws-cdk-applications/">CDK Pipelines: Continuous delivery for AWS CDK applications | Amazon Web Services</a></li>
@@ -487,6 +503,11 @@ npm i
             title="ReactCDK RFC">&larr; ReactCDK RFC</a>
         </li>
         
+        
+        <li class="next">
+          <a href="https://brianpfeil.com/post/aws-cloudformation-custom-resource-type/" data-toggle="tooltip" data-placement="top"
+            title="AWS CloudFormation Custom Resource Type">AWS CloudFormation Custom Resource Type &rarr;</a>
+        </li>
         
       </ul>
       
@@ -701,7 +722,7 @@ npm i
 </script>
 
 <script>
-    const postCount= 231 
+    const postCount= 232 
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>

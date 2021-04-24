@@ -58,7 +58,7 @@
   "headline": "AWS CDK",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  250 ,
+  "wordCount":  328 ,
   "datePublished" : "2019-07-11T00:00:00",
   "dateModified" : "2019-07-11T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -329,10 +329,13 @@ if (!doNotTrack) {
 <li>cloud assemblies - cfn + source code, docker images, assets (s3)</li>
 <li>aspects - ability to visit each node/resource in stack and apply changes</li>
 <li>Application -&gt; Stacks -&gt; Constructs</li>
-<li><a href="https://docs.aws.amazon.com/cdk/latest/guide/context.html#context_example">Runtime context</a></li>
+<li><a href="https://docs.aws.amazon.com/cdk/latest/guide/parameters.html">Parameters</a> - cfn parameters.  can pass in via <code>cdk synth</code>.</li>
+<li><a href="https://docs.aws.amazon.com/cdk/latest/guide/context.html#context_example">Runtime context</a> - key-value pairs that can be associated with a stack or construct.  Can only be <code>string</code> values (kind of like parameters)</li>
 <li><code>[tf|k8s]</code> CDKs</li>
 <li>jsii - core/foundational tech for multi-language/polyglot support.  bind any language to underlying typescript implementation.</li>
 <li>CDK pipelines for CI/CD</li>
+<li><a href="https://github.com/aws-samples/aws-cdk-examples/blob/master/typescript/custom-logical-names/README.md">Custom Logical Names</a> - shows how to hook into an provide own resource names.  Can be used for IAM policies based on resource name <code>prefixes</code></li>
+<li>Usage with Permissions Boundaries - see <a href="https://github.com/aws/aws-cdk/issues/3242">Applying permissions boundary to aws-cdk globally · Issue #3242 · aws/aws-cdk</a></li>
 </ul>
 <h2 id="key-files-and-directories">Key Files and Directories</h2>
 <ul>
@@ -383,6 +386,7 @@ cdk destroy <span class="o">[</span>STACKS..<span class="o">]</span>
 <li><a href="https://aws.amazon.com/solutions/constructs/">Infrastructure-as-Code | Constructs | AWS Solutions</a></li>
 <li><a href="https://github.com/awslabs/aws-solutions-constructs">awslabs/aws-solutions-constructs</a></li>
 <li><a href="https://github.com/aws-samples/aws-cdk-examples">aws-samples/aws-cdk-examples</a></li>
+<li><a href="https://github.com/aws/constructs/blob/master/README.md">aws/constructs</a> - Constructs Programming Model</li>
 <li><a href="https://github.com/panacloud-modern-global-apps/full-stack-serverless-cdk">panacloud-modern-global-apps/full-stack-serverless-cdk</a></li>
 <li><a href="https://github.com/search?l=&amp;q=filename%3Acdk.json&amp;type=code">github | search | &ldquo;filename:cdk.json&rdquo;</a></li>
 </ul>
@@ -655,7 +659,7 @@ cdk destroy <span class="o">[</span>STACKS..<span class="o">]</span>
 </script>
 
 <script>
-    const postCount= 231 
+    const postCount= 232 
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>

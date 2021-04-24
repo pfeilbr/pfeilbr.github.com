@@ -58,7 +58,7 @@
   "headline": "AWS CloudWatch Logs Insights",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  90 ,
+  "wordCount":  135 ,
   "datePublished" : "2020-10-30T00:00:00",
   "dateModified" : "2020-10-30T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -328,21 +328,33 @@ if (!doNotTrack) {
 <span class="c1"># re-run on change</span>
 make dev
 </code></pre></div><h2 id="example-queries">Example Queries</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">fields @timestamp, detail.eventSource, detail.eventName, @message
-| sort @timestamp desc
-| limit 100
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">fields @timestamp, detail.eventSource, detail.eventName, @message
+<span class="p">|</span> sort @timestamp desc
+<span class="p">|</span> limit <span class="m">100</span>
 
 
 fields @timestamp, detail.eventSource, detail.eventName, @message
-| filter detail.eventSource = &#34;logs.amazonaws.com&#34;
-| sort @timestamp desc
-| limit 100
+<span class="p">|</span> filter detail.eventSource <span class="o">=</span> <span class="s2">&#34;logs.amazonaws.com&#34;</span>
+<span class="p">|</span> sort @timestamp desc
+<span class="p">|</span> limit <span class="m">100</span>
 
 
 fields @timestamp, detail.requestParameters.bucketName, detail.eventSource, detail.eventName, @message
-| filter detail.eventSource like /s3.amazonaws.com/
-| sort @timestamp desc
-| limit 100
+<span class="p">|</span> filter detail.eventSource like /s3.amazonaws.com/
+<span class="p">|</span> sort @timestamp desc
+<span class="p">|</span> limit <span class="m">100</span>
+
+<span class="c1"># sts assume role CloudTrail events</span>
+fields @timestamp, source, <span class="sb">`</span>detail.eventName<span class="sb">`</span>, detail.requestParameters.roleArn, detail.userIdentity.userName, @message
+<span class="p">|</span> filter detail.eventSource <span class="o">=</span> <span class="s1">&#39;sts.amazonaws.com&#39;</span>
+<span class="p">|</span> sort @timestamp desc
+
+<span class="c1"># CodePipeline pipeline and stage change events</span>
+fields @timestamp, <span class="sb">`</span>detail-type<span class="sb">`</span>, detail.pipeline, detail.stage, detail.state, @message
+<span class="p">|</span> filter <span class="nb">source</span> <span class="o">=</span> <span class="s1">&#39;aws.codepipeline&#39;</span>
+<span class="p">|</span> sort @timestamp desc
+
+
 </code></pre></div><h2 id="resources">Resources</h2>
 <ul>
 <li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_QuerySyntax.html">CloudWatch Logs Insights Query Syntax</a></li>
@@ -617,7 +629,7 @@ fields @timestamp, detail.requestParameters.bucketName, detail.eventSource, deta
 </script>
 
 <script>
-    const postCount= 231 
+    const postCount= 232 
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>

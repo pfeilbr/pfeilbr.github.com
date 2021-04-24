@@ -3,15 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://brianpfeil.com/tags/aws/</loc>
-    <lastmod>2021-04-15T00:00:00-04:00</lastmod>
+    <lastmod>2021-04-23T00:00:00-04:00</lastmod>
   </url><url>
-    <loc>https://brianpfeil.com/post/aws-cdk-pipeline/</loc>
-    <lastmod>2021-04-15T00:00:00-04:00</lastmod>
+    <loc>https://brianpfeil.com/post/aws-cloudformation-custom-resource-type/</loc>
+    <lastmod>2021-04-23T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/</loc>
-    <lastmod>2021-04-15T00:00:00-04:00</lastmod>
+    <lastmod>2021-04-23T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/categories/</loc>
+    <lastmod>2021-04-23T00:00:00-04:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/tags/cloudformation/</loc>
+    <lastmod>2021-04-23T00:00:00-04:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/categories/playground/</loc>
+    <lastmod>2021-04-23T00:00:00-04:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/post/</loc>
+    <lastmod>2021-04-23T00:00:00-04:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/categories/Python/</loc>
+    <lastmod>2021-04-23T00:00:00-04:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/tags/</loc>
+    <lastmod>2021-04-23T00:00:00-04:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/post/aws-cdk-pipeline/</loc>
     <lastmod>2021-04-15T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/tags/cdk/</loc>
@@ -21,15 +39,6 @@
     <lastmod>2021-04-15T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/tags/codepipeline/</loc>
-    <lastmod>2021-04-15T00:00:00-04:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/categories/playground/</loc>
-    <lastmod>2021-04-15T00:00:00-04:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/post/</loc>
-    <lastmod>2021-04-15T00:00:00-04:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/tags/</loc>
     <lastmod>2021-04-15T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/categories/TypeScript/</loc>
@@ -72,9 +81,6 @@
     <lastmod>2021-04-06T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/post/cfn-diagram/</loc>
-    <lastmod>2021-04-05T00:00:00-04:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/tags/cloudformation/</loc>
     <lastmod>2021-04-05T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/tags/diagram/</loc>
@@ -123,9 +129,6 @@
     <lastmod>2021-02-19T00:00:00-05:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/tags/glue/</loc>
-    <lastmod>2021-02-19T00:00:00-05:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/categories/Python/</loc>
     <lastmod>2021-02-19T00:00:00-05:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/tags/python/</loc>
