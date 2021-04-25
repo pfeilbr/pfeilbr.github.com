@@ -58,7 +58,7 @@
   "headline": "AWS CDK",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  328 ,
+  "wordCount":  574 ,
   "datePublished" : "2019-07-11T00:00:00",
   "dateModified" : "2019-07-11T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -324,7 +324,7 @@ if (!doNotTrack) {
 <h2 id="description">Description</h2>
 <ul>
 <li>express resources using general purpose programming languages (ts/js/python/java/C#)</li>
-<li>constructs - cfn (L1), CDK (L2), pattern/solution (L3)</li>
+<li>constructs - construct levels 1, 2, 3.  cfn (L1), CDK (L2), pattern/solution (L3)</li>
 <li>synth to cfn</li>
 <li>cloud assemblies - cfn + source code, docker images, assets (s3)</li>
 <li>aspects - ability to visit each node/resource in stack and apply changes</li>
@@ -351,6 +351,7 @@ if (!doNotTrack) {
 <li><code>lambda.Function</code>, <code>lambda.Code.fromAsset</code>, <code>lambda.Code.fromInline</code></li>
 <li><code>@aws-cdk/aws-iam - Role, User, Group, PolicyStatement</code></li>
 </ul>
+<hr>
 <h2 id="common-steps">Common Steps</h2>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># init cdk app</span>
 cdk init app --language javascript
@@ -380,7 +381,59 @@ cdk deploy  --force --require-approval never
 <span class="c1"># delete</span>
 cdk destroy <span class="o">[</span>STACKS..<span class="o">]</span>
 
-</code></pre></div><h2 id="resources">Resources</h2>
+</code></pre></div><hr>
+<h2 id="cdk-internals">CDK Internals</h2>
+<p>Details on the inner workings of CDK.</p>
+<h3 id="cdk-tree">CDK Tree</h3>
+<p>Core of CDK is based on tree structure similar to the DOM.</p>
+<ul>
+<li>
+<p><code>node: ConstructNode</code> - accessed via <code>this.node</code> - root of the tree.</p>
+</li>
+<li>
+<p><code>node.children</code></p>
+</li>
+<li>
+<p><code>node.findChild(id: string)</code> - search for child in tree with <code>id</code>.  <code>new s3.Bucket(this, &quot;Assets&quot;)</code>.  <code>&quot;Assets&quot;</code> is the <code>id</code>.</p>
+</li>
+<li>
+<p><code>node.tryFindChild(id: string)</code> - same as <code>findChild</code> but won&rsquo;t throw if <code>id</code> doesn&rsquo;t exist.  Will return <code>undefined</code>.</p>
+</li>
+<li>
+<p><code>node.defaultChild</code> - reference to primary level 1 construct (<code>Cfn*</code>)</p>
+</li>
+<li>
+<p>common L1 construct methods</p>
+<ul>
+<li><code>overrideLogicalId</code></li>
+<li><code>addOverride(propertyPath, value)</code> - e.g. <code>cfnBucket.addOverride(&quot;Properties.BucketName&quot;, &quot;my-bucket-name-01&quot;)</code>
+<ul>
+<li>need to use for cfn attributes that are outside of the <code>Properties</code>.  e.g. <code>DeletionPolicy</code></li>
+<li>add bucket name to <code>Metadata</code> - <code>cfnBucket.addOverride(&quot;Metadata.BucketName&quot;, cfnBucket.ref)</code></li>
+</ul>
+</li>
+<li><code>addDeletionOverride(propertyPath)</code> - remove a property.  e.g. <code>cfnBucket.addDeletionOverride(&quot;Properties.BucketName&quot;)</code></li>
+<li><code>addPropertyOverride(propertyPath)</code> - <code>cfnBucket.addPropertyOverride(&quot;Properties.BucketName&quot;, &quot;my-bucket-name-01&quot;)</code></li>
+</ul>
+</li>
+<li>
+<p>all <code>Fn::GetAtt</code> return values can be accessed via a property named <code>Att${Return Value Name}</code>. e.g. <code>cfnBucket.AttArn</code>, <code>cfnBucket.AttDomainName</code></p>
+</li>
+</ul>
+<h3 id="cdk-path">CDK Path</h3>
+<ul>
+<li>every resource defined in CDK tree has a path</li>
+<li><code>this.node.path</code> - concatenation of path traversal to the node in the CDK tree. (e.g. <code>MyStack/Assets</code>)</li>
+<li>this path is added to the <code>Metadata</code> property for each resource in cfn.</li>
+</ul>
+<h3 id="cdk-identifiers">CDK Identifiers</h3>
+<ul>
+<li>Logical ID - used in cfn template. scoped within stack.  calculated using CDK path (sanitized id (no stack id) + hash)</li>
+<li>Unique ID - uniquely identify resource within CDK application. scoped within CDK application, which may be composed of multiple stacks. sanitized id (including stack) + hash</li>
+</ul>
+<p><img src="https://www.evernote.com/l/AAEqngqx1ZlJOJObL2Oe3eHqFcwiW_SaRfcB/image.png" alt="CDK Identifiers Calculation Image" width="50%" /></p>
+<hr>
+<h2 id="resources">Resources</h2>
 <ul>
 <li><a href="https://docs.aws.amazon.com/cdk/api/latest/">AWS CDK · AWS CDK Reference Documentation</a></li>
 <li><a href="https://aws.amazon.com/solutions/constructs/">Infrastructure-as-Code | Constructs | AWS Solutions</a></li>
@@ -389,6 +442,8 @@ cdk destroy <span class="o">[</span>STACKS..<span class="o">]</span>
 <li><a href="https://github.com/aws/constructs/blob/master/README.md">aws/constructs</a> - Constructs Programming Model</li>
 <li><a href="https://github.com/panacloud-modern-global-apps/full-stack-serverless-cdk">panacloud-modern-global-apps/full-stack-serverless-cdk</a></li>
 <li><a href="https://github.com/search?l=&amp;q=filename%3Acdk.json&amp;type=code">github | search | &ldquo;filename:cdk.json&rdquo;</a></li>
+<li><a href="https://www.youtube.com/watch?v=X8G3G3SnCuI">Exploring CDK Internals</a></li>
+<li><a href="https://docs.aws.amazon.com/toolkit-for-vscode/latest/userguide/cdk-explorer.html">Working with the AWS CDK Explorer - AWS Toolkit for VS Code</a></li>
 </ul>
 
 
