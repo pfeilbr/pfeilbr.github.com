@@ -58,7 +58,7 @@
   "headline": "AWS CloudFormation Custom Resource Type",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  236 ,
+  "wordCount":  254 ,
   "datePublished" : "2021-04-23T00:00:00",
   "dateModified" : "2021-04-23T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -347,6 +347,7 @@ if (!doNotTrack) {
 <li>Org::Service::WAFCDN -&gt; CDK app containing</li>
 <li>API Gateway (custom auth token | or cloudformation security context identity) -&gt; Step Fn -&gt; create stack -&gt; wait stack -&gt; loop</li>
 <li>custom resource lambda handler is just a pass through to APIG provisioning the resources.</li>
+<li>store API Key in secrets manager and reference from cfn custom resource type property</li>
 </ul>
 <div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">- <span class="nt">Sid</span><span class="p">:</span><span class="w"> </span><span class="l">DeleteAppRoles</span><span class="w">
 </span><span class="w">  </span><span class="nt">Effect</span><span class="p">:</span><span class="w"> </span><span class="l">Allow</span><span class="w">
@@ -361,6 +362,7 @@ if (!doNotTrack) {
 <li><a href="https://www.cloudar.be/awsblog/writing-an-aws-cloudformation-resource-provider-in-python-step-by-step/">Writing an AWS CloudFormation Resource Provider in Python: Step by Step - Cloudar</a></li>
 <li><a href="https://garbe.io/blog/2020/02/24/cloudformation-resource-provider/">CloudFormation Resource Providers - A Chicken and Egg Problem</a></li>
 <li><a href="https://aws.amazon.com/premiumsupport/knowledge-center/cloudformation-physical-resource-error/">Resolve the &quot;Resource timed out waiting for creation of physical resource&quot; error in AWS CloudFormation</a></li>
+<li><a href="https://read.korzh.cloud/deploying-cloudformation-resource-type-64bfd5d14e6e">Deploying CloudFormation resource type</a></li>
 </ul>
 
 
@@ -412,6 +414,11 @@ if (!doNotTrack) {
             title="AWS CDK Pipeline">&larr; AWS CDK Pipeline</a>
         </li>
         
+        
+        <li class="next">
+          <a href="https://brianpfeil.com/post/aws-cdk-step-functions/" data-toggle="tooltip" data-placement="top"
+            title="AWS CDK Step Functions">AWS CDK Step Functions &rarr;</a>
+        </li>
         
       </ul>
       
@@ -626,7 +633,7 @@ if (!doNotTrack) {
 </script>
 
 <script>
-    const postCount= 232 
+    const postCount= 234 
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
