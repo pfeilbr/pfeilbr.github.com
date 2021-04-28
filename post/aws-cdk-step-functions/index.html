@@ -58,7 +58,7 @@
   "headline": "AWS CDK Step Functions",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  205 ,
+  "wordCount":  211 ,
   "datePublished" : "2021-04-26T00:00:00",
   "dateModified" : "2021-04-26T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -325,6 +325,7 @@ if (!doNotTrack) {
 <p>CDK app providing API Gateway endpoint to provision a CloudFormation stack.  Endpoint is backed by step function that
 initiates the <code>create-stack</code> and polls (<code>describe-stack</code>) on an interval for completion.</p>
 <p>This can be used as a backend to provision a <a href="https://brianpfeil.com/post/aws-cloudformation-custom-resource-type/">AWS CloudFormation Custom Resource Type</a> that itself is backed by a set of AWS services.</p>
+<p>see CDK stack components at <a href="lib/aws-cdk-step-functions-playground-stack.ts"><code>lib/aws-cdk-step-functions-playground-stack.ts</code></a></p>
 <h2 id="architecture">Architecture</h2>
 <p><img src="https://www.evernote.com/l/AAExnb6WCDRDW7Vj2StG-7JI4d51djCzvPoB/image.png" alt="" width="100%" /></p>
 <!--
@@ -341,6 +342,7 @@ digraph G {
     "choice (stack created?)"->end
 }
 -->
+<hr>
 <h2 id="dependencies">Dependencies</h2>
 <ul>
 <li><a href="https://aws.amazon.com/cdk/">CDK</a></li>
