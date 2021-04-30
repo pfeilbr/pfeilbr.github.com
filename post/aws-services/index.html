@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  4918 ,
+  "wordCount":  4941 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -1158,7 +1158,10 @@ if (!doNotTrack) {
 <h3 id="cloudwatch-synthetics-canaries">CloudWatch Synthetics (Canaries)</h3>
 <ul>
 <li>supports monitoring your REST APIs, URLs, and website content every minute, 24x7, and alerts you when your application endpoints don’t behave as expected.</li>
-<li>Node.js based.  bundles in Puppeteer + Chromium to the runtime</li>
+<li>Node.js or python based.  bundles in Puppeteer + Chromium to the runtime</li>
+<li>can also used in any workloads requiring general browser automation</li>
+<li>creates several CloudWatch metrics in <code>CloudWatchSynthetics</code> namespace</li>
+<li>CloudFormation support via <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html"><code>AWS::Synthetics::Canary</code></a></li>
 </ul>
 <blockquote>
 <p>create canaries, configurable scripts that run on a schedule, to monitor your endpoints and APIs. Canaries follow the same routes and perform the same actions as a customer, which makes it possible for you to continually verify your customer experience even when you don&rsquo;t have any customer traffic on your applications. By using canaries, you can discover issues before your customers do.</p>
@@ -1644,7 +1647,7 @@ if (!doNotTrack) {
 </script>
 
 <script>
-    const postCount= 234 
+    const postCount= 235 
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>

@@ -3,12 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://brianpfeil.com/tags/aws/</loc>
-    <lastmod>2021-04-28T00:00:00-04:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/post/aws-chalice/</loc>
-    <lastmod>2021-04-28T00:00:00-04:00</lastmod>
+    <lastmod>2021-04-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/</loc>
+    <lastmod>2021-04-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/tags/governance/</loc>
+    <lastmod>2021-04-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/tags/management/</loc>
+    <lastmod>2021-04-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/post/multi-account-aws-environment/</loc>
+    <lastmod>2021-04-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/post/</loc>
+    <lastmod>2021-04-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/tags/</loc>
+    <lastmod>2021-04-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/post/aws-chalice/</loc>
     <lastmod>2021-04-28T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/categories/</loc>
@@ -20,9 +35,6 @@
     <loc>https://brianpfeil.com/categories/playground/</loc>
     <lastmod>2021-04-28T00:00:00-04:00</lastmod>
   </url><url>
-    <loc>https://brianpfeil.com/post/</loc>
-    <lastmod>2021-04-28T00:00:00-04:00</lastmod>
-  </url><url>
     <loc>https://brianpfeil.com/categories/Python/</loc>
     <lastmod>2021-04-28T00:00:00-04:00</lastmod>
   </url><url>
@@ -30,9 +42,6 @@
     <lastmod>2021-04-28T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/tags/serverless/</loc>
-    <lastmod>2021-04-28T00:00:00-04:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/tags/</loc>
     <lastmod>2021-04-28T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/post/aws-cdk-step-functions/</loc>
