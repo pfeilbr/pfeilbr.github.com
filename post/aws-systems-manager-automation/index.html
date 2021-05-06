@@ -58,7 +58,7 @@
   "headline": "AWS Systems Manager Automation",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  114 ,
+  "wordCount":  147 ,
   "datePublished" : "2020-10-02T00:00:00",
   "dateModified" : "2020-10-02T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -320,14 +320,19 @@ if (!doNotTrack) {
 <p><strong>SSM Automation document</strong></p>
 <ul>
 <li>contains one or more steps that run in sequential order</li>
+<li>can specify parameters</li>
 <li>Each step is built around a single action</li>
 <li>Output from one step can be used as input in a later step</li>
 <li>json or yaml documents</li>
+<li>can run python or powershell scripts via <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-action-executeScript.html"><code>aws:executeScript</code></a></li>
+<li>invoke <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-action-lamb.html"><code>aws:invokeLambdaFunction</code></a></li>
+<li>can specify execution role via <code>AutomationAssumeRole</code> parameter.  if not specified, uses the security context of calling principal</li>
 </ul>
 <h2 id="resources">Resources</h2>
 <ul>
 <li><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-automation.html">AWS Systems Manager Automation</a></li>
 <li><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-document-samples.html">Custom Automation document samples</a></li>
+<li><a href="https://github.com/awslabs/aws-systems-manager">awslabs/aws-systems-manager</a> - examples</li>
 <li><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-actions.html">Automation actions reference</a> - actions that you can specify in an AWS Systems Manager Automation document
 <ul>
 <li><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-action-executeScript.html">aws:executeScript – Run a script</a> - runtimes: python3.6 | python3.7 | PowerShell Core 6.0, as of 2020-10-02 max duration of 10 min (600 secs)</li>
@@ -606,7 +611,7 @@ if (!doNotTrack) {
 </script>
 
 <script>
-    const postCount= 235 
+    const postCount= 236 
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>

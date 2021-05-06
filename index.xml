@@ -7,7 +7,16 @@
         <description>Recent content on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 29 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Tue, 04 May 2021 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+<title>Hashicorp Vault</title>
+<link>https://brianpfeil.com/post/hashicorp-vault/</link>
+<pubDate>Tue, 04 May 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/post/hashicorp-vault/</guid>
+<description>Hashicorp Vault</description>
+</item>
+    
     <item>
 <title>Multi-Account AWS Environment</title>
 <link>https://brianpfeil.com/post/multi-account-aws-environment/</link>
