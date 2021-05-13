@@ -7,7 +7,16 @@
         <description>Recent content in architecture on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 09 Apr 2021 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Thu, 13 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+<title>Thinking Architecturally</title>
+<link>https://brianpfeil.com/post/thinking-architecturally/</link>
+<pubDate>Thu, 13 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/post/thinking-architecturally/</guid>
+<description>Thinking Architecturally</description>
+</item>
+    
     <item>
 <title>AWS Well-Architected</title>
 <link>https://brianpfeil.com/post/aws-well-architected/</link>
