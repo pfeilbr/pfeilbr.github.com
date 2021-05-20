@@ -327,7 +327,7 @@ if (!doNotTrack) {
 <li>constructs - construct levels 1, 2, 3.  cfn (L1), CDK (L2), pattern/solution (L3)</li>
 <li>synth to cfn</li>
 <li>cloud assemblies - cfn + source code, docker images, assets (s3)</li>
-<li>aspects - ability to visit each node/resource in stack and apply changes</li>
+<li><a href="https://docs.aws.amazon.com/cdk/latest/guide/aspects.html">aspects</a> - ability to visit each node/resource in stack and apply changes</li>
 <li>Application -&gt; Stacks -&gt; Constructs</li>
 <li><a href="https://docs.aws.amazon.com/cdk/latest/guide/parameters.html">Parameters</a> - cfn parameters.  can pass in via <code>cdk synth</code>.</li>
 <li><a href="https://docs.aws.amazon.com/cdk/latest/guide/context.html#context_example">Runtime context</a> - key-value pairs that can be associated with a stack or construct.  Can only be <code>string</code> values (kind of like parameters)</li>
@@ -714,7 +714,7 @@ cdk destroy <span class="o">[</span>STACKS..<span class="o">]</span>
 </script>
 
 <script>
-    const postCount= 237 
+    const postCount= 238 
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>

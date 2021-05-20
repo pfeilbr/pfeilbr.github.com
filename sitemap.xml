@@ -2,16 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://brianpfeil.com/tags/architecture/</loc>
-    <lastmod>2021-05-13T00:00:00+00:00</lastmod>
+    <loc>https://brianpfeil.com/tags/aws/</loc>
+    <lastmod>2021-05-19T00:00:00-04:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/post/aws-app-runner/</loc>
+    <lastmod>2021-05-19T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/</loc>
-    <lastmod>2021-05-13T00:00:00+00:00</lastmod>
+    <lastmod>2021-05-19T00:00:00-04:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/categories/</loc>
+    <lastmod>2021-05-19T00:00:00-04:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/tags/containers/</loc>
+    <lastmod>2021-05-19T00:00:00-04:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/categories/playground/</loc>
+    <lastmod>2021-05-19T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/post/</loc>
-    <lastmod>2021-05-13T00:00:00+00:00</lastmod>
+    <lastmod>2021-05-19T00:00:00-04:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/categories/Python/</loc>
+    <lastmod>2021-05-19T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/tags/</loc>
+    <lastmod>2021-05-19T00:00:00-04:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/tags/architecture/</loc>
     <lastmod>2021-05-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/post/thinking-architecturally/</loc>
@@ -20,13 +38,7 @@
     <loc>https://brianpfeil.com/categories/nil/</loc>
     <lastmod>2021-05-04T00:00:00-04:00</lastmod>
   </url><url>
-    <loc>https://brianpfeil.com/categories/</loc>
-    <lastmod>2021-05-04T00:00:00-04:00</lastmod>
-  </url><url>
     <loc>https://brianpfeil.com/post/hashicorp-vault/</loc>
-    <lastmod>2021-05-04T00:00:00-04:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/categories/playground/</loc>
     <lastmod>2021-05-04T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/tags/secrets-management/</loc>
@@ -34,9 +46,6 @@
   </url><url>
     <loc>https://brianpfeil.com/tags/security/</loc>
     <lastmod>2021-05-04T00:00:00-04:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/tags/aws/</loc>
-    <lastmod>2021-04-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/tags/governance/</loc>
     <lastmod>2021-04-29T00:00:00+00:00</lastmod>
@@ -51,9 +60,6 @@
     <lastmod>2021-04-28T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/tags/lambda/</loc>
-    <lastmod>2021-04-28T00:00:00-04:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/categories/Python/</loc>
     <lastmod>2021-04-28T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/tags/python/</loc>

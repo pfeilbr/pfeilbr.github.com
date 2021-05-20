@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  5056 ,
+  "wordCount":  5175 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -417,6 +417,7 @@ if (!doNotTrack) {
 <li><a href="#cloudwatch-alarms">CloudWatch Alarms</a></li>
 <li><a href="#cloudwatch-synthetics-canaries">CloudWatch Synthetics (Canaries)</a></li>
 <li><a href="#cloudtrail">CloudTrail</a></li>
+<li><a href="#proton">Proton</a></li>
 </ul>
 </li>
 <li><a href="#developer-tools">Developer Tools</a>
@@ -733,6 +734,12 @@ if (!doNotTrack) {
 <li>S3 select</li>
 <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops-basics.html">batch operations</a> - perform operation on list of objects specified in manifest.  e.g. lambda, copy, etc.</li>
 <li>storage classes</li>
+<li>lifecycle rules - moving between storage tiers for cost savings</li>
+<li>access points - managing data access at scale, access points are unique hostnames, enforce distinct permissions and network controls for any request made through the access point, scale to many applications accessing bucket with own set of permissions.
+<ul>
+<li>addresses pain point- Managing access to this shared bucket requires a single bucket policy that controls access for dozens to hundreds of applications with different permission levels</li>
+</ul>
+</li>
 <li>S3 event notifications - notification destinations are SNS, SQS, lambda</li>
 <li>replication - cross-region, same-region</li>
 <li><a href="https://aws.amazon.com/blogs/aws/introducing-amazon-s3-object-lambda-use-your-code-to-process-data-as-it-is-being-retrieved-from-s3/">S3 object lambda</a> - process data retrieved from S3 with lambda before returning it to an application. lambda calls <a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#writeGetObjectResponse-property"><code>writeGetObjectResponse</code></a> to send modified object contents back to <code>GET</code> request.  Create S3 Access Point, then Object Lambda Access Point.</li>
@@ -791,6 +798,8 @@ if (!doNotTrack) {
 <h3 id="redshift">Redshift</h3>
 <ul>
 <li>managed data warehouse service</li>
+<li>RA3 instances - Scale compute and storage independently for fast query performance and lower costs</li>
+<li>UDFs - lambda backed</li>
 </ul>
 <h3 id="elasticache">ElastiCache</h3>
 <ul>
@@ -941,6 +950,8 @@ if (!doNotTrack) {
 <ul>
 <li>pub/sub with many built-in integrations</li>
 <li>integrate with external SaaS or any custom application</li>
+<li>bus-to-bus routing within same account + region, x-account, and x-region.</li>
+<li>dlq for eb rules.  if fails to deliver to target, goes in sqs queue</li>
 <li>e.g. can log all events in account including CloudTrail to CloudWatch Log Group</li>
 <li>put events - 2400 requests per second per region</li>
 <li>AWS service rule <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-targets.html">targets</a></li>
@@ -1657,7 +1668,7 @@ if (!doNotTrack) {
 </script>
 
 <script>
-    const postCount= 237 
+    const postCount= 238 
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
