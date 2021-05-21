@@ -7,11 +7,20 @@
         <description>Recent content in Categories on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 19 May 2021 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/categories/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Fri, 21 May 2021 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+<title>javascript</title>
+<link>https://brianpfeil.com/categories/javascript/</link>
+<pubDate>Fri, 21 May 2021 00:00:00 -0400</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/javascript/</guid>
+<description>javascript</description>
+</item>
+    
     <item>
 <title>playground</title>
 <link>https://brianpfeil.com/categories/playground/</link>
-<pubDate>Wed, 19 May 2021 00:00:00 -0400</pubDate>
+<pubDate>Fri, 21 May 2021 00:00:00 -0400</pubDate>
       
       <guid>https://brianpfeil.com/categories/playground/</guid>
 <description>playground</description>
@@ -42,15 +51,6 @@
       
       <guid>https://brianpfeil.com/categories/TypeScript/</guid>
 <description>TypeScript</description>
-</item>
-    
-    <item>
-<title>javascript</title>
-<link>https://brianpfeil.com/categories/javascript/</link>
-<pubDate>Fri, 09 Apr 2021 00:00:00 -0400</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/javascript/</guid>
-<description>javascript</description>
 </item>
     
     <item>
