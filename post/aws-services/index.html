@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  5175 ,
+  "wordCount":  5271 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -657,6 +657,22 @@ if (!doNotTrack) {
 <h3 id="ecr">ECR</h3>
 <ul>
 <li>container registry</li>
+<li>concepts
+<ul>
+<li>Registry - can create image repositories in your registry and store images in them</li>
+<li>Authorization token - client must authenticate to Amazon ECR registries as an AWS user before it can push and pull images</li>
+<li>Repository - contains your Docker images, Open Container Initiative (OCI) images, and OCI compatible artifacts</li>
+<li>Repository policy - can control access to your repositories and the images within them with repository policies</li>
+<li>Image - push and pull container images to your repositories
+<ul>
+<li>can use them in ECS task definitions and EKS pod specifications</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ECR public</li>
+<li>resource-based permissions using AWS IAM</li>
+<li></li>
 </ul>
 <h3 id="fargate">Fargate</h3>
 <ul>
