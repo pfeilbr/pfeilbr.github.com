@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  5271 ,
+  "wordCount":  5320 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -615,6 +615,7 @@ if (!doNotTrack) {
 <li>Usage Plans / quotas</li>
 <li>client certificates - ensure requests to backend are from APIG</li>
 <li>throttles</li>
+<li>with WAF in front, you can set up rate-based rules to specify the number of web requests that are allowed by each client IP in a trailing, continuously updated, 5-minute period.  <em>no API Key required for this</em></li>
 <li>timeout - 29s</li>
 <li>request (POST) payload limits (10 MB).  no response size limits. (tested with proxy integration for 200 MB video file download)</li>
 <li>auth - cognito, JWT, IAM (aws sigv4), custom lambda auth</li>
@@ -732,6 +733,7 @@ if (!doNotTrack) {
 </ul>
 </li>
 <li>service integrations - <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-services.html">Using AWS Lambda with other services - AWS Lambda</a></li>
+<li>[lambda private endpoints(https://aws.amazon.com/blogs/aws/new-use-aws-privatelink-to-access-aws-lambda-over-private-aws-network/) - access lambda from VPC without going over internet</li>
 <li>APIG -&gt; lambda</li>
 <li>ALB -&gt; lambda</li>
 </ul>
