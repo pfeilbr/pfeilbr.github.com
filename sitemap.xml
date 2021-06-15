@@ -2,6 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://brianpfeil.com/post/azure/</loc>
+    <lastmod>2021-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/tags/azure/</loc>
+    <lastmod>2021-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/</loc>
+    <lastmod>2021-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/post/</loc>
+    <lastmod>2021-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/tags/</loc>
+    <lastmod>2021-06-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://brianpfeil.com/tags/api-gateway/</loc>
     <lastmod>2021-05-21T00:00:00-04:00</lastmod>
   </url><url>
@@ -9,9 +24,6 @@
     <lastmod>2021-05-21T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/post/aws-api-gateway-to-s3-static-site/</loc>
-    <lastmod>2021-05-21T00:00:00-04:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/</loc>
     <lastmod>2021-05-21T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/categories/</loc>
@@ -23,13 +35,7 @@
     <loc>https://brianpfeil.com/categories/playground/</loc>
     <lastmod>2021-05-21T00:00:00-04:00</lastmod>
   </url><url>
-    <loc>https://brianpfeil.com/post/</loc>
-    <lastmod>2021-05-21T00:00:00-04:00</lastmod>
-  </url><url>
     <loc>https://brianpfeil.com/tags/s3/</loc>
-    <lastmod>2021-05-21T00:00:00-04:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/tags/</loc>
     <lastmod>2021-05-21T00:00:00-04:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/post/aws-app-runner/</loc>
@@ -184,9 +190,6 @@
   </url><url>
     <loc>https://brianpfeil.com/tags/spark/</loc>
     <lastmod>2021-02-19T00:00:00-05:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/tags/azure/</loc>
-    <lastmod>2021-02-05T00:00:00-05:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/post/azure-durable-functions/</loc>
     <lastmod>2021-02-05T00:00:00-05:00</lastmod>

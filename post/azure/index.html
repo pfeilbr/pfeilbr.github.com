@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Azure - Brian Pfeil</title>
+  <meta name="description" content="short descriptions for key Azure services">
+  <meta name="author" content="Brian Pfeil"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Brian Pfeil",
+    
+    "url": "https:\/\/brianpfeil.com\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/brianpfeil.com\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/brianpfeil.com\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/brianpfeil.com\/post\/azure\/",
+          "name": "Azure"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Brian Pfeil"
+  },
+  "headline": "Azure",
+  "description" : "short descriptions for key Azure services",
+  "inLanguage" : "en",
+  "wordCount":  1909 ,
+  "datePublished" : "2021-06-15T00:00:00",
+  "dateModified" : "2021-06-15T00:00:00",
+  "image" : "https:\/\/brianpfeil.com\/",
+  "keywords" : [ "azure" ],
+  "mainEntityOfPage" : "https:\/\/brianpfeil.com\/post\/azure\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/brianpfeil.com\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/brianpfeil.com\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Azure" />
+<meta property="og:description" content="short descriptions for key Azure services">
+<meta property="og:url" content="https://brianpfeil.com/post/azure/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Brian Pfeil" />
+
+  <meta name="twitter:title" content="Azure" />
+  <meta name="twitter:description" content="short descriptions for key Azure services">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@pfeilbr" />
+  <meta name="twitter:creator" content="@pfeilbr" />
+  <meta name="generator" content="Hugo 0.82.0" />
+  <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://brianpfeil.com/css/highlight.min.css" /><link rel="stylesheet" href="https://brianpfeil.com/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+<link rel="stylesheet" href="https://brianpfeil.com/css/custom.css" />
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-610553-4', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+
+
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      
+      <a class="navbar-brand" href="https://brianpfeil.com/">Brian Pfeil</a>
+      
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+
+      <ul class="nav navbar-nav navbar-right">
+        
+        
+        <li>
+          <a title="about" href="/about/">about</a>
+        </li>
+        
+
+        
+        
+        <li>
+          <a title="posts" href="/">posts</a>
+        </li>
+        
+
+        
+        
+        <li>
+          <a title="projects" href="/projects/">projects</a>
+        </li>
+        
+
+        
+        
+        <li>
+          <a title="tags" href="/tags/">tags</a>
+        </li>
+        
+
+        
+
+        
+
+        
+
+        <li>
+          
+          <a id="dark-mode-toggle">
+            <i class="fa fa-moon hidden" id="dark-mode-enabled-icon" aria-hidden="true"></i>
+            <i class="fa fa-sun hidden" id="dark-mode-disabled-icon" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header-section ">
+  
+  <div class="intro-header no-img">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div class="post-heading">
+            
+
+            
+            
+            <h1>Azure</h1>
+            
+
+
+
+            
+            
+            
+            
+            <span class="post-meta">
+  
+  
+
+    June 15, 2021
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+  <span class="blog-tags">
+    &nbsp;&bull;&nbsp;
+    
+    <a href="https://brianpfeil.com//tags/azure/">azure</a>
+    
+    
+  </span>
+  
+  
+
+
+  
+  
+</span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+    
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <h1 id="azure">azure</h1>
+<ul>
+<li><a href="#management">Management</a></li>
+<li><a href="#iam">IAM</a>
+<ul>
+<li><a href="#service-principals">Service Principals</a></li>
+<li><a href="#roles">Roles</a></li>
+<li><a href="#role-assignments">Role Assignments</a></li>
+<li><a href="#resources">Resources</a></li>
+</ul>
+</li>
+<li><a href="#azure-policy">Azure Policy</a></li>
+<li><a href="#azure-resource-manager-arm">Azure Resource Manager (ARM)</a>
+<ul>
+<li><a href="#resources-1">Resources</a></li>
+</ul>
+</li>
+<li><a href="#azure-blueprints">Azure Blueprints</a></li>
+<li><a href="#blob-storage">Blob Storage</a>
+<ul>
+<li><a href="#resources-2">Resources</a></li>
+</ul>
+</li>
+<li><a href="#storage-queues">Storage Queues</a></li>
+<li><a href="#service-bus-queues">Service Bus Queues</a></li>
+<li><a href="#service-bus-topics">Service Bus Topics</a>
+<ul>
+<li><a href="#resources-3">Resources</a></li>
+</ul>
+</li>
+<li><a href="#event-grid">Event Grid</a>
+<ul>
+<li><a href="#resources-4">Resources</a></li>
+</ul>
+</li>
+<li><a href="#event-hub">Event Hub</a></li>
+<li><a href="#cosmos-db">Cosmos DB</a></li>
+<li><a href="#sql-database">SQL Database</a></li>
+<li><a href="#sql-managed-instance">SQL Managed Instance</a></li>
+<li><a href="#static-web-apps">Static Web Apps</a></li>
+<li><a href="#functions">Functions</a>
+<ul>
+<li><a href="#resources-5">Resources</a></li>
+</ul>
+</li>
+<li><a href="#function-proxies">Function Proxies</a>
+<ul>
+<li><a href="#resources-6">Resources</a></li>
+</ul>
+</li>
+<li><a href="#api-management-apim">API Management (APIM)</a>
+<ul>
+<li><a href="#resources-7">Resources</a></li>
+</ul>
+</li>
+<li><a href="#signalr">SignalR</a>
+<ul>
+<li><a href="#resources-8">Resources</a></li>
+</ul>
+</li>
+<li><a href="#key-vault">Key Vault</a></li>
+<li><a href="#cdn">CDN</a></li>
+<li><a href="#app-configuration">App Configuration</a></li>
+<li><a href="#data-factory">Data Factory</a></li>
+<li><a href="#synapse-analytics">Synapse Analytics</a></li>
+<li><a href="#hdinsight">HDInsight</a></li>
+<li><a href="#databricks">Databricks</a></li>
+<li><a href="#data-lake-analytics">Data Lake Analytics</a></li>
+<li><a href="#logic-apps">Logic Apps</a>
+<ul>
+<li><a href="#resources-9">Resources</a></li>
+</ul>
+</li>
+<li><a href="#application-insights">Application Insights</a></li>
+<li><a href="#cognitive-search">Cognitive Search</a></li>
+<li><a href="#introducing-authentication">Introducing Authentication</a></li>
+<li><a href="#azure-ad-authentication-options-for-users">Azure AD Authentication Options for Users</a></li>
+<li><a href="#azure-cost-management--billing-documentation">Azure Cost Management + Billing documentation</a></li>
+</ul>
+<h2 id="management">Management</h2>
+<ul>
+<li>Account -&gt; [Management Groups] -&gt; Subscriptions -&gt; Resources Groups -&gt; Resources
+<ul>
+<li>e.g. hierarchy in URI for Key Vault Resource <code>/subscriptions/8a1f586d-1032-4471-803a-25126ef17c42/resourceGroups/resource-group-01/providers/Microsoft.KeyVault/vaults/pfeilkeyvault01</code></li>
+</ul>
+</li>
+<li>Management Groups (enable enterprise governance) are optional but allow you to group subscriptions and apply policies at management group level that are inherited by all contained subscriptions. (e.g. only create storage accounts in a given geography)</li>
+<li>Billing done at Subscription level</li>
+<li>Resource groups - scope for applying role-based access control (RBAC) permissions</li>
+</ul>
+<p><img src="https://www.evernote.com/l/AAGdmzF3n3pDX7VmRSXndC7A8LQfnIKUgrYB/image.png" alt=""></p>
+<ul>
+<li>Regions</li>
+<li>Availability Zones</li>
+<li>Each Azure region is always paired with another region within the same geography.  provide reliable services and data redundancy</li>
+</ul>
+<h2 id="iam">IAM</h2>
+<ul>
+<li>Azure AD - stories identities in directory and governs access to azure resources.</li>
+<li>Identity - the fact of being something or someone. e.g. Users, Applications, Servers.</li>
+<li>Authentication - process of verification of identity</li>
+<li>Authorization - process of ensuring that only authenticated identities get access to the resources for which they have been granted access.</li>
+<li>Access Management - process of controlling, verifying, tracking and managing access to authorized users and applications.</li>
+</ul>
+<p><img src="https://www.evernote.com/l/AAHeMR81MMZKRapGvhkxOYN71U8J8vRyXGIB/image.png" alt=""></p>
+<ul>
+<li>RBAC - role based access control</li>
+<li>Azure AD Roles - roles that allow admin access to global (tenant-level) settings and services. e.g. user and group admin, domain names, adding/removing user licenses, etc.</li>
+<li>Azure Roles - roles that define permissions to azure resources.</li>
+<li>Privileged Identity Management (PIM) - just in time access to elevated roles.  Eligible roles are assigned to a user.  That user can go into PIM to request access.  Duration and reason can be set when requesting and assuming the elevated role.</li>
+</ul>
+<h3 id="service-principals">Service Principals</h3>
+<blockquote>
+<p>An Azure service principal is a security identity used by user-created apps, services, and automation tools to access specific Azure resources. Think of it as a &lsquo;user identity&rsquo; (login and password or certificate) with a specific role, and tightly controlled permissions to access your resources. It only needs to be able to do specific things, unlike a general user identity. It improves security if you only grant it the minimum permissions level needed to perform its management tasks.</p>
+</blockquote>
+<p>Similar to AWS IAM User</p>
+<ul>
+<li>create service principal in portal via <strong>Azure AD | App registrations</strong></li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># create service principal</span>
+az ad sp create-for-rbac --name <span class="s2">&#34;http://service-principal-01&#34;</span>
+
+<span class="c1"># assign role</span>
+az role assignment create --assignee <span class="s2">&#34;00133c8e-a08e-490e-ae7c-872ea2debf1e&#34;</span> --role Contributor
+
+<span class="c1"># login</span>
+az login --service-principal -u &lt;appid&gt; --password <span class="o">{</span>password-or-path-to-cert<span class="o">}</span> --tenant <span class="o">{</span>tenant<span class="o">}</span>
+</code></pre></div><h3 id="roles">Roles</h3>
+<ul>
+<li>permissions - read blob (<code>Microsoft.Storage/storageAccounts/blobServices/containers/blobs/read</code>).  read storage queue (<code>Microsoft.Storage/storageAccounts/queueServices/queues/messages/read</code>)</li>
+<li>scopes - subscriptions or resource groups) where this role will be available for assignment.</li>
+<li>Azure RBAC scope covers management groups, subscriptions, resource groups, and resources</li>
+<li>Portal | Subscription | Access control (IAM) - assign / create / delete roles.</li>
+</ul>
+<h3 id="role-assignments">Role Assignments</h3>
+<ul>
+<li>process of attaching a role definition to a user, group, service principal, or managed identity at a particular scope for the purpose of granting access</li>
+<li>Role Definition (permissions) + Resource + Scope</li>
+<li>Can view / managed in portal via &ldquo;Access control (IAM)&rdquo; blade</li>
+</ul>
+<h3 id="resources">Resources</h3>
+<ul>
+<li><a href="https://marczak.io/az-900/episode-28/cheat-sheet/">Role-Based Access Control | AZ-900 Episode 28 - Cheat Sheet</a></li>
+<li><a href="https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli">Use Azure service principals with Azure CLI</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal">Create an Azure AD app &amp; service principal in the portal - Microsoft identity platform</a></li>
+<li><a href="https://marczak.io/posts/2019/07/securing-websites-with-msi/">Securing Azure Services with Managed Identities</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/consent-framework">Azure AD consent framework</a> - describes process of grant permissions to an application and the user consent flow</li>
+</ul>
+<h2 id="azure-policy">Azure Policy</h2>
+<ul>
+<li>policies focus on resource properties</li>
+<li>e.g. only create resources where location is US.</li>
+<li>Policy Definitions - include ALLOW and DENY for singular check and singular effect</li>
+<li>Initiative - grouping of multiple policies</li>
+<li>can assign policy at the following scope levels:  management group, subscription, resource group
+<ul>
+<li>can add an exclusion scope that specifies where not to apply the policy</li>
+</ul>
+</li>
+<li>show which resources are compliant and non-compliant with policies</li>
+<li>there are built-in policies and you can create you own custom policies</li>
+</ul>
+<p>summary</p>
+<p><img src="https://www.evernote.com/l/AAETzFRSpUxFjJZ8bKruWXdUgPiHngXfQHEB/image.png" alt=""></p>
+<p>azure portal view</p>
+<p><img src="https://www.evernote.com/l/AAGQ8QTauf1HzJkwmbdu1Iriu4wc1Y2KOQUB/image.png" alt=""></p>
+<p>policy blocking resource creation</p>
+<p><img src="https://www.evernote.com/l/AAFcBSccmh9C8I1COF9IGonCSzPzH_yp3ssB/image.png" alt=""></p>
+<h2 id="azure-resource-manager-arm">Azure Resource Manager (ARM)</h2>
+<ul>
+<li>infrastructure-as-code with json</li>
+<li>parameters, variables, resources, outputs</li>
+<li>nested templates</li>
+<li>external templates.  reference via URL</li>
+</ul>
+<h3 id="resources-1">Resources</h3>
+<ul>
+<li><a href="https://github.com/Azure/azure-quickstart-templates">Azure/azure-quickstart-templates</a></li>
+</ul>
+<h2 id="azure-blueprints">Azure Blueprints</h2>
+<p>similar to AWS Service Catalog</p>
+<ul>
+<li>helps with ensuring security and compliance</li>
+<li>Package of various Azure components (artifacts).  Resource Groups, ARM Templates, Policy Assignments, Role Assignments</li>
+<li>central repository for pre-approved patterns and solutions</li>
+<li>Blueprint Definitions - container for artifacts</li>
+<li>Blueprint Assignments - assign to resource group and it deploys artifacts to it</li>
+<li>supports versioning.</li>
+</ul>
+<h2 id="blob-storage">Blob Storage</h2>
+<h3 id="resources-2">Resources</h3>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-static-website">Static website hosting in Azure Storage</a></li>
+</ul>
+<h2 id="storage-queues">Storage Queues</h2>
+<ul>
+<li>good for async worker processes</li>
+<li>64 kb size limit on messages</li>
+<li>messages stored up to 7 days</li>
+</ul>
+<h2 id="service-bus-queues">Service Bus Queues</h2>
+<ul>
+<li>FIFO</li>
+<li>256 KB - 1 MB message size</li>
+<li>duplicate detection (idempotent)</li>
+<li>supports in order and at-most-once delivery</li>
+<li>dead-letter queues</li>
+<li>message expiration</li>
+</ul>
+<h2 id="service-bus-topics">Service Bus Topics</h2>
+<ul>
+<li>topic and subscriptions support</li>
+<li>duplicate detection (idempotent)</li>
+<li>message TTL</li>
+<li>dead-letter queues</li>
+</ul>
+<h3 id="resources-3">Resources</h3>
+<ul>
+<li><a href="https://azure.microsoft.com/en-us/updates/sesrvice-bus-explorer/">Service Bus Explorer on the Azure portal is now available in preview</a></li>
+</ul>
+<h2 id="event-grid">Event Grid</h2>
+<ul>
+<li>AWS EventBridge</li>
+<li>Publishers - built-in events from azure services.  custom events from own applications</li>
+<li>Event Sources - where the event happens. e.g. Azure Storage</li>
+<li>Topics - endpoint where the source sends events
+<ul>
+<li>System topics - built-in topics provided by Azure services such as Azure Storage, Azure Event Hubs, and Azure Service Bus</li>
+<li>Custom topics - application and third-party topics</li>
+</ul>
+</li>
+<li>Subscriptions - which events on a topic you&rsquo;re interested in receiving.  When creating the subscription, you provide an endpoint for handling the event</li>
+</ul>
+<h3 id="resources-4">Resources</h3>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/event-grid/template-samples">Azure Resource Manager template samples - Event Grid - Azure Event Grid</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/event-grid/receive-events">Receive events from Azure Event Grid to an HTTP endpoint - Azure Event Grid</a></li>
+</ul>
+<h2 id="event-hub">Event Hub</h2>
+<ul>
+<li>
+<p>AWS Kinesis</p>
+</li>
+<li>
+<p>streaming</p>
+</li>
+<li>
+<p>partitions</p>
+</li>
+<li>
+<p>consumer groups, consumers</p>
+</li>
+<li>
+<p>listening streaming applications</p>
+</li>
+<li>
+<p>stream to blob storage (similar to aws firehose -&gt; S3) as .avro files</p>
+</li>
+<li>
+<p>namespace -&gt; hub</p>
+</li>
+</ul>
+<h2 id="cosmos-db">Cosmos DB</h2>
+<ul>
+<li>NoSQL</li>
+<li>multi-model / multiple interfaces - SQL, MongoDB, Cassandra, Tables, and Gremlin</li>
+<li>similar to AWS DynamoDB</li>
+</ul>
+<h2 id="sql-database">SQL Database</h2>
+<ul>
+<li>PaaS Database Engine (not fully managed)</li>
+<li>handles upgrading, patching, backups, and monitoring, without user involvement</li>
+<li>similar to AWS RDS</li>
+</ul>
+<h2 id="sql-managed-instance">SQL Managed Instance</h2>
+<ul>
+<li>&hellip;</li>
+</ul>
+<h2 id="static-web-apps">Static Web Apps</h2>
+<ul>
+<li>allows you to build modern web applications that automatically publish from changes made in GitHub.</li>
+</ul>
+<h2 id="functions">Functions</h2>
+<ul>
+<li>triggers and bindings</li>
+<li><a href="https://docs.microsoft.com/en-us/azure/azure-functions/durable/">Azure Durable Functions</a> - lets you write stateful functions in a serverless compute environment.  Similar to AWS Step Functions, but implemented as language level library</li>
+<li><a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-custom-handlers">custom handlers</a> via binary that runs local http server</li>
+</ul>
+<p>deploy function via zip file.  ensure correct <a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-node?tabs=v2#folder-structure">nodejs folder structure</a></p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">az functionapp deployment <span class="nb">source</span> config-zip -g &lt;resource_group&gt; -n <span class="se">\
+</span><span class="se"></span>&lt;app_name&gt; --src &lt;zip_file_path&gt;
+</code></pre></div><p>When http triggered function is <a href="https://docs.microsoft.com/en-us/azure/app-service/configure-authentication-provider-aad?toc=/azure/azure-functions/toc.json">configured with Azure AD authentication</a>, the identity information is in the
+<code>req.headers</code></p>
+<p>Example</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="s2">&#34;x-ms-client-principal-name&#34;</span><span class="err">:</span> <span class="s2">&#34;brian.pfeil@gmail.com&#34;</span><span class="err">,</span>
+<span class="s2">&#34;x-ms-client-principal-id&#34;</span><span class="err">:</span> <span class="s2">&#34;38d35c72-5a26-464c-bbb3-c4487a1d4779&#34;</span><span class="err">,</span>
+<span class="s2">&#34;x-ms-client-principal-idp&#34;</span><span class="err">:</span> <span class="s2">&#34;aad&#34;</span><span class="err">,</span>
+</code></pre></div><h3 id="resources-5">Resources</h3>
+<ul>
+<li><a href="https://github.com/mspnp/serverless-reference-implementation">mspnp/serverless-reference-implementation</a> - great full-stack serverless reference</li>
+<li><a href="https://docs.microsoft.com/en-us/azure/azure-functions/deployment-zip-push">Zip push deployment for Azure Functions</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-node">JavaScript developer reference for Azure Functions</a></li>
+</ul>
+<h2 id="function-proxies">Function Proxies</h2>
+<ul>
+<li>Proxies are defined inside a proxies.json configuration file at the root of the project. see following for details <a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-proxies#advanced-configuration">https://docs.microsoft.com/en-us/azure/azure-functions/functions-proxies#advanced-configuration</a></li>
+<li>allow us to define a single API surface for multiple function apps</li>
+<li>map a path (/something) to backend URL.  e.g. /hello -&gt; <a href="https://durablefnsplayground01.azurewebsites.net/api/orchestrators/%7BfunctionName%7D?code=UD0/aY27zc3FPpjNjaAqMU73yVJuLB1tva3U9TaaWDAMzwEzg3qeVA==">https://durablefnsplayground01.azurewebsites.net/api/orchestrators/{functionName}?code=UD0/aY27zc3FPpjNjaAqMU73yVJuLB1tva3U9TaaWDAMzwEzg3qeVA==</a></li>
+<li>this way you don&rsquo;t need to expose code query string parameter</li>
+<li>you can map a path and hard code a response for mocking</li>
+</ul>
+<h3 id="resources-6">Resources</h3>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-proxies">Work with proxies in Azure Functions</a></li>
+<li><a href="https://www.youtube.com/watch?v=NyysLRSJUmk">Microsoft Azure Function Proxies in 5 Minutes</a></li>
+</ul>
+<h2 id="api-management-apim">API Management (APIM)</h2>
+<ul>
+<li>AWS API Gateway</li>
+<li>import OpenAPI /Swagger spec</li>
+<li>can import a function app as an API in API Management</li>
+<li>APIM product - contains one or more APIs as well as a usage quota and the terms of use. Once a product is published, developers can subscribe to the product and begin to use the product&rsquo;s APIs</li>
+<li>Subscriptions - developers who need to consume the published APIs must include a valid subscription key in HTTP requests when they make calls to those APIs
+<ul>
+<li>can be scoped to product, all APIs, or an individual API</li>
+<li>need to provide <code>ocp-apim-subscription-key</code> header when calling</li>
+</ul>
+</li>
+<li><a href="(https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-policies)">Policies</a> - allow the publisher to change the behavior of the API through configuration.
+<ul>
+<li>specified in XML</li>
+<li>Allow for request and response transformations.  Rate limiting.  Similar to AWS APIG request/response mapping templates.</li>
+</ul>
+</li>
+<li>as of 2021-02-12 takes about 30 min to create API Management instance</li>
+</ul>
+<h3 id="resources-7">Resources</h3>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/api-management/import-function-app-as-api">Import an Azure Function App as an API in API Management - Azure API Management</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-policies">Policies in Azure API Management</a></li>
+</ul>
+<h2 id="signalr">SignalR</h2>
+<ul>
+<li>real-time application</li>
+<li>websocket, SSE (EventSource), HTTP long polling</li>
+</ul>
+<h3 id="resources-8">Resources</h3>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/learn/modules/automatic-update-of-a-webapp-using-azure-functions-and-signalr/">Enable automatic updates in a web application using Azure Functions and SignalR Service - Learn</a></li>
+<li><a href="https://github.com/MicrosoftDocs/mslearn-advocates.azure-functions-and-signalr">MicrosoftDocs/mslearn-advocates.azure-functions-and-signalr</a></li>
+</ul>
+<h2 id="key-vault">Key Vault</h2>
+<ul>
+<li>AWS Secrets Manager</li>
+<li>functions can have Key Vault references which make the secrets available in environment variables.  The secrets are also caches per function instance on startup</li>
+</ul>
+<p>Example Secret</p>
+<p><img src="https://www.evernote.com/l/AAEIj8NWGyVPGZAIVI8hDdhhiJZYIgtZ3rAB/image.png" alt=""></p>
+<h2 id="cdn">CDN</h2>
+<ul>
+<li>CDN profile - collection of CDN endpoints</li>
+</ul>
+<h2 id="app-configuration">App Configuration</h2>
+<ul>
+<li>centralized service for management of application settings and feature flags</li>
+<li>supports key vault integration via references to the secrets stored in key vault</li>
+<li>integrates with event grid. emits events when App Configuration changes that you can subscribe and respond to</li>
+<li>e.g. A/B testing with percentages</li>
+<li>e.g. multiple apps use same settings like storage key</li>
+</ul>
+<h2 id="data-factory">Data Factory</h2>
+<ul>
+<li>managed ETL</li>
+<li>concepts
+<ul>
+<li>Pipelines - outer container</li>
+<li>Connections (Linked Services) - connection information for source(s) and sink(s) with credentials / keys</li>
+<li>Dataset - file formats and schema</li>
+<li>Activities - copy data, transform, etc.</li>
+<li>Triggers - on-demand/manual (REST API), scheduled, tumbling windows, event based via event grid for blob storage for a pipeline run</li>
+<li>Parameters - can be passed into pipeline and used with the various types.</li>
+</ul>
+</li>
+</ul>
+<h2 id="synapse-analytics">Synapse Analytics</h2>
+<ul>
+<li>&hellip;</li>
+</ul>
+<h2 id="hdinsight">HDInsight</h2>
+<ul>
+<li>Apache Spark , Apache Hadoop , Apache Kafka , Apache HBase , Apache Storm , and Machine Learning Services</li>
+<li>like AWS EMR</li>
+</ul>
+<h2 id="databricks">Databricks</h2>
+<ul>
+<li>spark, hadoop, and friends &hellip;</li>
+</ul>
+<h2 id="data-lake-analytics">Data Lake Analytics</h2>
+<ul>
+<li>&hellip;</li>
+</ul>
+<h2 id="logic-apps">Logic Apps</h2>
+<ul>
+<li>schedule, automate, and orchestrate tasks, business processes, and workflows when you need to integrate apps, data, systems, and services across enterprises or organizations</li>
+</ul>
+<p><strong>Guidance</strong></p>
+<p>The following flowchart summarizes the key questions to ask when you&rsquo;re considering using Logic Apps.</p>
+<p><img src="https://www.evernote.com/l/AAEbJ6SJWaBCLq0wvDqR_wsghtF9ClpKyJwB/image.png" alt=""></p>
+<h3 id="resources-9">Resources</h3>
+<ul>
+<li><a href="https://marczak.io/posts/2019/08/secure-logic-app-with-api-management/">Securing Logic App with Azure AD authentication using API Management</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-workflow-definition-language">Workflow Definition Language schema reference - Azure Logic Apps</a></li>
+</ul>
+<h2 id="application-insights">Application Insights</h2>
+<ul>
+<li>author queries using <a href="https://docs.microsoft.com/en-us/azure/data-explorer/kql-quick-reference">Kusto Query Language</a></li>
+</ul>
+<h2 id="cognitive-search">Cognitive Search</h2>
+<ul>
+<li>indexing
+<ul>
+<li>push model - upload json docs for indexing</li>
+<li>pull model - point indexers where the content lives. e.g. azure blob storage</li>
+</ul>
+</li>
+<li>querying - can include relevance tuning, autocomplete, synonym matching, fuzzy matching, pattern matching, filter, and sort.  spelling mistakes, geospatial queries, paging, highlighting.</li>
+<li>Skillset -  content type indexer for unstructured and structured content (docx, pdf, ).  predefined ones from Microsoft, or custom skills that you create.  e.g. text split skill, sentiment detection skill
+<ul>
+<li>document cracking - understand the contents of the document.  text, images, metadata, etc.</li>
+</ul>
+</li>
+<li>portions of underlying tech is based on apache lucene</li>
+</ul>
+<hr>
+<h2 id="introducing-authentication">Introducing Authentication</h2>
+<ul>
+<li>
+<p>OAuth 2.0 is specifically about authorization and permissions</p>
+</li>
+<li>
+<p>Open ID Connect (OIDC) is focused on authentication and built on OAuth 2.0.  Has strict JWT format that part of the spec.</p>
+</li>
+<li>
+<p>identity token</p>
+<ul>
+<li>typically JWT</li>
+<li>user claims - e.g. username, email</li>
+</ul>
+</li>
+<li>
+<p>access token</p>
+<ul>
+<li>short lived (e.g. 1 hr)</li>
+<li>typically JWT</li>
+<li>scope</li>
+</ul>
+</li>
+<li>
+<p>refresh token</p>
+<ul>
+<li>long life (e.g. 14 days)</li>
+<li>can be used to request an access token without the user needing to login again</li>
+</ul>
+</li>
+</ul>
+<h2 id="azure-ad-authentication-options-for-users">Azure AD Authentication Options for Users</h2>
+<ul>
+<li>Azure AD Connect - replicate objects in AD to Azure AD.  AD is the source of truth.</li>
+</ul>
+<h2 id="azure-cost-management--billing-documentation">Azure Cost Management + Billing documentation</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/cost-management-billing/">https://docs.microsoft.com/en-us/azure/cost-management-billing/</a></li>
+</ul>
+
+
+        
+
+        
+
+        <hr />
+
+        <section id="social-share">
+          <div class="list-inline footer-links text-center">
+            <span class="text-muted">share on</span><br />
+            <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fazure%2f&amp;text=Azure&amp;via=pfeilbr"
+              target="_blank" title="Share on Twitter">Twitter</a>
+            &nbsp;&bull;&nbsp;
+            <a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fazure%2f&amp;title=Azure" target="_blank"
+              title="Share on Reddit">
+              Reddit
+            </a>
+
+          </div>
+
+
+
+        </section>
+
+
+
+
+
+
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+      </article>
+
+      
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="https://brianpfeil.com/post/aws-api-gateway-to-s3-static-site/" data-toggle="tooltip" data-placement="top"
+            title="AWS API Gateway to S3 Static Site">&larr; AWS API Gateway to S3 Static Site</a>
+        </li>
+        
+        
+      </ul>
+      
+
+
+      
+      
+      
+      
+
+    </div>
+  </div>
+</div>
+
+    
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          
+          
+          
+          
+          <li>
+            <a href="https://twitter.com/pfeilbr" title="twitter">
+              <span class="footer-link">
+                twitter
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://github.com/pfeilbr" title="github">
+              <span class="footer-link">
+                github
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://stackoverflow.com/users/29148/pfeilbr" title="stack overflow">
+              <span class="footer-link">
+                stack overflow
+              </span>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="footer-link">
+                rss
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+          
+          <a href="https://brianpfeil.com">Brian Pfeil</a>
+          
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+          2021
+          
+
+          
+        </p>
+        
+        
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"
+  integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js"
+  integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://brianpfeil.com/js/main.js"></script>
+<script src="https://brianpfeil.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function () { $("pre.chroma").css("padding", "0"); }); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js"
+  integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js"
+  integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://brianpfeil.com/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+<script src="https://unpkg.com/darkreader@4.9.16/darkreader.js" crossorigin="anonymous"></script>
+
+<script>
+    
+    (() => {
+
+        DarkReader.setFetchMethod(window.fetch)
+
+        const DARK_MODE_ENABLED_KEY = "DARK_MODE_ENABLED_KEY"
+
+        const enabledIcon = document.getElementById("dark-mode-enabled-icon")
+        const disabledIcon = document.getElementById("dark-mode-disabled-icon")
+
+         
+        if (enabledIcon === null || disabledIcon === null) {
+            return
+        }
+
+        const toggleClassName = "hidden"
+
+        const enable = () => {
+
+            if (window.localStorage) {
+                DarkReader.enable({
+                    brightness: 100,
+                    contrast: 90,
+                    sepia: 10
+                });
+                window.localStorage.setItem(DARK_MODE_ENABLED_KEY, "true")
+
+                enabledIcon.classList.add(toggleClassName)
+                disabledIcon.classList.remove(toggleClassName)
+            }
+        }
+
+        const disable = () => {
+            if (window.localStorage) {
+                DarkReader.disable()
+                if (window.localStorage.getItem(DARK_MODE_ENABLED_KEY)) {
+                    window.localStorage.removeItem(DARK_MODE_ENABLED_KEY)
+                }
+
+                enabledIcon.classList.remove(toggleClassName)
+                disabledIcon.classList.add(toggleClassName)
+
+            }
+        }
+
+        const isEnabled = () => {
+            return window.localStorage && (window.localStorage.getItem(DARK_MODE_ENABLED_KEY) != null)
+        }
+
+        const toggle = () => {
+            if (isEnabled()) {
+                disable()
+            } else {
+                enable()
+            }
+        }
+
+
+        if (isEnabled()) {
+            enable()
+        } else {
+            disable()
+        }
+
+        const e = document.getElementById('dark-mode-toggle')
+        e.addEventListener('click', toggle)
+        
+        
+        
+        
+        
+        
+
+        
+        
+
+    })()
+
+</script>
+
+<script>
+     
+    
+
+</script>
+
+
+
+<script id="search-result-template" type="text/x-js-template">
+<article class="post-preview" id="summary-${key}">
+    <a class="search-item" href="${link}">
+        <h2 class="post-title">${title}</h2>
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+            ${postedOnDate}
+            <span class="blog-tags">
+                &nbsp;•&nbsp;
+                ${ isset tags }${tags}${ end }
+            </span>
+        </span>
+    </p>
+    <div class="post-entry">
+    ${snippet}
+    </div>
+</article>
+</script>
+
+<script>
+    const postCount= 240 
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+<script src="https://brianpfeil.com/js/search.js"></script>
+
+    
+  </body>
+</html>
+
