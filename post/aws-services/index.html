@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  5320 ,
+  "wordCount":  5716 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -434,6 +434,11 @@ if (!doNotTrack) {
 <li><a href="#sam-serverless-application-model">SAM (Serverless Application Model)</a></li>
 <li><a href="#cdk">CDK</a></li>
 <li><a href="#aws-sdks">AWS SDKs</a></li>
+</ul>
+</li>
+<li><a href="#migration--transfer">Migration &amp; Transfer</a>
+<ul>
+<li><a href="#aws-dms-database-migration-service">AWS DMS (Database Migration Service)</a></li>
 </ul>
 </li>
 <li><a href="#machine-learning">Machine Learning</a>
@@ -1286,6 +1291,72 @@ if (!doNotTrack) {
 <ul>
 <li>built in retries, timeouts</li>
 <li>can configure timeouts (e.g. <code>AWS.config.update({maxRetries: 2, httpOptions: { timeout: 2 * 1000, connectTimeout: 3 * 1000, },})</code>)</li>
+</ul>
+<hr>
+<h2 id="migration--transfer">Migration &amp; Transfer</h2>
+<h3 id="aws-dms-database-migration-service">AWS DMS (Database Migration Service)</h3>
+<ul>
+<li>migrate RDBS, data warehouses, nosql dbs, etc. in cloud, between combos of cloud and on-prem</li>
+<li>it&rsquo;s a server (EC2) in the cloud that runs replication software (replication engine).  <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_ReplicationInstance.Types.html">DMS replication instance types</a></li>
+<li>create source and target connections</li>
+<li>schedule task on server to move data</li>
+<li>pay-as-you-go model</li>
+<li>data at rest is encrypted</li>
+<li>SSL / TLS encrypts data in -flight</li>
+<li>HA with multi-AZ deployment</li>
+<li>can provision DMS resources using CloudFormation.</li>
+<li>migration types: one-time, ongoing replication (CDC)</li>
+<li>AWS DMS doesn&rsquo;t perform schema or code conversion
+<ul>
+<li>you can use the AWS Schema Conversion Tool (AWS SCT)</li>
+</ul>
+</li>
+<li>create endpoints to access source or target data store.</li>
+<li>endpoint properties
+<ul>
+<li>Endpoint type – Source or target.</li>
+<li>Engine type – Type of database engine, such as Oracle or PostgreSQL..</li>
+<li>Server name – Server name or IP address that AWS DMS can reach.</li>
+<li>Port – Port number used for database server connections.</li>
+<li>Encryption – Secure Socket Layer (SSL) mode, if SSL is used to encrypt the connection.</li>
+<li>Credentials – User name and password for an account with the required access rights.</li>
+</ul>
+</li>
+<li>At a high level, when using AWS DMS you do the following:
+<ul>
+<li>Create a replication server.</li>
+<li>Create source and target endpoints that have connection information about your data stores.</li>
+<li>Create one or more migration tasks to migrate data between the source and target data stores.</li>
+</ul>
+</li>
+<li>A replication task can consist of three major phases:
+<ul>
+<li>The full load of existing data</li>
+<li>The application of cached changes</li>
+<li>Ongoing replication</li>
+</ul>
+</li>
+<li>
+<blockquote>
+<p>At the start of the ongoing replication phase, a backlog of transactions generally causes some lag between the source and target databases. The migration eventually reaches a steady state after working through this backlog of transactions.</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>If your migration is heterogeneous (between two databases that use different engine types), you can use the AWS Schema Conversion Tool (AWS SCT) to generate a complete target schema for you.</p>
+</blockquote>
+</li>
+<li>Depending on the Amazon EC2 instance class you select, your replication instance comes with either 50 GB or 100 GB of data storage</li>
+<li>public and private replication instances
+<ul>
+<li>You use a private instance when both source and target databases are in the same network that is connected to the replication instance&rsquo;s VPC. The network can be connected to the VPC by using a VPN, AWS Direct Connect, or VPC peering.</li>
+</ul>
+</li>
+<li>DMS Replication Process
+<img src="https://docs.aws.amazon.com/dms/latest/userguide/images/datarep-Welcome.png" alt=""></li>
+<li>Replication
+<img src="https://docs.aws.amazon.com/dms/latest/userguide/images/datarep-intro-rep-instance1.png" alt="">
+<img src="https://docs.aws.amazon.com/dms/latest/userguide/images/datarep-intro-rep-task1.png" alt=""></li>
 </ul>
 <hr>
 <h2 id="machine-learning">Machine Learning</h2>
