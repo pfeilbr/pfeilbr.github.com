@@ -86,7 +86,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -329,12 +329,12 @@ if (!doNotTrack) {
 <ol>
 <li>Start selenium Standalone server</li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># run the following in it&#39;s own shell and leave running</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># run the following in it&#39;s own shell and leave running</span>
 $ java -jar selenium-server/selenium-server-standalone-2.53.0.jar
 </code></pre></div><ol start="2">
 <li>Run script</li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">$ node index.js
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ node index.js
 </code></pre></div><h1 id="running-selenium-hub-and-nodes-using-docker">Running Selenium Hub and Node(s) Using Docker</h1>
 <ol>
 <li>
@@ -351,7 +351,7 @@ $ java -jar selenium-server/selenium-server-standalone-2.53.0.jar
 <p>Get host and port for &ldquo;selenium-hub&rdquo; container and use them in your client.</p>
 <p><img src="http://static-content-01.s3-website-us-east-1.amazonaws.com//Kitematic_1B862C7B.png" alt=""></p>
 <p>Example client config</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
 	<span class="nx">host</span><span class="o">:</span> <span class="s2">&#34;192.168.99.100&#34;</span><span class="p">,</span>
 	<span class="nx">port</span><span class="o">:</span> <span class="mi">32768</span><span class="p">,</span>
 	<span class="nx">desiredCapabilities</span><span class="o">:</span> <span class="p">{</span>

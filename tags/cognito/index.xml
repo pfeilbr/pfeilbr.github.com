@@ -7,11 +7,11 @@
         <description>Recent content in cognito on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 26 Sep 2019 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/cognito/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Thu, 26 Sep 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/tags/cognito/index.xml" rel="self" type="application/rss+xml" />
     <item>
 <title>AWS Cognito Developer Authenticated Identities</title>
 <link>https://brianpfeil.com/post/aws-cognito-developer-authenticated-identities/</link>
-<pubDate>Thu, 26 Sep 2019 00:00:00 -0400</pubDate>
+<pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cognito-developer-authenticated-identities/</guid>
 <description>AWS Cognito Developer Authenticated Identities</description>
@@ -20,7 +20,7 @@
     <item>
 <title>Cognito Federated to Salesforce and S3 Presigned URL</title>
 <link>https://brianpfeil.com/post/cognito-federated-to-salesforce-and-s3-presigned-url/</link>
-<pubDate>Thu, 13 Jun 2019 00:00:00 -0400</pubDate>
+<pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/cognito-federated-to-salesforce-and-s3-presigned-url/</guid>
 <description>Cognito Federated to Salesforce and S3 Presigned URL</description>

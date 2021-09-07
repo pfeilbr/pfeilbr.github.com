@@ -7,11 +7,11 @@
         <description>Recent content in Shell on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 11 Nov 2020 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/categories/Shell/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Wed, 11 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/categories/Shell/index.xml" rel="self" type="application/rss+xml" />
     <item>
 <title>DynamoDB Export to S3 and Query with Athena</title>
 <link>https://brianpfeil.com/post/dynamodb-export-to-s3-and-query-with-athena/</link>
-<pubDate>Wed, 11 Nov 2020 00:00:00 -0500</pubDate>
+<pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/dynamodb-export-to-s3-and-query-with-athena/</guid>
 <description>DynamoDB Export to S3 and Query with Athena</description>
@@ -20,7 +20,7 @@
     <item>
 <title>AWS CloudWatch Logs Insights</title>
 <link>https://brianpfeil.com/post/aws-cloudwatch-logs-insights/</link>
-<pubDate>Fri, 30 Oct 2020 00:00:00 -0400</pubDate>
+<pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cloudwatch-logs-insights/</guid>
 <description>AWS CloudWatch Logs Insights</description>
@@ -29,7 +29,7 @@
     <item>
 <title>Bash Shell Script</title>
 <link>https://brianpfeil.com/post/bash-shell-script/</link>
-<pubDate>Tue, 13 Oct 2020 00:00:00 -0400</pubDate>
+<pubDate>Tue, 13 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/bash-shell-script/</guid>
 <description>Bash Shell Script</description>
@@ -38,7 +38,7 @@
     <item>
 <title>Bash Script Date and Time</title>
 <link>https://brianpfeil.com/post/bash-script-date-and-time/</link>
-<pubDate>Mon, 10 Feb 2020 00:00:00 -0500</pubDate>
+<pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/bash-script-date-and-time/</guid>
 <description>Bash Script Date and Time</description>
@@ -47,7 +47,7 @@
     <item>
 <title>fswatch</title>
 <link>https://brianpfeil.com/post/fswatch/</link>
-<pubDate>Tue, 29 Jan 2019 00:00:00 -0500</pubDate>
+<pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/fswatch/</guid>
 <description>fswatch</description>
@@ -56,7 +56,7 @@
     <item>
 <title>V8 JavaScript Engine</title>
 <link>https://brianpfeil.com/post/v8-javascript-engine/</link>
-<pubDate>Fri, 21 Sep 2018 00:00:00 -0400</pubDate>
+<pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/v8-javascript-engine/</guid>
 <description>V8 JavaScript Engine</description>

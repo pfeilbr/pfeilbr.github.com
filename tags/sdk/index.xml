@@ -7,11 +7,11 @@
         <description>Recent content in sdk on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 26 Oct 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/sdk/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Mon, 26 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/tags/sdk/index.xml" rel="self" type="application/rss+xml" />
     <item>
 <title>AWS JavaScript SDK V3</title>
 <link>https://brianpfeil.com/post/aws-javascript-sdk-v3/</link>
-<pubDate>Mon, 26 Oct 2020 00:00:00 -0400</pubDate>
+<pubDate>Mon, 26 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-javascript-sdk-v3/</guid>
 <description>AWS JavaScript SDK V3</description>
@@ -20,7 +20,7 @@
     <item>
 <title>Azure SDK for Node Authentication</title>
 <link>https://brianpfeil.com/post/azure-sdk-for-node-authentication/</link>
-<pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+<pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-sdk-for-node-authentication/</guid>
 <description>Azure SDK for Node Authentication</description>
@@ -29,7 +29,7 @@
     <item>
 <title>Azure Cosmos JS SDK</title>
 <link>https://brianpfeil.com/post/azure-cosmos-js-sdk/</link>
-<pubDate>Wed, 08 May 2019 00:00:00 -0400</pubDate>
+<pubDate>Wed, 08 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-cosmos-js-sdk/</guid>
 <description>Azure Cosmos JS SDK</description>
@@ -38,7 +38,7 @@
     <item>
 <title>AWS SDK CPP</title>
 <link>https://brianpfeil.com/post/aws-sdk-cpp/</link>
-<pubDate>Tue, 25 Sep 2018 00:00:00 -0400</pubDate>
+<pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-sdk-cpp/</guid>
 <description>AWS SDK CPP</description>

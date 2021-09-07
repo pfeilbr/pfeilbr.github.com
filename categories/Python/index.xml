@@ -7,11 +7,11 @@
         <description>Recent content in Python on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 19 May 2021 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/categories/Python/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Wed, 19 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/categories/Python/index.xml" rel="self" type="application/rss+xml" />
     <item>
 <title>AWS App Runner</title>
 <link>https://brianpfeil.com/post/aws-app-runner/</link>
-<pubDate>Wed, 19 May 2021 00:00:00 -0400</pubDate>
+<pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-app-runner/</guid>
 <description>AWS App Runner</description>
@@ -20,7 +20,7 @@
     <item>
 <title>AWS Chalice</title>
 <link>https://brianpfeil.com/post/aws-chalice/</link>
-<pubDate>Wed, 28 Apr 2021 00:00:00 -0400</pubDate>
+<pubDate>Wed, 28 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-chalice/</guid>
 <description>AWS Chalice</description>
@@ -29,7 +29,7 @@
     <item>
 <title>AWS Glue Pyspark Fetch Databases and Tables Metadata</title>
 <link>https://brianpfeil.com/post/aws-glue-pyspark-fetch-databases-and-tables-metadata/</link>
-<pubDate>Fri, 19 Feb 2021 00:00:00 -0500</pubDate>
+<pubDate>Fri, 19 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-glue-pyspark-fetch-databases-and-tables-metadata/</guid>
 <description>AWS Glue Pyspark Fetch Databases and Tables Metadata</description>
@@ -38,7 +38,7 @@
     <item>
 <title>SAM Lambda Layers</title>
 <link>https://brianpfeil.com/post/sam-lambda-layers/</link>
-<pubDate>Fri, 08 Jan 2021 00:00:00 -0500</pubDate>
+<pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/sam-lambda-layers/</guid>
 <description>SAM Lambda Layers</description>
@@ -47,7 +47,7 @@
     <item>
 <title>Click CLI</title>
 <link>https://brianpfeil.com/post/click-cli/</link>
-<pubDate>Thu, 07 Jan 2021 00:00:00 -0500</pubDate>
+<pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/click-cli/</guid>
 <description>Click CLI</description>
@@ -56,7 +56,7 @@
     <item>
 <title>AWS Data Wrangler</title>
 <link>https://brianpfeil.com/post/aws-data-wrangler/</link>
-<pubDate>Wed, 06 Jan 2021 00:00:00 -0500</pubDate>
+<pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-data-wrangler/</guid>
 <description>AWS Data Wrangler</description>
@@ -65,7 +65,7 @@
     <item>
 <title>Python</title>
 <link>https://brianpfeil.com/post/python/</link>
-<pubDate>Fri, 20 Nov 2020 00:00:00 -0500</pubDate>
+<pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/python/</guid>
 <description>Python</description>
@@ -74,7 +74,7 @@
     <item>
 <title>Serverless Flask</title>
 <link>https://brianpfeil.com/post/serverless-flask/</link>
-<pubDate>Fri, 13 Nov 2020 00:00:00 -0500</pubDate>
+<pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-flask/</guid>
 <description>Serverless Flask</description>
@@ -83,7 +83,7 @@
     <item>
 <title>AWS Kendra</title>
 <link>https://brianpfeil.com/post/aws-kendra/</link>
-<pubDate>Tue, 27 Oct 2020 00:00:00 -0400</pubDate>
+<pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-kendra/</guid>
 <description>AWS Kendra</description>
@@ -92,7 +92,7 @@
     <item>
 <title>Diagrams As Code</title>
 <link>https://brianpfeil.com/post/diagrams-as-code/</link>
-<pubDate>Thu, 01 Oct 2020 00:00:00 -0400</pubDate>
+<pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/diagrams-as-code/</guid>
 <description>Diagrams As Code</description>
@@ -101,7 +101,7 @@
     <item>
 <title>Flask</title>
 <link>https://brianpfeil.com/post/flask/</link>
-<pubDate>Sat, 15 Feb 2020 00:00:00 -0500</pubDate>
+<pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/flask/</guid>
 <description>Flask</description>
@@ -110,7 +110,7 @@
     <item>
 <title>Python Async Await</title>
 <link>https://brianpfeil.com/post/python-async-await/</link>
-<pubDate>Wed, 05 Feb 2020 00:00:00 -0500</pubDate>
+<pubDate>Wed, 05 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/python-async-await/</guid>
 <description>Python Async Await</description>
@@ -119,7 +119,7 @@
     <item>
 <title>Pipenv</title>
 <link>https://brianpfeil.com/post/pipenv/</link>
-<pubDate>Wed, 07 Aug 2019 00:00:00 -0400</pubDate>
+<pubDate>Wed, 07 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/pipenv/</guid>
 <description>Pipenv</description>
@@ -128,7 +128,7 @@
     <item>
 <title>Python Packaging</title>
 <link>https://brianpfeil.com/post/python-packaging/</link>
-<pubDate>Wed, 07 Aug 2019 00:00:00 -0400</pubDate>
+<pubDate>Wed, 07 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/python-packaging/</guid>
 <description>Python Packaging</description>
@@ -137,7 +137,7 @@
     <item>
 <title>Serverless Python</title>
 <link>https://brianpfeil.com/post/serverless-python/</link>
-<pubDate>Fri, 10 Nov 2017 00:00:00 -0500</pubDate>
+<pubDate>Fri, 10 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-python/</guid>
 <description>Serverless Python</description>
@@ -146,7 +146,7 @@
     <item>
 <title>Boto</title>
 <link>https://brianpfeil.com/post/boto/</link>
-<pubDate>Mon, 30 Oct 2017 00:00:00 -0400</pubDate>
+<pubDate>Mon, 30 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/boto/</guid>
 <description>Boto</description>
@@ -155,7 +155,7 @@
     <item>
 <title>Spark</title>
 <link>https://brianpfeil.com/post/spark/</link>
-<pubDate>Fri, 05 Jun 2015 00:00:00 -0400</pubDate>
+<pubDate>Fri, 05 Jun 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/spark/</guid>
 <description>Spark</description>

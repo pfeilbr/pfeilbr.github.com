@@ -86,7 +86,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -490,7 +490,7 @@ is applied to the repo</p>
 </ul>
 </li>
 <li>update <code>scripts/publish.sh</code> with proper cache control for index.html (no-cache)
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">aws s3 sync --cache-control <span class="s1">&#39;max-age=604800&#39;</span> --exclude index.html build/ s3://mywebsitebucket/
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">aws s3 sync --cache-control <span class="s1">&#39;max-age=604800&#39;</span> --exclude index.html build/ s3://mywebsitebucket/
 aws s3 sync --cache-control <span class="s1">&#39;no-cache&#39;</span> build/ s3://mywebsitebucket/
 </code></pre></div></li>
 <li>deny requests directly to s3.  must use domain.  remove OAI and add this.  this will allows redirects in S3 to work.
@@ -499,7 +499,7 @@ aws s3 sync --cache-control <span class="s1">&#39;no-cache&#39;</span> build/ s3
 <li>TLDR; the referer is set on the CloudFront distribution and is a secret.  the S3 bucket policy only allows requests from this referer</li>
 <li><a href="https://aws.amazon.com/premiumsupport/knowledge-center/s3-rest-api-cloudfront-error-403/">I’m using an S3 REST API endpoint as the origin of my CloudFront distribution. Why am I getting 403 Access Denied errors?</a></li>
 <li><a href="https://aws.amazon.com/premiumsupport/knowledge-center/s3-website-cloudfront-error-403/">I’m using an S3 website endpoint as the origin of my CloudFront distribution. Why am I getting 403 Access Denied errors?</a>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
     <span class="nt">&#34;Version&#34;</span><span class="p">:</span> <span class="s2">&#34;2012-10-17&#34;</span><span class="p">,</span>
     <span class="nt">&#34;Id&#34;</span><span class="p">:</span> <span class="s2">&#34;http referer policy ${DomainName}&#34;</span><span class="p">,</span>
     <span class="nt">&#34;Statement&#34;</span><span class="p">:</span> <span class="p">[</span>
@@ -546,7 +546,7 @@ aws s3 sync --cache-control <span class="s1">&#39;no-cache&#39;</span> build/ s3
 </ul>
 <hr>
 <h2 id="scratch">Scratch</h2>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># delete all remote tags</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># delete all remote tags</span>
 git tag -l <span class="p">|</span> xargs -n <span class="m">1</span> git push --delete origin
 
 <span class="c1"># delete all local tags</span>
@@ -580,7 +580,7 @@ aws --profile automation-user s3api delete-object <span class="se">\
 aws --profile automation-user s3api list-objects <span class="se">\
 </span><span class="se"></span>    --bucket <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BUCKET</span><span class="si">}</span><span class="s2">&#34;</span>
 </code></pre></div><p>policy components</p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
     <span class="nt">&#34;Effect&#34;</span><span class="p">:</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span>
     <span class="nt">&#34;Principal&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:iam::529276214230:user/admin&#34;</span><span class="p">,</span>
     <span class="nt">&#34;Action&#34;</span><span class="p">:</span> <span class="s2">&#34;s3:*&#34;</span><span class="p">,</span>

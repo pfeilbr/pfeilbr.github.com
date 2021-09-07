@@ -86,7 +86,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -331,7 +331,7 @@ if (!doNotTrack) {
 </li>
 <li>
 <p>setup shell variables</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">IDENTITY_POOL_ID</span><span class="o">=</span><span class="s2">&#34;us-east-1:335c1f44-87c9-4bbd-a314-93b47d91fadd&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">IDENTITY_POOL_ID</span><span class="o">=</span><span class="s2">&#34;us-east-1:335c1f44-87c9-4bbd-a314-93b47d91fadd&#34;</span>
 <span class="nv">DEVELOPER_PROVIDER_NAME</span><span class="o">=</span>com.brianpfeil.app01
 
 <span class="c1"># this is YOUR applications userid</span>
@@ -339,27 +339,27 @@ if (!doNotTrack) {
 </code></pre></div></li>
 <li>
 <p>create identity</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">aws cognito-identity get-open-id-token-for-developer-identity --identity-pool-id <span class="nv">$IDENTITY_POOL_ID</span> --logins <span class="s2">&#34;</span><span class="nv">$DEVELOPER_PROVIDER_NAME</span><span class="s2">=</span><span class="nv">$DEVELOPER_PROVIDER_USERID</span><span class="s2">&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">aws cognito-identity get-open-id-token-for-developer-identity --identity-pool-id <span class="nv">$IDENTITY_POOL_ID</span> --logins <span class="s2">&#34;</span><span class="nv">$DEVELOPER_PROVIDER_NAME</span><span class="s2">=</span><span class="nv">$DEVELOPER_PROVIDER_USERID</span><span class="s2">&#34;</span>
 </code></pre></div><p>example output</p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
     <span class="nt">&#34;Token&#34;</span><span class="p">:</span> <span class="s2">&#34;eyJraWQiOiJ1cy1lYXN0LTExIiwidHlwIjoiSldTIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJ1cy1lYXN0LTE6YWVjYjU4YTgtMjc3Ni00NDMxLTk3OGMtZDYzOTVlMWI1Mzc5IiwiYXVkIjoidXMtZWFzdC0xOjMzNWMxZjQ0LTg3YzktNGJiZC1hMzE0LTkzYjQ3ZDkxZmFkZCIsImFtciI6WyJhdXRoZW50aWNhdGVkIiwiY29tLmJyaWFucGZlaWwuYXBwMDEiLCJjb20uYnJpYW5wZmVpbC5hcHAwMTp1cy1lYXN0LTE6MzM1YzFmNDQtODdjOS00YmJkLWEzMTQtOTNiNDdkOTFmYWRkOjAwMyJdLCJpc3MiOiJodHRwczovL2NvZ25pdG8taWRlbnRpdHkuYW1hem9uYXdzLmNvbSIsImV4cCI6MTU2OTUyMzg3NSwiaWF0IjoxNTY5NTIyOTc1fQ.F6ST-AQWETHUAAR7JM-IU1ZIFLDEVL9ZBNM49WDOL_RXLLCYEY2KYUICHSGYLERD4WWLHWEJG-AOHFMMS0DUXT-UANA3BENUFFZWWSBAYVD0N2BHCLHZG7PURTRKRDN2XRFGDGQQ2PIMURMWAIPSB0ZCM-EXMSV-QAGOGKE5C2QR0P91BICL_LB1OQRTF9VXANPEMFFSAMZED776WHKR8ZMP7NTXZBMRE453QFW7VGVNKV3KJDTAKSRVZJS6YVW7BXY74_OQUJCFF9KWXJSMTEBNOIMHEFI3LJ25HSDDJ4LMLBGODD_ET4PPSUORIVLGW4UQ-7PJYHCAYTBDV0MXAQ&#34;</span><span class="p">,</span>
     <span class="nt">&#34;IdentityId&#34;</span><span class="p">:</span> <span class="s2">&#34;us-east-1:aecb58a8-2776-4431-978c-d6395e1b5379&#34;</span>
 <span class="p">}</span>
 </code></pre></div></li>
 <li>
 <p>get token</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">aws cognito-identity get-open-id-token-for-developer-identity --identity-pool-id <span class="nv">$IDENTITY_POOL_ID</span> --identity-id  <span class="nv">$IDENTITY_ID</span> --logins <span class="s2">&#34;</span><span class="nv">$DEVELOPER_PROVIDER_NAME</span><span class="s2">=</span><span class="nv">$DEVELOPER_PROVIDER_USERID</span><span class="s2">&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">aws cognito-identity get-open-id-token-for-developer-identity --identity-pool-id <span class="nv">$IDENTITY_POOL_ID</span> --identity-id  <span class="nv">$IDENTITY_ID</span> --logins <span class="s2">&#34;</span><span class="nv">$DEVELOPER_PROVIDER_NAME</span><span class="s2">=</span><span class="nv">$DEVELOPER_PROVIDER_USERID</span><span class="s2">&#34;</span>
 </code></pre></div><p>example output</p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
     <span class="nt">&#34;Token&#34;</span><span class="p">:</span> <span class="s2">&#34;eyJraWQiOiJ1cy1lYXN0LTExIiwidHlwIjoiSldTIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJ1cy1lYXN0LTE6YWVjYjU4YTgtMjc3Ni00NDMxLTk3OGMtZDYzOTVlMWI1Mzc5IiwiYXVkIjoidXMtZWFzdC0xOjMzNWMxZjQ0LTg3YzktNGJiZC1hMzE0LTkzYjQ3ZDkxZmFkZCIsImFtciI6WyJhdXRoZW50aWNhdGVkIiwiY29tLmJyaWFucGZlaWwuYXBwMDEiLCJjb20uYnJpYW5wZmVpbC5hcHAwMTp1cy1lYXN0LTE6MzM1YzFmNDQtODdjOS00YmJkLWEzMTQtOTNiNDdkOTFmYWRkOjAwMyJdLCJpc3MiOiJodHRwczovL2NvZ25pdG8taWRlbnRpdHkuYW1hem9uYXdzLmNvbSIsImV4cCI6MTU2OTUyNDg5OCwiaWF0IjoxNTY5NTIzOTk4fQ.S8JRKAALQZV0FT0GX6WDBE2EZUH2UPHIJLQ1AX9_PQBXLDM4V7UFFVUDXMHGHMZ2T4VMC6R2ILUJATYO05EIKB4HKWPEHSJWHAT8ZUQ9MRVEZ4KJFAY-7ER4LCGKN8MW-ZTZWQRPXUAYGP3RHQFYDV7FGJCJ3GE-MTTCBGXRAY_0H8NNOQE2F1WRO0KPE-Q-8GXF2P89WGFM9FAHZYOBV0FCZYOH8LCAZ7CKQJQ6FO8NYIAQDXDWFJM5-SLMPRYJLBIW88PBLO00ASOP5OGTHFD61JJCUUXFDRB6UTUGM-RUNILJRCTZB5_AB0FXS2YWAG2YZ3_JOFPWDLL-FNQ2UA&#34;</span><span class="p">,</span>
     <span class="nt">&#34;IdentityId&#34;</span><span class="p">:</span> <span class="s2">&#34;us-east-1:aecb58a8-2776-4431-978c-d6395e1b5379&#34;</span>
 <span class="p">}</span>    
 </code></pre></div></li>
 <li>
 <p>get credentials</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">aws cognito-identity get-credentials-for-identity --identity-id <span class="nv">$IDENTITY_ID</span> --logins <span class="s2">&#34;cognito-identity.amazonaws.com=</span><span class="nv">$TOKEN</span><span class="s2">&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">aws cognito-identity get-credentials-for-identity --identity-id <span class="nv">$IDENTITY_ID</span> --logins <span class="s2">&#34;cognito-identity.amazonaws.com=</span><span class="nv">$TOKEN</span><span class="s2">&#34;</span>
 </code></pre></div><p>example output</p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
     <span class="nt">&#34;Credentials&#34;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&#34;SecretKey&#34;</span><span class="p">:</span> <span class="s2">&#34;U6hHM5cdTBjcXG3hxb6VcIwkijvskj72M+81CHBi&#34;</span><span class="p">,</span>
         <span class="nt">&#34;SessionToken&#34;</span><span class="p">:</span> <span class="s2">&#34;AgoJb3JpZ2luX2VjEIv//////////wEaCXVzLWVhc3QtMSJHMEUCIBbT6h4a8ZGV4lCrmmTIulJJkG9PnVCx4Cy2ddoU06ROAiEAzFVPpVhXwV3HAqhif23WOyn7j6I3sH4oCJjV6xZdK/gq3wQIZBAAGgw1MjkyNzYyMTQyMzAiDL0IwoimnbzRFyLAAiq8BIZJyKSEKLiEYpr45CDmkze7rxFb15buX2/L/9RGiAEThi0SmPF4eq+92c3UAsV7gkqajqdYHTEkksErAHrEAyyxLg62X6csqcAUo2rxdjvcG020qAbIEQ4d9m7ZfdZtsb9ByedAHCeJBNpDuIxio7EZfnfB/CUzElgLhWBIsWp+/3xCLoT4D2ElkfmjFEQ2Or6Hy/vcSc+ypaHIaaDN7bRrUDfZDFGkJaypqg7TKfCz8W1NV8UGjkc03x3EtxEawHb9om8Nb6KjZOjRoZf9HL9U4BGaHGmkx2Jlp2VB5k2zZks5+u2udZYDyYCrKOT+9Af+4KAyMtfooBfmvkY+n1hoS/7bgW1NgOGTPOfO7oTbuBBwCdtdN5EdJGkWmQDF0//y/m37kv6aPGefyc8XPz2gK1insPp67J/S1mGpMkSgLMijw60JkY2JZLc1shZg8hNZjxCnLd+ADMwxj27/jro/vypng8bq/9zQHCQT0NrH3PUrvyYdDjXo/58DLYLb8hoQmHx0gMBACdmcL9f3v0mNdi0rPKFuOtxOw9Z136cotgZeeRiQvJeRATQ2c8rUNWM2O4duc9+0CxguDZlvLpo+p3XsOPD8Ti5BS89R2lIU0p8iiNhCdHbp41ISxEzYNG4kFjw6uLnHM7Icni98K+QRTNQTISPNZTLALCFRNGEHFTJ3T7SMY0MPLV1EF7MODNOWMTO9SFJP0ITA5RQ6VXWLN6PU8II2OGXUSTWU9VGWG+AYUOKS5AKOQ5JVMIWTTOWFORQBWWGQ8G2OBX9WQLE7KCJHV7PEEQX2Z7/IY9SHDLV1MNP7SQBPJKS+MPGCK+DLCL8ZBMJLZCEL4H7VMIV+9TMCPK9J3LADATRGXCFYXEMMXLXG0YIK8GBTLU8QRJFYKWEDMZHARZ8MGRIOT7I9RSI6DAIBKWRNSKJ/EWTI4AJNQJLIDUAMOPBUDIUSJQHA5/WQMHQHORMYEKTXZBC2+8VAGR+WGL2F48IDWFFGWI1FS7UK7OFR&#34;</span><span class="p">,</span>

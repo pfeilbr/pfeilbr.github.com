@@ -86,7 +86,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -371,7 +371,7 @@ if (!doNotTrack) {
 <hr>
 <h2 id="send-email-using-api">Send Email Using API</h2>
 <p>create <a href="destination.json"><code>destination.json</code></a> and <a href="message.json"><code>message.json</code></a> files</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># send email</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># send email</span>
 <span class="c1"># NOTE: cli security principal must have `ses:SendEmail` permission</span>
 aws ses send-email <span class="se">\
 </span><span class="se"></span>    --from <span class="s1">&#39;brian.pfeil@allthecloudbits.com&#39;</span> <span class="se">\
@@ -388,7 +388,7 @@ aws ses send-email <span class="se">\
 <h3 id="create-smtp-credentials">Create SMTP Credentials</h3>
 <p><img src="https://www.evernote.com/l/AAGSNu1zXqpCG5BHQmlu-0ioPQSr1yW5sWYB/image.png" alt=""></p>
 <p>Creates IAM user <code>arn:aws:iam::529276214230:user/ses-smtp-user.20210330-092121</code> with following policy</p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
     <span class="nt">&#34;Version&#34;</span><span class="p">:</span> <span class="s2">&#34;2012-10-17&#34;</span><span class="p">,</span>
     <span class="nt">&#34;Statement&#34;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
@@ -399,7 +399,7 @@ aws ses send-email <span class="se">\
     <span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="send-email-using-smtp">Send Email using SMTP</h3>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Testing your connection to the Amazon SES SMTP interface</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Testing your connection to the Amazon SES SMTP interface</span>
 openssl s_client -crlf -quiet -starttls smtp -connect email-smtp.us-east-1.amazonaws.com:587
 
 <span class="c1"># base64 encode creds</span>

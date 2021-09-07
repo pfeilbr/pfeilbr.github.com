@@ -7,11 +7,11 @@
         <description>Recent content in jenkins on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 18 Oct 2018 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Thu, 18 Oct 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
     <item>
 <title>Node Jenkins API</title>
 <link>https://brianpfeil.com/post/node-jenkins-api/</link>
-<pubDate>Thu, 18 Oct 2018 00:00:00 -0400</pubDate>
+<pubDate>Thu, 18 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/node-jenkins-api/</guid>
 <description>Node Jenkins API</description>
@@ -20,7 +20,7 @@
     <item>
 <title>Jenkins Pipeline GitHub</title>
 <link>https://brianpfeil.com/post/jenkins-pipeline-github/</link>
-<pubDate>Wed, 30 May 2018 00:00:00 -0400</pubDate>
+<pubDate>Wed, 30 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/jenkins-pipeline-github/</guid>
 <description>Jenkins Pipeline GitHub</description>

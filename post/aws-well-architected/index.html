@@ -86,7 +86,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -364,14 +364,14 @@ if (!doNotTrack) {
 <p>Consuming the WA PDFs or web content can be a bit challenging with navigation.  The WA questions, resources, etc. are available as <code>json</code> via the AWS WA Console Tool with some scraping.  This creates alternate renditions based on this data.</p>
 <ul>
 <li>Run <a href="aws-well-architected-reformat/main.js"><code>aws-well-architected-reformat/main.js</code></a> to generate a reformatted and condensed version of WA.
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">cd</span> aws-well-architected-reformat
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">cd</span> aws-well-architected-reformat
 node main.js &gt; ../aws-well-architected-condensed.md
 </code></pre></div></li>
 <li>see alternate rendition at <a href="aws-well-architected-condensed.md"><code>aws-well-architected-condensed.md</code></a></li>
 <li>See <a href="aws-well-architected-reformat/data"><code>aws-well-architected-reformat/data</code></a> for the question data as <code>json</code> for each lens.</li>
 </ul>
 <p><strong>Notes on pulling data via AWS Console</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># aws console request format</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># aws console request format</span>
 POST https://console.aws.amazon.com/wellarchitected/api/apiservice
 <span class="o">{</span><span class="s2">&#34;method&#34;</span>:<span class="s2">&#34;GET&#34;</span>,<span class="s2">&#34;path&#34;</span>:<span class="s2">&#34;/workloads/4cfa14fe4a9d351afc9975cfdcb434af/lensReviews/wellarchitected/answers&#34;</span>,<span class="s2">&#34;region&#34;</span>:<span class="s2">&#34;us-east-1&#34;</span>,<span class="s2">&#34;headers&#34;</span>:<span class="o">{</span><span class="s2">&#34;Content-Type&#34;</span>:<span class="s2">&#34;application/json&#34;</span>,<span class="s2">&#34;Accept&#34;</span>:<span class="s2">&#34;application/json&#34;</span><span class="o">}</span>,<span class="s2">&#34;params&#34;</span>:<span class="o">{</span><span class="s2">&#34;PillarId&#34;</span>:<span class="s2">&#34;operationalExcellence&#34;</span>,<span class="s2">&#34;MaxResults&#34;</span>:50,<span class="s2">&#34;Locale&#34;</span>:<span class="s2">&#34;en&#34;</span><span class="o">}}</span>
 

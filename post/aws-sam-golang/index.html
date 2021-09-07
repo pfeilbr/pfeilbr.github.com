@@ -86,7 +86,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -358,20 +358,20 @@ facilitate unit testing.</p>
 </ul>
 <h2 id="installation">Installation</h2>
 <p>With a <a href="https://golang.org/doc/install#testing">correctly configured</a> Go toolchain:</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">git clone https://github.com/pfeilbr/aws-sam-golang-example
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">git clone https://github.com/pfeilbr/aws-sam-golang-example
 </code></pre></div><h2 id="usage">Usage</h2>
 <h3 id="run-the-api-locally">Run the API Locally</h3>
 <p>:warning: Make sure to install all the <a href="#prerequisites">Prerequisites</a>. On Mac
 OSX and Windows, ensure that the Docker VM is running.</p>
 <p>Build the API and run it locally:</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">GOARCH</span><span class="o">=</span>amd64 <span class="nv">GOOS</span><span class="o">=</span>linux go build -o api ./service/api
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">GOARCH</span><span class="o">=</span>amd64 <span class="nv">GOOS</span><span class="o">=</span>linux go build -o api ./service/api
 sam <span class="nb">local</span> start-api
 </code></pre></div><p>or &hellip;</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">make run
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">make run
 </code></pre></div><p>You can now consume the API using your tool of choice. <a href="https://httpie.org/">HTTPie</a>
 is pretty awesome.</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">http localhost:3000/
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">HTTP/1.1 200 OK
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">http localhost:3000/
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">HTTP/1.1 200 OK
 Content-Length: 28
 Content-Type: application/json; charset=utf8
 Date: Sat, 03 Feb 2018 20:12:07 GMT
@@ -382,27 +382,27 @@ Date: Sat, 03 Feb 2018 20:12:07 GMT
 </code></pre></div><h3 id="deploy-to-aws">Deploy to AWS</h3>
 <p>First, set the following environment variables replacing <code>&lt;MY-BUCKET-NAME&gt;</code> and
 <code>&lt;MY-STACK-NAME&gt;</code> as appropriate:</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">export</span> <span class="nv">S3_BUCKET</span><span class="o">=</span><span class="s2">&#34;&lt;MY-BUCKET-NAME&gt;&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">export</span> <span class="nv">S3_BUCKET</span><span class="o">=</span><span class="s2">&#34;&lt;MY-BUCKET-NAME&gt;&#34;</span>
 <span class="nb">export</span> <span class="nv">STACK_NAME</span><span class="o">=</span><span class="s2">&#34;&lt;MY-STACK-NAME&gt;&#34;</span>
 </code></pre></div><p>Now build, package, and deploy the application:</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">GOOS</span><span class="o">=</span>linux <span class="nv">GOARCH</span><span class="o">=</span>amd64 go build -o api ./service/api
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">GOOS</span><span class="o">=</span>linux <span class="nv">GOARCH</span><span class="o">=</span>amd64 go build -o api ./service/api
 <span class="nv">GOOS</span><span class="o">=</span>linux <span class="nv">GOARCH</span><span class="o">=</span>amd64 go build -o error ./service/error
 <span class="nv">GOOS</span><span class="o">=</span>linux <span class="nv">GOARCH</span><span class="o">=</span>amd64 go build -o worker ./service/worker
 
 sam package --template-file template.yaml --s3-bucket <span class="nv">$S3_BUCKET</span> --output-template-file packaged.yaml
 sam deploy --stack-name <span class="nv">$STACK_NAME</span> --template-file packaged.yaml --capabilities CAPABILITY_IAM
 </code></pre></div><p>or &hellip;</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">make deploy
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">make deploy
 </code></pre></div><h3 id="consume-the-endpoint">Consume the Endpoint</h3>
 <p>The API endpoint is captured in the CloudFormation stack&rsquo;s <code>Endpoint</code> output
 key. Either view the output value via the AWS Management Console, or run the
 following command assuming the <a href="https://stedolan.github.io/jq/">jq</a> tool is
 installed:</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">aws cloudformation describe-stacks --stack-name <span class="nv">$STACK_NAME</span> <span class="p">|</span> jq -r <span class="s1">&#39;.Stacks[0].Outputs[0].OutputValue&#39;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">aws cloudformation describe-stacks --stack-name <span class="nv">$STACK_NAME</span> <span class="p">|</span> jq -r <span class="s1">&#39;.Stacks[0].Outputs[0].OutputValue&#39;</span>
 </code></pre></div><p>Again, <a href="https://httpie.org/">HTTPie</a> is a pretty awesome tool.</p>
 <h3 id="view-aws-logs">View AWS Logs</h3>
 <p>Run the following command to get the CloudWatch logs for the API.</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">sam logs -n Api --stack-name <span class="nv">$STACK_NAME</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">sam logs -n Api --stack-name <span class="nv">$STACK_NAME</span>
 </code></pre></div><p>Replace <code>Api</code> with <code>Worker</code> or <code>Error</code> to get logs for the Lambda functions in
 those resources as well.</p>
 <p>:warning: The <code>sam</code> tool will throw a nasty stack trace if you try to view the
@@ -410,7 +410,7 @@ logs before the Lambda function has been invoked. Only run this command after
 you have made requests to the corresponding handlers.</p>
 <h2 id="session">Session</h2>
 <p>example development session</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">export</span> <span class="nv">S3_BUCKET</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">S3_SAM_DEPLOY_BUCKET</span><span class="si">}</span><span class="s2">&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">export</span> <span class="nv">S3_BUCKET</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">S3_SAM_DEPLOY_BUCKET</span><span class="si">}</span><span class="s2">&#34;</span>
 <span class="nb">export</span> <span class="nv">STACK_NAME</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>basename <span class="k">$(</span><span class="nb">pwd</span><span class="k">))</span><span class="s2">&#34;</span>
 
 <span class="c1"># test</span>

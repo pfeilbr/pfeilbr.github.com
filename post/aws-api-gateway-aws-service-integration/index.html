@@ -86,7 +86,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -339,7 +339,7 @@ lambda in the middle (reduces latency and costs).</p>
 <li><a href="https://aws.amazon.com/serverless/sam/">SAM CLI</a></li>
 </ul>
 <p><strong>Running</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># clone repo</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># clone repo</span>
 git clone https://github.com/pfeilbr/aws-api-gateway-aws-service-integration-playground
 <span class="nb">cd</span> aws-api-gateway-aws-service-integration-playground
 
@@ -349,7 +349,7 @@ make deploy
 <span class="c1"># test</span>
 make <span class="nb">test</span>
 </code></pre></div><p>example output</p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
     <span class="nt">&#34;Entries&#34;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
             <span class="nt">&#34;EventId&#34;</span><span class="p">:</span> <span class="s2">&#34;58c635b4-21aa-09d8-0ad3-0874b7dc0a39&#34;</span>
@@ -357,18 +357,18 @@ make <span class="nb">test</span>
     <span class="p">],</span>
     <span class="nt">&#34;FailedEntryCount&#34;</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">}</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># teardown</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># teardown</span>
 make teardown
 </code></pre></div><hr>
 <h2 id="details">Details</h2>
 <p>invoking the <a href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutEvents.html">EventBridge PutEvents</a> action with the request payload using the <code>APIGatewayEventBridgeAccessRole</code> role.</p>
-<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">Integration</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">Integration</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l">AWS</span><span class="w">
 </span><span class="w">    </span><span class="nt">Credentials</span><span class="p">:</span><span class="w"> </span>!<span class="l">GetAtt APIGatewayEventBridgeAccessRole.Arn</span><span class="w">
 </span><span class="w">    </span><span class="nt">IntegrationHttpMethod</span><span class="p">:</span><span class="w"> </span><span class="l">POST</span><span class="w">
 </span><span class="w">    </span><span class="nt">Uri</span><span class="p">:</span><span class="w"> </span>!<span class="l">Sub &#34;arn:aws:apigateway:${AWS::Region}:events:action/PutEvents&#34;</span><span class="w">
 </span></code></pre></div><p>setting the required headers to invoke the PutEvents action</p>
-<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">RequestTemplates</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">RequestTemplates</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">application/json</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
 </span><span class="sd">        $input.json(&#34;$&#34;)
 </span><span class="sd">        #set($context.requestOverride.header.X-Amz-Target =&#34;AWSEvents.PutEvents&#34;)

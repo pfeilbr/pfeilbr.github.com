@@ -7,11 +7,11 @@
         <description>Recent content in docker on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 24 Jun 2019 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Mon, 24 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
 <title>Golang Debug In Docker with Delve</title>
 <link>https://brianpfeil.com/post/golang-debug-in-docker-with-delve/</link>
-<pubDate>Mon, 24 Jun 2019 00:00:00 -0400</pubDate>
+<pubDate>Mon, 24 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/golang-debug-in-docker-with-delve/</guid>
 <description>Golang Debug In Docker with Delve</description>
@@ -20,7 +20,7 @@
     <item>
 <title>Heroku Docker</title>
 <link>https://brianpfeil.com/post/heroku-docker/</link>
-<pubDate>Wed, 23 Sep 2015 00:00:00 -0400</pubDate>
+<pubDate>Wed, 23 Sep 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/heroku-docker/</guid>
 <description>Heroku Docker</description>
@@ -29,7 +29,7 @@
     <item>
 <title>Docker Hub Automated Build</title>
 <link>https://brianpfeil.com/post/docker-hub-automated-build/</link>
-<pubDate>Thu, 20 Aug 2015 00:00:00 -0400</pubDate>
+<pubDate>Thu, 20 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/docker-hub-automated-build/</guid>
 <description>Docker Hub Automated Build</description>

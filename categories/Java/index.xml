@@ -7,11 +7,11 @@
         <description>Recent content in Java on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 27 Oct 2019 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/categories/Java/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Sun, 27 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/categories/Java/index.xml" rel="self" type="application/rss+xml" />
     <item>
 <title>Serverless Lambda Java</title>
 <link>https://brianpfeil.com/post/serverless-lambda-java/</link>
-<pubDate>Sun, 27 Oct 2019 00:00:00 -0400</pubDate>
+<pubDate>Sun, 27 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-lambda-java/</guid>
 <description>Serverless Lambda Java</description>
@@ -20,7 +20,7 @@
     <item>
 <title>Intellij Maven App</title>
 <link>https://brianpfeil.com/post/intellij-maven-app/</link>
-<pubDate>Wed, 14 Aug 2019 00:00:00 -0400</pubDate>
+<pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/intellij-maven-app/</guid>
 <description>Intellij Maven App</description>
@@ -29,7 +29,7 @@
     <item>
 <title>Minecraft Spigot Plugin</title>
 <link>https://brianpfeil.com/post/minecraft-spigot-plugin/</link>
-<pubDate>Sun, 29 Oct 2017 00:00:00 -0400</pubDate>
+<pubDate>Sun, 29 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/minecraft-spigot-plugin/</guid>
 <description>Minecraft Spigot Plugin</description>

@@ -89,7 +89,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -339,7 +339,7 @@ is a developer ergonomics/DX concern.</p>
 <p>Create CDK applications using React.</p>
 <h2 id="hello-reactcdk">Hello ReactCDK</h2>
 <p>Example ReactCDK application</p>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kr">const</span> <span class="p">{</span> <span class="nx">ReactCDK</span><span class="p">,</span> <span class="nx">App</span><span class="p">,</span> <span class="nx">Stack</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@aws-cdk/react&#39;</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kr">const</span> <span class="p">{</span> <span class="nx">ReactCDK</span><span class="p">,</span> <span class="nx">App</span><span class="p">,</span> <span class="nx">Stack</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@aws-cdk/react&#39;</span><span class="p">)</span>
 <span class="kr">const</span> <span class="nx">Bucket</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@aws-cdk/react/s3&#39;</span><span class="p">)</span>
 <span class="kr">const</span> <span class="p">{</span> <span class="nx">CloudFrontDistribution</span><span class="p">,</span> <span class="nx">Origins</span><span class="p">,</span> <span class="nx">DefaultOrigin</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@aws-cdk/react/cloudfront&#39;</span><span class="p">)</span>
 <span class="kr">const</span> <span class="p">{</span> <span class="nx">Api</span><span class="p">,</span> <span class="nx">Resource</span><span class="p">,</span> <span class="nx">Integration</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@aws-cdk/react/apigateway&#39;</span><span class="p">)</span>

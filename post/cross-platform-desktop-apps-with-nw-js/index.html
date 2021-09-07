@@ -89,7 +89,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -345,16 +345,16 @@ if (!doNotTrack) {
 <p>This app is a minimal example with an added <code>app.js</code> file for javascript.  It&rsquo;s sets the <code>document.body</code> to <code>'Hello There'</code>.</p>
 <h2 id="running">Running</h2>
 <p>Create alias in <code>~/.bash_profile</code>to ease the use from terminal</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># alias to nw</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># alias to nw</span>
 <span class="nb">alias</span> <span class="nv">nw</span><span class="o">=</span><span class="s2">&#34;/Applications/nwjs.app/Contents/MacOS/nwjs&#34;</span>
 </code></pre></div><p>Run</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ <span class="nb">cd</span> ~/projects/nwjs-playground
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ <span class="nb">cd</span> ~/projects/nwjs-playground
 $ nw .
 </code></pre></div><h2 id="packaging-as-app-on-osx">Packaging as app on OSX</h2>
 <ol>
 <li>
 <p>Create <code>.nw</code> file</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cd ~/projects/nwjs-playground
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ cd ~/projects/nwjs-playground
 $ zip -r ../${PWD##*/}.nw *
 </code></pre></div><p>``</p>
 <blockquote>
@@ -363,12 +363,12 @@ $ zip -r ../${PWD##*/}.nw *
 </li>
 <li>
 <p>make copy of <code>nwjs.app</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cp -r /Applications/nwjs.app /Applications/myapp.app
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ cp -r /Applications/nwjs.app /Applications/myapp.app
 </code></pre></div><p>``</p>
 </li>
 <li>
 <p>Copy <code>.nw</code> file into myapp.app bundle</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cp ../nwjs-playground.nw /Applications/myapp.app/Contents/Resources/app.nw
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ cp ../nwjs-playground.nw /Applications/myapp.app/Contents/Resources/app.nw
 </code></pre></div><p>``</p>
 </li>
 </ol>

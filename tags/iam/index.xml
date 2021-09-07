@@ -7,11 +7,11 @@
         <description>Recent content in iam on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 30 Jul 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/iam/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/tags/iam/index.xml" rel="self" type="application/rss+xml" />
     <item>
 <title>AWS SAM Golang</title>
 <link>https://brianpfeil.com/post/aws-sam-golang/</link>
-<pubDate>Thu, 30 Jul 2020 00:00:00 -0400</pubDate>
+<pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-sam-golang/</guid>
 <description>AWS SAM Golang</description>
@@ -20,7 +20,7 @@
     <item>
 <title>AWS IAM</title>
 <link>https://brianpfeil.com/post/aws-iam/</link>
-<pubDate>Thu, 08 Feb 2018 00:00:00 -0500</pubDate>
+<pubDate>Thu, 08 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-iam/</guid>
 <description>AWS IAM</description>

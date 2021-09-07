@@ -58,7 +58,7 @@
   "headline": "DynamoDB Export to S3 and Query with Athena",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  230 ,
+  "wordCount":  199 ,
   "datePublished" : "2020-11-11T00:00:00",
   "dateModified" : "2020-11-11T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -86,7 +86,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -333,7 +333,7 @@ if (!doNotTrack) {
 <li><a href="example-export"><code>example-export/</code></a> - example contents of export (copied from S3)</li>
 </ul>
 <h2 id="running">Running</h2>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">sam deploy --guided
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">sam deploy --guided
 <span class="c1"># note: seed data is generated as part of deploy via cfn custom resource `Custom::SeedData`</span>
 <span class="c1"># which triggers a lambda which populates the dynamodb table</span>
 
@@ -342,7 +342,7 @@ if (!doNotTrack) {
 ./main.sh
 
 aws dynamodb list-exports <span class="c1"># in progress</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
     <span class="nt">&#34;ExportSummaries&#34;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
             <span class="nt">&#34;ExportArn&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:dynamodb:us-east-1:529276214230:table/dynamodb-export-to-s3-and-query-with-athena-playground-v2-MyTable-1WGSJ3W2WJWPK/export/01605130432834-8a918b87&#34;</span><span class="p">,</span>
@@ -350,8 +350,8 @@ aws dynamodb list-exports <span class="c1"># in progress</span>
         <span class="p">}</span>
     <span class="p">]</span>
 <span class="p">}</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">aws dynamodb list-exports <span class="c1"># completed</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">aws dynamodb list-exports <span class="c1"># completed</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
     <span class="nt">&#34;ExportSummaries&#34;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
             <span class="nt">&#34;ExportArn&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:dynamodb:us-east-1:529276214230:table/dynamodb-export-to-s3-and-query-with-athena-playground-v2-MyTable-1WGSJ3W2WJWPK/export/01605130432834-8a918b87&#34;</span><span class="p">,</span>
@@ -361,24 +361,24 @@ aws dynamodb list-exports <span class="c1"># in progress</span>
 <span class="p">}</span>
 </code></pre></div><p>Example export file contents (line delimited json items)</p>
 <p><code>gzcat example-export/demo_prefix/AWSDynamoDB/01605130432834-8a918b87/data/vajn3deidy4svdja3fgej2ynay.json.gz</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span><span class="nt">&#34;Item&#34;</span><span class="p">:{</span><span class="nt">&#34;pk&#34;</span><span class="p">:{</span><span class="nt">&#34;S&#34;</span><span class="p">:</span><span class="s2">&#34;pk001-1605121017583&#34;</span><span class="p">},</span><span class="nt">&#34;sk&#34;</span><span class="p">:{</span><span class="nt">&#34;S&#34;</span><span class="p">:</span><span class="s2">&#34;sk001&#34;</span><span class="p">}}}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span><span class="nt">&#34;Item&#34;</span><span class="p">:{</span><span class="nt">&#34;pk&#34;</span><span class="p">:{</span><span class="nt">&#34;S&#34;</span><span class="p">:</span><span class="s2">&#34;pk001-1605121017583&#34;</span><span class="p">},</span><span class="nt">&#34;sk&#34;</span><span class="p">:{</span><span class="nt">&#34;S&#34;</span><span class="p">:</span><span class="s2">&#34;sk001&#34;</span><span class="p">}}}</span>
 <span class="p">{</span><span class="nt">&#34;Item&#34;</span><span class="p">:{</span><span class="nt">&#34;pk&#34;</span><span class="p">:{</span><span class="nt">&#34;S&#34;</span><span class="p">:</span><span class="s2">&#34;pk002-1605121017583&#34;</span><span class="p">},</span><span class="nt">&#34;sk&#34;</span><span class="p">:{</span><span class="nt">&#34;S&#34;</span><span class="p">:</span><span class="s2">&#34;sk002&#34;</span><span class="p">}}}</span>
 </code></pre></div><p><strong>Access Exported Data in S3 via Athena</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="c1">-- Create external table in athena pointing to exported S3 data
-</span><span class="c1"></span><span class="k">CREATE</span> <span class="k">EXTERNAL</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">ddb_exported_table</span> <span class="p">(</span>
-  <span class="n">Item</span> <span class="n">struct</span> <span class="o">&lt;</span><span class="n">pk</span><span class="p">:</span><span class="n">struct</span><span class="o">&lt;</span><span class="n">S</span><span class="p">:</span><span class="n">string</span><span class="o">&gt;</span><span class="p">,</span>
-               <span class="n">sk</span><span class="p">:</span><span class="n">struct</span><span class="o">&lt;</span><span class="n">S</span><span class="p">:</span><span class="n">string</span><span class="o">&gt;&gt;</span>
-<span class="p">)</span>
-<span class="k">ROW</span> <span class="n">FORMAT</span> <span class="n">SERDE</span> <span class="s1">&#39;org.openx.data.jsonserde.JsonSerDe&#39;</span>
-<span class="k">LOCATION</span> <span class="s1">&#39;s3://dynamodb-export-to-s3-and-query-with-exportbucket-103kukqwmab7n/demo_prefix/AWSDynamoDB/01605130432834-8a918b87/data/&#39;</span>
-<span class="n">TBLPROPERTIES</span> <span class="p">(</span> <span class="s1">&#39;has_encrypted_data&#39;</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="p">);</span>
-
-<span class="c1">-- issues SELECT query
-</span><span class="c1"></span><span class="k">SELECT</span>
-    <span class="n">Item</span><span class="p">.</span><span class="n">pk</span><span class="p">.</span><span class="n">S</span> <span class="k">as</span> <span class="n">pk</span><span class="p">,</span>
-    <span class="n">Item</span><span class="p">.</span><span class="n">sk</span><span class="p">.</span><span class="n">S</span> <span class="k">as</span> <span class="n">sk</span>
-<span class="k">FROM</span> <span class="n">ddb_exported_table</span>
-</code></pre></div><p>Screenshot from Athena Console</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="c1">-- Create external table in athena pointing to exported S3 data
+</span><span class="c1"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">EXTERNAL</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">ddb_exported_table</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span><span class="w">  </span><span class="n">Item</span><span class="w"> </span><span class="n">struct</span><span class="w"> </span><span class="o">&lt;</span><span class="n">pk</span><span class="p">:</span><span class="n">struct</span><span class="o">&lt;</span><span class="n">S</span><span class="p">:</span><span class="n">string</span><span class="o">&gt;</span><span class="p">,</span><span class="w">
+</span><span class="w">               </span><span class="n">sk</span><span class="p">:</span><span class="n">struct</span><span class="o">&lt;</span><span class="n">S</span><span class="p">:</span><span class="n">string</span><span class="o">&gt;&gt;</span><span class="w">
+</span><span class="w"></span><span class="p">)</span><span class="w">
+</span><span class="w"></span><span class="k">ROW</span><span class="w"> </span><span class="n">FORMAT</span><span class="w"> </span><span class="n">SERDE</span><span class="w"> </span><span class="s1">&#39;org.openx.data.jsonserde.JsonSerDe&#39;</span><span class="w">
+</span><span class="w"></span><span class="k">LOCATION</span><span class="w"> </span><span class="s1">&#39;s3://dynamodb-export-to-s3-and-query-with-exportbucket-103kukqwmab7n/demo_prefix/AWSDynamoDB/01605130432834-8a918b87/data/&#39;</span><span class="w">
+</span><span class="w"></span><span class="n">TBLPROPERTIES</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;has_encrypted_data&#39;</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="p">);</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="c1">-- issues SELECT query
+</span><span class="c1"></span><span class="k">SELECT</span><span class="w">
+</span><span class="w">    </span><span class="n">Item</span><span class="p">.</span><span class="n">pk</span><span class="p">.</span><span class="n">S</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">pk</span><span class="p">,</span><span class="w">
+</span><span class="w">    </span><span class="n">Item</span><span class="p">.</span><span class="n">sk</span><span class="p">.</span><span class="n">S</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">sk</span><span class="w">
+</span><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">ddb_exported_table</span><span class="w">
+</span></code></pre></div><p>Screenshot from Athena Console</p>
 <p><img src="https://www.evernote.com/l/AAH1H1K1GLJAp72MXnQvHCiOBLxptt9FkrYB/image.png" alt=""></p>
 <h2 id="resources">Resources</h2>
 <ul>

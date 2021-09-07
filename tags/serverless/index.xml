@@ -7,11 +7,11 @@
         <description>Recent content in serverless on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 28 Apr 2021 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/serverless/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Wed, 28 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/tags/serverless/index.xml" rel="self" type="application/rss+xml" />
     <item>
 <title>AWS Chalice</title>
 <link>https://brianpfeil.com/post/aws-chalice/</link>
-<pubDate>Wed, 28 Apr 2021 00:00:00 -0400</pubDate>
+<pubDate>Wed, 28 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-chalice/</guid>
 <description>AWS Chalice</description>
@@ -20,7 +20,7 @@
     <item>
 <title>Azure Functions</title>
 <link>https://brianpfeil.com/post/azure-functions/</link>
-<pubDate>Mon, 25 Jan 2021 00:00:00 -0500</pubDate>
+<pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-functions/</guid>
 <description>Azure Functions</description>
@@ -29,7 +29,7 @@
     <item>
 <title>Serverless Flask</title>
 <link>https://brianpfeil.com/post/serverless-flask/</link>
-<pubDate>Fri, 13 Nov 2020 00:00:00 -0500</pubDate>
+<pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-flask/</guid>
 <description>Serverless Flask</description>
@@ -56,7 +56,7 @@
     <item>
 <title>Serverless Golang</title>
 <link>https://brianpfeil.com/post/serverless-golang/</link>
-<pubDate>Wed, 17 Jun 2020 00:00:00 -0400</pubDate>
+<pubDate>Wed, 17 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-golang/</guid>
 <description>Serverless Golang</description>
@@ -65,7 +65,7 @@
     <item>
 <title>Serverless Lambda Java</title>
 <link>https://brianpfeil.com/post/serverless-lambda-java/</link>
-<pubDate>Sun, 27 Oct 2019 00:00:00 -0400</pubDate>
+<pubDate>Sun, 27 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-lambda-java/</guid>
 <description>Serverless Lambda Java</description>
@@ -74,7 +74,7 @@
     <item>
 <title>AWS Serverless Application Repository</title>
 <link>https://brianpfeil.com/post/aws-serverless-application-repository/</link>
-<pubDate>Mon, 14 Oct 2019 00:00:00 -0400</pubDate>
+<pubDate>Mon, 14 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-serverless-application-repository/</guid>
 <description>AWS Serverless Application Repository</description>
@@ -83,7 +83,7 @@
     <item>
 <title>Serverless Lambda Layers</title>
 <link>https://brianpfeil.com/post/serverless-lambda-layers/</link>
-<pubDate>Wed, 18 Sep 2019 00:00:00 -0400</pubDate>
+<pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-lambda-layers/</guid>
 <description>Serverless Lambda Layers</description>
@@ -92,7 +92,7 @@
     <item>
 <title>Serverless Plugin CloudFront Lambda Edge</title>
 <link>https://brianpfeil.com/post/serverless-plugin-cloudfront-lambda-edge/</link>
-<pubDate>Tue, 10 Sep 2019 00:00:00 -0400</pubDate>
+<pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-plugin-cloudfront-lambda-edge/</guid>
 <description>Serverless Plugin CloudFront Lambda Edge</description>
@@ -101,7 +101,7 @@
     <item>
 <title>Serverless Framework Full Lifecycle with Dashboard</title>
 <link>https://brianpfeil.com/post/serverless-framework-full-lifecycle-with-dashboard/</link>
-<pubDate>Tue, 20 Aug 2019 00:00:00 -0400</pubDate>
+<pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-framework-full-lifecycle-with-dashboard/</guid>
 <description>Serverless Framework Full Lifecycle with Dashboard</description>
@@ -110,7 +110,7 @@
     <item>
 <title>Azure Serverless Framework</title>
 <link>https://brianpfeil.com/post/azure-serverless-framework/</link>
-<pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+<pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-serverless-framework/</guid>
 <description>Azure Serverless Framework</description>
@@ -119,7 +119,7 @@
     <item>
 <title>AWS API Gateway WebSockets Serverless</title>
 <link>https://brianpfeil.com/post/aws-api-gateway-websockets-serverless/</link>
-<pubDate>Tue, 08 Jan 2019 00:00:00 -0500</pubDate>
+<pubDate>Tue, 08 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-api-gateway-websockets-serverless/</guid>
 <description>AWS API Gateway WebSockets Serverless</description>
@@ -128,7 +128,7 @@
     <item>
 <title>Serverless Python</title>
 <link>https://brianpfeil.com/post/serverless-python/</link>
-<pubDate>Fri, 10 Nov 2017 00:00:00 -0500</pubDate>
+<pubDate>Fri, 10 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-python/</guid>
 <description>Serverless Python</description>
@@ -137,7 +137,7 @@
     <item>
 <title>Serverless TypeScript webpack</title>
 <link>https://brianpfeil.com/post/serverless-typescript-webpack/</link>
-<pubDate>Tue, 11 Jul 2017 00:00:00 -0400</pubDate>
+<pubDate>Tue, 11 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-typescript-webpack/</guid>
 <description>Serverless TypeScript webpack</description>

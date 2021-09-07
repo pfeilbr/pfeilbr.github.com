@@ -86,7 +86,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -322,13 +322,13 @@ if (!doNotTrack) {
 <p>learn <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AnalyzingLogData.html">CloudWatch Logs Insights</a></p>
 <h2 id="running-example-query-via-aws-cli">Running Example Query via AWS CLI</h2>
 <p>see <a href="main.sh"><code>main.sh</code></a></p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># run script containing query</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># run script containing query</span>
 ./main.sh
 <span class="c1"># OR</span>
 <span class="c1"># re-run on change</span>
 make dev
 </code></pre></div><h2 id="example-queries">Example Queries</h2>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">fields @timestamp, detail.eventSource, detail.eventName, @message
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">fields @timestamp, detail.eventSource, detail.eventName, @message
 <span class="p">|</span> sort @timestamp desc
 <span class="p">|</span> limit <span class="m">100</span>
 

@@ -7,11 +7,11 @@
         <description>Recent content in boto on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 05 Oct 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/boto/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Mon, 05 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/tags/boto/index.xml" rel="self" type="application/rss+xml" />
     <item>
 <title>Boto3</title>
 <link>https://brianpfeil.com/post/boto3/</link>
-<pubDate>Mon, 05 Oct 2020 00:00:00 -0400</pubDate>
+<pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/boto3/</guid>
 <description>Boto3</description>
@@ -20,7 +20,7 @@
     <item>
 <title>Boto</title>
 <link>https://brianpfeil.com/post/boto/</link>
-<pubDate>Mon, 30 Oct 2017 00:00:00 -0400</pubDate>
+<pubDate>Mon, 30 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/boto/</guid>
 <description>Boto</description>

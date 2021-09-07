@@ -20,7 +20,7 @@
     <item>
 <title>Azure Durable Functions</title>
 <link>https://brianpfeil.com/post/azure-durable-functions/</link>
-<pubDate>Fri, 05 Feb 2021 00:00:00 -0500</pubDate>
+<pubDate>Fri, 05 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-durable-functions/</guid>
 <description>Azure Durable Functions</description>
@@ -29,7 +29,7 @@
     <item>
 <title>Azure ARM</title>
 <link>https://brianpfeil.com/post/azure-arm/</link>
-<pubDate>Fri, 29 Jan 2021 00:00:00 -0500</pubDate>
+<pubDate>Fri, 29 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-arm/</guid>
 <description>Azure ARM</description>
@@ -38,7 +38,7 @@
     <item>
 <title>Azure Functions</title>
 <link>https://brianpfeil.com/post/azure-functions/</link>
-<pubDate>Mon, 25 Jan 2021 00:00:00 -0500</pubDate>
+<pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-functions/</guid>
 <description>Azure Functions</description>
@@ -47,7 +47,7 @@
     <item>
 <title>Azure Pipelines</title>
 <link>https://brianpfeil.com/post/azure-pipelines/</link>
-<pubDate>Wed, 26 Feb 2020 00:00:00 -0500</pubDate>
+<pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-pipelines/</guid>
 <description>Azure Pipelines</description>
@@ -56,7 +56,7 @@
     <item>
 <title>Azure Kubernetes Service AKS</title>
 <link>https://brianpfeil.com/post/azure-kubernetes-service-aks/</link>
-<pubDate>Sat, 18 May 2019 00:00:00 -0400</pubDate>
+<pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-kubernetes-service-aks/</guid>
 <description>Azure Kubernetes Service AKS</description>
@@ -65,7 +65,7 @@
     <item>
 <title>Azure Nodejs ARM Resources</title>
 <link>https://brianpfeil.com/post/azure-nodejs-arm-resources/</link>
-<pubDate>Wed, 15 May 2019 00:00:00 -0400</pubDate>
+<pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-nodejs-arm-resources/</guid>
 <description>Azure Nodejs ARM Resources</description>
@@ -74,7 +74,7 @@
     <item>
 <title>Azure CLI</title>
 <link>https://brianpfeil.com/post/azure-cli/</link>
-<pubDate>Tue, 14 May 2019 00:00:00 -0400</pubDate>
+<pubDate>Tue, 14 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-cli/</guid>
 <description>Azure CLI</description>
@@ -83,7 +83,7 @@
     <item>
 <title>Azure JS Cognitive Services</title>
 <link>https://brianpfeil.com/post/azure-js-cognitive-services/</link>
-<pubDate>Mon, 13 May 2019 00:00:00 -0400</pubDate>
+<pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-js-cognitive-services/</guid>
 <description>Azure JS Cognitive Services</description>
@@ -92,7 +92,7 @@
     <item>
 <title>Azure Nodejs ARM Storage</title>
 <link>https://brianpfeil.com/post/azure-nodejs-arm-storage/</link>
-<pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+<pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-nodejs-arm-storage/</guid>
 <description>Azure Nodejs ARM Storage</description>
@@ -101,7 +101,7 @@
     <item>
 <title>Azure SDK for Node Authentication</title>
 <link>https://brianpfeil.com/post/azure-sdk-for-node-authentication/</link>
-<pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+<pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-sdk-for-node-authentication/</guid>
 <description>Azure SDK for Node Authentication</description>
@@ -110,7 +110,7 @@
     <item>
 <title>Azure Serverless Framework</title>
 <link>https://brianpfeil.com/post/azure-serverless-framework/</link>
-<pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+<pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-serverless-framework/</guid>
 <description>Azure Serverless Framework</description>
@@ -119,7 +119,7 @@
     <item>
 <title>Azure Cosmos JS SDK</title>
 <link>https://brianpfeil.com/post/azure-cosmos-js-sdk/</link>
-<pubDate>Wed, 08 May 2019 00:00:00 -0400</pubDate>
+<pubDate>Wed, 08 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-cosmos-js-sdk/</guid>
 <description>Azure Cosmos JS SDK</description>

@@ -7,11 +7,11 @@
         <description>Recent content in testing on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 30 Jul 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/tags/testing/index.xml" rel="self" type="application/rss+xml" />
     <item>
 <title>AWS SAM Golang</title>
 <link>https://brianpfeil.com/post/aws-sam-golang/</link>
-<pubDate>Thu, 30 Jul 2020 00:00:00 -0400</pubDate>
+<pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-sam-golang/</guid>
 <description>AWS SAM Golang</description>
@@ -20,7 +20,7 @@
     <item>
 <title>Googletest</title>
 <link>https://brianpfeil.com/post/googletest/</link>
-<pubDate>Thu, 02 Jan 2020 00:00:00 -0500</pubDate>
+<pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/googletest/</guid>
 <description>Googletest</description>
@@ -29,7 +29,7 @@
     <item>
 <title>Puppeteer</title>
 <link>https://brianpfeil.com/post/puppeteer/</link>
-<pubDate>Tue, 22 Aug 2017 00:00:00 -0400</pubDate>
+<pubDate>Tue, 22 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/puppeteer/</guid>
 <description>Puppeteer</description>
@@ -38,7 +38,7 @@
     <item>
 <title>Node Coveralls</title>
 <link>https://brianpfeil.com/post/node-coveralls/</link>
-<pubDate>Tue, 29 Sep 2015 00:00:00 -0400</pubDate>
+<pubDate>Tue, 29 Sep 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/node-coveralls/</guid>
 <description>Node Coveralls</description>
@@ -47,7 +47,7 @@
     <item>
 <title>WebdriverIO</title>
 <link>https://brianpfeil.com/post/webdriverio/</link>
-<pubDate>Thu, 20 Aug 2015 00:00:00 -0400</pubDate>
+<pubDate>Thu, 20 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/webdriverio/</guid>
 <description>WebdriverIO</description>
@@ -56,7 +56,7 @@
     <item>
 <title>Karma</title>
 <link>https://brianpfeil.com/post/karma/</link>
-<pubDate>Sun, 15 Feb 2015 00:00:00 -0500</pubDate>
+<pubDate>Sun, 15 Feb 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/karma/</guid>
 <description>Karma</description>
@@ -65,7 +65,7 @@
     <item>
 <title>Sauce Labs</title>
 <link>https://brianpfeil.com/post/sauce-labs/</link>
-<pubDate>Wed, 04 Feb 2015 00:00:00 -0500</pubDate>
+<pubDate>Wed, 04 Feb 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/sauce-labs/</guid>
 <description>Sauce Labs</description>

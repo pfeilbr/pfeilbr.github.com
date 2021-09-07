@@ -89,7 +89,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -327,23 +327,23 @@ manually set it to home again.</p>
 <p>I got tired of remembering to do this so I looked around, and found <a href="http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man8/scselect.8.html">scselect</a>.
 <code>scselect</code> is a command line utility that comes with
 <strong>OS X</strong> that lets you set your location by name</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">scselect <span class="s2">&#34;home&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">scselect <span class="s2">&#34;home&#34;</span>
 </code></pre></div><p>Now all I needed was a way to determine whether I was at work or home and then run
 <a href="http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man8/scselect.8.html">scselect</a> with the corresponding location.  My work assigned ip address has a
 set prefix, so I can use that to say I&rsquo;m at work and anything else would default
 to home.</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># exit code is 0 if on work network and 1 otherwise</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># exit code is 0 if on work network and 1 otherwise</span>
 ifconfig <span class="p">|</span> grep -i <span class="s2">&#34;inet 59.33&#34;</span> &gt; /dev/null
 </code></pre></div><p>In order to prevent setting the location to the same location we need to find out
 what the current location is.  Running <code>scselect</code> with no arguments displays a list
 of locations and the active one is marked with an asterisk (*).  Here&rsquo;s my list.</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">&gt; scselect
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">&gt; scselect
 Defined sets include: <span class="o">(</span>* <span class="o">==</span> current <span class="nb">set</span><span class="o">)</span>
    575844ED-8466-479C-9567-3F0B7D767EE9	<span class="o">(</span>home<span class="o">)</span>
    3DF4B8B9-2E92-4F61-B684-74E0D0D38DEE	<span class="o">(</span>Automatic<span class="o">)</span>
  * 6064213B-532D-43C9-8941-DC72B6487955	<span class="o">(</span>work<span class="o">)</span>
 </code></pre></div><p>The output is a bit messy, and we need to parse out the active location.</p>
-<div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="ch">#!/usr/bin/env ruby</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="ch">#!/usr/bin/env ruby</span>
 
 <span class="c1"># example output: * 6064213B-532D-43C9-8941-DC72B6487955	(work)</span>
 <span class="n">output</span> <span class="o">=</span> <span class="sb">`scselect 2&gt;&amp;amp;1 | grep &#39; </span><span class="se">\\</span><span class="sb">* &#39;`</span>

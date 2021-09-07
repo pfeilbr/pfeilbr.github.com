@@ -86,7 +86,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -324,7 +324,7 @@ if (!doNotTrack) {
 <blockquote>
 <p>NOTE: <code>skills/sage/lambda/custom/config.js</code> is generated.  do not edit directly!</p>
 </blockquote>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># build</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># build</span>
 <span class="nb">cd</span> skills/sage/lambda/custom
 npm install
 
@@ -337,7 +337,7 @@ npm run deploy
 </ul>
 <hr>
 <h2 id="development-workflow">Development Workflow</h2>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># configure ask cli</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># configure ask cli</span>
 ask init
 
 <span class="c1"># create new skill</span>
@@ -351,7 +351,7 @@ ask deploy
 </code></pre></div><hr>
 <h2 id="payload-examples">Payload Examples</h2>
 <p>LaunchRequest Payload Example (simplified)</p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
     <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;LaunchRequest&#34;</span><span class="p">,</span>
     <span class="nt">&#34;requestId&#34;</span><span class="p">:</span> <span class="s2">&#34;amzn1.echo-api.request.310bdf96-793a-4e14-b586-e8f680ffe52f&#34;</span><span class="p">,</span>
     <span class="nt">&#34;timestamp&#34;</span><span class="p">:</span> <span class="s2">&#34;2018-05-15T17:32:42Z&#34;</span><span class="p">,</span>
@@ -359,7 +359,7 @@ ask deploy
     <span class="nt">&#34;shouldLinkResultBeReturned&#34;</span><span class="p">:</span> <span class="kc">false</span>
 <span class="p">}</span>
 </code></pre></div><p>LaunchRequest Payload Example (full)</p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
     <span class="nt">&#34;requestEnvelope&#34;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0&#34;</span><span class="p">,</span>
         <span class="nt">&#34;session&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -431,7 +431,7 @@ ask deploy
 <span class="p">}</span>
 </code></pre></div><hr>
 <p>IntentRequest Payload Example (simplified)</p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
     <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;IntentRequest&#34;</span><span class="p">,</span>
     <span class="nt">&#34;requestId&#34;</span><span class="p">:</span> <span class="s2">&#34;amzn1.echo-api.request.7bfbb240-78c3-4622-b255-53a8dcc34376&#34;</span><span class="p">,</span>
     <span class="nt">&#34;timestamp&#34;</span><span class="p">:</span> <span class="s2">&#34;2018-05-15T17:34:12Z&#34;</span><span class="p">,</span>
@@ -442,7 +442,7 @@ ask deploy
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div><p>IntentRequest Payload Example (full)</p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
     <span class="nt">&#34;requestEnvelope&#34;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0&#34;</span><span class="p">,</span>
         <span class="nt">&#34;session&#34;</span><span class="p">:</span> <span class="p">{</span>

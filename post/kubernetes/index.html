@@ -86,7 +86,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -318,7 +318,7 @@ if (!doNotTrack) {
 </div>
 <p>learn kubernetes.  based on tutorial at <a href="http://kubernetes.io/docs/tutorials/kubernetes-basics">http://kubernetes.io/docs/tutorials/kubernetes-basics</a></p>
 <h3 id="install-and-start-minikubehttpsgithubcomkubernetesminikube">Install and start <a href="https://github.com/kubernetes/minikube">minikube</a></h3>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">$ <span class="nb">cd</span> ~/tmp
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ <span class="nb">cd</span> ~/tmp
 $ curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.11.0/minikube-darwin-amd64 <span class="o">&amp;&amp;</span> chmod +x minikube <span class="o">&amp;&amp;</span> sudo mv minikube /usr/local/bin/
 
 <span class="c1"># verify install</span>
@@ -329,7 +329,7 @@ $ minikube start
 </code></pre></div><blockquote>
 <p>minikube VMs, etc. are stored in <code>~/.minikube</code></p>
 </blockquote>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">$ tree ~/.minikube
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ tree ~/.minikube
 
 .
 ├── addons
@@ -366,10 +366,10 @@ $ minikube start
     └── server.pem
 </code></pre></div><h3 id="rest-api">REST API</h3>
 <p>start proxy to allow access</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">$ kubectl proxy
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ kubectl proxy
 </code></pre></div><p>Access API</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">$ curl http://127.0.0.1:8001/api
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ curl http://127.0.0.1:8001/api
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
   <span class="nt">&#34;kind&#34;</span><span class="p">:</span> <span class="s2">&#34;APIVersions&#34;</span><span class="p">,</span>
   <span class="nt">&#34;versions&#34;</span><span class="p">:</span> <span class="p">[</span>
     <span class="s2">&#34;v1&#34;</span>
@@ -387,7 +387,7 @@ $ minikube start
 </ul>
 <h2 id="accessing-services">Accessing Services</h2>
 <p>The cluster ip address as exposed to host machine can be obtained via</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">$ kubectl cluster-info
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ kubectl cluster-info
 </code></pre></div><p><img src="http://static-content-01.s3-website-us-east-1.amazonaws.com/1__kubectl_proxy__kubectl__1DB53603.png" alt=""></p>
 
 

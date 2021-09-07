@@ -86,7 +86,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -322,18 +322,18 @@ if (!doNotTrack) {
 <p><strong>Running <code>serverless</code> from cli to create project</strong></p>
 <p><img src="https://www.evernote.com/l/AAGMIc4-FIJCSZXUtSiZZqr-jnavut4x_A0B/image.png" alt=""></p>
 <p>The <code>service</code>, <code>app</code>, and <code>org</code> top-level properties added to <code>serverless.yml</code> enable serverless full lifecycle / dashboard</p>
-<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l">serverless-with-dashboard-playground-01</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l">serverless-with-dashboard-playground-01</span><span class="w">
 </span><span class="w"></span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">serverless-with-dashboard-playground-01</span><span class="w">
 </span><span class="w"></span><span class="nt">org</span><span class="p">:</span><span class="w"> </span><span class="l">pfeilbr</span><span class="w">
 </span></code></pre></div><p><img src="https://www.evernote.com/l/AAH9J_9FRfFGH7uiu2JonnyeBowUC_-cU0kB/image.png" alt=""></p>
 <p>To disable, add the following to <code>serverless.yml</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">custom</span><span class="p">:</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">custom</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">enterprise</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">collectLambdaLogs</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span></code></pre></div><p>Serverless framework creates a role during the deploy. This allows for the cloudwatch log group logs to be sent to serverless SaaS app.  e.g. <code>arn:aws:iam::529276214230:role/serverless-with-dashboard-EnterpriseLogAccessIamRo-19SDI69RM1KJ4</code></p>
 <p><img src="https://www.evernote.com/l/AAFnznpUKxhHjIXCHwFwzUcmYXBdiLCgln0B/image.png" alt=""></p>
 <p>inline policy</p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
     <span class="nt">&#34;Version&#34;</span><span class="p">:</span> <span class="s2">&#34;2012-10-17&#34;</span><span class="p">,</span>
     <span class="nt">&#34;Statement&#34;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
@@ -351,7 +351,7 @@ if (!doNotTrack) {
 <blockquote>
 <p>trust serverless aws account <code>802587217904</code></p>
 </blockquote>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
   <span class="nt">&#34;Version&#34;</span><span class="p">:</span> <span class="s2">&#34;2012-10-17&#34;</span><span class="p">,</span>
   <span class="nt">&#34;Statement&#34;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
@@ -378,7 +378,7 @@ if (!doNotTrack) {
 <p><img src="https://www.evernote.com/l/AAGXImGSXy5ATKrP5-qDPHT3RMs7OfMMj9wB/image.png" alt=""></p>
 <p>To see the log group subscription details</p>
 <p><code>aws logs describe-subscription-filters --log-group-name '/aws/lambda/serverless-with-dashboard-playground-01-dev-hello'</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
     <span class="nt">&#34;subscriptionFilters&#34;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
             <span class="nt">&#34;filterPattern&#34;</span><span class="p">:</span> <span class="s2">&#34;?\&#34;REPORT RequestId: \&#34; ?\&#34;SERVERLESS_ENTERPRISE\&#34;&#34;</span><span class="p">,</span>

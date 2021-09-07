@@ -7,11 +7,11 @@
         <description>Recent content in heroku on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 13 Jul 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/heroku/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Mon, 13 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/tags/heroku/index.xml" rel="self" type="application/rss+xml" />
     <item>
 <title>Heroku Node Worker</title>
 <link>https://brianpfeil.com/post/heroku-node-worker/</link>
-<pubDate>Mon, 13 Jul 2020 00:00:00 -0400</pubDate>
+<pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/heroku-node-worker/</guid>
 <description>Heroku Node Worker</description>
@@ -20,7 +20,7 @@
     <item>
 <title>Heroku Container</title>
 <link>https://brianpfeil.com/post/heroku-container/</link>
-<pubDate>Fri, 04 Nov 2016 00:00:00 -0400</pubDate>
+<pubDate>Fri, 04 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/heroku-container/</guid>
 <description>Heroku Container</description>
@@ -29,7 +29,7 @@
     <item>
 <title>Heroku Deploy</title>
 <link>https://brianpfeil.com/post/heroku-deploy/</link>
-<pubDate>Wed, 23 Sep 2015 00:00:00 -0400</pubDate>
+<pubDate>Wed, 23 Sep 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/heroku-deploy/</guid>
 <description>Heroku Deploy</description>
@@ -38,7 +38,7 @@
     <item>
 <title>Heroku Docker</title>
 <link>https://brianpfeil.com/post/heroku-docker/</link>
-<pubDate>Wed, 23 Sep 2015 00:00:00 -0400</pubDate>
+<pubDate>Wed, 23 Sep 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/heroku-docker/</guid>
 <description>Heroku Docker</description>

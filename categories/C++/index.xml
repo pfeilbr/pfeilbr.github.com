@@ -7,11 +7,11 @@
         <description>Recent content in C&#43;&#43; on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 02 Jan 2020 00:00:00 -0500</lastBuildDate><atom:link href="https://brianpfeil.com/categories/C++/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Thu, 02 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/categories/C++/index.xml" rel="self" type="application/rss+xml" />
     <item>
 <title>Googletest</title>
 <link>https://brianpfeil.com/post/googletest/</link>
-<pubDate>Thu, 02 Jan 2020 00:00:00 -0500</pubDate>
+<pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/googletest/</guid>
 <description>Googletest</description>
@@ -20,7 +20,7 @@
     <item>
 <title>AWS SDK CPP</title>
 <link>https://brianpfeil.com/post/aws-sdk-cpp/</link>
-<pubDate>Tue, 25 Sep 2018 00:00:00 -0400</pubDate>
+<pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-sdk-cpp/</guid>
 <description>AWS SDK CPP</description>
@@ -29,7 +29,7 @@
     <item>
 <title>Google Test CPP Test Framework</title>
 <link>https://brianpfeil.com/post/google-test-cpp-test-framework/</link>
-<pubDate>Tue, 25 Sep 2018 00:00:00 -0400</pubDate>
+<pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/google-test-cpp-test-framework/</guid>
 <description>Google Test CPP Test Framework</description>
@@ -38,7 +38,7 @@
     <item>
 <title>Modern CPP</title>
 <link>https://brianpfeil.com/post/modern-cpp/</link>
-<pubDate>Mon, 24 Sep 2018 00:00:00 -0400</pubDate>
+<pubDate>Mon, 24 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/modern-cpp/</guid>
 <description>Modern CPP</description>
@@ -47,7 +47,7 @@
     <item>
 <title>Lua C API</title>
 <link>https://brianpfeil.com/post/lua-c-api/</link>
-<pubDate>Tue, 24 Jul 2018 00:00:00 -0400</pubDate>
+<pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/lua-c-api/</guid>
 <description>Lua C API</description>
@@ -56,7 +56,7 @@
     <item>
 <title>SFML MacOS</title>
 <link>https://brianpfeil.com/post/sfml-macos/</link>
-<pubDate>Tue, 27 Feb 2018 00:00:00 -0500</pubDate>
+<pubDate>Tue, 27 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/sfml-macos/</guid>
 <description>SFML MacOS</description>
@@ -65,7 +65,7 @@
     <item>
 <title>V8</title>
 <link>https://brianpfeil.com/post/v8/</link>
-<pubDate>Tue, 19 May 2015 00:00:00 -0400</pubDate>
+<pubDate>Tue, 19 May 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/v8/</guid>
 <description>V8</description>

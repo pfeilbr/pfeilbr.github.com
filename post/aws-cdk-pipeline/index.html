@@ -86,7 +86,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -342,7 +342,7 @@ if (!doNotTrack) {
 <li>Create pipeline stack <a href="lib/aws-cdk-demo-pipeline-stack.ts"><code>lib/aws-cdk-demo-pipeline-stack.ts</code></a> and add <code>CdkpipelinesDemoStage</code> stage to it</li>
 </ol>
 <h2 id="steps">Steps</h2>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">npx cdk init --language<span class="o">=</span>typescript
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">npx cdk init --language<span class="o">=</span>typescript
 
 <span class="nv">CDK_VERSION</span><span class="o">=</span><span class="s2">&#34;1.97.0&#34;</span>
 
@@ -401,7 +401,7 @@ git push
 <li><code>cdk.out/assembly-CdkpipelinesDemoPipelineStack-Prod</code></li>
 </ul>
 <p>You can deploy and individual stage (cfn stack) by itself.  For example, for dev.</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">npm run build <span class="c1"># If necessary, to recompile the Lambda sources</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">npm run build <span class="c1"># If necessary, to recompile the Lambda sources</span>
 cdk synth
 cdk -a cdk.out/assembly-Dev deploy --force --require-approval never
 
@@ -413,7 +413,7 @@ npx cdk bootstrap <span class="se">\
 <ul>
 <li>see <a href="cdk-deploy-to.sh"><code>cdk-deploy-to.sh</code></a> for handy deployment script for different account+region combinations.  Remember to bootstrap target account+region with <code>cdk bootstrap aws://account/region</code></li>
 <li>had to downgrade npm 7 to 6 to get around types error when running <code>npm run build</code> on codebuild. see <a href="https://github.com/aws/aws-cdk/issues/13541#issuecomment-801606777">self mutating cdk pipeline fails after updating cdk version from 1.85.0 to 1.92.0 · Issue #13541 · aws/aws-cdk</a>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># steps</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># steps</span>
 npm install -g npm@6
 rm package-lock.json
 npm i

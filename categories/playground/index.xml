@@ -7,11 +7,11 @@
         <description>Recent content in playground on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 21 May 2021 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/categories/playground/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Fri, 21 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/categories/playground/index.xml" rel="self" type="application/rss+xml" />
     <item>
 <title>AWS API Gateway to S3 Static Site</title>
 <link>https://brianpfeil.com/post/aws-api-gateway-to-s3-static-site/</link>
-<pubDate>Fri, 21 May 2021 00:00:00 -0400</pubDate>
+<pubDate>Fri, 21 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-api-gateway-to-s3-static-site/</guid>
 <description>AWS API Gateway to S3 Static Site</description>
@@ -20,7 +20,7 @@
     <item>
 <title>AWS App Runner</title>
 <link>https://brianpfeil.com/post/aws-app-runner/</link>
-<pubDate>Wed, 19 May 2021 00:00:00 -0400</pubDate>
+<pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-app-runner/</guid>
 <description>AWS App Runner</description>
@@ -29,7 +29,7 @@
     <item>
 <title>Hashicorp Vault</title>
 <link>https://brianpfeil.com/post/hashicorp-vault/</link>
-<pubDate>Tue, 04 May 2021 00:00:00 -0400</pubDate>
+<pubDate>Tue, 04 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/hashicorp-vault/</guid>
 <description>Hashicorp Vault</description>
@@ -38,7 +38,7 @@
     <item>
 <title>AWS Chalice</title>
 <link>https://brianpfeil.com/post/aws-chalice/</link>
-<pubDate>Wed, 28 Apr 2021 00:00:00 -0400</pubDate>
+<pubDate>Wed, 28 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-chalice/</guid>
 <description>AWS Chalice</description>
@@ -47,7 +47,7 @@
     <item>
 <title>AWS CDK Step Functions</title>
 <link>https://brianpfeil.com/post/aws-cdk-step-functions/</link>
-<pubDate>Mon, 26 Apr 2021 00:00:00 -0400</pubDate>
+<pubDate>Mon, 26 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cdk-step-functions/</guid>
 <description>AWS CDK Step Functions</description>
@@ -56,7 +56,7 @@
     <item>
 <title>AWS CloudFormation Custom Resource Type</title>
 <link>https://brianpfeil.com/post/aws-cloudformation-custom-resource-type/</link>
-<pubDate>Fri, 23 Apr 2021 00:00:00 -0400</pubDate>
+<pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cloudformation-custom-resource-type/</guid>
 <description>AWS CloudFormation Custom Resource Type</description>
@@ -65,7 +65,7 @@
     <item>
 <title>AWS CDK Pipeline</title>
 <link>https://brianpfeil.com/post/aws-cdk-pipeline/</link>
-<pubDate>Thu, 15 Apr 2021 00:00:00 -0400</pubDate>
+<pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cdk-pipeline/</guid>
 <description>AWS CDK Pipeline</description>
@@ -74,7 +74,7 @@
     <item>
 <title>AWS Well-Architected</title>
 <link>https://brianpfeil.com/post/aws-well-architected/</link>
-<pubDate>Fri, 09 Apr 2021 00:00:00 -0400</pubDate>
+<pubDate>Fri, 09 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-well-architected/</guid>
 <description>AWS Well-Architected</description>
@@ -83,7 +83,7 @@
     <item>
 <title>API Gateway Private Endpoints</title>
 <link>https://brianpfeil.com/post/api-gateway-private-endpoints/</link>
-<pubDate>Tue, 06 Apr 2021 00:00:00 -0400</pubDate>
+<pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/api-gateway-private-endpoints/</guid>
 <description>API Gateway Private Endpoints</description>
@@ -92,7 +92,7 @@
     <item>
 <title>CFN Diagram</title>
 <link>https://brianpfeil.com/post/cfn-diagram/</link>
-<pubDate>Mon, 05 Apr 2021 00:00:00 -0400</pubDate>
+<pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/cfn-diagram/</guid>
 <description>CFN Diagram</description>
@@ -101,7 +101,7 @@
     <item>
 <title>API Gateway Service Integrations for HTTP APIs</title>
 <link>https://brianpfeil.com/post/api-gateway-service-integrations-for-http-apis/</link>
-<pubDate>Fri, 02 Apr 2021 00:00:00 -0400</pubDate>
+<pubDate>Fri, 02 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/api-gateway-service-integrations-for-http-apis/</guid>
 <description>API Gateway Service Integrations for HTTP APIs</description>
@@ -110,7 +110,7 @@
     <item>
 <title>AWS SES</title>
 <link>https://brianpfeil.com/post/aws-ses/</link>
-<pubDate>Tue, 30 Mar 2021 00:00:00 -0400</pubDate>
+<pubDate>Tue, 30 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-ses/</guid>
 <description>AWS SES</description>
@@ -119,7 +119,7 @@
     <item>
 <title>AWS Copilot</title>
 <link>https://brianpfeil.com/post/aws-copilot/</link>
-<pubDate>Sun, 21 Mar 2021 00:00:00 -0400</pubDate>
+<pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-copilot/</guid>
 <description>AWS Copilot</description>
@@ -128,7 +128,7 @@
     <item>
 <title>Amazon Managed Workflows for Apache Airflow</title>
 <link>https://brianpfeil.com/post/amazon-managed-workflows-for-apache-airflow/</link>
-<pubDate>Sat, 13 Mar 2021 00:00:00 -0500</pubDate>
+<pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/amazon-managed-workflows-for-apache-airflow/</guid>
 <description>Amazon Managed Workflows for Apache Airflow</description>
@@ -137,7 +137,7 @@
     <item>
 <title>AWS Glue Pyspark Fetch Databases and Tables Metadata</title>
 <link>https://brianpfeil.com/post/aws-glue-pyspark-fetch-databases-and-tables-metadata/</link>
-<pubDate>Fri, 19 Feb 2021 00:00:00 -0500</pubDate>
+<pubDate>Fri, 19 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-glue-pyspark-fetch-databases-and-tables-metadata/</guid>
 <description>AWS Glue Pyspark Fetch Databases and Tables Metadata</description>
@@ -146,7 +146,7 @@
     <item>
 <title>Azure Durable Functions</title>
 <link>https://brianpfeil.com/post/azure-durable-functions/</link>
-<pubDate>Fri, 05 Feb 2021 00:00:00 -0500</pubDate>
+<pubDate>Fri, 05 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-durable-functions/</guid>
 <description>Azure Durable Functions</description>
@@ -155,7 +155,7 @@
     <item>
 <title>Azure ARM</title>
 <link>https://brianpfeil.com/post/azure-arm/</link>
-<pubDate>Fri, 29 Jan 2021 00:00:00 -0500</pubDate>
+<pubDate>Fri, 29 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-arm/</guid>
 <description>Azure ARM</description>
@@ -164,7 +164,7 @@
     <item>
 <title>Azure Functions</title>
 <link>https://brianpfeil.com/post/azure-functions/</link>
-<pubDate>Mon, 25 Jan 2021 00:00:00 -0500</pubDate>
+<pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-functions/</guid>
 <description>Azure Functions</description>
@@ -173,7 +173,7 @@
     <item>
 <title>SAM Lambda Layers</title>
 <link>https://brianpfeil.com/post/sam-lambda-layers/</link>
-<pubDate>Fri, 08 Jan 2021 00:00:00 -0500</pubDate>
+<pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/sam-lambda-layers/</guid>
 <description>SAM Lambda Layers</description>
@@ -182,7 +182,7 @@
     <item>
 <title>Click CLI</title>
 <link>https://brianpfeil.com/post/click-cli/</link>
-<pubDate>Thu, 07 Jan 2021 00:00:00 -0500</pubDate>
+<pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/click-cli/</guid>
 <description>Click CLI</description>
@@ -191,7 +191,7 @@
     <item>
 <title>AWS Data Wrangler</title>
 <link>https://brianpfeil.com/post/aws-data-wrangler/</link>
-<pubDate>Wed, 06 Jan 2021 00:00:00 -0500</pubDate>
+<pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-data-wrangler/</guid>
 <description>AWS Data Wrangler</description>
@@ -200,7 +200,7 @@
     <item>
 <title>Python</title>
 <link>https://brianpfeil.com/post/python/</link>
-<pubDate>Fri, 20 Nov 2020 00:00:00 -0500</pubDate>
+<pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/python/</guid>
 <description>Python</description>
@@ -209,7 +209,7 @@
     <item>
 <title>Serverless Flask</title>
 <link>https://brianpfeil.com/post/serverless-flask/</link>
-<pubDate>Fri, 13 Nov 2020 00:00:00 -0500</pubDate>
+<pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-flask/</guid>
 <description>Serverless Flask</description>
@@ -218,7 +218,7 @@
     <item>
 <title>DynamoDB Export to S3 and Query with Athena</title>
 <link>https://brianpfeil.com/post/dynamodb-export-to-s3-and-query-with-athena/</link>
-<pubDate>Wed, 11 Nov 2020 00:00:00 -0500</pubDate>
+<pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/dynamodb-export-to-s3-and-query-with-athena/</guid>
 <description>DynamoDB Export to S3 and Query with Athena</description>
@@ -227,7 +227,7 @@
     <item>
 <title>AWS Database Migration Service</title>
 <link>https://brianpfeil.com/post/aws-database-migration-service/</link>
-<pubDate>Sun, 01 Nov 2020 00:00:00 -0400</pubDate>
+<pubDate>Sun, 01 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-database-migration-service/</guid>
 <description>AWS Database Migration Service</description>
@@ -236,7 +236,7 @@
     <item>
 <title>AWS CloudWatch Logs Insights</title>
 <link>https://brianpfeil.com/post/aws-cloudwatch-logs-insights/</link>
-<pubDate>Fri, 30 Oct 2020 00:00:00 -0400</pubDate>
+<pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cloudwatch-logs-insights/</guid>
 <description>AWS CloudWatch Logs Insights</description>
@@ -245,7 +245,7 @@
     <item>
 <title>Dynamic Nodejs Code Execution</title>
 <link>https://brianpfeil.com/post/dynamic-nodejs-code-execution/</link>
-<pubDate>Wed, 28 Oct 2020 00:00:00 -0400</pubDate>
+<pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/dynamic-nodejs-code-execution/</guid>
 <description>Dynamic Nodejs Code Execution</description>
@@ -254,7 +254,7 @@
     <item>
 <title>AWS Kendra</title>
 <link>https://brianpfeil.com/post/aws-kendra/</link>
-<pubDate>Tue, 27 Oct 2020 00:00:00 -0400</pubDate>
+<pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-kendra/</guid>
 <description>AWS Kendra</description>
@@ -263,7 +263,7 @@
     <item>
 <title>AWS JavaScript SDK V3</title>
 <link>https://brianpfeil.com/post/aws-javascript-sdk-v3/</link>
-<pubDate>Mon, 26 Oct 2020 00:00:00 -0400</pubDate>
+<pubDate>Mon, 26 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-javascript-sdk-v3/</guid>
 <description>AWS JavaScript SDK V3</description>
@@ -272,7 +272,7 @@
     <item>
 <title>AWS Transfer Family</title>
 <link>https://brianpfeil.com/post/aws-transfer-family/</link>
-<pubDate>Fri, 23 Oct 2020 00:00:00 -0400</pubDate>
+<pubDate>Fri, 23 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-transfer-family/</guid>
 <description>AWS Transfer Family</description>
@@ -281,7 +281,7 @@
     <item>
 <title>AWS AppConfig</title>
 <link>https://brianpfeil.com/post/aws-appconfig/</link>
-<pubDate>Tue, 20 Oct 2020 00:00:00 -0400</pubDate>
+<pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-appconfig/</guid>
 <description>AWS AppConfig</description>
@@ -290,7 +290,7 @@
     <item>
 <title>Bash Shell Script</title>
 <link>https://brianpfeil.com/post/bash-shell-script/</link>
-<pubDate>Tue, 13 Oct 2020 00:00:00 -0400</pubDate>
+<pubDate>Tue, 13 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/bash-shell-script/</guid>
 <description>Bash Shell Script</description>
@@ -299,7 +299,7 @@
     <item>
 <title>PowerShell</title>
 <link>https://brianpfeil.com/post/powershell/</link>
-<pubDate>Mon, 12 Oct 2020 00:00:00 -0400</pubDate>
+<pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/powershell/</guid>
 <description>PowerShell</description>
@@ -308,7 +308,7 @@
     <item>
 <title>AWS Cloud9</title>
 <link>https://brianpfeil.com/post/aws-cloud9/</link>
-<pubDate>Mon, 05 Oct 2020 00:00:00 -0400</pubDate>
+<pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cloud9/</guid>
 <description>AWS Cloud9</description>
@@ -317,7 +317,7 @@
     <item>
 <title>Boto3</title>
 <link>https://brianpfeil.com/post/boto3/</link>
-<pubDate>Mon, 05 Oct 2020 00:00:00 -0400</pubDate>
+<pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/boto3/</guid>
 <description>Boto3</description>
@@ -326,7 +326,7 @@
     <item>
 <title>AWS Systems Manager Automation</title>
 <link>https://brianpfeil.com/post/aws-systems-manager-automation/</link>
-<pubDate>Fri, 02 Oct 2020 00:00:00 -0400</pubDate>
+<pubDate>Fri, 02 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-systems-manager-automation/</guid>
 <description>AWS Systems Manager Automation</description>
@@ -335,7 +335,7 @@
     <item>
 <title>GitHub CLI</title>
 <link>https://brianpfeil.com/post/github-cli/</link>
-<pubDate>Fri, 02 Oct 2020 00:00:00 -0400</pubDate>
+<pubDate>Fri, 02 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/github-cli/</guid>
 <description>GitHub CLI</description>
@@ -344,7 +344,7 @@
     <item>
 <title>Diagrams As Code</title>
 <link>https://brianpfeil.com/post/diagrams-as-code/</link>
-<pubDate>Thu, 01 Oct 2020 00:00:00 -0400</pubDate>
+<pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/diagrams-as-code/</guid>
 <description>Diagrams As Code</description>
@@ -353,7 +353,7 @@
     <item>
 <title>S3 Access Points</title>
 <link>https://brianpfeil.com/post/s3-access-points/</link>
-<pubDate>Thu, 01 Oct 2020 00:00:00 -0400</pubDate>
+<pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/s3-access-points/</guid>
 <description>S3 Access Points</description>
@@ -362,7 +362,7 @@
     <item>
 <title>MDX Deck</title>
 <link>https://brianpfeil.com/post/mdx-deck/</link>
-<pubDate>Mon, 28 Sep 2020 00:00:00 -0400</pubDate>
+<pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/mdx-deck/</guid>
 <description>MDX Deck</description>
@@ -371,7 +371,7 @@
     <item>
 <title>AWS AppFlow Veeva Vault to S3</title>
 <link>https://brianpfeil.com/post/aws-appflow-veeva-vault-to-s3/</link>
-<pubDate>Tue, 08 Sep 2020 00:00:00 -0400</pubDate>
+<pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-appflow-veeva-vault-to-s3/</guid>
 <description>AWS AppFlow Veeva Vault to S3</description>
@@ -380,7 +380,7 @@
     <item>
 <title>Product Development</title>
 <link>https://brianpfeil.com/post/product-development/</link>
-<pubDate>Thu, 03 Sep 2020 00:00:00 -0400</pubDate>
+<pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/product-development/</guid>
 <description>Product Development</description>
@@ -389,7 +389,7 @@
     <item>
 <title>Ant Design Pro</title>
 <link>https://brianpfeil.com/post/ant-design-pro/</link>
-<pubDate>Wed, 02 Sep 2020 00:00:00 -0400</pubDate>
+<pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/ant-design-pro/</guid>
 <description>Ant Design Pro</description>
@@ -398,7 +398,7 @@
     <item>
 <title>Antd React</title>
 <link>https://brianpfeil.com/post/antd-react/</link>
-<pubDate>Tue, 01 Sep 2020 00:00:00 -0400</pubDate>
+<pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/antd-react/</guid>
 <description>Antd React</description>
@@ -407,7 +407,7 @@
     <item>
 <title>AWS AppFlow Salesforce EventBridge</title>
 <link>https://brianpfeil.com/post/aws-appflow-salesforce-eventbridge/</link>
-<pubDate>Thu, 27 Aug 2020 00:00:00 -0400</pubDate>
+<pubDate>Thu, 27 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-appflow-salesforce-eventbridge/</guid>
 <description>AWS AppFlow Salesforce EventBridge</description>
@@ -416,7 +416,7 @@
     <item>
 <title>AWS API Gateway AWS Service Integration</title>
 <link>https://brianpfeil.com/post/aws-api-gateway-aws-service-integration/</link>
-<pubDate>Thu, 20 Aug 2020 00:00:00 -0400</pubDate>
+<pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-api-gateway-aws-service-integration/</guid>
 <description>AWS API Gateway AWS Service Integration</description>
@@ -425,7 +425,7 @@
     <item>
 <title>AWS Comprehend</title>
 <link>https://brianpfeil.com/post/aws-comprehend/</link>
-<pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
+<pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-comprehend/</guid>
 <description>AWS Comprehend</description>
@@ -434,7 +434,7 @@
     <item>
 <title>Graphviz</title>
 <link>https://brianpfeil.com/post/graphviz/</link>
-<pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
+<pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/graphviz/</guid>
 <description>Graphviz</description>
@@ -443,7 +443,7 @@
     <item>
 <title>Mage</title>
 <link>https://brianpfeil.com/post/mage/</link>
-<pubDate>Tue, 18 Aug 2020 00:00:00 -0400</pubDate>
+<pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/mage/</guid>
 <description>Mage</description>
@@ -452,7 +452,7 @@
     <item>
 <title>AWS SAM Step Functions</title>
 <link>https://brianpfeil.com/post/aws-sam-step-functions/</link>
-<pubDate>Fri, 14 Aug 2020 00:00:00 -0400</pubDate>
+<pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-sam-step-functions/</guid>
 <description>AWS SAM Step Functions</description>
@@ -461,7 +461,7 @@
     <item>
 <title>AWS SAM Golang</title>
 <link>https://brianpfeil.com/post/aws-sam-golang/</link>
-<pubDate>Thu, 30 Jul 2020 00:00:00 -0400</pubDate>
+<pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-sam-golang/</guid>
 <description>AWS SAM Golang</description>
@@ -470,7 +470,7 @@
     <item>
 <title>Lumigo CLI</title>
 <link>https://brianpfeil.com/post/lumigo-cli/</link>
-<pubDate>Fri, 17 Jul 2020 00:00:00 -0400</pubDate>
+<pubDate>Fri, 17 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/lumigo-cli/</guid>
 <description>Lumigo CLI</description>
@@ -479,7 +479,7 @@
     <item>
 <title>AWS Interactive Video Service</title>
 <link>https://brianpfeil.com/post/aws-interactive-video-service/</link>
-<pubDate>Thu, 16 Jul 2020 00:00:00 -0400</pubDate>
+<pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-interactive-video-service/</guid>
 <description>AWS Interactive Video Service</description>
@@ -488,7 +488,7 @@
     <item>
 <title>Bref PHP Lambda</title>
 <link>https://brianpfeil.com/post/bref-php-lambda/</link>
-<pubDate>Mon, 13 Jul 2020 00:00:00 -0400</pubDate>
+<pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/bref-php-lambda/</guid>
 <description>Bref PHP Lambda</description>
@@ -497,7 +497,7 @@
     <item>
 <title>Heroku Node Worker</title>
 <link>https://brianpfeil.com/post/heroku-node-worker/</link>
-<pubDate>Mon, 13 Jul 2020 00:00:00 -0400</pubDate>
+<pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/heroku-node-worker/</guid>
 <description>Heroku Node Worker</description>
@@ -506,7 +506,7 @@
     <item>
 <title>Strapi</title>
 <link>https://brianpfeil.com/post/strapi/</link>
-<pubDate>Fri, 10 Jul 2020 00:00:00 -0400</pubDate>
+<pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/strapi/</guid>
 <description>Strapi</description>
@@ -515,7 +515,7 @@
     <item>
 <title>PHP Lambda Layer</title>
 <link>https://brianpfeil.com/post/php-lambda-layer/</link>
-<pubDate>Thu, 02 Jul 2020 00:00:00 -0400</pubDate>
+<pubDate>Thu, 02 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/php-lambda-layer/</guid>
 <description>PHP Lambda Layer</description>
@@ -524,7 +524,7 @@
     <item>
 <title>Serverless Golang</title>
 <link>https://brianpfeil.com/post/serverless-golang/</link>
-<pubDate>Wed, 17 Jun 2020 00:00:00 -0400</pubDate>
+<pubDate>Wed, 17 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-golang/</guid>
 <description>Serverless Golang</description>
@@ -533,7 +533,7 @@
     <item>
 <title>AWS EventBridge</title>
 <link>https://brianpfeil.com/post/aws-eventbridge/</link>
-<pubDate>Tue, 19 May 2020 00:00:00 -0400</pubDate>
+<pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-eventbridge/</guid>
 <description>AWS EventBridge</description>
@@ -542,7 +542,7 @@
     <item>
 <title>GoReleaser</title>
 <link>https://brianpfeil.com/post/goreleaser/</link>
-<pubDate>Thu, 16 Apr 2020 00:00:00 -0400</pubDate>
+<pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/goreleaser/</guid>
 <description>GoReleaser</description>
@@ -551,7 +551,7 @@
     <item>
 <title>HTTP Live Streaming HLS</title>
 <link>https://brianpfeil.com/post/http-live-streaming-hls/</link>
-<pubDate>Mon, 23 Mar 2020 00:00:00 -0400</pubDate>
+<pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/http-live-streaming-hls/</guid>
 <description>HTTP Live Streaming HLS</description>
@@ -560,7 +560,7 @@
     <item>
 <title>React Async</title>
 <link>https://brianpfeil.com/post/react-async/</link>
-<pubDate>Thu, 19 Mar 2020 00:00:00 -0400</pubDate>
+<pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/react-async/</guid>
 <description>React Async</description>
@@ -569,7 +569,7 @@
     <item>
 <title>Azure Pipelines</title>
 <link>https://brianpfeil.com/post/azure-pipelines/</link>
-<pubDate>Wed, 26 Feb 2020 00:00:00 -0500</pubDate>
+<pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-pipelines/</guid>
 <description>Azure Pipelines</description>
@@ -578,7 +578,7 @@
     <item>
 <title>Flask</title>
 <link>https://brianpfeil.com/post/flask/</link>
-<pubDate>Sat, 15 Feb 2020 00:00:00 -0500</pubDate>
+<pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/flask/</guid>
 <description>Flask</description>
@@ -587,7 +587,7 @@
     <item>
 <title>Bash Script Date and Time</title>
 <link>https://brianpfeil.com/post/bash-script-date-and-time/</link>
-<pubDate>Mon, 10 Feb 2020 00:00:00 -0500</pubDate>
+<pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/bash-script-date-and-time/</guid>
 <description>Bash Script Date and Time</description>
@@ -596,7 +596,7 @@
     <item>
 <title>Multipass</title>
 <link>https://brianpfeil.com/post/multipass/</link>
-<pubDate>Sun, 09 Feb 2020 00:00:00 -0500</pubDate>
+<pubDate>Sun, 09 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/multipass/</guid>
 <description>Multipass</description>
@@ -605,7 +605,7 @@
     <item>
 <title>Python Async Await</title>
 <link>https://brianpfeil.com/post/python-async-await/</link>
-<pubDate>Wed, 05 Feb 2020 00:00:00 -0500</pubDate>
+<pubDate>Wed, 05 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/python-async-await/</guid>
 <description>Python Async Await</description>
@@ -614,7 +614,7 @@
     <item>
 <title>TailwindCSS</title>
 <link>https://brianpfeil.com/post/tailwindcss/</link>
-<pubDate>Thu, 16 Jan 2020 00:00:00 -0500</pubDate>
+<pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/tailwindcss/</guid>
 <description>TailwindCSS</description>
@@ -623,7 +623,7 @@
     <item>
 <title>Go Modules</title>
 <link>https://brianpfeil.com/post/go-modules/</link>
-<pubDate>Wed, 15 Jan 2020 00:00:00 -0500</pubDate>
+<pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/go-modules/</guid>
 <description>Go Modules</description>
@@ -632,7 +632,7 @@
     <item>
 <title>Go SDL2</title>
 <link>https://brianpfeil.com/post/go-sdl2/</link>
-<pubDate>Mon, 13 Jan 2020 00:00:00 -0500</pubDate>
+<pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/go-sdl2/</guid>
 <description>Go SDL2</description>
@@ -641,7 +641,7 @@
     <item>
 <title>Make</title>
 <link>https://brianpfeil.com/post/make/</link>
-<pubDate>Mon, 13 Jan 2020 00:00:00 -0500</pubDate>
+<pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/make/</guid>
 <description>Make</description>
@@ -650,7 +650,7 @@
     <item>
 <title>Googletest</title>
 <link>https://brianpfeil.com/post/googletest/</link>
-<pubDate>Thu, 02 Jan 2020 00:00:00 -0500</pubDate>
+<pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/googletest/</guid>
 <description>Googletest</description>
@@ -659,7 +659,7 @@
     <item>
 <title>React Bootstrap</title>
 <link>https://brianpfeil.com/post/react-bootstrap/</link>
-<pubDate>Sun, 29 Dec 2019 00:00:00 -0500</pubDate>
+<pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/react-bootstrap/</guid>
 <description>React Bootstrap</description>
@@ -668,7 +668,7 @@
     <item>
 <title>GLib</title>
 <link>https://brianpfeil.com/post/glib/</link>
-<pubDate>Mon, 11 Nov 2019 00:00:00 -0500</pubDate>
+<pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/glib/</guid>
 <description>GLib</description>
@@ -677,7 +677,7 @@
     <item>
 <title>Terraform</title>
 <link>https://brianpfeil.com/post/terraform/</link>
-<pubDate>Tue, 05 Nov 2019 00:00:00 -0500</pubDate>
+<pubDate>Tue, 05 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/terraform/</guid>
 <description>Terraform</description>
@@ -686,7 +686,7 @@
     <item>
 <title>Serverless Lambda Java</title>
 <link>https://brianpfeil.com/post/serverless-lambda-java/</link>
-<pubDate>Sun, 27 Oct 2019 00:00:00 -0400</pubDate>
+<pubDate>Sun, 27 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-lambda-java/</guid>
 <description>Serverless Lambda Java</description>
@@ -695,7 +695,7 @@
     <item>
 <title>Wordpress</title>
 <link>https://brianpfeil.com/post/wordpress/</link>
-<pubDate>Tue, 22 Oct 2019 00:00:00 -0400</pubDate>
+<pubDate>Tue, 22 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/wordpress/</guid>
 <description>Wordpress</description>
@@ -704,7 +704,7 @@
     <item>
 <title>AWS Control Tower</title>
 <link>https://brianpfeil.com/post/aws-control-tower/</link>
-<pubDate>Thu, 17 Oct 2019 00:00:00 -0400</pubDate>
+<pubDate>Thu, 17 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-control-tower/</guid>
 <description>AWS Control Tower</description>
@@ -713,7 +713,7 @@
     <item>
 <title>AWS Serverless Application Repository</title>
 <link>https://brianpfeil.com/post/aws-serverless-application-repository/</link>
-<pubDate>Mon, 14 Oct 2019 00:00:00 -0400</pubDate>
+<pubDate>Mon, 14 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-serverless-application-repository/</guid>
 <description>AWS Serverless Application Repository</description>
@@ -722,7 +722,7 @@
     <item>
 <title>Stackery</title>
 <link>https://brianpfeil.com/post/stackery/</link>
-<pubDate>Wed, 09 Oct 2019 00:00:00 -0400</pubDate>
+<pubDate>Wed, 09 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/stackery/</guid>
 <description>Stackery</description>
@@ -731,7 +731,7 @@
     <item>
 <title>AWS Cognito Developer Authenticated Identities</title>
 <link>https://brianpfeil.com/post/aws-cognito-developer-authenticated-identities/</link>
-<pubDate>Thu, 26 Sep 2019 00:00:00 -0400</pubDate>
+<pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cognito-developer-authenticated-identities/</guid>
 <description>AWS Cognito Developer Authenticated Identities</description>
@@ -740,7 +740,7 @@
     <item>
 <title>Gitlab</title>
 <link>https://brianpfeil.com/post/gitlab/</link>
-<pubDate>Wed, 18 Sep 2019 00:00:00 -0400</pubDate>
+<pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/gitlab/</guid>
 <description>Gitlab</description>
@@ -749,7 +749,7 @@
     <item>
 <title>Serverless Lambda Layers</title>
 <link>https://brianpfeil.com/post/serverless-lambda-layers/</link>
-<pubDate>Wed, 18 Sep 2019 00:00:00 -0400</pubDate>
+<pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-lambda-layers/</guid>
 <description>Serverless Lambda Layers</description>
@@ -758,7 +758,7 @@
     <item>
 <title>AWS Service Catalog</title>
 <link>https://brianpfeil.com/post/aws-service-catalog/</link>
-<pubDate>Tue, 10 Sep 2019 00:00:00 -0400</pubDate>
+<pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-service-catalog/</guid>
 <description>AWS Service Catalog</description>
@@ -767,7 +767,7 @@
     <item>
 <title>Serverless Plugin CloudFront Lambda Edge</title>
 <link>https://brianpfeil.com/post/serverless-plugin-cloudfront-lambda-edge/</link>
-<pubDate>Tue, 10 Sep 2019 00:00:00 -0400</pubDate>
+<pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-plugin-cloudfront-lambda-edge/</guid>
 <description>Serverless Plugin CloudFront Lambda Edge</description>
@@ -776,7 +776,7 @@
     <item>
 <title>AWS Amplify Console</title>
 <link>https://brianpfeil.com/post/aws-amplify-console/</link>
-<pubDate>Mon, 09 Sep 2019 00:00:00 -0400</pubDate>
+<pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-amplify-console/</guid>
 <description>AWS Amplify Console</description>
@@ -785,7 +785,7 @@
     <item>
 <title>AWS Polly</title>
 <link>https://brianpfeil.com/post/aws-polly/</link>
-<pubDate>Fri, 06 Sep 2019 00:00:00 -0400</pubDate>
+<pubDate>Fri, 06 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-polly/</guid>
 <description>AWS Polly</description>
@@ -794,7 +794,7 @@
     <item>
 <title>AWS Delivlib</title>
 <link>https://brianpfeil.com/post/aws-delivlib/</link>
-<pubDate>Tue, 03 Sep 2019 00:00:00 -0400</pubDate>
+<pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-delivlib/</guid>
 <description>AWS Delivlib</description>
@@ -803,7 +803,7 @@
     <item>
 <title>Drawio</title>
 <link>https://brianpfeil.com/post/drawio/</link>
-<pubDate>Mon, 26 Aug 2019 00:00:00 -0400</pubDate>
+<pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/drawio/</guid>
 <description>Drawio</description>
@@ -812,7 +812,7 @@
     <item>
 <title>Zipkin</title>
 <link>https://brianpfeil.com/post/zipkin/</link>
-<pubDate>Wed, 21 Aug 2019 00:00:00 -0400</pubDate>
+<pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/zipkin/</guid>
 <description>Zipkin</description>
@@ -821,7 +821,7 @@
     <item>
 <title>Serverless Framework Full Lifecycle with Dashboard</title>
 <link>https://brianpfeil.com/post/serverless-framework-full-lifecycle-with-dashboard/</link>
-<pubDate>Tue, 20 Aug 2019 00:00:00 -0400</pubDate>
+<pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-framework-full-lifecycle-with-dashboard/</guid>
 <description>Serverless Framework Full Lifecycle with Dashboard</description>
@@ -830,7 +830,7 @@
     <item>
 <title>AWS SAM Local</title>
 <link>https://brianpfeil.com/post/aws-sam-local/</link>
-<pubDate>Fri, 16 Aug 2019 00:00:00 -0400</pubDate>
+<pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-sam-local/</guid>
 <description>AWS SAM Local</description>
@@ -839,7 +839,7 @@
     <item>
 <title>AWS CloudFormation</title>
 <link>https://brianpfeil.com/post/aws-cloudformation/</link>
-<pubDate>Wed, 14 Aug 2019 00:00:00 -0400</pubDate>
+<pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cloudformation/</guid>
 <description>AWS CloudFormation</description>
@@ -848,7 +848,7 @@
     <item>
 <title>Intellij Maven App</title>
 <link>https://brianpfeil.com/post/intellij-maven-app/</link>
-<pubDate>Wed, 14 Aug 2019 00:00:00 -0400</pubDate>
+<pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/intellij-maven-app/</guid>
 <description>Intellij Maven App</description>
@@ -857,7 +857,7 @@
     <item>
 <title>AWS XRay</title>
 <link>https://brianpfeil.com/post/aws-xray/</link>
-<pubDate>Tue, 13 Aug 2019 00:00:00 -0400</pubDate>
+<pubDate>Tue, 13 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-xray/</guid>
 <description>AWS XRay</description>
@@ -866,7 +866,7 @@
     <item>
 <title>Pipenv</title>
 <link>https://brianpfeil.com/post/pipenv/</link>
-<pubDate>Wed, 07 Aug 2019 00:00:00 -0400</pubDate>
+<pubDate>Wed, 07 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/pipenv/</guid>
 <description>Pipenv</description>
@@ -875,7 +875,7 @@
     <item>
 <title>Python Packaging</title>
 <link>https://brianpfeil.com/post/python-packaging/</link>
-<pubDate>Wed, 07 Aug 2019 00:00:00 -0400</pubDate>
+<pubDate>Wed, 07 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/python-packaging/</guid>
 <description>Python Packaging</description>
@@ -884,7 +884,7 @@
     <item>
 <title>Neo4j</title>
 <link>https://brianpfeil.com/post/neo4j/</link>
-<pubDate>Mon, 05 Aug 2019 00:00:00 -0400</pubDate>
+<pubDate>Mon, 05 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/neo4j/</guid>
 <description>Neo4j</description>
@@ -893,7 +893,7 @@
     <item>
 <title>AWS Transcribe</title>
 <link>https://brianpfeil.com/post/aws-transcribe/</link>
-<pubDate>Tue, 30 Jul 2019 00:00:00 -0400</pubDate>
+<pubDate>Tue, 30 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-transcribe/</guid>
 <description>AWS Transcribe</description>
@@ -902,7 +902,7 @@
     <item>
 <title>Chrome AWS Lambda</title>
 <link>https://brianpfeil.com/post/chrome-aws-lambda/</link>
-<pubDate>Wed, 24 Jul 2019 00:00:00 -0400</pubDate>
+<pubDate>Wed, 24 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/chrome-aws-lambda/</guid>
 <description>Chrome AWS Lambda</description>
@@ -911,7 +911,7 @@
     <item>
 <title>YouTube API</title>
 <link>https://brianpfeil.com/post/youtube-api/</link>
-<pubDate>Mon, 22 Jul 2019 00:00:00 -0400</pubDate>
+<pubDate>Mon, 22 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/youtube-api/</guid>
 <description>YouTube API</description>
@@ -920,7 +920,7 @@
     <item>
 <title>AWS CDK</title>
 <link>https://brianpfeil.com/post/aws-cdk/</link>
-<pubDate>Thu, 11 Jul 2019 00:00:00 -0400</pubDate>
+<pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cdk/</guid>
 <description>AWS CDK</description>
@@ -929,7 +929,7 @@
     <item>
 <title>AWS Fargate</title>
 <link>https://brianpfeil.com/post/aws-fargate/</link>
-<pubDate>Wed, 10 Jul 2019 00:00:00 -0400</pubDate>
+<pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-fargate/</guid>
 <description>AWS Fargate</description>
@@ -938,7 +938,7 @@
     <item>
 <title>AWS Glue</title>
 <link>https://brianpfeil.com/post/aws-glue/</link>
-<pubDate>Tue, 09 Jul 2019 00:00:00 -0400</pubDate>
+<pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-glue/</guid>
 <description>AWS Glue</description>
@@ -947,7 +947,7 @@
     <item>
 <title>AWS Rekognition</title>
 <link>https://brianpfeil.com/post/aws-rekognition/</link>
-<pubDate>Mon, 08 Jul 2019 00:00:00 -0400</pubDate>
+<pubDate>Mon, 08 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-rekognition/</guid>
 <description>AWS Rekognition</description>
@@ -956,7 +956,7 @@
     <item>
 <title>AWS Codebuild Local</title>
 <link>https://brianpfeil.com/post/aws-codebuild-local/</link>
-<pubDate>Wed, 03 Jul 2019 00:00:00 -0400</pubDate>
+<pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-codebuild-local/</guid>
 <description>AWS Codebuild Local</description>
@@ -965,7 +965,7 @@
     <item>
 <title>Golang Debug In Docker with Delve</title>
 <link>https://brianpfeil.com/post/golang-debug-in-docker-with-delve/</link>
-<pubDate>Mon, 24 Jun 2019 00:00:00 -0400</pubDate>
+<pubDate>Mon, 24 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/golang-debug-in-docker-with-delve/</guid>
 <description>Golang Debug In Docker with Delve</description>
@@ -974,7 +974,7 @@
     <item>
 <title>Cognito Federated to Salesforce and S3 Presigned URL</title>
 <link>https://brianpfeil.com/post/cognito-federated-to-salesforce-and-s3-presigned-url/</link>
-<pubDate>Thu, 13 Jun 2019 00:00:00 -0400</pubDate>
+<pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/cognito-federated-to-salesforce-and-s3-presigned-url/</guid>
 <description>Cognito Federated to Salesforce and S3 Presigned URL</description>
@@ -983,7 +983,7 @@
     <item>
 <title>Azure Kubernetes Service AKS</title>
 <link>https://brianpfeil.com/post/azure-kubernetes-service-aks/</link>
-<pubDate>Sat, 18 May 2019 00:00:00 -0400</pubDate>
+<pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-kubernetes-service-aks/</guid>
 <description>Azure Kubernetes Service AKS</description>
@@ -992,7 +992,7 @@
     <item>
 <title>Azure Nodejs ARM Resources</title>
 <link>https://brianpfeil.com/post/azure-nodejs-arm-resources/</link>
-<pubDate>Wed, 15 May 2019 00:00:00 -0400</pubDate>
+<pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-nodejs-arm-resources/</guid>
 <description>Azure Nodejs ARM Resources</description>
@@ -1001,7 +1001,7 @@
     <item>
 <title>Azure CLI</title>
 <link>https://brianpfeil.com/post/azure-cli/</link>
-<pubDate>Tue, 14 May 2019 00:00:00 -0400</pubDate>
+<pubDate>Tue, 14 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-cli/</guid>
 <description>Azure CLI</description>
@@ -1010,7 +1010,7 @@
     <item>
 <title>Azure JS Cognitive Services</title>
 <link>https://brianpfeil.com/post/azure-js-cognitive-services/</link>
-<pubDate>Mon, 13 May 2019 00:00:00 -0400</pubDate>
+<pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-js-cognitive-services/</guid>
 <description>Azure JS Cognitive Services</description>
@@ -1019,7 +1019,7 @@
     <item>
 <title>Azure Nodejs ARM Storage</title>
 <link>https://brianpfeil.com/post/azure-nodejs-arm-storage/</link>
-<pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+<pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-nodejs-arm-storage/</guid>
 <description>Azure Nodejs ARM Storage</description>
@@ -1028,7 +1028,7 @@
     <item>
 <title>Azure SDK for Node Authentication</title>
 <link>https://brianpfeil.com/post/azure-sdk-for-node-authentication/</link>
-<pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+<pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-sdk-for-node-authentication/</guid>
 <description>Azure SDK for Node Authentication</description>
@@ -1037,7 +1037,7 @@
     <item>
 <title>Azure Serverless Framework</title>
 <link>https://brianpfeil.com/post/azure-serverless-framework/</link>
-<pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+<pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-serverless-framework/</guid>
 <description>Azure Serverless Framework</description>
@@ -1046,7 +1046,7 @@
     <item>
 <title>Python 2.X WebSocket Client</title>
 <link>https://brianpfeil.com/post/python-2.x-websocket-client/</link>
-<pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+<pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/python-2.x-websocket-client/</guid>
 <description>Python 2.X WebSocket Client</description>
@@ -1055,7 +1055,7 @@
     <item>
 <title>Azure Cosmos JS SDK</title>
 <link>https://brianpfeil.com/post/azure-cosmos-js-sdk/</link>
-<pubDate>Wed, 08 May 2019 00:00:00 -0400</pubDate>
+<pubDate>Wed, 08 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-cosmos-js-sdk/</guid>
 <description>Azure Cosmos JS SDK</description>
@@ -1064,7 +1064,7 @@
     <item>
 <title>GatsbyJS</title>
 <link>https://brianpfeil.com/post/gatsbyjs/</link>
-<pubDate>Sat, 09 Mar 2019 00:00:00 -0500</pubDate>
+<pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/gatsbyjs/</guid>
 <description>GatsbyJS</description>
@@ -1073,7 +1073,7 @@
     <item>
 <title>Apollo Client Local State</title>
 <link>https://brianpfeil.com/post/apollo-client-local-state/</link>
-<pubDate>Wed, 27 Feb 2019 00:00:00 -0500</pubDate>
+<pubDate>Wed, 27 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/apollo-client-local-state/</guid>
 <description>Apollo Client Local State</description>
@@ -1082,7 +1082,7 @@
     <item>
 <title>Jest Testing Framework</title>
 <link>https://brianpfeil.com/post/jest-testing-framework/</link>
-<pubDate>Sat, 23 Feb 2019 00:00:00 -0500</pubDate>
+<pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/jest-testing-framework/</guid>
 <description>Jest Testing Framework</description>
@@ -1091,7 +1091,7 @@
     <item>
 <title>Glitch Local Development</title>
 <link>https://brianpfeil.com/post/glitch-local-development/</link>
-<pubDate>Wed, 20 Feb 2019 00:00:00 -0500</pubDate>
+<pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/glitch-local-development/</guid>
 <description>Glitch Local Development</description>
@@ -1100,7 +1100,7 @@
     <item>
 <title>React Hooks</title>
 <link>https://brianpfeil.com/post/react-hooks/</link>
-<pubDate>Mon, 11 Feb 2019 00:00:00 -0500</pubDate>
+<pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/react-hooks/</guid>
 <description>React Hooks</description>
@@ -1109,7 +1109,7 @@
     <item>
 <title>Pivotal Cloud Foundry</title>
 <link>https://brianpfeil.com/post/pivotal-cloud-foundry/</link>
-<pubDate>Thu, 31 Jan 2019 00:00:00 -0500</pubDate>
+<pubDate>Thu, 31 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/pivotal-cloud-foundry/</guid>
 <description>Pivotal Cloud Foundry</description>
@@ -1118,7 +1118,7 @@
     <item>
 <title>fswatch</title>
 <link>https://brianpfeil.com/post/fswatch/</link>
-<pubDate>Tue, 29 Jan 2019 00:00:00 -0500</pubDate>
+<pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/fswatch/</guid>
 <description>fswatch</description>
@@ -1127,7 +1127,7 @@
     <item>
 <title>Storybook UI Development Environment</title>
 <link>https://brianpfeil.com/post/storybook-ui-development-environment/</link>
-<pubDate>Fri, 25 Jan 2019 00:00:00 -0500</pubDate>
+<pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/storybook-ui-development-environment/</guid>
 <description>Storybook UI Development Environment</description>
@@ -1136,7 +1136,7 @@
     <item>
 <title>Jupyter Kernel Gateway</title>
 <link>https://brianpfeil.com/post/jupyter-kernel-gateway/</link>
-<pubDate>Sat, 19 Jan 2019 00:00:00 -0500</pubDate>
+<pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/jupyter-kernel-gateway/</guid>
 <description>Jupyter Kernel Gateway</description>
@@ -1145,7 +1145,7 @@
     <item>
 <title>AWS API Gateway WebSockets Serverless</title>
 <link>https://brianpfeil.com/post/aws-api-gateway-websockets-serverless/</link>
-<pubDate>Tue, 08 Jan 2019 00:00:00 -0500</pubDate>
+<pubDate>Tue, 08 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-api-gateway-websockets-serverless/</guid>
 <description>AWS API Gateway WebSockets Serverless</description>
@@ -1154,7 +1154,7 @@
     <item>
 <title>Rust</title>
 <link>https://brianpfeil.com/post/rust/</link>
-<pubDate>Fri, 21 Dec 2018 00:00:00 -0500</pubDate>
+<pubDate>Fri, 21 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/rust/</guid>
 <description>Rust</description>
@@ -1163,7 +1163,7 @@
     <item>
 <title>AWS CodePipeline</title>
 <link>https://brianpfeil.com/post/aws-codepipeline/</link>
-<pubDate>Thu, 20 Dec 2018 00:00:00 -0500</pubDate>
+<pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-codepipeline/</guid>
 <description>AWS CodePipeline</description>
@@ -1172,7 +1172,7 @@
     <item>
 <title>Twit Twitter API Client</title>
 <link>https://brianpfeil.com/post/twit-twitter-api-client/</link>
-<pubDate>Mon, 19 Nov 2018 00:00:00 -0500</pubDate>
+<pubDate>Mon, 19 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/twit-twitter-api-client/</guid>
 <description>Twit Twitter API Client</description>
@@ -1181,7 +1181,7 @@
     <item>
 <title>AWS Amplify JS App</title>
 <link>https://brianpfeil.com/post/aws-amplify-js-app/</link>
-<pubDate>Tue, 13 Nov 2018 00:00:00 -0500</pubDate>
+<pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-amplify-js-app/</guid>
 <description>AWS Amplify JS App</description>
@@ -1190,7 +1190,7 @@
     <item>
 <title>AWS ECR</title>
 <link>https://brianpfeil.com/post/aws-ecr/</link>
-<pubDate>Tue, 13 Nov 2018 00:00:00 -0500</pubDate>
+<pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-ecr/</guid>
 <description>AWS ECR</description>
@@ -1199,7 +1199,7 @@
     <item>
 <title>Dynogels</title>
 <link>https://brianpfeil.com/post/dynogels/</link>
-<pubDate>Mon, 22 Oct 2018 00:00:00 -0400</pubDate>
+<pubDate>Mon, 22 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/dynogels/</guid>
 <description>Dynogels</description>
@@ -1208,7 +1208,7 @@
     <item>
 <title>Node Jenkins API</title>
 <link>https://brianpfeil.com/post/node-jenkins-api/</link>
-<pubDate>Thu, 18 Oct 2018 00:00:00 -0400</pubDate>
+<pubDate>Thu, 18 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/node-jenkins-api/</guid>
 <description>Node Jenkins API</description>
@@ -1217,7 +1217,7 @@
     <item>
 <title>Autotools</title>
 <link>https://brianpfeil.com/post/autotools/</link>
-<pubDate>Wed, 10 Oct 2018 00:00:00 -0400</pubDate>
+<pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/autotools/</guid>
 <description>Autotools</description>
@@ -1226,7 +1226,7 @@
     <item>
 <title>Vcpkg</title>
 <link>https://brianpfeil.com/post/vcpkg/</link>
-<pubDate>Thu, 27 Sep 2018 00:00:00 -0400</pubDate>
+<pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/vcpkg/</guid>
 <description>Vcpkg</description>
@@ -1235,7 +1235,7 @@
     <item>
 <title>AWS SDK CPP</title>
 <link>https://brianpfeil.com/post/aws-sdk-cpp/</link>
-<pubDate>Tue, 25 Sep 2018 00:00:00 -0400</pubDate>
+<pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-sdk-cpp/</guid>
 <description>AWS SDK CPP</description>
@@ -1244,7 +1244,7 @@
     <item>
 <title>Google Test CPP Test Framework</title>
 <link>https://brianpfeil.com/post/google-test-cpp-test-framework/</link>
-<pubDate>Tue, 25 Sep 2018 00:00:00 -0400</pubDate>
+<pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/google-test-cpp-test-framework/</guid>
 <description>Google Test CPP Test Framework</description>
@@ -1253,7 +1253,7 @@
     <item>
 <title>Modern CPP</title>
 <link>https://brianpfeil.com/post/modern-cpp/</link>
-<pubDate>Mon, 24 Sep 2018 00:00:00 -0400</pubDate>
+<pubDate>Mon, 24 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/modern-cpp/</guid>
 <description>Modern CPP</description>
@@ -1262,7 +1262,7 @@
     <item>
 <title>V8 JavaScript Engine</title>
 <link>https://brianpfeil.com/post/v8-javascript-engine/</link>
-<pubDate>Fri, 21 Sep 2018 00:00:00 -0400</pubDate>
+<pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/v8-javascript-engine/</guid>
 <description>V8 JavaScript Engine</description>
@@ -1271,7 +1271,7 @@
     <item>
 <title>CMake</title>
 <link>https://brianpfeil.com/post/cmake/</link>
-<pubDate>Thu, 20 Sep 2018 00:00:00 -0400</pubDate>
+<pubDate>Thu, 20 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/cmake/</guid>
 <description>CMake</description>
@@ -1280,7 +1280,7 @@
     <item>
 <title>Lerna</title>
 <link>https://brianpfeil.com/post/lerna/</link>
-<pubDate>Sun, 02 Sep 2018 00:00:00 -0400</pubDate>
+<pubDate>Sun, 02 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/lerna/</guid>
 <description>Lerna</description>
@@ -1289,7 +1289,7 @@
     <item>
 <title>VueJS webpack</title>
 <link>https://brianpfeil.com/post/vuejs-webpack/</link>
-<pubDate>Sat, 01 Sep 2018 00:00:00 -0400</pubDate>
+<pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/vuejs-webpack/</guid>
 <description>VueJS webpack</description>
@@ -1298,7 +1298,7 @@
     <item>
 <title>WebAssembly</title>
 <link>https://brianpfeil.com/post/webassembly/</link>
-<pubDate>Wed, 22 Aug 2018 00:00:00 -0400</pubDate>
+<pubDate>Wed, 22 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/webassembly/</guid>
 <description>WebAssembly</description>
@@ -1307,7 +1307,7 @@
     <item>
 <title>Lua C API</title>
 <link>https://brianpfeil.com/post/lua-c-api/</link>
-<pubDate>Tue, 24 Jul 2018 00:00:00 -0400</pubDate>
+<pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/lua-c-api/</guid>
 <description>Lua C API</description>
@@ -1316,7 +1316,7 @@
     <item>
 <title>AWS Appsync</title>
 <link>https://brianpfeil.com/post/aws-appsync/</link>
-<pubDate>Sat, 09 Jun 2018 00:00:00 -0400</pubDate>
+<pubDate>Sat, 09 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-appsync/</guid>
 <description>AWS Appsync</description>
@@ -1325,7 +1325,7 @@
     <item>
 <title>JSON Schema</title>
 <link>https://brianpfeil.com/post/json-schema/</link>
-<pubDate>Wed, 06 Jun 2018 00:00:00 -0400</pubDate>
+<pubDate>Wed, 06 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/json-schema/</guid>
 <description>JSON Schema</description>
@@ -1334,7 +1334,7 @@
     <item>
 <title>Jenkins Pipeline GitHub</title>
 <link>https://brianpfeil.com/post/jenkins-pipeline-github/</link>
-<pubDate>Wed, 30 May 2018 00:00:00 -0400</pubDate>
+<pubDate>Wed, 30 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/jenkins-pipeline-github/</guid>
 <description>Jenkins Pipeline GitHub</description>
@@ -1343,7 +1343,7 @@
     <item>
 <title>Alexa Skills</title>
 <link>https://brianpfeil.com/post/alexa-skills/</link>
-<pubDate>Thu, 17 May 2018 00:00:00 -0400</pubDate>
+<pubDate>Thu, 17 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/alexa-skills/</guid>
 <description>Alexa Skills</description>
@@ -1352,7 +1352,7 @@
     <item>
 <title>GraphQL</title>
 <link>https://brianpfeil.com/post/graphql/</link>
-<pubDate>Mon, 30 Apr 2018 00:00:00 -0400</pubDate>
+<pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/graphql/</guid>
 <description>GraphQL</description>
@@ -1361,7 +1361,7 @@
     <item>
 <title>SFML MacOS</title>
 <link>https://brianpfeil.com/post/sfml-macos/</link>
-<pubDate>Tue, 27 Feb 2018 00:00:00 -0500</pubDate>
+<pubDate>Tue, 27 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/sfml-macos/</guid>
 <description>SFML MacOS</description>
@@ -1370,7 +1370,7 @@
     <item>
 <title>AWS IoT</title>
 <link>https://brianpfeil.com/post/aws-iot/</link>
-<pubDate>Sat, 10 Feb 2018 00:00:00 -0500</pubDate>
+<pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-iot/</guid>
 <description>AWS IoT</description>
@@ -1379,7 +1379,7 @@
     <item>
 <title>AWS IAM</title>
 <link>https://brianpfeil.com/post/aws-iam/</link>
-<pubDate>Thu, 08 Feb 2018 00:00:00 -0500</pubDate>
+<pubDate>Thu, 08 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-iam/</guid>
 <description>AWS IAM</description>
@@ -1388,7 +1388,7 @@
     <item>
 <title>AWS Emr</title>
 <link>https://brianpfeil.com/post/aws-emr/</link>
-<pubDate>Sat, 03 Feb 2018 00:00:00 -0500</pubDate>
+<pubDate>Sat, 03 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-emr/</guid>
 <description>AWS Emr</description>
@@ -1397,7 +1397,7 @@
     <item>
 <title>Golang Dep</title>
 <link>https://brianpfeil.com/post/golang-dep/</link>
-<pubDate>Sat, 03 Feb 2018 00:00:00 -0500</pubDate>
+<pubDate>Sat, 03 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/golang-dep/</guid>
 <description>Golang Dep</description>
@@ -1406,7 +1406,7 @@
     <item>
 <title>Imagenet</title>
 <link>https://brianpfeil.com/post/imagenet/</link>
-<pubDate>Wed, 31 Jan 2018 00:00:00 -0500</pubDate>
+<pubDate>Wed, 31 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/imagenet/</guid>
 <description>Imagenet</description>
@@ -1415,7 +1415,7 @@
     <item>
 <title>OpenCV Python</title>
 <link>https://brianpfeil.com/post/opencv-python/</link>
-<pubDate>Wed, 31 Jan 2018 00:00:00 -0500</pubDate>
+<pubDate>Wed, 31 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/opencv-python/</guid>
 <description>OpenCV Python</description>
@@ -1424,7 +1424,7 @@
     <item>
 <title>AWS ECS</title>
 <link>https://brianpfeil.com/post/aws-ecs/</link>
-<pubDate>Sat, 11 Nov 2017 00:00:00 -0500</pubDate>
+<pubDate>Sat, 11 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-ecs/</guid>
 <description>AWS ECS</description>
@@ -1433,7 +1433,7 @@
     <item>
 <title>Serverless Python</title>
 <link>https://brianpfeil.com/post/serverless-python/</link>
-<pubDate>Fri, 10 Nov 2017 00:00:00 -0500</pubDate>
+<pubDate>Fri, 10 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-python/</guid>
 <description>Serverless Python</description>
@@ -1442,7 +1442,7 @@
     <item>
 <title>Boto</title>
 <link>https://brianpfeil.com/post/boto/</link>
-<pubDate>Mon, 30 Oct 2017 00:00:00 -0400</pubDate>
+<pubDate>Mon, 30 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/boto/</guid>
 <description>Boto</description>
@@ -1451,7 +1451,7 @@
     <item>
 <title>Minecraft Spigot Plugin</title>
 <link>https://brianpfeil.com/post/minecraft-spigot-plugin/</link>
-<pubDate>Sun, 29 Oct 2017 00:00:00 -0400</pubDate>
+<pubDate>Sun, 29 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/minecraft-spigot-plugin/</guid>
 <description>Minecraft Spigot Plugin</description>
@@ -1460,7 +1460,7 @@
     <item>
 <title>Pusher</title>
 <link>https://brianpfeil.com/post/pusher/</link>
-<pubDate>Sat, 21 Oct 2017 00:00:00 -0400</pubDate>
+<pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/pusher/</guid>
 <description>Pusher</description>
@@ -1469,7 +1469,7 @@
     <item>
 <title>Deep and Machine Learning</title>
 <link>https://brianpfeil.com/post/deep-and-machine-learning/</link>
-<pubDate>Sun, 24 Sep 2017 00:00:00 -0400</pubDate>
+<pubDate>Sun, 24 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/deep-and-machine-learning/</guid>
 <description>Deep and Machine Learning</description>
@@ -1478,7 +1478,7 @@
     <item>
 <title>Jupyter</title>
 <link>https://brianpfeil.com/post/jupyter/</link>
-<pubDate>Sat, 09 Sep 2017 00:00:00 -0400</pubDate>
+<pubDate>Sat, 09 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/jupyter/</guid>
 <description>Jupyter</description>
@@ -1487,7 +1487,7 @@
     <item>
 <title>AWS KMS</title>
 <link>https://brianpfeil.com/post/aws-kms/</link>
-<pubDate>Thu, 31 Aug 2017 00:00:00 -0400</pubDate>
+<pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-kms/</guid>
 <description>AWS KMS</description>
@@ -1496,7 +1496,7 @@
     <item>
 <title>Scribbletune</title>
 <link>https://brianpfeil.com/post/scribbletune/</link>
-<pubDate>Sat, 26 Aug 2017 00:00:00 -0400</pubDate>
+<pubDate>Sat, 26 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/scribbletune/</guid>
 <description>Scribbletune</description>
@@ -1505,7 +1505,7 @@
     <item>
 <title>Puppeteer</title>
 <link>https://brianpfeil.com/post/puppeteer/</link>
-<pubDate>Tue, 22 Aug 2017 00:00:00 -0400</pubDate>
+<pubDate>Tue, 22 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/puppeteer/</guid>
 <description>Puppeteer</description>
@@ -1514,7 +1514,7 @@
     <item>
 <title>S3 Website</title>
 <link>https://brianpfeil.com/post/s3-website/</link>
-<pubDate>Thu, 17 Aug 2017 00:00:00 -0400</pubDate>
+<pubDate>Thu, 17 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/s3-website/</guid>
 <description>S3 Website</description>
@@ -1523,7 +1523,7 @@
     <item>
 <title>React Router 4</title>
 <link>https://brianpfeil.com/post/react-router-4/</link>
-<pubDate>Sat, 29 Jul 2017 00:00:00 -0400</pubDate>
+<pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/react-router-4/</guid>
 <description>React Router 4</description>
@@ -1532,7 +1532,7 @@
     <item>
 <title>AWS Kinesis</title>
 <link>https://brianpfeil.com/post/aws-kinesis/</link>
-<pubDate>Tue, 18 Jul 2017 00:00:00 -0400</pubDate>
+<pubDate>Tue, 18 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-kinesis/</guid>
 <description>AWS Kinesis</description>
@@ -1541,7 +1541,7 @@
     <item>
 <title>Serverless TypeScript webpack</title>
 <link>https://brianpfeil.com/post/serverless-typescript-webpack/</link>
-<pubDate>Tue, 11 Jul 2017 00:00:00 -0400</pubDate>
+<pubDate>Tue, 11 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-typescript-webpack/</guid>
 <description>Serverless TypeScript webpack</description>
@@ -1550,7 +1550,7 @@
     <item>
 <title>Ethereum</title>
 <link>https://brianpfeil.com/post/ethereum/</link>
-<pubDate>Tue, 17 Jan 2017 00:00:00 -0500</pubDate>
+<pubDate>Tue, 17 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/ethereum/</guid>
 <description>Ethereum</description>
@@ -1559,7 +1559,7 @@
     <item>
 <title>Lua</title>
 <link>https://brianpfeil.com/post/lua/</link>
-<pubDate>Tue, 10 Jan 2017 00:00:00 -0500</pubDate>
+<pubDate>Tue, 10 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/lua/</guid>
 <description>Lua</description>
@@ -1568,7 +1568,7 @@
     <item>
 <title>Node Google Cloud</title>
 <link>https://brianpfeil.com/post/node-google-cloud/</link>
-<pubDate>Fri, 09 Dec 2016 00:00:00 -0500</pubDate>
+<pubDate>Fri, 09 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/node-google-cloud/</guid>
 <description>Node Google Cloud</description>
@@ -1577,7 +1577,7 @@
     <item>
 <title>Apex Lambda</title>
 <link>https://brianpfeil.com/post/apex-lambda/</link>
-<pubDate>Tue, 06 Dec 2016 00:00:00 -0500</pubDate>
+<pubDate>Tue, 06 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/apex-lambda/</guid>
 <description>Apex Lambda</description>
@@ -1586,7 +1586,7 @@
     <item>
 <title>Heroku Container</title>
 <link>https://brianpfeil.com/post/heroku-container/</link>
-<pubDate>Fri, 04 Nov 2016 00:00:00 -0400</pubDate>
+<pubDate>Fri, 04 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/heroku-container/</guid>
 <description>Heroku Container</description>
@@ -1595,7 +1595,7 @@
     <item>
 <title>NextJS</title>
 <link>https://brianpfeil.com/post/nextjs/</link>
-<pubDate>Tue, 01 Nov 2016 00:00:00 -0400</pubDate>
+<pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/nextjs/</guid>
 <description>NextJS</description>
@@ -1604,7 +1604,7 @@
     <item>
 <title>KeystoneJS</title>
 <link>https://brianpfeil.com/post/keystonejs/</link>
-<pubDate>Thu, 20 Oct 2016 00:00:00 -0400</pubDate>
+<pubDate>Thu, 20 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/keystonejs/</guid>
 <description>KeystoneJS</description>
@@ -1613,7 +1613,7 @@
     <item>
 <title>Kubernetes</title>
 <link>https://brianpfeil.com/post/kubernetes/</link>
-<pubDate>Tue, 18 Oct 2016 00:00:00 -0400</pubDate>
+<pubDate>Tue, 18 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/kubernetes/</guid>
 <description>Kubernetes</description>
@@ -1622,7 +1622,7 @@
     <item>
 <title>Phaser</title>
 <link>https://brianpfeil.com/post/phaser/</link>
-<pubDate>Tue, 02 Aug 2016 00:00:00 -0400</pubDate>
+<pubDate>Tue, 02 Aug 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/phaser/</guid>
 <description>Phaser</description>
@@ -1631,7 +1631,7 @@
     <item>
 <title>Emscripten</title>
 <link>https://brianpfeil.com/post/emscripten/</link>
-<pubDate>Thu, 02 Jun 2016 00:00:00 -0400</pubDate>
+<pubDate>Thu, 02 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/emscripten/</guid>
 <description>Emscripten</description>
@@ -1640,7 +1640,7 @@
     <item>
 <title>GitBook</title>
 <link>https://brianpfeil.com/post/gitbook/</link>
-<pubDate>Fri, 20 May 2016 00:00:00 -0400</pubDate>
+<pubDate>Fri, 20 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/gitbook/</guid>
 <description>GitBook</description>
@@ -1649,7 +1649,7 @@
     <item>
 <title>TypeScript Node</title>
 <link>https://brianpfeil.com/post/typescript-node/</link>
-<pubDate>Wed, 18 May 2016 00:00:00 -0400</pubDate>
+<pubDate>Wed, 18 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/typescript-node/</guid>
 <description>TypeScript Node</description>
@@ -1658,7 +1658,7 @@
     <item>
 <title>Angular CLI App</title>
 <link>https://brianpfeil.com/post/angular-cli-app/</link>
-<pubDate>Mon, 09 May 2016 00:00:00 -0400</pubDate>
+<pubDate>Mon, 09 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/angular-cli-app/</guid>
 <description>Angular CLI App</description>
@@ -1667,7 +1667,7 @@
     <item>
 <title>React Redux</title>
 <link>https://brianpfeil.com/post/react-redux/</link>
-<pubDate>Wed, 04 May 2016 00:00:00 -0400</pubDate>
+<pubDate>Wed, 04 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/react-redux/</guid>
 <description>React Redux</description>
@@ -1676,7 +1676,7 @@
     <item>
 <title>Typings</title>
 <link>https://brianpfeil.com/post/typings/</link>
-<pubDate>Mon, 02 May 2016 00:00:00 -0400</pubDate>
+<pubDate>Mon, 02 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/typings/</guid>
 <description>Typings</description>
@@ -1685,7 +1685,7 @@
     <item>
 <title>Nexe</title>
 <link>https://brianpfeil.com/post/nexe/</link>
-<pubDate>Tue, 05 Apr 2016 00:00:00 -0400</pubDate>
+<pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/nexe/</guid>
 <description>Nexe</description>
@@ -1694,7 +1694,7 @@
     <item>
 <title>Node OData</title>
 <link>https://brianpfeil.com/post/node-odata/</link>
-<pubDate>Fri, 18 Mar 2016 00:00:00 -0400</pubDate>
+<pubDate>Fri, 18 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/node-odata/</guid>
 <description>Node OData</description>
@@ -1703,7 +1703,7 @@
     <item>
 <title>Angular2</title>
 <link>https://brianpfeil.com/post/angular2/</link>
-<pubDate>Wed, 13 Jan 2016 00:00:00 -0500</pubDate>
+<pubDate>Wed, 13 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/angular2/</guid>
 <description>Angular2</description>
@@ -1712,7 +1712,7 @@
     <item>
 <title>Beefy</title>
 <link>https://brianpfeil.com/post/beefy/</link>
-<pubDate>Fri, 16 Oct 2015 00:00:00 -0400</pubDate>
+<pubDate>Fri, 16 Oct 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/beefy/</guid>
 <description>Beefy</description>
@@ -1721,7 +1721,7 @@
     <item>
 <title>Flexbox</title>
 <link>https://brianpfeil.com/post/flexbox/</link>
-<pubDate>Thu, 15 Oct 2015 00:00:00 -0400</pubDate>
+<pubDate>Thu, 15 Oct 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/flexbox/</guid>
 <description>Flexbox</description>
@@ -1730,7 +1730,7 @@
     <item>
 <title>Node Coveralls</title>
 <link>https://brianpfeil.com/post/node-coveralls/</link>
-<pubDate>Tue, 29 Sep 2015 00:00:00 -0400</pubDate>
+<pubDate>Tue, 29 Sep 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/node-coveralls/</guid>
 <description>Node Coveralls</description>
@@ -1739,7 +1739,7 @@
     <item>
 <title>Heroku Deploy</title>
 <link>https://brianpfeil.com/post/heroku-deploy/</link>
-<pubDate>Wed, 23 Sep 2015 00:00:00 -0400</pubDate>
+<pubDate>Wed, 23 Sep 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/heroku-deploy/</guid>
 <description>Heroku Deploy</description>
@@ -1748,7 +1748,7 @@
     <item>
 <title>Heroku Docker</title>
 <link>https://brianpfeil.com/post/heroku-docker/</link>
-<pubDate>Wed, 23 Sep 2015 00:00:00 -0400</pubDate>
+<pubDate>Wed, 23 Sep 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/heroku-docker/</guid>
 <description>Heroku Docker</description>
@@ -1757,7 +1757,7 @@
     <item>
 <title>Mocha</title>
 <link>https://brianpfeil.com/post/mocha/</link>
-<pubDate>Tue, 22 Sep 2015 00:00:00 -0400</pubDate>
+<pubDate>Tue, 22 Sep 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/mocha/</guid>
 <description>Mocha</description>
@@ -1766,7 +1766,7 @@
     <item>
 <title>OSX Audio</title>
 <link>https://brianpfeil.com/post/osx-audio/</link>
-<pubDate>Tue, 15 Sep 2015 00:00:00 -0400</pubDate>
+<pubDate>Tue, 15 Sep 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/osx-audio/</guid>
 <description>OSX Audio</description>
@@ -1775,7 +1775,7 @@
     <item>
 <title>Metaforce</title>
 <link>https://brianpfeil.com/post/metaforce/</link>
-<pubDate>Wed, 09 Sep 2015 00:00:00 -0400</pubDate>
+<pubDate>Wed, 09 Sep 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/metaforce/</guid>
 <description>Metaforce</description>
@@ -1784,7 +1784,7 @@
     <item>
 <title>Docker Hub Automated Build</title>
 <link>https://brianpfeil.com/post/docker-hub-automated-build/</link>
-<pubDate>Thu, 20 Aug 2015 00:00:00 -0400</pubDate>
+<pubDate>Thu, 20 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/docker-hub-automated-build/</guid>
 <description>Docker Hub Automated Build</description>
@@ -1793,7 +1793,7 @@
     <item>
 <title>WebdriverIO</title>
 <link>https://brianpfeil.com/post/webdriverio/</link>
-<pubDate>Thu, 20 Aug 2015 00:00:00 -0400</pubDate>
+<pubDate>Thu, 20 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/webdriverio/</guid>
 <description>WebdriverIO</description>
@@ -1802,7 +1802,7 @@
     <item>
 <title>Spark</title>
 <link>https://brianpfeil.com/post/spark/</link>
-<pubDate>Fri, 05 Jun 2015 00:00:00 -0400</pubDate>
+<pubDate>Fri, 05 Jun 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/spark/</guid>
 <description>Spark</description>
@@ -1811,7 +1811,7 @@
     <item>
 <title>V8</title>
 <link>https://brianpfeil.com/post/v8/</link>
-<pubDate>Tue, 19 May 2015 00:00:00 -0400</pubDate>
+<pubDate>Tue, 19 May 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/v8/</guid>
 <description>V8</description>
@@ -1820,7 +1820,7 @@
     <item>
 <title>HTML Video Embed</title>
 <link>https://brianpfeil.com/post/html-video-embed/</link>
-<pubDate>Tue, 12 May 2015 00:00:00 -0400</pubDate>
+<pubDate>Tue, 12 May 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/html-video-embed/</guid>
 <description>HTML Video Embed</description>
@@ -1829,7 +1829,7 @@
     <item>
 <title>webpack</title>
 <link>https://brianpfeil.com/post/webpack/</link>
-<pubDate>Fri, 03 Apr 2015 00:00:00 -0400</pubDate>
+<pubDate>Fri, 03 Apr 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/webpack/</guid>
 <description>webpack</description>
@@ -1838,7 +1838,7 @@
     <item>
 <title>ES6</title>
 <link>https://brianpfeil.com/post/es6/</link>
-<pubDate>Mon, 30 Mar 2015 00:00:00 -0400</pubDate>
+<pubDate>Mon, 30 Mar 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/es6/</guid>
 <description>ES6</description>
@@ -1847,7 +1847,7 @@
     <item>
 <title>Karma</title>
 <link>https://brianpfeil.com/post/karma/</link>
-<pubDate>Sun, 15 Feb 2015 00:00:00 -0500</pubDate>
+<pubDate>Sun, 15 Feb 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/karma/</guid>
 <description>Karma</description>
@@ -1856,7 +1856,7 @@
     <item>
 <title>NWjs</title>
 <link>https://brianpfeil.com/post/nwjs/</link>
-<pubDate>Sun, 15 Feb 2015 00:00:00 -0500</pubDate>
+<pubDate>Sun, 15 Feb 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/nwjs/</guid>
 <description>NWjs</description>
@@ -1865,7 +1865,7 @@
     <item>
 <title>Sauce Labs</title>
 <link>https://brianpfeil.com/post/sauce-labs/</link>
-<pubDate>Wed, 04 Feb 2015 00:00:00 -0500</pubDate>
+<pubDate>Wed, 04 Feb 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/sauce-labs/</guid>
 <description>Sauce Labs</description>
@@ -1874,7 +1874,7 @@
     <item>
 <title>Go Postgres</title>
 <link>https://brianpfeil.com/post/go-postgres/</link>
-<pubDate>Sun, 11 Jan 2015 00:00:00 -0500</pubDate>
+<pubDate>Sun, 11 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/go-postgres/</guid>
 <description>Go Postgres</description>
@@ -1883,7 +1883,7 @@
     <item>
 <title>Nodemailer</title>
 <link>https://brianpfeil.com/post/nodemailer/</link>
-<pubDate>Sat, 06 Dec 2014 00:00:00 -0500</pubDate>
+<pubDate>Sat, 06 Dec 2014 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/nodemailer/</guid>
 <description>Nodemailer</description>
@@ -1892,7 +1892,7 @@
     <item>
 <title>Kendo UI</title>
 <link>https://brianpfeil.com/post/kendo-ui/</link>
-<pubDate>Sat, 02 Aug 2014 00:00:00 -0400</pubDate>
+<pubDate>Sat, 02 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/kendo-ui/</guid>
 <description>Kendo UI</description>
@@ -1901,7 +1901,7 @@
     <item>
 <title>iOS Swift</title>
 <link>https://brianpfeil.com/post/ios-swift/</link>
-<pubDate>Sun, 13 Jul 2014 00:00:00 -0400</pubDate>
+<pubDate>Sun, 13 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/ios-swift/</guid>
 <description>iOS Swift</description>
@@ -1910,7 +1910,7 @@
     <item>
 <title>Kue</title>
 <link>https://brianpfeil.com/post/kue/</link>
-<pubDate>Fri, 13 Jun 2014 00:00:00 -0400</pubDate>
+<pubDate>Fri, 13 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/kue/</guid>
 <description>Kue</description>
@@ -1919,7 +1919,7 @@
     <item>
 <title>JSForce</title>
 <link>https://brianpfeil.com/post/jsforce/</link>
-<pubDate>Thu, 12 Jun 2014 00:00:00 -0400</pubDate>
+<pubDate>Thu, 12 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/jsforce/</guid>
 <description>JSForce</description>
@@ -1928,7 +1928,7 @@
     <item>
 <title>Mac Swift</title>
 <link>https://brianpfeil.com/post/mac-swift/</link>
-<pubDate>Thu, 05 Jun 2014 00:00:00 -0400</pubDate>
+<pubDate>Thu, 05 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/mac-swift/</guid>
 <description>Mac Swift</description>
@@ -1937,7 +1937,7 @@
     <item>
 <title>Go</title>
 <link>https://brianpfeil.com/post/go/</link>
-<pubDate>Tue, 31 Dec 2013 00:00:00 -0500</pubDate>
+<pubDate>Tue, 31 Dec 2013 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/go/</guid>
 <description>Go</description>

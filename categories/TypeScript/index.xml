@@ -7,11 +7,11 @@
         <description>Recent content in TypeScript on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 26 Apr 2021 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/categories/TypeScript/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Mon, 26 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/categories/TypeScript/index.xml" rel="self" type="application/rss+xml" />
     <item>
 <title>AWS CDK Step Functions</title>
 <link>https://brianpfeil.com/post/aws-cdk-step-functions/</link>
-<pubDate>Mon, 26 Apr 2021 00:00:00 -0400</pubDate>
+<pubDate>Mon, 26 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cdk-step-functions/</guid>
 <description>AWS CDK Step Functions</description>
@@ -20,7 +20,7 @@
     <item>
 <title>AWS CloudFormation Custom Resource Type</title>
 <link>https://brianpfeil.com/post/aws-cloudformation-custom-resource-type/</link>
-<pubDate>Fri, 23 Apr 2021 00:00:00 -0400</pubDate>
+<pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cloudformation-custom-resource-type/</guid>
 <description>AWS CloudFormation Custom Resource Type</description>
@@ -29,7 +29,7 @@
     <item>
 <title>AWS CDK Pipeline</title>
 <link>https://brianpfeil.com/post/aws-cdk-pipeline/</link>
-<pubDate>Thu, 15 Apr 2021 00:00:00 -0400</pubDate>
+<pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-cdk-pipeline/</guid>
 <description>AWS CDK Pipeline</description>
@@ -38,7 +38,7 @@
     <item>
 <title>AWS Delivlib</title>
 <link>https://brianpfeil.com/post/aws-delivlib/</link>
-<pubDate>Tue, 03 Sep 2019 00:00:00 -0400</pubDate>
+<pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-delivlib/</guid>
 <description>AWS Delivlib</description>
@@ -47,7 +47,7 @@
     <item>
 <title>Jest Testing Framework</title>
 <link>https://brianpfeil.com/post/jest-testing-framework/</link>
-<pubDate>Sat, 23 Feb 2019 00:00:00 -0500</pubDate>
+<pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/jest-testing-framework/</guid>
 <description>Jest Testing Framework</description>
@@ -56,7 +56,7 @@
     <item>
 <title>React Hooks</title>
 <link>https://brianpfeil.com/post/react-hooks/</link>
-<pubDate>Mon, 11 Feb 2019 00:00:00 -0500</pubDate>
+<pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/react-hooks/</guid>
 <description>React Hooks</description>
@@ -65,7 +65,7 @@
     <item>
 <title>JSON Schema</title>
 <link>https://brianpfeil.com/post/json-schema/</link>
-<pubDate>Wed, 06 Jun 2018 00:00:00 -0400</pubDate>
+<pubDate>Wed, 06 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/json-schema/</guid>
 <description>JSON Schema</description>
@@ -74,7 +74,7 @@
     <item>
 <title>GraphQL</title>
 <link>https://brianpfeil.com/post/graphql/</link>
-<pubDate>Mon, 30 Apr 2018 00:00:00 -0400</pubDate>
+<pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/graphql/</guid>
 <description>GraphQL</description>
@@ -83,7 +83,7 @@
     <item>
 <title>AWS IAM</title>
 <link>https://brianpfeil.com/post/aws-iam/</link>
-<pubDate>Thu, 08 Feb 2018 00:00:00 -0500</pubDate>
+<pubDate>Thu, 08 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-iam/</guid>
 <description>AWS IAM</description>
@@ -92,7 +92,7 @@
     <item>
 <title>Serverless TypeScript webpack</title>
 <link>https://brianpfeil.com/post/serverless-typescript-webpack/</link>
-<pubDate>Tue, 11 Jul 2017 00:00:00 -0400</pubDate>
+<pubDate>Tue, 11 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-typescript-webpack/</guid>
 <description>Serverless TypeScript webpack</description>
@@ -101,7 +101,7 @@
     <item>
 <title>TypeScript Node</title>
 <link>https://brianpfeil.com/post/typescript-node/</link>
-<pubDate>Wed, 18 May 2016 00:00:00 -0400</pubDate>
+<pubDate>Wed, 18 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/typescript-node/</guid>
 <description>TypeScript Node</description>
@@ -110,7 +110,7 @@
     <item>
 <title>Angular CLI App</title>
 <link>https://brianpfeil.com/post/angular-cli-app/</link>
-<pubDate>Mon, 09 May 2016 00:00:00 -0400</pubDate>
+<pubDate>Mon, 09 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/angular-cli-app/</guid>
 <description>Angular CLI App</description>
@@ -119,7 +119,7 @@
     <item>
 <title>Typings</title>
 <link>https://brianpfeil.com/post/typings/</link>
-<pubDate>Mon, 02 May 2016 00:00:00 -0400</pubDate>
+<pubDate>Mon, 02 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/typings/</guid>
 <description>Typings</description>
@@ -128,7 +128,7 @@
     <item>
 <title>Angular2</title>
 <link>https://brianpfeil.com/post/angular2/</link>
-<pubDate>Wed, 13 Jan 2016 00:00:00 -0500</pubDate>
+<pubDate>Wed, 13 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/angular2/</guid>
 <description>Angular2</description>

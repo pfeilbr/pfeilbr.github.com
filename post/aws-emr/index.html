@@ -58,7 +58,7 @@
   "headline": "AWS Emr",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  150 ,
+  "wordCount":  73 ,
   "datePublished" : "2018-02-03T00:00:00",
   "dateModified" : "2018-02-03T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -86,7 +86,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -321,35 +321,35 @@ if (!doNotTrack) {
 </div>
 <p>examples of using aws-emr. hive, pig, spark, etc.</p>
 <h2 id="dynamodb-exportimport-tofrom-s3-examples">Dynamodb Export/Import to/from S3 Examples</h2>
-<div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="c1">-- link hive table to dynamodb table
-</span><span class="c1"></span><span class="k">CREATE</span> <span class="k">EXTERNAL</span> <span class="k">TABLE</span> <span class="n">hiveLogTable</span> <span class="p">(</span><span class="n">id</span> <span class="n">string</span><span class="p">,</span> <span class="k">data</span> <span class="n">string</span><span class="p">)</span>
-<span class="n">STORED</span> <span class="k">BY</span> <span class="s1">&#39;org.apache.hadoop.hive.dynamodb.DynamoDBStorageHandler&#39;</span> 
-<span class="n">TBLPROPERTIES</span> <span class="p">(</span><span class="s2">&#34;dynamodb.table.name&#34;</span> <span class="o">=</span> <span class="s2">&#34;log&#34;</span><span class="p">,</span> 
-<span class="s2">&#34;dynamodb.column.mapping&#34;</span> <span class="o">=</span> <span class="s2">&#34;id:id,data:data&#34;</span><span class="p">);</span>
-
-<span class="c1">-- query dynamodb table using hive SQL
-</span><span class="c1"></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">hiveLogTable</span><span class="p">;</span>
-
-<span class="c1">-- export dynamodb table to s3
-</span><span class="c1"></span><span class="k">INSERT</span> <span class="n">OVERWRITE</span> <span class="n">DIRECTORY</span> <span class="s1">&#39;s3://com.brianpfeil.scratch/emr/dynamodb/export/table/log/&#39;</span> <span class="k">SELECT</span> <span class="o">*</span> 
-<span class="k">FROM</span> <span class="n">hiveLogTable</span><span class="p">;</span>
-
-<span class="c1">-- create export table that will be comma delimited
-</span><span class="c1"></span><span class="k">CREATE</span> <span class="k">EXTERNAL</span> <span class="k">TABLE</span> <span class="n">s3_export</span><span class="p">(</span><span class="n">id</span> <span class="n">string</span><span class="p">,</span> <span class="k">data</span> <span class="n">string</span><span class="p">)</span>
-<span class="k">ROW</span> <span class="n">FORMAT</span> <span class="n">DELIMITED</span> <span class="n">FIELDS</span> <span class="n">TERMINATED</span> <span class="k">BY</span> <span class="s1">&#39;,&#39;</span> 
-<span class="k">LOCATION</span> <span class="s1">&#39;s3://com.brianpfeil.scratch/emr/dynamodb/export/table/log/&#39;</span><span class="p">;</span>
-
-<span class="c1">-- export dynamodb table to s3 as comman delimited file (csv)
-</span><span class="c1"></span><span class="k">INSERT</span> <span class="n">OVERWRITE</span> <span class="k">TABLE</span> <span class="n">s3_export</span> <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">hiveLogTable</span><span class="p">;</span>
-
-<span class="c1">-- link hive table to s3 path
-</span><span class="c1"></span><span class="k">CREATE</span> <span class="k">EXTERNAL</span> <span class="k">TABLE</span> <span class="n">s3_import</span><span class="p">(</span><span class="n">id</span> <span class="n">string</span><span class="p">,</span> <span class="k">data</span> <span class="n">string</span><span class="p">)</span>
-<span class="k">ROW</span> <span class="n">FORMAT</span> <span class="n">DELIMITED</span> <span class="n">FIELDS</span> <span class="n">TERMINATED</span> <span class="k">BY</span> <span class="s1">&#39;,&#39;</span> 
-<span class="k">LOCATION</span> <span class="s1">&#39;s3://com.brianpfeil.scratch/emr/dynamodb/export/table/log/&#39;</span><span class="p">;</span>
-
-<span class="c1">-- import csv data from s3 into dynamodb table
-</span><span class="c1"></span><span class="k">INSERT</span> <span class="n">OVERWRITE</span> <span class="k">TABLE</span> <span class="n">hiveLogTable</span> <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">s3_import</span><span class="p">;</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="c1">-- link hive table to dynamodb table
+</span><span class="c1"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">EXTERNAL</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">hiveLogTable</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="n">string</span><span class="p">)</span><span class="w">
+</span><span class="w"></span><span class="n">STORED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;org.apache.hadoop.hive.dynamodb.DynamoDBStorageHandler&#39;</span><span class="w"> 
+</span><span class="w"></span><span class="n">TBLPROPERTIES</span><span class="w"> </span><span class="p">(</span><span class="s2">&#34;dynamodb.table.name&#34;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&#34;log&#34;</span><span class="p">,</span><span class="w"> 
+</span><span class="w"></span><span class="s2">&#34;dynamodb.column.mapping&#34;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&#34;id:id,data:data&#34;</span><span class="p">);</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="c1">-- query dynamodb table using hive SQL
+</span><span class="c1"></span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">hiveLogTable</span><span class="p">;</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="c1">-- export dynamodb table to s3
+</span><span class="c1"></span><span class="k">INSERT</span><span class="w"> </span><span class="n">OVERWRITE</span><span class="w"> </span><span class="n">DIRECTORY</span><span class="w"> </span><span class="s1">&#39;s3://com.brianpfeil.scratch/emr/dynamodb/export/table/log/&#39;</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> 
+</span><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">hiveLogTable</span><span class="p">;</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="c1">-- create export table that will be comma delimited
+</span><span class="c1"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">EXTERNAL</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">s3_export</span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="n">string</span><span class="p">)</span><span class="w">
+</span><span class="w"></span><span class="k">ROW</span><span class="w"> </span><span class="n">FORMAT</span><span class="w"> </span><span class="n">DELIMITED</span><span class="w"> </span><span class="n">FIELDS</span><span class="w"> </span><span class="n">TERMINATED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="w"> 
+</span><span class="w"></span><span class="k">LOCATION</span><span class="w"> </span><span class="s1">&#39;s3://com.brianpfeil.scratch/emr/dynamodb/export/table/log/&#39;</span><span class="p">;</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="c1">-- export dynamodb table to s3 as comman delimited file (csv)
+</span><span class="c1"></span><span class="k">INSERT</span><span class="w"> </span><span class="n">OVERWRITE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">s3_export</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">hiveLogTable</span><span class="p">;</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="c1">-- link hive table to s3 path
+</span><span class="c1"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">EXTERNAL</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">s3_import</span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="n">string</span><span class="p">)</span><span class="w">
+</span><span class="w"></span><span class="k">ROW</span><span class="w"> </span><span class="n">FORMAT</span><span class="w"> </span><span class="n">DELIMITED</span><span class="w"> </span><span class="n">FIELDS</span><span class="w"> </span><span class="n">TERMINATED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="w"> 
+</span><span class="w"></span><span class="k">LOCATION</span><span class="w"> </span><span class="s1">&#39;s3://com.brianpfeil.scratch/emr/dynamodb/export/table/log/&#39;</span><span class="p">;</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="c1">-- import csv data from s3 into dynamodb table
+</span><span class="c1"></span><span class="k">INSERT</span><span class="w"> </span><span class="n">OVERWRITE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">hiveLogTable</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">s3_import</span><span class="p">;</span><span class="w">
+</span></code></pre></div>
 
         
 

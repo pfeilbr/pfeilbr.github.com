@@ -89,7 +89,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -351,10 +351,10 @@ dead simple, and available everywhere. I&rsquo;d never have an excuse not to get
 result in a <code>HTTP POST</code> request sent to <code>/_ah/mail/NAME@APP.appspotmail.com</code> with the POST body containing the contents of the email. Google provides a nice <code>InboundMailHandler</code> class to make handling inbound email a breeze.</p>
 <p>The first thing we need to do is to map a handler for inbound emails. I&rsquo;m using the <a href="https://www.djangoproject.com/">Django</a> Python web framework in my app engine app, which provides
 some connivence mechanisms. To map a URL to a handler we add the following to the <code>urls.py</code> file.</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">urlpatterns = patterns(&#39;&#39;,
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">urlpatterns = patterns(&#39;&#39;,
     (r&#39;^_ah/mail/todo@myapp.appspotmail.com`, &#39;emailengine.views.todo_email_handler&#39;),
 </code></pre></div><p>We mapped the url to <code>todo_email_handler</code> method</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">def todo_email_handler(request):
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">def todo_email_handler(request):
     if request.POST:
         message = mail.InboundEmailMessage(request.raw_post_data)
         logging.info(&#34;Received a message from: &#34; + message.sender)
@@ -366,7 +366,7 @@ some connivence mechanisms. To map a URL to a handler we add the following to th
 </code></pre></div><p>In order to prevent anyone from adding to-do items to my list, I added the
 <code>is_whitelisted_email_address</code> method to restrict processing of emails to only
 those that come from me.</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">def is_whitelisted_email_address(email):
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">def is_whitelisted_email_address(email):
     result = False
     for whitelist_email in EMAIL_ADDRESS_WHITELIST:
         if email.lower().find(whitelist_email) != -1:
@@ -374,7 +374,7 @@ those that come from me.</p>
 
     return result
 </code></pre></div><p>The work to add the to-do item to the TODO.txt file in dropbox is</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">mgr = DropboxManager()
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">mgr = DropboxManager()
 mgr.add_todo(message.subject)
 </code></pre></div><p>I created the <code>DropboxManager</code> class as a simple wrapper around the Dropbox
 API. This keeps the code tidy, and all the dropbox specific code like the app

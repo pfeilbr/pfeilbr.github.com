@@ -86,7 +86,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -326,14 +326,14 @@ if (!doNotTrack) {
 </ul>
 <h2 id="running">Running</h2>
 <p>running zipkin server and viewing web ui</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># run zipkin server (NOTE: this is non-blocking and will return)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># run zipkin server (NOTE: this is non-blocking and will return)</span>
 docker run -d -p 9411:9411 openzipkin/zipkin
 
 <span class="c1"># open zipkin web ui</span>
 open http://localhost:9411/zipkin/
 </code></pre></div><p><img src="https://www.evernote.com/l/AAFl4da2EO1HQIyW4dUAv1wh1UFCpp88Yo8B/image.png" alt=""></p>
 <p>running a web app with frontend and backend the sends traces to zipkin server.  see <code>frontend.js</code> for how code is instrumented to send traces to zipkin server.</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># download zipkin javascript example</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># download zipkin javascript example</span>
 curl -LO https://github.com/openzipkin/zipkin-js-example/archive/master.zip
 unzip master.zip
 
@@ -354,10 +354,10 @@ npm run browserify
 <span class="c1"># run frontend and backend</span>
 <span class="nv">DEBUG</span><span class="o">=</span><span class="nb">true</span> npm start
 </code></pre></div><p><img src="https://www.evernote.com/l/AAHVKM_tPYZGM4GibI-48ZR5dpJ22VG-PqcB/image.png" alt=""></p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># open app.  displays datetime and sends traces to zipkin sever.</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># open app.  displays datetime and sends traces to zipkin sever.</span>
 open http://localhost:8081
 </code></pre></div><p><img src="https://www.evernote.com/l/AAF5drM4g8lIt4O395T9U0v4laR3OCPhN40B/image.png" alt=""></p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># now open zipkin web ui to view traces</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># now open zipkin web ui to view traces</span>
 open http://localhost:9411/zipkin/
 
 <span class="c1"># click the [Find Traces] button</span>
@@ -365,7 +365,7 @@ open http://localhost:9411/zipkin/
 <p><img src="https://www.evernote.com/l/AAGEdSFRciVPXr9S54kitexX9RZzct9j7w0B/image.png" alt=""></p>
 <p>view JSON trace data by clickint the <code>[JSON]</code> button
 <img src="https://www.evernote.com/l/AAGw7YDQejVCJrUr79X3LLtIUOM6T4fDJIAB/image.png" alt=""></p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">[</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">[</span>
   <span class="p">{</span>
     <span class="nt">&#34;traceId&#34;</span><span class="p">:</span> <span class="s2">&#34;9ee01dfbbba1a5f2&#34;</span><span class="p">,</span>
     <span class="nt">&#34;parentId&#34;</span><span class="p">:</span> <span class="s2">&#34;f107fa7e6a7f29db&#34;</span><span class="p">,</span>

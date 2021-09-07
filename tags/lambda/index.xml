@@ -7,11 +7,11 @@
         <description>Recent content in lambda on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 28 Apr 2021 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/lambda/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Wed, 28 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/tags/lambda/index.xml" rel="self" type="application/rss+xml" />
     <item>
 <title>AWS Chalice</title>
 <link>https://brianpfeil.com/post/aws-chalice/</link>
-<pubDate>Wed, 28 Apr 2021 00:00:00 -0400</pubDate>
+<pubDate>Wed, 28 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-chalice/</guid>
 <description>AWS Chalice</description>
@@ -20,7 +20,7 @@
     <item>
 <title>SAM Lambda Layers</title>
 <link>https://brianpfeil.com/post/sam-lambda-layers/</link>
-<pubDate>Fri, 08 Jan 2021 00:00:00 -0500</pubDate>
+<pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/sam-lambda-layers/</guid>
 <description>SAM Lambda Layers</description>
@@ -29,7 +29,7 @@
     <item>
 <title>Serverless Flask</title>
 <link>https://brianpfeil.com/post/serverless-flask/</link>
-<pubDate>Fri, 13 Nov 2020 00:00:00 -0500</pubDate>
+<pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-flask/</guid>
 <description>Serverless Flask</description>
@@ -38,7 +38,7 @@
     <item>
 <title>AWS AppConfig</title>
 <link>https://brianpfeil.com/post/aws-appconfig/</link>
-<pubDate>Tue, 20 Oct 2020 00:00:00 -0400</pubDate>
+<pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-appconfig/</guid>
 <description>AWS AppConfig</description>
@@ -56,7 +56,7 @@
     <item>
 <title>Bref PHP Lambda</title>
 <link>https://brianpfeil.com/post/bref-php-lambda/</link>
-<pubDate>Mon, 13 Jul 2020 00:00:00 -0400</pubDate>
+<pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/bref-php-lambda/</guid>
 <description>Bref PHP Lambda</description>
@@ -65,7 +65,7 @@
     <item>
 <title>PHP Lambda Layer</title>
 <link>https://brianpfeil.com/post/php-lambda-layer/</link>
-<pubDate>Thu, 02 Jul 2020 00:00:00 -0400</pubDate>
+<pubDate>Thu, 02 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/php-lambda-layer/</guid>
 <description>PHP Lambda Layer</description>
@@ -74,7 +74,7 @@
     <item>
 <title>Serverless Lambda Java</title>
 <link>https://brianpfeil.com/post/serverless-lambda-java/</link>
-<pubDate>Sun, 27 Oct 2019 00:00:00 -0400</pubDate>
+<pubDate>Sun, 27 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-lambda-java/</guid>
 <description>Serverless Lambda Java</description>
@@ -83,7 +83,7 @@
     <item>
 <title>Serverless Lambda Layers</title>
 <link>https://brianpfeil.com/post/serverless-lambda-layers/</link>
-<pubDate>Wed, 18 Sep 2019 00:00:00 -0400</pubDate>
+<pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-lambda-layers/</guid>
 <description>Serverless Lambda Layers</description>
@@ -92,7 +92,7 @@
     <item>
 <title>Serverless Plugin CloudFront Lambda Edge</title>
 <link>https://brianpfeil.com/post/serverless-plugin-cloudfront-lambda-edge/</link>
-<pubDate>Tue, 10 Sep 2019 00:00:00 -0400</pubDate>
+<pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-plugin-cloudfront-lambda-edge/</guid>
 <description>Serverless Plugin CloudFront Lambda Edge</description>
@@ -101,7 +101,7 @@
     <item>
 <title>Chrome AWS Lambda</title>
 <link>https://brianpfeil.com/post/chrome-aws-lambda/</link>
-<pubDate>Wed, 24 Jul 2019 00:00:00 -0400</pubDate>
+<pubDate>Wed, 24 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/chrome-aws-lambda/</guid>
 <description>Chrome AWS Lambda</description>
@@ -110,7 +110,7 @@
     <item>
 <title>Apex Lambda</title>
 <link>https://brianpfeil.com/post/apex-lambda/</link>
-<pubDate>Tue, 06 Dec 2016 00:00:00 -0500</pubDate>
+<pubDate>Tue, 06 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/apex-lambda/</guid>
 <description>Apex Lambda</description>

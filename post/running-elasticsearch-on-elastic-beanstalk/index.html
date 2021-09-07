@@ -89,7 +89,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -339,7 +339,7 @@ if (!doNotTrack) {
 </li>
 <li>
 <p>Commit changes to repo</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">$ git commit -a -m <span class="s2">&#34;changes&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ git commit -a -m <span class="s2">&#34;changes&#34;</span>
 </code></pre></div><p>``</p>
 <blockquote>
 <p>assumes <code>Dockerrun.aws.json</code> has already been added to repo.  if not, <code>git add .</code></p>
@@ -347,7 +347,7 @@ if (!doNotTrack) {
 </li>
 <li>
 <p>Create eb app</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ eb init # populate details
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ eb init # populate details
 </code></pre></div><p>``</p>
 <blockquote>
 <p>NOTE: select Docker.  Populate all details</p>
@@ -355,7 +355,7 @@ if (!doNotTrack) {
 </li>
 <li>
 <p>Create environment for app</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ eb create dev-env
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ eb create dev-env
 </code></pre></div><p>``</p>
 <blockquote>
 <p><strong>IMPORTANT</strong> Must immediately update the ec2 instance with tags so it doesn&rsquo;t get terminated.  Enable termination protection on the ec2 instance.</p>
@@ -369,12 +369,12 @@ if (!doNotTrack) {
 </li>
 <li>
 <p>Commit changes</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ git commit -a -m &#34;my updates&#34;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ git commit -a -m &#34;my updates&#34;
 </code></pre></div><p>``</p>
 </li>
 <li>
 <p>Deploy to eb</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ eb deploy
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ eb deploy
 </code></pre></div><p>``</p>
 </li>
 </ol>

@@ -7,11 +7,11 @@
         <description>Recent content in nodejs on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 28 Oct 2020 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Wed, 28 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
     <item>
 <title>Dynamic Nodejs Code Execution</title>
 <link>https://brianpfeil.com/post/dynamic-nodejs-code-execution/</link>
-<pubDate>Wed, 28 Oct 2020 00:00:00 -0400</pubDate>
+<pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/dynamic-nodejs-code-execution/</guid>
 <description>Dynamic Nodejs Code Execution</description>
@@ -20,7 +20,7 @@
     <item>
 <title>YouTube API</title>
 <link>https://brianpfeil.com/post/youtube-api/</link>
-<pubDate>Mon, 22 Jul 2019 00:00:00 -0400</pubDate>
+<pubDate>Mon, 22 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/youtube-api/</guid>
 <description>YouTube API</description>
@@ -29,7 +29,7 @@
     <item>
 <title>Azure Nodejs ARM Resources</title>
 <link>https://brianpfeil.com/post/azure-nodejs-arm-resources/</link>
-<pubDate>Wed, 15 May 2019 00:00:00 -0400</pubDate>
+<pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-nodejs-arm-resources/</guid>
 <description>Azure Nodejs ARM Resources</description>
@@ -38,7 +38,7 @@
     <item>
 <title>Azure Nodejs ARM Storage</title>
 <link>https://brianpfeil.com/post/azure-nodejs-arm-storage/</link>
-<pubDate>Fri, 10 May 2019 00:00:00 -0400</pubDate>
+<pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/azure-nodejs-arm-storage/</guid>
 <description>Azure Nodejs ARM Storage</description>
@@ -47,7 +47,7 @@
     <item>
 <title>Twit Twitter API Client</title>
 <link>https://brianpfeil.com/post/twit-twitter-api-client/</link>
-<pubDate>Mon, 19 Nov 2018 00:00:00 -0500</pubDate>
+<pubDate>Mon, 19 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/twit-twitter-api-client/</guid>
 <description>Twit Twitter API Client</description>
@@ -56,7 +56,7 @@
     <item>
 <title>Lerna</title>
 <link>https://brianpfeil.com/post/lerna/</link>
-<pubDate>Sun, 02 Sep 2018 00:00:00 -0400</pubDate>
+<pubDate>Sun, 02 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/lerna/</guid>
 <description>Lerna</description>
@@ -65,7 +65,7 @@
     <item>
 <title>Scribbletune</title>
 <link>https://brianpfeil.com/post/scribbletune/</link>
-<pubDate>Sat, 26 Aug 2017 00:00:00 -0400</pubDate>
+<pubDate>Sat, 26 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/scribbletune/</guid>
 <description>Scribbletune</description>
@@ -74,7 +74,7 @@
     <item>
 <title>Nexe</title>
 <link>https://brianpfeil.com/post/nexe/</link>
-<pubDate>Tue, 05 Apr 2016 00:00:00 -0400</pubDate>
+<pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/nexe/</guid>
 <description>Nexe</description>
@@ -83,7 +83,7 @@
     <item>
 <title>Node OData</title>
 <link>https://brianpfeil.com/post/node-odata/</link>
-<pubDate>Fri, 18 Mar 2016 00:00:00 -0400</pubDate>
+<pubDate>Fri, 18 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/node-odata/</guid>
 <description>Node OData</description>
@@ -92,7 +92,7 @@
     <item>
 <title>Beefy</title>
 <link>https://brianpfeil.com/post/beefy/</link>
-<pubDate>Fri, 16 Oct 2015 00:00:00 -0400</pubDate>
+<pubDate>Fri, 16 Oct 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/beefy/</guid>
 <description>Beefy</description>
@@ -101,7 +101,7 @@
     <item>
 <title>Node Coveralls</title>
 <link>https://brianpfeil.com/post/node-coveralls/</link>
-<pubDate>Tue, 29 Sep 2015 00:00:00 -0400</pubDate>
+<pubDate>Tue, 29 Sep 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/node-coveralls/</guid>
 <description>Node Coveralls</description>
@@ -110,7 +110,7 @@
     <item>
 <title>WebdriverIO</title>
 <link>https://brianpfeil.com/post/webdriverio/</link>
-<pubDate>Thu, 20 Aug 2015 00:00:00 -0400</pubDate>
+<pubDate>Thu, 20 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/webdriverio/</guid>
 <description>WebdriverIO</description>
@@ -137,7 +137,7 @@
     <item>
 <title>NWjs</title>
 <link>https://brianpfeil.com/post/nwjs/</link>
-<pubDate>Sun, 15 Feb 2015 00:00:00 -0500</pubDate>
+<pubDate>Sun, 15 Feb 2015 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/nwjs/</guid>
 <description>NWjs</description>
@@ -146,7 +146,7 @@
     <item>
 <title>Nodemailer</title>
 <link>https://brianpfeil.com/post/nodemailer/</link>
-<pubDate>Sat, 06 Dec 2014 00:00:00 -0500</pubDate>
+<pubDate>Sat, 06 Dec 2014 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/nodemailer/</guid>
 <description>Nodemailer</description>

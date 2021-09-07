@@ -89,7 +89,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pfeilbr" />
   <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -435,7 +435,7 @@ if (!doNotTrack) {
 <ul>
 <li>create service principal in portal via <strong>Azure AD | App registrations</strong></li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># create service principal</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># create service principal</span>
 az ad sp create-for-rbac --name <span class="s2">&#34;http://service-principal-01&#34;</span>
 
 <span class="c1"># assign role</span>
@@ -605,12 +605,12 @@ az login --service-principal -u &lt;appid&gt; --password <span class="o">{</span
 <li><a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-custom-handlers">custom handlers</a> via binary that runs local http server</li>
 </ul>
 <p>deploy function via zip file.  ensure correct <a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-node?tabs=v2#folder-structure">nodejs folder structure</a></p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">az functionapp deployment <span class="nb">source</span> config-zip -g &lt;resource_group&gt; -n <span class="se">\
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">az functionapp deployment <span class="nb">source</span> config-zip -g &lt;resource_group&gt; -n <span class="se">\
 </span><span class="se"></span>&lt;app_name&gt; --src &lt;zip_file_path&gt;
 </code></pre></div><p>When http triggered function is <a href="https://docs.microsoft.com/en-us/azure/app-service/configure-authentication-provider-aad?toc=/azure/azure-functions/toc.json">configured with Azure AD authentication</a>, the identity information is in the
 <code>req.headers</code></p>
 <p>Example</p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="s2">&#34;x-ms-client-principal-name&#34;</span><span class="err">:</span> <span class="s2">&#34;brian.pfeil@gmail.com&#34;</span><span class="err">,</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="s2">&#34;x-ms-client-principal-name&#34;</span><span class="err">:</span> <span class="s2">&#34;brian.pfeil@gmail.com&#34;</span><span class="err">,</span>
 <span class="s2">&#34;x-ms-client-principal-id&#34;</span><span class="err">:</span> <span class="s2">&#34;38d35c72-5a26-464c-bbb3-c4487a1d4779&#34;</span><span class="err">,</span>
 <span class="s2">&#34;x-ms-client-principal-idp&#34;</span><span class="err">:</span> <span class="s2">&#34;aad&#34;</span><span class="err">,</span>
 </code></pre></div><h3 id="resources-5">Resources</h3>

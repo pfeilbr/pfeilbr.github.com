@@ -7,11 +7,11 @@
         <description>Recent content in api-gateway on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 21 May 2021 00:00:00 -0400</lastBuildDate><atom:link href="https://brianpfeil.com/tags/api-gateway/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Fri, 21 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/tags/api-gateway/index.xml" rel="self" type="application/rss+xml" />
     <item>
 <title>AWS API Gateway to S3 Static Site</title>
 <link>https://brianpfeil.com/post/aws-api-gateway-to-s3-static-site/</link>
-<pubDate>Fri, 21 May 2021 00:00:00 -0400</pubDate>
+<pubDate>Fri, 21 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-api-gateway-to-s3-static-site/</guid>
 <description>AWS API Gateway to S3 Static Site</description>
@@ -20,7 +20,7 @@
     <item>
 <title>API Gateway Private Endpoints</title>
 <link>https://brianpfeil.com/post/api-gateway-private-endpoints/</link>
-<pubDate>Tue, 06 Apr 2021 00:00:00 -0400</pubDate>
+<pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/api-gateway-private-endpoints/</guid>
 <description>API Gateway Private Endpoints</description>
@@ -29,7 +29,7 @@
     <item>
 <title>API Gateway Service Integrations for HTTP APIs</title>
 <link>https://brianpfeil.com/post/api-gateway-service-integrations-for-http-apis/</link>
-<pubDate>Fri, 02 Apr 2021 00:00:00 -0400</pubDate>
+<pubDate>Fri, 02 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/api-gateway-service-integrations-for-http-apis/</guid>
 <description>API Gateway Service Integrations for HTTP APIs</description>
@@ -38,7 +38,7 @@
     <item>
 <title>Serverless Flask</title>
 <link>https://brianpfeil.com/post/serverless-flask/</link>
-<pubDate>Fri, 13 Nov 2020 00:00:00 -0500</pubDate>
+<pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/serverless-flask/</guid>
 <description>Serverless Flask</description>
@@ -47,7 +47,7 @@
     <item>
 <title>AWS API Gateway AWS Service Integration</title>
 <link>https://brianpfeil.com/post/aws-api-gateway-aws-service-integration/</link>
-<pubDate>Thu, 20 Aug 2020 00:00:00 -0400</pubDate>
+<pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/post/aws-api-gateway-aws-service-integration/</guid>
 <description>AWS API Gateway AWS Service Integration</description>
