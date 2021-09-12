@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  5731 ,
+  "wordCount":  5771 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -546,10 +546,21 @@ if (!doNotTrack) {
 </ul>
 <h3 id="elbalb">ELB/ALB</h3>
 <ul>
-<li>elastic (TCP)</li>
-<li>ALB application load balancer (http layer 7) - Content-Based Routing</li>
-<li>NLB network load balancer (tcp layer 4)</li>
-<li>ELB elastic load balancer (tcp layer 4)</li>
+<li>
+<p>Elastic Load Balancing (TCP)</p>
+</li>
+<li>
+<p>ALB application load balancer  — Layer 7 (HTTP/HTTPS traffic), Flexible</p>
+</li>
+<li>
+<p>NLB network load balancer — Layer 4 (TLS/TCP/UDP traffic), Static IPs</p>
+</li>
+<li>
+<p>CLB classic load balancer — Layer 4/7 (HTTP/TCP/SSL traffic), Legacy, Avoid</p>
+</li>
+<li>
+<p>The NLB forwards requests whereas the ALB examines the contents of the HTTP request header to determine where to route the request. So, the ALB is performing content based routing.</p>
+</li>
 </ul>
 <h3 id="privatelink--vpc-endpoint">PrivateLink / VPC Endpoint</h3>
 <ul>
