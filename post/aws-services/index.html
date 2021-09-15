@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  5771 ,
+  "wordCount":  5853 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -358,6 +358,7 @@ if (!doNotTrack) {
 <li><a href="#glacier">Glacier</a></li>
 <li><a href="#efs-elastic-file-system">EFS (Elastic File System)</a></li>
 <li><a href="#fsx-for-windows-file-server">FSx for Windows File Server</a></li>
+<li><a href="#storage-gateway">Storage Gateway</a></li>
 <li><a href="#ebs">EBS</a></li>
 <li><a href="#transfer">Transfer</a></li>
 </ul>
@@ -438,6 +439,7 @@ if (!doNotTrack) {
 </li>
 <li><a href="#migration--transfer">Migration &amp; Transfer</a>
 <ul>
+<li><a href="#aws-datasync">AWS DataSync</a></li>
 <li><a href="#aws-dms-database-migration-service">AWS DMS (Database Migration Service)</a></li>
 </ul>
 </li>
@@ -794,6 +796,15 @@ if (!doNotTrack) {
 <ul>
 <li>fully managed native windows file system</li>
 <li>SMB, NTFS, AD integration</li>
+</ul>
+<h3 id="storage-gateway">Storage Gateway</h3>
+<ul>
+<li>NFS or SMB interface to S3, FSx, volume/tape gateways</li>
+<li>compute runs on once of following: ec2, kvm, VMware, Hyper-V, or appliance</li>
+<li>if SMB, need to <a href="https://docs.aws.amazon.com/filegateway/latest/files3/CreatingAnSMBFileShare.html#configure-SMB-file-share-AD-access">Configuring Microsoft Active Directory access</a></li>
+<li>VPC support.  network traffic between compute and AWS Service goes over VPC endpoint</li>
+<li>VPC endpoint enabled, all VPC endpoint communication from your gateway to AWS services occurs through the public service endpoint using your VPC in AWS</li>
+<li>Creating a VPC endpoint for Storage Gateway</li>
 </ul>
 <h3 id="ebs">EBS</h3>
 <ul>
@@ -1310,6 +1321,8 @@ if (!doNotTrack) {
 </ul>
 <hr>
 <h2 id="migration--transfer">Migration &amp; Transfer</h2>
+<h3 id="aws-datasync">AWS DataSync</h3>
+<p><a href="https://www.awsgeek.com/AWS-DataSync/"><img src="https://www.awsgeek.com/AWS-DataSync/AWS-DataSync.jpg" alt="image"></a></p>
 <h3 id="aws-dms-database-migration-service">AWS DMS (Database Migration Service)</h3>
 <ul>
 <li>migrate RDBS, data warehouses, nosql dbs, etc. in cloud, between combos of cloud and on-prem</li>
