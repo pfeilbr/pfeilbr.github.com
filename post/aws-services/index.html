@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  5853 ,
+  "wordCount":  5886 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -672,6 +672,12 @@ if (!doNotTrack) {
 <ul>
 <li>containers</li>
 <li>task definitions</li>
+<li>EFS or EBS for persistent storage
+<ul>
+<li>EFS is recommended.  Can be mounted by multiple ECS tasks for parallel access</li>
+<li>EBS can be used but is tied to un hosting EC2 instance. No fargate.</li>
+</ul>
+</li>
 </ul>
 <h3 id="ecr">ECR</h3>
 <ul>
