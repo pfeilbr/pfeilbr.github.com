@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  5921 ,
+  "wordCount":  6000 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -319,8 +319,6 @@ if (!doNotTrack) {
         <h1 id="aws-services">AWS Services</h1>
 <p>The following services are commonly used for AWS solutions.  Each service specifies key considerations and features per service for architecture and design.</p>
 <ul>
-<li><a href="#aws-services">AWS Services</a>
-<ul>
 <li><a href="#serverless-services">Serverless Services</a></li>
 <li><a href="#serverless-benefits">Serverless Benefits</a></li>
 <li><a href="#relevant-patterns">Relevant Patterns</a></li>
@@ -472,8 +470,6 @@ if (!doNotTrack) {
 <li><a href="#media-services">Media Services</a>
 <ul>
 <li><a href="#amazon-interactive-video-service">Amazon Interactive Video Service</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -900,6 +896,7 @@ if (!doNotTrack) {
 <ul>
 <li>Standard Workflows vs Express Workflows</li>
 <li>orchestration with many built-in integrations to aws services</li>
+<li><a href="https://aws.amazon.com/blogs/aws/now-aws-step-functions-supports-200-aws-services-to-enable-easier-workflow-automation/">Step Functions AWS SDK Service Integrations</a></li>
 <li>saga pattern for rollback</li>
 <li>parallel map opportunities - run tasks in parallel</li>
 <li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html#welcome-integrations">service integrations</a> - request/response, run a job (<code>.sync</code>), callback with task token (<code>.waitForTaskToken</code>)</li>
@@ -1317,7 +1314,7 @@ if (!doNotTrack) {
 <li>aspects - ability to visit each node/resource in stack and apply changes</li>
 <li>Application -&gt; Stacks -&gt; Constructs</li>
 <li><a href="https://docs.aws.amazon.com/cdk/latest/guide/context.html#context_example">Runtime context</a></li>
-<li><code>[tf|k8s]</code> CDKs</li>
+<li><code>[tf|k8s]</code> CDKsnc</li>
 <li>jsii - core/foundational tech for multi-language/polyglot support.  bind any language to underlying typescript implementation.</li>
 <li>CDK pipelines for CI/CD</li>
 </ul>
@@ -1329,6 +1326,39 @@ if (!doNotTrack) {
 <hr>
 <h2 id="migration--transfer">Migration &amp; Transfer</h2>
 <h3 id="aws-datasync">AWS DataSync</h3>
+<p>copy data between NFS, SMB, S3, EFS, FSx</p>
+<p><strong>concepts</strong></p>
+<ul>
+<li>
+<p>transfer types</p>
+<ul>
+<li>Data transfer between self-managed storage and AWS
+<ul>
+<li>need to install an agent that can access self-managed storage</li>
+</ul>
+</li>
+<li>Data transfer between AWS storage services
+<ul>
+<li>no need to install an agent</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>agent</p>
+<ul>
+<li>VM that runs the sync software.</li>
+<li>can run on EC2 or hypervisors (VMware ESXi, KVM, and Microsoft Hyper-V hypervisors)</li>
+</ul>
+</li>
+<li>
+<p>scheduled transfers</p>
+</li>
+</ul>
+<p>Data transfer between self-managed storage and AWS</p>
+<p><img src="https://docs.aws.amazon.com/datasync/latest/userguide/images/DataSync-chart-on-prem.png" alt=""></p>
+<p>Data transfer between AWS storage services</p>
+<p><img src="https://docs.aws.amazon.com/datasync/latest/userguide/images/DataSync-chart-agentless.png" alt=""></p>
 <p><a href="https://www.awsgeek.com/AWS-DataSync/"><img src="https://www.awsgeek.com/AWS-DataSync/AWS-DataSync.jpg" alt="image"></a></p>
 <h3 id="aws-dms-database-migration-service">AWS DMS (Database Migration Service)</h3>
 <ul>
