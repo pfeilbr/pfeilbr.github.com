@@ -58,7 +58,7 @@
   "headline": "AWS CDK",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  574 ,
+  "wordCount":  569 ,
   "datePublished" : "2019-07-11T00:00:00",
   "dateModified" : "2019-07-11T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -335,7 +335,7 @@ if (!doNotTrack) {
 <li>jsii - core/foundational tech for multi-language/polyglot support.  bind any language to underlying typescript implementation.</li>
 <li>CDK pipelines for CI/CD</li>
 <li><a href="https://github.com/aws-samples/aws-cdk-examples/blob/master/typescript/custom-logical-names/README.md">Custom Logical Names</a> - shows how to hook into an provide own resource names.  Can be used for IAM policies based on resource name <code>prefixes</code></li>
-<li>Usage with Permissions Boundaries - see <a href="https://github.com/aws/aws-cdk/issues/3242">Applying permissions boundary to aws-cdk globally · Issue #3242 · aws/aws-cdk</a></li>
+<li>Usage with Permissions Boundaries - <a href="https://docs.aws.amazon.com/cdk/api/latest/docs/@aws-cdk_aws-iam.PermissionsBoundary.html">class PermissionsBoundary · AWS CDK</a>. e.g. <code>PermissionsBoundary.of(this).apply(permissionsBoundariesPolicy);</code></li>
 </ul>
 <h2 id="key-files-and-directories">Key Files and Directories</h2>
 <ul>
@@ -714,7 +714,7 @@ cdk destroy <span class="o">[</span>STACKS..<span class="o">]</span>
 </script>
 
 <script>
-    const postCount= 243 
+    const postCount= 246 
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>

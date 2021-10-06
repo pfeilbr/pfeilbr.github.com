@@ -7,14 +7,32 @@
         <description>Recent content in Tags on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 16 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/tags/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Wed, 06 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
 <title>aws</title>
 <link>https://brianpfeil.com/tags/aws/</link>
-<pubDate>Thu, 16 Sep 2021 00:00:00 +0000</pubDate>
+<pubDate>Wed, 06 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://brianpfeil.com/tags/aws/</guid>
 <description>aws</description>
+</item>
+    
+    <item>
+<title>github</title>
+<link>https://brianpfeil.com/tags/github/</link>
+<pubDate>Wed, 06 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/github/</guid>
+<description>github</description>
+</item>
+    
+    <item>
+<title>iam</title>
+<link>https://brianpfeil.com/tags/iam/</link>
+<pubDate>Wed, 06 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/tags/iam/</guid>
+<description>iam</description>
 </item>
     
     <item>
@@ -567,15 +585,6 @@
 </item>
     
     <item>
-<title>github</title>
-<link>https://brianpfeil.com/tags/github/</link>
-<pubDate>Fri, 02 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/github/</guid>
-<description>github</description>
-</item>
-    
-    <item>
 <title>diagrams</title>
 <link>https://brianpfeil.com/tags/diagrams/</link>
 <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
@@ -690,15 +699,6 @@
       
       <guid>https://brianpfeil.com/tags/golang/</guid>
 <description>golang</description>
-</item>
-    
-    <item>
-<title>iam</title>
-<link>https://brianpfeil.com/tags/iam/</link>
-<pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://brianpfeil.com/tags/iam/</guid>
-<description>iam</description>
 </item>
     
     <item>

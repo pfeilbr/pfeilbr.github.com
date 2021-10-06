@@ -58,7 +58,7 @@
   "headline": "AWS Service Catalog",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  337 ,
+  "wordCount":  651 ,
   "datePublished" : "2019-09-10T00:00:00",
   "dateModified" : "2019-09-10T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -317,7 +317,25 @@ if (!doNotTrack) {
 <span class="text-muted">code for article</span>&nbsp;<a href="https://github.com/pfeilbr/aws-service-catalog-playground" target="_blank"><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/aws-service-catalog-playground</a>
 </div>
 <p>learn <a href="https://aws.amazon.com/servicecatalog/">aws service catalog</a></p>
-<p><strong>Concepts</strong></p>
+<hr>
+<ul>
+<li><a href="#aws-service-catalog-playground">aws-service-catalog-playground</a>
+<ul>
+<li><a href="#concepts">Concepts</a></li>
+<li><a href="#service-catalog-pipeline">Service Catalog Pipeline</a></li>
+<li><a href="#cloudformation-support">CloudFormation Support</a>
+<ul>
+<li><a href="#provision-a-service-catalog-product-instance-using-cloudformation">Provision a Service Catalog Product Instance using CloudFormation</a></li>
+<li><a href="#composing-solutions-with-aws-service-catalog-provisioned-products">Composing Solutions with AWS Service Catalog Provisioned Products</a></li>
+</ul>
+</li>
+<li><a href="#example-use-case--static-website">Example Use Case | Static Website</a></li>
+<li><a href="#resources">Resources</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="concepts">Concepts</h2>
 <ul>
 <li>products are cloudformation templates</li>
 <li>portfolio is collection of products
@@ -337,6 +355,97 @@ if (!doNotTrack) {
 <li>can include/reference existing product(s) in your product cloudformation template.  This <em>enables modular composition and nesting</em>.</li>
 </ul>
 <hr>
+<h2 id="service-catalog-pipeline">Service Catalog Pipeline</h2>
+<p>Service catalog can be used to deliver products to all spoke accounts in an org.</p>
+<p>Central hub account that provisions AWS Service Catalog Products into spoke accounts on your behalf</p>
+<p><img src="https://service-catalog-tools-workshop.com/sc_factory.png" alt=""></p>
+<p><img src="https://service-catalog-tools-workshop.com/sc_puppet.png" alt=""></p>
+<hr>
+<h2 id="cloudformation-support">CloudFormation Support</h2>
+<p>Service Catalog resources can be created using CloudFormation.  See <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_ServiceCatalog.html">AWS Service Catalog resource type reference</a>.</p>
+<h3 id="provision-a-service-catalog-product-instance-using-cloudformation">Provision a Service Catalog Product Instance using CloudFormation</h3>
+<p>You can provision a Service Catalog Product using the <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html"><code>AWS::ServiceCatalog::CloudFormationProvisionedProduct</code></a> resource type.</p>
+<p>For example, if you have a service catalog product named <code>MyProduct</code> you can provision an instance of it using the following cfn.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w">
+</span><span class="w">      </span><span class="nt">AWSTemplateFormatVersion</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;2010-09-09&#39;</span><span class="w">
+</span><span class="w">      </span><span class="nt">Description</span><span class="p">:</span><span class="w"> </span><span class="l">My Service Catalog Provisioned Product</span><span class="w">
+</span><span class="w">      </span><span class="nt">Resources</span><span class="p">:</span><span class="w">
+</span><span class="w">         </span><span class="nt">MyProvisionedProduct</span><span class="p">:</span><span class="w">
+</span><span class="w">           </span><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l">AWS::ServiceCatalog::CloudFormationProvisionedProduct</span><span class="w">
+</span><span class="w">           </span><span class="nt">Properties</span><span class="p">:</span><span class="w">
+</span><span class="w">            </span><span class="nt">ProductName</span><span class="p">:</span><span class="w"> </span><span class="l">MyProduct</span><span class="w">
+</span><span class="w">            </span><span class="nt">ProvisioningArtifactName</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;1.0&#39;</span><span class="w">
+</span><span class="w">            </span><span class="nt">ProvisioningParameters</span><span class="p">:</span><span class="w">
+</span><span class="w">               </span>-<span class="w">
+</span><span class="w">                  </span><span class="nt">Key</span><span class="p">:</span><span class="w"> </span><span class="l">param1</span><span class="w">
+</span><span class="w">                  </span><span class="nt">Value</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;param1value&#34;</span><span class="w">
+</span><span class="w">               </span>-<span class="w">
+</span><span class="w">                  </span><span class="nt">Key</span><span class="p">:</span><span class="w"> </span><span class="l">param2</span><span class="w">
+</span><span class="w">                  </span><span class="nt">Value</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;param2Value&#34;</span><span class="w">
+</span></code></pre></div><h3 id="composing-solutions-with-aws-service-catalog-provisioned-products">Composing Solutions with AWS Service Catalog Provisioned Products</h3>
+<blockquote>
+<p>AWS Service Catalog now supports obtaining outputs from a Service Catalog provisioned product in an AWS CloudFormation template. Product outputs provide the interface from one product to another. With this new feature, administrators and developers can easily refer to those outputs in order to combine the products needed for their applications, which saves time building applications that use more than one product, such as a three-tier web application.</p>
+</blockquote>
+<ul>
+<li><a href="https://aws.amazon.com/about-aws/whats-new/2020/07/provisioned-product-outputs-now-available-aws-service-catalog/">Provisioned product outputs are now available in AWS Service Catalog</a>.</li>
+<li>Enabled via <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-servicecatalog.html"><code>AWS::ServiceCatalog transform</code></a></li>
+</ul>
+<p>Example cfn from docs</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w">     </span><span class="l">// Example 1</span><span class="w">
+</span><span class="w">    </span><span class="nt">AWSTemplateFormatVersion</span><span class="p">:</span><span class="w"> </span><span class="ld">2010-09-09</span><span class="w">
+</span><span class="w">    </span><span class="nt">Transform</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;AWS::ServiceCatalog&#39;</span><span class="w">
+</span><span class="w">    </span><span class="nt">Resources</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">ExampleParameter</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;AWS::SSM::Parameter&#39;</span><span class="w">
+</span><span class="w">        </span><span class="nt">Properties</span><span class="p">:</span><span class="w">
+</span><span class="w">          </span><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l">String</span><span class="w">
+</span><span class="w">          </span><span class="nt">Value</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;[[servicecatalog:provisionedproduct:SampleProvisionedProduct:SampleOutputKey]]&#39;</span><span class="w">
+</span><span class="w">
+</span><span class="w">    </span><span class="l">// Example 2</span><span class="w">
+</span><span class="w">    </span><span class="nt">AWSTemplateFormatVersion</span><span class="p">:</span><span class="w"> </span><span class="ld">2010-09-09</span><span class="w">
+</span><span class="w">    </span><span class="nt">Transform</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;AWS::ServiceCatalog&#39;</span><span class="w">
+</span><span class="w">    </span><span class="nt">Resources</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">ExampleParameter</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;AWS::SSM::Parameter&#39;</span><span class="w">
+</span><span class="w">        </span><span class="nt">Properties</span><span class="p">:</span><span class="w">
+</span><span class="w">          </span><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l">String</span><span class="w">
+</span><span class="w">          </span><span class="nt">Value</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;[[servicecatalog:provisionedproduct:SampleProvisionedProduct:SampleOutputKey]]&#39;</span><span class="w">
+</span><span class="w">
+</span><span class="w">
+</span><span class="w">    </span><span class="l">// Example 3</span><span class="w">
+</span><span class="w">    </span><span class="nt">AWSTemplateFormatVersion</span><span class="p">:</span><span class="w"> </span><span class="ld">2010-09-09</span><span class="w">
+</span><span class="w">    </span><span class="nt">Transform</span><span class="p">:</span><span class="w"> </span><span class="l">AWS::ServiceCatalog</span><span class="w">
+</span><span class="w">    </span><span class="nt">Resources</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">ExampleParameter</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;AWS::SSM::Parameter&#39;</span><span class="w">
+</span><span class="w">        </span><span class="nt">Properties</span><span class="p">:</span><span class="w">
+</span><span class="w">          </span><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l">String</span><span class="w">
+</span><span class="w">          </span><span class="nt">Value</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;[[servicecatalog:provisionedproduct:SampleProvisionedProduct:SampleOutputKey]]&#34;</span><span class="w">
+</span><span class="w">
+</span><span class="w">
+</span><span class="w">    </span><span class="l">// Example 4</span><span class="w">
+</span><span class="w">
+</span><span class="w">    </span><span class="nt">AWSTemplateFormatVersion</span><span class="p">:</span><span class="w"> </span><span class="ld">2010-09-09</span><span class="w">
+</span><span class="w">    </span><span class="nt">Transform</span><span class="p">:</span><span class="w"> </span><span class="l">AWS::ServiceCatalog</span><span class="w">
+</span><span class="w">    </span><span class="nt">Resources</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">ExampleParameter</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;AWS::SSM::Parameter&#39;</span><span class="w">
+</span><span class="w">        </span><span class="nt">Properties</span><span class="p">:</span><span class="w">
+</span><span class="w">          </span><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l">String</span><span class="w">
+</span><span class="w">          </span><span class="nt">Value</span><span class="p">:</span><span class="w"> </span><span class="p">&gt;-</span><span class="sd">
+</span><span class="sd">            </span><span class="w">            </span><span class="p">[[</span><span class="l">servicecatalog:provisionedproduct:SampleProvisionedProduct:SampleOutputKey]]</span><span class="w">
+</span><span class="w">
+</span><span class="w">
+</span><span class="w">    </span><span class="l">// Example 5</span><span class="w">
+</span><span class="w">    </span><span class="nt">AWSTemplateFormatVersion</span><span class="p">:</span><span class="w"> </span><span class="ld">2010-09-09</span><span class="w">
+</span><span class="w">    </span><span class="nt">Transform</span><span class="p">:</span><span class="w"> </span><span class="l">AWS::ServiceCatalog</span><span class="w">
+</span><span class="w">    </span><span class="nt">Resources</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">ExampleParameter2</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;AWS::SSM::Parameter&#39;</span><span class="w">
+</span><span class="w">        </span><span class="nt">Properties</span><span class="p">:</span><span class="w">
+</span><span class="w">          </span><span class="nt">Type</span><span class="p">:</span><span class="w"> </span><span class="l">String</span><span class="w">
+</span><span class="w">          </span><span class="nt">Value</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="l">servicecatalog:provisionedproduct:SSMProductProvisionedProduct:SampleOutputKey]]</span><span class="w">
+</span></code></pre></div><hr>
 <h2 id="example-use-case--static-website">Example Use Case | Static Website</h2>
 <p>The following is a simple example of a &ldquo;Static Website&rdquo; product for the service catalog.  It&rsquo;s an S3 bucket with website enabled for it.  This product is purposely kept simple to keep the focus on Service Catalog, but a product can be make up of anything that can be expressed via a <a href="https://aws.amazon.com/cloudformation/">CloudFormation</a> template.</p>
 <hr>
@@ -374,13 +483,20 @@ if (!doNotTrack) {
 <p><img src="https://www.evernote.com/l/AAEnMMkQ431GiIqAI50H-BAeO4oSneboKTQB/image.png" alt=""></p>
 <p>&ldquo;Backing&rdquo; CloudFormation Stack Details</p>
 <p><img src="https://www.evernote.com/l/AAGr49-QQOBJE6I-V_E5_ohqBxvXwhOCql4B/image.png" alt=""></p>
+<hr>
 <h2 id="resources">Resources</h2>
 <ul>
+<li><a href="https://aws.amazon.com/blogs/mt/category/management-tools/aws-service-catalog/">AWS Service Catalog | AWS Management &amp; Governance Blog</a> - all aws blogs posts tagged with &ldquo;AWS Service Catalog&rdquo;</li>
 <li><a href="https://docs.aws.amazon.com/servicecatalog/index.html">AWS Service Catalog Documentation</a></li>
+<li><a href="https://service-catalog-tools-workshop.com/">service-catalog-tools-workshop.com/</a></li>
 <li><a href="https://github.com/aws-samples/aws-service-catalog-reference-architectures">aws-samples/aws-service-catalog-reference-architectures</a></li>
 <li><a href="https://www.youtube.com/watch?v=A9kKy6WhqVA&amp;t=318s">AWS Service Catalog - Getting Started</a></li>
+<li><a href="https://aws.amazon.com/blogs/mt/simplify-sharing-your-aws-service-catalog-portfolios-in-an-aws-organizations-setup/">Simplify sharing your AWS Service Catalog portfolios in an AWS Organizations setup | Amazon Web Services</a></li>
 <li><a href="https://www.youtube.com/watch?v=jvAAiWxYQwg">AWS re:Invent 2018: Streamlining Application Development with AWS Service Catalog (DEV328)</a></li>
 <li><a href="https://aws.amazon.com/blogs/mt/how-to-launch-secure-and-governed-aws-resources-with-aws-cloudformation-and-aws-service-catalog/">AWS CloudFormation support for AWS Service Catalog products</a></li>
+<li><a href="https://github.com/AlexRex/cdk-service-catalog">GitHub - AlexRex/cdk-service-catalog: Showcase how to do a service catalog using CDK</a></li>
+<li><a href="https://aws.amazon.com/blogs/mt/standardize-compliance-in-aws-using-devops-and-a-cloud-center-of-excellence-ccoe-approach/">Standardize compliance in AWS using DevOps and a Cloud Center of Excellence (CCOE) approach | Amazon Web Services</a> - example pipeline to delivery service catalog portfolio across all accounts in org.</li>
+<li>local evernote search <code>tag:service-catalog</code></li>
 </ul>
 
 
@@ -651,7 +767,7 @@ if (!doNotTrack) {
 </script>
 
 <script>
-    const postCount= 243 
+    const postCount= 246 
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>

@@ -58,7 +58,7 @@
   "headline": "AWS CloudFormation",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  122 ,
+  "wordCount":  290 ,
   "datePublished" : "2019-08-14T00:00:00",
   "dateModified" : "2019-08-14T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -320,6 +320,30 @@ if (!doNotTrack) {
 <span class="text-muted">code for article</span>&nbsp;<a href="https://github.com/pfeilbr/aws-cloudformation-playground" target="_blank"><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/aws-cloudformation-playground</a>
 </div>
 <p>learn <a href="https://aws.amazon.com/cloudformation/">aws cloudformation</a></p>
+<hr>
+<h2 id="concepts">Concepts</h2>
+<h3 id="stacks">Stacks</h3>
+<ul>
+<li>Drift detection
+<ul>
+<li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import-supported-resources.html">Resources that support import and drift detection operations - AWS CloudFormation</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="stack-setshttpsdocsawsamazoncomawscloudformationlatestuserguidestacksets-conceptshtml"><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html">Stack Sets</a></h3>
+<blockquote>
+<p>enabling you to create, update, or delete stacks across multiple accounts and Regions with a single operation</p>
+</blockquote>
+<ul>
+<li>You can create a stack set with either self-managed or service-managed permissions
+<ul>
+<li>self-managed - first create the necessary IAM roles to establish a trusted relationship between the account you&rsquo;re administering the stack set from and the account you&rsquo;re deploying stack instances to</li>
+<li>service-managed (use with Orgs) - deploy stack instances to accounts managed by AWS Organizations in specific Regions. With this model, you don&rsquo;t need to create the necessary IAM roles; StackSets creates the IAM roles on your behalf.</li>
+</ul>
+</li>
+<li>automatic deployment enabled, StackSets automatically deploys to accounts that are added to the target organization or organizational units (OUs) in the future</li>
+<li>account gate is an optional feature that lets you specify an AWS Lambda function to verify that a target account meets certain requirements before AWS CloudFormation StackSets begins stack operations in that account</li>
+</ul>
 <hr>
 <h2 id="running-examples">Running Examples</h2>
 <p>examples in <a href="templates/"><code>templates/</code></a> directory</p>
@@ -625,7 +649,7 @@ aws cloudformation delete-stack --stack-name dynamic-references-ssm-secrets-stac
 </script>
 
 <script>
-    const postCount= 243 
+    const postCount= 246 
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
