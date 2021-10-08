@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  6043 ,
+  "wordCount":  6128 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -752,10 +752,29 @@ if (!doNotTrack) {
 <li>concurrent batches per shard</li>
 </ul>
 </li>
-<li>service integrations - <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-services.html">Using AWS Lambda with other services - AWS Lambda</a></li>
-<li>[lambda private endpoints(https://aws.amazon.com/blogs/aws/new-use-aws-privatelink-to-access-aws-lambda-over-private-aws-network/) - access lambda from VPC without going over internet</li>
 <li>APIG -&gt; lambda</li>
 <li>ALB -&gt; lambda</li>
+<li>service integrations - <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-services.html">Using AWS Lambda with other services - AWS Lambda</a></li>
+<li><a href="https://aws.amazon.com/blogs/aws/new-use-aws-privatelink-to-access-aws-lambda-over-private-aws-network/">lambda private endpoints</a> - access lambda from VPC without going over internet</li>
+<li><a href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-extensions-api.html">Lambda Extensions</a></li>
+<li><a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html">Container Images</a>
+<ul>
+<li><a href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-images.html#runtimes-api-client">Runtime interface clients</a>
+<ul>
+<li>runtime interface client in your container image manages the interaction between Lambda and your function code</li>
+<li>Lambda provides an open source runtime interface client for each of the supported Lambda runtimes. e.g. node.js, python, etc.</li>
+</ul>
+</li>
+<li><a href="https://github.com/aws/aws-lambda-runtime-interface-emulator/">Lambda Runtime Interface Emulator</a>
+<ul>
+<li>allows customers to locally test their Lambda function packaged as a container image</li>
+<li>web-server that converts HTTP requests to JSON events and maintains functional parity with the Lambda Runtime API</li>
+</ul>
+</li>
+<li>max image size: 10 GB</li>
+</ul>
+</li>
+<li><a href="https://docs.aws.amazon.com/lambda/latest/operatorguide/intro.html">AWS Lambda Operator Guide</a></li>
 </ul>
 <h3 id="lambdaedge">Lambda@Edge</h3>
 <ul>
