@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  6154 ,
+  "wordCount":  6262 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -491,6 +491,7 @@ if (!doNotTrack) {
 <li><a href="#ses">SES</a></li>
 <li><a href="#kinesis">Kinesis</a></li>
 <li><a href="#eventbridge">EventBridge</a></li>
+<li><a href="#glue">Glue</a></li>
 <li><a href="#step-functions">Step Functions</a></li>
 <li><a href="#athena">Athena</a></li>
 <li><a href="#ssm-parameter-store">SSM Parameter Store</a></li>
@@ -572,6 +573,7 @@ if (!doNotTrack) {
 <li>interface endpoint - all other services.  via DNS resolver for VPC/subnets
 <ul>
 <li>an elastic network interface with a private IP address from the IP address range of your subnet that serves as an entry point for traffic destined to a supported service</li>
+<li>specify subnets, security groups, IAM policy doc, enable private DNS</li>
 </ul>
 </li>
 </ul>
@@ -614,6 +616,13 @@ if (!doNotTrack) {
 <li>custom error responses - http error codes mapped to response page paths</li>
 <li>georestrictions</li>
 <li>lambda@edge - headers only requests, rewrite URLs, server-side rendering (SSR), auth, etc.</li>
+<li>cloudfront functions - run lightweight JavaScript code
+<ul>
+<li>no network and file system access.</li>
+<li>max run time - run less than 1 ms.</li>
+<li>Where a Lambda@Edge is deployed to one of the 13 regional edge locations, Cloudfront Functions are deployed even further down and closer to the viewer at one of the 280+ edge locations</li>
+</ul>
+</li>
 <li>cache invalidations</li>
 <li>non GET HTTP methods support.  must explicitly turn on support for PUT, POST, PATCH, etc.</li>
 <li>WAF association</li>
@@ -667,7 +676,17 @@ if (!doNotTrack) {
 <h3 id="ecs">ECS</h3>
 <ul>
 <li>containers</li>
-<li>task definitions</li>
+<li>task definitions
+<ul>
+<li>Fargate and EC2 launch types</li>
+</ul>
+</li>
+<li>Service - maintain a specified number of instances of a task definition
+<ul>
+<li>Service load balancing - distribute traffic evenly across the tasks in your service</li>
+<li>Service auto scaling - via Application Auto Scaling service.  CPU/memory utilization CW metrics</li>
+</ul>
+</li>
 <li>EFS or EBS for persistent storage
 <ul>
 <li>EFS is recommended.  Can be mounted by multiple ECS tasks for parallel access</li>
