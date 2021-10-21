@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  6456 ,
+  "wordCount":  6468 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -584,7 +584,11 @@ if (!doNotTrack) {
 <li>public and private domains (hosted zones)</li>
 <li>route to aws services - CloudFront, API Gateway, ELB, RDS, S3 bucket, EC2, VPC Interface Endpoint</li>
 <li>record sets, TTL</li>
-<li>health checks - public endpoints or via CloudWatch metrics (e.g. for private endpoints)</li>
+<li>health checks - public endpoints or via CloudWatch metrics (e.g. for private endpoints)
+<ul>
+<li>can associate a health check with recordset. e.g. Route 53 failover recordset.</li>
+</ul>
+</li>
 <li>load balancing via DNS</li>
 <li>routing policies - latency Based Routing, Geo DNS, Geoproximity, and Weighted Round Robin</li>
 <li>domain registration</li>
