@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  6397 ,
+  "wordCount":  6452 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -584,7 +584,7 @@ if (!doNotTrack) {
 <li>public and private domains (hosted zones)</li>
 <li>route to aws services - CloudFront, API Gateway, ELB, RDS, S3 bucket, EC2, VPC Interface Endpoint</li>
 <li>record sets, TTL</li>
-<li>health checks</li>
+<li>health checks - public endpoints or via CloudWatch metrics (e.g. for private endpoints)</li>
 <li>load balancing via DNS</li>
 <li>routing policies - latency Based Routing, Geo DNS, Geoproximity, and Weighted Round Robin</li>
 <li>domain registration</li>
@@ -732,6 +732,7 @@ if (!doNotTrack) {
 <h3 id="eks">EKS</h3>
 <ul>
 <li>managed Kubernetes</li>
+<li>automates the deployment, scaling, and management of containerized applications</li>
 </ul>
 <h3 id="lightsail">LightSail</h3>
 <ul>
@@ -1269,13 +1270,16 @@ if (!doNotTrack) {
 <li>An alarm watches a single metric over a specified time period, and performs one or more specified actions, based on the value of the metric relative to a threshold over time. The action is a notification sent to an Amazon SNS topic or an Auto Scaling policy. You can also add alarms to dashboards.</li>
 <li>composite alarms</li>
 <li>Alarm States - OK, ALARM, INSUFFICIENT_DATA (missing data points)</li>
+<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch-and-eventbridge.html">EventBridge integration</a> - CloudWatch sends events to Amazon EventBridge whenever a CloudWatch alarm changes alarm state.</li>
 </ul>
 <h3 id="cloudwatch-synthetics-canaries">CloudWatch Synthetics (Canaries)</h3>
 <ul>
 <li>supports monitoring your REST APIs, URLs, and website content every minute, 24x7, and alerts you when your application endpoints don’t behave as expected.</li>
 <li>Node.js or python based.  bundles in Puppeteer + Chromium to the runtime</li>
+<li>trigger types - cron (1 min smallest freq), run once</li>
 <li>can also used in any workloads requiring general browser automation</li>
-<li>creates several CloudWatch metrics in <code>CloudWatchSynthetics</code> namespace</li>
+<li>creates several <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_metrics.html">CloudWatch metrics in <code>CloudWatchSynthetics</code> namespace</a></li>
+<li>EventBridge support.  See <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitoring-events-eventbridge.html">monitoring canary events with Amazon EventBridge</a></li>
 <li>CloudFormation support via <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html"><code>AWS::Synthetics::Canary</code></a></li>
 </ul>
 <blockquote>
