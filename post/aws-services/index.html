@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  6262 ,
+  "wordCount":  6321 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -690,7 +690,7 @@ if (!doNotTrack) {
 <li>EFS or EBS for persistent storage
 <ul>
 <li>EFS is recommended.  Can be mounted by multiple ECS tasks for parallel access</li>
-<li>EBS can be used but is tied to un hosting EC2 instance. No fargate.</li>
+<li>EBS can be used but is tied to a hosting EC2 instance. Not supported on fargate.</li>
 </ul>
 </li>
 </ul>
@@ -712,13 +712,15 @@ if (!doNotTrack) {
 </li>
 <li>ECR public</li>
 <li>resource-based permissions using AWS IAM</li>
-<li></li>
 </ul>
 <h3 id="fargate">Fargate</h3>
+<p><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html">Docs | Amazon ECS on AWS Fargate</a></p>
 <ul>
 <li>containers</li>
 <li>task definitions</li>
 <li>run containers without having to manage servers or clusters</li>
+<li>removes the need to choose server types, decide when to scale your clusters, or optimize cluster packing.</li>
+<li>When you run your tasks and services with the Fargate launch type, you package your application in containers, specify the CPU and memory requirements, define networking and IAM policies, and launch the application.</li>
 </ul>
 <h3 id="batch">Batch</h3>
 <ul>
