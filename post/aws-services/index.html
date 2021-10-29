@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  6468 ,
+  "wordCount":  6503 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -802,6 +802,7 @@ if (!doNotTrack) {
 <li>max image size: 10 GB</li>
 </ul>
 </li>
+<li><a href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-modify.html#runtime-wrapper">Lambda Wrapper Scripts | Modifying the runtime environment</a> - customize the runtime startup behavior of your Lambda function.  e.g. set env vars, add/update parameters.</li>
 <li><a href="https://docs.aws.amazon.com/lambda/latest/operatorguide/intro.html">AWS Lambda Operator Guide</a></li>
 </ul>
 <h3 id="lambdaedge">Lambda@Edge</h3>
@@ -1560,12 +1561,11 @@ if (!doNotTrack) {
 <h2 id="security-identity-and-compliance">Security, Identity, and Compliance</h2>
 <h3 id="iam">IAM</h3>
 <ul>
-<li>terms - Resources, Identities, Entities, Principals (person or application)</li>
+<li>terms - Resources, Identities, Entities, Principals (person or application), Actions</li>
 <li>authentication, authorization</li>
 <li>actions and operations on resources</li>
 <li>policy docs - AWS managed policies, Customer managed policies, Inline policies</li>
-<li>Identity-based and resource-based policies</li>
-<li>identities - users, groups, roles</li>
+<li>Identity-based (e.g. users, groups, roles) and resource-based policies (e.g. bucket policy, lambda permissions, sns topic policy, sqs queue policy)</li>
 <li>STS - temp security credentials</li>
 <li>assume role</li>
 <li>identity federation - Federated users and roles (via OIDC, SAML2, Cognito)</li>
