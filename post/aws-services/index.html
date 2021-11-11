@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  6541 ,
+  "wordCount":  6642 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -731,7 +731,20 @@ if (!doNotTrack) {
 <h3 id="batch">Batch</h3>
 <ul>
 <li>run batch computing jobs using containers</li>
-<li>concepts: Compute Environments (compute), Job Queues, Job Definitions (docker image), Jobs (things that run)</li>
+<li>concepts:
+<ul>
+<li>Compute Environments -  set of managed or unmanaged compute resources that are used to run jobs.  Fargate or EC2.  specify the minimum, desired, and maximum number of vCPUs for the environment.</li>
+<li>Job Queues - backed by 1 or more compute envs, assign priority</li>
+<li>Job Definitions - cpu and memory requirements, iam role for access to other aws resources</li>
+<li>Jobs - things that run on fargate or ec2.  shell script, a Linux executable, or a Docker container image
+<ul>
+<li><a href="https://docs.aws.amazon.com/batch/latest/userguide/array_jobs.html">Array Jobs</a> - run parallel jobs such as Monte Carlo simulations, parametric sweeps, or large rendering jobs.  <code>AWS_BATCH_JOB_ARRAY_INDEX</code> is passed to each job as an env var to represent the <em>current index</em></li>
+<li><a href="https://docs.aws.amazon.com/batch/latest/userguide/job_retries.html">Automated Job Retries</a></li>
+<li><a href="https://docs.aws.amazon.com/batch/latest/userguide/job_dependencies.html">Job Dependencies</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <h3 id="eks">EKS</h3>
 <ul>
