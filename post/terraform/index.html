@@ -58,7 +58,7 @@
   "headline": "Terraform",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  13 ,
+  "wordCount":  338 ,
   "datePublished" : "2019-11-05T00:00:00",
   "dateModified" : "2019-11-05T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -321,6 +321,81 @@ if (!doNotTrack) {
 </div>
 <p>learn and experiment with <a href="https://www.terraform.io/">Terraform</a></p>
 <p>followed Packer <a href="https://www.terraform.io/intro/getting-started/install.html">GETTING STARTED</a> docs</p>
+<hr>
+<ul>
+<li>Execution Plans - describing what it will do and asks for your approval before making any infrastructure changes. This allows you to review changes before Terraform creates, updates, or destroys infrastructure.</li>
+<li>Resource Graph - Terraform builds a resource graph and creates or modifies non-dependent resources in parallel.</li>
+</ul>
+<h3 id="resources">Resources</h3>
+<ul>
+<li>represent infrastructure objects</li>
+<li>each resource type is implemented by a provider, which is a plugin for Terraform that offers a collection of resource types</li>
+<li>Meta-Arguments
+<ul>
+<li><code>depends_on</code></li>
+<li><code>count</code> - creates that many instances of the resource or module</li>
+<li><code>for_each</code> - value is a map or a set of strings, Terraform will create one instance for each member of that map or set</li>
+<li><a href="https://www.terraform.io/docs/language/meta-arguments/resource-provider.html"><code>provider</code></a> - use to override tf default provider. e.g. you want to change the region for a given resource</li>
+<li><code>lifecycle</code></li>
+<li><code>provisioner</code> and <code>connection</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="syntax">Syntax</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">resource TYPE NAME {
+    BODY
+}
+</code></pre></div><hr>
+<h3 id="data-sources">Data Sources</h3>
+<hr>
+<h2 id="terraform-language">Terraform Language</h2>
+<ul>
+<li>use hcl or json to declare</li>
+<li>Blocks - containers for other content and usually represent the configuration of some kind of object</li>
+<li>Arguments - assign a value to a name</li>
+<li>Expressions - represent a value, either literally or by referencing and combining other values</li>
+</ul>
+<hr>
+<h2 id="state">State</h2>
+<ul>
+<li>by default state is stored locally in <code>*.tfstate</code> file (the default backend)</li>
+<li>when multiple people or clients are collaborating on infra via tf, state can be stored in a remote backend
+<ul>
+<li>e.g. state for aws can be stored in S3 and a dynamodb table is used for locking when the state is shared amongst many people and/or systems</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="nx">terraform</span> <span class="p">{</span>
+  <span class="nx">backend</span> <span class="s2">&#34;s3&#34;</span> <span class="p">{</span><span class="c1">
+</span><span class="c1">    # Replace this with your bucket name!
+</span><span class="c1"></span>    <span class="na">bucket</span>         = <span class="s2">&#34;terraform-up-and-running-state&#34;</span>
+    <span class="na">key</span>            = <span class="s2">&#34;global/s3/terraform.tfstate&#34;</span>
+    <span class="na">region</span>         = <span class="s2">&#34;us-east-2&#34;</span><span class="c1">
+</span><span class="c1">
+</span><span class="c1">    # Replace this with your DynamoDB table name!
+</span><span class="c1"></span>    <span class="na">dynamodb_table</span> = <span class="s2">&#34;terraform-up-and-running-locks&#34;</span>
+    <span class="na">encrypt</span>        = <span class="kc">true</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"></code></pre></div></li>
+<li><em>Workspaces</em> - allow you to store your Terraform state in multiple, separate, named workspaces</li>
+</ul>
+<h2 id="cli">CLI</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># plan</span>
+terraform plan
+
+<span class="c1"># apply</span>
+terraform apply -auto-approve
+
+<span class="c1"># validate</span>
+terraform validate
+
+<span class="c1"># show outputs</span>
+terraform output
+</code></pre></div><h2 id="resources-1">Resources</h2>
+<ul>
+<li><a href="https://www.terraform.io/docs/language/index.html">Terraform Language Documentation</a></li>
+<li><a href="https://registry.terraform.io/providers/hashicorp/aws/latest/docs">Terraform | AWS Provider Docs</a></li>
+<li><a href="https://registry.terraform.io/browse/providers">Terraform Registry</a></li>
+</ul>
 
 
         
@@ -590,7 +665,7 @@ if (!doNotTrack) {
 </script>
 
 <script>
-    const postCount= 246 
+    const postCount= 248 
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>

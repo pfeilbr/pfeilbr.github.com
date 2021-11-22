@@ -58,7 +58,7 @@
   "headline": "AWS CDK",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  569 ,
+  "wordCount":  755 ,
   "datePublished" : "2019-07-11T00:00:00",
   "dateModified" : "2019-07-11T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -433,6 +433,65 @@ cdk destroy <span class="o">[</span>STACKS..<span class="o">]</span>
 </ul>
 <p><img src="https://www.evernote.com/l/AAEqngqx1ZlJOJObL2Oe3eHqFcwiW_SaRfcB/image.png" alt="CDK Identifiers Calculation Image" width="50%" /></p>
 <hr>
+<h3 id="common-cdk-snippets">Common CDK Snippets</h3>
+<ul>
+<li><a href="https://docs.aws.amazon.com/cdk/api/latest/docs/core-readme.html">@aws-cdk/core module</a></li>
+<li><a href="https://docs.aws.amazon.com/cdk/api/latest/docs/aws-iam-readme.html">@aws-cdk/aws-iam module</a> - key module</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="c1">// durations
+</span><span class="c1"></span><span class="nx">Duration</span><span class="p">.</span><span class="nx">seconds</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>   <span class="c1">// 5 minutes
+</span><span class="c1"></span><span class="nx">Duration</span><span class="p">.</span><span class="nx">minutes</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>     <span class="c1">// 5 minutes
+</span><span class="c1"></span><span class="nx">Duration</span><span class="p">.</span><span class="nx">hours</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>       <span class="c1">// 1 hour
+</span><span class="c1"></span><span class="nx">Duration</span><span class="p">.</span><span class="nx">days</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>        <span class="c1">// 7 days
+</span><span class="c1"></span><span class="nx">Duration</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="s1">&#39;PT5M&#39;</span><span class="p">)</span>  <span class="c1">// 5 minutes
+</span><span class="c1"></span>
+<span class="c1">// sizes
+</span><span class="c1"></span><span class="nx">Size</span><span class="p">.</span><span class="nx">kibibytes</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span> <span class="c1">// 200 KiB
+</span><span class="c1"></span><span class="nx">Size</span><span class="p">.</span><span class="nx">mebibytes</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>   <span class="c1">// 5 MiB
+</span><span class="c1"></span><span class="nx">Size</span><span class="p">.</span><span class="nx">gibibytes</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>  <span class="c1">// 40 GiB
+</span><span class="c1"></span><span class="nx">Size</span><span class="p">.</span><span class="nx">tebibytes</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span> <span class="c1">// 200 TiB
+</span><span class="c1"></span><span class="nx">Size</span><span class="p">.</span><span class="nx">pebibytes</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>   <span class="c1">// 3 PiB
+</span><span class="c1"></span>
+<span class="c1">// create secret
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">secret</span> <span class="o">=</span> <span class="nx">SecretValue</span><span class="p">.</span><span class="nx">secretsManager</span><span class="p">(</span><span class="s1">&#39;secretId&#39;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">jsonField</span><span class="o">:</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="c1">// optional: key of a JSON field to retrieve (defaults to all content),
+</span><span class="c1"></span>  <span class="nx">versionId</span><span class="o">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span>       <span class="c1">// optional: id of the version (default AWSCURRENT)
+</span><span class="c1"></span>  <span class="nx">versionStage</span><span class="o">:</span> <span class="s1">&#39;stage&#39;</span><span class="p">,</span> <span class="c1">// optional: version stage name (default AWSCURRENT)
+</span><span class="c1"></span><span class="p">});</span>
+
+<span class="c1">// get default VPC
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">vpc</span> <span class="o">=</span> <span class="nx">ec2</span><span class="p">.</span><span class="nx">Vpc</span><span class="p">.</span><span class="nx">fromLookup</span><span class="p">(</span><span class="nx">stack</span><span class="p">,</span> <span class="s1">&#39;VPC&#39;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="c1">// This imports the default VPC but you can also
+</span><span class="c1"></span>  <span class="c1">// specify a &#39;vpcName&#39; or &#39;tags&#39;.
+</span><span class="c1"></span>  <span class="nx">isDefault</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="c1">// custom resource
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">fn</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">lambda</span><span class="p">.</span><span class="nb">Function</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s1">&#39;MyProvider&#39;</span><span class="p">,</span> <span class="nx">functionProps</span><span class="p">);</span>
+
+<span class="k">new</span> <span class="nx">CustomResource</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s1">&#39;MyResource&#39;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">serviceToken</span><span class="o">:</span> <span class="nx">fn</span><span class="p">.</span><span class="nx">functionArn</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="c1">// OR
+</span><span class="c1"></span>
+<span class="kr">const</span> <span class="nx">serviceToken</span> <span class="o">=</span> <span class="nx">CustomResourceProvider</span><span class="p">.</span><span class="nx">getOrCreate</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s1">&#39;Custom::MyCustomResourceType&#39;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">codeDirectory</span><span class="o">:</span> <span class="sb">`</span><span class="si">${</span><span class="mi">__</span><span class="nx">dirname</span><span class="si">}</span><span class="sb">/my-handler`</span><span class="p">,</span>
+  <span class="nx">runtime</span><span class="o">:</span> <span class="nx">CustomResourceProviderRuntime</span><span class="p">.</span><span class="nx">NODEJS_12_X</span><span class="p">,</span>
+  <span class="nx">description</span><span class="o">:</span> <span class="s2">&#34;Lambda function created by the custom resource provider&#34;</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="k">new</span> <span class="nx">CustomResource</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s1">&#39;MyResource&#39;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">resourceType</span><span class="o">:</span> <span class="s1">&#39;Custom::MyCustomResourceType&#39;</span><span class="p">,</span>
+  <span class="nx">serviceToken</span><span class="o">:</span> <span class="nx">serviceToken</span>
+<span class="p">});</span>
+
+<span class="c1">// bastion host
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">host</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ec2</span><span class="p">.</span><span class="nx">BastionHostLinux</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s1">&#39;BastionHost&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">vpc</span> <span class="p">});</span>
+
+
+</code></pre></div><hr>
 <h2 id="resources">Resources</h2>
 <ul>
 <li><a href="https://docs.aws.amazon.com/cdk/api/latest/">AWS CDK · AWS CDK Reference Documentation</a></li>
@@ -714,7 +773,7 @@ cdk destroy <span class="o">[</span>STACKS..<span class="o">]</span>
 </script>
 
 <script>
-    const postCount= 246 
+    const postCount= 248 
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>

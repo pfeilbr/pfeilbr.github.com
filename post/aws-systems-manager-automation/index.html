@@ -58,7 +58,7 @@
   "headline": "AWS Systems Manager Automation",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  147 ,
+  "wordCount":  338 ,
   "datePublished" : "2020-10-02T00:00:00",
   "dateModified" : "2020-10-02T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -324,15 +324,51 @@ if (!doNotTrack) {
 <li>Each step is built around a single action</li>
 <li>Output from one step can be used as input in a later step</li>
 <li>json or yaml documents</li>
-<li>can run python or powershell scripts via <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-action-executeScript.html"><code>aws:executeScript</code></a></li>
+<li>can run python or powershell scripts via <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-action-executeScript.html"><code>aws:executeScript</code></a> (max execution time is 10 min)</li>
 <li>invoke <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-action-lamb.html"><code>aws:invokeLambdaFunction</code></a></li>
 <li>can specify execution role via <code>AutomationAssumeRole</code> parameter.  if not specified, uses the security context of calling principal</li>
+<li>can <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-cwe-target.html">trigger based on EventBridge rule</a></li>
+<li>can reference parameters in Parameter Store within an SSM doc via <code>{{ssm:parameter-name}}</code></li>
+<li>ssm document types (yaml or json)
+<ul>
+<li>automation (renamed to runbooks) -</li>
+<li>command - remotely and securely manage the configuration of your managed instances (ec2 or on-prem)</li>
 </ul>
+</li>
+<li><code>aws:executeScript</code> stdout/stderr can be sent to CloudWatch logs.  see <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-action-logging.html">https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-action-logging.html</a></li>
+</ul>
+<hr>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"></code></pre></div><h2 id="examples">Examples</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># create an ssm document</span>
+aws ssm create-document <span class="se">\
+</span><span class="se"></span>    --content file://path/to/file/documentContent.json <span class="se">\
+</span><span class="se"></span>    --name <span class="s2">&#34;document-name&#34;</span> <span class="se">\
+</span><span class="se"></span>    --document-type <span class="s2">&#34;Command&#34;</span> <span class="se">\
+</span><span class="se"></span>    --tags <span class="s2">&#34;Key=tag-key,Value=tag-value&#34;</span>
+
+<span class="c1"># run an ssm document (max execution time is 10 min)</span>
+aws ssm start-automation-execution <span class="se">\
+</span><span class="se"></span>--document-name <span class="s2">&#34;AWS-UpdateLinuxAmi&#34;</span> <span class="se">\
+</span><span class="se"></span>--parameters <span class="s2">&#34;AutomationAssumeRole=arn:aws:iam::123456789012:role/SSMAutomationRole,SourceAmiId=ami-EXAMPLE,IamInstanceProfileName=EC2InstanceRole&#34;</span>
+
+
+<span class="c1"># run `command` type document (runs on EC2 instances)</span>
+aws ssm send-command <span class="se">\
+</span><span class="se"></span>    --instance-ids <span class="s2">&#34;instance-ID&#34;</span> <span class="se">\
+</span><span class="se"></span>    --document-name <span class="s2">&#34;AWS-RunShellScript&#34;</span> <span class="se">\
+</span><span class="se"></span>    --comment <span class="s2">&#34;IP config&#34;</span> <span class="se">\
+</span><span class="se"></span>    --parameters <span class="nv">commands</span><span class="o">=</span>ifconfig <span class="se">\
+</span><span class="se"></span>    --output text
+
+</code></pre></div><hr>
 <h2 id="resources">Resources</h2>
 <ul>
 <li><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-automation.html">AWS Systems Manager Automation</a></li>
+<li><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html">AWS Systems Manager documents</a> - describes the various document types (e.g. command, automation, etc.)</li>
 <li><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-document-samples.html">Custom Automation document samples</a></li>
+<li><a href="https://mng.workshop.aws/ssm.html">AWS Management and Governance Tools Workshop | AWS SYSTEMS MANAGER</a></li>
 <li><a href="https://github.com/awslabs/aws-systems-manager">awslabs/aws-systems-manager</a> - examples</li>
+<li><a href="https://aws.amazon.com/blogs/mt/use-script-steps-in-your-systems-manager-automation-runbooks/">Use the power of script steps in your Systems Manager Automation runbooks | Amazon Web Services</a></li>
 <li><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-actions.html">Automation actions reference</a> - actions that you can specify in an AWS Systems Manager Automation document
 <ul>
 <li><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-action-executeScript.html">aws:executeScript – Run a script</a> - runtimes: python3.6 | python3.7 | PowerShell Core 6.0, as of 2020-10-02 max duration of 10 min (600 secs)</li>
@@ -341,6 +377,7 @@ if (!doNotTrack) {
 </li>
 <li><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-jenkins.html">Walkthrough: Using Automation with Jenkins</a></li>
 <li><a href="https://github.com/ceshihao/ssm-public-documents">ceshihao/ssm-public-documents</a> - example ssm automation documents</li>
+<li><a href="https://cloudaffaire.com/how-to-create-aws-ssm-automation-workflow/">How To Create AWS SSM Automation Workflow | CloudAffaire</a> - goo walkthrough how to create automation doc and run via aws cli</li>
 </ul>
 
 
@@ -611,7 +648,7 @@ if (!doNotTrack) {
 </script>
 
 <script>
-    const postCount= 246 
+    const postCount= 248 
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>

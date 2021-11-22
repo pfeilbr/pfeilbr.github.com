@@ -58,7 +58,7 @@
   "headline": "AWS CloudFormation",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  290 ,
+  "wordCount":  365 ,
   "datePublished" : "2019-08-14T00:00:00",
   "dateModified" : "2019-08-14T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -330,19 +330,28 @@ if (!doNotTrack) {
 </ul>
 </li>
 </ul>
+<h3 id="nested-stackshttpsdocsawsamazoncomawscloudformationlatestuserguideusing-cfn-nested-stackshtml"><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Nested Stacks</a></h3>
 <h3 id="stack-setshttpsdocsawsamazoncomawscloudformationlatestuserguidestacksets-conceptshtml"><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html">Stack Sets</a></h3>
 <blockquote>
 <p>enabling you to create, update, or delete stacks across multiple accounts and Regions with a single operation</p>
 </blockquote>
 <ul>
-<li>You can create a stack set with either self-managed or service-managed permissions
+<li>
+<p>You can create a stack set with either self-managed or service-managed permissions</p>
 <ul>
 <li>self-managed - first create the necessary IAM roles to establish a trusted relationship between the account you&rsquo;re administering the stack set from and the account you&rsquo;re deploying stack instances to</li>
 <li>service-managed (use with Orgs) - deploy stack instances to accounts managed by AWS Organizations in specific Regions. With this model, you don&rsquo;t need to create the necessary IAM roles; StackSets creates the IAM roles on your behalf.</li>
 </ul>
 </li>
-<li>automatic deployment enabled, StackSets automatically deploys to accounts that are added to the target organization or organizational units (OUs) in the future</li>
-<li>account gate is an optional feature that lets you specify an AWS Lambda function to verify that a target account meets certain requirements before AWS CloudFormation StackSets begins stack operations in that account</li>
+<li>
+<p>automatic deployment enabled, StackSets automatically deploys to accounts that are added to the target organization or organizational units (OUs) in the future</p>
+</li>
+<li>
+<p>account gate is an optional feature that lets you specify an AWS Lambda function to verify that a target account meets certain requirements before AWS CloudFormation StackSets begins stack operations in that account</p>
+</li>
+<li>
+<p>stackset stacks should be account and region agnostic.  same template will be used for all deployments.  use SSM parameter store parameters in the target account + region for specific configurations.</p>
+</li>
 </ul>
 <hr>
 <h2 id="running-examples">Running Examples</h2>
@@ -380,7 +389,23 @@ aws cloudformation delete-stack --stack-name dynamic-references-ssm-secrets-stac
 <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html">CloudFormation Custom Resources</a></li>
 <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">CloudFormation Macros</a></li>
 </ul>
+<hr>
+<h2 id="scratch">Scratch</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">aws cloudformation deploy --template-file templates/playground.yaml --stack-name playground-stack --capabilities <span class="s2">&#34;CAPABILITY_IAM&#34;</span> <span class="s2">&#34;CAPABILITY_NAMED_IAM&#34;</span> <span class="s2">&#34;CAPABILITY_AUTO_EXPAND&#34;</span>                                     
 
+aws cloudformation describe-stacks <span class="se">\
+</span><span class="se"></span>  --stack-name <span class="s2">&#34;playground-stack&#34;</span> <span class="se">\
+</span><span class="se"></span>  --query <span class="s2">&#34;Stacks[0].Outputs[?OutputKey==&#39;LambdaName&#39;].OutputValue&#34;</span> --output text
+
+playground-stack-MyLambdaFunction-iMVMRs2CA3fm
+
+aws lambda invoke <span class="se">\
+</span><span class="se"></span>  --cli-binary-format <span class="s2">&#34;raw-in-base64-out&#34;</span> <span class="se">\
+</span><span class="se"></span>  --function-name <span class="s2">&#34;playground-stack-MyLambdaFunction-iMVMRs2CA3fm&#34;</span> <span class="se">\
+</span><span class="se"></span>  --payload <span class="s1">&#39;{&#34;msg&#34;: &#34;hello&#34;}&#39;</span> <span class="se">\
+</span><span class="se"></span>  output.log<span class="p">;</span> cat output.log<span class="p">;</span> rm output.log
+
+</code></pre></div>
 
         
 
@@ -649,7 +674,7 @@ aws cloudformation delete-stack --stack-name dynamic-references-ssm-secrets-stac
 </script>
 
 <script>
-    const postCount= 246 
+    const postCount= 248 
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
