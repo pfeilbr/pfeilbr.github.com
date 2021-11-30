@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  6642 ,
+  "wordCount":  6740 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -716,6 +716,7 @@ if (!doNotTrack) {
 </li>
 <li>ECR public</li>
 <li>resource-based permissions using AWS IAM</li>
+<li><a href="https://aws.amazon.com/blogs/aws/announcing-pull-through-cache-repositories-for-amazon-elastic-container-registry/">Announcing Pull Through Cache Repositories for Amazon Elastic Container Registry</a></li>
 </ul>
 <h3 id="fargate">Fargate</h3>
 <p><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html">Docs | Amazon ECS on AWS Fargate</a></p>
@@ -845,6 +846,7 @@ if (!doNotTrack) {
 </ul>
 </li>
 <li>S3 event notifications - notification destinations are SNS, SQS, lambda</li>
+<li><a href="https://aws.amazon.com/blogs/aws/new-use-amazon-s3-event-notifications-with-amazon-eventbridge/">Use Amazon S3 Event Notifications with Amazon EventBridge</a></li>
 <li>replication - cross-region, same-region</li>
 <li><a href="https://aws.amazon.com/blogs/aws/introducing-amazon-s3-object-lambda-use-your-code-to-process-data-as-it-is-being-retrieved-from-s3/">S3 object lambda</a> - process data retrieved from S3 with lambda before returning it to an application. lambda calls <a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#writeGetObjectResponse-property"><code>writeGetObjectResponse</code></a> to send modified object contents back to <code>GET</code> request.  Create S3 Access Point, then Object Lambda Access Point.</li>
 </ul>
@@ -1094,6 +1096,7 @@ if (!doNotTrack) {
 <li>kafka alternative</li>
 <li>partition key</li>
 <li>shard count</li>
+<li><a href="https://aws.amazon.com/blogs/aws/amazon-kinesis-data-streams-on-demand-stream-data-at-scale-without-managing-capacity/">Kinesis Data Streams On-Demand Mode</a> - charged per gigabyte of data written, read, and stored in the stream, in a pay-per-throughput fashion</li>
 <li>ordering guaranteed for messages per shard</li>
 <li><a href="https://aws.amazon.com/about-aws/whats-new/2021/08/introducing-dynamic-partitioning-amazon-kinesis-data-firehose/">dynamic partitioning</a> - continuously partition streaming data in Kinesis Data Firehose using keys within data like “customer_id” or “transaction_id” and deliver data grouped by these keys into corresponding Amazon Simple Storage Service (Amazon S3) prefixes</li>
 <li>lambda - lambda polls per shard
@@ -1133,6 +1136,14 @@ if (!doNotTrack) {
 <p>usage, customer, and engagement analytics</p>
 <h3 id="emr">EMR</h3>
 <p>hadoop, spark, and friends</p>
+<ul>
+<li><a href="https://aws.amazon.com/emr/pricing/?nc=sn&amp;loc=4">Amazon EMR Serverless</a>
+<ul>
+<li>part of the job specification, you can provide the minimum and maximum number of concurrent workers, and the vCPU, memory, and storage for each worker</li>
+<li>charged for aggregate vCPU, memory, and storage resources used from the time workers start executing till the time they terminate, rounded up to the nearest second with a one-minute minimum.</li>
+</ul>
+</li>
+</ul>
 <h3 id="data-pipelines">Data Pipelines</h3>
 <p>data processing workloads</p>
 <blockquote>
