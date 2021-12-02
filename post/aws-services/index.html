@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  6790 ,
+  "wordCount":  6815 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -831,15 +831,19 @@ if (!doNotTrack) {
 <h2 id="storage">Storage</h2>
 <h3 id="s3">S3</h3>
 <ul>
-<li>object/blob storage</li>
+<li>object/blob storage with strong read-after-write consistency</li>
 <li>versioned buckets</li>
 <li>presigned URLs for private content (download or upload)</li>
 <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3 batch operations</a></li>
 <li>S3 select</li>
+<li>Query via Athena</li>
 <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops-basics.html">batch operations</a> - perform operation on list of objects specified in manifest.  e.g. lambda, copy, etc.</li>
 <li>storage classes</li>
 <li>lifecycle rules - moving between storage tiers for cost savings</li>
-<li>access points - managing data access at scale, access points are unique hostnames, enforce distinct permissions and network controls for any request made through the access point, scale to many applications accessing bucket with own set of permissions.
+<li>access points - managing data access at scale, access points are unique hostnames, enforce distinct permissions and network controls for any request made through the access point, scale to many applications accessing bucket with own set of permissions.</li>
+<li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html">S3 Object Lock</a> - write-once-read-many (WORM) model.  retention periods and legal holds.</li>
+<li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html">static website hosting</a></li>
+<li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiRegionAccessPoints.html">Multi-Region Access Points</a>
 <ul>
 <li>addresses pain point- Managing access to this shared bucket requires a single bucket policy that controls access for dozens to hundreds of applications with different permission levels</li>
 <li><a href="https://aws.amazon.com/blogs/aws/s3-multi-region-access-points-accelerate-performance-availability/">Multi-Region access points</a></li>
