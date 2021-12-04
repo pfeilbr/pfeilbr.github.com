@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  6929 ,
+  "wordCount":  6983 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -989,6 +989,7 @@ if (!doNotTrack) {
 </li>
 <li><strong>Parameters</strong> field to create a collection of key-value pairs that are passed as input</li>
 <li><strong>ResultSelector</strong> field to manipulate a state&rsquo;s result before <code>ResultPath</code> is applied</li>
+<li><strong>OutputPath</strong> enables you to select a portion of the state output to pass to the next state</li>
 </ul>
 </li>
 <li>orchestration with many built-in integrations to aws services</li>
@@ -1628,7 +1629,15 @@ if (!doNotTrack) {
 <li>authentication, authorization</li>
 <li>actions and operations on resources</li>
 <li>policy docs - AWS managed policies, Customer managed policies, Inline policies</li>
-<li>Identity-based (e.g. users, groups, roles) and resource-based policies (e.g. bucket policy, lambda permissions, sns topic policy, sqs queue policy)</li>
+<li>Policy Types
+<ul>
+<li>Identity-based (e.g. users, groups, roles)</li>
+<li>Resource-based policies (e.g. bucket policy, IAM role trust policy, lambda permissions, sns topic policy, sqs queue policy, kms key policy, vpc endpoint policy)</li>
+<li>Permissions boundaries</li>
+<li>Organizations SCPs</li>
+<li>Session policies - via assume role or federated user.  Session policies limit permissions for a created session, but do not grant permissions.</li>
+</ul>
+</li>
 <li>STS - temp security credentials</li>
 <li>assume role</li>
 <li>identity federation - Federated users and roles (via OIDC, SAML2, Cognito)</li>
