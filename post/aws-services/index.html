@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  6815 ,
+  "wordCount":  6851 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -976,12 +976,18 @@ if (!doNotTrack) {
 <h3 id="step-functions">Step Functions</h3>
 <ul>
 <li>Standard Workflows vs Express Workflows</li>
+<li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-error-handling.html">error handling</a> and Retrying after an error</li>
 <li>orchestration with many built-in integrations to aws services</li>
 <li><a href="https://aws.amazon.com/blogs/aws/now-aws-step-functions-supports-200-aws-services-to-enable-easier-workflow-automation/">Step Functions AWS SDK Service Integrations</a></li>
+<li>full execution event history for a given execution</li>
+<li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/cw-logs.html">Logging using CloudWatch Logs</a></li>
+<li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/procedure-cloud-trail.html">Logging Step Functions Using AWS CloudTrail</a></li>
+<li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/procedure-cw-metrics.html">CloudWatch Metrics</a></li>
+<li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/cw-events.html">EventBridge Events</a> - Execution started, succeeded, failed, timed out, aborted</li>
+<li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-xray-tracing.html">X-Ray tracing support</a></li>
 <li>saga pattern for rollback</li>
 <li>parallel map opportunities - run tasks in parallel</li>
 <li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html#welcome-integrations">service integrations</a> - request/response, run a job (<code>.sync</code>), callback with task token (<code>.waitForTaskToken</code>)</li>
-<li>Step Functions Visual Designer in AWS Console</li>
 <li>JSONPath expressions</li>
 <li>Data flow simulator</li>
 <li><a href="https://aws.amazon.com/blogs/aws/new-aws-step-functions-workflow-studio-a-low-code-visual-tool-for-building-state-machines/">Step Functions Workflow Studio</a> - visual designer for state machines</li>
@@ -1099,6 +1105,7 @@ if (!doNotTrack) {
 <li>IAM - resource-based and identity-based policies.  owner of EB resources (bus, rules, etc.) is an AWS root account.</li>
 <li>supports sending and recieving events across accounts</li>
 <li><a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/create-partner-event-bus.html">SaaS Partner Integrations</a></li>
+<li><a href="https://aws.amazon.com/blogs/compute/using-aws-x-ray-tracing-with-amazon-eventbridge/">X-Ray Tracing support</a></li>
 </ul>
 <h3 id="kinesis">Kinesis</h3>
 <ul>
