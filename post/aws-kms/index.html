@@ -58,7 +58,7 @@
   "headline": "AWS KMS",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  15 ,
+  "wordCount":  238 ,
   "datePublished" : "2017-08-31T00:00:00",
   "dateModified" : "2017-08-31T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -321,6 +321,31 @@ if (!doNotTrack) {
 </div>
 <p>learn how to use kms to encrypt and decrypt data</p>
 <p>see <a href="index.js"><code>index.js</code></a></p>
+<h2 id="kms-key-policies">KMS Key Policies</h2>
+<ul>
+<li>Key policies are the primary way to control access to AWS KMS keys. Every KMS key must have exactly one key policy. The statements in the key policy document determine who has permission to use the KMS key and how they can use it.</li>
+<li>Every KMS key must have exactly one key policy</li>
+<li>Each key policy is effective only in the Region that hosts the KMS key.</li>
+<li>IAM policies by themselves are not sufficient to allow access to a KMS key, though you can use them in combination with a key policy.</li>
+<li>In a key policy, you use &ldquo;*&rdquo; for the resource, which effectively means &ldquo;this KMS key.&rdquo; A key policy applies only to the KMS key it is attached to.</li>
+</ul>
+<p>via <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html">Key policies in AWS KMS</a></p>
+<p>The following is needed to grant access to a key via an IAM policy.  For example, the following would need to exist on the key policy.
+Then you would need to grant access to the key via say a policy attached to a role.</p>
+<blockquote>
+<p>Allows the AWS account (root user) 111122223333 full access to the KMS key, and thus enables IAM policies in the account to allow access to the KMS key.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json">    <span class="p">{</span>
+      <span class="nt">&#34;Sid&#34;</span><span class="p">:</span> <span class="s2">&#34;Enable IAM policies&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;Effect&#34;</span><span class="p">:</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;Principal&#34;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&#34;AWS&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:iam::111122223333:root&#34;</span><span class="p">},</span>
+      <span class="nt">&#34;Action&#34;</span><span class="p">:</span> <span class="s2">&#34;kms:*&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;Resource&#34;</span><span class="p">:</span> <span class="s2">&#34;*&#34;</span>
+    <span class="p">}</span><span class="err">,</span>
+</code></pre></div><h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html">Key policies in AWS KMS</a></li>
+</ul>
 
 
         
@@ -590,7 +615,7 @@ if (!doNotTrack) {
 </script>
 
 <script>
-    const postCount= 248 
+    const postCount= 250 
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>

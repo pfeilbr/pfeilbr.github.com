@@ -7,7 +7,34 @@
         <description>Recent content in Categories on Brian Pfeil</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 06 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/categories/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Thu, 02 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://brianpfeil.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+<title>javascript</title>
+<link>https://brianpfeil.com/categories/javascript/</link>
+<pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/javascript/</guid>
+<description>javascript</description>
+</item>
+    
+    <item>
+<title>playground</title>
+<link>https://brianpfeil.com/categories/playground/</link>
+<pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/playground/</guid>
+<description>playground</description>
+</item>
+    
+    <item>
+<title>Python</title>
+<link>https://brianpfeil.com/categories/Python/</link>
+<pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://brianpfeil.com/categories/Python/</guid>
+<description>Python</description>
+</item>
+    
     <item>
 <title>&lt;nil&gt;</title>
 <link>https://brianpfeil.com/categories/nil/</link>
@@ -15,33 +42,6 @@
       
       <guid>https://brianpfeil.com/categories/nil/</guid>
 <description>&lt;nil&gt;</description>
-</item>
-    
-    <item>
-<title>playground</title>
-<link>https://brianpfeil.com/categories/playground/</link>
-<pubDate>Sat, 06 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/playground/</guid>
-<description>playground</description>
-</item>
-    
-    <item>
-<title>javascript</title>
-<link>https://brianpfeil.com/categories/javascript/</link>
-<pubDate>Mon, 20 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/javascript/</guid>
-<description>javascript</description>
-</item>
-    
-    <item>
-<title>Python</title>
-<link>https://brianpfeil.com/categories/Python/</link>
-<pubDate>Mon, 13 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://brianpfeil.com/categories/Python/</guid>
-<description>Python</description>
 </item>
     
     <item>

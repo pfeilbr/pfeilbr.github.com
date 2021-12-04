@@ -58,7 +58,7 @@
   "headline": "AWS CloudFormation",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  365 ,
+  "wordCount":  375 ,
   "datePublished" : "2019-08-14T00:00:00",
   "dateModified" : "2019-08-14T00:00:00",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -364,7 +364,13 @@ aws cloudformation deploy --template-file templates/s3-bucket.yaml --stack-name 
 
 <span class="c1"># list stack output values</span>
 aws cloudformation describe-stacks --stack-name s3-bucket-stack --query <span class="s2">&#34;Stacks[0].Outputs[].OutputValue&#34;</span>
-</code></pre></div><h3 id="dynamic-references-example">Dynamic References Example</h3>
+</code></pre></div><p><strong>common parameters</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">--parameter-overrides <span class="nv">Name</span><span class="o">=</span>Value
+
+--tags <span class="se">\
+</span><span class="se"></span>    <span class="nv">Key1</span><span class="o">=</span><span class="s2">&#34;Value1&#34;</span> <span class="se">\
+</span><span class="se"></span>    <span class="nv">Key2</span><span class="o">=</span><span class="s2">&#34;Value2&#34;</span> <span class="se">\
+</span></code></pre></div><h3 id="dynamic-references-example">Dynamic References Example</h3>
 <p>see <a href="templates/dynamic-references-ssm-secrets.yaml"><code>templates/dynamic-references-ssm-secrets.yaml</code></a> and <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager">Using Dynamic References to Specify Template Values
 </a></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># validate</span>
@@ -674,7 +680,7 @@ aws lambda invoke <span class="se">\
 </script>
 
 <script>
-    const postCount= 248 
+    const postCount= 250 
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>

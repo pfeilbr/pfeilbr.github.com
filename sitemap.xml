@@ -2,13 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://brianpfeil.com/categories/nil/</loc>
-    <lastmod>2021-11-06T00:00:00+00:00</lastmod>
+    <loc>https://brianpfeil.com/tags/aws/</loc>
+    <lastmod>2021-12-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/</loc>
-    <lastmod>2021-11-06T00:00:00+00:00</lastmod>
+    <lastmod>2021-12-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/categories/</loc>
+    <lastmod>2021-12-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/tags/iam/</loc>
+    <lastmod>2021-12-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/post/iamlive/</loc>
+    <lastmod>2021-12-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/categories/javascript/</loc>
+    <lastmod>2021-12-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/categories/playground/</loc>
+    <lastmod>2021-12-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/post/</loc>
+    <lastmod>2021-12-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/tags/</loc>
+    <lastmod>2021-12-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/tags/git/</loc>
+    <lastmod>2021-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/post/pre-commit/</loc>
+    <lastmod>2021-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/categories/Python/</loc>
+    <lastmod>2021-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://brianpfeil.com/categories/nil/</loc>
     <lastmod>2021-11-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/tags/cloudformation/</loc>
@@ -17,20 +47,8 @@
     <loc>https://brianpfeil.com/tags/infrastructure-as-code/</loc>
     <lastmod>2021-11-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://brianpfeil.com/categories/playground/</loc>
-    <lastmod>2021-11-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/post/</loc>
-    <lastmod>2021-11-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://brianpfeil.com/post/sceptre/</loc>
     <lastmod>2021-11-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/tags/</loc>
-    <lastmod>2021-11-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/tags/aws/</loc>
-    <lastmod>2021-10-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/post/aws-step-functions-aws-sdk-integration/</loc>
     <lastmod>2021-10-15T00:00:00+00:00</lastmod>
@@ -47,13 +65,7 @@
     <loc>https://brianpfeil.com/post/github-actions-configure-aws-credentials/</loc>
     <lastmod>2021-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://brianpfeil.com/tags/iam/</loc>
-    <lastmod>2021-10-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://brianpfeil.com/post/github-actions/</loc>
-    <lastmod>2021-09-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/categories/javascript/</loc>
     <lastmod>2021-09-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/post/ngrok/</loc>
@@ -69,9 +81,6 @@
     <lastmod>2021-09-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/tags/nlp/</loc>
-    <lastmod>2021-09-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/categories/Python/</loc>
     <lastmod>2021-09-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/tags/python/</loc>
@@ -375,9 +384,6 @@
     <lastmod>2020-10-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/post/aws-systems-manager-automation/</loc>
-    <lastmod>2020-10-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://brianpfeil.com/tags/git/</loc>
     <lastmod>2020-10-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://brianpfeil.com/post/github-cli/</loc>
