@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  6893 ,
+  "wordCount":  6929 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -980,6 +980,17 @@ if (!doNotTrack) {
 <li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-activities.html">Activities</a> - enables you to have a task in your state machine where the work is performed by a worker that can be hosted anywhere.</li>
 <li>start other <code>[sub]</code> workflows</li>
 <li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-error-handling.html">error handling</a> and Retrying after an error</li>
+<li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html">Input/Output Processing</a>
+<ul>
+<li>
+<ul>
+<li><strong>InputPath</strong> to select a portion of the state input</li>
+</ul>
+</li>
+<li><strong>Parameters</strong> field to create a collection of key-value pairs that are passed as input</li>
+<li><strong>ResultSelector</strong> field to manipulate a state&rsquo;s result before <code>ResultPath</code> is applied</li>
+</ul>
+</li>
 <li>orchestration with many built-in integrations to aws services</li>
 <li><a href="https://aws.amazon.com/blogs/aws/now-aws-step-functions-supports-200-aws-services-to-enable-easier-workflow-automation/">Step Functions AWS SDK Service Integrations</a></li>
 <li>full execution event history for a given execution</li>
