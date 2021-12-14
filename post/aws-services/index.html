@@ -59,7 +59,7 @@
   "headline": "AWS Services",
   "description" : "short descriptions for key AWS Services",
   "inLanguage" : "en",
-  "wordCount":  6983 ,
+  "wordCount":  7356 ,
   "datePublished" : "2020-03-29T09:40:13",
   "dateModified" : "2020-03-29T09:40:13",
   "image" : "https:\/\/brianpfeil.com\/",
@@ -728,6 +728,14 @@ if (!doNotTrack) {
 <li>When you run your tasks and services with the Fargate launch type, you package your application in containers, specify the CPU and memory requirements, define networking and IAM policies, and launch the application.</li>
 <li>Amazon ECS tasks for Fargate can authenticate with private image registries, including Docker Hub, using basic authentication. When you enable private registry authentication, you can use private Docker images in your task definitions.</li>
 <li>Fargate Spot - you can run interruption tolerant Amazon ECS tasks at a discounted rate compared to the Fargate price. Fargate Spot runs tasks on spare compute capacity. When AWS needs the capacity back, your tasks will be interrupted with a two-minute warning.</li>
+<li>ECS Service - desired task count.  allows you to run and maintain a specified number of instances of a task definition simultaneously in an Amazon ECS cluster. If any of your tasks should fail or stop for any reason, the Amazon ECS service scheduler launches another instance of your task definition to replace it in order to maintain the desired number of tasks in the service.
+<ul>
+<li>optionally front with ALB</li>
+<li><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-auto-scaling.html">Service autoscaling</a> is done using the Application Auto Scaling service.  See <a href="https://aws.amazon.com/premiumsupport/knowledge-center/ecs-fargate-service-auto-scaling/">How can I configure Amazon ECS Service Auto Scaling on Fargate?</a></li>
+</ul>
+</li>
+<li>Multi AZ by default - <em>Fargate will look to spread Task placement across all available Availability Zones</em></li>
+<li><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html">Deployment types</a> - rolling update, blue/green (via CodeDeploy)</li>
 </ul>
 <h3 id="batch">Batch</h3>
 <ul>
@@ -947,8 +955,36 @@ if (!doNotTrack) {
 <h3 id="timestream">Timestream</h3>
 <ul>
 <li>time series database</li>
+<li>use <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/reference.html">SQL to query</a></li>
+<li>Concepts
+<ul>
+<li><strong>Time series</strong> - A sequence of one or more data points (or records) recorded over a time interval.</li>
+<li><strong>Record</strong> - A single data point in a time series
+<ul>
+<li><strong>Multi-measure</strong> records - store multiple measures in a single table row, instead of storing one measure per table row</li>
+</ul>
+</li>
+<li><strong>Dimension</strong> - An attribute that describes the meta-data of a time series. A dimension consists of a dimension name and a dimension value.</li>
+<li><strong>Measure</strong> - The actual value being measured by the record. Examples are the stock price, the CPU or memory utilization, and the temperature or humidity reading</li>
+<li><strong>Timestamp</strong> - Indicates when a measure was collected for a given record</li>
+<li><strong>Table</strong> - A container for a set of related time series.</li>
+<li><strong>Database</strong> - A top level container for tables.</li>
+<li><strong>Scheduled Query</strong> - Timestream periodically and automatically runs these queries and reliably writes the query results into a separate table.  serverless and fully managed
+<ul>
+<li><strong>Query string</strong> - query to run</li>
+<li><strong>Schedule expression</strong> - when your scheduled query instances are run.  using a cron expression</li>
+<li><strong>Target configuration</strong> - map the result of a scheduled query into the destination table where the results of this scheduled query will be stored.</li>
+<li><strong>Notification configuration</strong> - receive a notification for every such query run on an SNS topic that you configure when you create a scheduled query.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>fully decoupled data ingestion, storage, and query architecture where each component can scale independent of other components</li>
+<li>storage tiering, with a memory store for recent data and a magnetic store for historical data</li>
 <li>InfluxDB, Prometheus, Riak</li>
 </ul>
+<p><img src="https://docs.aws.amazon.com/timestream/latest/developerguide/images/concepts_simple.png" alt=""></p>
+<p><img src="https://docs.aws.amazon.com/timestream/latest/developerguide/images/ts-architecture.png" alt=""></p>
 <h3 id="cloud-directory">Cloud Directory</h3>
 <ul>
 <li>cloud-native directory that can store hundreds of millions of application-specific objects with multiple relationships and schemas</li>
@@ -1640,7 +1676,7 @@ if (!doNotTrack) {
 </li>
 <li>STS - temp security credentials</li>
 <li>assume role</li>
-<li>identity federation - Federated users and roles (via OIDC, SAML2, Cognito)</li>
+<li>identity providers/federation - Federated users and roles (via OIDC, SAML2)</li>
 <li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_attribute-based-access-control.html">Attribute-based access control (ABAC)</a> - defines permissions based on attributes (tags)</li>
 <li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html">permission boundaries</a></li>
 <li>sigv4 requests</li>
