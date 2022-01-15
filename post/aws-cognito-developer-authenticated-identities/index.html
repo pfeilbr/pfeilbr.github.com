@@ -1,375 +1,182 @@
-<!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/WebPage">
-  <head>
-    
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
-  <title>AWS Cognito Developer Authenticated Identities - Brian Pfeil</title>
-  <meta name="author" content="Brian Pfeil"/><script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    "name": "Brian Pfeil",
-    
-    "url": "https:\/\/brianpfeil.com\/"
-}
-</script><script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Organization",
-  "name": "",
-  "url": "https:\/\/brianpfeil.com\/"
-  
-  
-  
-  
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@id": "https:\/\/brianpfeil.com\/",
-          "name": "home"
-        }
-    },{
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@id": "https:\/\/brianpfeil.com\/post\/aws-cognito-developer-authenticated-identities\/",
-          "name": "Aws cognito developer authenticated identities"
-        }
-    }]
-}
-</script><script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Article",
-  "author": {
-    "name" : "Brian Pfeil"
-  },
-  "headline": "AWS Cognito Developer Authenticated Identities",
-  "description" : "",
-  "inLanguage" : "en",
-  "wordCount":  179 ,
-  "datePublished" : "2019-09-26T00:00:00",
-  "dateModified" : "2019-09-26T00:00:00",
-  "image" : "https:\/\/brianpfeil.com\/",
-  "keywords" : [ "aws, cognito" ],
-  "mainEntityOfPage" : "https:\/\/brianpfeil.com\/post\/aws-cognito-developer-authenticated-identities\/",
-  "publisher" : {
-    "@type": "Organization",
-    "name" : "https:\/\/brianpfeil.com\/",
-    "logo" : {
-        "@type" : "ImageObject",
-        "url" : "https:\/\/brianpfeil.com\/",
-        "height" :  60 ,
-        "width" :  60
-    }
-  }
-}
-</script>
-
-<meta property="og:title" content="AWS Cognito Developer Authenticated Identities" />
-<meta property="og:url" content="https://brianpfeil.com/post/aws-cognito-developer-authenticated-identities/" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Brian Pfeil" />
-
-  <meta name="twitter:title" content="AWS Cognito Developer Authenticated Identities" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@pfeilbr" />
-  <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.88.1" />
-  <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-  <link rel="stylesheet" href="https://brianpfeil.com/css/highlight.min.css" /><link rel="stylesheet" href="https://brianpfeil.com/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
-<link rel="stylesheet" href="https://brianpfeil.com/css/custom.css" />
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-610553-4', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-  </head>
-  <body>
-    <nav class="navbar navbar-default navbar-custom">
-  <div class="container-fluid">
-    <div class="navbar-header">
-
-
-
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-
-      
-      <a class="navbar-brand" href="https://brianpfeil.com/">Brian Pfeil</a>
-      
-      
-    </div>
-
-    <div class="collapse navbar-collapse" id="main-navbar">
-
-      <ul class="nav navbar-nav navbar-right">
-        
-        
-        <li>
-          <a title="about" href="/about/">about</a>
-        </li>
-        
-
-        
-        
-        <li>
-          <a title="posts" href="/">posts</a>
-        </li>
-        
-
-        
-        
-        <li>
-          <a title="projects" href="/projects/">projects</a>
-        </li>
-        
-
-        
-        
-        <li>
-          <a title="tags" href="/tags/">tags</a>
-        </li>
-        
-
-        
-
-        
-
-        
-
-        <li>
-          
-          <a id="dark-mode-toggle">
-            <i class="fa fa-moon hidden" id="dark-mode-enabled-icon" aria-hidden="true"></i>
-            <i class="fa fa-sun hidden" id="dark-mode-disabled-icon" aria-hidden="true"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    
-
-  </div>
+<!doctype html><html lang=en itemscope itemtype=http://schema.org/WebPage>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>AWS Cognito Developer Authenticated Identities - Brian Pfeil</title>
+<meta name=author content="Brian Pfeil"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"Brian Pfeil","url":"https:\/\/brianpfeil.com\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/brianpfeil.com\/"}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/brianpfeil.com\/","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/brianpfeil.com\/post\/aws-cognito-developer-authenticated-identities\/","name":"Aws cognito developer authenticated identities"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Brian Pfeil"},"headline":"AWS Cognito Developer Authenticated Identities","description":"","inLanguage":"en","wordCount":179,"datePublished":"2019-09-26T00:00:00","dateModified":"2019-09-26T00:00:00","image":"https:\/\/brianpfeil.com\/","keywords":["aws, cognito"],"mainEntityOfPage":"https:\/\/brianpfeil.com\/post\/aws-cognito-developer-authenticated-identities\/","publisher":{"@type":"Organization","name":"https:\/\/brianpfeil.com\/","logo":{"@type":"ImageObject","url":"https:\/\/brianpfeil.com\/","height":60,"width":60}}}</script>
+<meta property="og:title" content="AWS Cognito Developer Authenticated Identities">
+<meta property="og:url" content="https://brianpfeil.com/post/aws-cognito-developer-authenticated-identities/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Brian Pfeil">
+<meta name=twitter:title content="AWS Cognito Developer Authenticated Identities">
+<meta name=twitter:card content="summary">
+<meta name=twitter:site content="@pfeilbr">
+<meta name=twitter:creator content="@pfeilbr">
+<meta name=generator content="Hugo 0.92.0">
+<link rel=alternate href=https://brianpfeil.com/index.xml type=application/rss+xml title="Brian Pfeil"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css integrity=sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y crossorigin=anonymous>
+<link rel=stylesheet href=https://use.fontawesome.com/releases/v5.5.0/css/all.css integrity=sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU crossorigin=anonymous>
+<link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous><link rel=stylesheet href=https://brianpfeil.com/css/main.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+<link rel=stylesheet href=https://brianpfeil.com/css/highlight.min.css><link rel=stylesheet href=https://brianpfeil.com/css/codeblock.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css integrity=sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css integrity=sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R crossorigin=anonymous>
+<link rel=stylesheet href=https://brianpfeil.com/css/custom.css>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-610553-4','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-custom">
+<div class=container-fluid>
+<div class=navbar-header>
+<button type=button class=navbar-toggle data-toggle=collapse data-target=#main-navbar>
+<span class=sr-only>Toggle navigation</span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+</button>
+<a class=navbar-brand href=https://brianpfeil.com/>Brian Pfeil</a>
+</div>
+<div class="collapse navbar-collapse" id=main-navbar>
+<ul class="nav navbar-nav navbar-right">
+<li>
+<a title=about href=/about/>about</a>
+</li>
+<li>
+<a title=posts href=/>posts</a>
+</li>
+<li>
+<a title=projects href=/projects/>projects</a>
+</li>
+<li>
+<a title=tags href=/tags/>tags</a>
+</li>
+<li>
+<a id=dark-mode-toggle>
+<i class="fa fa-moon hidden" id=dark-mode-enabled-icon aria-hidden=true></i>
+<i class="fa fa-sun hidden" id=dark-mode-disabled-icon aria-hidden=true></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
 </nav>
-
-
-
-    
-
-
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-<div class="pswp__bg"></div>
-
-<div class="pswp__scroll-wrap">
-    
-    <div class="pswp__container">
-      <div class="pswp__item"></div>
-      <div class="pswp__item"></div>
-      <div class="pswp__item"></div>
-    </div>
-    
-    <div class="pswp__ui pswp__ui--hidden">
-    <div class="pswp__top-bar">
-      
-      <div class="pswp__counter"></div>
-      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-      <button class="pswp__button pswp__button--share" title="Share"></button>
-      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-      
-      
-      <div class="pswp__preloader">
-        <div class="pswp__preloader__icn">
-          <div class="pswp__preloader__cut">
-            <div class="pswp__preloader__donut"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-      <div class="pswp__share-tooltip"></div>
-    </div>
-    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-    </button>
-    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-    </button>
-    <div class="pswp__caption">
-      <div class="pswp__caption__center"></div>
-    </div>
-    </div>
-    </div>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<header class="header-section ">
-  
-  <div class="intro-header no-img">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <div class="post-heading">
-            
-
-            
-            
-            <h1>AWS Cognito Developer Authenticated Identities</h1>
-            
-
-
-
-            
-            
-            
-            
-            <span class="post-meta">
-  
-  
-
-    September 26, 2019
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    ,
-    
-    <a href="https://brianpfeil.com//tags/cognito/">cognito</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div>
+<header class=header-section>
+<div class="intro-header no-img">
+<div class=container>
+<div class=row>
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<div class=post-heading>
+<h1>AWS Cognito Developer Authenticated Identities</h1>
+<span class=post-meta>
+September 26, 2019
+<span class=blog-tags>
+&nbsp;&bull;&nbsp;
+<a href=https://brianpfeil.com//tags/aws/>aws</a>
+,
+<a href=https://brianpfeil.com//tags/cognito/>cognito</a>
 </span>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-
-    
-
-<div class="container" role="main">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <article role="main" class="blog-post">
-        <div class="alert alert-info small bg-info" role="alert">
-<span class="text-muted">code for article</span>&nbsp;<a href="https://github.com/pfeilbr/aws-cognito-developer-authenticated-identities-playground" target="_blank"><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/aws-cognito-developer-authenticated-identities-playground</a>
+</span>
 </div>
-<p>learn <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/developer-authenticated-identities.html">Developer Authenticated Identities (Identity Pools)</a></p>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class=container role=main>
+<div class=row>
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<article role=main class=blog-post>
+<div class="alert alert-info small bg-info" role=alert>
+<span class=text-muted>code for article</span>&nbsp;<a href=https://github.com/pfeilbr/aws-cognito-developer-authenticated-identities-playground target=_blank><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/aws-cognito-developer-authenticated-identities-playground</a>
+</div>
+<p>learn <a href=https://docs.aws.amazon.com/cognito/latest/developerguide/developer-authenticated-identities.html>Developer Authenticated Identities (Identity Pools)</a></p>
 <blockquote>
 <p>With developer authenticated identities, you can register and authenticate users via your own existing authentication process, while still using Amazon Cognito to synchronize user data and access AWS resources.</p>
 </blockquote>
-<h2 id="example-using-aws-cli">Example using AWS CLI</h2>
+<h2 id=example-using-aws-cli>Example using AWS CLI</h2>
 <ol>
 <li>
 <p>Add custom authentication provider (<code>DEVELOPER_PROVIDER_NAME</code>) to your identity pool via &ldquo;Edit identity pool&rdquo; UI</p>
-<p><img src="https://www.evernote.com/l/AAF_NlVpnfROCK-Jim33jq2iewvgWWp6LW8B/image.png" alt=""></p>
+<p><img src=https://www.evernote.com/l/AAF_NlVpnfROCK-Jim33jq2iewvgWWp6LW8B/image.png alt></p>
 </li>
 <li>
 <p>setup shell variables</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">IDENTITY_POOL_ID</span><span class="o">=</span><span class="s2">&#34;us-east-1:335c1f44-87c9-4bbd-a314-93b47d91fadd&#34;</span>
-<span class="nv">DEVELOPER_PROVIDER_NAME</span><span class="o">=</span>com.brianpfeil.app01
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=nv>IDENTITY_POOL_ID</span><span class=o>=</span><span class=s2>&#34;us-east-1:335c1f44-87c9-4bbd-a314-93b47d91fadd&#34;</span>
+<span class=nv>DEVELOPER_PROVIDER_NAME</span><span class=o>=</span>com.brianpfeil.app01
 
-<span class="c1"># this is YOUR applications userid</span>
-<span class="nv">DEVELOPER_PROVIDER_USERID</span><span class="o">=</span><span class="m">003</span>
+<span class=c1># this is YOUR applications userid</span>
+<span class=nv>DEVELOPER_PROVIDER_USERID</span><span class=o>=</span><span class=m>003</span>
 </code></pre></div></li>
 <li>
 <p>create identity</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">aws cognito-identity get-open-id-token-for-developer-identity --identity-pool-id <span class="nv">$IDENTITY_POOL_ID</span> --logins <span class="s2">&#34;</span><span class="nv">$DEVELOPER_PROVIDER_NAME</span><span class="s2">=</span><span class="nv">$DEVELOPER_PROVIDER_USERID</span><span class="s2">&#34;</span>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>aws cognito-identity get-open-id-token-for-developer-identity --identity-pool-id <span class=nv>$IDENTITY_POOL_ID</span> --logins <span class=s2>&#34;</span><span class=nv>$DEVELOPER_PROVIDER_NAME</span><span class=s2>=</span><span class=nv>$DEVELOPER_PROVIDER_USERID</span><span class=s2>&#34;</span>
 </code></pre></div><p>example output</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-    <span class="nt">&#34;Token&#34;</span><span class="p">:</span> <span class="s2">&#34;eyJraWQiOiJ1cy1lYXN0LTExIiwidHlwIjoiSldTIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJ1cy1lYXN0LTE6YWVjYjU4YTgtMjc3Ni00NDMxLTk3OGMtZDYzOTVlMWI1Mzc5IiwiYXVkIjoidXMtZWFzdC0xOjMzNWMxZjQ0LTg3YzktNGJiZC1hMzE0LTkzYjQ3ZDkxZmFkZCIsImFtciI6WyJhdXRoZW50aWNhdGVkIiwiY29tLmJyaWFucGZlaWwuYXBwMDEiLCJjb20uYnJpYW5wZmVpbC5hcHAwMTp1cy1lYXN0LTE6MzM1YzFmNDQtODdjOS00YmJkLWEzMTQtOTNiNDdkOTFmYWRkOjAwMyJdLCJpc3MiOiJodHRwczovL2NvZ25pdG8taWRlbnRpdHkuYW1hem9uYXdzLmNvbSIsImV4cCI6MTU2OTUyMzg3NSwiaWF0IjoxNTY5NTIyOTc1fQ.F6ST-AQWETHUAAR7JM-IU1ZIFLDEVL9ZBNM49WDOL_RXLLCYEY2KYUICHSGYLERD4WWLHWEJG-AOHFMMS0DUXT-UANA3BENUFFZWWSBAYVD0N2BHCLHZG7PURTRKRDN2XRFGDGQQ2PIMURMWAIPSB0ZCM-EXMSV-QAGOGKE5C2QR0P91BICL_LB1OQRTF9VXANPEMFFSAMZED776WHKR8ZMP7NTXZBMRE453QFW7VGVNKV3KJDTAKSRVZJS6YVW7BXY74_OQUJCFF9KWXJSMTEBNOIMHEFI3LJ25HSDDJ4LMLBGODD_ET4PPSUORIVLGW4UQ-7PJYHCAYTBDV0MXAQ&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;IdentityId&#34;</span><span class="p">:</span> <span class="s2">&#34;us-east-1:aecb58a8-2776-4431-978c-d6395e1b5379&#34;</span>
-<span class="p">}</span>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=p>{</span>
+    <span class=nt>&#34;Token&#34;</span><span class=p>:</span> <span class=s2>&#34;eyJraWQiOiJ1cy1lYXN0LTExIiwidHlwIjoiSldTIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJ1cy1lYXN0LTE6YWVjYjU4YTgtMjc3Ni00NDMxLTk3OGMtZDYzOTVlMWI1Mzc5IiwiYXVkIjoidXMtZWFzdC0xOjMzNWMxZjQ0LTg3YzktNGJiZC1hMzE0LTkzYjQ3ZDkxZmFkZCIsImFtciI6WyJhdXRoZW50aWNhdGVkIiwiY29tLmJyaWFucGZlaWwuYXBwMDEiLCJjb20uYnJpYW5wZmVpbC5hcHAwMTp1cy1lYXN0LTE6MzM1YzFmNDQtODdjOS00YmJkLWEzMTQtOTNiNDdkOTFmYWRkOjAwMyJdLCJpc3MiOiJodHRwczovL2NvZ25pdG8taWRlbnRpdHkuYW1hem9uYXdzLmNvbSIsImV4cCI6MTU2OTUyMzg3NSwiaWF0IjoxNTY5NTIyOTc1fQ.F6ST-AQWETHUAAR7JM-IU1ZIFLDEVL9ZBNM49WDOL_RXLLCYEY2KYUICHSGYLERD4WWLHWEJG-AOHFMMS0DUXT-UANA3BENUFFZWWSBAYVD0N2BHCLHZG7PURTRKRDN2XRFGDGQQ2PIMURMWAIPSB0ZCM-EXMSV-QAGOGKE5C2QR0P91BICL_LB1OQRTF9VXANPEMFFSAMZED776WHKR8ZMP7NTXZBMRE453QFW7VGVNKV3KJDTAKSRVZJS6YVW7BXY74_OQUJCFF9KWXJSMTEBNOIMHEFI3LJ25HSDDJ4LMLBGODD_ET4PPSUORIVLGW4UQ-7PJYHCAYTBDV0MXAQ&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;IdentityId&#34;</span><span class=p>:</span> <span class=s2>&#34;us-east-1:aecb58a8-2776-4431-978c-d6395e1b5379&#34;</span>
+<span class=p>}</span>
 </code></pre></div></li>
 <li>
 <p>get token</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">aws cognito-identity get-open-id-token-for-developer-identity --identity-pool-id <span class="nv">$IDENTITY_POOL_ID</span> --identity-id  <span class="nv">$IDENTITY_ID</span> --logins <span class="s2">&#34;</span><span class="nv">$DEVELOPER_PROVIDER_NAME</span><span class="s2">=</span><span class="nv">$DEVELOPER_PROVIDER_USERID</span><span class="s2">&#34;</span>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>aws cognito-identity get-open-id-token-for-developer-identity --identity-pool-id <span class=nv>$IDENTITY_POOL_ID</span> --identity-id  <span class=nv>$IDENTITY_ID</span> --logins <span class=s2>&#34;</span><span class=nv>$DEVELOPER_PROVIDER_NAME</span><span class=s2>=</span><span class=nv>$DEVELOPER_PROVIDER_USERID</span><span class=s2>&#34;</span>
 </code></pre></div><p>example output</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-    <span class="nt">&#34;Token&#34;</span><span class="p">:</span> <span class="s2">&#34;eyJraWQiOiJ1cy1lYXN0LTExIiwidHlwIjoiSldTIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJ1cy1lYXN0LTE6YWVjYjU4YTgtMjc3Ni00NDMxLTk3OGMtZDYzOTVlMWI1Mzc5IiwiYXVkIjoidXMtZWFzdC0xOjMzNWMxZjQ0LTg3YzktNGJiZC1hMzE0LTkzYjQ3ZDkxZmFkZCIsImFtciI6WyJhdXRoZW50aWNhdGVkIiwiY29tLmJyaWFucGZlaWwuYXBwMDEiLCJjb20uYnJpYW5wZmVpbC5hcHAwMTp1cy1lYXN0LTE6MzM1YzFmNDQtODdjOS00YmJkLWEzMTQtOTNiNDdkOTFmYWRkOjAwMyJdLCJpc3MiOiJodHRwczovL2NvZ25pdG8taWRlbnRpdHkuYW1hem9uYXdzLmNvbSIsImV4cCI6MTU2OTUyNDg5OCwiaWF0IjoxNTY5NTIzOTk4fQ.S8JRKAALQZV0FT0GX6WDBE2EZUH2UPHIJLQ1AX9_PQBXLDM4V7UFFVUDXMHGHMZ2T4VMC6R2ILUJATYO05EIKB4HKWPEHSJWHAT8ZUQ9MRVEZ4KJFAY-7ER4LCGKN8MW-ZTZWQRPXUAYGP3RHQFYDV7FGJCJ3GE-MTTCBGXRAY_0H8NNOQE2F1WRO0KPE-Q-8GXF2P89WGFM9FAHZYOBV0FCZYOH8LCAZ7CKQJQ6FO8NYIAQDXDWFJM5-SLMPRYJLBIW88PBLO00ASOP5OGTHFD61JJCUUXFDRB6UTUGM-RUNILJRCTZB5_AB0FXS2YWAG2YZ3_JOFPWDLL-FNQ2UA&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;IdentityId&#34;</span><span class="p">:</span> <span class="s2">&#34;us-east-1:aecb58a8-2776-4431-978c-d6395e1b5379&#34;</span>
-<span class="p">}</span>    
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=p>{</span>
+    <span class=nt>&#34;Token&#34;</span><span class=p>:</span> <span class=s2>&#34;eyJraWQiOiJ1cy1lYXN0LTExIiwidHlwIjoiSldTIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJ1cy1lYXN0LTE6YWVjYjU4YTgtMjc3Ni00NDMxLTk3OGMtZDYzOTVlMWI1Mzc5IiwiYXVkIjoidXMtZWFzdC0xOjMzNWMxZjQ0LTg3YzktNGJiZC1hMzE0LTkzYjQ3ZDkxZmFkZCIsImFtciI6WyJhdXRoZW50aWNhdGVkIiwiY29tLmJyaWFucGZlaWwuYXBwMDEiLCJjb20uYnJpYW5wZmVpbC5hcHAwMTp1cy1lYXN0LTE6MzM1YzFmNDQtODdjOS00YmJkLWEzMTQtOTNiNDdkOTFmYWRkOjAwMyJdLCJpc3MiOiJodHRwczovL2NvZ25pdG8taWRlbnRpdHkuYW1hem9uYXdzLmNvbSIsImV4cCI6MTU2OTUyNDg5OCwiaWF0IjoxNTY5NTIzOTk4fQ.S8JRKAALQZV0FT0GX6WDBE2EZUH2UPHIJLQ1AX9_PQBXLDM4V7UFFVUDXMHGHMZ2T4VMC6R2ILUJATYO05EIKB4HKWPEHSJWHAT8ZUQ9MRVEZ4KJFAY-7ER4LCGKN8MW-ZTZWQRPXUAYGP3RHQFYDV7FGJCJ3GE-MTTCBGXRAY_0H8NNOQE2F1WRO0KPE-Q-8GXF2P89WGFM9FAHZYOBV0FCZYOH8LCAZ7CKQJQ6FO8NYIAQDXDWFJM5-SLMPRYJLBIW88PBLO00ASOP5OGTHFD61JJCUUXFDRB6UTUGM-RUNILJRCTZB5_AB0FXS2YWAG2YZ3_JOFPWDLL-FNQ2UA&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;IdentityId&#34;</span><span class=p>:</span> <span class=s2>&#34;us-east-1:aecb58a8-2776-4431-978c-d6395e1b5379&#34;</span>
+<span class=p>}</span>    
 </code></pre></div></li>
 <li>
 <p>get credentials</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">aws cognito-identity get-credentials-for-identity --identity-id <span class="nv">$IDENTITY_ID</span> --logins <span class="s2">&#34;cognito-identity.amazonaws.com=</span><span class="nv">$TOKEN</span><span class="s2">&#34;</span>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>aws cognito-identity get-credentials-for-identity --identity-id <span class=nv>$IDENTITY_ID</span> --logins <span class=s2>&#34;cognito-identity.amazonaws.com=</span><span class=nv>$TOKEN</span><span class=s2>&#34;</span>
 </code></pre></div><p>example output</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-    <span class="nt">&#34;Credentials&#34;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&#34;SecretKey&#34;</span><span class="p">:</span> <span class="s2">&#34;U6hHM5cdTBjcXG3hxb6VcIwkijvskj72M+81CHBi&#34;</span><span class="p">,</span>
-        <span class="nt">&#34;SessionToken&#34;</span><span class="p">:</span> <span class="s2">&#34;AgoJb3JpZ2luX2VjEIv//////////wEaCXVzLWVhc3QtMSJHMEUCIBbT6h4a8ZGV4lCrmmTIulJJkG9PnVCx4Cy2ddoU06ROAiEAzFVPpVhXwV3HAqhif23WOyn7j6I3sH4oCJjV6xZdK/gq3wQIZBAAGgw1MjkyNzYyMTQyMzAiDL0IwoimnbzRFyLAAiq8BIZJyKSEKLiEYpr45CDmkze7rxFb15buX2/L/9RGiAEThi0SmPF4eq+92c3UAsV7gkqajqdYHTEkksErAHrEAyyxLg62X6csqcAUo2rxdjvcG020qAbIEQ4d9m7ZfdZtsb9ByedAHCeJBNpDuIxio7EZfnfB/CUzElgLhWBIsWp+/3xCLoT4D2ElkfmjFEQ2Or6Hy/vcSc+ypaHIaaDN7bRrUDfZDFGkJaypqg7TKfCz8W1NV8UGjkc03x3EtxEawHb9om8Nb6KjZOjRoZf9HL9U4BGaHGmkx2Jlp2VB5k2zZks5+u2udZYDyYCrKOT+9Af+4KAyMtfooBfmvkY+n1hoS/7bgW1NgOGTPOfO7oTbuBBwCdtdN5EdJGkWmQDF0//y/m37kv6aPGefyc8XPz2gK1insPp67J/S1mGpMkSgLMijw60JkY2JZLc1shZg8hNZjxCnLd+ADMwxj27/jro/vypng8bq/9zQHCQT0NrH3PUrvyYdDjXo/58DLYLb8hoQmHx0gMBACdmcL9f3v0mNdi0rPKFuOtxOw9Z136cotgZeeRiQvJeRATQ2c8rUNWM2O4duc9+0CxguDZlvLpo+p3XsOPD8Ti5BS89R2lIU0p8iiNhCdHbp41ISxEzYNG4kFjw6uLnHM7Icni98K+QRTNQTISPNZTLALCFRNGEHFTJ3T7SMY0MPLV1EF7MODNOWMTO9SFJP0ITA5RQ6VXWLN6PU8II2OGXUSTWU9VGWG+AYUOKS5AKOQ5JVMIWTTOWFORQBWWGQ8G2OBX9WQLE7KCJHV7PEEQX2Z7/IY9SHDLV1MNP7SQBPJKS+MPGCK+DLCL8ZBMJLZCEL4H7VMIV+9TMCPK9J3LADATRGXCFYXEMMXLXG0YIK8GBTLU8QRJFYKWEDMZHARZ8MGRIOT7I9RSI6DAIBKWRNSKJ/EWTI4AJNQJLIDUAMOPBUDIUSJQHA5/WQMHQHORMYEKTXZBC2+8VAGR+WGL2F48IDWFFGWI1FS7UK7OFR&#34;</span><span class="p">,</span>
-        <span class="nt">&#34;Expiration&#34;</span><span class="p">:</span> <span class="mf">1569527701.0</span><span class="p">,</span>
-        <span class="nt">&#34;AccessKeyId&#34;</span><span class="p">:</span> <span class="s2">&#34;ASIAXWO2SDPLARQRZ55K&#34;</span>
-    <span class="p">},</span>
-    <span class="nt">&#34;IdentityId&#34;</span><span class="p">:</span> <span class="s2">&#34;us-east-1:aecb58a8-2776-4431-978c-d6395e1b5379&#34;</span>
-<span class="p">}</span>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=p>{</span>
+    <span class=nt>&#34;Credentials&#34;</span><span class=p>:</span> <span class=p>{</span>
+        <span class=nt>&#34;SecretKey&#34;</span><span class=p>:</span> <span class=s2>&#34;U6hHM5cdTBjcXG3hxb6VcIwkijvskj72M+81CHBi&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;SessionToken&#34;</span><span class=p>:</span> <span class=s2>&#34;AgoJb3JpZ2luX2VjEIv//////////wEaCXVzLWVhc3QtMSJHMEUCIBbT6h4a8ZGV4lCrmmTIulJJkG9PnVCx4Cy2ddoU06ROAiEAzFVPpVhXwV3HAqhif23WOyn7j6I3sH4oCJjV6xZdK/gq3wQIZBAAGgw1MjkyNzYyMTQyMzAiDL0IwoimnbzRFyLAAiq8BIZJyKSEKLiEYpr45CDmkze7rxFb15buX2/L/9RGiAEThi0SmPF4eq+92c3UAsV7gkqajqdYHTEkksErAHrEAyyxLg62X6csqcAUo2rxdjvcG020qAbIEQ4d9m7ZfdZtsb9ByedAHCeJBNpDuIxio7EZfnfB/CUzElgLhWBIsWp+/3xCLoT4D2ElkfmjFEQ2Or6Hy/vcSc+ypaHIaaDN7bRrUDfZDFGkJaypqg7TKfCz8W1NV8UGjkc03x3EtxEawHb9om8Nb6KjZOjRoZf9HL9U4BGaHGmkx2Jlp2VB5k2zZks5+u2udZYDyYCrKOT+9Af+4KAyMtfooBfmvkY+n1hoS/7bgW1NgOGTPOfO7oTbuBBwCdtdN5EdJGkWmQDF0//y/m37kv6aPGefyc8XPz2gK1insPp67J/S1mGpMkSgLMijw60JkY2JZLc1shZg8hNZjxCnLd+ADMwxj27/jro/vypng8bq/9zQHCQT0NrH3PUrvyYdDjXo/58DLYLb8hoQmHx0gMBACdmcL9f3v0mNdi0rPKFuOtxOw9Z136cotgZeeRiQvJeRATQ2c8rUNWM2O4duc9+0CxguDZlvLpo+p3XsOPD8Ti5BS89R2lIU0p8iiNhCdHbp41ISxEzYNG4kFjw6uLnHM7Icni98K+QRTNQTISPNZTLALCFRNGEHFTJ3T7SMY0MPLV1EF7MODNOWMTO9SFJP0ITA5RQ6VXWLN6PU8II2OGXUSTWU9VGWG+AYUOKS5AKOQ5JVMIWTTOWFORQBWWGQ8G2OBX9WQLE7KCJHV7PEEQX2Z7/IY9SHDLV1MNP7SQBPJKS+MPGCK+DLCL8ZBMJLZCEL4H7VMIV+9TMCPK9J3LADATRGXCFYXEMMXLXG0YIK8GBTLU8QRJFYKWEDMZHARZ8MGRIOT7I9RSI6DAIBKWRNSKJ/EWTI4AJNQJLIDUAMOPBUDIUSJQHA5/WQMHQHORMYEKTXZBC2+8VAGR+WGL2F48IDWFFGWI1FS7UK7OFR&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;Expiration&#34;</span><span class=p>:</span> <span class=mf>1569527701.0</span><span class=p>,</span>
+        <span class=nt>&#34;AccessKeyId&#34;</span><span class=p>:</span> <span class=s2>&#34;ASIAXWO2SDPLARQRZ55K&#34;</span>
+    <span class=p>},</span>
+    <span class=nt>&#34;IdentityId&#34;</span><span class=p>:</span> <span class=s2>&#34;us-east-1:aecb58a8-2776-4431-978c-d6395e1b5379&#34;</span>
+<span class=p>}</span>
 </code></pre></div><blockquote>
-<p>NOTE: <code>--logins cognito-identity.amazonaws.com=</code>.  See <a href="https://aws.amazon.com/blogs/mobile/understanding-amazon-cognito-authentication-part-4-enhanced-flow/">https://aws.amazon.com/blogs/mobile/understanding-amazon-cognito-authentication-part-4-enhanced-flow/</a></p>
+<p>NOTE: <code>--logins cognito-identity.amazonaws.com=</code>. See <a href=https://aws.amazon.com/blogs/mobile/understanding-amazon-cognito-authentication-part-4-enhanced-flow/>https://aws.amazon.com/blogs/mobile/understanding-amazon-cognito-authentication-part-4-enhanced-flow/</a></p>
 </blockquote>
 <blockquote>
 <p>When using an Amazon Cognito token with GetCredentialsForIdentity, you use the key cognito-identity.amazonaws.com in the logins parameter.</p>
@@ -379,259 +186,89 @@ if (!doNotTrack) {
 <p>You can now use <code>AccessKeyId</code>, <code>SecretKey</code>, and <code>SessionToken</code> to access AWS resources.</p>
 </li>
 </ol>
-<h3 id="resources">Resources</h3>
+<h3 id=resources>Resources</h3>
 <ul>
-<li><a href="https://docs.aws.amazon.com/cognito/latest/developerguide/developer-authenticated-identities.html">Developer Authenticated Identities (Identity Pools)</a></li>
-<li><a href="https://aws.amazon.com/blogs/mobile/understanding-amazon-cognito-authentication-part-2-developer-authenticated-identities/">Understanding Amazon Cognito Authentication Part 2: Developer Authenticated Identities</a></li>
+<li><a href=https://docs.aws.amazon.com/cognito/latest/developerguide/developer-authenticated-identities.html>Developer Authenticated Identities (Identity Pools)</a></li>
+<li><a href=https://aws.amazon.com/blogs/mobile/understanding-amazon-cognito-authentication-part-2-developer-authenticated-identities/>Understanding Amazon Cognito Authentication Part 2: Developer Authenticated Identities</a></li>
 </ul>
-
-
-        
-
-        
-
-        <hr />
-
-        <section id="social-share">
-          <div class="list-inline footer-links text-center">
-            <span class="text-muted">share on</span><br />
-            <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-cognito-developer-authenticated-identities%2f&amp;text=AWS%20Cognito%20Developer%20Authenticated%20Identities&amp;via=pfeilbr"
-              target="_blank" title="Share on Twitter">Twitter</a>
-            &nbsp;&bull;&nbsp;
-            <a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-cognito-developer-authenticated-identities%2f&amp;title=AWS%20Cognito%20Developer%20Authenticated%20Identities" target="_blank"
-              title="Share on Reddit">
-              Reddit
-            </a>
-
-          </div>
-
-
-
-        </section>
-
-
-
-
-
-
-        
-        
-        
-        
-
-        
-        
-
-        
-        
-      </article>
-
-      
-      <ul class="pager blog-pager">
-        
-        <li class="previous">
-          <a href="https://brianpfeil.com/post/gitlab/" data-toggle="tooltip" data-placement="top"
-            title="Gitlab">&larr; Gitlab</a>
-        </li>
-        
-        
-        <li class="next">
-          <a href="https://brianpfeil.com/post/stackery/" data-toggle="tooltip" data-placement="top"
-            title="Stackery">Stackery &rarr;</a>
-        </li>
-        
-      </ul>
-      
-
-
-      
-      
-      
-      
-
-    </div>
-  </div>
+<hr>
+<section id=social-share>
+<div class="list-inline footer-links text-center">
+<span class=text-muted>share on</span><br>
+<a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-cognito-developer-authenticated-identities%2f&text=AWS%20Cognito%20Developer%20Authenticated%20Identities&via=pfeilbr" target=_blank title="Share on Twitter">Twitter</a>
+&nbsp;&bull;&nbsp;
+<a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-cognito-developer-authenticated-identities%2f&title=AWS%20Cognito%20Developer%20Authenticated%20Identities" target=_blank title="Share on Reddit">
+Reddit
+</a>
 </div>
-
-    
+</section>
+</article>
+<ul class="pager blog-pager">
+<li class=previous>
+<a href=https://brianpfeil.com/post/gitlab/ data-toggle=tooltip data-placement=top title=Gitlab>&larr; Gitlab</a>
+</li>
+<li class=next>
+<a href=https://brianpfeil.com/post/stackery/ data-toggle=tooltip data-placement=top title=Stackery>Stackery &rarr;</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
 <footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <ul class="list-inline text-center footer-links">
-          
-          
-          
-          
-          
-          
-          <li>
-            <a href="https://twitter.com/pfeilbr" title="twitter">
-              <span class="footer-link">
-                twitter
-              </span>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://github.com/pfeilbr" title="github">
-              <span class="footer-link">
-                github
-              </span>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://stackoverflow.com/users/29148/pfeilbr" title="stack overflow">
-              <span class="footer-link">
-                stack overflow
-              </span>
-            </a>
-          </li>
-
-
-          <li>
-            <a href="/index.xml" title="RSS">
-              <span class="footer-link">
-                rss
-              </span>
-            </a>
-          </li>
-          
-        </ul>
-        <p class="credits copyright text-muted">
-          
-          
-          <a href="https://brianpfeil.com">Brian Pfeil</a>
-          
-          
-
-          &nbsp;&bull;&nbsp;&copy;
-          
-          2021
-          
-
-          
-        </p>
-        
-        
-      </div>
-    </div>
-  </div>
-</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"
-  integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js"
-  integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"
-  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-<script src="https://brianpfeil.com/js/main.js"></script>
-<script src="https://brianpfeil.com/js/highlight.min.js"></script>
-<script> hljs.initHighlightingOnLoad(); </script>
-<script> $(document).ready(function () { $("pre.chroma").css("padding", "0"); }); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js"
-  integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js"
-  integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://brianpfeil.com/js/load-photoswipe.js"></script>
-
-
-
-
-
-
-<script src="https://unpkg.com/darkreader@4.9.16/darkreader.js" crossorigin="anonymous"></script>
-
-<script>
-    
-    (() => {
-
-        DarkReader.setFetchMethod(window.fetch)
-
-        const DARK_MODE_ENABLED_KEY = "DARK_MODE_ENABLED_KEY"
-
-        const enabledIcon = document.getElementById("dark-mode-enabled-icon")
-        const disabledIcon = document.getElementById("dark-mode-disabled-icon")
-
-         
-        if (enabledIcon === null || disabledIcon === null) {
-            return
-        }
-
-        const toggleClassName = "hidden"
-
-        const enable = () => {
-
-            if (window.localStorage) {
-                DarkReader.enable({
-                    brightness: 100,
-                    contrast: 90,
-                    sepia: 10
-                });
-                window.localStorage.setItem(DARK_MODE_ENABLED_KEY, "true")
-
-                enabledIcon.classList.add(toggleClassName)
-                disabledIcon.classList.remove(toggleClassName)
-            }
-        }
-
-        const disable = () => {
-            if (window.localStorage) {
-                DarkReader.disable()
-                if (window.localStorage.getItem(DARK_MODE_ENABLED_KEY)) {
-                    window.localStorage.removeItem(DARK_MODE_ENABLED_KEY)
-                }
-
-                enabledIcon.classList.remove(toggleClassName)
-                disabledIcon.classList.add(toggleClassName)
-
-            }
-        }
-
-        const isEnabled = () => {
-            return window.localStorage && (window.localStorage.getItem(DARK_MODE_ENABLED_KEY) != null)
-        }
-
-        const toggle = () => {
-            if (isEnabled()) {
-                disable()
-            } else {
-                enable()
-            }
-        }
-
-
-        if (isEnabled()) {
-            enable()
-        } else {
-            disable()
-        }
-
-        const e = document.getElementById('dark-mode-toggle')
-        e.addEventListener('click', toggle)
-        
-        
-        
-        
-        
-        
-
-        
-        
-
-    })()
-
-</script>
-
-<script>
-     
-    
-
-</script>
-
-
-
-<script id="search-result-template" type="text/x-js-template">
+<div class=container>
+<div class=row>
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<ul class="list-inline text-center footer-links">
+<li>
+<a href=https://twitter.com/pfeilbr title=twitter>
+<span class=footer-link>
+twitter
+</span>
+</a>
+</li>
+<li>
+<a href=https://github.com/pfeilbr title=github>
+<span class=footer-link>
+github
+</span>
+</a>
+</li>
+<li>
+<a href=https://stackoverflow.com/users/29148/pfeilbr title="stack overflow">
+<span class=footer-link>
+stack overflow
+</span>
+</a>
+</li>
+<li>
+<a href=/index.xml title=RSS>
+<span class=footer-link>
+rss
+</span>
+</a>
+</li>
+</ul>
+<p class="credits copyright text-muted">
+<a href=https://brianpfeil.com>Brian Pfeil</a>
+&nbsp;&bull;&nbsp;&copy;
+2021
+</p>
+</div>
+</div>
+</div>
+</footer><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js integrity=sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js integrity=sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe crossorigin=anonymous></script>
+<script src=https://code.jquery.com/jquery-1.12.4.min.js integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin=anonymous></script>
+<script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa crossorigin=anonymous></script>
+<script src=https://brianpfeil.com/js/main.js></script>
+<script src=https://brianpfeil.com/js/highlight.min.js></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<script>$(document).ready(function(){$("pre.chroma").css("padding","0")})</script><script>renderMathInElement(document.body)</script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js integrity=sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js integrity=sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q crossorigin=anonymous></script><script src=https://brianpfeil.com/js/load-photoswipe.js></script>
+<script src=https://unpkg.com/darkreader@4.9.16/darkreader.js crossorigin=anonymous></script>
+<script>(()=>{DarkReader.setFetchMethod(window.fetch);const a="DARK_MODE_ENABLED_KEY",c=document.getElementById("dark-mode-enabled-icon"),d=document.getElementById("dark-mode-disabled-icon");if(c===null||d===null)return;const b="hidden",e=()=>{window.localStorage&&(DarkReader.enable({brightness:100,contrast:90,sepia:10}),window.localStorage.setItem(a,"true"),c.classList.add(b),d.classList.remove(b))},f=()=>{window.localStorage&&(DarkReader.disable(),window.localStorage.getItem(a)&&window.localStorage.removeItem(a),c.classList.remove(b),d.classList.add(b))},g=()=>window.localStorage&&window.localStorage.getItem(a)!=null,h=()=>{g()?f():e()};g()?e():f();const i=document.getElementById('dark-mode-toggle');i.addEventListener('click',h)})()</script>
+<script></script>
+<script id=search-result-template type=text/x-js-template>
 <article class="post-preview" id="summary-${key}">
     <a class="search-item" href="${link}">
         <h2 class="post-title">${title}</h2>
@@ -651,16 +288,9 @@ if (!doNotTrack) {
     </div>
 </article>
 </script>
-
-<script>
-    const postCount= 250 
-</script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
-<script src="https://brianpfeil.com/js/search.js"></script>
-
-    
-  </body>
+<script>const postCount=250</script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js></script>
+<script src=https://brianpfeil.com/js/search.js></script>
+</body>
 </html>
-

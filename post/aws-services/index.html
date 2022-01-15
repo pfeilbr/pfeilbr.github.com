@@ -1,513 +1,321 @@
-<!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/WebPage">
-  <head>
-    
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
-  <title>AWS Services - Brian Pfeil</title>
-  <meta name="description" content="short descriptions for key AWS Services">
-  <meta name="author" content="Brian Pfeil"/><script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    "name": "Brian Pfeil",
-    
-    "url": "https:\/\/brianpfeil.com\/"
-}
-</script><script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Organization",
-  "name": "",
-  "url": "https:\/\/brianpfeil.com\/"
-  
-  
-  
-  
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@id": "https:\/\/brianpfeil.com\/",
-          "name": "home"
-        }
-    },{
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@id": "https:\/\/brianpfeil.com\/post\/aws-services\/",
-          "name": "Aws services"
-        }
-    }]
-}
-</script><script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Article",
-  "author": {
-    "name" : "Brian Pfeil"
-  },
-  "headline": "AWS Services",
-  "description" : "short descriptions for key AWS Services",
-  "inLanguage" : "en",
-  "wordCount":  7369 ,
-  "datePublished" : "2020-03-29T09:40:13",
-  "dateModified" : "2020-03-29T09:40:13",
-  "image" : "https:\/\/brianpfeil.com\/",
-  "keywords" : [ "aws" ],
-  "mainEntityOfPage" : "https:\/\/brianpfeil.com\/post\/aws-services\/",
-  "publisher" : {
-    "@type": "Organization",
-    "name" : "https:\/\/brianpfeil.com\/",
-    "logo" : {
-        "@type" : "ImageObject",
-        "url" : "https:\/\/brianpfeil.com\/",
-        "height" :  60 ,
-        "width" :  60
-    }
-  }
-}
-</script>
-
-<meta property="og:title" content="AWS Services" />
+<!doctype html><html lang=en itemscope itemtype=http://schema.org/WebPage>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>AWS Services - Brian Pfeil</title>
+<meta name=description content="short descriptions for key AWS Services">
+<meta name=author content="Brian Pfeil"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"Brian Pfeil","url":"https:\/\/brianpfeil.com\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/brianpfeil.com\/"}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/brianpfeil.com\/","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/brianpfeil.com\/post\/aws-services\/","name":"Aws services"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Brian Pfeil"},"headline":"AWS Services","description":"short descriptions for key AWS Services","inLanguage":"en","wordCount":7369,"datePublished":"2020-03-29T09:40:13","dateModified":"2020-03-29T09:40:13","image":"https:\/\/brianpfeil.com\/","keywords":["aws"],"mainEntityOfPage":"https:\/\/brianpfeil.com\/post\/aws-services\/","publisher":{"@type":"Organization","name":"https:\/\/brianpfeil.com\/","logo":{"@type":"ImageObject","url":"https:\/\/brianpfeil.com\/","height":60,"width":60}}}</script>
+<meta property="og:title" content="AWS Services">
 <meta property="og:description" content="short descriptions for key AWS Services">
-<meta property="og:url" content="https://brianpfeil.com/post/aws-services/" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Brian Pfeil" />
-
-  <meta name="twitter:title" content="AWS Services" />
-  <meta name="twitter:description" content="short descriptions for key AWS Services">
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@pfeilbr" />
-  <meta name="twitter:creator" content="@pfeilbr" />
-  <meta name="generator" content="Hugo 0.88.1" />
-  <link rel="alternate" href="https://brianpfeil.com/index.xml" type="application/rss+xml" title="Brian Pfeil"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://brianpfeil.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-  <link rel="stylesheet" href="https://brianpfeil.com/css/highlight.min.css" /><link rel="stylesheet" href="https://brianpfeil.com/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
-<link rel="stylesheet" href="https://brianpfeil.com/css/custom.css" />
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-610553-4', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-  </head>
-  <body>
-    <nav class="navbar navbar-default navbar-custom">
-  <div class="container-fluid">
-    <div class="navbar-header">
-
-
-
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-
-      
-      <a class="navbar-brand" href="https://brianpfeil.com/">Brian Pfeil</a>
-      
-      
-    </div>
-
-    <div class="collapse navbar-collapse" id="main-navbar">
-
-      <ul class="nav navbar-nav navbar-right">
-        
-        
-        <li>
-          <a title="about" href="/about/">about</a>
-        </li>
-        
-
-        
-        
-        <li>
-          <a title="posts" href="/">posts</a>
-        </li>
-        
-
-        
-        
-        <li>
-          <a title="projects" href="/projects/">projects</a>
-        </li>
-        
-
-        
-        
-        <li>
-          <a title="tags" href="/tags/">tags</a>
-        </li>
-        
-
-        
-
-        
-
-        
-
-        <li>
-          
-          <a id="dark-mode-toggle">
-            <i class="fa fa-moon hidden" id="dark-mode-enabled-icon" aria-hidden="true"></i>
-            <i class="fa fa-sun hidden" id="dark-mode-disabled-icon" aria-hidden="true"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    
-
-  </div>
-</nav>
-
-
-
-    
-
-
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-<div class="pswp__bg"></div>
-
-<div class="pswp__scroll-wrap">
-    
-    <div class="pswp__container">
-      <div class="pswp__item"></div>
-      <div class="pswp__item"></div>
-      <div class="pswp__item"></div>
-    </div>
-    
-    <div class="pswp__ui pswp__ui--hidden">
-    <div class="pswp__top-bar">
-      
-      <div class="pswp__counter"></div>
-      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-      <button class="pswp__button pswp__button--share" title="Share"></button>
-      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-      
-      
-      <div class="pswp__preloader">
-        <div class="pswp__preloader__icn">
-          <div class="pswp__preloader__cut">
-            <div class="pswp__preloader__donut"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-      <div class="pswp__share-tooltip"></div>
-    </div>
-    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-    </button>
-    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-    </button>
-    <div class="pswp__caption">
-      <div class="pswp__caption__center"></div>
-    </div>
-    </div>
-    </div>
+<meta property="og:url" content="https://brianpfeil.com/post/aws-services/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Brian Pfeil">
+<meta name=twitter:title content="AWS Services">
+<meta name=twitter:description content="short descriptions for key AWS Services">
+<meta name=twitter:card content="summary">
+<meta name=twitter:site content="@pfeilbr">
+<meta name=twitter:creator content="@pfeilbr">
+<meta name=generator content="Hugo 0.92.0">
+<link rel=alternate href=https://brianpfeil.com/index.xml type=application/rss+xml title="Brian Pfeil"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css integrity=sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y crossorigin=anonymous>
+<link rel=stylesheet href=https://use.fontawesome.com/releases/v5.5.0/css/all.css integrity=sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU crossorigin=anonymous>
+<link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous><link rel=stylesheet href=https://brianpfeil.com/css/main.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+<link rel=stylesheet href=https://brianpfeil.com/css/highlight.min.css><link rel=stylesheet href=https://brianpfeil.com/css/codeblock.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css integrity=sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css integrity=sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R crossorigin=anonymous>
+<link rel=stylesheet href=https://brianpfeil.com/css/custom.css>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-610553-4','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-custom">
+<div class=container-fluid>
+<div class=navbar-header>
+<button type=button class=navbar-toggle data-toggle=collapse data-target=#main-navbar>
+<span class=sr-only>Toggle navigation</span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+</button>
+<a class=navbar-brand href=https://brianpfeil.com/>Brian Pfeil</a>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<header class="header-section ">
-  
-  <div class="intro-header no-img">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <div class="post-heading">
-            
-
-            
-            
-            <h1>AWS Services</h1>
-            
-
-
-
-            
-            
-            
-            
-            <span class="post-meta">
-  
-  
-
-    March 29, 2020
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  <span class="blog-tags">
-    &nbsp;&bull;&nbsp;
-    
-    <a href="https://brianpfeil.com//tags/aws/">aws</a>
-    
-    
-  </span>
-  
-  
-
-
-  
-  
+<div class="collapse navbar-collapse" id=main-navbar>
+<ul class="nav navbar-nav navbar-right">
+<li>
+<a title=about href=/about/>about</a>
+</li>
+<li>
+<a title=posts href=/>posts</a>
+</li>
+<li>
+<a title=projects href=/projects/>projects</a>
+</li>
+<li>
+<a title=tags href=/tags/>tags</a>
+</li>
+<li>
+<a id=dark-mode-toggle>
+<i class="fa fa-moon hidden" id=dark-mode-enabled-icon aria-hidden=true></i>
+<i class="fa fa-sun hidden" id=dark-mode-disabled-icon aria-hidden=true></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div>
+<header class=header-section>
+<div class="intro-header no-img">
+<div class=container>
+<div class=row>
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<div class=post-heading>
+<h1>AWS Services</h1>
+<span class=post-meta>
+March 29, 2020
+<span class=blog-tags>
+&nbsp;&bull;&nbsp;
+<a href=https://brianpfeil.com//tags/aws/>aws</a>
 </span>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 </header>
-
-    
-
-<div class="container" role="main">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <article role="main" class="blog-post">
-        <h1 id="aws-services">AWS Services</h1>
-<p>The following services are commonly used for AWS solutions.  Each service specifies key considerations and features per service for architecture and design.</p>
+<div class=container role=main>
+<div class=row>
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<article role=main class=blog-post>
+<h1 id=aws-services>AWS Services</h1>
+<p>The following services are commonly used for AWS solutions. Each service specifies key considerations and features per service for architecture and design.</p>
 <ul>
-<li><a href="#serverless-services">Serverless Services</a></li>
-<li><a href="#serverless-benefits">Serverless Benefits</a></li>
-<li><a href="#relevant-patterns">Relevant Patterns</a></li>
-<li><a href="#deployment-types">Deployment Types</a></li>
-<li><a href="#networking-and-content-delivery">Networking and Content Delivery</a>
+<li><a href=#serverless-services>Serverless Services</a></li>
+<li><a href=#serverless-benefits>Serverless Benefits</a></li>
+<li><a href=#relevant-patterns>Relevant Patterns</a></li>
+<li><a href=#deployment-types>Deployment Types</a></li>
+<li><a href=#networking-and-content-delivery>Networking and Content Delivery</a>
 <ul>
-<li><a href="#vpc">VPC</a></li>
-<li><a href="#elbalb">ELB/ALB</a></li>
-<li><a href="#privatelink--vpc-endpoint">PrivateLink / VPC Endpoint</a></li>
-<li><a href="#route-53">Route 53</a></li>
-<li><a href="#cloud-map">Cloud Map</a></li>
-<li><a href="#global-accelerator">Global Accelerator</a></li>
-<li><a href="#cloudfront">CloudFront</a></li>
-<li><a href="#api-gateway">API Gateway</a></li>
-<li><a href="#appsync">AppSync</a></li>
+<li><a href=#vpc>VPC</a></li>
+<li><a href=#elbalb>ELB/ALB</a></li>
+<li><a href=#privatelink--vpc-endpoint>PrivateLink / VPC Endpoint</a></li>
+<li><a href=#route-53>Route 53</a></li>
+<li><a href=#cloud-map>Cloud Map</a></li>
+<li><a href=#global-accelerator>Global Accelerator</a></li>
+<li><a href=#cloudfront>CloudFront</a></li>
+<li><a href=#api-gateway>API Gateway</a></li>
+<li><a href=#appsync>AppSync</a></li>
 </ul>
 </li>
-<li><a href="#compute">Compute</a>
+<li><a href=#compute>Compute</a>
 <ul>
-<li><a href="#ec2">EC2</a></li>
-<li><a href="#ecs">ECS</a></li>
-<li><a href="#ecr">ECR</a></li>
-<li><a href="#fargate">Fargate</a></li>
-<li><a href="#batch">Batch</a></li>
-<li><a href="#eks">EKS</a></li>
-<li><a href="#lightsail">LightSail</a></li>
-<li><a href="#elastic-beanstalk">Elastic Beanstalk</a></li>
-<li><a href="#lambda">Lambda</a></li>
-<li><a href="#lambdaedge">Lambda@Edge</a></li>
+<li><a href=#ec2>EC2</a></li>
+<li><a href=#ecs>ECS</a></li>
+<li><a href=#ecr>ECR</a></li>
+<li><a href=#fargate>Fargate</a></li>
+<li><a href=#batch>Batch</a></li>
+<li><a href=#eks>EKS</a></li>
+<li><a href=#lightsail>LightSail</a></li>
+<li><a href=#elastic-beanstalk>Elastic Beanstalk</a></li>
+<li><a href=#lambda>Lambda</a></li>
+<li><a href=#lambdaedge>Lambda@Edge</a></li>
 </ul>
 </li>
-<li><a href="#storage">Storage</a>
+<li><a href=#storage>Storage</a>
 <ul>
-<li><a href="#s3">S3</a></li>
-<li><a href="#glacier">Glacier</a></li>
-<li><a href="#efs-elastic-file-system">EFS (Elastic File System)</a></li>
-<li><a href="#fsx-for-windows-file-server">FSx for Windows File Server</a></li>
-<li><a href="#storage-gateway">Storage Gateway</a></li>
-<li><a href="#ebs">EBS</a></li>
-<li><a href="#transfer">Transfer</a></li>
+<li><a href=#s3>S3</a></li>
+<li><a href=#glacier>Glacier</a></li>
+<li><a href=#efs-elastic-file-system>EFS (Elastic File System)</a></li>
+<li><a href=#fsx-for-windows-file-server>FSx for Windows File Server</a></li>
+<li><a href=#storage-gateway>Storage Gateway</a></li>
+<li><a href=#ebs>EBS</a></li>
+<li><a href=#transfer>Transfer</a></li>
 </ul>
 </li>
-<li><a href="#database">Database</a>
+<li><a href=#database>Database</a>
 <ul>
-<li><a href="#dynamodb">DynamoDB</a></li>
-<li><a href="#documentdb-mongodb-compatibility">DocumentDB (MongoDB compatibility)</a></li>
-<li><a href="#rds">RDS</a></li>
-<li><a href="#redshift">Redshift</a></li>
-<li><a href="#elasticache">ElastiCache</a></li>
-<li><a href="#elasticsearch">ElasticSearch</a></li>
-<li><a href="#neptune">Neptune</a></li>
-<li><a href="#timestream">Timestream</a></li>
-<li><a href="#cloud-directory">Cloud Directory</a></li>
-<li><a href="#ssm-parameter-store">SSM Parameter Store</a></li>
+<li><a href=#dynamodb>DynamoDB</a></li>
+<li><a href=#documentdb-mongodb-compatibility>DocumentDB (MongoDB compatibility)</a></li>
+<li><a href=#rds>RDS</a></li>
+<li><a href=#redshift>Redshift</a></li>
+<li><a href=#elasticache>ElastiCache</a></li>
+<li><a href=#elasticsearch>ElasticSearch</a></li>
+<li><a href=#neptune>Neptune</a></li>
+<li><a href=#timestream>Timestream</a></li>
+<li><a href=#cloud-directory>Cloud Directory</a></li>
+<li><a href=#ssm-parameter-store>SSM Parameter Store</a></li>
 </ul>
 </li>
-<li><a href="#application-integration">Application Integration</a>
+<li><a href=#application-integration>Application Integration</a>
 <ul>
-<li><a href="#appflow">AppFlow</a></li>
-<li><a href="#step-functions">Step Functions</a></li>
-<li><a href="#sns">SNS</a></li>
-<li><a href="#sqs">SQS</a></li>
-<li><a href="#ses">SES</a></li>
-<li><a href="#eventbridge">EventBridge</a></li>
-<li><a href="#kinesis">Kinesis</a></li>
+<li><a href=#appflow>AppFlow</a></li>
+<li><a href=#step-functions>Step Functions</a></li>
+<li><a href=#sns>SNS</a></li>
+<li><a href=#sqs>SQS</a></li>
+<li><a href=#ses>SES</a></li>
+<li><a href=#eventbridge>EventBridge</a></li>
+<li><a href=#kinesis>Kinesis</a></li>
 </ul>
 </li>
-<li><a href="#analytics">Analytics</a>
+<li><a href=#analytics>Analytics</a>
 <ul>
-<li><a href="#kinesis-data-analytics">Kinesis Data Analytics</a></li>
-<li><a href="#pinpoint">Pinpoint</a></li>
-<li><a href="#emr">EMR</a></li>
-<li><a href="#data-pipelines">Data Pipelines</a></li>
-<li><a href="#glue">Glue</a></li>
-<li><a href="#glue-databrew">Glue DataBrew</a></li>
-<li><a href="#athena">Athena</a></li>
-<li><a href="#quicksight">QuickSight</a></li>
-<li><a href="#lake-formation">Lake Formation</a></li>
+<li><a href=#kinesis-data-analytics>Kinesis Data Analytics</a></li>
+<li><a href=#pinpoint>Pinpoint</a></li>
+<li><a href=#emr>EMR</a></li>
+<li><a href=#data-pipelines>Data Pipelines</a></li>
+<li><a href=#glue>Glue</a></li>
+<li><a href=#glue-databrew>Glue DataBrew</a></li>
+<li><a href=#athena>Athena</a></li>
+<li><a href=#quicksight>QuickSight</a></li>
+<li><a href=#lake-formation>Lake Formation</a></li>
 </ul>
 </li>
-<li><a href="#management--governance">Management &amp; Governance</a>
+<li><a href=#management--governance>Management & Governance</a>
 <ul>
-<li><a href="#well-architected-framework">Well-Architected Framework</a></li>
-<li><a href="#control-tower">Control Tower</a></li>
-<li><a href="#organizations">Organizations</a></li>
-<li><a href="#cloudformation">CloudFormation</a></li>
-<li><a href="#serverless-application-repository-sar">Serverless Application Repository (SAR)</a></li>
-<li><a href="#service-catalog">Service Catalog</a></li>
-<li><a href="#config">Config</a></li>
-<li><a href="#appconfig">AppConfig</a></li>
-<li><a href="#cloudwatch-logs">CloudWatch Logs</a></li>
-<li><a href="#cloudwatch-events-see-eventbridge">CloudWatch Events (see EventBridge)</a></li>
-<li><a href="#cloudwatch-insights">CloudWatch Insights</a></li>
-<li><a href="#cloudwatch-metrics">CloudWatch Metrics</a></li>
-<li><a href="#cloudwatch-alarms">CloudWatch Alarms</a></li>
-<li><a href="#cloudwatch-synthetics-canaries">CloudWatch Synthetics (Canaries)</a></li>
-<li><a href="#cloudtrail">CloudTrail</a></li>
-<li><a href="#proton">Proton</a></li>
+<li><a href=#well-architected-framework>Well-Architected Framework</a></li>
+<li><a href=#control-tower>Control Tower</a></li>
+<li><a href=#organizations>Organizations</a></li>
+<li><a href=#cloudformation>CloudFormation</a></li>
+<li><a href=#serverless-application-repository-sar>Serverless Application Repository (SAR)</a></li>
+<li><a href=#service-catalog>Service Catalog</a></li>
+<li><a href=#config>Config</a></li>
+<li><a href=#appconfig>AppConfig</a></li>
+<li><a href=#cloudwatch-logs>CloudWatch Logs</a></li>
+<li><a href=#cloudwatch-events-see-eventbridge>CloudWatch Events (see EventBridge)</a></li>
+<li><a href=#cloudwatch-insights>CloudWatch Insights</a></li>
+<li><a href=#cloudwatch-metrics>CloudWatch Metrics</a></li>
+<li><a href=#cloudwatch-alarms>CloudWatch Alarms</a></li>
+<li><a href=#cloudwatch-synthetics-canaries>CloudWatch Synthetics (Canaries)</a></li>
+<li><a href=#cloudtrail>CloudTrail</a></li>
+<li><a href=#proton>Proton</a></li>
 </ul>
 </li>
-<li><a href="#developer-tools">Developer Tools</a>
+<li><a href=#developer-tools>Developer Tools</a>
 <ul>
-<li><a href="#cloud9">Cloud9</a></li>
-<li><a href="#codecommit">CodeCommit</a></li>
-<li><a href="#codebuild">CodeBuild</a></li>
-<li><a href="#codedeploy">CodeDeploy</a></li>
-<li><a href="#codepipeline">CodePipeline</a></li>
-<li><a href="#codeartifact">CodeArtifact</a></li>
-<li><a href="#x-ray">X-Ray</a></li>
-<li><a href="#aws-cli">AWS CLI</a></li>
-<li><a href="#amplify">Amplify</a></li>
-<li><a href="#sam-serverless-application-model">SAM (Serverless Application Model)</a></li>
-<li><a href="#cdk">CDK</a></li>
-<li><a href="#aws-sdks">AWS SDKs</a></li>
+<li><a href=#cloud9>Cloud9</a></li>
+<li><a href=#codecommit>CodeCommit</a></li>
+<li><a href=#codebuild>CodeBuild</a></li>
+<li><a href=#codedeploy>CodeDeploy</a></li>
+<li><a href=#codepipeline>CodePipeline</a></li>
+<li><a href=#codeartifact>CodeArtifact</a></li>
+<li><a href=#x-ray>X-Ray</a></li>
+<li><a href=#aws-cli>AWS CLI</a></li>
+<li><a href=#amplify>Amplify</a></li>
+<li><a href=#sam-serverless-application-model>SAM (Serverless Application Model)</a></li>
+<li><a href=#cdk>CDK</a></li>
+<li><a href=#aws-sdks>AWS SDKs</a></li>
 </ul>
 </li>
-<li><a href="#migration--transfer">Migration &amp; Transfer</a>
+<li><a href=#migration--transfer>Migration & Transfer</a>
 <ul>
-<li><a href="#aws-datasync">AWS DataSync</a></li>
-<li><a href="#aws-dms-database-migration-service">AWS DMS (Database Migration Service)</a></li>
+<li><a href=#aws-datasync>AWS DataSync</a></li>
+<li><a href=#aws-dms-database-migration-service>AWS DMS (Database Migration Service)</a></li>
 </ul>
 </li>
-<li><a href="#machine-learning">Machine Learning</a>
+<li><a href=#machine-learning>Machine Learning</a>
 <ul>
-<li><a href="#sagemaker">SageMaker</a></li>
-<li><a href="#comprehend">Comprehend</a></li>
-<li><a href="#polly">Polly</a></li>
-<li><a href="#rekognition">Rekognition</a></li>
-<li><a href="#textract">Textract</a></li>
-<li><a href="#translate">Translate</a></li>
-<li><a href="#transcribe">Transcribe</a></li>
-<li><a href="#forecast">Forecast</a></li>
-<li><a href="#personalize">Personalize</a></li>
-<li><a href="#lex">Lex</a></li>
-<li><a href="#kendra">Kendra</a></li>
+<li><a href=#sagemaker>SageMaker</a></li>
+<li><a href=#comprehend>Comprehend</a></li>
+<li><a href=#polly>Polly</a></li>
+<li><a href=#rekognition>Rekognition</a></li>
+<li><a href=#textract>Textract</a></li>
+<li><a href=#translate>Translate</a></li>
+<li><a href=#transcribe>Transcribe</a></li>
+<li><a href=#forecast>Forecast</a></li>
+<li><a href=#personalize>Personalize</a></li>
+<li><a href=#lex>Lex</a></li>
+<li><a href=#kendra>Kendra</a></li>
 </ul>
 </li>
-<li><a href="#security-identity-and-compliance">Security, Identity, and Compliance</a>
+<li><a href=#security-identity-and-compliance>Security, Identity, and Compliance</a>
 <ul>
-<li><a href="#iam">IAM</a></li>
-<li><a href="#cognito">Cognito</a></li>
-<li><a href="#secrets-manager">Secrets Manager</a></li>
-<li><a href="#waf">WAF</a></li>
-<li><a href="#certificate-manager-acm">Certificate Manager (ACM)</a></li>
-<li><a href="#kms">KMS</a></li>
-<li><a href="#directory-service">Directory Service</a></li>
+<li><a href=#iam>IAM</a></li>
+<li><a href=#cognito>Cognito</a></li>
+<li><a href=#secrets-manager>Secrets Manager</a></li>
+<li><a href=#waf>WAF</a></li>
+<li><a href=#certificate-manager-acm>Certificate Manager (ACM)</a></li>
+<li><a href=#kms>KMS</a></li>
+<li><a href=#directory-service>Directory Service</a></li>
 </ul>
 </li>
-<li><a href="#media-services">Media Services</a>
+<li><a href=#media-services>Media Services</a>
 <ul>
-<li><a href="#amazon-interactive-video-service">Amazon Interactive Video Service</a></li>
+<li><a href=#amazon-interactive-video-service>Amazon Interactive Video Service</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="serverless-services">Serverless Services</h2>
+<h2 id=serverless-services>Serverless Services</h2>
 <ul>
-<li><a href="#route53">Route53</a></li>
-<li><a href="#global-accelerator">Global Accelerator</a></li>
-<li><a href="#waf">WAF</a></li>
-<li><a href="#cognito">Cognito</a></li>
-<li><a href="#cloudfront">CloudFront</a></li>
-<li><a href="#api-gateway">API Gateway</a></li>
-<li><a href="#appsync">AppSync</a></li>
-<li><a href="#amplify">Amplify</a></li>
-<li><a href="#lambda">Lambda</a></li>
-<li><a href="#dynamodb">DynamoDB</a></li>
-<li><a href="#s3">S3</a></li>
-<li><a href="#sns">SNS</a></li>
-<li><a href="#sqs">SQS</a></li>
-<li><a href="#ses">SES</a></li>
-<li><a href="#kinesis">Kinesis</a></li>
-<li><a href="#eventbridge">EventBridge</a></li>
-<li><a href="#glue">Glue</a></li>
-<li><a href="#step-functions">Step Functions</a></li>
-<li><a href="#athena">Athena</a></li>
-<li><a href="#ssm-parameter-store">SSM Parameter Store</a></li>
-<li><a href="#secrets-manager">Secrets Manager</a></li>
-<li><a href="#appconfig">AppConfig</a></li>
-<li><a href="#aws-config">AWS Config</a></li>
-<li><a href="#cloudwatch-synthetics-canaries">CloudWatch Synthetics (Canaries)</a></li>
-<li><a href="#cloudwatch-metrics-and-alarms">CloudWatch Metrics and Alarms</a></li>
-<li><a href="#cloudwatch-logs">CloudWatch Logs</a></li>
-<li><a href="#cloudformation">CloudFormation</a></li>
-<li><a href="#serverless-application-repository-sar">Serverless Application Repository (SAR)</a></li>
-<li><a href="#sam-serverless-application-model">SAM (Serverless Application Model)</a></li>
-<li><a href="#cdk">CDK</a></li>
-<li><a href="#x-ray">X-Ray</a></li>
+<li><a href=#route53>Route53</a></li>
+<li><a href=#global-accelerator>Global Accelerator</a></li>
+<li><a href=#waf>WAF</a></li>
+<li><a href=#cognito>Cognito</a></li>
+<li><a href=#cloudfront>CloudFront</a></li>
+<li><a href=#api-gateway>API Gateway</a></li>
+<li><a href=#appsync>AppSync</a></li>
+<li><a href=#amplify>Amplify</a></li>
+<li><a href=#lambda>Lambda</a></li>
+<li><a href=#dynamodb>DynamoDB</a></li>
+<li><a href=#s3>S3</a></li>
+<li><a href=#sns>SNS</a></li>
+<li><a href=#sqs>SQS</a></li>
+<li><a href=#ses>SES</a></li>
+<li><a href=#kinesis>Kinesis</a></li>
+<li><a href=#eventbridge>EventBridge</a></li>
+<li><a href=#glue>Glue</a></li>
+<li><a href=#step-functions>Step Functions</a></li>
+<li><a href=#athena>Athena</a></li>
+<li><a href=#ssm-parameter-store>SSM Parameter Store</a></li>
+<li><a href=#secrets-manager>Secrets Manager</a></li>
+<li><a href=#appconfig>AppConfig</a></li>
+<li><a href=#aws-config>AWS Config</a></li>
+<li><a href=#cloudwatch-synthetics-canaries>CloudWatch Synthetics (Canaries)</a></li>
+<li><a href=#cloudwatch-metrics-and-alarms>CloudWatch Metrics and Alarms</a></li>
+<li><a href=#cloudwatch-logs>CloudWatch Logs</a></li>
+<li><a href=#cloudformation>CloudFormation</a></li>
+<li><a href=#serverless-application-repository-sar>Serverless Application Repository (SAR)</a></li>
+<li><a href=#sam-serverless-application-model>SAM (Serverless Application Model)</a></li>
+<li><a href=#cdk>CDK</a></li>
+<li><a href=#x-ray>X-Ray</a></li>
 </ul>
-<h2 id="serverless-benefits">Serverless Benefits</h2>
+<h2 id=serverless-benefits>Serverless Benefits</h2>
 <ul>
 <li>less things to own</li>
 <li>less/no ops</li>
@@ -519,17 +327,17 @@ if (!doNotTrack) {
 <li>every service has soft limits for protection</li>
 </ul>
 <hr>
-<h2 id="relevant-patterns">Relevant Patterns</h2>
+<h2 id=relevant-patterns>Relevant Patterns</h2>
 <ul>
 <li>event sourcing</li>
 <li>circuit breaker - trip circuit to prevent downstream systems overload</li>
 <li>load shedding - prevent backlog buildup</li>
 <li>handle poison messages - prevent kinesis and dynamo streams from progressing</li>
-<li>prevent distributed transactions.  e.g. lambda send job to SQS and stores status in dynamodb.  break it up.  lambda put job status in dynamo -&gt; dynamo stream -&gt; lambda send job to SQS</li>
-<li>strangler - migrate from monolith to serverless.  e.g. DB - run RDS and dynamodb in parallel and update both for a period of time</li>
+<li>prevent distributed transactions. e.g. lambda send job to SQS and stores status in dynamodb. break it up. lambda put job status in dynamo -> dynamo stream -> lambda send job to SQS</li>
+<li>strangler - migrate from monolith to serverless. e.g. DB - run RDS and dynamodb in parallel and update both for a period of time</li>
 </ul>
 <hr>
-<h2 id="deployment-types">Deployment Types</h2>
+<h2 id=deployment-types>Deployment Types</h2>
 <ul>
 <li>all-at-once</li>
 <li>blue/green</li>
@@ -537,19 +345,19 @@ if (!doNotTrack) {
 <li>linear - changing the amount of traffic split to the new version incrementally according to a percentage that is provided when configured.</li>
 </ul>
 <hr>
-<h2 id="networking-and-content-delivery">Networking and Content Delivery</h2>
-<h3 id="vpc">VPC</h3>
+<h2 id=networking-and-content-delivery>Networking and Content Delivery</h2>
+<h3 id=vpc>VPC</h3>
 <ul>
 <li>virtual private cloud</li>
 <li>Subnets, route tables, internet gateways, elastic ips, nat gateways, network ACLs, security groups, prefix lists</li>
 </ul>
-<h3 id="elbalb">ELB/ALB</h3>
+<h3 id=elbalb>ELB/ALB</h3>
 <ul>
 <li>
 <p>Elastic Load Balancing (TCP)</p>
 </li>
 <li>
-<p>ALB application load balancer  — Layer 7 (HTTP/HTTPS traffic), Flexible</p>
+<p>ALB application load balancer — Layer 7 (HTTP/HTTPS traffic), Flexible</p>
 </li>
 <li>
 <p>NLB network load balancer — Layer 4 (TLS/TCP/UDP traffic), Static IPs</p>
@@ -561,23 +369,23 @@ if (!doNotTrack) {
 <p>The NLB forwards requests whereas the ALB examines the contents of the HTTP request header to determine where to route the request. So, the ALB is performing content based routing.</p>
 </li>
 </ul>
-<h3 id="privatelink--vpc-endpoint">PrivateLink / VPC Endpoint</h3>
+<h3 id=privatelink--vpc-endpoint>PrivateLink / VPC Endpoint</h3>
 <ul>
 <li>connect to AWS services from VPC without going through internet</li>
 <li>enables you to privately connect your VPC to supported AWS services and VPC endpoint services powered by PrivateLink without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection</li>
-<li>gateway endpoint - S3 and DynamoDB.  via VPC route table.
+<li>gateway endpoint - S3 and DynamoDB. via VPC route table.
 <ul>
 <li>gateway that you specify as a target for a route in your route table for traffic destined to a supported AWS service</li>
 </ul>
 </li>
-<li>interface endpoint - all other services.  via DNS resolver for VPC/subnets
+<li>interface endpoint - all other services. via DNS resolver for VPC/subnets
 <ul>
 <li>an elastic network interface with a private IP address from the IP address range of your subnet that serves as an entry point for traffic destined to a supported service</li>
 <li>specify subnets, security groups, IAM policy doc, enable private DNS</li>
 </ul>
 </li>
 </ul>
-<h3 id="route-53">Route 53</h3>
+<h3 id=route-53>Route 53</h3>
 <ul>
 <li>managed DNS</li>
 <li>main service for reliability / DR</li>
@@ -593,27 +401,27 @@ if (!doNotTrack) {
 <li>routing policies - latency Based Routing, Geo DNS, Geoproximity, and Weighted Round Robin</li>
 <li>domain registration</li>
 <li>geo routing, geoproximity routing</li>
-<li>alias record type (aws specific.  used for root/bare/naked domains)</li>
-<li><a href="https://medium.com/@kumargaurav1247/aws-route53-cheat-sheet-in-2-minutes-ada9b7f0fcb">AWS Route53 — Cheat Sheet(In 2 Minutes)</a></li>
+<li>alias record type (aws specific. used for root/bare/naked domains)</li>
+<li><a href=https://medium.com/@kumargaurav1247/aws-route53-cheat-sheet-in-2-minutes-ada9b7f0fcb>AWS Route53 — Cheat Sheet(In 2 Minutes)</a></li>
 </ul>
-<h3 id="cloud-map">Cloud Map</h3>
+<h3 id=cloud-map>Cloud Map</h3>
 <ul>
 <li>name and discover your cloud resources via API or DNS</li>
 </ul>
-<h3 id="global-accelerator">Global Accelerator</h3>
+<h3 id=global-accelerator>Global Accelerator</h3>
 <ul>
 <li>uses the highly available and congestion-free AWS global network to direct internet traffic from your users to your applications on AWS</li>
 <li>fixed entry point to your applications through static IP addresses</li>
 <li>allocates static Anycast IP addresses that are globally unique for your application and do not change</li>
 </ul>
-<h3 id="cloudfront">CloudFront</h3>
+<h3 id=cloudfront>CloudFront</h3>
 <ul>
 <li>CDN</li>
 <li>POP / edge servers - traffic over AWS global infrastructure</li>
 <li>price classes</li>
 <li>ACM for TLS/SSL certs</li>
-<li>cache policies.  cookie, headers, querystring, TTLs configs</li>
-<li><a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html">origin access identity</a></li>
+<li>cache policies. cookie, headers, querystring, TTLs configs</li>
+<li><a href=https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html>origin access identity</a></li>
 <li>origin custom headers</li>
 <li>signed URLs or cookies</li>
 <li>origin groups - primary origin and a second origin to failover to</li>
@@ -628,13 +436,13 @@ if (!doNotTrack) {
 </ul>
 </li>
 <li>cache invalidations</li>
-<li>non GET HTTP methods support.  must explicitly turn on support for PUT, POST, PATCH, etc.</li>
+<li>non GET HTTP methods support. must explicitly turn on support for PUT, POST, PATCH, etc.</li>
 <li>WAF association</li>
 <li>can point to Object Lambda Access Point</li>
 </ul>
-<h3 id="api-gateway">API Gateway</h3>
+<h3 id=api-gateway>API Gateway</h3>
 <ul>
-<li>REST API vs HTTP API (cost).  see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-vs-rest.html">Choosing between HTTP APIs and REST APIs</a></li>
+<li>REST API vs HTTP API (cost). see <a href=https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-vs-rest.html>Choosing between HTTP APIs and REST APIs</a></li>
 <li>edge (cloudfront) and regional endpoints</li>
 <li>API Keys</li>
 <li>caching (memcached) (fixes cost based on time / no pay per use)</li>
@@ -642,9 +450,9 @@ if (!doNotTrack) {
 <li>Usage Plans / quotas</li>
 <li>client certificates - ensure requests to backend are from APIG</li>
 <li>throttles</li>
-<li>with WAF in front, you can set up rate-based rules to specify the number of web requests that are allowed by each client IP in a trailing, continuously updated, 5-minute period.  <em>no API Key required for this</em></li>
+<li>with WAF in front, you can set up rate-based rules to specify the number of web requests that are allowed by each client IP in a trailing, continuously updated, 5-minute period. <em>no API Key required for this</em></li>
 <li>timeout - 29s</li>
-<li>request (POST) payload limits (10 MB).  no response size limits. (tested with proxy integration for 200 MB video file download)</li>
+<li>request (POST) payload limits (10 MB). no response size limits. (tested with proxy integration for 200 MB video file download)</li>
 <li>auth - cognito, JWT, IAM (aws sigv4), custom lambda auth</li>
 <li>OpenAPI / Swagger specs for payload validation</li>
 <li>service integrations - no need for lambda glue in middle</li>
@@ -652,24 +460,24 @@ if (!doNotTrack) {
 <li>custom domains</li>
 <li>private endpoints</li>
 <li>websockets</li>
-<li>lambda integration.  point to lambda alias for deployments.</li>
+<li>lambda integration. point to lambda alias for deployments.</li>
 <li>stages</li>
 <li>mock integrations / responses</li>
 </ul>
-<h3 id="appsync">AppSync</h3>
+<h3 id=appsync>AppSync</h3>
 <ul>
 <li>GraphQL managed service</li>
 <li>integrates with Amazon DynamoDB, Amazon Elasticsearch, and Amazon Lambda</li>
 <li>resolvers</li>
 <li>resolver mapping templates via velocty (vtl)</li>
 <li>Real-time subscriptions</li>
-<li>aws specific graphql schema <a href="https://docs.amplify.aws/cli/graphql-transformer/directives"><code>@directives</code></a> for model (ddb), auth (cognito),</li>
+<li>aws specific graphql schema <a href=https://docs.amplify.aws/cli/graphql-transformer/directives><code>@directives</code></a> for model (ddb), auth (cognito),</li>
 <li>GraphiQL</li>
 <li>javascript for vtl coming (2021-03-28)</li>
 </ul>
 <hr>
-<h2 id="compute">Compute</h2>
-<h3 id="ec2">EC2</h3>
+<h2 id=compute>Compute</h2>
+<h3 id=ec2>EC2</h3>
 <ul>
 <li>AMI</li>
 <li>elastic IPs</li>
@@ -677,7 +485,7 @@ if (!doNotTrack) {
 <li>UserData - script to run on instance start</li>
 <li>EC2 metadata service</li>
 </ul>
-<h3 id="ecs">ECS</h3>
+<h3 id=ecs>ECS</h3>
 <ul>
 <li>containers</li>
 <li>task definitions
@@ -688,17 +496,17 @@ if (!doNotTrack) {
 <li>Service - maintain a specified number of instances of a task definition
 <ul>
 <li>Service load balancing - distribute traffic evenly across the tasks in your service</li>
-<li>Service auto scaling - via Application Auto Scaling service.  CPU/memory utilization CW metrics</li>
+<li>Service auto scaling - via Application Auto Scaling service. CPU/memory utilization CW metrics</li>
 </ul>
 </li>
 <li>EFS or EBS for persistent storage
 <ul>
-<li>EFS is recommended.  Can be mounted by multiple ECS tasks for parallel access</li>
+<li>EFS is recommended. Can be mounted by multiple ECS tasks for parallel access</li>
 <li>EBS can be used but is tied to a hosting EC2 instance. Not supported on fargate.</li>
 </ul>
 </li>
 </ul>
-<h3 id="ecr">ECR</h3>
+<h3 id=ecr>ECR</h3>
 <ul>
 <li>container registry</li>
 <li>concepts
@@ -716,10 +524,10 @@ if (!doNotTrack) {
 </li>
 <li>ECR public</li>
 <li>resource-based permissions using AWS IAM</li>
-<li><a href="https://aws.amazon.com/blogs/aws/announcing-pull-through-cache-repositories-for-amazon-elastic-container-registry/">Announcing Pull Through Cache Repositories for Amazon Elastic Container Registry</a></li>
+<li><a href=https://aws.amazon.com/blogs/aws/announcing-pull-through-cache-repositories-for-amazon-elastic-container-registry/>Announcing Pull Through Cache Repositories for Amazon Elastic Container Registry</a></li>
 </ul>
-<h3 id="fargate">Fargate</h3>
-<p><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html">Docs | Amazon ECS on AWS Fargate</a></p>
+<h3 id=fargate>Fargate</h3>
+<p><a href=https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html>Docs | Amazon ECS on AWS Fargate</a></p>
 <ul>
 <li>containers</li>
 <li>task definitions</li>
@@ -728,57 +536,57 @@ if (!doNotTrack) {
 <li>When you run your tasks and services with the Fargate launch type, you package your application in containers, specify the CPU and memory requirements, define networking and IAM policies, and launch the application.</li>
 <li>Amazon ECS tasks for Fargate can authenticate with private image registries, including Docker Hub, using basic authentication. When you enable private registry authentication, you can use private Docker images in your task definitions.</li>
 <li>Fargate Spot - you can run interruption tolerant Amazon ECS tasks at a discounted rate compared to the Fargate price. Fargate Spot runs tasks on spare compute capacity. When AWS needs the capacity back, your tasks will be interrupted with a two-minute warning.</li>
-<li>ECS Service - desired task count.  allows you to run and maintain a specified number of instances of a task definition simultaneously in an Amazon ECS cluster. If any of your tasks should fail or stop for any reason, the Amazon ECS service scheduler launches another instance of your task definition to replace it in order to maintain the desired number of tasks in the service.
+<li>ECS Service - desired task count. allows you to run and maintain a specified number of instances of a task definition simultaneously in an Amazon ECS cluster. If any of your tasks should fail or stop for any reason, the Amazon ECS service scheduler launches another instance of your task definition to replace it in order to maintain the desired number of tasks in the service.
 <ul>
 <li>optionally front with ALB</li>
-<li><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-auto-scaling.html">Service autoscaling</a> is done using the Application Auto Scaling service.  See <a href="https://aws.amazon.com/premiumsupport/knowledge-center/ecs-fargate-service-auto-scaling/">How can I configure Amazon ECS Service Auto Scaling on Fargate?</a></li>
+<li><a href=https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-auto-scaling.html>Service autoscaling</a> is done using the Application Auto Scaling service. See <a href=https://aws.amazon.com/premiumsupport/knowledge-center/ecs-fargate-service-auto-scaling/>How can I configure Amazon ECS Service Auto Scaling on Fargate?</a></li>
 </ul>
 </li>
 <li>Multi AZ by default - <em>Fargate will look to spread Task placement across all available Availability Zones</em></li>
-<li><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html">Deployment types</a> - rolling update, blue/green (via CodeDeploy)</li>
+<li><a href=https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html>Deployment types</a> - rolling update, blue/green (via CodeDeploy)</li>
 </ul>
-<h3 id="batch">Batch</h3>
+<h3 id=batch>Batch</h3>
 <ul>
 <li>run batch computing jobs using containers</li>
 <li>concepts:
 <ul>
-<li>Compute Environments -  set of managed or unmanaged compute resources that are used to run jobs.  Fargate or EC2.  specify the minimum, desired, and maximum number of vCPUs for the environment.</li>
+<li>Compute Environments - set of managed or unmanaged compute resources that are used to run jobs. Fargate or EC2. specify the minimum, desired, and maximum number of vCPUs for the environment.</li>
 <li>Job Queues - backed by 1 or more compute envs, assign priority</li>
 <li>Job Definitions - cpu and memory requirements, iam role for access to other aws resources</li>
-<li>Jobs - things that run on fargate or ec2.  shell script, a Linux executable, or a Docker container image
+<li>Jobs - things that run on fargate or ec2. shell script, a Linux executable, or a Docker container image
 <ul>
-<li><a href="https://docs.aws.amazon.com/batch/latest/userguide/array_jobs.html">Array Jobs</a> - run parallel jobs such as Monte Carlo simulations, parametric sweeps, or large rendering jobs.  <code>AWS_BATCH_JOB_ARRAY_INDEX</code> is passed to each job as an env var to represent the <em>current index</em></li>
-<li><a href="https://docs.aws.amazon.com/batch/latest/userguide/job_retries.html">Automated Job Retries</a></li>
-<li><a href="https://docs.aws.amazon.com/batch/latest/userguide/job_dependencies.html">Job Dependencies</a></li>
+<li><a href=https://docs.aws.amazon.com/batch/latest/userguide/array_jobs.html>Array Jobs</a> - run parallel jobs such as Monte Carlo simulations, parametric sweeps, or large rendering jobs. <code>AWS_BATCH_JOB_ARRAY_INDEX</code> is passed to each job as an env var to represent the <em>current index</em></li>
+<li><a href=https://docs.aws.amazon.com/batch/latest/userguide/job_retries.html>Automated Job Retries</a></li>
+<li><a href=https://docs.aws.amazon.com/batch/latest/userguide/job_dependencies.html>Job Dependencies</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<h3 id="eks">EKS</h3>
+<h3 id=eks>EKS</h3>
 <ul>
 <li>managed Kubernetes</li>
 <li>automates the deployment, scaling, and management of containerized applications</li>
 </ul>
-<h3 id="lightsail">LightSail</h3>
+<h3 id=lightsail>LightSail</h3>
 <ul>
 <li>Virtual servers, storage, databases, and networking for a low, predictable price.</li>
 <li>backed by EC2, but easier to use</li>
 <li>similar to DigitalOcean</li>
 </ul>
-<h3 id="elastic-beanstalk">Elastic Beanstalk</h3>
+<h3 id=elastic-beanstalk>Elastic Beanstalk</h3>
 <ul>
 <li>PaaS with language runtime + docker containers</li>
 <li>heroku-like</li>
 </ul>
-<h3 id="lambda">Lambda</h3>
+<h3 id=lambda>Lambda</h3>
 <ul>
 <li>synchronous vs asynchronous vs poll based/stream processing (poll based is sync. via event-source mappings)</li>
 <li>memory - single knob for memory and CPU</li>
 <li>DLQ</li>
 <li>lambda destinations (only for async invokes)</li>
 <li>reserved concurrency - concurrency allocated for a specific function. e.g. i always want fn X to be able to run 10 lambda invokes concurrently</li>
-<li>provisioned concurrency - pre-warmed lambda instances / no cold starts.  good for latency sensitive needs
+<li>provisioned concurrency - pre-warmed lambda instances / no cold starts. good for latency sensitive needs
 <ul>
 <li>can optionally use auto scaling to adjust on based on metrics and/or schedule.</li>
 <li>will spill over to on-demand scaling (lambda default)</li>
@@ -802,20 +610,20 @@ if (!doNotTrack) {
 <li>concurrent batches per shard</li>
 </ul>
 </li>
-<li>APIG -&gt; lambda</li>
-<li>ALB -&gt; lambda</li>
-<li>service integrations - <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-services.html">Using AWS Lambda with other services - AWS Lambda</a></li>
-<li><a href="https://aws.amazon.com/blogs/aws/new-use-aws-privatelink-to-access-aws-lambda-over-private-aws-network/">lambda private endpoints</a> - access lambda from VPC without going over internet</li>
-<li><a href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-extensions-api.html">Lambda Extensions</a> - executables in /opt/extensions that conform to the <a href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-extensions-api.html">Lambda Extensions API</a></li>
-<li><a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html">Container Images</a>
+<li>APIG -> lambda</li>
+<li>ALB -> lambda</li>
+<li>service integrations - <a href=https://docs.aws.amazon.com/lambda/latest/dg/lambda-services.html>Using AWS Lambda with other services - AWS Lambda</a></li>
+<li><a href=https://aws.amazon.com/blogs/aws/new-use-aws-privatelink-to-access-aws-lambda-over-private-aws-network/>lambda private endpoints</a> - access lambda from VPC without going over internet</li>
+<li><a href=https://docs.aws.amazon.com/lambda/latest/dg/runtimes-extensions-api.html>Lambda Extensions</a> - executables in /opt/extensions that conform to the <a href=https://docs.aws.amazon.com/lambda/latest/dg/runtimes-extensions-api.html>Lambda Extensions API</a></li>
+<li><a href=https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html>Container Images</a>
 <ul>
-<li><a href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-images.html#runtimes-api-client">Runtime interface clients</a>
+<li><a href=https://docs.aws.amazon.com/lambda/latest/dg/runtimes-images.html#runtimes-api-client>Runtime interface clients</a>
 <ul>
 <li>runtime interface client in your container image manages the interaction between Lambda and your function code</li>
 <li>Lambda provides an open source runtime interface client for each of the supported Lambda runtimes. e.g. node.js, python, etc.</li>
 </ul>
 </li>
-<li><a href="https://github.com/aws/aws-lambda-runtime-interface-emulator/">Lambda Runtime Interface Emulator</a>
+<li><a href=https://github.com/aws/aws-lambda-runtime-interface-emulator/>Lambda Runtime Interface Emulator</a>
 <ul>
 <li>allows customers to locally test their Lambda function packaged as a container image</li>
 <li>web-server that converts HTTP requests to JSON events and maintains functional parity with the Lambda Runtime API</li>
@@ -824,81 +632,81 @@ if (!doNotTrack) {
 <li>max image size: 10 GB</li>
 </ul>
 </li>
-<li><a href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-modify.html#runtime-wrapper">Lambda Wrapper Scripts | Modifying the runtime environment</a> - customize the runtime startup behavior of your Lambda function.  e.g. set env vars, add/update parameters.
+<li><a href=https://docs.aws.amazon.com/lambda/latest/dg/runtimes-modify.html#runtime-wrapper>Lambda Wrapper Scripts | Modifying the runtime environment</a> - customize the runtime startup behavior of your Lambda function. e.g. set env vars, add/update parameters.
 <ul>
-<li>code example <a href="https://github.com/aws-samples/aws-lambda-environmental-variables-from-aws-secrets-manager/blob/main/README.md">aws-samples/aws-lambda-environmental-variables-from-aws-secrets-manager</a></li>
+<li>code example <a href=https://github.com/aws-samples/aws-lambda-environmental-variables-from-aws-secrets-manager/blob/main/README.md>aws-samples/aws-lambda-environmental-variables-from-aws-secrets-manager</a></li>
 </ul>
 </li>
-<li><a href="https://docs.aws.amazon.com/lambda/latest/operatorguide/intro.html">AWS Lambda Operator Guide</a></li>
+<li><a href=https://docs.aws.amazon.com/lambda/latest/operatorguide/intro.html>AWS Lambda Operator Guide</a></li>
 </ul>
-<h3 id="lambdaedge">Lambda@Edge</h3>
+<h3 id=lambdaedge>Lambda@Edge</h3>
 <ul>
 <li>feature of Amazon CloudFront that lets you run code closer to users of your application, which improves performance and reduces latency</li>
 </ul>
 <hr>
-<h2 id="storage">Storage</h2>
-<h3 id="s3">S3</h3>
+<h2 id=storage>Storage</h2>
+<h3 id=s3>S3</h3>
 <ul>
 <li>object/blob storage with strong read-after-write consistency</li>
 <li>versioned buckets</li>
 <li>presigned URLs for private content (download or upload)</li>
-<li><a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3 batch operations</a></li>
+<li><a href=https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html>S3 batch operations</a></li>
 <li>S3 select</li>
 <li>Query via Athena</li>
-<li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops-basics.html">batch operations</a> - perform operation on list of objects specified in manifest.  e.g. lambda, copy, etc.</li>
+<li><a href=https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops-basics.html>batch operations</a> - perform operation on list of objects specified in manifest. e.g. lambda, copy, etc.</li>
 <li>storage classes</li>
 <li>lifecycle rules - moving between storage tiers for cost savings</li>
 <li>access points - managing data access at scale, access points are unique hostnames, enforce distinct permissions and network controls for any request made through the access point, scale to many applications accessing bucket with own set of permissions.</li>
-<li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html">S3 Object Lock</a> - write-once-read-many (WORM) model.  retention periods and legal holds.</li>
-<li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html">static website hosting</a></li>
-<li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiRegionAccessPoints.html">Multi-Region Access Points</a>
+<li><a href=https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html>S3 Object Lock</a> - write-once-read-many (WORM) model. retention periods and legal holds.</li>
+<li><a href=https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html>static website hosting</a></li>
+<li><a href=https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiRegionAccessPoints.html>Multi-Region Access Points</a>
 <ul>
 <li>addresses pain point- Managing access to this shared bucket requires a single bucket policy that controls access for dozens to hundreds of applications with different permission levels</li>
-<li><a href="https://aws.amazon.com/blogs/aws/s3-multi-region-access-points-accelerate-performance-availability/">Multi-Region access points</a></li>
+<li><a href=https://aws.amazon.com/blogs/aws/s3-multi-region-access-points-accelerate-performance-availability/>Multi-Region access points</a></li>
 </ul>
 </li>
 <li>S3 event notifications - notification destinations are SNS, SQS, lambda</li>
-<li><a href="https://aws.amazon.com/blogs/aws/new-use-amazon-s3-event-notifications-with-amazon-eventbridge/">Use Amazon S3 Event Notifications with Amazon EventBridge</a></li>
+<li><a href=https://aws.amazon.com/blogs/aws/new-use-amazon-s3-event-notifications-with-amazon-eventbridge/>Use Amazon S3 Event Notifications with Amazon EventBridge</a></li>
 <li>replication - cross-region, same-region</li>
-<li><a href="https://aws.amazon.com/blogs/aws/introducing-amazon-s3-object-lambda-use-your-code-to-process-data-as-it-is-being-retrieved-from-s3/">S3 object lambda</a> - process data retrieved from S3 with lambda before returning it to an application. lambda calls <a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#writeGetObjectResponse-property"><code>writeGetObjectResponse</code></a> to send modified object contents back to <code>GET</code> request.  Create S3 Access Point, then Object Lambda Access Point.</li>
+<li><a href=https://aws.amazon.com/blogs/aws/introducing-amazon-s3-object-lambda-use-your-code-to-process-data-as-it-is-being-retrieved-from-s3/>S3 object lambda</a> - process data retrieved from S3 with lambda before returning it to an application. lambda calls <a href=https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#writeGetObjectResponse-property><code>writeGetObjectResponse</code></a> to send modified object contents back to <code>GET</code> request. Create S3 Access Point, then Object Lambda Access Point.</li>
 </ul>
-<h3 id="glacier">Glacier</h3>
+<h3 id=glacier>Glacier</h3>
 <ul>
 <li>low cost/long-term object/blob storage</li>
 </ul>
-<h3 id="efs-elastic-file-system">EFS (Elastic File System)</h3>
+<h3 id=efs-elastic-file-system>EFS (Elastic File System)</h3>
 <ul>
 <li>elastic file system for Linux-based workloads for use with AWS Cloud services and on-premises resources.</li>
 <li>can mount as NFS v4</li>
-<li>e.g. shared file system.  many EC2 instances can mount same efs file system.</li>
+<li>e.g. shared file system. many EC2 instances can mount same efs file system.</li>
 <li>can mount to lambda local filesystem</li>
 </ul>
-<h3 id="fsx-for-windows-file-server">FSx for Windows File Server</h3>
+<h3 id=fsx-for-windows-file-server>FSx for Windows File Server</h3>
 <ul>
 <li>fully managed native windows file system</li>
 <li>SMB, NTFS, AD integration</li>
 </ul>
-<h3 id="storage-gateway">Storage Gateway</h3>
+<h3 id=storage-gateway>Storage Gateway</h3>
 <ul>
 <li>NFS or SMB interface to S3, FSx, volume/tape gateways</li>
 <li>compute runs on once of following: ec2, kvm, VMware, Hyper-V, or appliance</li>
-<li>if SMB, need to <a href="https://docs.aws.amazon.com/filegateway/latest/files3/CreatingAnSMBFileShare.html#configure-SMB-file-share-AD-access">Configuring Microsoft Active Directory access</a></li>
-<li>VPC support.  network traffic between compute and AWS Service goes over VPC endpoint</li>
+<li>if SMB, need to <a href=https://docs.aws.amazon.com/filegateway/latest/files3/CreatingAnSMBFileShare.html#configure-SMB-file-share-AD-access>Configuring Microsoft Active Directory access</a></li>
+<li>VPC support. network traffic between compute and AWS Service goes over VPC endpoint</li>
 <li>VPC endpoint enabled, all VPC endpoint communication from your gateway to AWS services occurs through the public service endpoint using your VPC in AWS</li>
 <li>Creating a VPC endpoint for Storage Gateway</li>
 </ul>
-<h3 id="ebs">EBS</h3>
+<h3 id=ebs>EBS</h3>
 <ul>
 <li>block level storage volumes for use with EC2 instances. EBS volumes behave like raw, unformatted block devices</li>
 </ul>
-<h3 id="transfer">Transfer</h3>
+<h3 id=transfer>Transfer</h3>
 <ul>
 <li>SFTP to S3</li>
 <li>enables the transfer of files directly into and out of S3 using SFTP</li>
 </ul>
 <hr>
-<h2 id="database">Database</h2>
-<h3 id="dynamodb">DynamoDB</h3>
+<h2 id=database>Database</h2>
+<h3 id=dynamodb>DynamoDB</h3>
 <ul>
 <li>concepts - tables, items, queries, scans, indexes</li>
 <li>global tables - for resilient active-active architectures</li>
@@ -907,55 +715,55 @@ if (!doNotTrack) {
 <li>transactions</li>
 <li>throttles</li>
 <li>point-in-time recovery (PITR)</li>
-<li>streams - 24hr data retention.  poison messages (retry until success - can cause backlog)</li>
+<li>streams - 24hr data retention. poison messages (retry until success - can cause backlog)</li>
 <li>partition key - distribute data among nodes to minimize hot partitions</li>
 <li>TTL - can the data be removed automatically</li>
 <li>parallelization factor for DDB streams processed by lambda</li>
 <li>single table designs</li>
-<li>fine grained item (<code>dynamodb:LeadingKeys</code>) and attribute level IAM (<code>dynamodb:Attributes</code>).  enables multi-tenant isolation.</li>
-<li><a href="https://docs.aws.amazon.com/dynamodb-encryption-client/latest/devguide/what-is-ddb-encrypt.html">Amazon DynamoDB Encryption Client</a></li>
-<li><a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-reference.html">PartiQL - A SQL-Compatible Query Language for Amazon DynamoDB - Amazon DynamoDB</a></li>
-<li><a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DataExport.html">dynamodb table export to s3</a></li>
-<li><a href="https://aws.amazon.com/blogs/aws/new-dynamodb-table-class-save-up-to-60-in-your-dynamodb-costs/">DynamoDB Standard-IA table class</a>
+<li>fine grained item (<code>dynamodb:LeadingKeys</code>) and attribute level IAM (<code>dynamodb:Attributes</code>). enables multi-tenant isolation.</li>
+<li><a href=https://docs.aws.amazon.com/dynamodb-encryption-client/latest/devguide/what-is-ddb-encrypt.html>Amazon DynamoDB Encryption Client</a></li>
+<li><a href=https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-reference.html>PartiQL - A SQL-Compatible Query Language for Amazon DynamoDB - Amazon DynamoDB</a></li>
+<li><a href=https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DataExport.html>dynamodb table export to s3</a></li>
+<li><a href=https://aws.amazon.com/blogs/aws/new-dynamodb-table-class-save-up-to-60-in-your-dynamodb-costs/>DynamoDB Standard-IA table class</a>
 <blockquote>
 <p>you will save up to 60 percent in storage costs as compared to using the DynamoDB Standard table class. However, DynamoDB reads and writes for this new table class are priced higher than the Standard tables</p>
 </blockquote>
 </li>
 </ul>
-<h3 id="documentdb-mongodb-compatibility">DocumentDB (MongoDB compatibility)</h3>
-<h3 id="rds">RDS</h3>
+<h3 id=documentdb-mongodb-compatibility>DocumentDB (MongoDB compatibility)</h3>
+<h3 id=rds>RDS</h3>
 <ul>
 <li>Aurora, PostgreSQL, MySql, MariaDB, Oracle, SQL Sever</li>
 <li>DB Instance (contains 1 or more dbs), Instance Classes (compute+memory), Instance Storage</li>
 <li>HA Multi-AZ</li>
 </ul>
-<h3 id="redshift">Redshift</h3>
+<h3 id=redshift>Redshift</h3>
 <ul>
 <li>managed data warehouse service.</li>
 <li>postgres foundation</li>
 <li>RA3 instances - Scale compute and storage independently for fast query performance and lower costs</li>
 <li>UDFs - lambda backed,</li>
-<li>Redshift Data API - http based (no JDBC or ODBC).  async so can retrieve results later. query results stored for 24 hrs</li>
+<li>Redshift Data API - http based (no JDBC or ODBC). async so can retrieve results later. query results stored for 24 hrs</li>
 <li>redshift spectrum - SQL queries on data stored in S3</li>
 </ul>
-<h3 id="elasticache">ElastiCache</h3>
+<h3 id=elasticache>ElastiCache</h3>
 <ul>
 <li>managed redis and memcached</li>
 </ul>
-<h3 id="elasticsearch">ElasticSearch</h3>
+<h3 id=elasticsearch>ElasticSearch</h3>
 <ul>
 <li>cluster</li>
 <li>kibana - integrated with IAM</li>
 <li>IAM for granular es api operations</li>
 </ul>
-<h3 id="neptune">Neptune</h3>
+<h3 id=neptune>Neptune</h3>
 <ul>
 <li>graph database. query languages Apache TinkerPop Gremlin and SPARQL (RDF)</li>
 </ul>
-<h3 id="timestream">Timestream</h3>
+<h3 id=timestream>Timestream</h3>
 <ul>
 <li>time series database</li>
-<li>use <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/reference.html">SQL to query</a></li>
+<li>use <a href=https://docs.aws.amazon.com/timestream/latest/developerguide/reference.html>SQL to query</a></li>
 <li>Concepts
 <ul>
 <li><strong>Time series</strong> - A sequence of one or more data points (or records) recorded over a time interval.</li>
@@ -969,10 +777,10 @@ if (!doNotTrack) {
 <li><strong>Timestamp</strong> - Indicates when a measure was collected for a given record</li>
 <li><strong>Table</strong> - A container for a set of related time series.</li>
 <li><strong>Database</strong> - A top level container for tables.</li>
-<li><strong>Scheduled Query</strong> - Timestream periodically and automatically runs these queries and reliably writes the query results into a separate table.  serverless and fully managed
+<li><strong>Scheduled Query</strong> - Timestream periodically and automatically runs these queries and reliably writes the query results into a separate table. serverless and fully managed
 <ul>
 <li><strong>Query string</strong> - query to run</li>
-<li><strong>Schedule expression</strong> - when your scheduled query instances are run.  using a cron expression</li>
+<li><strong>Schedule expression</strong> - when your scheduled query instances are run. using a cron expression</li>
 <li><strong>Target configuration</strong> - map the result of a scheduled query into the destination table where the results of this scheduled query will be stored.</li>
 <li><strong>Notification configuration</strong> - receive a notification for every such query run on an SNS topic that you configure when you create a scheduled query.</li>
 </ul>
@@ -983,40 +791,40 @@ if (!doNotTrack) {
 <li>storage tiering, with a memory store for recent data and a magnetic store for historical data</li>
 <li>InfluxDB, Prometheus, Riak</li>
 </ul>
-<p><img src="https://docs.aws.amazon.com/timestream/latest/developerguide/images/concepts_simple.png" alt=""></p>
-<p><img src="https://docs.aws.amazon.com/timestream/latest/developerguide/images/ts-architecture.png" alt=""></p>
-<h3 id="cloud-directory">Cloud Directory</h3>
+<p><img src=https://docs.aws.amazon.com/timestream/latest/developerguide/images/concepts_simple.png alt></p>
+<p><img src=https://docs.aws.amazon.com/timestream/latest/developerguide/images/ts-architecture.png alt></p>
+<h3 id=cloud-directory>Cloud Directory</h3>
 <ul>
 <li>cloud-native directory that can store hundreds of millions of application-specific objects with multiple relationships and schemas</li>
 </ul>
-<h3 id="ssm-parameter-store">SSM Parameter Store</h3>
+<h3 id=ssm-parameter-store>SSM Parameter Store</h3>
 <ul>
 <li>Systems Manager Parameter Store provides secure, hierarchical storage for configuration data management and secrets management</li>
 </ul>
 <hr>
-<h2 id="application-integration">Application Integration</h2>
-<h3 id="appflow">AppFlow</h3>
+<h2 id=application-integration>Application Integration</h2>
+<h3 id=appflow>AppFlow</h3>
 <ul>
 <li>managed integration (ETL) service</li>
 <li>securely transfer data between SaaS applications (Salesforce, Marketo, Slack, etc.), and AWS services (S3, Redshift, EventBridge, etc.)</li>
 <li>concepts - flow, source, destination, flow trigger (on demand, event, schedule), map fields from source to destination (formula transforms, value validations), filters (determine records to transfer)</li>
-<li>Flow notifications - flow start|complete|deactivated events sent to CloudWatch Events/EventBridge (<code>&quot;source&quot;: &quot;aws.appflow&quot;</code>)</li>
+<li>Flow notifications - flow start|complete|deactivated events sent to CloudWatch Events/EventBridge (<code>"source": "aws.appflow"</code>)</li>
 <li>security
 <ul>
 <li>encryption at rest - connection data stored in secrets manger using AWS managed or Customer managed CMK</li>
 <li>Encryption in Transit (TLS 1.2) - choose either an AWS managed CMK or a customer managed CMK. When executing a flow, Amazon AppFlow stores data temporarily in an intermediate S3 bucket and encrypts it using this key. This intermediate bucket is deleted after 24 hours, using a bucket lifecycle policy.</li>
 </ul>
 </li>
-<li><a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonappflow.html#amazonappflow-actions-as-permissions">Actions defined by Amazon AppFlow</a></li>
+<li><a href=https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonappflow.html#amazonappflow-actions-as-permissions>Actions defined by Amazon AppFlow</a></li>
 </ul>
-<h3 id="step-functions">Step Functions</h3>
+<h3 id=step-functions>Step Functions</h3>
 <ul>
 <li>Standard Workflows vs Express Workflows</li>
 <li>States - Task, Choice, Wait, Pass, Parallel, Map, Succeed, Fail</li>
-<li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-activities.html">Activities</a> - enables you to have a task in your state machine where the work is performed by a worker that can be hosted anywhere.</li>
+<li><a href=https://docs.aws.amazon.com/step-functions/latest/dg/concepts-activities.html>Activities</a> - enables you to have a task in your state machine where the work is performed by a worker that can be hosted anywhere.</li>
 <li>start other <code>[sub]</code> workflows</li>
-<li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-error-handling.html">error handling</a> and Retrying after an error</li>
-<li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html">Input/Output Processing</a>
+<li><a href=https://docs.aws.amazon.com/step-functions/latest/dg/concepts-error-handling.html>error handling</a> and Retrying after an error</li>
+<li><a href=https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html>Input/Output Processing</a>
 <ul>
 <li>
 <ul>
@@ -1029,22 +837,22 @@ if (!doNotTrack) {
 </ul>
 </li>
 <li>orchestration with many built-in integrations to aws services</li>
-<li><a href="https://aws.amazon.com/blogs/aws/now-aws-step-functions-supports-200-aws-services-to-enable-easier-workflow-automation/">Step Functions AWS SDK Service Integrations</a></li>
+<li><a href=https://aws.amazon.com/blogs/aws/now-aws-step-functions-supports-200-aws-services-to-enable-easier-workflow-automation/>Step Functions AWS SDK Service Integrations</a></li>
 <li>full execution event history for a given execution</li>
-<li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/cw-logs.html">Logging using CloudWatch Logs</a></li>
-<li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/procedure-cloud-trail.html">Logging Step Functions Using AWS CloudTrail</a></li>
-<li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/procedure-cw-metrics.html">CloudWatch Metrics</a></li>
-<li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/cw-events.html">EventBridge Events</a> - Execution started, succeeded, failed, timed out, aborted</li>
-<li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-xray-tracing.html">X-Ray tracing support</a></li>
+<li><a href=https://docs.aws.amazon.com/step-functions/latest/dg/cw-logs.html>Logging using CloudWatch Logs</a></li>
+<li><a href=https://docs.aws.amazon.com/step-functions/latest/dg/procedure-cloud-trail.html>Logging Step Functions Using AWS CloudTrail</a></li>
+<li><a href=https://docs.aws.amazon.com/step-functions/latest/dg/procedure-cw-metrics.html>CloudWatch Metrics</a></li>
+<li><a href=https://docs.aws.amazon.com/step-functions/latest/dg/cw-events.html>EventBridge Events</a> - Execution started, succeeded, failed, timed out, aborted</li>
+<li><a href=https://docs.aws.amazon.com/step-functions/latest/dg/concepts-xray-tracing.html>X-Ray tracing support</a></li>
 <li>saga pattern for rollback</li>
 <li>parallel map opportunities - run tasks in parallel</li>
-<li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html#welcome-integrations">service integrations</a> - request/response, run a job (<code>.sync</code>), callback with task token (<code>.waitForTaskToken</code>)</li>
+<li><a href=https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html#welcome-integrations>service integrations</a> - request/response, run a job (<code>.sync</code>), callback with task token (<code>.waitForTaskToken</code>)</li>
 <li>JSONPath expressions</li>
 <li>Data flow simulator</li>
-<li><a href="https://aws.amazon.com/blogs/aws/new-aws-step-functions-workflow-studio-a-low-code-visual-tool-for-building-state-machines/">Step Functions Workflow Studio</a> - visual designer for state machines</li>
-<li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/vpc-endpoints.html">VPC Endpoint support</a></li>
+<li><a href=https://aws.amazon.com/blogs/aws/new-aws-step-functions-workflow-studio-a-low-code-visual-tool-for-building-state-machines/>Step Functions Workflow Studio</a> - visual designer for state machines</li>
+<li><a href=https://docs.aws.amazon.com/step-functions/latest/dg/vpc-endpoints.html>VPC Endpoint support</a></li>
 </ul>
-<h3 id="sns">SNS</h3>
+<h3 id=sns>SNS</h3>
 <ul>
 <li>pub/sub</li>
 <li>message filtering with subscription</li>
@@ -1077,7 +885,7 @@ if (!doNotTrack) {
 <li>DLQ configuration</li>
 <li>KMS encryption</li>
 </ul>
-<h3 id="sqs">SQS</h3>
+<h3 id=sqs>SQS</h3>
 <ul>
 <li>managed message queuing service</li>
 <li>batch size - batch fails as unit</li>
@@ -1086,32 +894,32 @@ if (!doNotTrack) {
 <li>delivery delay - max 15min</li>
 <li>types - standard vs FIFO
 <ul>
-<li>standard - at least once delivery.  need to ensure idempotent</li>
-<li>FIFO - strict ordering.  exactly-once processing</li>
+<li>standard - at least once delivery. need to ensure idempotent</li>
+<li>FIFO - strict ordering. exactly-once processing</li>
 </ul>
 </li>
 <li>alarm on queue depth</li>
 <li>KMS encryption</li>
-<li><a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html">DLQ</a> for redrive for messages that can&rsquo;t be delivered to target SQS queue</li>
+<li><a href=https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html>DLQ</a> for redrive for messages that can&rsquo;t be delivered to target SQS queue</li>
 </ul>
-<h3 id="ses">SES</h3>
+<h3 id=ses>SES</h3>
 <ul>
 <li>send or receive emails</li>
 <li>verify domain (DNS txt) and/or email addresses (confirmation email) - verify that you own the email address or domain that you plan to send from</li>
-<li>understand <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/quotas.html">Service quotas</a></li>
+<li>understand <a href=https://docs.aws.amazon.com/ses/latest/DeveloperGuide/quotas.html>Service quotas</a></li>
 <li>max message size - 10 MB per message (after base64 encoding).</li>
 <li>sending identity - domain or an email address</li>
-<li>send emails via SMTP or API (AWS CLI, <a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#sendEmail-property">AWS SDK</a>)</li>
+<li>send emails via SMTP or API (AWS CLI, <a href=https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#sendEmail-property>AWS SDK</a>)</li>
 <li>connect to a URL that provides an endpoint for the Amazon SES API or SMTP interface (e.g. email-smtp.us-east-1.amazonaws.com:587)</li>
 <li>DKIM support - DKIM works by adding a digital signature to the headers of an email message. This signature can then be validated against a public cryptographic key that is located in the organization&rsquo;s DNS record</li>
 <li>SPF support - SPF establishes a method for receiving mail servers to verify that incoming email from a domain was sent from a host authorized by that domain’s administrators</li>
 <li>IAM to control user access to email sending (e.g. <code>ses:SendEmail</code>)</li>
-<li>Configuration sets - groups of rules that you can apply to the emails you send using Amazon SES.  can publish email sending events to CWL, Firehose, SNS</li>
-<li>Event types - Send, Reject, Delivery, Bounce, Complaint, Click  Open  Rendering Failure</li>
+<li>Configuration sets - groups of rules that you can apply to the emails you send using Amazon SES. can publish email sending events to CWL, Firehose, SNS</li>
+<li>Event types - Send, Reject, Delivery, Bounce, Complaint, Click Open Rendering Failure</li>
 <li>store inbound emails in S3</li>
 <li>trigger lambdas based on inbound emails</li>
 <li>publish your email sending events to CWLs or kinesis firehose</li>
-<li>Sending personalized email via email templates.  templates contain placeholder values.  based on Handlebars template system</li>
+<li>Sending personalized email via email templates. templates contain placeholder values. based on Handlebars template system</li>
 <li>list management
 <ul>
 <li>customers can manage their own mailing lists, known as contact lists.</li>
@@ -1136,38 +944,38 @@ if (!doNotTrack) {
 </ul>
 </li>
 <li>need to <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/request-production-access.html?icmpid=docs_ses_console">request production access</a> to move out of sandbox</li>
-<li>VPC endpoint support - see <a href="https://aws.amazon.com/blogs/aws/new-amazon-simple-email-service-ses-for-vpc-endpoints/">New – Amazon Simple Email Service (SES) for VPC Endpoints</a></li>
+<li>VPC endpoint support - see <a href=https://aws.amazon.com/blogs/aws/new-amazon-simple-email-service-ses-for-vpc-endpoints/>New – Amazon Simple Email Service (SES) for VPC Endpoints</a></li>
 </ul>
-<h3 id="eventbridge">EventBridge</h3>
+<h3 id=eventbridge>EventBridge</h3>
 <ul>
 <li>pub/sub with many built-in integrations</li>
 <li>integrate with external SaaS or any custom application</li>
 <li>bus-to-bus routing within same account + region, x-account, and x-region.</li>
-<li>dlq for eb rules.  if fails to deliver to target, goes in sqs queue</li>
+<li>dlq for eb rules. if fails to deliver to target, goes in sqs queue</li>
 <li>e.g. can log all events in account including CloudTrail to CloudWatch Log Group</li>
 <li>put events - 2400 requests per second per region</li>
-<li>AWS service rule <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-targets.html">targets</a></li>
+<li>AWS service rule <a href=https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-targets.html>targets</a></li>
 <li>at-least-once event delivery to targets (ensure idempotent behavior)</li>
 <li>no ordering guarantees</li>
-<li><a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-schemas.html">schema registry</a> - helps with managing and versioning event schemas for evolution.  Codegen code for handling events in various languages.  can auto discover schemas by observing events on the bus.  based on json schema</li>
-<li>invocation quota -  4500 requests per second per region (invocation is an event matching a rule and being sent on to the rule’s targets)</li>
+<li><a href=https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-schemas.html>schema registry</a> - helps with managing and versioning event schemas for evolution. Codegen code for handling events in various languages. can auto discover schemas by observing events on the bus. based on json schema</li>
+<li>invocation quota - 4500 requests per second per region (invocation is an event matching a rule and being sent on to the rule’s targets)</li>
 <li>DLQ</li>
 <li>EventBridge resource policies</li>
 <li>archive and replay events</li>
-<li>IAM - resource-based and identity-based policies.  owner of EB resources (bus, rules, etc.) is an AWS root account.</li>
+<li>IAM - resource-based and identity-based policies. owner of EB resources (bus, rules, etc.) is an AWS root account.</li>
 <li>supports sending and recieving events across accounts</li>
-<li><a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/create-partner-event-bus.html">SaaS Partner Integrations</a></li>
-<li><a href="https://aws.amazon.com/blogs/compute/using-aws-x-ray-tracing-with-amazon-eventbridge/">X-Ray Tracing support</a></li>
+<li><a href=https://docs.aws.amazon.com/eventbridge/latest/userguide/create-partner-event-bus.html>SaaS Partner Integrations</a></li>
+<li><a href=https://aws.amazon.com/blogs/compute/using-aws-x-ray-tracing-with-amazon-eventbridge/>X-Ray Tracing support</a></li>
 </ul>
-<h3 id="kinesis">Kinesis</h3>
+<h3 id=kinesis>Kinesis</h3>
 <ul>
 <li>collect, process, and analyze real-time, streaming data</li>
 <li>kafka alternative</li>
 <li>partition key</li>
 <li>shard count</li>
-<li><a href="https://aws.amazon.com/blogs/aws/amazon-kinesis-data-streams-on-demand-stream-data-at-scale-without-managing-capacity/">Kinesis Data Streams On-Demand Mode</a> - charged per gigabyte of data written, read, and stored in the stream, in a pay-per-throughput fashion</li>
+<li><a href=https://aws.amazon.com/blogs/aws/amazon-kinesis-data-streams-on-demand-stream-data-at-scale-without-managing-capacity/>Kinesis Data Streams On-Demand Mode</a> - charged per gigabyte of data written, read, and stored in the stream, in a pay-per-throughput fashion</li>
 <li>ordering guaranteed for messages per shard</li>
-<li><a href="https://aws.amazon.com/about-aws/whats-new/2021/08/introducing-dynamic-partitioning-amazon-kinesis-data-firehose/">dynamic partitioning</a> - continuously partition streaming data in Kinesis Data Firehose using keys within data like “customer_id” or “transaction_id” and deliver data grouped by these keys into corresponding Amazon Simple Storage Service (Amazon S3) prefixes</li>
+<li><a href=https://aws.amazon.com/about-aws/whats-new/2021/08/introducing-dynamic-partitioning-amazon-kinesis-data-firehose/>dynamic partitioning</a> - continuously partition streaming data in Kinesis Data Firehose using keys within data like “customer_id” or “transaction_id” and deliver data grouped by these keys into corresponding Amazon Simple Storage Service (Amazon S3) prefixes</li>
 <li>lambda - lambda polls per shard
 <ul>
 <li>batch size</li>
@@ -1177,7 +985,7 @@ if (!doNotTrack) {
 <li>Concurrent batches per shard – Process multiple batches from the same shard concurrently.</li>
 </ul>
 </li>
-<li>enhanced fan-out via AWS::Kinesis::StreamConsumer.  each consumer gets 2 MiB per second for every shard you subscribe to.  can subscribe a max of 5 consumers per stream.</li>
+<li>enhanced fan-out via AWS::Kinesis::StreamConsumer. each consumer gets 2 MiB per second for every shard you subscribe to. can subscribe a max of 5 consumers per stream.</li>
 <li>Starting position - Latest, Trim horizon, At timestamp</li>
 <li>On-failure destination</li>
 <li>Retry attempts</li>
@@ -1187,38 +995,38 @@ if (!doNotTrack) {
 </li>
 <li>poison messages (retry until success - can cause backlog)</li>
 <li>KMS</li>
-<li>aggregate multiple records into one while staying under size limits to increase throughput. see <a href="https://github.com/awslabs/kinesis-aggregation">https://github.com/awslabs/kinesis-aggregation</a></li>
-<li>no autoscaling around shards.  requires management/ops.  consider SQS first as there&rsquo;s less to manage and see if it can meet the need</li>
+<li>aggregate multiple records into one while staying under size limits to increase throughput. see <a href=https://github.com/awslabs/kinesis-aggregation>https://github.com/awslabs/kinesis-aggregation</a></li>
+<li>no autoscaling around shards. requires management/ops. consider SQS first as there&rsquo;s less to manage and see if it can meet the need</li>
 </ul>
 <hr>
-<h2 id="analytics">Analytics</h2>
-<h3 id="kinesis-data-analytics">Kinesis Data Analytics</h3>
+<h2 id=analytics>Analytics</h2>
+<h3 id=kinesis-data-analytics>Kinesis Data Analytics</h3>
 <p>analyze streaming data with SQL</p>
 <ul>
 <li>real-time analysis</li>
 <li>supports SQL applications (aws specific) and apache flink applications</li>
-<li>concepts - application, input steam -&gt; application code (SQL statements) -&gt; output stream</li>
-<li>time based windows.  tumbling windows.</li>
+<li>concepts - application, input steam -> application code (SQL statements) -> output stream</li>
+<li>time based windows. tumbling windows.</li>
 <li>pump</li>
 </ul>
-<h3 id="pinpoint">Pinpoint</h3>
+<h3 id=pinpoint>Pinpoint</h3>
 <p>usage, customer, and engagement analytics</p>
-<h3 id="emr">EMR</h3>
+<h3 id=emr>EMR</h3>
 <p>hadoop, spark, and friends</p>
 <ul>
-<li><a href="https://aws.amazon.com/emr/pricing/?nc=sn&amp;loc=4">Amazon EMR Serverless</a>
+<li><a href="https://aws.amazon.com/emr/pricing/?nc=sn&loc=4">Amazon EMR Serverless</a>
 <ul>
 <li>part of the job specification, you can provide the minimum and maximum number of concurrent workers, and the vCPU, memory, and storage for each worker</li>
 <li>charged for aggregate vCPU, memory, and storage resources used from the time workers start executing till the time they terminate, rounded up to the nearest second with a one-minute minimum.</li>
 </ul>
 </li>
 </ul>
-<h3 id="data-pipelines">Data Pipelines</h3>
+<h3 id=data-pipelines>Data Pipelines</h3>
 <p>data processing workloads</p>
 <blockquote>
 <p>AWS Data Pipeline, you can regularly access your data where it’s stored, transform and process it at scale, and efficiently transfer the results to AWS services such as Amazon S3, Amazon RDS, Amazon DynamoDB, and Amazon EMR.</p>
 </blockquote>
-<h3 id="glue">Glue</h3>
+<h3 id=glue>Glue</h3>
 <ul>
 <li>catalog / metadata (hive metadata catalog)</li>
 <li>crawlers autodiscover schema</li>
@@ -1236,49 +1044,49 @@ if (!doNotTrack) {
 <li>partitions</li>
 <li>AWS Data Wrangler - excellent integration library to use with glue via python shell jobs</li>
 </ul>
-<h3 id="glue-databrew">Glue DataBrew</h3>
+<h3 id=glue-databrew>Glue DataBrew</h3>
 <ul>
 <li>visual data preparation service</li>
 <li>extract, clean, normalize, transform, combine, data at scale</li>
 <li>target audience: non-technical Data Analyst</li>
-<li>serverless.  pay for what you use</li>
+<li>serverless. pay for what you use</li>
 <li>concepts
 <ul>
 <li>datasets</li>
 <li>recipes - steps to apply/take on dataset</li>
 <li>job - recipe + dataset run</li>
-<li>project - visual workspace for working with data interactively.  can apply changes and visually see the results in UI.  you specify a sampling of the data to work with.</li>
+<li>project - visual workspace for working with data interactively. can apply changes and visually see the results in UI. you specify a sampling of the data to work with.</li>
 </ul>
 </li>
 </ul>
-<p><img src="https://www.evernote.com/l/AAG7ZKzRRblBGakFLIWEBGTrsChbY2sRNlkB/image.png" alt=""></p>
-<h3 id="athena">Athena</h3>
+<p><img src=https://www.evernote.com/l/AAG7ZKzRRblBGakFLIWEBGTrsChbY2sRNlkB/image.png alt></p>
+<h3 id=athena>Athena</h3>
 <ul>
 <li>serverless querying of S3 data</li>
 <li>federated query - run SQL queries across data stored in relational, non-relational, object, and custom data sources.</li>
 <li>CTAS - create table as select</li>
-<li>query S3 data in place.  pay per query / data accessed.</li>
+<li>query S3 data in place. pay per query / data accessed.</li>
 <li>integrated with glue catalog</li>
 <li>Presto is underlying tech</li>
 </ul>
-<h3 id="quicksight">QuickSight</h3>
-<h3 id="lake-formation">Lake Formation</h3>
+<h3 id=quicksight>QuickSight</h3>
+<h3 id=lake-formation>Lake Formation</h3>
 <hr>
-<h2 id="management--governance">Management &amp; Governance</h2>
-<h3 id="well-architected-framework">Well-Architected Framework</h3>
+<h2 id=management--governance>Management & Governance</h2>
+<h3 id=well-architected-framework>Well-Architected Framework</h3>
 <ul>
 <li>describes the key concepts, design principles, and architectural best practices for designing and running workloads in the cloud</li>
 <li>5 pillars - Operational Excellence, Security, Reliability, Performance, Cost Optimization</li>
 <li>Well-Architected Tool - provides guidance by answer questions</li>
 <li>Lens - serverless, analytics, ML, SaaS, etc.</li>
 </ul>
-<h3 id="control-tower">Control Tower</h3>
-<p>set up and govern a new, secure multi-account AWS environment.  builders can provision new AWS accounts in a few clicks, while you have peace of mind knowing your accounts conform to your company-wide policies</p>
-<h3 id="organizations">Organizations</h3>
+<h3 id=control-tower>Control Tower</h3>
+<p>set up and govern a new, secure multi-account AWS environment. builders can provision new AWS accounts in a few clicks, while you have peace of mind knowing your accounts conform to your company-wide policies</p>
+<h3 id=organizations>Organizations</h3>
 <ul>
 <li>account management service that lets you consolidate multiple AWS accounts into an organization that you create and centrally manage.</li>
 </ul>
-<h3 id="cloudformation">CloudFormation</h3>
+<h3 id=cloudformation>CloudFormation</h3>
 <ul>
 <li>declarative provisioning of AWS infrastructure/resource</li>
 <li>parameters, mappings, conditionals</li>
@@ -1286,14 +1094,14 @@ if (!doNotTrack) {
 <li>change sets</li>
 <li>nested stacks</li>
 <li>stack drift</li>
-<li>stacksets - deploy stack to multiple regions.  For DR, active-active, etc.</li>
+<li>stacksets - deploy stack to multiple regions. For DR, active-active, etc.</li>
 <li>max resources declared in stack (500)</li>
-<li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html">custom resources</a> - backed by lambda</li>
-<li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">macros</a> - lambda performs the template processing / transform</li>
+<li><a href=https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html>custom resources</a> - backed by lambda</li>
+<li><a href=https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html>macros</a> - lambda performs the template processing / transform</li>
 <li>modules - package resource configurations for inclusion across stack templates, in a transparent, manageable, and repeatable way</li>
 <li>CloudFormation Registry</li>
 </ul>
-<h3 id="serverless-application-repository-sar">Serverless Application Repository (SAR)</h3>
+<h3 id=serverless-application-repository-sar>Serverless Application Repository (SAR)</h3>
 <blockquote>
 <p>enables teams, organizations, and individual developers to find, deploy, publish, share, store, and easily assemble serverless architectures</p>
 </blockquote>
@@ -1301,7 +1109,7 @@ if (!doNotTrack) {
 <li>any cfn can be used for SAR app</li>
 <li>iam for access to SAR app</li>
 </ul>
-<h3 id="service-catalog">Service Catalog</h3>
+<h3 id=service-catalog>Service Catalog</h3>
 <ul>
 <li>create and manage catalogs of IT services that are approved for use on AWS</li>
 <li>concepts:
@@ -1324,40 +1132,40 @@ if (!doNotTrack) {
 </li>
 <li>Service Actions - enable end users to perform operational tasks, troubleshoot issues, run approved commands, or request permissions in AWS Service Catalog via SSM docs.</li>
 </ul>
-<h3 id="config">Config</h3>
+<h3 id=config>Config</h3>
 <ul>
 <li>monitor, notify, quarantine, remediate based on resource changes.</li>
-<li>RDK - rule development kit.  Config triggers lambda on resource changes.</li>
+<li>RDK - rule development kit. Config triggers lambda on resource changes.</li>
 <li>AWS Config is a service that enables you to assess, audit, and evaluate the configurations of your AWS resources. Config continuously monitors and records your AWS resource configurations and allows you to automate the evaluation of recorded configurations against desired configurations.</li>
 <li>define rules that get evaluated when any change is made (e.g. resource provisioned)</li>
-<li>conformance - collection of Config rules and remediation actions. portable.  can be applied across multiple accounts and regions</li>
+<li>conformance - collection of Config rules and remediation actions. portable. can be applied across multiple accounts and regions</li>
 <li>there are aws managed rules that are part of the service and you can define custom ones via lambda</li>
 </ul>
-<h3 id="appconfig">AppConfig</h3>
+<h3 id=appconfig>AppConfig</h3>
 <ul>
 <li>feature flags, Update applications without interruptions, Control deployment of changes across your application</li>
 <li>a capability of AWS Systems Manager, to create, manage, and quickly deploy application configurations. AppConfig supports controlled deployments to applications of any size and includes built-in validation checks and monitoring. You can use AppConfig with applications hosted on EC2 instances, AWS Lambda, containers, mobile applications, or IoT devices.</li>
 <li>JSON Schema Validators - ensure that new or updated configuration settings conform to the best practices required by your application</li>
 <li>e.g. a JSON doc with application configuration can be sourced from S3, parameter store</li>
 </ul>
-<h3 id="cloudwatch-logs">CloudWatch Logs</h3>
+<h3 id=cloudwatch-logs>CloudWatch Logs</h3>
 <ul>
 <li>centralize the logs from all of your systems, applications, and AWS services that you use, in a single, highly scalable service</li>
 <li>concepts - log groups, log streams</li>
 <li>subscriptions - real-time feed of log events from CloudWatch Logs (Kinesis <code>[stream|firehose]</code>, elasticsearch, Lambda)</li>
-<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/MonitoringLogData.html">Creating Metrics From Log Events Using Filters</a></li>
+<li><a href=https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/MonitoringLogData.html>Creating Metrics From Log Events Using Filters</a></li>
 <li>encrypt with KMS</li>
 </ul>
-<h3 id="cloudwatch-events-see-eventbridge">CloudWatch Events (see <a href="">EventBridge</a>)</h3>
+<h3 id=cloudwatch-events-see-eventbridge>CloudWatch Events (see <a href>EventBridge</a>)</h3>
 <ul>
 <li>cron triggers</li>
 </ul>
-<h3 id="cloudwatch-insights">CloudWatch Insights</h3>
+<h3 id=cloudwatch-insights>CloudWatch Insights</h3>
 <ul>
 <li>query log groups</li>
-<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_QuerySyntax.html">CWL Query Syntax</a></li>
+<li><a href=https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_QuerySyntax.html>CWL Query Syntax</a></li>
 </ul>
-<h3 id="cloudwatch-metrics">CloudWatch Metrics</h3>
+<h3 id=cloudwatch-metrics>CloudWatch Metrics</h3>
 <ul>
 <li>time series data</li>
 <li>metric - time-ordered set of data points that are published to CloudWatch</li>
@@ -1365,126 +1173,126 @@ if (!doNotTrack) {
 <li>statistics - sum, max, min, average, sample count, percentile (pNN) (metric data aggregations over specified periods of time)</li>
 <li>metrics retention</li>
 <li>Dashboards - for Visualizations</li>
-<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/MonitoringLogData.html">Creating Metrics From Log Events Using Filters</a></li>
-<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Embedded_Metric_Format_Generation.html">Embedded Metric Format</a> - generate metrics from structured (json) log messages</li>
-<li><a href="https://aws.amazon.com/blogs/aws/cloudwatch-metric-streams-send-aws-metrics-to-partners-and-to-your-apps-in-real-time/">CloudWatch Metric Streams</a> - metrics are delivered to a Kinesis Data Firehose stream</li>
+<li><a href=https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/MonitoringLogData.html>Creating Metrics From Log Events Using Filters</a></li>
+<li><a href=https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Embedded_Metric_Format_Generation.html>Embedded Metric Format</a> - generate metrics from structured (json) log messages</li>
+<li><a href=https://aws.amazon.com/blogs/aws/cloudwatch-metric-streams-send-aws-metrics-to-partners-and-to-your-apps-in-real-time/>CloudWatch Metric Streams</a> - metrics are delivered to a Kinesis Data Firehose stream</li>
 </ul>
-<h3 id="cloudwatch-alarms">CloudWatch Alarms</h3>
+<h3 id=cloudwatch-alarms>CloudWatch Alarms</h3>
 <ul>
 <li>notify via email, SNS topics</li>
 <li>create a CloudWatch alarm that watches a single CloudWatch metric or the result of a math expression based on CloudWatch metrics</li>
 <li>An alarm watches a single metric over a specified time period, and performs one or more specified actions, based on the value of the metric relative to a threshold over time. The action is a notification sent to an Amazon SNS topic or an Auto Scaling policy. You can also add alarms to dashboards.</li>
 <li>composite alarms</li>
 <li>Alarm States - OK, ALARM, INSUFFICIENT_DATA (missing data points)</li>
-<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch-and-eventbridge.html">EventBridge integration</a> - CloudWatch sends events to Amazon EventBridge whenever a CloudWatch alarm changes alarm state.</li>
+<li><a href=https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch-and-eventbridge.html>EventBridge integration</a> - CloudWatch sends events to Amazon EventBridge whenever a CloudWatch alarm changes alarm state.</li>
 </ul>
-<h3 id="cloudwatch-synthetics-canaries">CloudWatch Synthetics (Canaries)</h3>
+<h3 id=cloudwatch-synthetics-canaries>CloudWatch Synthetics (Canaries)</h3>
 <ul>
 <li>supports monitoring your REST APIs, URLs, and website content every minute, 24x7, and alerts you when your application endpoints don’t behave as expected.</li>
-<li>Node.js or python based.  bundles in Puppeteer + Chromium to the runtime</li>
+<li>Node.js or python based. bundles in Puppeteer + Chromium to the runtime</li>
 <li>trigger types - cron (1 min smallest freq), run once</li>
-<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_VPC.html">can run in VPC</a></li>
+<li><a href=https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_VPC.html>can run in VPC</a></li>
 <li>can also used in any workloads requiring general browser automation</li>
-<li>creates several <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_metrics.html">CloudWatch metrics in <code>CloudWatchSynthetics</code> namespace</a></li>
-<li>EventBridge support.  See <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitoring-events-eventbridge.html">monitoring canary events with Amazon EventBridge</a></li>
-<li>CloudFormation support via <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html"><code>AWS::Synthetics::Canary</code></a></li>
+<li>creates several <a href=https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_metrics.html>CloudWatch metrics in <code>CloudWatchSynthetics</code> namespace</a></li>
+<li>EventBridge support. See <a href=https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitoring-events-eventbridge.html>monitoring canary events with Amazon EventBridge</a></li>
+<li>CloudFormation support via <a href=https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html><code>AWS::Synthetics::Canary</code></a></li>
 </ul>
 <blockquote>
 <p>create canaries, configurable scripts that run on a schedule, to monitor your endpoints and APIs. Canaries follow the same routes and perform the same actions as a customer, which makes it possible for you to continually verify your customer experience even when you don&rsquo;t have any customer traffic on your applications. By using canaries, you can discover issues before your customers do.</p>
 </blockquote>
-<h3 id="cloudtrail">CloudTrail</h3>
+<h3 id=cloudtrail>CloudTrail</h3>
 <ul>
 <li>logs all recording AWS API and Management Console actions to S3</li>
 <li>can query via Athena</li>
 </ul>
-<h3 id="proton">Proton</h3>
+<h3 id=proton>Proton</h3>
 <ul>
 <li>self-serve for platform enabling teams</li>
 <li>enables the standardization of cross cutting concerns for microservices based solutions (composition of many microservices).</li>
 <li>e.g. the following is needed for each microservice and should be consistent/aligned with standards and best practices: compute, DNS, load balancing, code deployment pipeline, monitoring and alarms</li>
-<li>similar goals as <a href="https://spinnaker.io/">Netflix&rsquo;s Spinnaker</a></li>
+<li>similar goals as <a href=https://spinnaker.io/>Netflix&rsquo;s Spinnaker</a></li>
 </ul>
 <p>k8s ecosystem</p>
 <hr>
-<h2 id="developer-tools">Developer Tools</h2>
-<h3 id="cloud9">Cloud9</h3>
+<h2 id=developer-tools>Developer Tools</h2>
+<h3 id=cloud9>Cloud9</h3>
 <ul>
 <li>cloud/browser based compute environment and IDE.</li>
 <li>dev machine (ec2 amzn linux) in the cloud with browser based IDE and terminal</li>
 </ul>
-<h3 id="codecommit">CodeCommit</h3>
+<h3 id=codecommit>CodeCommit</h3>
 <ul>
 <li>fully-managed source control service that hosts secure Git-based repositories</li>
 </ul>
-<h3 id="codebuild">CodeBuild</h3>
+<h3 id=codebuild>CodeBuild</h3>
 <ul>
 <li>managed build service</li>
 <li>provides prepackaged build environments</li>
 <li>continuous integration service that compiles source code, runs tests, and produces software packages</li>
 <li>like Jenkins, Travis, CircleCI</li>
 <li>concepts - build project - environment (linux/windows, container image to use, etc.),</li>
-<li><a href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html"><code>buildspec.yml</code></a> - phases, env vars, artifacts</li>
+<li><a href=https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html><code>buildspec.yml</code></a> - phases, env vars, artifacts</li>
 <li>can be used to run ad-hoc workloads over lambda when need to run longer than 15 min</li>
 </ul>
-<h3 id="codedeploy">CodeDeploy</h3>
+<h3 id=codedeploy>CodeDeploy</h3>
 <ul>
 <li>automates software deployments to a variety of compute services such as Amazon EC2, AWS Fargate, AWS Lambda, and your on-premises servers</li>
 </ul>
-<h3 id="codepipeline">CodePipeline</h3>
+<h3 id=codepipeline>CodePipeline</h3>
 <ul>
 <li>continuous delivery service that helps you automate your release pipelines</li>
 <li>orchestrates CodeBuild and CodeDeploy</li>
 <li>sources: github, CodeCommit, S3</li>
 </ul>
-<h3 id="codeartifact">CodeArtifact</h3>
+<h3 id=codeartifact>CodeArtifact</h3>
 <ul>
 <li>fully managed software artifact repository service that makes it easy for organizations of any size to securely store, publish, and share packages used in their software development process</li>
 <li>artifactory competitor</li>
 </ul>
-<h3 id="x-ray">X-Ray</h3>
+<h3 id=x-ray>X-Ray</h3>
 <ul>
 <li>distributed tracing</li>
 <li>instrument code</li>
 <li>similar to zipkin, jaeger</li>
 </ul>
-<h3 id="aws-cli">AWS CLI</h3>
+<h3 id=aws-cli>AWS CLI</h3>
 <ul>
 <li><code>~/.aws/[config|credentials]</code></li>
-<li><code>--generate-cli-skeleton</code> - e.g. <code>aws codebuild start-build --generate-cli-skeleton &gt; build.json</code> -&gt; <code>aws codebuild start-build --cli-input-json file://start-build.json</code></li>
+<li><code>--generate-cli-skeleton</code> - e.g. <code>aws codebuild start-build --generate-cli-skeleton > build.json</code> -> <code>aws codebuild start-build --cli-input-json file://start-build.json</code></li>
 </ul>
-<h3 id="amplify">Amplify</h3>
+<h3 id=amplify>Amplify</h3>
 <ul>
 <li>CLI to provision resources (Auth (cogntio), API (API Gateway), GraphQL (AppSync), Storage (S3, DynamoDB))</li>
 <li>client-side javascript/typescript, iOS, Android libraries and UI components</li>
-<li>Amplify Console.  CI/CD static site hosting.</li>
+<li>Amplify Console. CI/CD static site hosting.</li>
 </ul>
-<h3 id="sam-serverless-application-model">SAM (Serverless Application Model)</h3>
+<h3 id=sam-serverless-application-model>SAM (Serverless Application Model)</h3>
 <ul>
 <li>higher-level cfn resource types (transformed via cfn macro on backend)</li>
 <li>SAM CLI</li>
 <li>local development features via docker (apig endpoint</li>
 </ul>
-<h3 id="cdk">CDK</h3>
+<h3 id=cdk>CDK</h3>
 <ul>
 <li>express resources using general purpose programming languages (ts/js/python/java/C#)</li>
 <li>constructs - cfn (L1), CDK (L2), pattern/solution (L3)</li>
 <li>synth to cfn</li>
 <li>cloud assemblies - cfn + source code, docker images, assets (s3)</li>
 <li>aspects - ability to visit each node/resource in stack and apply changes</li>
-<li>Application -&gt; Stacks -&gt; Constructs</li>
-<li><a href="https://docs.aws.amazon.com/cdk/latest/guide/context.html#context_example">Runtime context</a></li>
+<li>Application -> Stacks -> Constructs</li>
+<li><a href=https://docs.aws.amazon.com/cdk/latest/guide/context.html#context_example>Runtime context</a></li>
 <li><code>[tf|k8s]</code> CDKsnc</li>
-<li>jsii - core/foundational tech for multi-language/polyglot support.  bind any language to underlying typescript implementation.</li>
+<li>jsii - core/foundational tech for multi-language/polyglot support. bind any language to underlying typescript implementation.</li>
 <li>CDK pipelines for CI/CD</li>
 </ul>
-<h3 id="aws-sdks">AWS SDKs</h3>
+<h3 id=aws-sdks>AWS SDKs</h3>
 <ul>
 <li>built in retries, timeouts</li>
 <li>can configure timeouts (e.g. <code>AWS.config.update({maxRetries: 2, httpOptions: { timeout: 2 * 1000, connectTimeout: 3 * 1000, },})</code>)</li>
 </ul>
 <hr>
-<h2 id="migration--transfer">Migration &amp; Transfer</h2>
-<h3 id="aws-datasync">AWS DataSync</h3>
+<h2 id=migration--transfer>Migration & Transfer</h2>
+<h3 id=aws-datasync>AWS DataSync</h3>
 <p>copy data between NFS, SMB, S3, EFS, FSx, HDFS</p>
 <p><strong>concepts</strong></p>
 <ul>
@@ -1515,14 +1323,14 @@ if (!doNotTrack) {
 </li>
 </ul>
 <p>Data transfer between self-managed storage and AWS</p>
-<p><img src="https://docs.aws.amazon.com/datasync/latest/userguide/images/DataSync-chart-on-prem.png" alt=""></p>
+<p><img src=https://docs.aws.amazon.com/datasync/latest/userguide/images/DataSync-chart-on-prem.png alt></p>
 <p>Data transfer between AWS storage services</p>
-<p><img src="https://docs.aws.amazon.com/datasync/latest/userguide/images/DataSync-chart-agentless.png" alt=""></p>
-<p><a href="https://www.awsgeek.com/AWS-DataSync/"><img src="https://www.awsgeek.com/AWS-DataSync/AWS-DataSync.jpg" alt="image"></a></p>
-<h3 id="aws-dms-database-migration-service">AWS DMS (Database Migration Service)</h3>
+<p><img src=https://docs.aws.amazon.com/datasync/latest/userguide/images/DataSync-chart-agentless.png alt></p>
+<p><a href=https://www.awsgeek.com/AWS-DataSync/><img src=https://www.awsgeek.com/AWS-DataSync/AWS-DataSync.jpg alt=image></a></p>
+<h3 id=aws-dms-database-migration-service>AWS DMS (Database Migration Service)</h3>
 <ul>
 <li>migrate RDBS, data warehouses, nosql dbs, etc. in cloud, between combos of cloud and on-prem</li>
-<li>it&rsquo;s a server (EC2) in the cloud that runs replication software (replication engine).  <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_ReplicationInstance.Types.html">DMS replication instance types</a></li>
+<li>it&rsquo;s a server (EC2) in the cloud that runs replication software (replication engine). <a href=https://docs.aws.amazon.com/dms/latest/userguide/CHAP_ReplicationInstance.Types.html>DMS replication instance types</a></li>
 <li>create source and target connections</li>
 <li>schedule task on server to move data</li>
 <li>pay-as-you-go model</li>
@@ -1578,14 +1386,14 @@ if (!doNotTrack) {
 </ul>
 </li>
 <li>DMS Replication Process
-<img src="https://docs.aws.amazon.com/dms/latest/userguide/images/datarep-Welcome.png" alt=""></li>
+<img src=https://docs.aws.amazon.com/dms/latest/userguide/images/datarep-Welcome.png alt></li>
 <li>Replication
-<img src="https://docs.aws.amazon.com/dms/latest/userguide/images/datarep-intro-rep-instance1.png" alt="">
-<img src="https://docs.aws.amazon.com/dms/latest/userguide/images/datarep-intro-rep-task1.png" alt=""></li>
+<img src=https://docs.aws.amazon.com/dms/latest/userguide/images/datarep-intro-rep-instance1.png alt>
+<img src=https://docs.aws.amazon.com/dms/latest/userguide/images/datarep-intro-rep-task1.png alt></li>
 </ul>
 <hr>
-<h2 id="machine-learning">Machine Learning</h2>
-<h3 id="sagemaker">SageMaker</h3>
+<h2 id=machine-learning>Machine Learning</h2>
+<h3 id=sagemaker>SageMaker</h3>
 <ul>
 <li>build, train, and deploy machine learning models</li>
 <li>prebuilt containers for common machine learning frameworks—such as Tensorflow, Pytorch, and MxNet</li>
@@ -1595,43 +1403,43 @@ if (!doNotTrack) {
 <li>jupyter notebooks</li>
 <li>SageMaker notebook instance is a machine learning (ML) compute instance running the Jupyter Notebook App</li>
 </ul>
-<h3 id="comprehend">Comprehend</h3>
+<h3 id=comprehend>Comprehend</h3>
 <ul>
 <li>NLP (natural language processing)</li>
 <li>By utilizing NLP, you can extract important phrases, sentiment, syntax, key entities such as brand, date, location, person, etc., and the language of the text</li>
 <li>find insights and relationships in text</li>
 <li>use case e.g.: gauge whether customer sentiment is positive, neutral, negative, or mixed based on the feedback you receive via support calls, emails, social media, and other online channels</li>
 </ul>
-<h3 id="polly">Polly</h3>
+<h3 id=polly>Polly</h3>
 <ul>
 <li>text-to-speech (TTS)</li>
 <li>supports MP3, Vorbis, and raw PCM audio stream formats</li>
 <li>Neural Text-to-Speech (NTTS) voices</li>
 </ul>
-<h3 id="rekognition">Rekognition</h3>
+<h3 id=rekognition>Rekognition</h3>
 <ul>
 <li>API to analyze any image or video file</li>
 <li>identify the objects, people, text, scenes, and activities, as well as detect any inappropriate content.</li>
 </ul>
-<h3 id="textract">Textract</h3>
+<h3 id=textract>Textract</h3>
 <ul>
 <li>extracts text and data from scanned documents</li>
 <li>supports PNG, JPEG, and PDF formats. For synchronous APIs, you can submit images either as an S3 object or as a byte array. For asynchronous APIs, you can submit S3 objects</li>
 </ul>
-<h3 id="translate">Translate</h3>
+<h3 id=translate>Translate</h3>
 <ul>
 <li>neural machine translation service for translating text to and from English across a breadth of supported languages</li>
 </ul>
-<h3 id="transcribe">Transcribe</h3>
+<h3 id=transcribe>Transcribe</h3>
 <ul>
 <li>audio to text</li>
 <li>transcription services for your audio files. It uses advanced machine learning technologies to recognize spoken words and transcribe them into text.</li>
 </ul>
-<h3 id="forecast">Forecast</h3>
+<h3 id=forecast>Forecast</h3>
 <ul>
 <li>managed deep learning service for time-series forecasting. By providing Amazon Forecast with historical time-series data, you can predict future points in the series.</li>
 </ul>
-<h3 id="personalize">Personalize</h3>
+<h3 id=personalize>Personalize</h3>
 <ul>
 <li>create individualized recommendations for customers using their applications</li>
 <li>e.g. use cases
@@ -1643,24 +1451,24 @@ if (!doNotTrack) {
 </ul>
 </li>
 </ul>
-<h3 id="lex">Lex</h3>
+<h3 id=lex>Lex</h3>
 <ul>
 <li>conversational interfaces into any application using voice and text. Amazon Lex provides the advanced deep learning functionalities of automatic speech recognition (ASR) for converting speech to text, and natural language understanding (NLU) to recognize the intent of the text</li>
 <li>chat bots</li>
 </ul>
-<h3 id="kendra">Kendra</h3>
+<h3 id=kendra>Kendra</h3>
 <ul>
 <li>intelligent search service (ML powered)</li>
 <li>concepts - index, documents (html, pdf, word, ppt, txt), data sources (S3, confluence, OneDrive, etc.), query</li>
 <li>point indexer to files in S3</li>
 <li>pre-built faceted search UI component (web based)</li>
-<li>supports <a href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-custom.html">custom data sources</a>. e.g. salesforce attachments data source</li>
+<li>supports <a href=https://docs.aws.amazon.com/kendra/latest/dg/data-source-custom.html>custom data sources</a>. e.g. salesforce attachments data source</li>
 <li>can create custom document attributes</li>
 <li>developer and enterprise editions</li>
 </ul>
 <hr>
-<h2 id="security-identity-and-compliance">Security, Identity, and Compliance</h2>
-<h3 id="iam">IAM</h3>
+<h2 id=security-identity-and-compliance>Security, Identity, and Compliance</h2>
+<h3 id=iam>IAM</h3>
 <ul>
 <li>terms - Resources, Identities, Entities, Principals (person or application), Actions</li>
 <li>authentication, authorization</li>
@@ -1672,20 +1480,20 @@ if (!doNotTrack) {
 <li>Resource-based policies (e.g. bucket policy, IAM role trust policy, lambda permissions, sns topic policy, sqs queue policy, kms key policy, vpc endpoint policy)</li>
 <li>Permissions boundaries</li>
 <li>Organizations SCPs</li>
-<li>Session policies - via assume role or federated user.  Session policies limit permissions for a created session, but do not grant permissions.</li>
+<li>Session policies - via assume role or federated user. Session policies limit permissions for a created session, but do not grant permissions.</li>
 </ul>
 </li>
 <li>STS - temp security credentials</li>
 <li>assume role</li>
 <li>identity providers/federation - Federated users and roles (via OIDC, SAML2)</li>
-<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_attribute-based-access-control.html">Attribute-based access control (ABAC)</a> - defines permissions based on attributes (tags)</li>
-<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html">permission boundaries</a></li>
+<li><a href=https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_attribute-based-access-control.html>Attribute-based access control (ABAC)</a> - defines permissions based on attributes (tags)</li>
+<li><a href=https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html>permission boundaries</a></li>
 <li>sigv4 requests</li>
 <li>account root user</li>
 <li>MFA</li>
 <li>IAM Access Analyzer - validate policies, generate policies (based on CT logs, role or user, and timeframe)</li>
 </ul>
-<h3 id="cognito">Cognito</h3>
+<h3 id=cognito>Cognito</h3>
 <ul>
 <li>UserPool</li>
 <li>IdentityPool - exchange UserPool.Identity for temporary IAM credentials
@@ -1698,278 +1506,108 @@ if (!doNotTrack) {
 <li>API Gateway authorizer</li>
 <li>provided login UIs</li>
 </ul>
-<h3 id="secrets-manager">Secrets Manager</h3>
-<h3 id="waf">WAF</h3>
+<h3 id=secrets-manager>Secrets Manager</h3>
+<h3 id=waf>WAF</h3>
 <ul>
 <li>web application firewall</li>
 <li>associate with ALB, CloudFront, API Gateway</li>
 </ul>
-<h3 id="certificate-manager-acm">Certificate Manager (ACM)</h3>
+<h3 id=certificate-manager-acm>Certificate Manager (ACM)</h3>
 <ul>
 <li>provision, manage, and deploy public and private Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificates for use with AWS services and your internal connected resources.</li>
 </ul>
-<h3 id="kms">KMS</h3>
+<h3 id=kms>KMS</h3>
 <ul>
 <li>key management service</li>
 </ul>
-<h3 id="directory-service">Directory Service</h3>
+<h3 id=directory-service>Directory Service</h3>
 <ul>
 <li>provides multiple ways to set up and run Amazon Cloud Directory, Amazon Cognito, and Microsoft AD with other AWS services. Amazon Cloud Directory provides a highly scalable directory store for your application’s multihierarchical data. Amazon Cognito helps you create a directory store that authenticates your users either through your own user pools or through federated identity providers. AWS Directory Service for Microsoft Active Directory (Enterprise Edition), also known as Microsoft AD, enables your directory-aware workloads and AWS resources to use a managed Active Directory in the AWS Cloud.</li>
 </ul>
 <hr>
-<h2 id="media-services">Media Services</h2>
-<h3 id="amazon-interactive-video-service">Amazon Interactive Video Service</h3>
+<h2 id=media-services>Media Services</h2>
+<h3 id=amazon-interactive-video-service>Amazon Interactive Video Service</h3>
 <blockquote>
 <p>Amazon Interactive Video Service (Amazon IVS) is a managed live streaming solution that is quick and easy to set up, and ideal for creating interactive video experiences. Send your live streams to Amazon IVS using standard streaming software like Open Broadcaster Software (OBS) and the service does everything you need to make low-latency live video available to any viewer around the world, letting you focus on building interactive experiences alongside the live video.</p>
 </blockquote>
-
-
-        
-
-        
-
-        <hr />
-
-        <section id="social-share">
-          <div class="list-inline footer-links text-center">
-            <span class="text-muted">share on</span><br />
-            <a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-services%2f&amp;text=AWS%20Services&amp;via=pfeilbr"
-              target="_blank" title="Share on Twitter">Twitter</a>
-            &nbsp;&bull;&nbsp;
-            <a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-services%2f&amp;title=AWS%20Services" target="_blank"
-              title="Share on Reddit">
-              Reddit
-            </a>
-
-          </div>
-
-
-
-        </section>
-
-
-
-
-
-
-        
-        
-        
-        
-
-        
-        
-
-        
-        
-      </article>
-
-      
-      <ul class="pager blog-pager">
-        
-        <li class="previous">
-          <a href="https://brianpfeil.com/post/http-live-streaming-hls/" data-toggle="tooltip" data-placement="top"
-            title="HTTP Live Streaming HLS">&larr; HTTP Live Streaming HLS</a>
-        </li>
-        
-        
-        <li class="next">
-          <a href="https://brianpfeil.com/post/goreleaser/" data-toggle="tooltip" data-placement="top"
-            title="GoReleaser">GoReleaser &rarr;</a>
-        </li>
-        
-      </ul>
-      
-
-
-      
-      
-      
-      
-
-    </div>
-  </div>
+<hr>
+<section id=social-share>
+<div class="list-inline footer-links text-center">
+<span class=text-muted>share on</span><br>
+<a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-services%2f&text=AWS%20Services&via=pfeilbr" target=_blank title="Share on Twitter">Twitter</a>
+&nbsp;&bull;&nbsp;
+<a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-services%2f&title=AWS%20Services" target=_blank title="Share on Reddit">
+Reddit
+</a>
 </div>
-
-    
+</section>
+</article>
+<ul class="pager blog-pager">
+<li class=previous>
+<a href=https://brianpfeil.com/post/http-live-streaming-hls/ data-toggle=tooltip data-placement=top title="HTTP Live Streaming HLS">&larr; HTTP Live Streaming HLS</a>
+</li>
+<li class=next>
+<a href=https://brianpfeil.com/post/goreleaser/ data-toggle=tooltip data-placement=top title=GoReleaser>GoReleaser &rarr;</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
 <footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <ul class="list-inline text-center footer-links">
-          
-          
-          
-          
-          
-          
-          <li>
-            <a href="https://twitter.com/pfeilbr" title="twitter">
-              <span class="footer-link">
-                twitter
-              </span>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://github.com/pfeilbr" title="github">
-              <span class="footer-link">
-                github
-              </span>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://stackoverflow.com/users/29148/pfeilbr" title="stack overflow">
-              <span class="footer-link">
-                stack overflow
-              </span>
-            </a>
-          </li>
-
-
-          <li>
-            <a href="/index.xml" title="RSS">
-              <span class="footer-link">
-                rss
-              </span>
-            </a>
-          </li>
-          
-        </ul>
-        <p class="credits copyright text-muted">
-          
-          
-          <a href="https://brianpfeil.com">Brian Pfeil</a>
-          
-          
-
-          &nbsp;&bull;&nbsp;&copy;
-          
-          2021
-          
-
-          
-        </p>
-        
-        
-      </div>
-    </div>
-  </div>
-</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"
-  integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js"
-  integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"
-  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-<script src="https://brianpfeil.com/js/main.js"></script>
-<script src="https://brianpfeil.com/js/highlight.min.js"></script>
-<script> hljs.initHighlightingOnLoad(); </script>
-<script> $(document).ready(function () { $("pre.chroma").css("padding", "0"); }); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js"
-  integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js"
-  integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://brianpfeil.com/js/load-photoswipe.js"></script>
-
-
-
-
-
-
-<script src="https://unpkg.com/darkreader@4.9.16/darkreader.js" crossorigin="anonymous"></script>
-
-<script>
-    
-    (() => {
-
-        DarkReader.setFetchMethod(window.fetch)
-
-        const DARK_MODE_ENABLED_KEY = "DARK_MODE_ENABLED_KEY"
-
-        const enabledIcon = document.getElementById("dark-mode-enabled-icon")
-        const disabledIcon = document.getElementById("dark-mode-disabled-icon")
-
-         
-        if (enabledIcon === null || disabledIcon === null) {
-            return
-        }
-
-        const toggleClassName = "hidden"
-
-        const enable = () => {
-
-            if (window.localStorage) {
-                DarkReader.enable({
-                    brightness: 100,
-                    contrast: 90,
-                    sepia: 10
-                });
-                window.localStorage.setItem(DARK_MODE_ENABLED_KEY, "true")
-
-                enabledIcon.classList.add(toggleClassName)
-                disabledIcon.classList.remove(toggleClassName)
-            }
-        }
-
-        const disable = () => {
-            if (window.localStorage) {
-                DarkReader.disable()
-                if (window.localStorage.getItem(DARK_MODE_ENABLED_KEY)) {
-                    window.localStorage.removeItem(DARK_MODE_ENABLED_KEY)
-                }
-
-                enabledIcon.classList.remove(toggleClassName)
-                disabledIcon.classList.add(toggleClassName)
-
-            }
-        }
-
-        const isEnabled = () => {
-            return window.localStorage && (window.localStorage.getItem(DARK_MODE_ENABLED_KEY) != null)
-        }
-
-        const toggle = () => {
-            if (isEnabled()) {
-                disable()
-            } else {
-                enable()
-            }
-        }
-
-
-        if (isEnabled()) {
-            enable()
-        } else {
-            disable()
-        }
-
-        const e = document.getElementById('dark-mode-toggle')
-        e.addEventListener('click', toggle)
-        
-        
-        
-        
-        
-        
-
-        
-        
-
-    })()
-
-</script>
-
-<script>
-     
-    
-
-</script>
-
-
-
-<script id="search-result-template" type="text/x-js-template">
+<div class=container>
+<div class=row>
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<ul class="list-inline text-center footer-links">
+<li>
+<a href=https://twitter.com/pfeilbr title=twitter>
+<span class=footer-link>
+twitter
+</span>
+</a>
+</li>
+<li>
+<a href=https://github.com/pfeilbr title=github>
+<span class=footer-link>
+github
+</span>
+</a>
+</li>
+<li>
+<a href=https://stackoverflow.com/users/29148/pfeilbr title="stack overflow">
+<span class=footer-link>
+stack overflow
+</span>
+</a>
+</li>
+<li>
+<a href=/index.xml title=RSS>
+<span class=footer-link>
+rss
+</span>
+</a>
+</li>
+</ul>
+<p class="credits copyright text-muted">
+<a href=https://brianpfeil.com>Brian Pfeil</a>
+&nbsp;&bull;&nbsp;&copy;
+2021
+</p>
+</div>
+</div>
+</div>
+</footer><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js integrity=sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js integrity=sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe crossorigin=anonymous></script>
+<script src=https://code.jquery.com/jquery-1.12.4.min.js integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin=anonymous></script>
+<script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa crossorigin=anonymous></script>
+<script src=https://brianpfeil.com/js/main.js></script>
+<script src=https://brianpfeil.com/js/highlight.min.js></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<script>$(document).ready(function(){$("pre.chroma").css("padding","0")})</script><script>renderMathInElement(document.body)</script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js integrity=sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js integrity=sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q crossorigin=anonymous></script><script src=https://brianpfeil.com/js/load-photoswipe.js></script>
+<script src=https://unpkg.com/darkreader@4.9.16/darkreader.js crossorigin=anonymous></script>
+<script>(()=>{DarkReader.setFetchMethod(window.fetch);const a="DARK_MODE_ENABLED_KEY",c=document.getElementById("dark-mode-enabled-icon"),d=document.getElementById("dark-mode-disabled-icon");if(c===null||d===null)return;const b="hidden",e=()=>{window.localStorage&&(DarkReader.enable({brightness:100,contrast:90,sepia:10}),window.localStorage.setItem(a,"true"),c.classList.add(b),d.classList.remove(b))},f=()=>{window.localStorage&&(DarkReader.disable(),window.localStorage.getItem(a)&&window.localStorage.removeItem(a),c.classList.remove(b),d.classList.add(b))},g=()=>window.localStorage&&window.localStorage.getItem(a)!=null,h=()=>{g()?f():e()};g()?e():f();const i=document.getElementById('dark-mode-toggle');i.addEventListener('click',h)})()</script>
+<script></script>
+<script id=search-result-template type=text/x-js-template>
 <article class="post-preview" id="summary-${key}">
     <a class="search-item" href="${link}">
         <h2 class="post-title">${title}</h2>
@@ -1989,16 +1627,9 @@ if (!doNotTrack) {
     </div>
 </article>
 </script>
-
-<script>
-    const postCount= 250 
-</script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
-<script src="https://brianpfeil.com/js/search.js"></script>
-
-    
-  </body>
+<script>const postCount=250</script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js></script>
+<script src=https://brianpfeil.com/js/search.js></script>
+</body>
 </html>
-
