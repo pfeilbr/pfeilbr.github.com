@@ -138,7 +138,7 @@ see also <a href=https://awsteele.com/blog/2021/09/15/aws-federation-comes-to-gi
 <li>create a jenkins OIDC provider in AWS account (<code>AWS::IAM::OIDCProvider</code>)</li>
 <li>jenkins job at start creates token (guid) and persists it - e.g. <code>JENKINS_ID_TOKEN_REQUEST_TOKEN</code> (github actions is called <code>ACTIONS_ID_TOKEN_REQUEST_TOKEN</code>)
 <ul>
-<li>e.g could be persisted to service at <a href=https://vstoken.jenkins.merck.com>https://vstoken.jenkins.merck.com</a> (<a href=https://vstoken.jenkins.merck.com/.well-known/openid-configuration>https://vstoken.jenkins.merck.com/.well-known/openid-configuration</a>)</li>
+<li>e.g could be persisted to service at <a href=https://vstoken.jenkins.company.com>https://vstoken.jenkins.company.com</a> (<a href=https://vstoken.jenkins.company.com/.well-known/openid-configuration>https://vstoken.jenkins.company.com/.well-known/openid-configuration</a>)</li>
 </ul>
 </li>
 <li>jenkins job issues assume role passing in <code>JENKINS_ID_TOKEN_REQUEST_TOKEN</code> - see <a href=https://github.com/aws-actions/configure-aws-credentials/blob/master/index.js#L93>https://github.com/aws-actions/configure-aws-credentials/blob/master/index.js#L93</a></li>
@@ -152,7 +152,7 @@ see also <a href=https://awsteele.com/blog/2021/09/15/aws-federation-comes-to-gi
 </span><span class=w>    </span><span class=nt>Type</span><span class=p>:</span><span class=w> </span><span class=l>AWS::IAM::OIDCProvider</span><span class=w>
 </span><span class=w>    </span><span class=nt>Condition</span><span class=p>:</span><span class=w> </span><span class=l>CreateOIDCProvider</span><span class=w>
 </span><span class=w>    </span><span class=nt>Properties</span><span class=p>:</span><span class=w>
-</span><span class=w>      </span><span class=nt>Url</span><span class=p>:</span><span class=w> </span><span class=l>https://vstoken.jenkins.merck.com</span><span class=w>
+</span><span class=w>      </span><span class=nt>Url</span><span class=p>:</span><span class=w> </span><span class=l>https://vstoken.jenkins.company.com</span><span class=w>
 </span><span class=w>      </span><span class=nt>ClientIdList</span><span class=p>:</span><span class=w> 
 </span><span class=w>        </span>- <span class=l>sts.amazonaws.com</span><span class=w>
 </span><span class=w>      </span><span class=nt>ThumbprintList</span><span class=p>:</span><span class=w>
