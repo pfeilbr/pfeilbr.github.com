@@ -6,7 +6,7 @@
 <title>AWS Services - Brian Pfeil</title>
 <meta name=description content="short descriptions for key AWS Services">
 <meta name=author content="Brian Pfeil"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"Brian Pfeil","url":"https:\/\/brianpfeil.com\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/brianpfeil.com\/"}</script>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/brianpfeil.com\/","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/brianpfeil.com\/post\/aws-services\/","name":"Aws services"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Brian Pfeil"},"headline":"AWS Services","description":"short descriptions for key AWS Services","inLanguage":"en","wordCount":7664,"datePublished":"2020-03-29T09:40:13","dateModified":"2020-03-29T09:40:13","image":"https:\/\/brianpfeil.com\/","keywords":["aws"],"mainEntityOfPage":"https:\/\/brianpfeil.com\/post\/aws-services\/","publisher":{"@type":"Organization","name":"https:\/\/brianpfeil.com\/","logo":{"@type":"ImageObject","url":"https:\/\/brianpfeil.com\/","height":60,"width":60}}}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/brianpfeil.com\/","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/brianpfeil.com\/post\/aws-services\/","name":"Aws services"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Brian Pfeil"},"headline":"AWS Services","description":"short descriptions for key AWS Services","inLanguage":"en","wordCount":7745,"datePublished":"2020-03-29T09:40:13","dateModified":"2020-03-29T09:40:13","image":"https:\/\/brianpfeil.com\/","keywords":["aws"],"mainEntityOfPage":"https:\/\/brianpfeil.com\/post\/aws-services\/","publisher":{"@type":"Organization","name":"https:\/\/brianpfeil.com\/","logo":{"@type":"ImageObject","url":"https:\/\/brianpfeil.com\/","height":60,"width":60}}}</script>
 <meta property="og:title" content="AWS Services">
 <meta property="og:description" content="short descriptions for key AWS Services">
 <meta property="og:url" content="https://brianpfeil.com/post/aws-services/">
@@ -1434,12 +1434,21 @@ March 29, 2020
 <h3 id=sagemaker>SageMaker</h3>
 <ul>
 <li>build, train, and deploy machine learning models</li>
+<li>provides a suite of built-in algorithms (via docker containers). provides common machine learning algorithms that are optimized to run efficiently against extremely large data in a distributed environment</li>
 <li>prebuilt containers for common machine learning frameworks—such as Tensorflow, Pytorch, and MxNet</li>
-<li>provides a suite of built-in algorithms (via docker containers)</li>
-<li>can provide custom containers</li>
-<li>model serving endpoints</li>
+<li>customer can bring own custom containers (bring-your-own-algorithms and frameworks)</li>
+<li>To train a model in SageMaker, you create a training job that includes
+<ul>
+<li>S3 location with training data</li>
+<li>Specify ML Compute instances managed by SageMaker</li>
+<li>S3 location to store output of job</li>
+<li>ECR path to where training code is</li>
+</ul>
+</li>
+<li>model serving endpoints (inference) (<a href=https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works-deployment.html#how-it-works-hosting>SageMaker Hosting Services</a>). your endpoint config specifys instance type, number of instances, etc.</li>
 <li>jupyter notebooks</li>
 <li>SageMaker notebook instance is a machine learning (ML) compute instance running the Jupyter Notebook App</li>
+<li><a href=https://sagemaker.readthedocs.io/>Amazon SageMaker Python SDK</a></li>
 </ul>
 <h3 id=comprehend>Comprehend</h3>
 <ul>
