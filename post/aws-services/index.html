@@ -6,7 +6,7 @@
 <title>AWS Services - Brian Pfeil</title>
 <meta name=description content="short descriptions for key AWS Services">
 <meta name=author content="Brian Pfeil"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"Brian Pfeil","url":"https:\/\/brianpfeil.com\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/brianpfeil.com\/"}</script>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/brianpfeil.com\/","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/brianpfeil.com\/post\/aws-services\/","name":"Aws services"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Brian Pfeil"},"headline":"AWS Services","description":"short descriptions for key AWS Services","inLanguage":"en","wordCount":7745,"datePublished":"2020-03-29T09:40:13","dateModified":"2020-03-29T09:40:13","image":"https:\/\/brianpfeil.com\/","keywords":["aws"],"mainEntityOfPage":"https:\/\/brianpfeil.com\/post\/aws-services\/","publisher":{"@type":"Organization","name":"https:\/\/brianpfeil.com\/","logo":{"@type":"ImageObject","url":"https:\/\/brianpfeil.com\/","height":60,"width":60}}}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/brianpfeil.com\/","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/brianpfeil.com\/post\/aws-services\/","name":"Aws services"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Brian Pfeil"},"headline":"AWS Services","description":"short descriptions for key AWS Services","inLanguage":"en","wordCount":7818,"datePublished":"2020-03-29T09:40:13","dateModified":"2020-03-29T09:40:13","image":"https:\/\/brianpfeil.com\/","keywords":["aws"],"mainEntityOfPage":"https:\/\/brianpfeil.com\/post\/aws-services\/","publisher":{"@type":"Organization","name":"https:\/\/brianpfeil.com\/","logo":{"@type":"ImageObject","url":"https:\/\/brianpfeil.com\/","height":60,"width":60}}}</script>
 <meta property="og:title" content="AWS Services">
 <meta property="og:description" content="short descriptions for key AWS Services">
 <meta property="og:url" content="https://brianpfeil.com/post/aws-services/">
@@ -17,7 +17,7 @@
 <meta name=twitter:card content="summary">
 <meta name=twitter:site content="@pfeilbr">
 <meta name=twitter:creator content="@pfeilbr">
-<meta name=generator content="Hugo 0.92.1">
+<meta name=generator content="Hugo 0.92.2">
 <link rel=alternate href=https://brianpfeil.com/index.xml type=application/rss+xml title="Brian Pfeil"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css integrity=sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y crossorigin=anonymous>
 <link rel=stylesheet href=https://use.fontawesome.com/releases/v5.5.0/css/all.css integrity=sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU crossorigin=anonymous>
 <link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous><link rel=stylesheet href=https://brianpfeil.com/css/main.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
@@ -226,6 +226,7 @@ March 29, 2020
 <li><a href=#cloudwatch-events-see-eventbridge>CloudWatch Events (see EventBridge)</a></li>
 <li><a href=#cloudwatch-insights>CloudWatch Insights</a></li>
 <li><a href=#cloudwatch-metrics>CloudWatch Metrics</a></li>
+<li><a href=#cloudwatch-dashboards>CloudWatch Dashboards</a></li>
 <li><a href=#cloudwatch-alarms>CloudWatch Alarms</a></li>
 <li><a href=#cloudwatch-synthetics-canaries>CloudWatch Synthetics (Canaries)</a></li>
 <li><a href=#cloudtrail>CloudTrail</a></li>
@@ -1210,10 +1211,15 @@ March 29, 2020
 <li>concepts - namespace, dimensions (name/value pairs), units (Bytes, Seconds, Count, and Percent), time stamp, resolution (granularity)</li>
 <li>statistics - sum, max, min, average, sample count, percentile (pNN) (metric data aggregations over specified periods of time)</li>
 <li>metrics retention</li>
-<li>Dashboards - for Visualizations</li>
 <li><a href=https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/MonitoringLogData.html>Creating Metrics From Log Events Using Filters</a></li>
 <li><a href=https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Embedded_Metric_Format_Generation.html>Embedded Metric Format</a> - generate metrics from structured (json) log messages</li>
 <li><a href=https://aws.amazon.com/blogs/aws/cloudwatch-metric-streams-send-aws-metrics-to-partners-and-to-your-apps-in-real-time/>CloudWatch Metric Streams</a> - metrics are delivered to a Kinesis Data Firehose stream</li>
+</ul>
+<h3 id=cloudwatch-dashboards>CloudWatch Dashboards</h3>
+<ul>
+<li><a href=https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html>CloudWatch Dashboards</a> - for Visualizations</li>
+<li><a href=https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html>Dashboard Custom Widgets</a> - dashboard widget that can call any AWS Lambda function with custom parameters. It then displays the returned HTML or JSON.</li>
+<li><a href=https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch-dashboard-sharing.html>CloudWatch Dashboard Sharing</a> - Share a single dashboard and designate specific email addresses, Share a single dashboard publicly, so that anyone who has the link can view the dashboard, Share all the CloudWatch dashboards in your account and specify a third-party single sign-on (SSO)</li>
 </ul>
 <h3 id=cloudwatch-alarms>CloudWatch Alarms</h3>
 <ul>
