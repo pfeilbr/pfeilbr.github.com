@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/apps/awswebcontent/build/static/css/main.af3156a2.css",
-    "main.js": "/apps/awswebcontent/build/static/js/main.ab3e31f4.js",
+    "main.css": "/apps/awswebcontent/build/static/css/main.963bbb9e.css",
+    "main.js": "/apps/awswebcontent/build/static/js/main.48a31b80.js",
     "static/js/787.cda612ba.chunk.js": "/apps/awswebcontent/build/static/js/787.cda612ba.chunk.js",
     "index.html": "/apps/awswebcontent/build/index.html",
-    "main.af3156a2.css.map": "/apps/awswebcontent/build/static/css/main.af3156a2.css.map",
-    "main.ab3e31f4.js.map": "/apps/awswebcontent/build/static/js/main.ab3e31f4.js.map",
+    "main.963bbb9e.css.map": "/apps/awswebcontent/build/static/css/main.963bbb9e.css.map",
+    "main.48a31b80.js.map": "/apps/awswebcontent/build/static/js/main.48a31b80.js.map",
     "787.cda612ba.chunk.js.map": "/apps/awswebcontent/build/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.af3156a2.css",
-    "static/js/main.ab3e31f4.js"
+    "static/css/main.963bbb9e.css",
+    "static/js/main.48a31b80.js"
   ]
 }
