@@ -1,0 +1,192 @@
+<!doctype html><html lang=en itemscope itemtype=http://schema.org/WebPage><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><title>EMR Serverless - Brian Pfeil</title>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"Brian Pfeil","url":"https:\/\/brianpfeil.com\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/brianpfeil.com\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/brianpfeil.com\/","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/brianpfeil.com\/post\/emr-serverless\/","name":"Emr serverless"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Brian Pfeil"},"headline":"EMR Serverless","description":"","inLanguage":"en","wordCount":564,"datePublished":"2022-06-01T00:00:00\u002b00:00","dateModified":"2022-06-01T00:00:00\u002b00:00","image":"https:\/\/brianpfeil.com\/","keywords":["emr, serverless"],"mainEntityOfPage":"https:\/\/brianpfeil.com\/post\/emr-serverless\/","publisher":{"@type":"Organization","name":"https:\/\/brianpfeil.com\/","logo":{"@type":"ImageObject","url":"https:\/\/brianpfeil.com\/","height":60,"width":60}}}</script><meta property="og:title" content="EMR Serverless"><meta property="og:url" content="https://brianpfeil.com/post/emr-serverless/"><meta property="og:type" content="website"><meta property="og:site_name" content="Brian Pfeil"><meta name=twitter:title content="EMR Serverless"><meta name=twitter:card content="summary_large_image"><meta name=generator content="Hugo 0.124.1"><link rel=alternate href=https://brianpfeil.com/index.xml type=application/rss+xml title="Brian Pfeil"><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css integrity=sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI crossorigin=anonymous><link rel=stylesheet href=https://use.fontawesome.com/releases/v6.6.0/css/all.css integrity=sha384-h/hnnw1Bi4nbpD6kE7nYfCXzovi622sY5WBxww8ARKwpdLj5kUWjRuyiXaD1U2JT crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css integrity=sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu crossorigin=anonymous><link rel=stylesheet href=https://brianpfeil.com/css/main.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"><link rel=stylesheet href=https://brianpfeil.com/css/highlight.min.css><link rel=stylesheet href=https://brianpfeil.com/css/codeblock.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css integrity=sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css integrity=sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R crossorigin=anonymous><link rel=stylesheet href=https://brianpfeil.com/css/custom.css><script>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-610553-4","auto"),ga("send","pageview"))</script></head><body><nav class="navbar navbar-default navbar-custom"><div class=container-fluid><div class=navbar-header><button type=button class=navbar-toggle data-toggle=collapse data-target=#main-navbar>
+<span class=sr-only>Toggle navigation</span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+</button>
+<a class=navbar-brand href=https://brianpfeil.com/>Brian Pfeil</a></div><div class="collapse navbar-collapse" id=main-navbar><ul class="nav navbar-nav navbar-right"><li><a title=about href=/about/>about</a></li><li><a title=posts href=/>posts</a></li><li><a title=projects href=/projects/>projects</a></li><li><a title=tags href=/tags/>tags</a></li><li><a id=dark-mode-toggle><i class="fa fa-moon hidden" id=dark-mode-enabled-icon aria-hidden=true></i>
+<i class="fa fa-sun hidden" id=dark-mode-disabled-icon aria-hidden=true></i></a></li></ul></div></div></nav><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><header class=header-section><div class="intro-header no-img"><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=post-heading><h1>EMR Serverless</h1><span class=post-meta>June 1, 2022
+<span class=blog-tags>&nbsp;&bull;&nbsp;
+<a href=https://brianpfeil.com//tags/emr/>emr</a>
+,
+<a href=https://brianpfeil.com//tags/serverless/>serverless</a></span></span></div></div></div></div></div></header><div class=container role=main><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><article role=main class=blog-post><div class="alert alert-info small bg-info" role=alert><span class=text-muted>code for article</span>&nbsp;<a href=https://github.com/pfeilbr/emr-serverless-playground target=_blank><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/emr-serverless-playground</a></div><p>learn <a href=https://docs.aws.amazon.com/emr/latest/EMR-Serverless-UserGuide/emr-serverless.html>EMR Serverless</a></p><blockquote><p>provides a serverless runtime environment that simplifies the operation of analytics applications that use the latest open source frameworks, such as Apache Spark and Apache Hive. With EMR Serverless, you don’t have to configure, optimize, secure, or operate clusters to run applications with these frameworks.</p></blockquote><h2 id=general-flow>general flow</h2><ol><li>create application</li><li>start application<ul><li><blockquote><p>your application is setup to start with pre-initialized capacity of 1 Spark driver and 1 Spark executor. Your application is by default configured to start when jobs are submitted and stop when the application is idle for more than 15 minutes.</p></blockquote></li></ul></li><li>submit application jobs. e.g. spark or hive</li></ol><h2 id=demo>Demo</h2><div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=line><span class=cl><span class=c1># deploy template.yaml</span>
+</span></span><span class=line><span class=cl>sam deploy --guided
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>aws emr-serverless get-application <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>    --application-id 00f1du6284vksm09
+</span></span><span class=line><span class=cl><span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;application&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;applicationId&#34;</span>: <span class=s2>&#34;00f1du6284vksm09&#34;</span>,
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;name&#34;</span>: <span class=s2>&#34;spark-3.2&#34;</span>,
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;arn&#34;</span>: <span class=s2>&#34;arn:aws:emr-serverless:us-east-1:529276214230:/applications/00f1du6284vksm09&#34;</span>,
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;releaseLabel&#34;</span>: <span class=s2>&#34;emr-6.6.0&#34;</span>,
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;type&#34;</span>: <span class=s2>&#34;Spark&#34;</span>,
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;state&#34;</span>: <span class=s2>&#34;CREATED&#34;</span>,
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;stateDetails&#34;</span>: <span class=s2>&#34;&#34;</span>,
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;createdAt&#34;</span>: <span class=s2>&#34;2022-06-02T20:09:49.041000+00:00&#34;</span>,
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;updatedAt&#34;</span>: <span class=s2>&#34;2022-06-02T20:09:49.667000+00:00&#34;</span>,
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;tags&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=s2>&#34;tag-on-create-key&#34;</span>: <span class=s2>&#34;tag-on-create-value&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=o>}</span>,
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;autoStartConfiguration&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=s2>&#34;enabled&#34;</span>: <span class=nb>true</span>
+</span></span><span class=line><span class=cl>        <span class=o>}</span>,
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;autoStopConfiguration&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=s2>&#34;enabled&#34;</span>: true,
+</span></span><span class=line><span class=cl>            <span class=s2>&#34;idleTimeoutMinutes&#34;</span>: <span class=m>15</span>
+</span></span><span class=line><span class=cl>        <span class=o>}</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>aws s3 cp s3://us-east-1.elasticmapreduce/emr-containers/samples/wordcount/scripts/wordcount.py s3://emr-serverless-playground-scriptbucket-1fl6snd6viqk6/scripts/
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nv>APPLICATION_ID</span><span class=o>=</span><span class=s2>&#34;00f1du6284vksm09&#34;</span>
+</span></span><span class=line><span class=cl><span class=nv>EXECUTION_ROLE_ARN</span><span class=o>=</span><span class=s2>&#34;arn:aws:iam::529276214230:role/EMRServerless_Job_Execution_Role&#34;</span>
+</span></span><span class=line><span class=cl><span class=nv>BUCKET_NAME</span><span class=o>=</span><span class=s2>&#34;emr-serverless-playground-scriptbucket-1fl6snd6viqk6&#34;</span>
+</span></span><span class=line><span class=cl>aws emr-serverless start-job-run <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>    --application-id <span class=nv>$APPLICATION_ID</span> <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>    --execution-role-arn <span class=nv>$EXECUTION_ROLE_ARN</span> <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>    --job-driver <span class=s1>&#39;{
+</span></span></span><span class=line><span class=cl><span class=s1>        &#34;sparkSubmit&#34;: {
+</span></span></span><span class=line><span class=cl><span class=s1>          &#34;entryPoint&#34;: &#34;s3://emr-serverless-playground-scriptbucket-1fl6snd6viqk6/scripts/wordcount.py&#34;,
+</span></span></span><span class=line><span class=cl><span class=s1>          &#34;entryPointArguments&#34;: [&#34;s3://emr-serverless-playground-scriptbucket-1fl6snd6viqk6/emr-serverless-spark/output&#34;],
+</span></span></span><span class=line><span class=cl><span class=s1>          &#34;sparkSubmitParameters&#34;: &#34;--conf spark.executor.cores=1 --conf spark.executor.memory=4g --conf spark.driver.cores=1 --conf spark.driver.memory=4g --conf spark.executor.instances=1&#34;
+</span></span></span><span class=line><span class=cl><span class=s1>        }
+</span></span></span><span class=line><span class=cl><span class=s1>    }&#39;</span>
+</span></span><span class=line><span class=cl><span class=c1># output</span>
+</span></span><span class=line><span class=cl><span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;applicationId&#34;</span>: <span class=s2>&#34;00f1du6284vksm09&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;jobRunId&#34;</span>: <span class=s2>&#34;00f1e0i4fr44ra01&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;arn&#34;</span>: <span class=s2>&#34;arn:aws:emr-serverless:us-east-1:529276214230:/applications/00f1du6284vksm09/jobruns/00f1e0i4fr44ra01&#34;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nv>JOB_RUN_ID</span><span class=o>=</span><span class=s2>&#34;00f1e0i4fr44ra01&#34;</span>
+</span></span><span class=line><span class=cl>aws emr-serverless get-job-run <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>    --application-id <span class=nv>$APPLICATION_ID</span> <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>    --job-run-id <span class=nv>$JOB_RUN_ID</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># output</span>
+</span></span><span class=line><span class=cl><span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;jobRun&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;applicationId&#34;</span>: <span class=s2>&#34;00f1du6284vksm09&#34;</span>,
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;jobRunId&#34;</span>: <span class=s2>&#34;00f1e0i4fr44ra01&#34;</span>,
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;arn&#34;</span>: <span class=s2>&#34;arn:aws:emr-serverless:us-east-1:529276214230:/applications/00f1du6284vksm09/jobruns/00f1e0i4fr44ra01&#34;</span>,
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;createdBy&#34;</span>: <span class=s2>&#34;arn:aws:sts::529276214230:assumed-role/AWSReservedSSO_AWSAdministratorAccess_af1bdd24238208b5/pfeilbr&#34;</span>,
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;createdAt&#34;</span>: <span class=s2>&#34;2022-06-02T22:22:36.221000+00:00&#34;</span>,
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;updatedAt&#34;</span>: <span class=s2>&#34;2022-06-02T22:28:06.614000+00:00&#34;</span>,
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;executionRole&#34;</span>: <span class=s2>&#34;arn:aws:iam::529276214230:role/EMRServerless_Job_Execution_Role&#34;</span>,
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;state&#34;</span>: <span class=s2>&#34;SUCCESS&#34;</span>,
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;stateDetails&#34;</span>: <span class=s2>&#34;&#34;</span>,
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;releaseLabel&#34;</span>: <span class=s2>&#34;emr-6.6.0&#34;</span>,
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;jobDriver&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=s2>&#34;sparkSubmit&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;entryPoint&#34;</span>: <span class=s2>&#34;s3://emr-serverless-playground-scriptbucket-1fl6snd6viqk6/scripts/wordcount.py&#34;</span>,
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;entryPointArguments&#34;</span>: <span class=o>[</span>
+</span></span><span class=line><span class=cl>                    <span class=s2>&#34;s3://emr-serverless-playground-scriptbucket-1fl6snd6viqk6/emr-serverless-spark/output&#34;</span>
+</span></span><span class=line><span class=cl>                <span class=o>]</span>,
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;sparkSubmitParameters&#34;</span>: <span class=s2>&#34;--conf spark.executor.cores=1 --conf spark.executor.memory=4g --conf spark.driver.cores=1 --conf spark.driver.memory=4g --conf spark.executor.instances=1&#34;</span>
+</span></span><span class=line><span class=cl>            <span class=o>}</span>
+</span></span><span class=line><span class=cl>        <span class=o>}</span>,
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;tags&#34;</span>: <span class=o>{}</span>,
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;totalResourceUtilization&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=s2>&#34;vCPUHour&#34;</span>: 0.066,
+</span></span><span class=line><span class=cl>            <span class=s2>&#34;memoryGBHour&#34;</span>: 0.331,
+</span></span><span class=line><span class=cl>            <span class=s2>&#34;storageGBHour&#34;</span>: 1.322
+</span></span><span class=line><span class=cl>        <span class=o>}</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nv>JOB_RUN_LOGS</span><span class=o>=</span><span class=s2>&#34;s3://</span><span class=nv>$BUCKET_NAME</span><span class=s2>/emr-serverless-spark/logs/applications/</span><span class=nv>$APPLICATION_ID</span><span class=s2>/jobs/</span><span class=nv>$JOB_RUN_ID</span><span class=s2>&#34;</span>
+</span></span></code></pre></div><h2 id=notes>Notes</h2><ul><li>unlike EMR the EC2 instances backing EMR-Serverless applications/jobs are not visible to the customer / fully managed (e.g. not visible in the customer EC2 console)</li><li><a href=https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-type>Type</a> - Spark or HIVE</li><li><a href=https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-releaselabel>ReleaseLabel</a> - EMR release version associated with the application. see <a href=https://docs.aws.amazon.com/emr/latest/EMR-Serverless-UserGuide/release-versions.html>Release versions</a></li><li>EMR Serverless is a Regional service</li><li><a href=https://docs.aws.amazon.com/emr/latest/EMR-Serverless-UserGuide/job-states.html>Job run states</a></li><li><a href=https://docs.aws.amazon.com/emr/latest/EMR-Serverless-UserGuide/jobs-spark.html#spark-examples>Spark examples</a></li><li><a href=https://docs.aws.amazon.com/emr/latest/EMR-Serverless-UserGuide/jobs-hive.html#hive-examples>Hive job examples</a></li><li><a href=https://docs.aws.amazon.com/emr/latest/EMR-Serverless-UserGuide/using-python-libraries.html>Using Python libraries with EMR Serverless</a></li><li><a href=https://docs.aws.amazon.com/emr/latest/EMR-Serverless-UserGuide/using-airflow.html>Submitting jobs from Airflow</a></li></ul><h2 id=resource-types>Resource Types</h2><ul><li>application - <code>arn:${Partition}:emr-serverless:${Region}:${Account}:/applications/${ApplicationId}</code></li><li>jobRun <code>arn:${Partition}:emr-serverless:${Region}:${Account}:/applications/${ApplicationId}/jobruns/${JobRunId}</code></li></ul><h2 id=aws-cli-support>AWS CLI Support</h2><div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=line><span class=cl><span class=c1># create application</span>
+</span></span><span class=line><span class=cl>aws emr-serverless create-application <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  --type HIVE <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  --name serverless-demo <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  --release-label <span class=s2>&#34;emr-6.6.0&#34;</span> <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  --initial-capacity <span class=s1>&#39;{
+</span></span></span><span class=line><span class=cl><span class=s1>        &#34;DRIVER&#34;: {
+</span></span></span><span class=line><span class=cl><span class=s1>            &#34;workerCount&#34;: 1,
+</span></span></span><span class=line><span class=cl><span class=s1>            &#34;resourceConfiguration&#34;: {
+</span></span></span><span class=line><span class=cl><span class=s1>                &#34;cpu&#34;: &#34;2vCPU&#34;,
+</span></span></span><span class=line><span class=cl><span class=s1>                &#34;memory&#34;: &#34;4GB&#34;,
+</span></span></span><span class=line><span class=cl><span class=s1>                &#34;disk&#34;: &#34;30gb&#34;
+</span></span></span><span class=line><span class=cl><span class=s1>            }
+</span></span></span><span class=line><span class=cl><span class=s1>        },
+</span></span></span><span class=line><span class=cl><span class=s1>        &#34;TEZ_TASK&#34;: {
+</span></span></span><span class=line><span class=cl><span class=s1>            &#34;workerCount&#34;: 10,
+</span></span></span><span class=line><span class=cl><span class=s1>            &#34;resourceConfiguration&#34;: {
+</span></span></span><span class=line><span class=cl><span class=s1>                &#34;cpu&#34;: &#34;4vCPU&#34;,
+</span></span></span><span class=line><span class=cl><span class=s1>                &#34;memory&#34;: &#34;8GB&#34;,
+</span></span></span><span class=line><span class=cl><span class=s1>                &#34;disk&#34;: &#34;30gb&#34;
+</span></span></span><span class=line><span class=cl><span class=s1>            }
+</span></span></span><span class=line><span class=cl><span class=s1>        }
+</span></span></span><span class=line><span class=cl><span class=s1>    }&#39;</span> <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>    --maximum-capacity <span class=s1>&#39;{
+</span></span></span><span class=line><span class=cl><span class=s1>        &#34;cpu&#34;: &#34;400vCPU&#34;,
+</span></span></span><span class=line><span class=cl><span class=s1>        &#34;memory&#34;: &#34;1024GB&#34;,
+</span></span></span><span class=line><span class=cl><span class=s1>        &#34;disk&#34;: &#34;1000GB&#34;
+</span></span></span><span class=line><span class=cl><span class=s1>    }&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># start application</span>
+</span></span><span class=line><span class=cl><span class=c1># your application is setup to start with pre-initialized capacity of 1 Spark driver and 1 Spark executor. Your application is by default configured to start when jobs are submitted and stop when the application is idle for more than 15 minutes.</span>
+</span></span><span class=line><span class=cl>aws emr-serverless start-application <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>    --application-id <span class=nv>$APPLICATION_ID</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># submit hive job</span>
+</span></span><span class=line><span class=cl>aws emr-serverless start-job-run <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>    --application-id <span class=nv>$APPLICATION_ID</span> <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>    --execution-role-arn <span class=nv>$JOB_ROLE_ARN</span> <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>    --job-driver <span class=s1>&#39;{
+</span></span></span><span class=line><span class=cl><span class=s1>        &#34;hive&#34;: {
+</span></span></span><span class=line><span class=cl><span class=s1>            &#34;initQueryFile&#34;: &#34;s3://&#39;</span><span class=si>${</span><span class=nv>S3_BUCKET</span><span class=si>}</span><span class=s1>&#39;/code/hive/create_table.sql&#34;,
+</span></span></span><span class=line><span class=cl><span class=s1>            &#34;query&#34;: &#34;s3://&#39;</span><span class=si>${</span><span class=nv>S3_BUCKET</span><span class=si>}</span><span class=s1>&#39;/code/hive/extreme_weather.sql&#34;,
+</span></span></span><span class=line><span class=cl><span class=s1>            &#34;parameters&#34;: &#34;--hiveconf hive.exec.scratchdir=s3://&#39;</span><span class=si>${</span><span class=nv>S3_BUCKET</span><span class=si>}</span><span class=s1>&#39;/hive/scratch --hiveconf hive.metastore.warehouse.dir=s3://&#39;</span><span class=si>${</span><span class=nv>S3_BUCKET</span><span class=si>}</span><span class=s1>&#39;/hive/warehouse&#34;
+</span></span></span><span class=line><span class=cl><span class=s1>        }
+</span></span></span><span class=line><span class=cl><span class=s1>    }&#39;</span> <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>    --configuration-overrides <span class=s1>&#39;{
+</span></span></span><span class=line><span class=cl><span class=s1>        &#34;applicationConfiguration&#34;: [
+</span></span></span><span class=line><span class=cl><span class=s1>            {
+</span></span></span><span class=line><span class=cl><span class=s1>                &#34;classification&#34;: &#34;hive-site&#34;,
+</span></span></span><span class=line><span class=cl><span class=s1>                &#34;properties&#34;: {
+</span></span></span><span class=line><span class=cl><span class=s1>                    &#34;hive.driver.cores&#34;: &#34;2&#34;,
+</span></span></span><span class=line><span class=cl><span class=s1>                    &#34;hive.driver.memory&#34;: &#34;4g&#34;,
+</span></span></span><span class=line><span class=cl><span class=s1>                    &#34;hive.tez.container.size&#34;: &#34;8192&#34;,
+</span></span></span><span class=line><span class=cl><span class=s1>                    &#34;hive.tez.cpu.vcores&#34;: &#34;4&#34;
+</span></span></span><span class=line><span class=cl><span class=s1>                }
+</span></span></span><span class=line><span class=cl><span class=s1>            }
+</span></span></span><span class=line><span class=cl><span class=s1>        ],
+</span></span></span><span class=line><span class=cl><span class=s1>        &#34;monitoringConfiguration&#34;: {
+</span></span></span><span class=line><span class=cl><span class=s1>            &#34;s3MonitoringConfiguration&#34;: {
+</span></span></span><span class=line><span class=cl><span class=s1>                &#34;logUri&#34;: &#34;s3://&#39;</span><span class=si>${</span><span class=nv>S3_BUCKET</span><span class=si>}</span><span class=s1>&#39;/hive-logs/&#34;
+</span></span></span><span class=line><span class=cl><span class=s1>            }
+</span></span></span><span class=line><span class=cl><span class=s1>        }
+</span></span></span><span class=line><span class=cl><span class=s1>    }&#39;</span>
+</span></span></code></pre></div><h2 id=cloudformation-support>CloudFormation Support</h2><p><a href=https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html>AWS::EMRServerless::Application</a></p><p>example <code>AWS::EMRServerless::Application</code> usage in cfn</p><ul><li><a href=https://github.com/aws-samples/emr-serverless-samples/blob/main/cloudformation/emr_serverless_spark_app.yaml#L6>https://github.com/aws-samples/emr-serverless-samples/blob/main/cloudformation/emr_serverless_spark_app.yaml#L6</a></li><li><a href=https://github.com/aws-samples/emr-serverless-samples/blob/main/cloudformation/emr_serverless_full_deployment.yaml#L61>https://github.com/aws-samples/emr-serverless-samples/blob/main/cloudformation/emr_serverless_full_deployment.yaml#L61</a></li></ul><h2 id=aws-console-screenshots>AWS Console Screenshots</h2><p><img src=https://www.evernote.com/l/AAEj8OzU8ExBuqoCxCyUHu2FYNHsxHfbmZ0B/image.png alt></p><p><img src=https://www.evernote.com/l/AAH8fqtRIHlP6LCbGaVp9ngkM7SZXWXz-iMB/image.png alt></p><p><img src=https://www.evernote.com/l/AAH0lS5-luNKPLe90F9saH8sgYXDac8sdHoB/image.png alt></p><p><img src=https://www.evernote.com/l/AAHM7sq2O4NJbIvDO70SoQY9YAqMaDkfBrEB/image.png alt></p><h2 id=resources>Resources</h2><ul><li><a href=https://docs.aws.amazon.com/emr/latest/EMR-Serverless-UserGuide/emr-serverless.html>EMR Serverless</a></li><li><a href=https://aws.amazon.com/blogs/aws/amazon-emr-serverless-now-generally-available-run-big-data-applications-without-managing-servers/>Amazon EMR Serverless Now Generally Available – Run Big Data Applications without Managing Servers</a></li><li><a href=https://github.com/aws-samples/emr-serverless-samples>aws-samples/emr-serverless-samples</a></li><li><a href=https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html>AWS::EMRServerless::Application</a></li><li><a href=https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonemrserverless.html>Actions, resources, and condition keys for Amazon EMR Serverless</a></li></ul><hr><section id=social-share><div class="list-inline footer-links text-center"><span class=text-muted>share on</span><br><a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2femr-serverless%2f&amp;text=EMR%20Serverless&amp;via=pfeilbr" target=_blank title="Share on Twitter">Twitter</a>
+&nbsp;&bull;&nbsp;
+<a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2femr-serverless%2f&amp;title=EMR%20Serverless" target=_blank title="Share on Reddit">Reddit</a></div></section></article><ul class="pager blog-pager"><li class=previous><a href=https://brianpfeil.com/post/ec2-image-builder/ data-toggle=tooltip data-placement=top title="EC2 Image Builder">&larr; EC2 Image Builder</a></li><li class=next><a href=https://brianpfeil.com/post/sagemaker-ground-truth/ data-toggle=tooltip data-placement=top title="SageMaker Ground Truth">SageMaker Ground Truth &rarr;</a></li></ul></div></div></div><footer><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center footer-links"><li><a href=https://twitter.com/pfeilbr title=twitter><span class=footer-link>twitter</span></a></li><li><a href=https://github.com/pfeilbr title=github><span class=footer-link>github</span></a></li><li><a href=https://stackoverflow.com/users/29148/pfeilbr title="stack overflow"><span class=footer-link>stack overflow</span></a></li><li><a href=/index.xml title=RSS><span class=footer-link>rss</span></a></li></ul><p class="credits copyright text-muted"><a href=https://brianpfeil.com>Brian Pfeil</a>
+&nbsp;&bull;&nbsp;&copy;
+2024</p></div></div></div></footer><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js integrity=sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js integrity=sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe crossorigin=anonymous></script><script src=https://code.jquery.com/jquery-1.12.4.min.js integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin=anonymous></script><script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa crossorigin=anonymous></script><script src=https://brianpfeil.com/js/main.js></script><script src=https://brianpfeil.com/js/highlight.min.js></script><script>hljs.initHighlightingOnLoad()</script><script>$(document).ready(function(){$("pre.chroma").css("padding","0")})</script><script>renderMathInElement(document.body)</script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js integrity=sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js integrity=sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q crossorigin=anonymous></script><script src=https://brianpfeil.com/js/load-photoswipe.js></script><script src=https://unpkg.com/darkreader@4.9.16/darkreader.js crossorigin=anonymous></script><script>(()=>{DarkReader.setFetchMethod(window.fetch);const e="DARK_MODE_ENABLED_KEY",n=document.getElementById("dark-mode-enabled-icon"),s=document.getElementById("dark-mode-disabled-icon");if(n===null||s===null)return;const t="hidden",o=()=>{window.localStorage&&(DarkReader.enable({brightness:100,contrast:90,sepia:10}),window.localStorage.setItem(e,"true"),n.classList.add(t),s.classList.remove(t))},i=()=>{window.localStorage&&(DarkReader.disable(),window.localStorage.getItem(e)&&window.localStorage.removeItem(e),n.classList.remove(t),s.classList.add(t))},a=()=>window.localStorage&&window.localStorage.getItem(e)!=null,r=()=>{a()?i():o()};a()?o():i();const c=document.getElementById("dark-mode-toggle");c.addEventListener("click",r)})()</script><script></script><script id=search-result-template type=text/x-js-template>
+<article class="post-preview" id="summary-${key}">
+    <a class="search-item" href="${link}">
+        <h2 class="post-title">${title}</h2>
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+            ${postedOnDate}
+            <span class="blog-tags">
+                &nbsp;•&nbsp;
+                ${ isset tags }${tags}${ end }
+            </span>
+        </span>
+    </p>
+    <div class="post-entry">
+    ${snippet}
+    </div>
+</article>
+</script><script>const postCount=296</script><script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js></script><script src=https://brianpfeil.com/js/search.js></script></body></html>

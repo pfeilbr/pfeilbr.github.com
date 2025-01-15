@@ -1,318 +1,42 @@
-<!doctype html><html lang=en itemscope itemtype=http://schema.org/WebPage>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>Dockerized Node.js App on Elastic Beanstalk Example - Brian Pfeil</title>
-<meta name=description content="better your developer workflow with Docker + NodeJS">
-<meta name=author content="Brian Pfeil"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"Brian Pfeil","url":"https:\/\/brianpfeil.com\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/brianpfeil.com\/"}</script>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/brianpfeil.com\/","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/brianpfeil.com\/post\/dockerized-nodejs-app-on-elastic-beanstalk-example\/dockerized-nodejs-app-on-elastic-beanstalk-example\/","name":"Dockerized node.js app on elastic beanstalk example"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Brian Pfeil"},"headline":"Dockerized Node.js App on Elastic Beanstalk Example","description":"better your developer workflow with Docker \u002b NodeJS","inLanguage":"en","wordCount":221,"datePublished":"2015-03-25T19:06:15","dateModified":"2015-03-25T19:06:15","image":"https:\/\/brianpfeil.com\/","keywords":["nodejs, docker, elastic beanstalk, aws"],"mainEntityOfPage":"https:\/\/brianpfeil.com\/post\/dockerized-nodejs-app-on-elastic-beanstalk-example\/dockerized-nodejs-app-on-elastic-beanstalk-example\/","publisher":{"@type":"Organization","name":"https:\/\/brianpfeil.com\/","logo":{"@type":"ImageObject","url":"https:\/\/brianpfeil.com\/","height":60,"width":60}}}</script>
-<meta property="og:title" content="Dockerized Node.js App on Elastic Beanstalk Example">
-<meta property="og:description" content="better your developer workflow with Docker + NodeJS">
-<meta property="og:url" content="https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/dockerized-nodejs-app-on-elastic-beanstalk-example/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Brian Pfeil">
-<meta name=twitter:title content="Dockerized Node.js App on Elastic Beanstalk Example">
-<meta name=twitter:description content="better your developer workflow with Docker + NodeJS">
-<meta name=twitter:card content="summary">
-<meta name=twitter:site content="@pfeilbr">
-<meta name=twitter:creator content="@pfeilbr">
-<meta name=generator content="Hugo 0.92.0">
-<link rel=alternate href=https://brianpfeil.com/index.xml type=application/rss+xml title="Brian Pfeil"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css integrity=sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y crossorigin=anonymous>
-<link rel=stylesheet href=https://use.fontawesome.com/releases/v5.5.0/css/all.css integrity=sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU crossorigin=anonymous>
-<link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous><link rel=stylesheet href=https://brianpfeil.com/css/main.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
-<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-<link rel=stylesheet href=https://brianpfeil.com/css/highlight.min.css><link rel=stylesheet href=https://brianpfeil.com/css/codeblock.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css integrity=sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh crossorigin=anonymous>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css integrity=sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R crossorigin=anonymous>
-<link rel=stylesheet href=https://brianpfeil.com/css/custom.css>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-610553-4','auto'),ga('send','pageview'))</script>
-<script async src=https://www.google-analytics.com/analytics.js></script>
-</head>
-<body>
-<nav class="navbar navbar-default navbar-custom">
-<div class=container-fluid>
-<div class=navbar-header>
-<button type=button class=navbar-toggle data-toggle=collapse data-target=#main-navbar>
+<!doctype html><html lang=en itemscope itemtype=http://schema.org/WebPage><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><title>Dockerized Node.js App on Elastic Beanstalk Example - Brian Pfeil</title>
+<meta name=description content="better your developer workflow with Docker + NodeJS"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"Brian Pfeil","url":"https:\/\/brianpfeil.com\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/brianpfeil.com\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/brianpfeil.com\/","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/brianpfeil.com\/post\/dockerized-nodejs-app-on-elastic-beanstalk-example\/dockerized-nodejs-app-on-elastic-beanstalk-example\/","name":"Dockerized node.js app on elastic beanstalk example"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Brian Pfeil"},"headline":"Dockerized Node.js App on Elastic Beanstalk Example","description":"better your developer workflow with Docker \u002b NodeJS","inLanguage":"en","wordCount":208,"datePublished":"2015-03-25T19:06:15\u002b00:00","dateModified":"2015-03-25T19:06:15\u002b00:00","image":"https:\/\/brianpfeil.com\/","keywords":["nodejs, docker, elastic beanstalk, aws"],"mainEntityOfPage":"https:\/\/brianpfeil.com\/post\/dockerized-nodejs-app-on-elastic-beanstalk-example\/dockerized-nodejs-app-on-elastic-beanstalk-example\/","publisher":{"@type":"Organization","name":"https:\/\/brianpfeil.com\/","logo":{"@type":"ImageObject","url":"https:\/\/brianpfeil.com\/","height":60,"width":60}}}</script><meta property="og:title" content="Dockerized Node.js App on Elastic Beanstalk Example"><meta property="og:description" content="better your developer workflow with Docker + NodeJS"><meta property="og:url" content="https://brianpfeil.com/post/dockerized-nodejs-app-on-elastic-beanstalk-example/dockerized-nodejs-app-on-elastic-beanstalk-example/"><meta property="og:type" content="website"><meta property="og:site_name" content="Brian Pfeil"><meta name=twitter:title content="Dockerized Node.js App on Elastic Beanstalk Example"><meta name=twitter:description content="better your developer workflow with Docker + NodeJS"><meta name=twitter:card content="summary_large_image"><meta name=generator content="Hugo 0.124.1"><link rel=alternate href=https://brianpfeil.com/index.xml type=application/rss+xml title="Brian Pfeil"><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css integrity=sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI crossorigin=anonymous><link rel=stylesheet href=https://use.fontawesome.com/releases/v6.6.0/css/all.css integrity=sha384-h/hnnw1Bi4nbpD6kE7nYfCXzovi622sY5WBxww8ARKwpdLj5kUWjRuyiXaD1U2JT crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css integrity=sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu crossorigin=anonymous><link rel=stylesheet href=https://brianpfeil.com/css/main.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"><link rel=stylesheet href=https://brianpfeil.com/css/highlight.min.css><link rel=stylesheet href=https://brianpfeil.com/css/codeblock.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css integrity=sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css integrity=sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R crossorigin=anonymous><link rel=stylesheet href=https://brianpfeil.com/css/custom.css><script>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-610553-4","auto"),ga("send","pageview"))</script></head><body><nav class="navbar navbar-default navbar-custom"><div class=container-fluid><div class=navbar-header><button type=button class=navbar-toggle data-toggle=collapse data-target=#main-navbar>
 <span class=sr-only>Toggle navigation</span>
 <span class=icon-bar></span>
 <span class=icon-bar></span>
 <span class=icon-bar></span>
 </button>
-<a class=navbar-brand href=https://brianpfeil.com/>Brian Pfeil</a>
-</div>
-<div class="collapse navbar-collapse" id=main-navbar>
-<ul class="nav navbar-nav navbar-right">
-<li>
-<a title=about href=/about/>about</a>
-</li>
-<li>
-<a title=posts href=/>posts</a>
-</li>
-<li>
-<a title=projects href=/projects/>projects</a>
-</li>
-<li>
-<a title=tags href=/tags/>tags</a>
-</li>
-<li>
-<a id=dark-mode-toggle>
-<i class="fa fa-moon hidden" id=dark-mode-enabled-icon aria-hidden=true></i>
-<i class="fa fa-sun hidden" id=dark-mode-disabled-icon aria-hidden=true></i>
-</a>
-</li>
-</ul>
-</div>
-</div>
-</nav>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<a class=navbar-brand href=https://brianpfeil.com/>Brian Pfeil</a></div><div class="collapse navbar-collapse" id=main-navbar><ul class="nav navbar-nav navbar-right"><li><a title=about href=/about/>about</a></li><li><a title=posts href=/>posts</a></li><li><a title=projects href=/projects/>projects</a></li><li><a title=tags href=/tags/>tags</a></li><li><a id=dark-mode-toggle><i class="fa fa-moon hidden" id=dark-mode-enabled-icon aria-hidden=true></i>
+<i class="fa fa-sun hidden" id=dark-mode-disabled-icon aria-hidden=true></i></a></li></ul></div></div></nav><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
 </button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div>
-<header class=header-section>
-<div class="intro-header no-img">
-<div class=container>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<div class=post-heading>
-<h1>Dockerized Node.js App on Elastic Beanstalk Example</h1>
-<span class=post-meta>
-March 25, 2015
-<span class=blog-tags>
-&nbsp;&bull;&nbsp;
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><header class=header-section><div class="intro-header no-img"><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=post-heading><h1>Dockerized Node.js App on Elastic Beanstalk Example</h1><span class=post-meta>March 25, 2015
+<span class=blog-tags>&nbsp;&bull;&nbsp;
 <a href=https://brianpfeil.com//tags/nodejs/>nodejs</a>
 ,
 <a href=https://brianpfeil.com//tags/docker/>docker</a>
 ,
 <a href=https://brianpfeil.com//tags/elastic-beanstalk/>elastic beanstalk</a>
 ,
-<a href=https://brianpfeil.com//tags/aws/>aws</a>
-</span>
-</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</header>
-<div class=container role=main>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<article role=main class=blog-post>
-<p>Example of developing and deploying a <a href=(https://www.docker.com/)>dockerized</a> <a href=https://nodejs.org/>Node.js</a> app to <a href=http://aws.amazon.com/elasticbeanstalk/>Elastic Beanstalk</a></p>
-<blockquote>
-<p>source on Github at <a href=https://github.com/pfeilbr/Elastic-Beanstalk-Docker-Node.js-Example>pfeilbr/Elastic-Beanstalk-Docker-Node.js-Example</a></p>
-</blockquote>
-<h2 id=local-development-workflow>Local Development Workflow</h2>
-<ol>
-<li>
-<p>Edit code. e.g. <code>index.js</code></p>
-</li>
-<li>
-<p>Build image</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>$ docker build --tag=&#34;pfeilbr/eb-docker-node-example&#34; .
-</code></pre></div><p>``</p>
-</li>
-<li>
-<p>Run</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>$ docker run -p 80:80 -it -rm -name eb-docker-node-example pfeilbr/eb-docker-node-example
-</code></pre></div><p>``</p>
-</li>
-<li>
-<p>Get docker host ip <em>(optional. only if using <a href=http://boot2docker.io/>boot2docker</a>)</em></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>$ boot2docker ip
-</code></pre></div><p>``</p>
-</li>
-<li>
-<p>Open browser to <code>http://&lt;boot2docker ip></code></p>
-</li>
-</ol>
-<h2 id=initial-deployment>Initial Deployment</h2>
-<ol>
-<li>
-<p>Init git repo</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>$ git init .
-</code></pre></div><p>``</p>
-</li>
-<li>
-<p>Add files to repo</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>$ git add .
-</code></pre></div><p>``</p>
-</li>
-<li>
-<p>Commit changes</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>$ git commit -m &#34;init&#34;
-</code></pre></div><p>``</p>
-</li>
-<li>
-<p>Create eb app</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>$ eb init # populate details
-</code></pre></div><p>``</p>
-<blockquote>
-<p>Populate all details</p>
-</blockquote>
-</li>
-<li>
-<p>Create environment for app</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>$ eb create dev-env
-</code></pre></div><p>``</p>
-<blockquote>
-<p><strong>IMPORTANT</strong> Must immediately update the ec2 instance with tags so it doesn&rsquo;t get terminated. Enable termination protection on the ec2 instance.</p>
-</blockquote>
-</li>
-</ol>
-<p><strong>Output</strong></p>
-<p><img src=http://note.io/1ETb45Y alt></p>
-<h2 id=deploying-updates>Deploying Updates</h2>
-<ol>
-<li>
-<p>Modify code and test via [Local Development Workflow]</p>
-</li>
-<li>
-<p>Commit changes</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>$ git commit -a -m &#34;my updates&#34;
-</code></pre></div><p>``</p>
-</li>
-<li>
-<p>Deploy to eb</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>$ eb deploy
-</code></pre></div><p>``</p>
-</li>
-</ol>
-<blockquote>
-<p>NOTE: Takes between 3-5 min to deploy changes</p>
-</blockquote>
-<p><strong>Output</strong></p>
-<p><img src=http://note.io/1FFQXuL alt></p>
-<h2 id=establish-interactive-bash-shell-in-running-docker-container>Establish Interactive Bash Shell in Running Docker Container</h2>
-<ol>
-<li>
-<p>ssh into ec2 docker host server</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>$ eb ssh
-</code></pre></div><p>``</p>
-</li>
-<li>
-<p>Get container name</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>$ sudo docker ps # save off name of container
-</code></pre></div><p>``</p>
-</li>
-<li>
-<p>Connect/attach with an interactive bash session</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>$ sudo docker exec -i -t &lt;container name&gt; bash
-</code></pre></div><p>``</p>
-</li>
-</ol>
-<p><strong>Example Session with Output</strong></p>
-<p><img src=http://note.io/1CYSlIH alt></p>
-<hr>
-<section id=social-share>
-<div class="list-inline footer-links text-center">
-<span class=text-muted>share on</span><br>
-<a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fdockerized-nodejs-app-on-elastic-beanstalk-example%2fdockerized-nodejs-app-on-elastic-beanstalk-example%2f&text=Dockerized%20Node.js%20App%20on%20Elastic%20Beanstalk%20Example&via=pfeilbr" target=_blank title="Share on Twitter">Twitter</a>
+<a href=https://brianpfeil.com//tags/aws/>aws</a></span></span></div></div></div></div></div></header><div class=container role=main><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><article role=main class=blog-post><p>Example of developing and deploying a <a href=(https://www.docker.com/)>dockerized</a> <a href=https://nodejs.org/>Node.js</a> app to <a href=http://aws.amazon.com/elasticbeanstalk/>Elastic Beanstalk</a></p><blockquote><p>source on Github at <a href=https://github.com/pfeilbr/Elastic-Beanstalk-Docker-Node.js-Example>pfeilbr/Elastic-Beanstalk-Docker-Node.js-Example</a></p></blockquote><h2 id=local-development-workflow>Local Development Workflow</h2><ol><li><p>Edit code. e.g. <code>index.js</code></p></li><li><p>Build image</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ docker build --tag=&#34;pfeilbr/eb-docker-node-example&#34; .
+</span></span></code></pre></div></li><li><p>Run</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ docker run -p 80:80 -it -rm -name eb-docker-node-example pfeilbr/eb-docker-node-example
+</span></span></code></pre></div></li><li><p>Get docker host ip <em>(optional. only if using <a href=http://boot2docker.io/>boot2docker</a>)</em></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ boot2docker ip
+</span></span></code></pre></div></li><li><p>Open browser to <code>http://&lt;boot2docker ip></code></p></li></ol><h2 id=initial-deployment>Initial Deployment</h2><ol><li><p>Init git repo</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ git init .
+</span></span></code></pre></div></li><li><p>Add files to repo</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ git add .
+</span></span></code></pre></div></li><li><p>Commit changes</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ git commit -m &#34;init&#34;
+</span></span></code></pre></div></li><li><p>Create eb app</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ eb init # populate details
+</span></span></code></pre></div><blockquote><p>Populate all details</p></blockquote></li><li><p>Create environment for app</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ eb create dev-env
+</span></span></code></pre></div><blockquote><p><strong>IMPORTANT</strong> Must immediately update the ec2 instance with tags so it doesn&rsquo;t get terminated. Enable termination protection on the ec2 instance.</p></blockquote></li></ol><p><strong>Output</strong></p><p><img src=http://note.io/1ETb45Y alt></p><h2 id=deploying-updates>Deploying Updates</h2><ol><li><p>Modify code and test via [Local Development Workflow]</p></li><li><p>Commit changes</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ git commit -a -m &#34;my updates&#34;
+</span></span></code></pre></div></li><li><p>Deploy to eb</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ eb deploy
+</span></span></code></pre></div></li></ol><blockquote><p>NOTE: Takes between 3-5 min to deploy changes</p></blockquote><p><strong>Output</strong></p><p><img src=http://note.io/1FFQXuL alt></p><h2 id=establish-interactive-bash-shell-in-running-docker-container>Establish Interactive Bash Shell in Running Docker Container</h2><ol><li><p>ssh into ec2 docker host server</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ eb ssh
+</span></span></code></pre></div></li><li><p>Get container name</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ sudo docker ps # save off name of container
+</span></span></code></pre></div></li><li><p>Connect/attach with an interactive bash session</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ sudo docker exec -i -t &lt;container name&gt; bash
+</span></span></code></pre></div></li></ol><p><strong>Example Session with Output</strong></p><p><img src=http://note.io/1CYSlIH alt></p><hr><section id=social-share><div class="list-inline footer-links text-center"><span class=text-muted>share on</span><br><a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fdockerized-nodejs-app-on-elastic-beanstalk-example%2fdockerized-nodejs-app-on-elastic-beanstalk-example%2f&amp;text=Dockerized%20Node.js%20App%20on%20Elastic%20Beanstalk%20Example&amp;via=pfeilbr" target=_blank title="Share on Twitter">Twitter</a>
 &nbsp;&bull;&nbsp;
-<a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fdockerized-nodejs-app-on-elastic-beanstalk-example%2fdockerized-nodejs-app-on-elastic-beanstalk-example%2f&title=Dockerized%20Node.js%20App%20on%20Elastic%20Beanstalk%20Example" target=_blank title="Share on Reddit">
-Reddit
-</a>
-</div>
-</section>
-</article>
-<ul class="pager blog-pager">
-<li class=previous>
-<a href=https://brianpfeil.com/post/cross-platform-desktop-apps-with-nw-js/ data-toggle=tooltip data-placement=top title="Cross-platform Desktop Apps with NW.js">&larr; Cross-platform Desktop Apps with NW.js</a>
-</li>
-<li class=next>
-<a href=https://brianpfeil.com/post/running-elasticsearch-on-elastic-beanstalk/ data-toggle=tooltip data-placement=top title="Running Elasticsearch on AWS Elastic Beanstalk">Running Elasticsearch on AWS Elastic Beanstalk &rarr;</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<footer>
-<div class=container>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<ul class="list-inline text-center footer-links">
-<li>
-<a href=https://twitter.com/pfeilbr title=twitter>
-<span class=footer-link>
-twitter
-</span>
-</a>
-</li>
-<li>
-<a href=https://github.com/pfeilbr title=github>
-<span class=footer-link>
-github
-</span>
-</a>
-</li>
-<li>
-<a href=https://stackoverflow.com/users/29148/pfeilbr title="stack overflow">
-<span class=footer-link>
-stack overflow
-</span>
-</a>
-</li>
-<li>
-<a href=/index.xml title=RSS>
-<span class=footer-link>
-rss
-</span>
-</a>
-</li>
-</ul>
-<p class="credits copyright text-muted">
-<a href=https://brianpfeil.com>Brian Pfeil</a>
+<a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fdockerized-nodejs-app-on-elastic-beanstalk-example%2fdockerized-nodejs-app-on-elastic-beanstalk-example%2f&amp;title=Dockerized%20Node.js%20App%20on%20Elastic%20Beanstalk%20Example" target=_blank title="Share on Reddit">Reddit</a></div></section></article><ul class="pager blog-pager"><li class=previous><a href=https://brianpfeil.com/post/cross-platform-desktop-apps-with-nw-js/ data-toggle=tooltip data-placement=top title="Cross-platform Desktop Apps with NW.js">&larr; Cross-platform Desktop Apps with NW.js</a></li><li class=next><a href=https://brianpfeil.com/post/running-elasticsearch-on-elastic-beanstalk/ data-toggle=tooltip data-placement=top title="Running Elasticsearch on AWS Elastic Beanstalk">Running Elasticsearch on AWS Elastic Beanstalk &rarr;</a></li></ul></div></div></div><footer><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center footer-links"><li><a href=https://twitter.com/pfeilbr title=twitter><span class=footer-link>twitter</span></a></li><li><a href=https://github.com/pfeilbr title=github><span class=footer-link>github</span></a></li><li><a href=https://stackoverflow.com/users/29148/pfeilbr title="stack overflow"><span class=footer-link>stack overflow</span></a></li><li><a href=/index.xml title=RSS><span class=footer-link>rss</span></a></li></ul><p class="credits copyright text-muted"><a href=https://brianpfeil.com>Brian Pfeil</a>
 &nbsp;&bull;&nbsp;&copy;
-2021
-</p>
-</div>
-</div>
-</div>
-</footer><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js integrity=sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx crossorigin=anonymous></script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js integrity=sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe crossorigin=anonymous></script>
-<script src=https://code.jquery.com/jquery-1.12.4.min.js integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin=anonymous></script>
-<script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa crossorigin=anonymous></script>
-<script src=https://brianpfeil.com/js/main.js></script>
-<script src=https://brianpfeil.com/js/highlight.min.js></script>
-<script>hljs.initHighlightingOnLoad()</script>
-<script>$(document).ready(function(){$("pre.chroma").css("padding","0")})</script><script>renderMathInElement(document.body)</script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js integrity=sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy crossorigin=anonymous></script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js integrity=sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q crossorigin=anonymous></script><script src=https://brianpfeil.com/js/load-photoswipe.js></script>
-<script src=https://unpkg.com/darkreader@4.9.16/darkreader.js crossorigin=anonymous></script>
-<script>(()=>{DarkReader.setFetchMethod(window.fetch);const a="DARK_MODE_ENABLED_KEY",c=document.getElementById("dark-mode-enabled-icon"),d=document.getElementById("dark-mode-disabled-icon");if(c===null||d===null)return;const b="hidden",e=()=>{window.localStorage&&(DarkReader.enable({brightness:100,contrast:90,sepia:10}),window.localStorage.setItem(a,"true"),c.classList.add(b),d.classList.remove(b))},f=()=>{window.localStorage&&(DarkReader.disable(),window.localStorage.getItem(a)&&window.localStorage.removeItem(a),c.classList.remove(b),d.classList.add(b))},g=()=>window.localStorage&&window.localStorage.getItem(a)!=null,h=()=>{g()?f():e()};g()?e():f();const i=document.getElementById('dark-mode-toggle');i.addEventListener('click',h)})()</script>
-<script></script>
-<script id=search-result-template type=text/x-js-template>
+2024</p></div></div></div></footer><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js integrity=sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js integrity=sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe crossorigin=anonymous></script><script src=https://code.jquery.com/jquery-1.12.4.min.js integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin=anonymous></script><script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa crossorigin=anonymous></script><script src=https://brianpfeil.com/js/main.js></script><script src=https://brianpfeil.com/js/highlight.min.js></script><script>hljs.initHighlightingOnLoad()</script><script>$(document).ready(function(){$("pre.chroma").css("padding","0")})</script><script>renderMathInElement(document.body)</script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js integrity=sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js integrity=sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q crossorigin=anonymous></script><script src=https://brianpfeil.com/js/load-photoswipe.js></script><script src=https://unpkg.com/darkreader@4.9.16/darkreader.js crossorigin=anonymous></script><script>(()=>{DarkReader.setFetchMethod(window.fetch);const e="DARK_MODE_ENABLED_KEY",n=document.getElementById("dark-mode-enabled-icon"),s=document.getElementById("dark-mode-disabled-icon");if(n===null||s===null)return;const t="hidden",o=()=>{window.localStorage&&(DarkReader.enable({brightness:100,contrast:90,sepia:10}),window.localStorage.setItem(e,"true"),n.classList.add(t),s.classList.remove(t))},i=()=>{window.localStorage&&(DarkReader.disable(),window.localStorage.getItem(e)&&window.localStorage.removeItem(e),n.classList.remove(t),s.classList.add(t))},a=()=>window.localStorage&&window.localStorage.getItem(e)!=null,r=()=>{a()?i():o()};a()?o():i();const c=document.getElementById("dark-mode-toggle");c.addEventListener("click",r)})()</script><script></script><script id=search-result-template type=text/x-js-template>
 <article class="post-preview" id="summary-${key}">
     <a class="search-item" href="${link}">
         <h2 class="post-title">${title}</h2>
@@ -331,10 +55,4 @@ rss
     ${snippet}
     </div>
 </article>
-</script>
-<script>const postCount=250</script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js></script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js></script>
-<script src=https://brianpfeil.com/js/search.js></script>
-</body>
-</html>
+</script><script>const postCount=296</script><script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js></script><script src=https://brianpfeil.com/js/search.js></script></body></html>

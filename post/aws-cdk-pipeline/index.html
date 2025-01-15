@@ -1,341 +1,97 @@
-<!doctype html><html lang=en itemscope itemtype=http://schema.org/WebPage>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>AWS CDK Pipeline - Brian Pfeil</title>
-<meta name=author content="Brian Pfeil"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"Brian Pfeil","url":"https:\/\/brianpfeil.com\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/brianpfeil.com\/"}</script>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/brianpfeil.com\/","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/brianpfeil.com\/post\/aws-cdk-pipeline\/","name":"Aws cdk pipeline"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Brian Pfeil"},"headline":"AWS CDK Pipeline","description":"","inLanguage":"en","wordCount":589,"datePublished":"2021-04-15T00:00:00","dateModified":"2021-04-15T00:00:00","image":"https:\/\/brianpfeil.com\/","keywords":["aws, cdk, codepipeline, cicd"],"mainEntityOfPage":"https:\/\/brianpfeil.com\/post\/aws-cdk-pipeline\/","publisher":{"@type":"Organization","name":"https:\/\/brianpfeil.com\/","logo":{"@type":"ImageObject","url":"https:\/\/brianpfeil.com\/","height":60,"width":60}}}</script>
-<meta property="og:title" content="AWS CDK Pipeline">
-<meta property="og:url" content="https://brianpfeil.com/post/aws-cdk-pipeline/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Brian Pfeil">
-<meta name=twitter:title content="AWS CDK Pipeline">
-<meta name=twitter:card content="summary">
-<meta name=twitter:site content="@pfeilbr">
-<meta name=twitter:creator content="@pfeilbr">
-<meta name=generator content="Hugo 0.92.0">
-<link rel=alternate href=https://brianpfeil.com/index.xml type=application/rss+xml title="Brian Pfeil"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css integrity=sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y crossorigin=anonymous>
-<link rel=stylesheet href=https://use.fontawesome.com/releases/v5.5.0/css/all.css integrity=sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU crossorigin=anonymous>
-<link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous><link rel=stylesheet href=https://brianpfeil.com/css/main.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
-<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-<link rel=stylesheet href=https://brianpfeil.com/css/highlight.min.css><link rel=stylesheet href=https://brianpfeil.com/css/codeblock.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css integrity=sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh crossorigin=anonymous>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css integrity=sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R crossorigin=anonymous>
-<link rel=stylesheet href=https://brianpfeil.com/css/custom.css>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-610553-4','auto'),ga('send','pageview'))</script>
-<script async src=https://www.google-analytics.com/analytics.js></script>
-</head>
-<body>
-<nav class="navbar navbar-default navbar-custom">
-<div class=container-fluid>
-<div class=navbar-header>
-<button type=button class=navbar-toggle data-toggle=collapse data-target=#main-navbar>
+<!doctype html><html lang=en itemscope itemtype=http://schema.org/WebPage><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><title>AWS CDK Pipeline - Brian Pfeil</title>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"Brian Pfeil","url":"https:\/\/brianpfeil.com\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/brianpfeil.com\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/brianpfeil.com\/","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/brianpfeil.com\/post\/aws-cdk-pipeline\/","name":"Aws cdk pipeline"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Brian Pfeil"},"headline":"AWS CDK Pipeline","description":"","inLanguage":"en","wordCount":589,"datePublished":"2021-04-15T00:00:00\u002b00:00","dateModified":"2021-04-15T00:00:00\u002b00:00","image":"https:\/\/brianpfeil.com\/","keywords":["aws, cdk, codepipeline, cicd"],"mainEntityOfPage":"https:\/\/brianpfeil.com\/post\/aws-cdk-pipeline\/","publisher":{"@type":"Organization","name":"https:\/\/brianpfeil.com\/","logo":{"@type":"ImageObject","url":"https:\/\/brianpfeil.com\/","height":60,"width":60}}}</script><meta property="og:title" content="AWS CDK Pipeline"><meta property="og:url" content="https://brianpfeil.com/post/aws-cdk-pipeline/"><meta property="og:type" content="website"><meta property="og:site_name" content="Brian Pfeil"><meta name=twitter:title content="AWS CDK Pipeline"><meta name=twitter:card content="summary_large_image"><meta name=generator content="Hugo 0.124.1"><link rel=alternate href=https://brianpfeil.com/index.xml type=application/rss+xml title="Brian Pfeil"><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css integrity=sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI crossorigin=anonymous><link rel=stylesheet href=https://use.fontawesome.com/releases/v6.6.0/css/all.css integrity=sha384-h/hnnw1Bi4nbpD6kE7nYfCXzovi622sY5WBxww8ARKwpdLj5kUWjRuyiXaD1U2JT crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css integrity=sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu crossorigin=anonymous><link rel=stylesheet href=https://brianpfeil.com/css/main.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"><link rel=stylesheet href=https://brianpfeil.com/css/highlight.min.css><link rel=stylesheet href=https://brianpfeil.com/css/codeblock.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css integrity=sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css integrity=sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R crossorigin=anonymous><link rel=stylesheet href=https://brianpfeil.com/css/custom.css><script>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-610553-4","auto"),ga("send","pageview"))</script></head><body><nav class="navbar navbar-default navbar-custom"><div class=container-fluid><div class=navbar-header><button type=button class=navbar-toggle data-toggle=collapse data-target=#main-navbar>
 <span class=sr-only>Toggle navigation</span>
 <span class=icon-bar></span>
 <span class=icon-bar></span>
 <span class=icon-bar></span>
 </button>
-<a class=navbar-brand href=https://brianpfeil.com/>Brian Pfeil</a>
-</div>
-<div class="collapse navbar-collapse" id=main-navbar>
-<ul class="nav navbar-nav navbar-right">
-<li>
-<a title=about href=/about/>about</a>
-</li>
-<li>
-<a title=posts href=/>posts</a>
-</li>
-<li>
-<a title=projects href=/projects/>projects</a>
-</li>
-<li>
-<a title=tags href=/tags/>tags</a>
-</li>
-<li>
-<a id=dark-mode-toggle>
-<i class="fa fa-moon hidden" id=dark-mode-enabled-icon aria-hidden=true></i>
-<i class="fa fa-sun hidden" id=dark-mode-disabled-icon aria-hidden=true></i>
-</a>
-</li>
-</ul>
-</div>
-</div>
-</nav>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<a class=navbar-brand href=https://brianpfeil.com/>Brian Pfeil</a></div><div class="collapse navbar-collapse" id=main-navbar><ul class="nav navbar-nav navbar-right"><li><a title=about href=/about/>about</a></li><li><a title=posts href=/>posts</a></li><li><a title=projects href=/projects/>projects</a></li><li><a title=tags href=/tags/>tags</a></li><li><a id=dark-mode-toggle><i class="fa fa-moon hidden" id=dark-mode-enabled-icon aria-hidden=true></i>
+<i class="fa fa-sun hidden" id=dark-mode-disabled-icon aria-hidden=true></i></a></li></ul></div></div></nav><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
 </button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div>
-<header class=header-section>
-<div class="intro-header no-img">
-<div class=container>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<div class=post-heading>
-<h1>AWS CDK Pipeline</h1>
-<span class=post-meta>
-April 15, 2021
-<span class=blog-tags>
-&nbsp;&bull;&nbsp;
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><header class=header-section><div class="intro-header no-img"><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=post-heading><h1>AWS CDK Pipeline</h1><span class=post-meta>April 15, 2021
+<span class=blog-tags>&nbsp;&bull;&nbsp;
 <a href=https://brianpfeil.com//tags/aws/>aws</a>
 ,
 <a href=https://brianpfeil.com//tags/cdk/>cdk</a>
 ,
 <a href=https://brianpfeil.com//tags/codepipeline/>codepipeline</a>
 ,
-<a href=https://brianpfeil.com//tags/cicd/>cicd</a>
-</span>
-</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</header>
-<div class=container role=main>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<article role=main class=blog-post>
-<div class="alert alert-info small bg-info" role=alert>
-<span class=text-muted>code for article</span>&nbsp;<a href=https://github.com/pfeilbr/aws-cdk-pipeline-playground target=_blank><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/aws-cdk-pipeline-playground</a>
-</div>
-<p>learn AWS <a href=https://aws.amazon.com/blogs/developer/cdk-pipelines-continuous-delivery-for-aws-cdk-applications/>CDK Pipelines</a></p>
-<p>Example CI/CD pipeline and solution code exist in single CDK project / repo in all authored in same language (typescript). Any commits to <code>main</code> automatically trigger a <a href=https://aws.amazon.com/codepipeline/>CodePipeline</a> to run and deploy changes to production. The changes can be to the solution or the pipeline itself.</p>
-<h2 id=summary>Summary</h2>
-<ul>
-<li>Simple API Gateway -> Lambda solution to exercise CDK pipeline capabilities. via <a href=https://docs.aws.amazon.com/solutions/latest/constructs/aws-apigateway-lambda.html>AWS Solutions Constructs | aws-apigateway-lambda</a></li>
-<li>Creation of PreProd enviroment (stack) with e2e integration tests.</li>
-<li>Creation of Prod environment (stack)</li>
-<li>Automated creation of metrics, alarms, and notification (sns email) for API Gateway and Lambda resources via <a href=https://github.com/awslabs/cdk-watchful>awslabs/cdk-watchful</a></li>
-<li>Automated notification (sns email) of CodePipeline state change events (<code>STARTED</code>, <code>SUCCEEDED</code>, <code>FAILED</code>) via EventBridge -> SNS rule.</li>
-</ul>
-<h2 id=high-level-development-workflow>High-level Development Workflow</h2>
-<ol>
-<li>Create solution stack <a href=lib/aws-cdk-pipeline-playground-stack.ts><code>lib/aws-cdk-pipeline-playground-stack.ts</code></a> (<code>API gateway -> Lambda</code>).</li>
-<li>Create stage <a href=lib/aws-cdk-pipeline-demo-stage.ts><code>lib/aws-cdk-pipeline-demo-stage.ts</code></a>(<code>CdkpipelinesDemoStage</code>) that wraps the solution stack (<code>AwsCdkPipelinePlaygroundStack</code>) for CodePipeline</li>
-<li>Create pipeline stack <a href=lib/aws-cdk-demo-pipeline-stack.ts><code>lib/aws-cdk-demo-pipeline-stack.ts</code></a> and add <code>CdkpipelinesDemoStage</code> stage to it</li>
-</ol>
-<h2 id=steps>Steps</h2>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>npx cdk init --language<span class=o>=</span>typescript
-
-<span class=nv>CDK_VERSION</span><span class=o>=</span><span class=s2>&#34;1.97.0&#34;</span>
-
-<span class=c1># install pipeline deps</span>
-npm install <span class=se>\
-</span><span class=se></span>    @aws-cdk/aws-codepipeline@<span class=nv>$CDK_VERSION</span> <span class=se>\
-</span><span class=se></span>    @aws-cdk/aws-codepipeline-actions@<span class=nv>$CDK_VERSION</span> <span class=se>\
-</span><span class=se></span>    @aws-cdk/pipelines@<span class=nv>$CDK_VERSION</span>
-
-<span class=c1># leverages `@aws-solutions-constructs/aws-apigateway-lambda`</span>
-<span class=c1># see https://docs.aws.amazon.com/solutions/latest/constructs/aws-apigateway-lambda.html</span>
-<span class=c1># note CDK version must match `aws-solutions-constructs` version (e.g. $CDK_VERSION)</span>
-npm i <span class=se>\
-</span><span class=se></span>    @aws-cdk/aws-apigateway@<span class=nv>$CDK_VERSION</span> <span class=se>\
-</span><span class=se></span>    @aws-cdk/aws-lambda@<span class=nv>$CDK_VERSION</span> <span class=se>\
-</span><span class=se></span>    @aws-solutions-constructs/aws-apigateway-lambda@<span class=nv>$CDK_VERSION</span>
-
-<span class=c1># build locally</span>
-npm run build
-
-<span class=c1># test</span>
-npm run <span class=nb>test</span>
-
-<span class=c1># create *this* repo in github and do initial push to ensure it exists for</span>
-<span class=c1># CodePipeline to find</span>
-
-<span class=c1># provision pipeline</span>
-
-<span class=c1># [optional] if not already ran.  bootstrap for each target account+region combination</span>
-cdk bootstrap aws://AWS_ACCOUNT_NUMBER/us-east-1
-cdk bootstrap aws://AWS_ACCOUNT_NUMBER/us-west-1
-
-<span class=c1># ensure `cdk-pipeline-01-github-token` exists in Secrets Manager</span>
-
-<span class=c1># one-time operation, deploy the pipeline stack from local machine</span>
-cdk deploy  --force --require-approval never
-
-<span class=c1># add stage to pipeline.  this is the api gateway -&gt; lambda stack</span>
-code lib/aws-cdk-demo-pipeline-stack.ts <span class=c1># edit</span>
-
-<span class=c1># push changes and pipeline will run and deploy PreProd stage</span>
-npm run build
-git commit -am <span class=s1>&#39;Add PreProd stage&#39;</span>
-git push
-
-<span class=c1># the pipeline automatically reconfigures itself to add the new stage and</span>
-<span class=c1># deploy to it</span>
-
-<span class=c1># modify solution and/or pipeline, commit, and iterate</span>
-
-</code></pre></div><h2 id=notes>Notes</h2>
-<p>Each pipeline stage is compiled into it&rsquo;s own cloud assembly as follows:</p>
-<ul>
-<li><code>cdk.out/assembly-Dev</code></li>
-<li><code>cdk.out/assembly-CdkpipelinesDemoPipelineStack-PreProd</code></li>
-<li><code>cdk.out/assembly-CdkpipelinesDemoPipelineStack-Prod</code></li>
-</ul>
-<p>You can deploy and individual stage (cfn stack) by itself. For example, for dev.</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>npm run build <span class=c1># If necessary, to recompile the Lambda sources</span>
-cdk synth
-cdk -a cdk.out/assembly-Dev deploy --force --require-approval never
-
-<span class=c1># ensure dev account is bootstrapped first</span>
-npx cdk bootstrap <span class=se>\
-</span><span class=se></span>  --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess <span class=se>\
-</span><span class=se></span>  aws://DEVELOPER_ACCOUNT/us-east-1
-</code></pre></div><hr>
-<ul>
-<li>see <a href=cdk-deploy-to.sh><code>cdk-deploy-to.sh</code></a> for handy deployment script for different account+region combinations. Remember to bootstrap target account+region with <code>cdk bootstrap aws://account/region</code></li>
-<li>had to downgrade npm 7 to 6 to get around types error when running <code>npm run build</code> on codebuild. see <a href=https://github.com/aws/aws-cdk/issues/13541#issuecomment-801606777>self mutating cdk pipeline fails after updating cdk version from 1.85.0 to 1.92.0 · Issue #13541 · aws/aws-cdk</a>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=c1># steps</span>
-npm install -g npm@6
-rm package-lock.json
-npm i
-</code></pre></div></li>
-</ul>
-<h2 id=screenshots>Screenshots</h2>
-<h3 id=aws-console--codepipeline>AWS Console | CodePipeline</h3>
-<img src=https://www.evernote.com/l/AAE6NqeDir5OzJ03mkeMXRIxup_JygJDKG8B/image.png alt width=75%>
+<a href=https://brianpfeil.com//tags/cicd/>cicd</a></span></span></div></div></div></div></div></header><div class=container role=main><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><article role=main class=blog-post><div class="alert alert-info small bg-info" role=alert><span class=text-muted>code for article</span>&nbsp;<a href=https://github.com/pfeilbr/aws-cdk-pipeline-playground target=_blank><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/aws-cdk-pipeline-playground</a></div><p>learn AWS <a href=https://aws.amazon.com/blogs/developer/cdk-pipelines-continuous-delivery-for-aws-cdk-applications/>CDK Pipelines</a></p><p>Example CI/CD pipeline and solution code exist in single CDK project / repo in all authored in same language (typescript). Any commits to <code>main</code> automatically trigger a <a href=https://aws.amazon.com/codepipeline/>CodePipeline</a> to run and deploy changes to production. The changes can be to the solution or the pipeline itself.</p><h2 id=summary>Summary</h2><ul><li>Simple API Gateway -> Lambda solution to exercise CDK pipeline capabilities. via <a href=https://docs.aws.amazon.com/solutions/latest/constructs/aws-apigateway-lambda.html>AWS Solutions Constructs | aws-apigateway-lambda</a></li><li>Creation of PreProd enviroment (stack) with e2e integration tests.</li><li>Creation of Prod environment (stack)</li><li>Automated creation of metrics, alarms, and notification (sns email) for API Gateway and Lambda resources via <a href=https://github.com/awslabs/cdk-watchful>awslabs/cdk-watchful</a></li><li>Automated notification (sns email) of CodePipeline state change events (<code>STARTED</code>, <code>SUCCEEDED</code>, <code>FAILED</code>) via EventBridge -> SNS rule.</li></ul><h2 id=high-level-development-workflow>High-level Development Workflow</h2><ol><li>Create solution stack <a href=lib/aws-cdk-pipeline-playground-stack.ts><code>lib/aws-cdk-pipeline-playground-stack.ts</code></a> (<code>API gateway -> Lambda</code>).</li><li>Create stage <a href=lib/aws-cdk-pipeline-demo-stage.ts><code>lib/aws-cdk-pipeline-demo-stage.ts</code></a>(<code>CdkpipelinesDemoStage</code>) that wraps the solution stack (<code>AwsCdkPipelinePlaygroundStack</code>) for CodePipeline</li><li>Create pipeline stack <a href=lib/aws-cdk-demo-pipeline-stack.ts><code>lib/aws-cdk-demo-pipeline-stack.ts</code></a> and add <code>CdkpipelinesDemoStage</code> stage to it</li></ol><h2 id=steps>Steps</h2><div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=line><span class=cl>npx cdk init --language<span class=o>=</span>typescript
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nv>CDK_VERSION</span><span class=o>=</span><span class=s2>&#34;1.97.0&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># install pipeline deps</span>
+</span></span><span class=line><span class=cl>npm install <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>    @aws-cdk/aws-codepipeline@<span class=nv>$CDK_VERSION</span> <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>    @aws-cdk/aws-codepipeline-actions@<span class=nv>$CDK_VERSION</span> <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>    @aws-cdk/pipelines@<span class=nv>$CDK_VERSION</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># leverages `@aws-solutions-constructs/aws-apigateway-lambda`</span>
+</span></span><span class=line><span class=cl><span class=c1># see https://docs.aws.amazon.com/solutions/latest/constructs/aws-apigateway-lambda.html</span>
+</span></span><span class=line><span class=cl><span class=c1># note CDK version must match `aws-solutions-constructs` version (e.g. $CDK_VERSION)</span>
+</span></span><span class=line><span class=cl>npm i <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>    @aws-cdk/aws-apigateway@<span class=nv>$CDK_VERSION</span> <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>    @aws-cdk/aws-lambda@<span class=nv>$CDK_VERSION</span> <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>    @aws-solutions-constructs/aws-apigateway-lambda@<span class=nv>$CDK_VERSION</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># build locally</span>
+</span></span><span class=line><span class=cl>npm run build
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># test</span>
+</span></span><span class=line><span class=cl>npm run <span class=nb>test</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># create *this* repo in github and do initial push to ensure it exists for</span>
+</span></span><span class=line><span class=cl><span class=c1># CodePipeline to find</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># provision pipeline</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># [optional] if not already ran.  bootstrap for each target account+region combination</span>
+</span></span><span class=line><span class=cl>cdk bootstrap aws://AWS_ACCOUNT_NUMBER/us-east-1
+</span></span><span class=line><span class=cl>cdk bootstrap aws://AWS_ACCOUNT_NUMBER/us-west-1
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># ensure `cdk-pipeline-01-github-token` exists in Secrets Manager</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># one-time operation, deploy the pipeline stack from local machine</span>
+</span></span><span class=line><span class=cl>cdk deploy  --force --require-approval never
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># add stage to pipeline.  this is the api gateway -&gt; lambda stack</span>
+</span></span><span class=line><span class=cl>code lib/aws-cdk-demo-pipeline-stack.ts <span class=c1># edit</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># push changes and pipeline will run and deploy PreProd stage</span>
+</span></span><span class=line><span class=cl>npm run build
+</span></span><span class=line><span class=cl>git commit -am <span class=s1>&#39;Add PreProd stage&#39;</span>
+</span></span><span class=line><span class=cl>git push
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># the pipeline automatically reconfigures itself to add the new stage and</span>
+</span></span><span class=line><span class=cl><span class=c1># deploy to it</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># modify solution and/or pipeline, commit, and iterate</span>
+</span></span></code></pre></div><h2 id=notes>Notes</h2><p>Each pipeline stage is compiled into it&rsquo;s own cloud assembly as follows:</p><ul><li><code>cdk.out/assembly-Dev</code></li><li><code>cdk.out/assembly-CdkpipelinesDemoPipelineStack-PreProd</code></li><li><code>cdk.out/assembly-CdkpipelinesDemoPipelineStack-Prod</code></li></ul><p>You can deploy and individual stage (cfn stack) by itself. For example, for dev.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=line><span class=cl>npm run build <span class=c1># If necessary, to recompile the Lambda sources</span>
+</span></span><span class=line><span class=cl>cdk synth
+</span></span><span class=line><span class=cl>cdk -a cdk.out/assembly-Dev deploy --force --require-approval never
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># ensure dev account is bootstrapped first</span>
+</span></span><span class=line><span class=cl>npx cdk bootstrap <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  aws://DEVELOPER_ACCOUNT/us-east-1
+</span></span></code></pre></div><hr><ul><li>see <a href=cdk-deploy-to.sh><code>cdk-deploy-to.sh</code></a> for handy deployment script for different account+region combinations. Remember to bootstrap target account+region with <code>cdk bootstrap aws://account/region</code></li><li>had to downgrade npm 7 to 6 to get around types error when running <code>npm run build</code> on codebuild. see <a href=https://github.com/aws/aws-cdk/issues/13541#issuecomment-801606777>self mutating cdk pipeline fails after updating cdk version from 1.85.0 to 1.92.0 · Issue #13541 · aws/aws-cdk</a><div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=line><span class=cl><span class=c1># steps</span>
+</span></span><span class=line><span class=cl>npm install -g npm@6
+</span></span><span class=line><span class=cl>rm package-lock.json
+</span></span><span class=line><span class=cl>npm i
+</span></span></code></pre></div></li></ul><h2 id=screenshots>Screenshots</h2><h3 id=aws-console--codepipeline>AWS Console | CodePipeline</h3><img src=https://www.evernote.com/l/AAE6NqeDir5OzJ03mkeMXRIxup_JygJDKG8B/image.png alt width=75%>
 <img src=https://www.evernote.com/l/AAEubcb4P69PmJ1Av4SHOYfWhgyaQWmLBBsB/image.png alt width=75%>
 <img src=https://www.evernote.com/l/AAHfP1motBxP3KPCmTNkFV2hatoUecHL5DgB/image.png alt width=75%>
-<img src=https://www.evernote.com/l/AAHSk5xUmvdPm477hfHkLxRVPqGMUROrFLwB/image.png alt width=75%>
-<h3 id=sns-email-notifications>SNS Email Notifications</h3>
-<p>CodePipeline State Change COMPLETED
-<img src=https://www.evernote.com/l/AAEEPW3ju7dGVZQz93zo4d4UEC0_CAg8wiIB/image.png alt width=75%></p>
-<p>API Gateway 5XX Count Threshold Hit
-<img src=https://www.evernote.com/l/AAF_uNyvwUxB25RNyVJS-LF5bpg25ddWK_8B/image.png alt width=75%></p>
-<p>Lambda Error Count Threshold Hit
-<img src=https://www.evernote.com/l/AAHGMhNbuAFBlLHq1jAK85_c9l4CUwDnZVsB/image.png alt width=75%></p>
-<h2 id=resources>Resources</h2>
-<ul>
-<li><a href=https://aws.amazon.com/blogs/developer/cdk-pipelines-continuous-delivery-for-aws-cdk-applications/>CDK Pipelines: Continuous delivery for AWS CDK applications | Amazon Web Services</a></li>
-<li><a href=https://cdkworkshop.com/40-dotnet/70-advanced-topics/100-pipelines.html>cdkworkshop.com | CDK PIPELINES</a></li>
-<li><a href=https://docs.aws.amazon.com/cdk/api/latest/docs/pipelines-readme.html>@aws-cdk/pipelines module · AWS CDK</a></li>
-</ul>
-<hr>
-<p><em>original cdk generated <code>README.md</code> below</em></p>
-<hr>
-<h1 id=welcome-to-your-cdk-typescript-project>Welcome to your CDK TypeScript project!</h1>
-<p>This is a blank project for TypeScript development with CDK.</p>
-<p>The <code>cdk.json</code> file tells the CDK Toolkit how to execute your app.</p>
-<h2 id=useful-commands>Useful commands</h2>
-<ul>
-<li><code>npm run build</code> compile typescript to js</li>
-<li><code>npm run watch</code> watch for changes and compile</li>
-<li><code>npm run test</code> perform the jest unit tests</li>
-<li><code>cdk deploy</code> deploy this stack to your default AWS account/region</li>
-<li><code>cdk diff</code> compare deployed stack with current state</li>
-<li><code>cdk synth</code> emits the synthesized CloudFormation template</li>
-</ul>
-<hr>
-<section id=social-share>
-<div class="list-inline footer-links text-center">
-<span class=text-muted>share on</span><br>
-<a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-cdk-pipeline%2f&text=AWS%20CDK%20Pipeline&via=pfeilbr" target=_blank title="Share on Twitter">Twitter</a>
+<img src=https://www.evernote.com/l/AAHSk5xUmvdPm477hfHkLxRVPqGMUROrFLwB/image.png alt width=75%><h3 id=sns-email-notifications>SNS Email Notifications</h3><p>CodePipeline State Change COMPLETED
+<img src=https://www.evernote.com/l/AAEEPW3ju7dGVZQz93zo4d4UEC0_CAg8wiIB/image.png alt width=75%></p><p>API Gateway 5XX Count Threshold Hit
+<img src=https://www.evernote.com/l/AAF_uNyvwUxB25RNyVJS-LF5bpg25ddWK_8B/image.png alt width=75%></p><p>Lambda Error Count Threshold Hit
+<img src=https://www.evernote.com/l/AAHGMhNbuAFBlLHq1jAK85_c9l4CUwDnZVsB/image.png alt width=75%></p><h2 id=resources>Resources</h2><ul><li><a href=https://aws.amazon.com/blogs/developer/cdk-pipelines-continuous-delivery-for-aws-cdk-applications/>CDK Pipelines: Continuous delivery for AWS CDK applications | Amazon Web Services</a></li><li><a href=https://cdkworkshop.com/40-dotnet/70-advanced-topics/100-pipelines.html>cdkworkshop.com | CDK PIPELINES</a></li><li><a href=https://docs.aws.amazon.com/cdk/api/latest/docs/pipelines-readme.html>@aws-cdk/pipelines module · AWS CDK</a></li></ul><hr><p><em>original cdk generated <code>README.md</code> below</em></p><hr><h1 id=welcome-to-your-cdk-typescript-project>Welcome to your CDK TypeScript project!</h1><p>This is a blank project for TypeScript development with CDK.</p><p>The <code>cdk.json</code> file tells the CDK Toolkit how to execute your app.</p><h2 id=useful-commands>Useful commands</h2><ul><li><code>npm run build</code> compile typescript to js</li><li><code>npm run watch</code> watch for changes and compile</li><li><code>npm run test</code> perform the jest unit tests</li><li><code>cdk deploy</code> deploy this stack to your default AWS account/region</li><li><code>cdk diff</code> compare deployed stack with current state</li><li><code>cdk synth</code> emits the synthesized CloudFormation template</li></ul><hr><section id=social-share><div class="list-inline footer-links text-center"><span class=text-muted>share on</span><br><a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-cdk-pipeline%2f&amp;text=AWS%20CDK%20Pipeline&amp;via=pfeilbr" target=_blank title="Share on Twitter">Twitter</a>
 &nbsp;&bull;&nbsp;
-<a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-cdk-pipeline%2f&title=AWS%20CDK%20Pipeline" target=_blank title="Share on Reddit">
-Reddit
-</a>
-</div>
-</section>
-</article>
-<ul class="pager blog-pager">
-<li class=previous>
-<a href=https://brianpfeil.com/post/reactcdk-rfc/ data-toggle=tooltip data-placement=top title="ReactCDK RFC">&larr; ReactCDK RFC</a>
-</li>
-<li class=next>
-<a href=https://brianpfeil.com/post/aws-cloudformation-custom-resource-type/ data-toggle=tooltip data-placement=top title="AWS CloudFormation Custom Resource Type">AWS CloudFormation Custom Resource Type &rarr;</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<footer>
-<div class=container>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<ul class="list-inline text-center footer-links">
-<li>
-<a href=https://twitter.com/pfeilbr title=twitter>
-<span class=footer-link>
-twitter
-</span>
-</a>
-</li>
-<li>
-<a href=https://github.com/pfeilbr title=github>
-<span class=footer-link>
-github
-</span>
-</a>
-</li>
-<li>
-<a href=https://stackoverflow.com/users/29148/pfeilbr title="stack overflow">
-<span class=footer-link>
-stack overflow
-</span>
-</a>
-</li>
-<li>
-<a href=/index.xml title=RSS>
-<span class=footer-link>
-rss
-</span>
-</a>
-</li>
-</ul>
-<p class="credits copyright text-muted">
-<a href=https://brianpfeil.com>Brian Pfeil</a>
+<a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-cdk-pipeline%2f&amp;title=AWS%20CDK%20Pipeline" target=_blank title="Share on Reddit">Reddit</a></div></section></article><ul class="pager blog-pager"><li class=previous><a href=https://brianpfeil.com/post/reactcdk-rfc/ data-toggle=tooltip data-placement=top title="ReactCDK RFC">&larr; ReactCDK RFC</a></li><li class=next><a href=https://brianpfeil.com/post/aws-cloudformation-custom-resource-type/ data-toggle=tooltip data-placement=top title="AWS CloudFormation Custom Resource Type">AWS CloudFormation Custom Resource Type &rarr;</a></li></ul></div></div></div><footer><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center footer-links"><li><a href=https://twitter.com/pfeilbr title=twitter><span class=footer-link>twitter</span></a></li><li><a href=https://github.com/pfeilbr title=github><span class=footer-link>github</span></a></li><li><a href=https://stackoverflow.com/users/29148/pfeilbr title="stack overflow"><span class=footer-link>stack overflow</span></a></li><li><a href=/index.xml title=RSS><span class=footer-link>rss</span></a></li></ul><p class="credits copyright text-muted"><a href=https://brianpfeil.com>Brian Pfeil</a>
 &nbsp;&bull;&nbsp;&copy;
-2021
-</p>
-</div>
-</div>
-</div>
-</footer><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js integrity=sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx crossorigin=anonymous></script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js integrity=sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe crossorigin=anonymous></script>
-<script src=https://code.jquery.com/jquery-1.12.4.min.js integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin=anonymous></script>
-<script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa crossorigin=anonymous></script>
-<script src=https://brianpfeil.com/js/main.js></script>
-<script src=https://brianpfeil.com/js/highlight.min.js></script>
-<script>hljs.initHighlightingOnLoad()</script>
-<script>$(document).ready(function(){$("pre.chroma").css("padding","0")})</script><script>renderMathInElement(document.body)</script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js integrity=sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy crossorigin=anonymous></script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js integrity=sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q crossorigin=anonymous></script><script src=https://brianpfeil.com/js/load-photoswipe.js></script>
-<script src=https://unpkg.com/darkreader@4.9.16/darkreader.js crossorigin=anonymous></script>
-<script>(()=>{DarkReader.setFetchMethod(window.fetch);const a="DARK_MODE_ENABLED_KEY",c=document.getElementById("dark-mode-enabled-icon"),d=document.getElementById("dark-mode-disabled-icon");if(c===null||d===null)return;const b="hidden",e=()=>{window.localStorage&&(DarkReader.enable({brightness:100,contrast:90,sepia:10}),window.localStorage.setItem(a,"true"),c.classList.add(b),d.classList.remove(b))},f=()=>{window.localStorage&&(DarkReader.disable(),window.localStorage.getItem(a)&&window.localStorage.removeItem(a),c.classList.remove(b),d.classList.add(b))},g=()=>window.localStorage&&window.localStorage.getItem(a)!=null,h=()=>{g()?f():e()};g()?e():f();const i=document.getElementById('dark-mode-toggle');i.addEventListener('click',h)})()</script>
-<script></script>
-<script id=search-result-template type=text/x-js-template>
+2024</p></div></div></div></footer><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js integrity=sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js integrity=sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe crossorigin=anonymous></script><script src=https://code.jquery.com/jquery-1.12.4.min.js integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin=anonymous></script><script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa crossorigin=anonymous></script><script src=https://brianpfeil.com/js/main.js></script><script src=https://brianpfeil.com/js/highlight.min.js></script><script>hljs.initHighlightingOnLoad()</script><script>$(document).ready(function(){$("pre.chroma").css("padding","0")})</script><script>renderMathInElement(document.body)</script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js integrity=sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js integrity=sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q crossorigin=anonymous></script><script src=https://brianpfeil.com/js/load-photoswipe.js></script><script src=https://unpkg.com/darkreader@4.9.16/darkreader.js crossorigin=anonymous></script><script>(()=>{DarkReader.setFetchMethod(window.fetch);const e="DARK_MODE_ENABLED_KEY",n=document.getElementById("dark-mode-enabled-icon"),s=document.getElementById("dark-mode-disabled-icon");if(n===null||s===null)return;const t="hidden",o=()=>{window.localStorage&&(DarkReader.enable({brightness:100,contrast:90,sepia:10}),window.localStorage.setItem(e,"true"),n.classList.add(t),s.classList.remove(t))},i=()=>{window.localStorage&&(DarkReader.disable(),window.localStorage.getItem(e)&&window.localStorage.removeItem(e),n.classList.remove(t),s.classList.add(t))},a=()=>window.localStorage&&window.localStorage.getItem(e)!=null,r=()=>{a()?i():o()};a()?o():i();const c=document.getElementById("dark-mode-toggle");c.addEventListener("click",r)})()</script><script></script><script id=search-result-template type=text/x-js-template>
 <article class="post-preview" id="summary-${key}">
     <a class="search-item" href="${link}">
         <h2 class="post-title">${title}</h2>
@@ -354,10 +110,4 @@ rss
     ${snippet}
     </div>
 </article>
-</script>
-<script>const postCount=250</script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js></script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js></script>
-<script src=https://brianpfeil.com/js/search.js></script>
-</body>
-</html>
+</script><script>const postCount=296</script><script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js></script><script src=https://brianpfeil.com/js/search.js></script></body></html>

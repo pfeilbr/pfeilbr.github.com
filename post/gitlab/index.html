@@ -1,245 +1,56 @@
-<!doctype html><html lang=en itemscope itemtype=http://schema.org/WebPage>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>Gitlab - Brian Pfeil</title>
-<meta name=author content="Brian Pfeil"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"Brian Pfeil","url":"https:\/\/brianpfeil.com\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/brianpfeil.com\/"}</script>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/brianpfeil.com\/","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/brianpfeil.com\/post\/gitlab\/","name":"Gitlab"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Brian Pfeil"},"headline":"Gitlab","description":"","inLanguage":"en","wordCount":155,"datePublished":"2019-09-18T00:00:00","dateModified":"2019-09-18T00:00:00","image":"https:\/\/brianpfeil.com\/","keywords":["gitlab"],"mainEntityOfPage":"https:\/\/brianpfeil.com\/post\/gitlab\/","publisher":{"@type":"Organization","name":"https:\/\/brianpfeil.com\/","logo":{"@type":"ImageObject","url":"https:\/\/brianpfeil.com\/","height":60,"width":60}}}</script>
-<meta property="og:title" content="Gitlab">
-<meta property="og:url" content="https://brianpfeil.com/post/gitlab/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Brian Pfeil">
-<meta name=twitter:title content="Gitlab">
-<meta name=twitter:card content="summary">
-<meta name=twitter:site content="@pfeilbr">
-<meta name=twitter:creator content="@pfeilbr">
-<meta name=generator content="Hugo 0.92.0">
-<link rel=alternate href=https://brianpfeil.com/index.xml type=application/rss+xml title="Brian Pfeil"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css integrity=sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y crossorigin=anonymous>
-<link rel=stylesheet href=https://use.fontawesome.com/releases/v5.5.0/css/all.css integrity=sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU crossorigin=anonymous>
-<link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous><link rel=stylesheet href=https://brianpfeil.com/css/main.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
-<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-<link rel=stylesheet href=https://brianpfeil.com/css/highlight.min.css><link rel=stylesheet href=https://brianpfeil.com/css/codeblock.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css integrity=sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh crossorigin=anonymous>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css integrity=sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R crossorigin=anonymous>
-<link rel=stylesheet href=https://brianpfeil.com/css/custom.css>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-610553-4','auto'),ga('send','pageview'))</script>
-<script async src=https://www.google-analytics.com/analytics.js></script>
-</head>
-<body>
-<nav class="navbar navbar-default navbar-custom">
-<div class=container-fluid>
-<div class=navbar-header>
-<button type=button class=navbar-toggle data-toggle=collapse data-target=#main-navbar>
+<!doctype html><html lang=en itemscope itemtype=http://schema.org/WebPage><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><title>Gitlab - Brian Pfeil</title>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"Brian Pfeil","url":"https:\/\/brianpfeil.com\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/brianpfeil.com\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/brianpfeil.com\/","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/brianpfeil.com\/post\/gitlab\/","name":"Gitlab"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Brian Pfeil"},"headline":"Gitlab","description":"","inLanguage":"en","wordCount":155,"datePublished":"2019-09-18T00:00:00\u002b00:00","dateModified":"2019-09-18T00:00:00\u002b00:00","image":"https:\/\/brianpfeil.com\/","keywords":["gitlab"],"mainEntityOfPage":"https:\/\/brianpfeil.com\/post\/gitlab\/","publisher":{"@type":"Organization","name":"https:\/\/brianpfeil.com\/","logo":{"@type":"ImageObject","url":"https:\/\/brianpfeil.com\/","height":60,"width":60}}}</script><meta property="og:title" content="Gitlab"><meta property="og:url" content="https://brianpfeil.com/post/gitlab/"><meta property="og:type" content="website"><meta property="og:site_name" content="Brian Pfeil"><meta name=twitter:title content="Gitlab"><meta name=twitter:card content="summary_large_image"><meta name=generator content="Hugo 0.124.1"><link rel=alternate href=https://brianpfeil.com/index.xml type=application/rss+xml title="Brian Pfeil"><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css integrity=sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI crossorigin=anonymous><link rel=stylesheet href=https://use.fontawesome.com/releases/v6.6.0/css/all.css integrity=sha384-h/hnnw1Bi4nbpD6kE7nYfCXzovi622sY5WBxww8ARKwpdLj5kUWjRuyiXaD1U2JT crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css integrity=sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu crossorigin=anonymous><link rel=stylesheet href=https://brianpfeil.com/css/main.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"><link rel=stylesheet href=https://brianpfeil.com/css/highlight.min.css><link rel=stylesheet href=https://brianpfeil.com/css/codeblock.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css integrity=sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css integrity=sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R crossorigin=anonymous><link rel=stylesheet href=https://brianpfeil.com/css/custom.css><script>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-610553-4","auto"),ga("send","pageview"))</script></head><body><nav class="navbar navbar-default navbar-custom"><div class=container-fluid><div class=navbar-header><button type=button class=navbar-toggle data-toggle=collapse data-target=#main-navbar>
 <span class=sr-only>Toggle navigation</span>
 <span class=icon-bar></span>
 <span class=icon-bar></span>
 <span class=icon-bar></span>
 </button>
-<a class=navbar-brand href=https://brianpfeil.com/>Brian Pfeil</a>
-</div>
-<div class="collapse navbar-collapse" id=main-navbar>
-<ul class="nav navbar-nav navbar-right">
-<li>
-<a title=about href=/about/>about</a>
-</li>
-<li>
-<a title=posts href=/>posts</a>
-</li>
-<li>
-<a title=projects href=/projects/>projects</a>
-</li>
-<li>
-<a title=tags href=/tags/>tags</a>
-</li>
-<li>
-<a id=dark-mode-toggle>
-<i class="fa fa-moon hidden" id=dark-mode-enabled-icon aria-hidden=true></i>
-<i class="fa fa-sun hidden" id=dark-mode-disabled-icon aria-hidden=true></i>
-</a>
-</li>
-</ul>
-</div>
-</div>
-</nav>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<a class=navbar-brand href=https://brianpfeil.com/>Brian Pfeil</a></div><div class="collapse navbar-collapse" id=main-navbar><ul class="nav navbar-nav navbar-right"><li><a title=about href=/about/>about</a></li><li><a title=posts href=/>posts</a></li><li><a title=projects href=/projects/>projects</a></li><li><a title=tags href=/tags/>tags</a></li><li><a id=dark-mode-toggle><i class="fa fa-moon hidden" id=dark-mode-enabled-icon aria-hidden=true></i>
+<i class="fa fa-sun hidden" id=dark-mode-disabled-icon aria-hidden=true></i></a></li></ul></div></div></nav><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
 </button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div>
-<header class=header-section>
-<div class="intro-header no-img">
-<div class=container>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<div class=post-heading>
-<h1>Gitlab</h1>
-<span class=post-meta>
-September 18, 2019
-<span class=blog-tags>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><header class=header-section><div class="intro-header no-img"><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=post-heading><h1>Gitlab</h1><span class=post-meta>September 18, 2019
+<span class=blog-tags>&nbsp;&bull;&nbsp;
+<a href=https://brianpfeil.com//tags/gitlab/>gitlab</a></span></span></div></div></div></div></div></header><div class=container role=main><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><article role=main class=blog-post><div class="alert alert-info small bg-info" role=alert><span class=text-muted>code for article</span>&nbsp;<a href=https://github.com/pfeilbr/gitlab-playground target=_blank><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/gitlab-playground</a></div><p>learn gitlab. Uses <a href=https://hub.docker.com/r/gitlab/gitlab-ce/>GitLab CE Docker image</a> to run locally</p><p>Based on steps in docs @ <a href=https://docs.gitlab.com/omnibus/docker/>GitLab Docker images</a></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=line><span class=cl>mkdir ~/dev/gitlab
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># not ssh exposed on 2022 to not conflict with mac | System Prefs | Sharing | Remote Login</span>
+</span></span><span class=line><span class=cl>sudo docker run --detach <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  --hostname gitlab.example.com <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  --publish 443:443 --publish 80:80 --publish 2022:22 <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  --name gitlab <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  --restart always <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  --volume ~/dev/gitlab/config:/etc/gitlab <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  --volume ~/dev/gitlab/logs:/var/log/gitlab <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  --volume ~/dev/gitlab/data:/var/opt/gitlab <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  gitlab/gitlab-ce:latest
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># ***NOTE*** can take up to 10 min to load</span>
+</span></span><span class=line><span class=cl><span class=c1># check logs via `sudo docker logs -f gitlab` or Kitematic UI | Container Logs</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>open http://localhost
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># will need to set root password</span>
+</span></span><span class=line><span class=cl><span class=c1># login with username: root, password: YOUR_PASSWORD</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># add ssh key via User Settings | SSH Keys</span>
+</span></span><span class=line><span class=cl>cat ~/.ssh/id_rsa.pub <span class=p>|</span> pbcopy
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># create project in UI (`project01`)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># note port 2022</span>
+</span></span><span class=line><span class=cl>git clone ssh://git@localhost:2022/root/project01.git
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># stopping</span>
+</span></span><span class=line><span class=cl>sudo docker stop gitlab
+</span></span></code></pre></div><hr><p>Container Logs via Kitematic UI
+<img src=https://www.evernote.com/l/AAHs12CyIodBZp3cOuZumtkxJG2f-3Az3DQB/image.png alt></p><p>Project view
+<img src=https://www.evernote.com/l/AAEuFGfKNfxALLJSmQZ0GC7DCox1cV1MwqUB/image.png alt></p><hr><section id=social-share><div class="list-inline footer-links text-center"><span class=text-muted>share on</span><br><a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fgitlab%2f&amp;text=Gitlab&amp;via=pfeilbr" target=_blank title="Share on Twitter">Twitter</a>
 &nbsp;&bull;&nbsp;
-<a href=https://brianpfeil.com//tags/gitlab/>gitlab</a>
-</span>
-</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</header>
-<div class=container role=main>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<article role=main class=blog-post>
-<div class="alert alert-info small bg-info" role=alert>
-<span class=text-muted>code for article</span>&nbsp;<a href=https://github.com/pfeilbr/gitlab-playground target=_blank><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/gitlab-playground</a>
-</div>
-<p>learn gitlab. Uses <a href=https://hub.docker.com/r/gitlab/gitlab-ce/>GitLab CE Docker image</a> to run locally</p>
-<p>Based on steps in docs @ <a href=https://docs.gitlab.com/omnibus/docker/>GitLab Docker images</a></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>mkdir ~/dev/gitlab
-
-<span class=c1># not ssh exposed on 2022 to not conflict with mac | System Prefs | Sharing | Remote Login</span>
-sudo docker run --detach <span class=se>\
-</span><span class=se></span>  --hostname gitlab.example.com <span class=se>\
-</span><span class=se></span>  --publish 443:443 --publish 80:80 --publish 2022:22 <span class=se>\
-</span><span class=se></span>  --name gitlab <span class=se>\
-</span><span class=se></span>  --restart always <span class=se>\
-</span><span class=se></span>  --volume ~/dev/gitlab/config:/etc/gitlab <span class=se>\
-</span><span class=se></span>  --volume ~/dev/gitlab/logs:/var/log/gitlab <span class=se>\
-</span><span class=se></span>  --volume ~/dev/gitlab/data:/var/opt/gitlab <span class=se>\
-</span><span class=se></span>  gitlab/gitlab-ce:latest
-
-<span class=c1># ***NOTE*** can take up to 10 min to load</span>
-<span class=c1># check logs via `sudo docker logs -f gitlab` or Kitematic UI | Container Logs</span>
-
-open http://localhost
-
-<span class=c1># will need to set root password</span>
-<span class=c1># login with username: root, password: YOUR_PASSWORD</span>
-
-<span class=c1># add ssh key via User Settings | SSH Keys</span>
-cat ~/.ssh/id_rsa.pub <span class=p>|</span> pbcopy
-
-<span class=c1># create project in UI (`project01`)</span>
-
-<span class=c1># note port 2022</span>
-git clone ssh://git@localhost:2022/root/project01.git
-
-<span class=c1># stopping</span>
-sudo docker stop gitlab
-</code></pre></div><hr>
-<p>Container Logs via Kitematic UI
-<img src=https://www.evernote.com/l/AAHs12CyIodBZp3cOuZumtkxJG2f-3Az3DQB/image.png alt></p>
-<p>Project view
-<img src=https://www.evernote.com/l/AAEuFGfKNfxALLJSmQZ0GC7DCox1cV1MwqUB/image.png alt></p>
-<hr>
-<section id=social-share>
-<div class="list-inline footer-links text-center">
-<span class=text-muted>share on</span><br>
-<a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fgitlab%2f&text=Gitlab&via=pfeilbr" target=_blank title="Share on Twitter">Twitter</a>
-&nbsp;&bull;&nbsp;
-<a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fgitlab%2f&title=Gitlab" target=_blank title="Share on Reddit">
-Reddit
-</a>
-</div>
-</section>
-</article>
-<ul class="pager blog-pager">
-<li class=previous>
-<a href=https://brianpfeil.com/post/serverless-lambda-layers/ data-toggle=tooltip data-placement=top title="Serverless Lambda Layers">&larr; Serverless Lambda Layers</a>
-</li>
-<li class=next>
-<a href=https://brianpfeil.com/post/aws-cognito-developer-authenticated-identities/ data-toggle=tooltip data-placement=top title="AWS Cognito Developer Authenticated Identities">AWS Cognito Developer Authenticated Identities &rarr;</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<footer>
-<div class=container>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<ul class="list-inline text-center footer-links">
-<li>
-<a href=https://twitter.com/pfeilbr title=twitter>
-<span class=footer-link>
-twitter
-</span>
-</a>
-</li>
-<li>
-<a href=https://github.com/pfeilbr title=github>
-<span class=footer-link>
-github
-</span>
-</a>
-</li>
-<li>
-<a href=https://stackoverflow.com/users/29148/pfeilbr title="stack overflow">
-<span class=footer-link>
-stack overflow
-</span>
-</a>
-</li>
-<li>
-<a href=/index.xml title=RSS>
-<span class=footer-link>
-rss
-</span>
-</a>
-</li>
-</ul>
-<p class="credits copyright text-muted">
-<a href=https://brianpfeil.com>Brian Pfeil</a>
+<a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2fgitlab%2f&amp;title=Gitlab" target=_blank title="Share on Reddit">Reddit</a></div></section></article><ul class="pager blog-pager"><li class=previous><a href=https://brianpfeil.com/post/serverless-lambda-layers/ data-toggle=tooltip data-placement=top title="Serverless Lambda Layers">&larr; Serverless Lambda Layers</a></li><li class=next><a href=https://brianpfeil.com/post/aws-cognito-developer-authenticated-identities/ data-toggle=tooltip data-placement=top title="AWS Cognito Developer Authenticated Identities">AWS Cognito Developer Authenticated Identities &rarr;</a></li></ul></div></div></div><footer><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center footer-links"><li><a href=https://twitter.com/pfeilbr title=twitter><span class=footer-link>twitter</span></a></li><li><a href=https://github.com/pfeilbr title=github><span class=footer-link>github</span></a></li><li><a href=https://stackoverflow.com/users/29148/pfeilbr title="stack overflow"><span class=footer-link>stack overflow</span></a></li><li><a href=/index.xml title=RSS><span class=footer-link>rss</span></a></li></ul><p class="credits copyright text-muted"><a href=https://brianpfeil.com>Brian Pfeil</a>
 &nbsp;&bull;&nbsp;&copy;
-2021
-</p>
-</div>
-</div>
-</div>
-</footer><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js integrity=sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx crossorigin=anonymous></script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js integrity=sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe crossorigin=anonymous></script>
-<script src=https://code.jquery.com/jquery-1.12.4.min.js integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin=anonymous></script>
-<script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa crossorigin=anonymous></script>
-<script src=https://brianpfeil.com/js/main.js></script>
-<script src=https://brianpfeil.com/js/highlight.min.js></script>
-<script>hljs.initHighlightingOnLoad()</script>
-<script>$(document).ready(function(){$("pre.chroma").css("padding","0")})</script><script>renderMathInElement(document.body)</script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js integrity=sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy crossorigin=anonymous></script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js integrity=sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q crossorigin=anonymous></script><script src=https://brianpfeil.com/js/load-photoswipe.js></script>
-<script src=https://unpkg.com/darkreader@4.9.16/darkreader.js crossorigin=anonymous></script>
-<script>(()=>{DarkReader.setFetchMethod(window.fetch);const a="DARK_MODE_ENABLED_KEY",c=document.getElementById("dark-mode-enabled-icon"),d=document.getElementById("dark-mode-disabled-icon");if(c===null||d===null)return;const b="hidden",e=()=>{window.localStorage&&(DarkReader.enable({brightness:100,contrast:90,sepia:10}),window.localStorage.setItem(a,"true"),c.classList.add(b),d.classList.remove(b))},f=()=>{window.localStorage&&(DarkReader.disable(),window.localStorage.getItem(a)&&window.localStorage.removeItem(a),c.classList.remove(b),d.classList.add(b))},g=()=>window.localStorage&&window.localStorage.getItem(a)!=null,h=()=>{g()?f():e()};g()?e():f();const i=document.getElementById('dark-mode-toggle');i.addEventListener('click',h)})()</script>
-<script></script>
-<script id=search-result-template type=text/x-js-template>
+2024</p></div></div></div></footer><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js integrity=sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js integrity=sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe crossorigin=anonymous></script><script src=https://code.jquery.com/jquery-1.12.4.min.js integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin=anonymous></script><script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa crossorigin=anonymous></script><script src=https://brianpfeil.com/js/main.js></script><script src=https://brianpfeil.com/js/highlight.min.js></script><script>hljs.initHighlightingOnLoad()</script><script>$(document).ready(function(){$("pre.chroma").css("padding","0")})</script><script>renderMathInElement(document.body)</script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js integrity=sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js integrity=sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q crossorigin=anonymous></script><script src=https://brianpfeil.com/js/load-photoswipe.js></script><script src=https://unpkg.com/darkreader@4.9.16/darkreader.js crossorigin=anonymous></script><script>(()=>{DarkReader.setFetchMethod(window.fetch);const e="DARK_MODE_ENABLED_KEY",n=document.getElementById("dark-mode-enabled-icon"),s=document.getElementById("dark-mode-disabled-icon");if(n===null||s===null)return;const t="hidden",o=()=>{window.localStorage&&(DarkReader.enable({brightness:100,contrast:90,sepia:10}),window.localStorage.setItem(e,"true"),n.classList.add(t),s.classList.remove(t))},i=()=>{window.localStorage&&(DarkReader.disable(),window.localStorage.getItem(e)&&window.localStorage.removeItem(e),n.classList.remove(t),s.classList.add(t))},a=()=>window.localStorage&&window.localStorage.getItem(e)!=null,r=()=>{a()?i():o()};a()?o():i();const c=document.getElementById("dark-mode-toggle");c.addEventListener("click",r)})()</script><script></script><script id=search-result-template type=text/x-js-template>
 <article class="post-preview" id="summary-${key}">
     <a class="search-item" href="${link}">
         <h2 class="post-title">${title}</h2>
@@ -258,10 +69,4 @@ rss
     ${snippet}
     </div>
 </article>
-</script>
-<script>const postCount=250</script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js></script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js></script>
-<script src=https://brianpfeil.com/js/search.js></script>
-</body>
-</html>
+</script><script>const postCount=296</script><script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js></script><script src=https://brianpfeil.com/js/search.js></script></body></html>

@@ -1,284 +1,86 @@
-<!doctype html><html lang=en itemscope itemtype=http://schema.org/WebPage>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>AWS Well-Architected - Brian Pfeil</title>
-<meta name=author content="Brian Pfeil"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"Brian Pfeil","url":"https:\/\/brianpfeil.com\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/brianpfeil.com\/"}</script>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/brianpfeil.com\/","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/brianpfeil.com\/post\/aws-well-architected\/","name":"Aws well architected"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Brian Pfeil"},"headline":"AWS Well-Architected","description":"","inLanguage":"en","wordCount":563,"datePublished":"2021-04-09T00:00:00","dateModified":"2021-04-09T00:00:00","image":"https:\/\/brianpfeil.com\/","keywords":["aws, aws-well-architected, architecture"],"mainEntityOfPage":"https:\/\/brianpfeil.com\/post\/aws-well-architected\/","publisher":{"@type":"Organization","name":"https:\/\/brianpfeil.com\/","logo":{"@type":"ImageObject","url":"https:\/\/brianpfeil.com\/","height":60,"width":60}}}</script>
-<meta property="og:title" content="AWS Well-Architected">
-<meta property="og:url" content="https://brianpfeil.com/post/aws-well-architected/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Brian Pfeil">
-<meta name=twitter:title content="AWS Well-Architected">
-<meta name=twitter:card content="summary">
-<meta name=twitter:site content="@pfeilbr">
-<meta name=twitter:creator content="@pfeilbr">
-<meta name=generator content="Hugo 0.92.0">
-<link rel=alternate href=https://brianpfeil.com/index.xml type=application/rss+xml title="Brian Pfeil"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css integrity=sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y crossorigin=anonymous>
-<link rel=stylesheet href=https://use.fontawesome.com/releases/v5.5.0/css/all.css integrity=sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU crossorigin=anonymous>
-<link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous><link rel=stylesheet href=https://brianpfeil.com/css/main.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
-<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-<link rel=stylesheet href=https://brianpfeil.com/css/highlight.min.css><link rel=stylesheet href=https://brianpfeil.com/css/codeblock.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css integrity=sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh crossorigin=anonymous>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css integrity=sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R crossorigin=anonymous>
-<link rel=stylesheet href=https://brianpfeil.com/css/custom.css>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-610553-4','auto'),ga('send','pageview'))</script>
-<script async src=https://www.google-analytics.com/analytics.js></script>
-</head>
-<body>
-<nav class="navbar navbar-default navbar-custom">
-<div class=container-fluid>
-<div class=navbar-header>
-<button type=button class=navbar-toggle data-toggle=collapse data-target=#main-navbar>
+<!doctype html><html lang=en itemscope itemtype=http://schema.org/WebPage><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><title>AWS Well-Architected - Brian Pfeil</title>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"Brian Pfeil","url":"https:\/\/brianpfeil.com\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/brianpfeil.com\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/brianpfeil.com\/","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/brianpfeil.com\/post\/aws-well-architected\/","name":"Aws well architected"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Brian Pfeil"},"headline":"AWS Well-Architected","description":"","inLanguage":"en","wordCount":2461,"datePublished":"2021-04-09T00:00:00\u002b00:00","dateModified":"2021-04-09T00:00:00\u002b00:00","image":"https:\/\/brianpfeil.com\/","keywords":["aws, aws-well-architected, architecture"],"mainEntityOfPage":"https:\/\/brianpfeil.com\/post\/aws-well-architected\/","publisher":{"@type":"Organization","name":"https:\/\/brianpfeil.com\/","logo":{"@type":"ImageObject","url":"https:\/\/brianpfeil.com\/","height":60,"width":60}}}</script><meta property="og:title" content="AWS Well-Architected"><meta property="og:url" content="https://brianpfeil.com/post/aws-well-architected/"><meta property="og:type" content="website"><meta property="og:site_name" content="Brian Pfeil"><meta name=twitter:title content="AWS Well-Architected"><meta name=twitter:card content="summary_large_image"><meta name=generator content="Hugo 0.124.1"><link rel=alternate href=https://brianpfeil.com/index.xml type=application/rss+xml title="Brian Pfeil"><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css integrity=sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI crossorigin=anonymous><link rel=stylesheet href=https://use.fontawesome.com/releases/v6.6.0/css/all.css integrity=sha384-h/hnnw1Bi4nbpD6kE7nYfCXzovi622sY5WBxww8ARKwpdLj5kUWjRuyiXaD1U2JT crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css integrity=sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu crossorigin=anonymous><link rel=stylesheet href=https://brianpfeil.com/css/main.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"><link rel=stylesheet href=https://brianpfeil.com/css/highlight.min.css><link rel=stylesheet href=https://brianpfeil.com/css/codeblock.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css integrity=sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css integrity=sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R crossorigin=anonymous><link rel=stylesheet href=https://brianpfeil.com/css/custom.css><script>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-610553-4","auto"),ga("send","pageview"))</script></head><body><nav class="navbar navbar-default navbar-custom"><div class=container-fluid><div class=navbar-header><button type=button class=navbar-toggle data-toggle=collapse data-target=#main-navbar>
 <span class=sr-only>Toggle navigation</span>
 <span class=icon-bar></span>
 <span class=icon-bar></span>
 <span class=icon-bar></span>
 </button>
-<a class=navbar-brand href=https://brianpfeil.com/>Brian Pfeil</a>
-</div>
-<div class="collapse navbar-collapse" id=main-navbar>
-<ul class="nav navbar-nav navbar-right">
-<li>
-<a title=about href=/about/>about</a>
-</li>
-<li>
-<a title=posts href=/>posts</a>
-</li>
-<li>
-<a title=projects href=/projects/>projects</a>
-</li>
-<li>
-<a title=tags href=/tags/>tags</a>
-</li>
-<li>
-<a id=dark-mode-toggle>
-<i class="fa fa-moon hidden" id=dark-mode-enabled-icon aria-hidden=true></i>
-<i class="fa fa-sun hidden" id=dark-mode-disabled-icon aria-hidden=true></i>
-</a>
-</li>
-</ul>
-</div>
-</div>
-</nav>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<a class=navbar-brand href=https://brianpfeil.com/>Brian Pfeil</a></div><div class="collapse navbar-collapse" id=main-navbar><ul class="nav navbar-nav navbar-right"><li><a title=about href=/about/>about</a></li><li><a title=posts href=/>posts</a></li><li><a title=projects href=/projects/>projects</a></li><li><a title=tags href=/tags/>tags</a></li><li><a id=dark-mode-toggle><i class="fa fa-moon hidden" id=dark-mode-enabled-icon aria-hidden=true></i>
+<i class="fa fa-sun hidden" id=dark-mode-disabled-icon aria-hidden=true></i></a></li></ul></div></div></nav><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
 </button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div>
-<header class=header-section>
-<div class="intro-header no-img">
-<div class=container>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<div class=post-heading>
-<h1>AWS Well-Architected</h1>
-<span class=post-meta>
-April 9, 2021
-<span class=blog-tags>
-&nbsp;&bull;&nbsp;
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><header class=header-section><div class="intro-header no-img"><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=post-heading><h1>AWS Well-Architected</h1><span class=post-meta>April 9, 2021
+<span class=blog-tags>&nbsp;&bull;&nbsp;
 <a href=https://brianpfeil.com//tags/aws/>aws</a>
 ,
 <a href=https://brianpfeil.com//tags/aws-well-architected/>aws-well-architected</a>
 ,
-<a href=https://brianpfeil.com//tags/architecture/>architecture</a>
-</span>
-</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</header>
-<div class=container role=main>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<article role=main class=blog-post>
-<div class="alert alert-info small bg-info" role=alert>
-<span class=text-muted>code for article</span>&nbsp;<a href=https://github.com/pfeilbr/aws-well-architected-playground target=_blank><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/aws-well-architected-playground</a>
-</div>
-<p>deep dive on all things AWS Well-Architected</p>
-<h2 id=key-points>Key Points</h2>
-<ul>
-<li>consistent pre-launch review process against AWS best practices</li>
-<li>helps you understand the pros and cons of decisions you make while building systems</li>
-<li>review process is a conversation and not an audit. working together to improve. practical advice.</li>
-<li>goal is not to have &ldquo;perfect&rdquo; architecture from the start. identify areas for improvement and choose a couple that delivery the most value</li>
-<li>AWS does not provide prescriptive guidance on how to perform the review. WA tool is the closest.</li>
-<li>concepts: Pillars -> Design Principles -> Questions</li>
-<li>enables: learn -> measure -> improve iterative cycle</li>
-<li>input: answer questions, output: improvement plan (PDF reports)</li>
-<li>learning / education - can be used as standalone tool solely for learning what the best practices are</li>
-<li>milestone - record the state of a workload for given point in time. e.g. original design, design review, v1, v2</li>
-</ul>
-<h2 id=use-cases>Use Cases</h2>
-<ul>
-<li>learning best practices for the cloud</li>
-<li>technology governance</li>
-<li>portfolio management - inventory of workloads, historical decisions made, risks, highlights where to invest</li>
-</ul>
-<h2 id=well-architected-framework>Well-Architected Framework</h2>
-<blockquote>
-<p>The AWS Well-Architected Framework helps you to design and operate a reliable, secure, efficient, and cost-efficient systems on AWS. It also helps you constantly measure your architecture against best practices and provides you an opportunity to improve your architecture.</p>
-</blockquote>
-<h3 id=5-pillars>5 Pillars</h3>
-<ul>
-<li>Operational Excellence</li>
-<li>Security</li>
-<li>Reliability</li>
-<li>Performance Efficiency</li>
-<li>Cost Optimization</li>
-</ul>
-<h3 id=review-process>Review Process</h3>
-<blockquote>
-<p>The review process describes in high-level terms, how the assessment of the principles should be done. For AWS, this should be a lightweight process, which is taking rather hours, instead of days and it should be repeated multiple times across the architecture lifecycle. AWS states that it is important to have a conversation (not an audit) and a “blame-free approach” during the review and it is also important to involve the right people. The results of the conversations should be a list of issues that can then be prioritized based on the business context and that can be formulated into a set of actions that help to improve the overall customer experience of the architecture.</p>
-</blockquote>
-<h2 id=well-architected-tool>Well-Architected Tool</h2>
-<p>AWS Console Tool that steps a user through the Well-Architected Review Process</p>
-<h3 id=well-architected-alternate-renditions>Well-Architected Alternate Renditions</h3>
-<p>Consuming the WA PDFs or web content can be a bit challenging with navigation. The WA questions, resources, etc. are available as <code>json</code> via the AWS WA Console Tool with some scraping. This creates alternate renditions based on this data.</p>
-<ul>
-<li>Run <a href=aws-well-architected-reformat/main.js><code>aws-well-architected-reformat/main.js</code></a> to generate a reformatted and condensed version of WA.
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=nb>cd</span> aws-well-architected-reformat
-node main.js &gt; ../aws-well-architected-condensed.md
-</code></pre></div></li>
-<li>see alternate rendition at <a href=aws-well-architected-condensed.md><code>aws-well-architected-condensed.md</code></a></li>
-<li>See <a href=aws-well-architected-reformat/data><code>aws-well-architected-reformat/data</code></a> for the question data as <code>json</code> for each lens.</li>
-</ul>
-<p><strong>Notes on pulling data via AWS Console</strong></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=c1># aws console request format</span>
-POST https://console.aws.amazon.com/wellarchitected/api/apiservice
-<span class=o>{</span><span class=s2>&#34;method&#34;</span>:<span class=s2>&#34;GET&#34;</span>,<span class=s2>&#34;path&#34;</span>:<span class=s2>&#34;/workloads/4cfa14fe4a9d351afc9975cfdcb434af/lensReviews/wellarchitected/answers&#34;</span>,<span class=s2>&#34;region&#34;</span>:<span class=s2>&#34;us-east-1&#34;</span>,<span class=s2>&#34;headers&#34;</span>:<span class=o>{</span><span class=s2>&#34;Content-Type&#34;</span>:<span class=s2>&#34;application/json&#34;</span>,<span class=s2>&#34;Accept&#34;</span>:<span class=s2>&#34;application/json&#34;</span><span class=o>}</span>,<span class=s2>&#34;params&#34;</span>:<span class=o>{</span><span class=s2>&#34;PillarId&#34;</span>:<span class=s2>&#34;operationalExcellence&#34;</span>,<span class=s2>&#34;MaxResults&#34;</span>:50,<span class=s2>&#34;Locale&#34;</span>:<span class=s2>&#34;en&#34;</span><span class=o>}}</span>
-
-<span class=c1># helpful Resources on right sidebar example</span>
-https://wa.aws.amazon.com/TypeII/en/foundationaltechnicalreview/foundationaltechnicalreview.sec_q1.helpful-resources.en.html
-
-</code></pre></div><h3 id=feature-request>Feature Request</h3>
-<p>One area where there is a gap for an enterprises are all the company specific policies, standards, and best practices that are additive and need to be addressed on top of AWS. These types of questions and guidance would need to happen outside of WA Tool.</p>
-<p>A feature to define custom lenses - a customer defined lens. This way the single WA Tool could be the method for review facilitation, improvement reporting and maintaining history.</p>
-<h2 id=key-visuals>Key Visuals</h2>
-<img src=https://www.evernote.com/l/AAGT8fHSJRtGV4338tvJ0FHMvbb_vfTh7qkB/image.png alt="WA Tool Features" width=50%>
+<a href=https://brianpfeil.com//tags/architecture/>architecture</a></span></span></div></div></div></div></div></header><div class=container role=main><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><article role=main class=blog-post><div class="alert alert-info small bg-info" role=alert><span class=text-muted>code for article</span>&nbsp;<a href=https://github.com/pfeilbr/aws-well-architected-playground target=_blank><i class="fab fa-github fa-sm"></i>&nbsp;pfeilbr/aws-well-architected-playground</a></div><p>deep dive on all things AWS Well-Architected</p><h2 id=key-points>Key Points</h2><ul><li>consistent pre-launch review process against AWS best practices</li><li>helps you understand the pros and cons of decisions you make while building systems</li><li>review process is a conversation and not an audit. working together to improve. practical advice.</li><li>goal is not to have &ldquo;perfect&rdquo; architecture from the start. identify areas for improvement and choose a couple that delivery the most value</li><li>AWS does not provide prescriptive guidance on how to perform the review. WA tool is the closest.</li><li>concepts: Pillars -> Design Principles -> Questions</li><li>enables: learn -> measure -> improve iterative cycle</li><li>input: answer questions, output: improvement plan (PDF reports)</li><li>learning / education - can be used as standalone tool solely for learning what the best practices are</li><li>milestone - record the state of a workload for given point in time. e.g. original design, design review, v1, v2</li></ul><h2 id=use-cases>Use Cases</h2><ul><li>learning best practices for the cloud</li><li>technology governance</li><li>portfolio management - inventory of workloads, historical decisions made, risks, highlights where to invest</li></ul><h2 id=well-architected-framework>Well-Architected Framework</h2><blockquote><p>The AWS Well-Architected Framework helps you to design and operate a reliable, secure, efficient, and cost-efficient systems on AWS. It also helps you constantly measure your architecture against best practices and provides you an opportunity to improve your architecture.</p></blockquote><h3 id=5-pillars>5 Pillars</h3><ul><li>Operational Excellence</li><li>Security</li><li>Reliability</li><li>Performance Efficiency</li><li>Cost Optimization</li></ul><hr><h3 id=design-principles>Design Principles</h3><h4 id=general-design-principles>General design principles</h4><ul><li>Stop guessing your capacity needs: If you make a poor capacity decision when deploying a workload, you might end up sitting on expensive idle resources or dealing with the performance implications of limited capacity. With cloud computing, these problems can go away. You can use as much or as little capacity as you need, and scale up and down automatically.</li><li>Test systems at production scale: In the cloud, you can create a production-scale test environment on demand, complete your testing, and then decommission the resources. Because you only pay for the test environment when it&rsquo;s running, you can simulate your live environment for a fraction of the cost of testing on premises.</li><li>Automate to make architectural experimentation easier: Automation allows you to create and replicate your workloads at low cost and avoid the expense of manual effort. You can track changes to your automation, audit the impact, and revert to previous parameters when necessary.</li><li>Allow for evolutionary architectures: In a traditional environment, architectural decisions are often implemented as static, onetime events, with a few major versions of a system during its lifetime. As a business and its context continue to evolve, these initial decisions might hinder the system&rsquo;s ability to deliver changing business requirements. In the cloud, the capability to automate and test on demand lowers the risk of impact from design changes. This allows systems to evolve over time so that businesses can take advantage of innovations as a standard practice.</li><li>Drive architectures using data: In the cloud, you can collect data on how your architectural choices affect the behavior of your workload. This lets you make fact-based decisions on how to improve your workload. Your cloud infrastructure is code, so you can use that data to inform your architecture choices and improvements over time.</li><li>Improve through game days: Test how your architecture and processes perform by regularly scheduling game days to simulate events in production. This will help you understand where improvements can be made and can help develop organizational experience in dealing with events.</li></ul><h4 id=operational-excellence>Operational excellence</h4><ul><li>Perform operations as code: In the cloud, you can apply the same engineering discipline that you use for application code to your entire environment. You can define your entire workload (applications, infrastructure) as code and update it with code. You can implement your operations procedures as code and automate their execution by triggering them in response to events. By performing operations as code, you limit human error and enable consistent responses to events.</li><li>Make frequent, small, reversible changes: Design workloads to allow components to be updated regularly. Make changes in small increments that can be reversed if they fail (without affecting customers when possible).</li><li>Refine operations procedures frequently: As you use operations procedures, look for opportunities to improve them. As you evolve your workload, evolve your procedures appropriately. Set up regular game days to review and validate that all procedures are effective and that teams are familiar with them.</li><li>Anticipate failure: Perform “pre-mortem” exercises to identify potential sources of failure so that they can be removed or mitigated. Test your failure scenarios and validate your understanding of their impact. Test your response procedures to ensure that they are effective, and that teams are familiar with their execution. Set up regular game days to test workloads and team responses to simulated events.</li><li>Learn from all operational failures: Drive improvement through lessons learned from all operational events and failures. Share what is learned across teams and through the entire organization.</li></ul><h4 id=security>Security</h4><ul><li>Implement a strong identity foundation: Implement the principle of least privilege and enforce separation of duties with appropriate authorization for each interaction with your AWS resources. Centralize identity management, and aim to eliminate reliance on long-term static credentials.</li><li>Enable traceability: Monitor, alert, and audit actions and changes to your environment in real time. Integrate log and metric collection with systems to automatically investigate and take action.</li><li>Apply security at all layers: Apply a defense in depth approach with multiple security controls. Apply to all layers (for example, edge of network, VPC, load balancing, every instance and compute service, operating system, application, and code).</li><li>Automate security best practices: Automated software-based security mechanisms improve your ability to securely scale more rapidly and cost-effectively. Create secure architectures, including the implementation of controls that are defined and managed as code in version-controlled templates.</li><li>Protect data in transit and at rest: Classify your data into sensitivity levels and use mechanisms, such as encryption, tokenization, and access control where appropriate.</li><li>Keep people away from data: Use mechanisms and tools to reduce or eliminate the need for direct access or manual processing of data. This reduces the risk of mishandling or modification and human error when handling sensitive data.</li><li>Prepare for security events: Prepare for an incident by having incident management and investigation policy and processes that align to your organizational requirements. Run incident response simulations and use tools with automation to increase your speed for detection, investigation, and recovery.</li></ul><h4 id=reliability>Reliability</h4><ul><li>Automatically recover from failure: By monitoring a workload for key performance indicators (KPIs), you can trigger automation when a threshold is breached. These KPIs should be a measure of business value, not of the technical aspects of the operation of the service. This allows for automatic notification and tracking of failures, and for automated recovery processes that work around or repair the failure. With more sophisticated automation, it’s possible to anticipate and remediate failures before they occur.</li><li>Test recovery procedures: In an on-premises environment, testing is often conducted to prove that the workload works in a particular scenario. Testing is not typically used to validate recovery strategies. In the cloud, you can test how your workload fails, and you can validate your recovery procedures. You can use automation to simulate different failures or to recreate scenarios that led to failures before. This approach exposes failure pathways that you can test and fix before a real failure scenario occurs, thus reducing risk.</li><li>Scale horizontally to increase aggregate workload availability: Replace one large resource with multiple small resources to reduce the impact of a single failure on the overall workload. Distribute requests across multiple, smaller resources to ensure that they don’t share a common point of failure.</li><li>Stop guessing capacity: A common cause of failure in on-premises workloads is resource saturation, when the demands placed on a workload exceed the capacity of that workload (this is often the objective of denial of service attacks). In the cloud, you can monitor demand and workload utilization, and automate the addition or removal of resources to maintain the optimal level to satisfy demand without over- or under-provisioning. There are still limits, but some quotas can be controlled and others can be managed (see Manage Service Quotas and Constraints).</li><li>Manage change in automation: Changes to your infrastructure should be made using automation. The changes that need to be managed include changes to the automation, which then can be tracked and reviewed.</li></ul><h4 id=performance-efficiency>Performance efficiency</h4><ul><li>Democratize advanced technologies: Make advanced technology implementation easier for your team by delegating complex tasks to your cloud vendor. Rather than asking your IT team to learn about hosting and running a new technology, consider consuming the technology as a service. For example, NoSQL databases, media transcoding, and machine learning are all technologies that require specialized expertise. In the cloud, these technologies become services that your team can consume, allowing your team to focus on product development rather than resource provisioning and management.</li><li>Go global in minutes: Deploying your workload in multiple AWS Regions around the world allows you to provide lower latency and a better experience for your customers at minimal cost.</li><li>Use serverless architectures: Serverless architectures remove the need for you to run and maintain physical servers for traditional compute activities. For example, serverless storage services can act as static websites (removing the need for web servers) and event services can host code. This removes the operational burden of managing physical servers, and can lower transactional costs because managed services operate at cloud scale.</li><li>Experiment more often: With virtual and automatable resources, you can quickly carry out comparative testing using different types of instances, storage, or configurations.</li><li>Consider mechanical sympathy: Understand how cloud services are consumed and always use the technology approach that aligns best with your workload goals. For example, consider data access patterns when you select database or storage approaches.</li></ul><h4 id=cost-optimization>Cost optimization</h4><ul><li>Implement Cloud Financial Management: To achieve financial success and accelerate business value realization in the cloud, you need to invest in Cloud Financial Management /Cost Optimization. Your organization needs to dedicate time and resources to build capability in this new domain of technology and usage management. Similar to your Security or Operational Excellence capability, you need to build capability through knowledge building, programs, resources, and processes to become a cost-efficient organization.</li><li>Adopt a consumption model: Pay only for the computing resources that you require and increase or decrease usage depending on business requirements, not by using elaborate forecasting. For example, development and test environments are typically only used for eight hours a day during the work week. You can stop these resources when they are not in use for a potential cost savings of 75% (40 hours versus 168 hours).</li><li>Measure overall efficiency: Measure the business output of the workload and the costs associated with delivering it. Use this measure to know the gains you make from increasing output and reducing costs.</li><li>Stop spending money on undifferentiated heavy lifting: AWS does the heavy lifting of data center operations like racking, stacking, and powering servers. It also removes the operational burden of managing operating systems and applications with managed services. This allows you to focus on your customers and business projects rather than on IT infrastructure.</li><li>Analyze and attribute expenditure: The cloud makes it easier to accurately identify the usage and cost of systems, which then allows transparent attribution of IT costs to individual workload owners. This helps measure return on investment (ROI) and gives workload owners an opportunity to optimize their resources and reduce costs.</li></ul><hr><h3 id=review-process>Review Process</h3><blockquote><p>The review process describes in high-level terms, how the assessment of the principles should be done. For AWS, this should be a lightweight process, which is taking rather hours, instead of days and it should be repeated multiple times across the architecture lifecycle. AWS states that it is important to have a conversation (not an audit) and a “blame-free approach” during the review and it is also important to involve the right people. The results of the conversations should be a list of issues that can then be prioritized based on the business context and that can be formulated into a set of actions that help to improve the overall customer experience of the architecture.</p></blockquote><h2 id=well-architected-tool>Well-Architected Tool</h2><p>AWS Console Tool that steps a user through the Well-Architected Review Process</p><h3 id=well-architected-alternate-renditions>Well-Architected Alternate Renditions</h3><p>Consuming the WA PDFs or web content can be a bit challenging with navigation. The WA questions, resources, etc. are available as <code>json</code> via the AWS WA Console Tool with some scraping. This creates alternate renditions based on this data.</p><ul><li>Run <a href=aws-well-architected-reformat/main.js><code>aws-well-architected-reformat/main.js</code></a> to generate a reformatted and condensed version of WA.<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=line><span class=cl><span class=nb>cd</span> aws-well-architected-reformat
+</span></span><span class=line><span class=cl>node main.js &gt; ../aws-well-architected-condensed.md
+</span></span></code></pre></div></li><li>see alternate rendition at <a href=aws-well-architected-condensed.md><code>aws-well-architected-condensed.md</code></a></li><li>See <a href=aws-well-architected-reformat/data><code>aws-well-architected-reformat/data</code></a> for the question data as <code>json</code> for each lens.</li></ul><p><strong>Notes on pulling data via AWS Console</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=line><span class=cl><span class=c1># aws console request format</span>
+</span></span><span class=line><span class=cl>POST https://console.aws.amazon.com/wellarchitected/api/apiservice
+</span></span><span class=line><span class=cl><span class=o>{</span><span class=s2>&#34;method&#34;</span>:<span class=s2>&#34;GET&#34;</span>,<span class=s2>&#34;path&#34;</span>:<span class=s2>&#34;/workloads/4cfa14fe4a9d351afc9975cfdcb434af/lensReviews/wellarchitected/answers&#34;</span>,<span class=s2>&#34;region&#34;</span>:<span class=s2>&#34;us-east-1&#34;</span>,<span class=s2>&#34;headers&#34;</span>:<span class=o>{</span><span class=s2>&#34;Content-Type&#34;</span>:<span class=s2>&#34;application/json&#34;</span>,<span class=s2>&#34;Accept&#34;</span>:<span class=s2>&#34;application/json&#34;</span><span class=o>}</span>,<span class=s2>&#34;params&#34;</span>:<span class=o>{</span><span class=s2>&#34;PillarId&#34;</span>:<span class=s2>&#34;operationalExcellence&#34;</span>,<span class=s2>&#34;MaxResults&#34;</span>:50,<span class=s2>&#34;Locale&#34;</span>:<span class=s2>&#34;en&#34;</span><span class=o>}}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># helpful Resources on right sidebar example</span>
+</span></span><span class=line><span class=cl>https://wa.aws.amazon.com/TypeII/en/foundationaltechnicalreview/foundationaltechnicalreview.sec_q1.helpful-resources.en.html
+</span></span></code></pre></div><h3 id=feature-request>Feature Request</h3><blockquote><p>Custom lenses have been added. See <a href=https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-custom.html>Custom lenses</a></p></blockquote><p>One area where there is a gap for an enterprises are all the company specific policies, standards, and best practices that are additive and need to be addressed on top of AWS. These types of questions and guidance would need to happen outside of WA Tool.</p><p>A feature to define custom lenses - a customer defined lens. This way the single WA Tool could be the method for review facilitation, improvement reporting and maintaining history.</p><h3 id=custom-lens>Custom Lens</h3><p>template JSON file for creating custom lens</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;schemaVersion&#34;</span><span class=p>:</span> <span class=s2>&#34;2021-11-01&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Replace with lens name&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;description&#34;</span><span class=p>:</span> <span class=s2>&#34;Replace with your description&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;pillars&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;pillar_id_1&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Pillar 1&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;questions&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>          <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;pillar_1_q1&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>          <span class=nt>&#34;title&#34;</span><span class=p>:</span> <span class=s2>&#34;My first question&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>          <span class=nt>&#34;description&#34;</span><span class=p>:</span> <span class=s2>&#34;Description isn&#39;t a necessary property here for a question, but it might help your lens users.&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>          <span class=nt>&#34;choices&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>              <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;choice1&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>              <span class=nt>&#34;title&#34;</span><span class=p>:</span> <span class=s2>&#34;Best practice #1&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>              <span class=nt>&#34;helpfulResource&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=nt>&#34;displayText&#34;</span><span class=p>:</span> <span class=s2>&#34;It&#39;s recommended that you include a helpful resource text and URL for each choice for your users.&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=nt>&#34;url&#34;</span><span class=p>:</span> <span class=s2>&#34;https://aws.amazon.com&#34;</span>
+</span></span><span class=line><span class=cl>              <span class=p>},</span>
+</span></span><span class=line><span class=cl>              <span class=nt>&#34;improvementPlan&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=nt>&#34;displayText&#34;</span><span class=p>:</span> <span class=s2>&#34;You must have improvement plans per choice. It&#39;s optional whether or not to have a corresponding URL.&#34;</span>
+</span></span><span class=line><span class=cl>              <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=p>},</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>              <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;choice2&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>              <span class=nt>&#34;title&#34;</span><span class=p>:</span> <span class=s2>&#34;Best practice #2&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>              <span class=nt>&#34;helpfulResource&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=nt>&#34;displayText&#34;</span><span class=p>:</span> <span class=s2>&#34;It&#39;s recommended that you include a helpful resource text and URL for each choice for your users.&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=nt>&#34;url&#34;</span><span class=p>:</span> <span class=s2>&#34;https://aws.amazon.com&#34;</span>
+</span></span><span class=line><span class=cl>              <span class=p>},</span>
+</span></span><span class=line><span class=cl>              <span class=nt>&#34;improvementPlan&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=nt>&#34;displayText&#34;</span><span class=p>:</span> <span class=s2>&#34;You must have improvement plans per choice. It&#39;s optional whether or not to have a corresponding URL.&#34;</span>
+</span></span><span class=line><span class=cl>              <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>          <span class=p>],</span>
+</span></span><span class=line><span class=cl>          <span class=nt>&#34;riskRules&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span> <span class=nt>&#34;condition&#34;</span><span class=p>:</span> <span class=s2>&#34;choice1 &amp;&amp; choice2&#34;</span><span class=p>,</span> <span class=nt>&#34;risk&#34;</span><span class=p>:</span> <span class=s2>&#34;NO_RISK&#34;</span> <span class=p>},</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span> <span class=nt>&#34;condition&#34;</span><span class=p>:</span> <span class=s2>&#34;choice1 &amp;&amp; !choice2&#34;</span><span class=p>,</span> <span class=nt>&#34;risk&#34;</span><span class=p>:</span> <span class=s2>&#34;MEDIUM_RISK&#34;</span> <span class=p>},</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span> <span class=nt>&#34;condition&#34;</span><span class=p>:</span> <span class=s2>&#34;default&#34;</span><span class=p>,</span> <span class=nt>&#34;risk&#34;</span><span class=p>:</span> <span class=s2>&#34;HIGH_RISK&#34;</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>          <span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>      <span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><h2 id=key-visuals>Key Visuals</h2><img src=https://www.evernote.com/l/AAGT8fHSJRtGV4338tvJ0FHMvbb_vfTh7qkB/image.png alt="WA Tool Features" width=50%>
 <img src=https://www.evernote.com/l/AAE0ZIXQoM5KYK9TUKsBpNZ_dSQ_x27Ti_0B/image.png alt="General Design Principles" width=50%>
 <img src=https://www.evernote.com/l/AAGxCfQWxsZMDZLQC9dqcm-EJRgkM3jsNlwB/image.png alt="Intent of WA Review" width=50%>
 <img src=https://www.evernote.com/l/AAF2yN9IdGZOS6_CoSnpzjc0nWOru88e4a0B/image.png alt="Review Benefits" width=50%>
-<img src=https://www.evernote.com/l/AAEqVMFtRnJBMp-iX7F3Y8eLLIu3kV6ruvQB/image.png alt width=50%>
-<h2 id=resources>Resources</h2>
-<ul>
-<li><a href=https://aws.amazon.com/architecture/well-architected>AWS Well-Architected</a></li>
-<li><a href=https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html>Documentation | AWS Well-Architected Framework</a></li>
-<li><a href=https://wa.aws.amazon.com/wat.thereviewprocess.wa-review.en.html>The Review Process - AWS Well-Architected Framework</a></li>
-<li><a href=https://www.rapyder.com/blogs/aws-well-architected-framework-checklist/>AWS Well Architected framework: A Complete Checklist</a></li>
-<li><a href=https://cloudnoon.com/blog/aws/aws-well-architected-framework-cheatsheet/>AWS Well-Architected Framework Cheatsheet | Cloud Noon</a></li>
-</ul>
-<hr>
-<section id=social-share>
-<div class="list-inline footer-links text-center">
-<span class=text-muted>share on</span><br>
-<a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-well-architected%2f&text=AWS%20Well-Architected&via=pfeilbr" target=_blank title="Share on Twitter">Twitter</a>
+<img src=https://www.evernote.com/l/AAEqVMFtRnJBMp-iX7F3Y8eLLIu3kV6ruvQB/image.png alt width=50%><h2 id=resources>Resources</h2><ul><li><a href=https://aws.amazon.com/architecture/well-architected>AWS Well-Architected</a></li><li><a href=https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html>Documentation | AWS Well-Architected Framework</a></li><li><a href=https://wa.aws.amazon.com/wat.thereviewprocess.wa-review.en.html>The Review Process - AWS Well-Architected Framework</a></li><li><a href=https://www.rapyder.com/blogs/aws-well-architected-framework-checklist/>AWS Well Architected framework: A Complete Checklist</a></li><li><a href=https://cloudnoon.com/blog/aws/aws-well-architected-framework-cheatsheet/>AWS Well-Architected Framework Cheatsheet | Cloud Noon</a></li><li><a href=https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-custom.html>AWS Well-Architected Tool: Custom lenses</a></li><li><a href=https://aws.amazon.com/blogs/aws/well-architected-custom-lenses-internal-best-practices/>Announcing AWS Well-Architected Custom Lenses: Extend the Well-Architected Framework with Your Internal Best Practices</a></li><li><a href=https://aws.amazon.com/blogs/mt/customize-well-architected-reviews-using-custom-lenses-and-the-aws-well-architected-tool/>Customize Well-Architected Reviews using Custom Lenses and the AWS Well-Architected Tool</a></li><li><a href=https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-custom.html>Custom lenses</a></li></ul><hr><section id=social-share><div class="list-inline footer-links text-center"><span class=text-muted>share on</span><br><a href="//twitter.com/share?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-well-architected%2f&amp;text=AWS%20Well-Architected&amp;via=pfeilbr" target=_blank title="Share on Twitter">Twitter</a>
 &nbsp;&bull;&nbsp;
-<a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-well-architected%2f&title=AWS%20Well-Architected" target=_blank title="Share on Reddit">
-Reddit
-</a>
-</div>
-</section>
-</article>
-<ul class="pager blog-pager">
-<li class=previous>
-<a href=https://brianpfeil.com/post/api-gateway-private-endpoints/ data-toggle=tooltip data-placement=top title="API Gateway Private Endpoints">&larr; API Gateway Private Endpoints</a>
-</li>
-<li class=next>
-<a href=https://brianpfeil.com/post/reactcdk-rfc/ data-toggle=tooltip data-placement=top title="ReactCDK RFC">ReactCDK RFC &rarr;</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<footer>
-<div class=container>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<ul class="list-inline text-center footer-links">
-<li>
-<a href=https://twitter.com/pfeilbr title=twitter>
-<span class=footer-link>
-twitter
-</span>
-</a>
-</li>
-<li>
-<a href=https://github.com/pfeilbr title=github>
-<span class=footer-link>
-github
-</span>
-</a>
-</li>
-<li>
-<a href=https://stackoverflow.com/users/29148/pfeilbr title="stack overflow">
-<span class=footer-link>
-stack overflow
-</span>
-</a>
-</li>
-<li>
-<a href=/index.xml title=RSS>
-<span class=footer-link>
-rss
-</span>
-</a>
-</li>
-</ul>
-<p class="credits copyright text-muted">
-<a href=https://brianpfeil.com>Brian Pfeil</a>
+<a href="//reddit.com/submit?url=https%3a%2f%2fbrianpfeil.com%2fpost%2faws-well-architected%2f&amp;title=AWS%20Well-Architected" target=_blank title="Share on Reddit">Reddit</a></div></section></article><ul class="pager blog-pager"><li class=previous><a href=https://brianpfeil.com/post/api-gateway-private-endpoints/ data-toggle=tooltip data-placement=top title="API Gateway Private Endpoints">&larr; API Gateway Private Endpoints</a></li><li class=next><a href=https://brianpfeil.com/post/reactcdk-rfc/ data-toggle=tooltip data-placement=top title="ReactCDK RFC">ReactCDK RFC &rarr;</a></li></ul></div></div></div><footer><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center footer-links"><li><a href=https://twitter.com/pfeilbr title=twitter><span class=footer-link>twitter</span></a></li><li><a href=https://github.com/pfeilbr title=github><span class=footer-link>github</span></a></li><li><a href=https://stackoverflow.com/users/29148/pfeilbr title="stack overflow"><span class=footer-link>stack overflow</span></a></li><li><a href=/index.xml title=RSS><span class=footer-link>rss</span></a></li></ul><p class="credits copyright text-muted"><a href=https://brianpfeil.com>Brian Pfeil</a>
 &nbsp;&bull;&nbsp;&copy;
-2021
-</p>
-</div>
-</div>
-</div>
-</footer><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js integrity=sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx crossorigin=anonymous></script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js integrity=sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe crossorigin=anonymous></script>
-<script src=https://code.jquery.com/jquery-1.12.4.min.js integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin=anonymous></script>
-<script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa crossorigin=anonymous></script>
-<script src=https://brianpfeil.com/js/main.js></script>
-<script src=https://brianpfeil.com/js/highlight.min.js></script>
-<script>hljs.initHighlightingOnLoad()</script>
-<script>$(document).ready(function(){$("pre.chroma").css("padding","0")})</script><script>renderMathInElement(document.body)</script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js integrity=sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy crossorigin=anonymous></script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js integrity=sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q crossorigin=anonymous></script><script src=https://brianpfeil.com/js/load-photoswipe.js></script>
-<script src=https://unpkg.com/darkreader@4.9.16/darkreader.js crossorigin=anonymous></script>
-<script>(()=>{DarkReader.setFetchMethod(window.fetch);const a="DARK_MODE_ENABLED_KEY",c=document.getElementById("dark-mode-enabled-icon"),d=document.getElementById("dark-mode-disabled-icon");if(c===null||d===null)return;const b="hidden",e=()=>{window.localStorage&&(DarkReader.enable({brightness:100,contrast:90,sepia:10}),window.localStorage.setItem(a,"true"),c.classList.add(b),d.classList.remove(b))},f=()=>{window.localStorage&&(DarkReader.disable(),window.localStorage.getItem(a)&&window.localStorage.removeItem(a),c.classList.remove(b),d.classList.add(b))},g=()=>window.localStorage&&window.localStorage.getItem(a)!=null,h=()=>{g()?f():e()};g()?e():f();const i=document.getElementById('dark-mode-toggle');i.addEventListener('click',h)})()</script>
-<script></script>
-<script id=search-result-template type=text/x-js-template>
+2024</p></div></div></div></footer><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js integrity=sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js integrity=sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe crossorigin=anonymous></script><script src=https://code.jquery.com/jquery-1.12.4.min.js integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin=anonymous></script><script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa crossorigin=anonymous></script><script src=https://brianpfeil.com/js/main.js></script><script src=https://brianpfeil.com/js/highlight.min.js></script><script>hljs.initHighlightingOnLoad()</script><script>$(document).ready(function(){$("pre.chroma").css("padding","0")})</script><script>renderMathInElement(document.body)</script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js integrity=sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js integrity=sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q crossorigin=anonymous></script><script src=https://brianpfeil.com/js/load-photoswipe.js></script><script src=https://unpkg.com/darkreader@4.9.16/darkreader.js crossorigin=anonymous></script><script>(()=>{DarkReader.setFetchMethod(window.fetch);const e="DARK_MODE_ENABLED_KEY",n=document.getElementById("dark-mode-enabled-icon"),s=document.getElementById("dark-mode-disabled-icon");if(n===null||s===null)return;const t="hidden",o=()=>{window.localStorage&&(DarkReader.enable({brightness:100,contrast:90,sepia:10}),window.localStorage.setItem(e,"true"),n.classList.add(t),s.classList.remove(t))},i=()=>{window.localStorage&&(DarkReader.disable(),window.localStorage.getItem(e)&&window.localStorage.removeItem(e),n.classList.remove(t),s.classList.add(t))},a=()=>window.localStorage&&window.localStorage.getItem(e)!=null,r=()=>{a()?i():o()};a()?o():i();const c=document.getElementById("dark-mode-toggle");c.addEventListener("click",r)})()</script><script></script><script id=search-result-template type=text/x-js-template>
 <article class="post-preview" id="summary-${key}">
     <a class="search-item" href="${link}">
         <h2 class="post-title">${title}</h2>
@@ -297,10 +99,4 @@ rss
     ${snippet}
     </div>
 </article>
-</script>
-<script>const postCount=250</script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js></script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js></script>
-<script src=https://brianpfeil.com/js/search.js></script>
-</body>
-</html>
+</script><script>const postCount=296</script><script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js></script><script src=https://brianpfeil.com/js/search.js></script></body></html>
