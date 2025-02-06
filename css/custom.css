@@ -215,8 +215,8 @@ footer .footer-link {
   /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
   /* background-image: url("/images/pfeilbr-gravatar.jpeg"); */
   /* background-image: url("/images/2022-11-21-profile-brian-pfeil-original_jpeg-2.jpg"); */
-  background-image: url("/images/2025-01-16-profile-brian-pfeil.jpeg");
-
+  /* background-image: url("/images/2025-01-16-profile-brian-pfeil.jpeg"); */
+  background-image: url("/images/2025-02-06-profile-brian-pfeil-original.jpeg");
 
   /* make a square container */
   width: 125px;
